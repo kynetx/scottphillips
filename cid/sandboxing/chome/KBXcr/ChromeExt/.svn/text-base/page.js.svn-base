@@ -1,0 +1,21 @@
+
+chrome.extension.sendRequest({hostname: document.location.hostname}, function(response) {
+  console.log(response);
+
+	//detirmine protocol
+	var doc = document;
+	var protocol = "http";
+	if (doc.URL.substr(0, 5) == "https") {
+		protocol = "https";
+	}
+	//plant tags
+	var d = doc;
+	if(d.body){
+		var s = d.createElement('script');
+		s.text = "KOBJ_config="+JSON.stringify(response.config)+";";
+		d.body.appendChild(s);
+		var l = d.createElement('script');
+		l.src = protocol + "://EXTRUNTIME";
+		d.body.appendChild(l);
+	}
+});

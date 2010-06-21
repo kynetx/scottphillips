@@ -1,0 +1,7 @@
+In order to build this software you must
+
+1. Install 7z.exe http://www.7-zip.org/download.html
+2. Make sure 7z is in your path
+3. run build.bat
+
+

@@ -1,0 +1,1 @@
+crxmake --pack-extension=ChromeExt\ --extension-output=.\APPID.crx --mode=crx --key-output=.\APPID.pem --ignore-dir=/\.(?:svn)/

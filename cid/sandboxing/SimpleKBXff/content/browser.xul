@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE overlay SYSTEM "chrome://kynetx/locale/kynetx.dtd">
+
+<!-- Note: Contains Firefox-specific overlay -->
+
+<overlay id="kynetx-browser-overlay"
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+  <script type="application/x-javascript" src="chrome://kynetx/content/utils.js" />
+  <script tyåpe="application/x-javascript" src="chrome://kynetx/content/xmlhttprequester.js" />
+  <script type="application/x-javascript" src="chrome://kynetx/content/browser.js" />
+
+</overlay>
