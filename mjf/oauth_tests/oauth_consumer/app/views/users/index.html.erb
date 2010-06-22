@@ -1,0 +1,10 @@
+<% title "Twitter / Blogs / PDS Consumer" %>
+
+
+<br>
+<%= "Not connected to twitter yet." if @friends.empty? %>
+
+<% @friends.each do |friend| %>
+	<img src="<%= friend["profile_image_url"] %>"><%= friend["name"] %> <br>
+	
+<% end %>

@@ -1,0 +1,277 @@
+# Logfile created on Thu Feb 11 11:34:11 -0700 2010 by logger.rb/22285
+
+
+Processing FpsController#index (for 127.0.0.1 at 2010-02-11 11:34:28) [GET]
+  Session ID: 735b1440d6a2f7721745d886fb83f83a
+  Parameters: {"action"=>"index", "controller"=>"fps"}
+Redirected to http://localhost:3005/fps/get_caller_token
+Completed in 0.02617 (38 reqs/sec) | 302 Found [http://localhost/fps]
+
+
+Processing FpsController#get_caller_token (for 127.0.0.1 at 2010-02-11 11:34:29) [GET]
+  Session ID: 735b1440d6a2f7721745d886fb83f83a
+  Parameters: {"action"=>"get_caller_token", "controller"=>"fps"}
+
+
+RuntimeError (FalseClass is not a valid input stream.  It must walk 
+like either a String, an IO, or a Source.):
+    /usr/local/lib/ruby/1.8/rexml/source.rb:21:in `create_from'
+    /usr/local/lib/ruby/1.8/rexml/parsers/baseparser.rb:133:in `stream='
+    /usr/local/lib/ruby/1.8/rexml/parsers/baseparser.rb:110:in `initialize'
+    /usr/local/lib/ruby/1.8/rexml/parsers/treeparser.rb:9:in `new'
+    /usr/local/lib/ruby/1.8/rexml/parsers/treeparser.rb:9:in `initialize'
+    /usr/local/lib/ruby/1.8/rexml/document.rb:227:in `new'
+    /usr/local/lib/ruby/1.8/rexml/document.rb:227:in `build'
+    /usr/local/lib/ruby/1.8/rexml/document.rb:43:in `initialize'
+    /app/controllers/fps_controller.rb:24:in `new'
+    /app/controllers/fps_controller.rb:24:in `get_caller_token'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:1095:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:1095:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:632:in `call_filter'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:619:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/rescue.rb:83:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:624:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/session_management.rb:114:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:330:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:41:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:159:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:158:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:158:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:282:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:281:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:281:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/command.rb:212:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /usr/local/bin/mongrel_rails:19:in `load'
+    /usr/local/bin/mongrel_rails:19
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing FpsController#index (for 127.0.0.1 at 2010-02-11 11:53:36) [GET]
+  Session ID: 735b1440d6a2f7721745d886fb83f83a
+  Parameters: {"action"=>"index", "controller"=>"fps"}
+Redirected to http://localhost:3005/fps/get_caller_token
+Completed in 0.04206 (23 reqs/sec) | 302 Found [http://localhost/fps]
+
+
+Processing FpsController#get_caller_token (for 127.0.0.1 at 2010-02-11 11:53:37) [GET]
+  Session ID: 735b1440d6a2f7721745d886fb83f83a
+  Parameters: {"action"=>"get_caller_token", "controller"=>"fps"}
+Rendering fps/get_caller_token
+Completed in 1.25321 (0 reqs/sec) | Rendering: 0.02002 (1%) | 200 OK [http://localhost/fps/get_caller_token]
+
+
+Processing FpsController#get_recipient_token (for 127.0.0.1 at 2010-02-11 11:53:49) [GET]
+  Session ID: 735b1440d6a2f7721745d886fb83f83a
+  Parameters: {"CallerTokenId"=>"H6EXPGRBTVLI26712DVP3JKGBIIISIP9NUT6LVMVFS54GIGXENRKJLZF6FYJL9YD", "action"=>"get_recipient_token", "controller"=>"fps"}
+Rendering fps/get_recipient_token
+Completed in 0.70773 (1 reqs/sec) | Rendering: 0.02051 (2%) | 200 OK [http://localhost/fps/get_recipient_token?CallerTokenId=H6EXPGRBTVLI26712DVP3JKGBIIISIP9NUT6LVMVFS54GIGXENRKJLZF6FYJL9YD]
+
+
+Processing FpsController#get_sender_token (for 127.0.0.1 at 2010-02-11 11:53:59) [GET]
+  Session ID: 735b1440d6a2f7721745d886fb83f83a
+  Parameters: {"CallerTokenId"=>"H6EXPGRBTVLI26712DVP3JKGBIIISIP9NUT6LVMVFS54GIGXENRKJLZF6FYJL9YD", "action"=>"get_sender_token", "RecipientTokenId"=>"H5EXCGXBTNLQ26B16DVV3VKG5I3ISQPVNUC61VM1F954TIHXERRQJL1FFFYQL4YG", "controller"=>"fps"}
+Rendering fps/get_sender_token
+Completed in 0.03029 (33 reqs/sec) | Rendering: 0.01985 (65%) | 200 OK [http://localhost/fps/get_sender_token?CallerTokenId=H6EXPGRBTVLI26712DVP3JKGBIIISIP9NUT6LVMVFS54GIGXENRKJLZF6FYJL9YD&RecipientTokenId=H5EXCGXBTNLQ26B16DVV3VKG5I3ISQPVNUC61VM1F954TIHXERRQJL1FFFYQL4YG]
+
+
+Processing FpsController#redirect_cbui (for 127.0.0.1 at 2010-02-11 11:58:16) [POST]
+  Session ID: 735b1440d6a2f7721745d886fb83f83a
+  Parameters: {"CallerTokenId"=>"H6EXPGRBTVLI26712DVP3JKGBIIISIP9NUT6LVMVFS54GIGXENRKJLZF6FYJL9YD", "action"=>"redirect_cbui", "Amount"=>"1", "RecipientTokenId"=>"H5EXCGXBTNLQ26B16DVV3VKG5I3ISQPVNUC61VM1F954TIHXERRQJL1FFFYQL4YG", "controller"=>"fps"}
+https://authorize.payments-sandbox.amazon.com/cobranded-ui/actions/start?callerKey=096XB1T75N1VYY98PHR2&callerReference=SenderToken-1265914696&paymentReason=Test+Payment&pipelineName=SingleUse&returnURL=http%3A%2F%2Flocalhost%3A3005%2Ffps%2Fthankyou%3FCallerTokenId%3DH6EXPGRBTVLI26712DVP3JKGBIIISIP9NUT6LVMVFS54GIGXENRKJLZF6FYJL9YD%26Amount%3D1%26RecipientTokenId%3DH5EXCGXBTNLQ26B16DVV3VKG5I3ISQPVNUC61VM1F954TIHXERRQJL1FFFYQL4YG&transactionAmount=1&awsSignature=adVCTqheBke8DhfXgssf4a4ficA%3D
+Redirected to https://authorize.payments-sandbox.amazon.com/cobranded-ui/actions/start?callerKey=096XB1T75N1VYY98PHR2&callerReference=SenderToken-1265914696&paymentReason=Test+Payment&pipelineName=SingleUse&returnURL=http%3A%2F%2Flocalhost%3A3005%2Ffps%2Fthankyou%3FCallerTokenId%3DH6EXPGRBTVLI26712DVP3JKGBIIISIP9NUT6LVMVFS54GIGXENRKJLZF6FYJL9YD%26Amount%3D1%26RecipientTokenId%3DH5EXCGXBTNLQ26B16DVV3VKG5I3ISQPVNUC61VM1F954TIHXERRQJL1FFFYQL4YG&transactionAmount=1&awsSignature=adVCTqheBke8DhfXgssf4a4ficA%3D
+Completed in 0.02059 (48 reqs/sec) | 302 Found [http://localhost/fps/redirect_cbui]
+
+
+Processing FpsController#thankyou (for 127.0.0.1 at 2010-02-11 11:58:42) [GET]
+  Session ID: 735b1440d6a2f7721745d886fb83f83a
+  Parameters: {"CallerTokenId"=>"H6EXPGRBTVLI26712DVP3JKGBIIISIP9NUT6LVMVFS54GIGXENRKJLZF6FYJL9YD", "tokenID"=>"C7U3S48A6IJM6ML6L5TB54NSHFBLVTYSHXSM71FMX5KEX848EHL9DUPFNLSASAWM", "signatureVersion"=>"2", "callerReference"=>"SenderToken-1265914696", "signature"=>"kPwF6t+i6npHLwvI8a7yt1YMC7NXHqAW4XhISSzdXyX6iUFxdy8vmS4lQkbGd5ATE6vi/m48bgM5\nkfZIY20FX8oqG+5WEJtJ5S0wfEUAJJpOuSU5sNQOHebKG4cYhCjS/f/a0e9ZIHKy0lFdLLkc/kz/\nscsPPwrGxizK3sckqV3tACHm7fD/613gpPWSF/h3SLx8EJCGaAIr03iN1xhzeR4yRTTIhRJpfZzB\ntl90Uj+qTAGxS8NTNpvQw7PfY3yBFP3m6yk6EzG6+lhloDbQQuAbCpgXqcAAPjUIKo6sLVnKgki4\ntTPyC8L8O1PhutfNwJUStOet/oGx/TDoLUfSMQ==", "certificateUrl"=>"https://fps.sandbox.amazonaws.com/certs/090909/PKICert.pem", "action"=>"thankyou", "signatureMethod"=>"RSA-SHA1", "Amount"=>"1", "RecipientTokenId"=>"H5EXCGXBTNLQ26B16DVV3VKG5I3ISQPVNUC61VM1F954TIHXERRQJL1FFFYQL4YG", "expiry"=>"08/2015", "controller"=>"fps", "status"=>"SC"}
+Rendering fps/thankyou
+Completed in 0.02783 (35 reqs/sec) | Rendering: 0.02110 (75%) | 200 OK [http://localhost/fps/thankyou?Amount=1&RecipientTokenId=H5EXCGXBTNLQ26B16DVV3VKG5I3ISQPVNUC61VM1F954TIHXERRQJL1FFFYQL4YG&CallerTokenId=H6EXPGRBTVLI26712DVP3JKGBIIISIP9NUT6LVMVFS54GIGXENRKJLZF6FYJL9YD&signature=kPwF6t%2Bi6npHLwvI8a7yt1YMC7NXHqAW4XhISSzdXyX6iUFxdy8vmS4lQkbGd5ATE6vi%2Fm48bgM5%0AkfZIY20FX8oqG%2B5WEJtJ5S0wfEUAJJpOuSU5sNQOHebKG4cYhCjS%2Ff%2Fa0e9ZIHKy0lFdLLkc%2Fkz%2F%0AscsPPwrGxizK3sckqV3tACHm7fD%2F613gpPWSF%2Fh3SLx8EJCGaAIr03iN1xhzeR4yRTTIhRJpfZzB%0Atl90Uj%2BqTAGxS8NTNpvQw7PfY3yBFP3m6yk6EzG6%2BlhloDbQQuAbCpgXqcAAPjUIKo6sLVnKgki4%0AtTPyC8L8O1PhutfNwJUStOet%2FoGx%2FTDoLUfSMQ%3D%3D&expiry=08%2F2015&signatureVersion=2&signatureMethod=RSA-SHA1&certificateUrl=https%3A%2F%2Ffps.sandbox.amazonaws.com%2Fcerts%2F090909%2FPKICert.pem&tokenID=C7U3S48A6IJM6ML6L5TB54NSHFBLVTYSHXSM71FMX5KEX848EHL9DUPFNLSASAWM&status=SC&callerReference=SenderToken-1265914696]
+
+
+Processing FpsController#pay (for 127.0.0.1 at 2010-02-11 11:58:55) [GET]
+  Session ID: 735b1440d6a2f7721745d886fb83f83a
+  Parameters: {"CallerTokenId"=>"H6EXPGRBTVLI26712DVP3JKGBIIISIP9NUT6LVMVFS54GIGXENRKJLZF6FYJL9YD", "SenderTokenId"=>"C7U3S48A6IJM6ML6L5TB54NSHFBLVTYSHXSM71FMX5KEX848EHL9DUPFNLSASAWM", "action"=>"pay", "Amount"=>"1", "RecipientTokenId"=>"H5EXCGXBTNLQ26B16DVV3VKG5I3ISQPVNUC61VM1F954TIHXERRQJL1FFFYQL4YG", "controller"=>"fps"}
+Rendering fps/pay
+Completed in 1.11245 (0 reqs/sec) | Rendering: 0.03885 (3%) | 200 OK [http://localhost/fps/pay?CallerTokenId=H6EXPGRBTVLI26712DVP3JKGBIIISIP9NUT6LVMVFS54GIGXENRKJLZF6FYJL9YD&RecipientTokenId=H5EXCGXBTNLQ26B16DVV3VKG5I3ISQPVNUC61VM1F954TIHXERRQJL1FFFYQL4YG&SenderTokenId=C7U3S48A6IJM6ML6L5TB54NSHFBLVTYSHXSM71FMX5KEX848EHL9DUPFNLSASAWM&Amount=1]
+
+
+Processing FpsController#get_transaction (for 127.0.0.1 at 2010-02-11 11:59:04) [GET]
+  Session ID: 735b1440d6a2f7721745d886fb83f83a
+  Parameters: {"action"=>"get_transaction", "TransactionId"=>"14QV6BR9M1IT5282ML9PO36PKTEF6SUUQQR", "controller"=>"fps"}
+Rendering fps/get_transaction
+Completed in 0.56775 (1 reqs/sec) | Rendering: 0.03006 (5%) | 200 OK [http://localhost/fps/get_transaction?TransactionId=14QV6BR9M1IT5282ML9PO36PKTEF6SUUQQR]
+
+
+Processing FpsController#get_caller_token (for 127.0.0.1 at 2010-02-11 11:59:15) [GET]
+  Session ID: 735b1440d6a2f7721745d886fb83f83a
+  Parameters: {"action"=>"get_caller_token", "controller"=>"fps"}
+Rendering fps/get_caller_token
+Completed in 0.65191 (1 reqs/sec) | Rendering: 0.00588 (0%) | 200 OK [http://localhost/fps/get_caller_token]
+
+
+Processing FpsController#get_recipient_token (for 127.0.0.1 at 2010-02-11 13:02:23) [GET]
+  Session ID: 735b1440d6a2f7721745d886fb83f83a
+  Parameters: {"CallerTokenId"=>"H2EXUGRBTPLC26Q1EDVM3HKGDISISBPGNUU6VVMUF954AINXE5R4JLQF6FYSLEY7", "action"=>"get_recipient_token", "controller"=>"fps"}
+Rendering fps/get_recipient_token
+Completed in 0.84160 (1 reqs/sec) | Rendering: 0.00220 (0%) | 200 OK [http://localhost/fps/get_recipient_token?CallerTokenId=H2EXUGRBTPLC26Q1EDVM3HKGDISISBPGNUU6VVMUF954AINXE5R4JLQF6FYSLEY7]
+
+
+Processing FpsController#get_sender_token (for 127.0.0.1 at 2010-02-11 13:05:33) [GET]
+  Session ID: 735b1440d6a2f7721745d886fb83f83a
+  Parameters: {"CallerTokenId"=>"H2EXUGRBTPLC26Q1EDVM3HKGDISISBPGNUU6VVMUF954AINXE5R4JLQF6FYSLEY7", "action"=>"get_sender_token", "RecipientTokenId"=>"H3EXDG3BTVLV26X16DVE3HKG8IFISCPPNUR63VMHFG54GITXEKRIJLHFFFY1LJYE", "controller"=>"fps"}
+Rendering fps/get_sender_token
+Completed in 0.00336 (297 reqs/sec) | Rendering: 0.00154 (46%) | 200 OK [http://localhost/fps/get_sender_token?CallerTokenId=H2EXUGRBTPLC26Q1EDVM3HKGDISISBPGNUU6VVMUF954AINXE5R4JLQF6FYSLEY7&RecipientTokenId=H3EXDG3BTVLV26X16DVE3HKG8IFISCPPNUR63VMHFG54GITXEKRIJLHFFFY1LJYE]
+
+
+Processing FpsController#redirect_cbui (for 127.0.0.1 at 2010-02-11 13:05:51) [POST]
+  Session ID: 735b1440d6a2f7721745d886fb83f83a
+  Parameters: {"CallerTokenId"=>"H2EXUGRBTPLC26Q1EDVM3HKGDISISBPGNUU6VVMUF954AINXE5R4JLQF6FYSLEY7", "action"=>"redirect_cbui", "Amount"=>"3", "RecipientTokenId"=>"H3EXDG3BTVLV26X16DVE3HKG8IFISCPPNUR63VMHFG54GITXEKRIJLHFFFY1LJYE", "controller"=>"fps"}
+https://authorize.payments-sandbox.amazon.com/cobranded-ui/actions/start?callerKey=096XB1T75N1VYY98PHR2&callerReference=SenderToken-1265918751&paymentReason=Test+Payment&pipelineName=SingleUse&returnURL=http%3A%2F%2Flocalhost%3A3005%2Ffps%2Fthankyou%3FCallerTokenId%3DH2EXUGRBTPLC26Q1EDVM3HKGDISISBPGNUU6VVMUF954AINXE5R4JLQF6FYSLEY7%26Amount%3D3%26RecipientTokenId%3DH3EXDG3BTVLV26X16DVE3HKG8IFISCPPNUR63VMHFG54GITXEKRIJLHFFFY1LJYE&transactionAmount=3&awsSignature=5kw6FvI0uaG92%2BYutHLeKByYVZA%3D
+Redirected to https://authorize.payments-sandbox.amazon.com/cobranded-ui/actions/start?callerKey=096XB1T75N1VYY98PHR2&callerReference=SenderToken-1265918751&paymentReason=Test+Payment&pipelineName=SingleUse&returnURL=http%3A%2F%2Flocalhost%3A3005%2Ffps%2Fthankyou%3FCallerTokenId%3DH2EXUGRBTPLC26Q1EDVM3HKGDISISBPGNUU6VVMUF954AINXE5R4JLQF6FYSLEY7%26Amount%3D3%26RecipientTokenId%3DH3EXDG3BTVLV26X16DVE3HKG8IFISCPPNUR63VMHFG54GITXEKRIJLHFFFY1LJYE&transactionAmount=3&awsSignature=5kw6FvI0uaG92%2BYutHLeKByYVZA%3D
+Completed in 0.00394 (253 reqs/sec) | 302 Found [http://localhost/fps/redirect_cbui]
+
+
+Processing FpsController#thankyou (for 127.0.0.1 at 2010-02-11 13:06:28) [GET]
+  Session ID: 735b1440d6a2f7721745d886fb83f83a
+  Parameters: {"CallerTokenId"=>"H2EXUGRBTPLC26Q1EDVM3HKGDISISBPGNUU6VVMUF954AINXE5R4JLQF6FYSLEY7", "tokenID"=>"C7U354HA62JJ6M46Q5TS5ZNSGFHLV6YGHXDM11FPXXKE8878EELBDUJF3LSPS6WV", "signatureVersion"=>"2", "callerReference"=>"SenderToken-1265918751", "signature"=>"mGQ7f/TtaxY47TE1FrjIWcN//9rmoxW+qV7WicLftT5H1bPaqhuAKlS/0ha8eu4pjGGtTUDtsJpj\nceB+GlTKGhUSWXiufVkkkoBIjb8GliqJxcsVC3e2l1fkdK7F6XCGWu2uVGY1LAYpnm6EqwHxYvj4\njBKftFOX/ybh0a+luf/q/FztaSXAF14RV0tkdpK5JaxS6jOgE2Hgf4N3KBViIHMukG1URe+D/BdP\ncXQO/MLAmpchZbcLYpje05gmny4bcX9aW6jrF3W9glbBPJ5Ab94aqFCWGWT0DELhWxm00dJLZDjm\nr/w3n2SZcsbSs00LuNDsdNsP4oer5uNp21vpSA==", "certificateUrl"=>"https://fps.sandbox.amazonaws.com/certs/090909/PKICert.pem", "action"=>"thankyou", "signatureMethod"=>"RSA-SHA1", "Amount"=>"3", "RecipientTokenId"=>"H3EXDG3BTVLV26X16DVE3HKG8IFISCPPNUR63VMHFG54GITXEKRIJLHFFFY1LJYE", "expiry"=>"08/2015", "controller"=>"fps", "status"=>"SC"}
+Rendering fps/thankyou
+Completed in 0.01413 (70 reqs/sec) | Rendering: 0.00903 (63%) | 200 OK [http://localhost/fps/thankyou?Amount=3&RecipientTokenId=H3EXDG3BTVLV26X16DVE3HKG8IFISCPPNUR63VMHFG54GITXEKRIJLHFFFY1LJYE&CallerTokenId=H2EXUGRBTPLC26Q1EDVM3HKGDISISBPGNUU6VVMUF954AINXE5R4JLQF6FYSLEY7&signature=mGQ7f%2FTtaxY47TE1FrjIWcN%2F%2F9rmoxW%2BqV7WicLftT5H1bPaqhuAKlS%2F0ha8eu4pjGGtTUDtsJpj%0AceB%2BGlTKGhUSWXiufVkkkoBIjb8GliqJxcsVC3e2l1fkdK7F6XCGWu2uVGY1LAYpnm6EqwHxYvj4%0AjBKftFOX%2Fybh0a%2Bluf%2Fq%2FFztaSXAF14RV0tkdpK5JaxS6jOgE2Hgf4N3KBViIHMukG1URe%2BD%2FBdP%0AcXQO%2FMLAmpchZbcLYpje05gmny4bcX9aW6jrF3W9glbBPJ5Ab94aqFCWGWT0DELhWxm00dJLZDjm%0Ar%2Fw3n2SZcsbSs00LuNDsdNsP4oer5uNp21vpSA%3D%3D&expiry=08%2F2015&signatureVersion=2&signatureMethod=RSA-SHA1&certificateUrl=https%3A%2F%2Ffps.sandbox.amazonaws.com%2Fcerts%2F090909%2FPKICert.pem&tokenID=C7U354HA62JJ6M46Q5TS5ZNSGFHLV6YGHXDM11FPXXKE8878EELBDUJF3LSPS6WV&status=SC&callerReference=SenderToken-1265918751]
+
+
+Processing FpsController#pay (for 127.0.0.1 at 2010-02-11 13:06:47) [GET]
+  Session ID: 735b1440d6a2f7721745d886fb83f83a
+  Parameters: {"CallerTokenId"=>"H2EXUGRBTPLC26Q1EDVM3HKGDISISBPGNUU6VVMUF954AINXE5R4JLQF6FYSLEY7", "SenderTokenId"=>"C7U354HA62JJ6M46Q5TS5ZNSGFHLV6YGHXDM11FPXXKE8878EELBDUJF3LSPS6WV", "action"=>"pay", "Amount"=>"3", "RecipientTokenId"=>"H3EXDG3BTVLV26X16DVE3HKG8IFISCPPNUR63VMHFG54GITXEKRIJLHFFFY1LJYE", "controller"=>"fps"}
+Rendering fps/pay
+Completed in 0.87035 (1 reqs/sec) | Rendering: 0.00180 (0%) | 200 OK [http://localhost/fps/pay?CallerTokenId=H2EXUGRBTPLC26Q1EDVM3HKGDISISBPGNUU6VVMUF954AINXE5R4JLQF6FYSLEY7&RecipientTokenId=H3EXDG3BTVLV26X16DVE3HKG8IFISCPPNUR63VMHFG54GITXEKRIJLHFFFY1LJYE&SenderTokenId=C7U354HA62JJ6M46Q5TS5ZNSGFHLV6YGHXDM11FPXXKE8878EELBDUJF3LSPS6WV&Amount=3]
+
+
+Processing FpsController#get_transaction (for 127.0.0.1 at 2010-02-11 13:06:58) [GET]
+  Session ID: 735b1440d6a2f7721745d886fb83f83a
+  Parameters: {"action"=>"get_transaction", "TransactionId"=>"14QVA83LG3KHZ9S99J64L7D2EHPV9BEJEF6", "controller"=>"fps"}
+Rendering fps/get_transaction
+Completed in 0.64010 (1 reqs/sec) | Rendering: 0.00619 (0%) | 200 OK [http://localhost/fps/get_transaction?TransactionId=14QVA83LG3KHZ9S99J64L7D2EHPV9BEJEF6]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-11 15:05:06) [GET]
+  Session ID: 735b1440d6a2f7721745d886fb83f83a
+  Parameters: {"tokenID"=>"A5ADJ795T5XQKP7GSNBS4NRN2H6USJVKJQUKTDU96ULBGTD2M31C3N3YEJVQQADK", "signatureVersion"=>"2", "callerReference"=>"RecipientToken-1265925742", "signature"=>"0DF9MiRTjNwtBBFD8wOlainjRtthGKFIIpxfLfGTKXpn521FHCeYCFvB/hRYSszE0fBEX2I9u6jr\n+uPq80Bb+58D5cDzOpi/5iYjSWcGLb7nKIgz1kNtwRxWATMAf//YDzKJT/ZXijTCuUE9CklJT76i\nVc25SnImCB4sybJhuXypzp4YG48DQ5NQzae+IlDcs8t+k286ZGWObDaJ6U3hvkE3AA5/ssIoyb8z\nkPcgivlxNKvPVfukbMoyn4MsEWUmurBmqD7qtjYeMw5HKWJVChSTnn90fPcecD3FaPxpQkfg7nsA\n7O7TlSKMHaGcIGgokKFjH1tAeV9u215d3jmXgA==", "certificateUrl"=>"https://fps.sandbox.amazonaws.com/certs/090909/PKICert.pem", "signatureMethod"=>"RSA-SHA1", "MarketplaceUserID"=>"1", "refundTokenID"=>"A7ADI795T2X6KPKG2NBV4JRN4HDUSJVCJQLKEDU46ZLB7TS2MD163NIYTJV3Q6D7", "status"=>"SR"}
+
+
+ActionController::RoutingError (no route found to match "/amzconfirmseller" with {:method=>:get}):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/routing.rb:1292:in `recognize_path'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/routing.rb:1282:in `recognize'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:40:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:159:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:158:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:158:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:282:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:281:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:281:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/command.rb:212:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /usr/local/bin/mongrel_rails:19:in `load'
+    /usr/local/bin/mongrel_rails:19
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-11 15:06:28) [GET]
+  Session ID: 735b1440d6a2f7721745d886fb83f83a
+  Parameters: {"tokenID"=>"A5ADJ795T5XQKP7GSNBS4NRN2H6USJVKJQUKTDU96ULBGTD2M31C3N3YEJVQQADK", "signatureVersion"=>"2", "callerReference"=>"RecipientToken-1265925742", "signature"=>"0DF9MiRTjNwtBBFD8wOlainjRtthGKFIIpxfLfGTKXpn521FHCeYCFvB/hRYSszE0fBEX2I9u6jr\n+uPq80Bb+58D5cDzOpi/5iYjSWcGLb7nKIgz1kNtwRxWATMAf//YDzKJT/ZXijTCuUE9CklJT76i\nVc25SnImCB4sybJhuXypzp4YG48DQ5NQzae+IlDcs8t+k286ZGWObDaJ6U3hvkE3AA5/ssIoyb8z\nkPcgivlxNKvPVfukbMoyn4MsEWUmurBmqD7qtjYeMw5HKWJVChSTnn90fPcecD3FaPxpQkfg7nsA\n7O7TlSKMHaGcIGgokKFjH1tAeV9u215d3jmXgA==", "certificateUrl"=>"https://fps.sandbox.amazonaws.com/certs/090909/PKICert.pem", "signatureMethod"=>"RSA-SHA1", "MarketplaceUserID"=>"1", "refundTokenID"=>"A7ADI795T2X6KPKG2NBV4JRN4HDUSJVCJQLKEDU46ZLB7TS2MD163NIYTJV3Q6D7", "status"=>"SR"}
+
+
+ActionController::RoutingError (no route found to match "/amzconfirmseller" with {:method=>:get}):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/routing.rb:1292:in `recognize_path'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/routing.rb:1282:in `recognize'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:40:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:159:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:158:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:158:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:282:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:281:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:281:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/command.rb:212:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /usr/local/bin/mongrel_rails:19:in `load'
+    /usr/local/bin/mongrel_rails:19
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-11 15:21:07) [GET]
+  Session ID: 735b1440d6a2f7721745d886fb83f83a
+  Parameters: {"tokenID"=>"A5ADQ7U5TSX3KPMGTNBE4DRN5HGUSGVAJQ1KFDUD6XLBUT62M51E3N8YNJVAQZDP", "signatureVersion"=>"2", "callerReference"=>"RecipientToken-1265926833", "signature"=>"lKjO5biTnPGzI1tX2v1/nv2nW05aqHTh1vSr7RQEJCf676BzvmGobJUMR/jpayvw2ckJqOoT3Nv4\nMkFU7RsxmdbkXVgxzt16GQ9E/b7lESsGos/5ChKT33f02Mk7h6j62YoGR0ew5NOYfg6/qc7Po7JP\n5dsFKydM0RwwXKyPb7AEfTSjHam5g+f1r+iW7ZQHnTM8d552HLBaeSW15oid7URdWi96p4a35QPT\nBMyC9UxKFwW3xxZTJpn7At9v39XlCFa0yXwIbN8y83y+Lm+6+qUlbpKv4Bd6EhyIz2E1Uge84mpq\n7s8IFps1CFKdqDMz7hTBESDiyQra+aAfExs26A==", "certificateUrl"=>"https://fps.sandbox.amazonaws.com/certs/090909/PKICert.pem", "signatureMethod"=>"RSA-SHA1", "MarketplaceUserID"=>"1", "refundTokenID"=>"A6ADR7V5TIXPKPKGJNBE44RNHH3US6VBJQLK9DUG62LBSTM2MC1U3NDYLJVHQRDD", "status"=>"SR"}
+
+
+ActionController::RoutingError (no route found to match "/amzconfirmseller" with {:method=>:get}):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/routing.rb:1292:in `recognize_path'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/routing.rb:1282:in `recognize'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:40:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:159:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:158:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:158:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:282:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:281:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:281:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/command.rb:212:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /usr/local/bin/mongrel_rails:19:in `load'
+    /usr/local/bin/mongrel_rails:19
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)

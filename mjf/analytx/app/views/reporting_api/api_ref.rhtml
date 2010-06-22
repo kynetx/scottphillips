@@ -1,0 +1,45 @@
+<% content_for :nav_highlight do  %>
+	<script type="text/javascript" charset="utf-8">
+		$(document).ready(function(){
+			$('#navigation').children().removeClass("current");
+			$('#api_link').addClass("current");
+		});
+	</script>
+<% end %>
+
+<div class="doc" style="margin: 10px 0px 10px 20px;">
+	<h3>KNS TOTALS</h3>
+	<strong>URL: http://analytx.kobj.net/data/kns_totals</strong>
+	<br><br>
+	<h3>API Parameters (* required)</h3>
+	<span class="bolded_text">ruleset_id*:</span> Specifies the ruleset id for the data (client_id is still supported at this time in place of rulest_id).
+	<br><span class="bolded_text">kpi*:</span> comma seperated list of RSE, RF, AF, CB
+	<br><span class="bolded_text">temporal*:</span> Specifies how to group the data. Options are half_hour, hour, day, week_number, month, year
+	<br><span class="bolded_text">as_timestamp:</span> Specifies if the date comes as unix timestamp for JavaScript timestamp compatibility
+	<br><span class="bolded_text">format:</span> Designates the format of the data. The supported formats are:
+		<ul>
+			<li>table (json array of javascript objects)</li>
+			<li>pivot (json object for flot graph. See <a href="http://code.google.com/p/flot/">the flot project for more information</a></li>
+			<li>csv (json string for a csv representation of the data)</li>
+			<li>google_table (json object formatted as a <a href="http://code.google.com/apis/visualization/documentation/reference.html#DataTable">Google Data Table</a>)
+		</ul>
+	<br><span class="bolded_text">pivot_by:</span> Specifies how you want to pivot the data if you want it.  Most often this will be a date ("day") field. This parameter is only used for the pivot formatter.
+	<br><span class="bolded_text">callback:</span> Returns the result wrapped in a callback function you specify
+	<br><span class="bolded_text">limit:</span> limits the result by a number you specify (under 1000) default is 60
+	<br><span class="bolded_text">num_range:</span> specifies the date range of the data. Default is previous 30 days.  You specify the range thusly:
+	<br>  e-d where e is the end date of the range minus today.  So yesterday would be 1 and last week would be 7
+	<br>      d = the number of days to include in the range.  So 1-1 would be only yesterday.  1-2 would be yesterday
+	<br>      and the day before
+	<br><span class="bolded_text">abs_range:</span>  specify the range absolutely using the format yyyymmdd-yyyymmdd
+	<br><span class="bolded_text">rel_range:</span> specifies the range using relative terms.  The supported terms are:
+	<br>  today
+	<br>  yesterday
+	<br>  current_week 
+	<br>  previous_week 
+	<br>  current_month
+	<br>  previous_month
+	<br>
+	<br><span class="bolded_text">**Range precedence:</span> In the case where more than one range parameter was passed
+	<br>  only one will be executed.  The precedence order is as follows (where the former receives precedence over the latter)
+	<br>  num_range, abs_range, rel_range	
+</div>

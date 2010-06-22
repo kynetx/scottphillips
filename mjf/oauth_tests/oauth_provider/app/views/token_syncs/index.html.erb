@@ -1,0 +1,19 @@
+<% title "Token Syncs" %>
+
+<table>
+  <tr>
+    <th>Name</th>
+	<th>Callback</th>
+  </tr>
+  <% for token_sync in @token_syncs %>
+    <tr>
+      <td><%=h token_sync.peer_name %></td>
+	  <td><%=h token_sync.callback_url  %></td>
+      <td><%= link_to "Show", token_sync %></td>
+      <td><%= link_to "Edit", edit_token_sync_path(token_sync) %></td>
+      <td><%= link_to "Destroy", token_sync, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Token Sync", new_token_sync_path %></p>
