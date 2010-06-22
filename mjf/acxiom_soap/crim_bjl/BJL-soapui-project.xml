@@ -1,0 +1,548 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project name="BJL" resourceRoot="" soapui-version="3.5" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="BJLBeanBinding" type="wsdl" bindingName="{http://id.acxiom.com/risk-bjl/1.0}BJLBeanBinding" soapVersion="1_1" anonymous="optional" definition="https://idrisktest.acxiom.com/risk-bjl/1.0?WSDL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="https://idrisktest.acxiom.com/risk-bjl/1.0?WSDL"><con:part><con:url>https://idrisktest.acxiom.com/risk-bjl/1.0?WSDL</con:url><con:content><![CDATA[<definitions name="BJLBeanService" targetNamespace="http://id.acxiom.com/risk-bjl/1.0" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://id.acxiom.com/risk-bjl/1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <types>
+    <xs:schema targetNamespace="http://id.acxiom.com/risk-bjl/1.0" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="InputValidationException" type="tns:InputValidationException"/>
+      <xs:element name="RiskHeader" nillable="true" type="tns:riskHeader"/>
+      <xs:element name="SystemUnavailableException" type="tns:SystemUnavailableException"/>
+      <xs:element name="TooManyRowsException" type="tns:TooManyRowsException"/>
+      <xs:element name="getByAnyName" type="tns:getByAnyName"/>
+      <xs:element name="getByAnyNameResponse" type="tns:getByAnyNameResponse"/>
+      <xs:element name="getByDefendantNameAddress" type="tns:getByDefendantNameAddress"/>
+      <xs:element name="getByDefendantNameAddressResponse" type="tns:getByDefendantNameAddressResponse"/>
+      <xs:element name="getByDefendantSSN" type="tns:getByDefendantSSN"/>
+      <xs:element name="getByDefendantSSNResponse" type="tns:getByDefendantSSNResponse"/>
+      <xs:element name="getByFullSearch" type="tns:getByFullSearch"/>
+      <xs:element name="getByFullSearchResponse" type="tns:getByFullSearchResponse"/>
+      <xs:complexType name="riskHeader">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="clientIP" type="xs:string"/>
+          <xs:element name="reasonCode" type="xs:int"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getByFullSearch">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="input" type="tns:bjlInput"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType final="extension restriction" name="bjlInput">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="amountHigh" type="xs:string"/>
+          <xs:element minOccurs="0" name="amountLow" type="xs:string"/>
+          <xs:element minOccurs="0" name="anyName" type="tns:bjlAnyName"/>
+          <xs:element minOccurs="0" name="attorney" type="xs:string"/>
+          <xs:element minOccurs="0" name="caseNumber" type="xs:string"/>
+          <xs:element minOccurs="0" name="caseType" type="xs:string"/>
+          <xs:element minOccurs="0" name="courtName" type="xs:string"/>
+          <xs:element minOccurs="0" name="defendant" type="tns:bjlDefendantInput"/>
+          <xs:element minOccurs="0" name="filingDateEnd" type="xs:string"/>
+          <xs:element minOccurs="0" name="filingDateStart" type="xs:string"/>
+          <xs:element minOccurs="0" name="filingDescription" type="xs:string"/>
+          <xs:element minOccurs="0" name="plaintiff" type="xs:string"/>
+          <xs:element minOccurs="0" name="unlawfulDetainmentFlag" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType final="extension restriction" name="bjlAnyName">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="firstName" type="xs:string"/>
+          <xs:element minOccurs="0" name="lastName" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType final="extension restriction" name="bjlDefendantInput">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="address" type="tns:bjlAddress"/>
+          <xs:element minOccurs="0" name="name" type="xs:string"/>
+          <xs:element minOccurs="0" name="ssn" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType final="extension restriction" name="bjlAddress">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="addressLine" type="xs:string"/>
+          <xs:element minOccurs="0" name="city" type="xs:string"/>
+          <xs:element minOccurs="0" name="poBox" type="xs:string"/>
+          <xs:element minOccurs="0" name="state" type="xs:string"/>
+          <xs:element minOccurs="0" name="streetDirection" type="xs:string"/>
+          <xs:element minOccurs="0" name="streetName" type="xs:string"/>
+          <xs:element minOccurs="0" name="streetNumber" type="xs:string"/>
+          <xs:element minOccurs="0" name="streetType" type="xs:string"/>
+          <xs:element minOccurs="0" name="unitNumber" type="xs:string"/>
+          <xs:element minOccurs="0" name="zip" type="xs:string"/>
+          <xs:element minOccurs="0" name="zip4" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getByFullSearchResponse">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:bjlOutput"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType final="extension restriction" name="bjlOutput">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="acxiomProcessDate" type="xs:string"/>
+          <xs:element minOccurs="0" name="bjlCase" type="tns:bjlCase"/>
+          <xs:element minOccurs="0" name="coDefendantOrSpouse" type="tns:bjlDefendant"/>
+          <xs:element minOccurs="0" name="dateUpLoad" type="xs:string"/>
+          <xs:element minOccurs="0" name="defendant" type="tns:bjlDefendant"/>
+          <xs:element minOccurs="0" name="fips" type="xs:string"/>
+          <xs:element minOccurs="0" name="modifiedDate" type="xs:string"/>
+          <xs:element minOccurs="0" name="monetary" type="tns:bjlMonetary"/>
+          <xs:element minOccurs="0" name="plaintiff" type="tns:bjlPlaintiff"/>
+          <xs:element minOccurs="0" name="postedDate" type="xs:string"/>
+          <xs:element minOccurs="0" name="trustee" type="tns:bjlTrustee"/>
+          <xs:element minOccurs="0" name="type" type="xs:string"/>
+          <xs:element minOccurs="0" name="uniqueId" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType final="extension restriction" name="bjlCase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="actionType" type="xs:string"/>
+          <xs:element minOccurs="0" name="book" type="xs:string"/>
+          <xs:element minOccurs="0" name="caseNumber" type="xs:string"/>
+          <xs:element minOccurs="0" name="complaintDate" type="xs:string"/>
+          <xs:element minOccurs="0" name="courtId" type="xs:string"/>
+          <xs:element minOccurs="0" name="courtName" type="xs:string"/>
+          <xs:element minOccurs="0" name="courtType" type="xs:string"/>
+          <xs:element minOccurs="0" name="dismissalDate" type="xs:string"/>
+          <xs:element minOccurs="0" name="disposition" type="xs:string"/>
+          <xs:element minOccurs="0" name="dispositionDate" type="xs:string"/>
+          <xs:element minOccurs="0" name="dispositionType" type="xs:string"/>
+          <xs:element minOccurs="0" name="filerCode" type="xs:string"/>
+          <xs:element minOccurs="0" name="filingDate" type="xs:string"/>
+          <xs:element minOccurs="0" name="filingType" type="xs:string"/>
+          <xs:element minOccurs="0" name="filingTypeCode" type="xs:string"/>
+          <xs:element minOccurs="0" name="judgeInitials" type="xs:string"/>
+          <xs:element minOccurs="0" name="judgesName" type="xs:string"/>
+          <xs:element minOccurs="0" name="page" type="xs:string"/>
+          <xs:element minOccurs="0" name="satisfiedDate" type="xs:string"/>
+          <xs:element minOccurs="0" name="scheduledCourtDate" type="xs:string"/>
+          <xs:element minOccurs="0" name="serialNumber" type="xs:string"/>
+          <xs:element minOccurs="0" name="state" type="xs:string"/>
+          <xs:element minOccurs="0" name="statusCode" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType final="extension restriction" name="bjlDefendant">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="address" type="tns:bjlAddress"/>
+          <xs:element minOccurs="0" name="attorney" type="tns:bjlAttorney"/>
+          <xs:element minOccurs="0" name="defendantName" type="tns:bjlName"/>
+          <xs:element minOccurs="0" name="dob" type="xs:string"/>
+          <xs:element minOccurs="0" name="driverLicenseNum" type="xs:string"/>
+          <xs:element minOccurs="0" name="driverLicenseState" type="xs:string"/>
+          <xs:element minOccurs="0" name="entityType" type="xs:string"/>
+          <xs:element minOccurs="0" name="ssn" type="xs:string"/>
+          <xs:element minOccurs="0" name="ssnFlag" type="xs:string"/>
+          <xs:element minOccurs="0" name="unlawDetainFlag" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType final="extension restriction" name="bjlAttorney">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="address" type="tns:bjlAddress"/>
+          <xs:element minOccurs="0" name="firmName" type="xs:string"/>
+          <xs:element minOccurs="0" name="licenseNumber" type="xs:string"/>
+          <xs:element minOccurs="0" name="name" type="xs:string"/>
+          <xs:element minOccurs="0" name="phone" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType final="extension restriction" name="bjlName">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="alias1" type="xs:string"/>
+          <xs:element minOccurs="0" name="alias2" type="xs:string"/>
+          <xs:element minOccurs="0" name="first" type="xs:string"/>
+          <xs:element minOccurs="0" name="fullName" type="xs:string"/>
+          <xs:element minOccurs="0" name="last" type="xs:string"/>
+          <xs:element minOccurs="0" name="middle" type="xs:string"/>
+          <xs:element minOccurs="0" name="name" type="xs:string"/>
+          <xs:element minOccurs="0" name="suffix" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType final="extension restriction" name="bjlMonetary">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="amount" type="xs:string"/>
+          <xs:element minOccurs="0" name="amountPre" type="xs:string"/>
+          <xs:element minOccurs="0" name="assets" type="xs:string"/>
+          <xs:element minOccurs="0" name="assetsAvailable" type="xs:string"/>
+          <xs:element minOccurs="0" name="liability" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType final="extension restriction" name="bjlPlaintiff">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="address" type="tns:bjlAddress"/>
+          <xs:element minOccurs="0" name="attorney" type="tns:bjlAttorney"/>
+          <xs:element minOccurs="0" name="entityType" type="xs:string"/>
+          <xs:element minOccurs="0" name="plaintiffName" type="tns:bjlName"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType final="extension restriction" name="bjlTrustee">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="address" type="xs:string"/>
+          <xs:element minOccurs="0" name="city" type="xs:string"/>
+          <xs:element minOccurs="0" name="name" type="xs:string"/>
+          <xs:element minOccurs="0" name="phone" type="xs:string"/>
+          <xs:element minOccurs="0" name="state" type="xs:string"/>
+          <xs:element minOccurs="0" name="zip" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="SystemUnavailableException">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="message" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="InputValidationException">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="message" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="TooManyRowsException">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="message" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getByDefendantSSN">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="input" type="tns:bjlssnInput"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType final="extension restriction" name="bjlssnInput">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ssn" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getByDefendantSSNResponse">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:bjlOutput"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getByAnyName">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="input" type="tns:bjlAnyName"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getByAnyNameResponse">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:bjlOutput"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getByDefendantNameAddress">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="input" type="tns:bjlNameAddressInput"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType final="extension restriction" name="bjlNameAddressInput">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="address" type="tns:bjlAddress"/>
+          <xs:element minOccurs="0" name="name" type="tns:bjlAnyName"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getByDefendantNameAddressResponse">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:bjlOutput"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </types>
+  <message name="BJLBean_getByFullSearch">
+    <part element="tns:getByFullSearch" name="getByFullSearch"/>
+    <part element="tns:RiskHeader" name="RiskHeader"/>
+  </message>
+  <message name="BJLBean_getByDefendantSSN">
+    <part element="tns:getByDefendantSSN" name="getByDefendantSSN"/>
+    <part element="tns:RiskHeader" name="RiskHeader"/>
+  </message>
+  <message name="BJLBean_getByDefendantNameAddress">
+    <part element="tns:getByDefendantNameAddress" name="getByDefendantNameAddress"/>
+    <part element="tns:RiskHeader" name="RiskHeader"/>
+  </message>
+  <message name="SystemUnavailableException">
+    <part element="tns:SystemUnavailableException" name="SystemUnavailableException"/>
+  </message>
+  <message name="BJLBean_getByFullSearchResponse">
+    <part element="tns:getByFullSearchResponse" name="getByFullSearchResponse"/>
+  </message>
+  <message name="BJLBean_getByDefendantNameAddressResponse">
+    <part element="tns:getByDefendantNameAddressResponse" name="getByDefendantNameAddressResponse"/>
+  </message>
+  <message name="TooManyRowsException">
+    <part element="tns:TooManyRowsException" name="TooManyRowsException"/>
+  </message>
+  <message name="InputValidationException">
+    <part element="tns:InputValidationException" name="InputValidationException"/>
+  </message>
+  <message name="BJLBean_getByDefendantSSNResponse">
+    <part element="tns:getByDefendantSSNResponse" name="getByDefendantSSNResponse"/>
+  </message>
+  <message name="BJLBean_getByAnyNameResponse">
+    <part element="tns:getByAnyNameResponse" name="getByAnyNameResponse"/>
+  </message>
+  <message name="BJLBean_getByAnyName">
+    <part element="tns:getByAnyName" name="getByAnyName"/>
+    <part element="tns:RiskHeader" name="RiskHeader"/>
+  </message>
+  <portType name="BJLBean">
+    <operation name="getByAnyName" parameterOrder="getByAnyName RiskHeader">
+      <input message="tns:BJLBean_getByAnyName"/>
+      <output message="tns:BJLBean_getByAnyNameResponse"/>
+      <fault message="tns:InputValidationException" name="InputValidationException"/>
+      <fault message="tns:TooManyRowsException" name="TooManyRowsException"/>
+      <fault message="tns:SystemUnavailableException" name="SystemUnavailableException"/>
+    </operation>
+    <operation name="getByDefendantNameAddress" parameterOrder="getByDefendantNameAddress RiskHeader">
+      <input message="tns:BJLBean_getByDefendantNameAddress"/>
+      <output message="tns:BJLBean_getByDefendantNameAddressResponse"/>
+      <fault message="tns:InputValidationException" name="InputValidationException"/>
+      <fault message="tns:TooManyRowsException" name="TooManyRowsException"/>
+      <fault message="tns:SystemUnavailableException" name="SystemUnavailableException"/>
+    </operation>
+    <operation name="getByDefendantSSN" parameterOrder="getByDefendantSSN RiskHeader">
+      <input message="tns:BJLBean_getByDefendantSSN"/>
+      <output message="tns:BJLBean_getByDefendantSSNResponse"/>
+      <fault message="tns:InputValidationException" name="InputValidationException"/>
+      <fault message="tns:TooManyRowsException" name="TooManyRowsException"/>
+      <fault message="tns:SystemUnavailableException" name="SystemUnavailableException"/>
+    </operation>
+    <operation name="getByFullSearch" parameterOrder="getByFullSearch RiskHeader">
+      <input message="tns:BJLBean_getByFullSearch"/>
+      <output message="tns:BJLBean_getByFullSearchResponse"/>
+      <fault message="tns:InputValidationException" name="InputValidationException"/>
+      <fault message="tns:TooManyRowsException" name="TooManyRowsException"/>
+      <fault message="tns:SystemUnavailableException" name="SystemUnavailableException"/>
+    </operation>
+  </portType>
+  <binding name="BJLBeanBinding" type="tns:BJLBean">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="getByAnyName">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body parts="getByAnyName" use="literal"/>
+        <soap:header message="tns:BJLBean_getByAnyName" part="RiskHeader" use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="InputValidationException">
+        <soap:fault name="InputValidationException" use="literal"/>
+      </fault>
+      <fault name="TooManyRowsException">
+        <soap:fault name="TooManyRowsException" use="literal"/>
+      </fault>
+      <fault name="SystemUnavailableException">
+        <soap:fault name="SystemUnavailableException" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="getByDefendantNameAddress">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body parts="getByDefendantNameAddress" use="literal"/>
+        <soap:header message="tns:BJLBean_getByDefendantNameAddress" part="RiskHeader" use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="InputValidationException">
+        <soap:fault name="InputValidationException" use="literal"/>
+      </fault>
+      <fault name="TooManyRowsException">
+        <soap:fault name="TooManyRowsException" use="literal"/>
+      </fault>
+      <fault name="SystemUnavailableException">
+        <soap:fault name="SystemUnavailableException" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="getByDefendantSSN">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body parts="getByDefendantSSN" use="literal"/>
+        <soap:header message="tns:BJLBean_getByDefendantSSN" part="RiskHeader" use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="InputValidationException">
+        <soap:fault name="InputValidationException" use="literal"/>
+      </fault>
+      <fault name="TooManyRowsException">
+        <soap:fault name="TooManyRowsException" use="literal"/>
+      </fault>
+      <fault name="SystemUnavailableException">
+        <soap:fault name="SystemUnavailableException" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="getByFullSearch">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body parts="getByFullSearch" use="literal"/>
+        <soap:header message="tns:BJLBean_getByFullSearch" part="RiskHeader" use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="InputValidationException">
+        <soap:fault name="InputValidationException" use="literal"/>
+      </fault>
+      <fault name="TooManyRowsException">
+        <soap:fault name="TooManyRowsException" use="literal"/>
+      </fault>
+      <fault name="SystemUnavailableException">
+        <soap:fault name="SystemUnavailableException" use="literal"/>
+      </fault>
+    </operation>
+  </binding>
+  <service name="BJLBeanService">
+    <port binding="tns:BJLBeanBinding" name="BJLBeanPort">
+      <soap:address location="http://idrisktest.acxiom.com:8080/risk-bjl/1.0"/>
+    </port>
+  </service>
+</definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>https://idrisktest.acxiom.com/risk-bjl/1.0</con:endpoint></con:endpoints><con:operation isOneWay="false" action="" name="getByAnyName" bindingOperationName="getByAnyName" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://idrisktest.acxiom.com/risk-bjl/1.0</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://id.acxiom.com/risk-bjl/1.0">
+   <soapenv:Header>
+      <ns:RiskHeader>
+         <clientIP>209.41.75.73</clientIP>
+         <reasonCode>2</reasonCode>
+      </ns:RiskHeader>
+   </soapenv:Header>
+   <soapenv:Body>
+      <ns:getByAnyName>
+         <input>
+            <firstName>Michael</firstName>
+            <lastName>Farmer</lastName>
+         </input>
+      </ns:getByAnyName>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:username>dnb99</con:username><con:password>hF3@K9Z0</con:password></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://id.acxiom.com/risk-bjl/1.0/BJLBean/getByAnyNameRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation isOneWay="false" action="" name="getByDefendantNameAddress" bindingOperationName="getByDefendantNameAddress" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://idrisktest.acxiom.com/risk-bjl/1.0</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://id.acxiom.com/risk-bjl/1.0">
+   <soapenv:Header>
+      <ns:RiskHeader>
+         <!--Optional:-->
+         <clientIP>?</clientIP>
+         <reasonCode>?</reasonCode>
+      </ns:RiskHeader>
+   </soapenv:Header>
+   <soapenv:Body>
+      <ns:getByDefendantNameAddress>
+         <!--Optional:-->
+         <input>
+            <!--Optional:-->
+            <address>
+               <!--Optional:-->
+               <addressLine>?</addressLine>
+               <!--Optional:-->
+               <city>?</city>
+               <!--Optional:-->
+               <poBox>?</poBox>
+               <!--Optional:-->
+               <state>?</state>
+               <!--Optional:-->
+               <streetDirection>?</streetDirection>
+               <!--Optional:-->
+               <streetName>?</streetName>
+               <!--Optional:-->
+               <streetNumber>?</streetNumber>
+               <!--Optional:-->
+               <streetType>?</streetType>
+               <!--Optional:-->
+               <unitNumber>?</unitNumber>
+               <!--Optional:-->
+               <zip>?</zip>
+               <!--Optional:-->
+               <zip4>?</zip4>
+            </address>
+            <!--Optional:-->
+            <name>
+               <!--Optional:-->
+               <firstName>?</firstName>
+               <!--Optional:-->
+               <lastName>?</lastName>
+            </name>
+         </input>
+      </ns:getByDefendantNameAddress>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://id.acxiom.com/risk-bjl/1.0/BJLBean/getByDefendantNameAddressRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation isOneWay="false" action="" name="getByDefendantSSN" bindingOperationName="getByDefendantSSN" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://idrisktest.acxiom.com/risk-bjl/1.0</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://id.acxiom.com/risk-bjl/1.0">
+   <soapenv:Header>
+      <ns:RiskHeader>
+         <!--Optional:-->
+         <clientIP>?</clientIP>
+         <reasonCode>?</reasonCode>
+      </ns:RiskHeader>
+   </soapenv:Header>
+   <soapenv:Body>
+      <ns:getByDefendantSSN>
+         <!--Optional:-->
+         <input>
+            <!--Optional:-->
+            <ssn>?</ssn>
+         </input>
+      </ns:getByDefendantSSN>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://id.acxiom.com/risk-bjl/1.0/BJLBean/getByDefendantSSNRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation isOneWay="false" action="" name="getByFullSearch" bindingOperationName="getByFullSearch" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://idrisktest.acxiom.com/risk-bjl/1.0</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://id.acxiom.com/risk-bjl/1.0">
+   <soapenv:Header>
+      <ns:RiskHeader>
+         <!--Optional:-->
+         <clientIP>?</clientIP>
+         <reasonCode>?</reasonCode>
+      </ns:RiskHeader>
+   </soapenv:Header>
+   <soapenv:Body>
+      <ns:getByFullSearch>
+         <!--Optional:-->
+         <input>
+            <!--Optional:-->
+            <amountHigh>?</amountHigh>
+            <!--Optional:-->
+            <amountLow>?</amountLow>
+            <!--Optional:-->
+            <anyName>
+               <!--Optional:-->
+               <firstName>?</firstName>
+               <!--Optional:-->
+               <lastName>?</lastName>
+            </anyName>
+            <!--Optional:-->
+            <attorney>?</attorney>
+            <!--Optional:-->
+            <caseNumber>?</caseNumber>
+            <!--Optional:-->
+            <caseType>?</caseType>
+            <!--Optional:-->
+            <courtName>?</courtName>
+            <!--Optional:-->
+            <defendant>
+               <!--Optional:-->
+               <address>
+                  <!--Optional:-->
+                  <addressLine>?</addressLine>
+                  <!--Optional:-->
+                  <city>?</city>
+                  <!--Optional:-->
+                  <poBox>?</poBox>
+                  <!--Optional:-->
+                  <state>?</state>
+                  <!--Optional:-->
+                  <streetDirection>?</streetDirection>
+                  <!--Optional:-->
+                  <streetName>?</streetName>
+                  <!--Optional:-->
+                  <streetNumber>?</streetNumber>
+                  <!--Optional:-->
+                  <streetType>?</streetType>
+                  <!--Optional:-->
+                  <unitNumber>?</unitNumber>
+                  <!--Optional:-->
+                  <zip>?</zip>
+                  <!--Optional:-->
+                  <zip4>?</zip4>
+               </address>
+               <!--Optional:-->
+               <name>?</name>
+               <!--Optional:-->
+               <ssn>?</ssn>
+            </defendant>
+            <!--Optional:-->
+            <filingDateEnd>?</filingDateEnd>
+            <!--Optional:-->
+            <filingDateStart>?</filingDateStart>
+            <!--Optional:-->
+            <filingDescription>?</filingDescription>
+            <!--Optional:-->
+            <plaintiff>?</plaintiff>
+            <!--Optional:-->
+            <unlawfulDetainmentFlag>?</unlawfulDetainmentFlag>
+         </input>
+      </ns:getByFullSearch>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://id.acxiom.com/risk-bjl/1.0/BJLBean/getByFullSearchRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/></con:soapui-project>

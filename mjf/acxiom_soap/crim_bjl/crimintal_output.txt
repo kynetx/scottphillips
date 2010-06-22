@@ -1,0 +1,27 @@
+REQUEST: 
+<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:def="http://DefaultNamespace">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <def:getResults soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+	 <ConvictionDate xsi:type="soapenc:string" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"></ConvictionDate>
+<StartRow xsi:type="soapenc:string" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">1</StartRow>
+<Version xsi:type="soapenc:string" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">1.10</Version>
+<IncludeNullDobs xsi:type="soapenc:string" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">no</IncludeNullDobs>
+<MaxRows xsi:type="soapenc:string" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">2</MaxRows>
+<ClientCode xsi:type="soapenc:string" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">KPDS Search</ClientCode>
+<State xsi:type="soapenc:string" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">IL</State>
+<UserID xsi:type="soapenc:string" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">dnb99</UserID>
+<Birthdate xsi:type="soapenc:string" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"></Birthdate>
+<Name xsi:type="soapenc:string" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">Derek Ortiz</Name>
+<Offense xsi:type="soapenc:string" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"></Offense>
+<Password xsi:type="soapenc:string" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">hF3@K9Z0</Password>
+
+      </def:getResults>
+   </soapenv:Body>
+</soapenv:Envelope>
+Performing Request
+Step 1 Complete
+Session Started
+Sending Request...
+====================
+====================

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<env:Envelope xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:env="http://schemas.xmlsoap.org/soap/envelope/">
+  <env:Body>
+    <n1:cleanAddress xmlns:n1="http://id.acxiom.com/abilitec-postal/1.0">
+      <addresses>
+        <addressLines>3674 Capstone Dr</addressLines>
+        <city>Idaho Falls</city>
+        <postalCode>83401</postalCode>
+        <state>ID</state>
+        <urbanization xsi:nil="true"></urbanization>
+      </addresses>
+      <options>
+        <useLACSLink>false</useLACSLink>
+      </options>
+    </n1:cleanAddress>
+  </env:Body>
+</env:Envelope>
