@@ -1,0 +1,26 @@
+<html>
+<head> 
+    <title>This Changes Everything*</title> 
+	<script src="AIRAliases.js" type="text/javascript"></script>
+	<script src="jquery.js" type="text/javascript"></script>
+	<script src="kynetx.js" type="text/javascript"></script>
+</head> 
+
+<body>
+This is the login page
+
+<form id="login_form">
+	Name: <input type="text" name="name" id="name"/><br>
+	Password: <input type="text" name="password" id="password"/><br>
+	<input type="submit"/>
+</form>
+<script>
+	$("#login_form").submit(function() {
+		alert("submit")
+		local_data["name"] = $("#name").attr("value");
+		local_data["password"] = $("#password").attr("value");		
+		window.open("/HelloWorld.html");
+	})
+</script>
+</body>
+</html>
