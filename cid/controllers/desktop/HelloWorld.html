@@ -1,103 +1,61 @@
 <html>
 <head> 
-    <title>Hello World</title> 
-	<script src="jquery.js" type="text/javascript"></script>
+    <title>This Changes Everything*</title> 
 	<script src="AIRAliases.js" type="text/javascript"></script>
-	<style>
-		body {
-			background:black;
-			color:white:
-		}
-		.main_item {
-			background: #333;
-			border: 1px solid #555;
-			padding: 20;
-			color :white;
-		}
-		.second_item {
-			background: #555;
-			border: 1px solid #777;
-			padding: 20;			
-			color :white;
-		}
-		.body_content {
-			background: #777;			
-			color :white;
-		}
-		
-	</style>
+	<script src="jquery.js" type="text/javascript"></script>
+	<script src="kynetx.js" type="text/javascript"></script>
+	<link href="mk.css" media="screen" rel="stylesheet" type="text/css" />
 </head> 
-<body onLoad="appLoad()"> 
 
-	<table border="0" width="100%">
-		<tr valign="top">
-			<td width="20%"  valign="top">
-				<div class="main_item">
-					some test
-				</div>
-				<div class="main_item">
-					some test
-				</div>
-				<div class="main_item">
-					some test
-				</div>
-				<div class="main_item">
-					some test
-				</div>
-				<div class="main_item">
-					some test
-				</div>
-				<div class="main_item">
-					some test
-				</div>
-				<div class="main_item">
-					some test
-				</div>
-				<div class="main_item">
-					some test
-				</div>
-			</td>
-			<td width="20%" valign="top">
-				<div class="second_item">
-					some test
-				</div>
-				<div class="second_item">
-					some test
-				</div>
-				<div class="second_item">
-					some test
-				</div>
-				<div class="second_item">
-					some test
-				</div>
-				<div class="second_item">
-					some test
-				</div>
-				<div class="second_item">
-					some test
-				</div>
-				<div class="second_item">
-					some test
-				</div>
-				<div class="second_item">
-					some test
-				</div>
-				<div class="second_item">
-					some test
-				</div>
-				<div class="second_item">
-					some test
-				</div>
-			</td>
-			<td width="60%" valign="top">
-				<div class="body_content">
-					some test
-				</div>
-			</td>
-		</tr>
-	</table>
+<body> 
+<div id="content">
 	
-	<script> 
-	</script
+</div>
+
+<a id="see_all_apps" href="#">See All Apps</a>
+<script>
+var url = "http://localhost:3000/home";
+var my_apps =  {};
+
+$("#see_all_apps").click(function(event) {
+	$("#content").html(get_all_apps());
+	return false;
+});
+
+if(get_enc_local_data("login"))
+{
+	url = url + "?login="+ get_enc_local_data("login") + "&password="+ get_enc_local_data("password");
+	alert(url)
+}
+	
+load_remote_page("http://localhost:3000/home",main_page_callblack);
+
+function main_page_callblack(data)
+{
+	$("#content").html(data);	
+	$("#login_form").submit(login_submit);
+	$("#create_account_form").submit(create_account_submit);
+    
+}
+
+function login_submit(event)
+{
+	alert("login " + get_enc_local_data("login"));
+	set_enc_local_data("login",$("#login_form input[name=login]").val());
+	set_enc_local_data("password",$("#login_form input[name=password]").val());
+	my_apps = json_request("http://localhost:3000/home/get_apps.json");
+	air.trace(my_apps["ax99d"]);
+	return false;
+}
+
+function create_account_submit(event)
+{
+	alert("create acct" + $("#create_account_form input[name=login]").val())
+	set_enc_local_data("login",$("#create_account_form input[name=login]").val())
+	set_enc_local_data("password",$("#create_account_form input[name=password]").val())
+	return false;
+}
+</script>
 </body> 
+
 </html>

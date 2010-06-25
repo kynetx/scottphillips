@@ -1,0 +1,454 @@
+/* ONLY MARKETPLACE WIDE CSS SHOULD GO IN THIS FILE OR THE MONKEY WILL HAVE TO SLAP YOU!! */
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  margin: 40px 0px 0px 0px;
+}
+
+
+h1 {
+	margin:0;
+	padding:0;
+}
+
+a img {
+  border: none;
+}
+
+a {
+  color: #2988c0;
+  text-decoration: none;
+}
+
+li {
+	margin: 0px;
+	padding: 0px;
+}
+
+ul {
+	margin: 0px;
+	padding: 0px;	
+	list-style: none;
+}
+
+ol {
+	margin: 0px;
+	padding: 0px;
+
+}
+
+.clear {
+  clear: both;
+  height: 0;
+  overflow: hidden;
+}
+
+#container {
+  width: 918px;
+  margin: 0 auto;
+  background-color: #FFF;
+  padding: 0px 13px;
+}
+
+.flash_notice, .flash_error, #instructions {
+  padding: 5px 8px;
+  margin: 10px 0;
+  -moz-border-radius: 5px; /* FF1+ */
+  -webkit-border-radius: 5px; /* Saf3+, Chrome */
+  border-radius: 5px; /* Opera 10.5, IE 9 */
+  color: #191919;
+}
+
+.flash_notice {
+  background-color: #E9F5D9;
+  border: solid 1px #6C6;
+}
+
+.flash_error {
+  background-color: #F0DDDD;
+  border: solid 1px #C66;
+}
+
+.fieldWithErrors {
+  display: inline;
+}
+
+
+
+#errorExplanation {
+  width: 400px;
+  border: 2px solid #CF0000;
+  padding: 0px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#errorExplanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: 0;
+  background-color: #c00;
+  color: #fff;
+}
+
+#errorExplanation p {
+  color: #333;
+  margin-bottom: 0;
+  padding: 8px;
+}
+
+#errorExplanation ul {
+  margin: 2px 24px;
+}
+
+#errorExplanation ul li {
+  font-size: 12px;
+  list-style: disc;
+}
+
+#user_nav {
+  font-size: 12px;
+  text-align: right;
+  color: #4E4E4E;
+}
+
+.hide {
+  display: none;
+}
+
+#footer {
+	float: left;
+	width: 100%;
+	color: #4E4E4E;
+	font-size: 12px;
+	border-top: 1px solid #CCC;
+	padding-top: 4px;
+	margin-top: 20px;
+}
+
+#footer_nav {
+  float: left;
+}
+
+#footer_nav p {
+	margin: 0px;
+	padding: 0px;
+	margin-top: 10px;
+}
+
+
+#gateway_logo {
+  float: right;
+}
+
+#search {
+  float: right;
+  margin-top: -43px;
+}
+
+
+#search input {
+  float:left;
+  margin-top:10px;	
+  margin-left: 3px;
+}
+
+#search #search_term {
+  border:1px solid #BBBABA;
+  font-size:15px;
+  width:185px;
+}
+
+#term {
+  width:225px;
+}
+
+#search img {
+  float:left;
+  margin-top:12px;
+}
+
+#search select {
+  float:left;
+  margin-right:5px;
+  margin-top:12px;
+  padding-left:3px;
+}
+
+
+/********************
+  TOP  
+********************/
+#container #top {
+  padding-bottom: 10px;
+}
+
+
+/********************
+  LEFT NAVIGATION  
+********************/
+#left_nav {
+  float: left;
+  width: 150px;
+  color: #FFFFFF;
+  padding-right: 10px;
+}
+
+#left_nav > div {
+  -moz-border-radius: 5px; /* FF1+ */
+  -webkit-border-radius: 5px; /* Saf3+, Chrome */
+  border-radius: 5px; /* Opera 10.5, IE 9 */
+  margin-bottom:10px;
+  padding-bottom:13px;
+}
+
+#left_nav ul {
+  list-style: none;
+  margin:0;
+  padding:0 0 0 10px;
+}
+
+#left_nav h2 {
+  font-size:15px;
+  margin:0;
+  padding:10px 0 5px 10px;
+}
+
+#left_nav a {
+  line-height: 16px;
+  font-size: 14px;
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+#left_nav #categories {
+  background-color:#419FCE;
+  background-image:url("http://mpcontent.kynetx.com/marketplace/navCapLtBlue.png");
+  background-position:center bottom;
+  background-repeat:no-repeat;
+}
+
+#left_nav #apps_for {
+  background-color: #2988c0;
+  background-image:url("http://mpcontent.kynetx.com/marketplace/navCapDkBlue.png");
+  background-position:center bottom;
+  background-repeat:no-repeat;
+}
+
+#left_nav #bestsellers {
+  background-color: #898989;
+  background-image:url("http://mpcontent.kynetx.com/marketplace/navCapGrey.png");  
+  background-position:center bottom;
+  background-repeat:no-repeat;
+}
+
+#featured_apps {
+  width: 740px;
+  height: 440px;
+  border: 1px solid #E3E3E3;
+  -moz-border-radius: 5px; /* FF1+ */
+  -webkit-border-radius: 5px; /* Saf3+, Chrome */
+  border-radius: 5px; /* Opera 10.5, IE 9 */
+  padding-left: 15px;
+}
+
+#featured_apps h2 {
+  color:#191919;
+  font-family:Verdana;
+  font-size:22px;
+  font-weight:lighter;
+}
+
+.featured_app h3 {
+  color:#191919;
+  font-family:Verdana;
+  font-size:14px;
+  font-weight:lighter;
+  height:20px;
+  margin: 0 0 7px;
+  overflow:hidden;
+}
+
+#featured_app_scroll {
+  width: 717px;
+  overflow-x: auto;
+}
+#featured_app_box {
+  width: 1120px;
+}
+.featured_app {
+  float: left;
+  height: 347px;
+  margin: 0 25px 0 0;
+  width:160px;
+}
+
+.featured_app .description {
+  height:110px;
+  overflow:hidden;
+  color: #898989;
+  font-family:Helvetica,Arial;
+}
+
+.featured_app img:first-child {
+  height:120px;
+  margin-bottom: 2px;
+  width:120px;
+  margin-left: 20px;
+}
+
+.call_to_action .old_price {
+  position: absolute;
+  top: 15px;
+}
+
+.call_to_action .promo_price {
+  position: absolute;
+  top: 0;
+  color: #AA1B1D;
+}
+
+.call_to_action img {
+  width: 76px !important;
+  height: 26px !important;
+  margin: 0px !important;
+}
+
+.call_to_action .price {
+  float: left;
+  padding: 10px 0 0 5px;
+}
+
+.call_to_action .action {
+  float: right;
+}
+
+
+
+#featured_apps, #promo, #developer {
+  float: left;
+}
+
+#developer {
+	line-height: 23px;
+}
+
+
+#main {
+  float: left;
+  width: 755px;
+  margin-left: 3px;
+}
+
+.close_notify {
+  cursor:pointer;
+  float:right;
+  font-size:17px;
+  margin:-8px -9px 0 0;
+  padding:0 7px 14px 14px;
+}
+
+
+#left_nav li {
+  list-style: none;
+}
+
+#left_nav ul {
+  margin: 0;
+}
+
+
+#result_area {
+	float:left;
+	width: 720px;
+}
+
+/*************
+Horizontal Stamp
+************/
+
+.hstamp {
+	border-top: 1px solid #CCC;
+	width: 740px;
+	margin-right: 25px;
+	height: 95px;
+	float:left;
+	padding: 8px;
+	margin-top: 10px;
+/*	margin-bottom:10px;*/
+/*	-moz-border-radius:5px;
+  	-webkit-border-radius:5px;*/
+
+}
+
+.hstamp .thumb {
+	float:left;
+	
+	
+}
+
+.hstamp .substamp {
+	float:left;
+	width: 545px;
+	margin-left: 20px;
+}
+.hstamp .title {
+	font-family : Helvetica, Arial, sans-serif;
+	font-weight: lighter;
+	font-size: 20px;
+	margin-bottom: 2px;
+}
+
+.hstamp .title a {
+	color: #000;
+}
+
+.hstamp .title a:hover {
+	color: #2988c0;
+}
+
+.hstamp .thumb {
+	border: 1px solid #CCC;
+}
+
+.hstamp .description {
+	color: #4E4E4E ;
+	margin-top: 5px;
+	margin-bottom:5px;
+	font-size: 12px;
+	
+}
+
+.hstamp .category {
+	font-size: 12px;
+}
+
+.hstamp .buy {
+	float:right;
+}
+
+/******** Price **********/
+
+h1 {
+	font-size: 22px;
+	color: #2988C0;
+	font-weight: bold;
+	font-family: Helvetica, Arial, sans-serif;
+	margin-bottom: 10px;
+}
+
+#price {
+	margin-top: 0px;
+	font-size: 17px;
+	color:#2988C0;
+}
+
+#promo_price {
+	font-size:17px;
+	/*  margin-left:13px;*/
+	margin-top:6px;
+	color: #AA1B1D;
+}
