@@ -1,0 +1,7 @@
+development:
+  access_key: '096XB1T75N1VYY98PHR2'
+  secret_access_key: 'Ee3qm9DVnAPA64sqehia0ZlkxWcU3IaPMaiIu4Ak'
+  return_base: 'http://localhost:3005'
+  endpoint: 'https://fps.sandbox.amazonaws.com'
+  pipeline: 'https://authorize.payments-sandbox.amazon.com/cobranded-ui/actions/start?'
+  version: '2007-01-08'

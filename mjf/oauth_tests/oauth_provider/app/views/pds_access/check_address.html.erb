@@ -1,0 +1,18 @@
+<% title "PDS Address" %>
+
+<% if @result[:found] %>
+	Street: <br>
+	<ul>
+	<% @result[:address]["streetInfo"].each do |street_info| %>		
+		<li><%= street_info[0].to_s + ": " + street_info[1].to_s %></li>
+	<% end %>	
+	</ul>
+	Unit: <%= @result[:address]["unit"].to_s %><br>
+	Unit Description: <%= @result[:address]["unitDescription"].to_s %><br>
+	City: <%= @result[:address]["city"].to_s %><br>
+	State: <%= @result[:address]["state"].to_s %><br>
+	Zip: <%= @result[:address]["postalCode"].to_s %><br>
+<% end %>
+
+<br><br><br><br>
+<%= link_to "Edit my address", edit_user_path(:current) %>

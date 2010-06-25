@@ -1,0 +1,1325 @@
+# Logfile created on Tue Jun 16 21:16:54 -0600 2009
+
+Processing DashboardController#index (for 127.0.0.1 at 2009-07-21 08:57:34) [GET]
+Rendering template within layouts/main
+Rendering dashboard/index
+Completed in 332ms (View: 179 | 200 OK [http://localhost/]
+
+
+Processing ReportingApiController#kns_totals to google_table (for 127.0.0.1 at 2009-07-21 08:57:34) [GET]
+  Parameters: {"kpi"=>"rse,rf", "callback"=>"drawGoogleChart", "client_id"=>"-", "num_range"=>"0-7", "temporal"=>"day"}
+MemCacheError (No connection to server): No connection to server
+Cache miss: b2f10e1189456bf7270d36a59129a08061712362 ({:expires_in=>900 seconds})
+Completed in 361ms (View: 0 | 200 OK [http://localhost/data/kns_totals?client_id=-&num_range=0-7&kpi=rse,rf&temporal=day&format=google_table&callback=drawGoogleChart]
+
+
+Processing DashboardController#change_client_id (for 127.0.0.1 at 2009-07-21 08:57:41) [GET]
+  Parameters: {"client_id"=>"10"}
+Redirected to actionindex
+Completed in 12ms | 302 Found [http://localhost/dashboard/change_client_id?client_id=10]
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2009-07-21 08:57:41) [GET]
+Rendering template within layouts/main
+Rendering dashboard/index
+Completed in 261ms (View: 146 | 200 OK [http://localhost/]
+
+
+Processing ReportingApiController#kns_totals to google_table (for 127.0.0.1 at 2009-07-21 08:57:42) [GET]
+  Parameters: {"kpi"=>"rse,rf", "callback"=>"drawGoogleChart", "client_id"=>"10", "num_range"=>"0-7", "temporal"=>"day"}
+MemCacheError (No connection to server): No connection to server
+Cache miss: fd01091ea3779321de18a519f05ec0afc7910272 ({:expires_in=>900 seconds})
+MemCacheError (No connection to server): No connection to server
+Cache write (will save 46.25ms): fd01091ea3779321de18a519f05ec0afc7910272
+Completed in 274ms (View: 0 | 200 OK [http://localhost/data/kns_totals?client_id=10&num_range=0-7&kpi=rse,rf&temporal=day&format=google_table&callback=drawGoogleChart]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-21 09:07:09) [GET]
+  Parameters: {"kpi"=>"rse", "client_id"=>"10", "temporal"=>"day"}
+
+
+ActionController::RoutingError (No route matches "/kns_data" with {:method=>:get}):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/routing/route_set.rb:386:in `recognize'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:182:in `handle_request'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:159:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:158:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:158:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:282:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:281:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:281:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/command.rb:212:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /usr/local/bin/mongrel_rails:19:in `load'
+    /usr/local/bin/mongrel_rails:19
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-21 09:07:23) [GET]
+  Parameters: {"kpi"=>"rse", "client_id"=>"10", "temporal"=>"day"}
+
+
+ActionController::RoutingError (No route matches "/kns_totals" with {:method=>:get}):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/routing/route_set.rb:386:in `recognize'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:182:in `handle_request'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:159:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:158:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:158:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:282:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:281:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:281:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/command.rb:212:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /usr/local/bin/mongrel_rails:19:in `load'
+    /usr/local/bin/mongrel_rails:19
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing ReportingApiController#api_ref (for 127.0.0.1 at 2009-07-21 09:07:36) [GET]
+Rendering template within layouts/main
+Rendering reporting_api/api_ref
+Completed in 46ms (View: 38 | 200 OK [http://localhost/reporting_api/api_ref]
+
+
+Processing ReportingApiController#kns_totals (for 127.0.0.1 at 2009-07-21 09:08:01) [GET]
+  Parameters: {"kpi"=>"rse", "client_id"=>"10", "temporal"=>"day"}
+MemCacheError (No connection to server): No connection to server
+Cache miss: ece304a132ecedf4798db30134773bb679c7faf3 ({:expires_in=>900 seconds})
+MemCacheError (No connection to server): No connection to server
+Cache write (will save 41.60ms): ece304a132ecedf4798db30134773bb679c7faf3
+Completed in 226ms (View: 0 | 200 OK [http://localhost/data/kns_totals?client_id=10&kpi=rse&temporal=day]
+
+
+Processing ReportingApiController#kns_totals (for 127.0.0.1 at 2009-07-21 09:08:14) [GET]
+  Parameters: {"kpi"=>"rse", "client_id"=>"1024", "temporal"=>"day"}
+MemCacheError (No connection to server): No connection to server
+Cache miss: 2da49e4a6f484fd4e7dfd24a9c53287af4b8328a ({:expires_in=>900 seconds})
+MemCacheError (No connection to server): No connection to server
+Cache write (will save 1004.45ms): 2da49e4a6f484fd4e7dfd24a9c53287af4b8328a
+Completed in 1197ms (View: 0 | 200 OK [http://localhost/data/kns_totals?client_id=1024&kpi=rse&temporal=day]
+/!\ FAILSAFE /!\  Thu Oct 15 16:21:17 -0600 2009
+  Status: 500 Internal Server Error
+  Can't connect to MySQL server on '127.0.0.1' (61)
+    /usr/local/lib/ruby/gems/1.8/gems/dbd-mysql-0.4.3/lib/dbd/Mysql.rb:106:in `error'
+    /usr/local/lib/ruby/gems/1.8/gems/dbd-mysql-0.4.3/lib/dbd/mysql/driver.rb:70:in `connect'
+    /usr/local/lib/ruby/gems/1.8/gems/dbi-0.4.2/lib/dbi/handles/driver.rb:33:in `connect'
+    /usr/local/lib/ruby/gems/1.8/gems/dbi-0.4.2/lib/dbi.rb:148:in `connect'
+    /Users/mikefarmer/Dropbox/Kynetx/analytx/lib/db_wrapper.rb:254:in `initialize'
+    /Users/mikefarmer/Dropbox/Kynetx/analytx/app/controllers/dashboard_controller.rb:7:in `new'
+    /Users/mikefarmer/Dropbox/Kynetx/analytx/app/controllers/dashboard_controller.rb:7:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:392:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:392:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:159:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:158:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:158:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:282:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:281:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:281:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/command.rb:212:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /usr/local/bin/mongrel_rails:19:in `load'
+    /usr/local/bin/mongrel_rails:19
+/!\ FAILSAFE /!\  Thu Oct 15 16:25:24 -0600 2009
+  Status: 500 Internal Server Error
+  Access denied for user 'analysis'@'localhost' (using password: YES)
+    /usr/local/lib/ruby/gems/1.8/gems/dbd-mysql-0.4.3/lib/dbd/Mysql.rb:106:in `error'
+    /usr/local/lib/ruby/gems/1.8/gems/dbd-mysql-0.4.3/lib/dbd/mysql/driver.rb:70:in `connect'
+    /usr/local/lib/ruby/gems/1.8/gems/dbi-0.4.2/lib/dbi/handles/driver.rb:33:in `connect'
+    /usr/local/lib/ruby/gems/1.8/gems/dbi-0.4.2/lib/dbi.rb:148:in `connect'
+    /Users/mikefarmer/Dropbox/Kynetx/analytx/lib/db_wrapper.rb:254:in `initialize'
+    /Users/mikefarmer/Dropbox/Kynetx/analytx/app/controllers/dashboard_controller.rb:7:in `new'
+    /Users/mikefarmer/Dropbox/Kynetx/analytx/app/controllers/dashboard_controller.rb:7:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:392:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:392:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:159:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:158:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:158:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:282:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:281:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:281:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/command.rb:212:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /usr/local/bin/mongrel_rails:19:in `load'
+    /usr/local/bin/mongrel_rails:19
+/!\ FAILSAFE /!\  Thu Oct 15 16:26:09 -0600 2009
+  Status: 500 Internal Server Error
+  Access denied for user 'analysis'@'localhost' (using password: YES)
+    /usr/local/lib/ruby/gems/1.8/gems/dbd-mysql-0.4.3/lib/dbd/Mysql.rb:106:in `error'
+    /usr/local/lib/ruby/gems/1.8/gems/dbd-mysql-0.4.3/lib/dbd/mysql/driver.rb:70:in `connect'
+    /usr/local/lib/ruby/gems/1.8/gems/dbi-0.4.2/lib/dbi/handles/driver.rb:33:in `connect'
+    /usr/local/lib/ruby/gems/1.8/gems/dbi-0.4.2/lib/dbi.rb:148:in `connect'
+    /Users/mikefarmer/Dropbox/Kynetx/analytx/lib/db_wrapper.rb:254:in `initialize'
+    /Users/mikefarmer/Dropbox/Kynetx/analytx/app/controllers/dashboard_controller.rb:7:in `new'
+    /Users/mikefarmer/Dropbox/Kynetx/analytx/app/controllers/dashboard_controller.rb:7:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:392:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:392:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:159:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:158:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:158:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:282:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:281:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:281:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/command.rb:212:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /usr/local/bin/mongrel_rails:19:in `load'
+    /usr/local/bin/mongrel_rails:19
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2009-10-15 16:27:15) [GET]
+Rendering template within layouts/main
+Rendering dashboard/index
+
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each) on line #41 of app/views/dashboard/index.rhtml:
+38: </div>
+39: <div id="client_menu" style="display:none">
+40: 	<ul>
+41: 		<% @clients.each do |client| %>
+42: 		<li><%= link_to client["CLIENT_ID"], :action => 'change_client_id', :client_id => client["CLIENT_ID"] %></li>
+43: 		<% end %>
+44: 	</ul>
+
+    app/views/dashboard/index.rhtml:41
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/renderable.rb:39:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/renderable.rb:39:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/template.rb:73:in `render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:256:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:367:in `_render_with_layout'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:254:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1174:in `render_for_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:896:in `render_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:868:in `render_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1248:in `default_render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1254:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:617:in `call_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/rescue.rb:136:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/session_management.rb:134:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:392:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /usr/local/bin/mongrel_rails:19:in `load'
+    /usr/local/bin/mongrel_rails:19
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_trace (46.2ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_request_and_response (1.3ms)
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2009-10-15 16:28:40) [GET]
+Rendering template within layouts/main
+Rendering dashboard/index
+
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each) on line #41 of app/views/dashboard/index.rhtml:
+38: </div>
+39: <div id="client_menu" style="display:none">
+40: 	<ul>
+41: 		<% @clients.each do |client| %>
+42: 		<li><%= link_to client["RULESET_ID"], :action => 'change_client_id', :client_id => client["RULESET_ID"] %></li>
+43: 		<% end %>
+44: 	</ul>
+
+    app/views/dashboard/index.rhtml:41
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/renderable.rb:39:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/renderable.rb:39:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/template.rb:73:in `render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:256:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:367:in `_render_with_layout'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:254:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1174:in `render_for_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:896:in `render_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:868:in `render_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1248:in `default_render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1254:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:617:in `call_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/rescue.rb:136:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/session_management.rb:134:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:392:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /usr/local/bin/mongrel_rails:19:in `load'
+    /usr/local/bin/mongrel_rails:19
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_trace (46.1ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_request_and_response (1.1ms)
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2009-10-15 16:30:05) [GET]
+Rendering template within layouts/main
+Rendering dashboard/index
+
+
+ActionView::TemplateError (undefined local variable or method `client' for #<ActionView::Base:0x103477af8>) on line #42 of app/views/dashboard/index.rhtml:
+39: <div id="client_menu" style="display:none">
+40: 	<ul>
+41: 		<% @ruleset_ids.each do |ruleset_id| %>
+42: 		<li><%= link_to client["RULESET_ID"], :action => 'change_ruleset_id', :ruleset_id => client["RULESET_ID"] %></li>
+43: 		<% end %>
+44: 	</ul>
+45: </div>
+
+    app/views/dashboard/index.rhtml:42
+    app/views/dashboard/index.rhtml:41:in `each'
+    app/views/dashboard/index.rhtml:41
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/renderable.rb:39:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/renderable.rb:39:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/template.rb:73:in `render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:256:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:367:in `_render_with_layout'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:254:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1174:in `render_for_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:896:in `render_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:868:in `render_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1248:in `default_render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1254:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:617:in `call_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/rescue.rb:136:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/session_management.rb:134:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:392:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /usr/local/bin/mongrel_rails:19:in `load'
+    /usr/local/bin/mongrel_rails:19
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_trace (44.6ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_request_and_response (1.3ms)
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2009-10-15 16:30:16) [GET]
+Rendering template within layouts/main
+Rendering dashboard/index
+
+
+ActionView::TemplateError (undefined local variable or method `client' for #<ActionView::Base:0x103444c20>) on line #42 of app/views/dashboard/index.rhtml:
+39: <div id="client_menu" style="display:none">
+40: 	<ul>
+41: 		<% @ruleset_ids.each do |ruleset_id| %>
+42: 		<li><%= link_to client["RULESET_ID"], :action => 'change_ruleset_id', :ruleset_id => ruleset_id["RULESET_ID"] %></li>
+43: 		<% end %>
+44: 	</ul>
+45: </div>
+
+    app/views/dashboard/index.rhtml:42
+    app/views/dashboard/index.rhtml:41:in `each'
+    app/views/dashboard/index.rhtml:41
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/renderable.rb:39:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/renderable.rb:39:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/template.rb:73:in `render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:256:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:367:in `_render_with_layout'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:254:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1174:in `render_for_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:896:in `render_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:868:in `render_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1248:in `default_render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1254:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:617:in `call_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/rescue.rb:136:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/session_management.rb:134:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:392:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /usr/local/bin/mongrel_rails:19:in `load'
+    /usr/local/bin/mongrel_rails:19
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_trace (43.6ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_request_and_response (1.0ms)
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2009-10-15 16:30:28) [GET]
+Rendering template within layouts/main
+Rendering dashboard/index
+Completed in 84ms (View: 73 | 200 OK [http://localhost/]
+
+
+Processing ReportingApiController#kns_totals to google_table (for 127.0.0.1 at 2009-10-15 16:30:28) [GET]
+  Parameters: {"kpi"=>"rse,rf", "callback"=>"drawGoogleChart", "client_id"=>"1024", "num_range"=>"0-7", "temporal"=>"day"}
+MemCacheError (No connection to server): No connection to server
+Cache miss: b88b0ca592135fcfe0cd477f8dd53a7677687e9e ({:expires_in=>900 seconds})
+MemCacheError (No connection to server): No connection to server
+Cache write (will save 3.58ms): b88b0ca592135fcfe0cd477f8dd53a7677687e9e
+Completed in 49ms (View: 0 | 200 OK [http://localhost/data/kns_totals?client_id=1024&num_range=0-7&kpi=rse,rf&temporal=day&format=google_table&callback=drawGoogleChart]
+
+
+Processing DashboardController#change_ruleset_id (for 127.0.0.1 at 2009-10-15 16:30:41) [GET]
+  Parameters: {"ruleset_id"=>"1024"}
+Redirected to actionindex
+Completed in 2ms | 302 Found [http://localhost/dashboard/change_ruleset_id?ruleset_id=1024]
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2009-10-15 16:30:41) [GET]
+Rendering template within layouts/main
+Rendering dashboard/index
+Completed in 61ms (View: 49 | 200 OK [http://localhost/]
+
+
+Processing ReportingApiController#kns_totals to google_table (for 127.0.0.1 at 2009-10-15 16:30:41) [GET]
+  Parameters: {"kpi"=>"rse,rf", "callback"=>"drawGoogleChart", "client_id"=>"1024", "num_range"=>"0-7", "temporal"=>"day"}
+MemCacheError (No connection to server): No connection to server
+Cache miss: b88b0ca592135fcfe0cd477f8dd53a7677687e9e ({:expires_in=>900 seconds})
+MemCacheError (No connection to server): No connection to server
+Cache write (will save 10.59ms): b88b0ca592135fcfe0cd477f8dd53a7677687e9e
+Completed in 36ms (View: 0 | 200 OK [http://localhost/data/kns_totals?client_id=1024&num_range=0-7&kpi=rse,rf&temporal=day&format=google_table&callback=drawGoogleChart]
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2009-10-15 16:31:00) [GET]
+Rendering template within layouts/main
+Rendering dashboard/index
+Completed in 62ms (View: 50 | 200 OK [http://localhost/]
+
+
+Processing ReportingApiController#kns_totals to google_table (for 127.0.0.1 at 2009-10-15 16:31:00) [GET]
+  Parameters: {"kpi"=>"rse,rf", "callback"=>"drawGoogleChart", "client_id"=>"1024", "num_range"=>"0-7", "temporal"=>"day"}
+MemCacheError (No connection to server): No connection to server
+Cache miss: b88b0ca592135fcfe0cd477f8dd53a7677687e9e ({:expires_in=>900 seconds})
+MemCacheError (No connection to server): No connection to server
+Cache write (will save 1.36ms): b88b0ca592135fcfe0cd477f8dd53a7677687e9e
+Completed in 44ms (View: 0 | 200 OK [http://localhost/data/kns_totals?client_id=1024&num_range=0-7&kpi=rse,rf&temporal=day&format=google_table&callback=drawGoogleChart]
+
+
+Processing DashboardController#change_ruleset_id (for 127.0.0.1 at 2009-10-15 16:31:12) [GET]
+  Parameters: {"ruleset_id"=>"a8x17"}
+Redirected to actionindex
+Completed in 2ms | 302 Found [http://localhost/dashboard/change_ruleset_id?ruleset_id=a8x17]
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2009-10-15 16:31:12) [GET]
+Rendering template within layouts/main
+Rendering dashboard/index
+Completed in 60ms (View: 48 | 200 OK [http://localhost/]
+
+
+Processing ReportingApiController#kns_totals to google_table (for 127.0.0.1 at 2009-10-15 16:31:12) [GET]
+  Parameters: {"kpi"=>"rse,rf", "callback"=>"drawGoogleChart", "client_id"=>"a8x17", "num_range"=>"0-7", "temporal"=>"day"}
+MemCacheError (No connection to server): No connection to server
+Cache miss: 7ea74c0e73508b9a4929730609b51c93dfe5a208 ({:expires_in=>900 seconds})
+Completed in 26ms (View: 0 | 200 OK [http://localhost/data/kns_totals?client_id=a8x17&num_range=0-7&kpi=rse,rf&temporal=day&format=google_table&callback=drawGoogleChart]
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2009-10-15 16:37:10) [GET]
+Rendering template within layouts/main
+Rendering dashboard/index
+Completed in 61ms (View: 50 | 200 OK [http://localhost/]
+
+
+Processing ReportingApiController#kns_totals to google_table (for 127.0.0.1 at 2009-10-15 16:37:10) [GET]
+  Parameters: {"kpi"=>"rse,rf", "callback"=>"drawGoogleChart", "client_id"=>"a8x17", "num_range"=>"0-7", "temporal"=>"day"}
+MemCacheError (No connection to server): No connection to server
+Cache miss: f00ab89320fba170867cbb0d27ee7774c5aab20a ({:expires_in=>900 seconds})
+Completed in 115ms (View: 0 | 200 OK [http://localhost/data/kns_totals?client_id=a8x17&num_range=0-7&kpi=rse,rf&temporal=day&format=google_table&callback=drawGoogleChart]
+
+
+Processing DashboardController#change_ruleset_id (for 127.0.0.1 at 2009-10-15 16:37:15) [GET]
+  Parameters: {"ruleset_id"=>"1024"}
+Redirected to actionindex
+Completed in 2ms | 302 Found [http://localhost/dashboard/change_ruleset_id?ruleset_id=1024]
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2009-10-15 16:37:15) [GET]
+Rendering template within layouts/main
+Rendering dashboard/index
+Completed in 68ms (View: 56 | 200 OK [http://localhost/]
+
+
+Processing ReportingApiController#kns_totals to google_table (for 127.0.0.1 at 2009-10-15 16:37:15) [GET]
+  Parameters: {"kpi"=>"rse,rf", "callback"=>"drawGoogleChart", "client_id"=>"1024", "num_range"=>"0-7", "temporal"=>"day"}
+MemCacheError (No connection to server): No connection to server
+Cache miss: f9f6dfd67b9a7c842cd6deb326bd094a91ca02a6 ({:expires_in=>900 seconds})
+Completed in 21ms (View: 0 | 200 OK [http://localhost/data/kns_totals?client_id=1024&num_range=0-7&kpi=rse,rf&temporal=day&format=google_table&callback=drawGoogleChart]
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2009-10-15 16:39:10) [GET]
+Rendering template within layouts/main
+Rendering dashboard/index
+Completed in 62ms (View: 50 | 200 OK [http://localhost/]
+
+
+Processing ReportingApiController#kns_totals to google_table (for 127.0.0.1 at 2009-10-15 16:39:10) [GET]
+  Parameters: {"kpi"=>"rse,rf", "callback"=>"drawGoogleChart", "client_id"=>"1024", "num_range"=>"0-7", "temporal"=>"day"}
+MemCacheError (No connection to server): No connection to server
+Cache miss: 882d483b7a0d051c7069c91ca4deeea056748606 ({:expires_in=>900 seconds})
+MemCacheError (No connection to server): No connection to server
+Cache write (will save 2.84ms): 882d483b7a0d051c7069c91ca4deeea056748606
+Completed in 133ms (View: 0 | 200 OK [http://localhost/data/kns_totals?client_id=1024&num_range=0-7&kpi=rse,rf&temporal=day&format=google_table&callback=drawGoogleChart]
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2009-10-15 16:40:04) [GET]
+Rendering template within layouts/main
+Rendering dashboard/index
+Completed in 62ms (View: 50 | 200 OK [http://localhost/]
+
+
+Processing ReportingApiController#kns_totals to google_table (for 127.0.0.1 at 2009-10-15 16:40:04) [GET]
+  Parameters: {"kpi"=>"rse,rf", "callback"=>"drawGoogleChart", "client_id"=>"1024", "num_range"=>"0-7", "temporal"=>"day"}
+MemCacheError (No connection to server): No connection to server
+Cache miss: f9f6dfd67b9a7c842cd6deb326bd094a91ca02a6 ({:expires_in=>900 seconds})
+MemCacheError (No connection to server): No connection to server
+Cache write (will save 95.11ms): f9f6dfd67b9a7c842cd6deb326bd094a91ca02a6
+Completed in 139ms (View: 0 | 200 OK [http://localhost/data/kns_totals?client_id=1024&num_range=0-7&kpi=rse,rf&temporal=day&format=google_table&callback=drawGoogleChart]
+
+
+Processing DashboardController#change_ruleset_id (for 127.0.0.1 at 2009-10-15 16:40:52) [GET]
+  Parameters: {"ruleset_id"=>"996337951"}
+Redirected to actionindex
+Completed in 3ms | 302 Found [http://localhost/dashboard/change_ruleset_id?ruleset_id=996337951]
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2009-10-15 16:40:52) [GET]
+Rendering template within layouts/main
+Rendering dashboard/index
+Completed in 84ms (View: 63 | 200 OK [http://localhost/]
+
+
+Processing ReportingApiController#kns_totals to google_table (for 127.0.0.1 at 2009-10-15 16:40:52) [GET]
+  Parameters: {"kpi"=>"rse,rf", "callback"=>"drawGoogleChart", "client_id"=>"996337951", "num_range"=>"0-7", "temporal"=>"day"}
+MemCacheError (No connection to server): No connection to server
+Cache miss: a362cdc4d4ff1485e2b1a0304aed0f6419323c75 ({:expires_in=>900 seconds})
+MemCacheError (No connection to server): No connection to server
+Cache write (will save 71.25ms): a362cdc4d4ff1485e2b1a0304aed0f6419323c75
+Completed in 188ms (View: 0 | 200 OK [http://localhost/data/kns_totals?client_id=996337951&num_range=0-7&kpi=rse,rf&temporal=day&format=google_table&callback=drawGoogleChart]
+
+
+Processing DashboardController#change_ruleset_id (for 127.0.0.1 at 2009-10-15 16:42:34) [GET]
+  Parameters: {"ruleset_id"=>"a18x3"}
+Redirected to actionindex
+Completed in 2ms | 302 Found [http://localhost/dashboard/change_ruleset_id?ruleset_id=a18x3]
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2009-10-15 16:42:34) [GET]
+Rendering template within layouts/main
+Rendering dashboard/index
+Completed in 70ms (View: 58 | 200 OK [http://localhost/]
+
+
+Processing ReportingApiController#kns_totals to google_table (for 127.0.0.1 at 2009-10-15 16:42:34) [GET]
+  Parameters: {"kpi"=>"rse,rf", "callback"=>"drawGoogleChart", "client_id"=>"a18x3", "num_range"=>"0-7", "temporal"=>"day"}
+MemCacheError (No connection to server): No connection to server
+Cache miss: 8808eaba0dd70226bd77667f664719af90190977 ({:expires_in=>900 seconds})
+Completed in 26ms (View: 0 | 200 OK [http://localhost/data/kns_totals?client_id=a18x3&num_range=0-7&kpi=rse,rf&temporal=day&format=google_table&callback=drawGoogleChart]
+
+
+Processing ReportingApiController#api_ref (for 127.0.0.1 at 2009-10-15 16:47:11) [GET]
+Rendering template within layouts/main
+Rendering reporting_api/api_ref
+Completed in 13ms (View: 11 | 200 OK [http://localhost/reporting_api/api_ref]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-15 16:48:07) [GET]
+  Parameters: {"rel_range"=>"yesterday", "kpi"=>"RSE", "client_id"=>"1024", "temporal"=>"hour"}
+
+
+ActionController::RoutingError (No route matches "/api/kns_totals" with {:method=>:get}):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/routing/route_set.rb:386:in `recognize'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:182:in `handle_request'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:159:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:158:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:158:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:282:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:281:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:281:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/command.rb:212:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /usr/local/bin/mongrel_rails:19:in `load'
+    /usr/local/bin/mongrel_rails:19
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-15 16:48:32) [GET]
+  Parameters: {"rel_range"=>"yesterday", "kpi"=>"RSE", "client_id"=>"1024", "temporal"=>"hour"}
+
+
+ActionController::RoutingError (No route matches "/api/knsdata/kns_totals" with {:method=>:get}):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/routing/route_set.rb:386:in `recognize'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:182:in `handle_request'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:159:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:158:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:158:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:282:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:281:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:281:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/command.rb:212:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /usr/local/bin/mongrel_rails:19:in `load'
+    /usr/local/bin/mongrel_rails:19
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-15 16:49:00) [GET]
+  Parameters: {"rel_range"=>"yesterday", "kpi"=>"RSE", "client_id"=>"1024", "temporal"=>"hour"}
+
+
+ActionController::RoutingError (No route matches "/api/knss_totals" with {:method=>:get}):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/routing/route_set.rb:386:in `recognize'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:182:in `handle_request'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:159:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:158:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:158:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:282:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:281:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:281:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/command.rb:212:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /usr/local/bin/mongrel_rails:19:in `load'
+    /usr/local/bin/mongrel_rails:19
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-15 16:49:18) [GET]
+  Parameters: {"rel_range"=>"yesterday", "kpi"=>"RSE", "client_id"=>"1024", "temporal"=>"hour"}
+
+
+ActionController::RoutingError (No route matches "/api/knsdataotal" with {:method=>:get}):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/routing/route_set.rb:386:in `recognize'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:182:in `handle_request'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:159:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:158:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:158:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:282:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:281:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:281:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/command.rb:212:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /usr/local/bin/mongrel_rails:19:in `load'
+    /usr/local/bin/mongrel_rails:19
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing ReportingApiController#kns_totals (for 127.0.0.1 at 2009-10-15 16:49:57) [GET]
+  Parameters: {"rel_range"=>"yesterday", "kpi"=>"RSE", "client_id"=>"1024", "temporal"=>"hour"}
+MemCacheError (No connection to server): No connection to server
+Cache miss: 601b16aa37a0d6397baa60ab2489210d8974d40f ({:expires_in=>900 seconds})
+MemCacheError (No connection to server): No connection to server
+Cache write (will save 1.11ms): 601b16aa37a0d6397baa60ab2489210d8974d40f
+Completed in 53ms (View: 0 | 200 OK [http://localhost/data/kns_totals?client_id=1024&kpi=RSE&temporal=hour&rel_range=yesterday]
+
+
+Processing ReportingApiController#kns_totals (for 127.0.0.1 at 2009-10-15 16:50:24) [GET]
+  Parameters: {"rel_range"=>"yesterday", "kpi"=>"RSE", "client_id"=>"1024", "temporal"=>"hour"}
+MemCacheError (No connection to server): No connection to server
+Cache miss: 601b16aa37a0d6397baa60ab2489210d8974d40f ({:expires_in=>900 seconds})
+MemCacheError (No connection to server): No connection to server
+Cache write (will save 0.98ms): 601b16aa37a0d6397baa60ab2489210d8974d40f
+Completed in 18ms (View: 0 | 200 OK [http://localhost/data/kns_totals?client_id=1024&kpi=RSE&temporal=hour&rel_range=yesterday]
+
+
+Processing ReportingApiController#kns_totals (for 127.0.0.1 at 2009-10-15 16:53:26) [GET]
+  Parameters: {"rel_range"=>"yesterday", "kpi"=>"RSE", "client_id"=>"1024", "temporal"=>"hour"}
+MemCacheError (No connection to server): No connection to server
+Cache miss: 601b16aa37a0d6397baa60ab2489210d8974d40f ({:expires_in=>900 seconds})
+MemCacheError (No connection to server): No connection to server
+Cache write (will save 106.89ms): 601b16aa37a0d6397baa60ab2489210d8974d40f
+Completed in 127ms (View: 0 | 200 OK [http://localhost/data/kns_totals?client_id=1024&kpi=RSE&temporal=hour&rel_range=yesterday]
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2009-10-16 12:03:41) [GET]
+Rendering template within layouts/main
+Rendering dashboard/index
+Completed in 153ms (View: 78 | 200 OK [http://localhost/]
+
+
+Processing ReportingApiController#kns_totals to google_table (for 127.0.0.1 at 2009-10-16 12:03:41) [GET]
+  Parameters: {"kpi"=>"rse,rf", "callback"=>"drawGoogleChart", "client_id"=>"1024", "num_range"=>"0-7", "temporal"=>"day"}
+MemCacheError (No connection to server): No connection to server
+Cache miss: 81ac793a3cd5a84fe4d47167508484ec602192e7 ({:expires_in=>900 seconds})
+MemCacheError (No connection to server): No connection to server
+Cache write (will save 448.28ms): 81ac793a3cd5a84fe4d47167508484ec602192e7
+Completed in 605ms (View: 0 | 200 OK [http://localhost/data/kns_totals?client_id=1024&num_range=0-7&kpi=rse,rf&temporal=day&format=google_table&callback=drawGoogleChart]
+
+
+Processing DashboardController#change_ruleset_id (for 127.0.0.1 at 2009-10-16 12:04:28) [GET]
+  Parameters: {"ruleset_id"=>"1024dev"}
+Redirected to actionindex
+Completed in 2ms | 302 Found [http://localhost/dashboard/change_ruleset_id?ruleset_id=1024dev]
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2009-10-16 12:04:28) [GET]
+Rendering template within layouts/main
+Rendering dashboard/index
+Completed in 68ms (View: 54 | 200 OK [http://localhost/]
+
+
+Processing ReportingApiController#kns_totals to google_table (for 127.0.0.1 at 2009-10-16 12:04:28) [GET]
+  Parameters: {"kpi"=>"rse,rf", "callback"=>"drawGoogleChart", "client_id"=>"1024dev", "num_range"=>"0-7", "temporal"=>"day"}
+MemCacheError (No connection to server): No connection to server
+Cache miss: d8f5eb6009ec10bea141f3e78016026d9ec21d40 ({:expires_in=>900 seconds})
+Completed in 24ms (View: 0 | 200 OK [http://localhost/data/kns_totals?client_id=1024dev&num_range=0-7&kpi=rse,rf&temporal=day&format=google_table&callback=drawGoogleChart]
+
+
+Processing DashboardController#change_ruleset_id (for 127.0.0.1 at 2009-10-16 12:04:34) [GET]
+  Parameters: {"ruleset_id"=>"12x1"}
+Redirected to actionindex
+Completed in 2ms | 302 Found [http://localhost/dashboard/change_ruleset_id?ruleset_id=12x1]
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2009-10-16 12:04:34) [GET]
+Rendering template within layouts/main
+Rendering dashboard/index
+Completed in 66ms (View: 53 | 200 OK [http://localhost/]
+
+
+Processing ReportingApiController#kns_totals to google_table (for 127.0.0.1 at 2009-10-16 12:04:34) [GET]
+  Parameters: {"kpi"=>"rse,rf", "callback"=>"drawGoogleChart", "client_id"=>"12x1", "num_range"=>"0-7", "temporal"=>"day"}
+MemCacheError (No connection to server): No connection to server
+Cache miss: 874db594d847fec334ed5b14271ec2f2ade48d9a ({:expires_in=>900 seconds})
+Completed in 50ms (View: 0 | 200 OK [http://localhost/data/kns_totals?client_id=12x1&num_range=0-7&kpi=rse,rf&temporal=day&format=google_table&callback=drawGoogleChart]
+
+
+Processing DashboardController#change_ruleset_id (for 127.0.0.1 at 2009-10-16 12:04:38) [GET]
+  Parameters: {"ruleset_id"=>"996337881"}
+Redirected to actionindex
+Completed in 2ms | 302 Found [http://localhost/dashboard/change_ruleset_id?ruleset_id=996337881]
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2009-10-16 12:04:38) [GET]
+Rendering template within layouts/main
+Rendering dashboard/index
+Completed in 65ms (View: 53 | 200 OK [http://localhost/]
+
+
+Processing ReportingApiController#kns_totals to google_table (for 127.0.0.1 at 2009-10-16 12:04:38) [GET]
+  Parameters: {"kpi"=>"rse,rf", "callback"=>"drawGoogleChart", "client_id"=>"996337881", "num_range"=>"0-7", "temporal"=>"day"}
+MemCacheError (No connection to server): No connection to server
+Cache miss: 9fdf4885f1802548b08ec45cec372d9344a83ba6 ({:expires_in=>900 seconds})
+MemCacheError (No connection to server): No connection to server
+Cache write (will save 65.54ms): 9fdf4885f1802548b08ec45cec372d9344a83ba6
+Completed in 84ms (View: 0 | 200 OK [http://localhost/data/kns_totals?client_id=996337881&num_range=0-7&kpi=rse,rf&temporal=day&format=google_table&callback=drawGoogleChart]
+
+
+Processing DashboardController#change_ruleset_id (for 127.0.0.1 at 2009-10-16 12:04:44) [GET]
+  Parameters: {"ruleset_id"=>"a100x1"}
+Redirected to actionindex
+Completed in 2ms | 302 Found [http://localhost/dashboard/change_ruleset_id?ruleset_id=a100x1]
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2009-10-16 12:04:44) [GET]
+Rendering template within layouts/main
+Rendering dashboard/index
+Completed in 68ms (View: 55 | 200 OK [http://localhost/]
+
+
+Processing ReportingApiController#kns_totals to google_table (for 127.0.0.1 at 2009-10-16 12:04:45) [GET]
+  Parameters: {"kpi"=>"rse,rf", "callback"=>"drawGoogleChart", "client_id"=>"a100x1", "num_range"=>"0-7", "temporal"=>"day"}
+MemCacheError (No connection to server): No connection to server
+Cache miss: ead6328e9789dec1a4b4e69b7c0616376b7b44fe ({:expires_in=>900 seconds})
+Completed in 32ms (View: 0 | 200 OK [http://localhost/data/kns_totals?client_id=a100x1&num_range=0-7&kpi=rse,rf&temporal=day&format=google_table&callback=drawGoogleChart]
+
+
+Processing DashboardController#change_ruleset_id (for 127.0.0.1 at 2009-10-16 12:04:57) [GET]
+  Parameters: {"ruleset_id"=>"a8x17"}
+Redirected to actionindex
+Completed in 2ms | 302 Found [http://localhost/dashboard/change_ruleset_id?ruleset_id=a8x17]
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2009-10-16 12:04:57) [GET]
+Rendering template within layouts/main
+Rendering dashboard/index
+Completed in 65ms (View: 53 | 200 OK [http://localhost/]
+
+
+Processing ReportingApiController#kns_totals to google_table (for 127.0.0.1 at 2009-10-16 12:04:57) [GET]
+  Parameters: {"kpi"=>"rse,rf", "callback"=>"drawGoogleChart", "client_id"=>"a8x17", "num_range"=>"0-7", "temporal"=>"day"}
+MemCacheError (No connection to server): No connection to server
+Cache miss: 42aaf2186295e9e703fd9efeb1b142bf83ade406 ({:expires_in=>900 seconds})
+Completed in 57ms (View: 0 | 200 OK [http://localhost/data/kns_totals?client_id=a8x17&num_range=0-7&kpi=rse,rf&temporal=day&format=google_table&callback=drawGoogleChart]
+
+
+Processing ReportingApiController#api_ref (for 127.0.0.1 at 2009-10-16 12:05:02) [GET]
+Rendering template within layouts/main
+Rendering reporting_api/api_ref
+Completed in 27ms (View: 25 | 200 OK [http://localhost/reporting_api/api_ref]
+
+
+Processing ReportingApiController#kns_totals (for 127.0.0.1 at 2009-10-16 12:10:29) [GET]
+  Parameters: {"rel_range"=>"current_month", "kpi"=>"rse,rf", "client_id"=>"11", "temporal"=>"day"}
+MemCacheError (No connection to server): No connection to server
+Cache miss: 0c699df5a4f9432509a3786473ef860b77069b2e ({:expires_in=>900 seconds})
+MemCacheError (No connection to server): No connection to server
+Cache write (will save 71.38ms): 0c699df5a4f9432509a3786473ef860b77069b2e
+Completed in 100ms (View: 0 | 200 OK [http://localhost/data/kns_totals?client_id=11&kpi=rse,rf&temporal=day&rel_range=current_month]
+
+
+Processing ReportingApiController#kns_totals (for 127.0.0.1 at 2009-10-16 12:10:43) [GET]
+  Parameters: {"rel_range"=>"current_month", "kpi"=>"rse,rf", "client_id"=>"1024", "temporal"=>"day"}
+MemCacheError (No connection to server): No connection to server
+Cache miss: 77d1f62b2d431de619e734dadd6aeffa0b45d699 ({:expires_in=>900 seconds})
+MemCacheError (No connection to server): No connection to server
+Cache write (will save 77.17ms): 77d1f62b2d431de619e734dadd6aeffa0b45d699
+Completed in 105ms (View: 0 | 200 OK [http://localhost/data/kns_totals?client_id=1024&kpi=rse,rf&temporal=day&rel_range=current_month]
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2009-10-19 20:49:04) [GET]
+Rendering template within layouts/main
+Rendering dashboard/index
+Completed in 80ms (View: 64 | 200 OK [http://localhost/]
+
+
+Processing ReportingApiController#kns_totals to google_table (for 127.0.0.1 at 2009-10-19 20:49:05) [GET]
+  Parameters: {"kpi"=>"rse,rf", "callback"=>"drawGoogleChart", "client_id"=>"1024", "num_range"=>"0-7", "temporal"=>"day"}
+MemCacheError (No connection to server): No connection to server
+Cache miss: 82841a297927c705d9ce9fdcc6a2446603a98329 ({:expires_in=>900 seconds})
+MemCacheError (No connection to server): No connection to server
+Cache write (will save 91.71ms): 82841a297927c705d9ce9fdcc6a2446603a98329
+Completed in 292ms (View: 0 | 200 OK [http://localhost/data/kns_totals?client_id=1024&num_range=0-7&kpi=rse,rf&temporal=day&format=google_table&callback=drawGoogleChart]
+
+
+Processing ReportingApiController#api_ref (for 127.0.0.1 at 2009-10-19 20:49:08) [GET]
+Rendering template within layouts/main
+Rendering reporting_api/api_ref
+Completed in 45ms (View: 43 | 200 OK [http://localhost/reporting_api/api_ref]
+
+
+Processing ReportingApiController#kns_totals (for 127.0.0.1 at 2009-10-19 20:58:45) [GET]
+  Parameters: {"kpi"=>"rse", "temporal"=>"day", "client_id"=>"1024"}
+MemCacheError (No connection to server): No connection to server
+Cache miss: 46d039bd52b742dd99cbc428f6eccc8a43f65078 ({:expires_in=>900 seconds})
+MemCacheError (No connection to server): No connection to server
+Cache write (will save 70.29ms): 46d039bd52b742dd99cbc428f6eccc8a43f65078
+Completed in 126ms (View: 0 | 200 OK [http://localhost/data/kns_totals?temporal=day&client_id=1024&kpi=rse]
+
+
+Processing ReportingApiController#kns_totals (for 127.0.0.1 at 2009-10-19 20:58:55) [GET]
+  Parameters: {"ruleset_id"=>"1024", "kpi"=>"rse", "temporal"=>"day"}
+MemCacheError (No connection to server): No connection to server
+Cache miss: 46d039bd52b742dd99cbc428f6eccc8a43f65078 ({:expires_in=>900 seconds})
+MemCacheError (No connection to server): No connection to server
+Cache write (will save 69.77ms): 46d039bd52b742dd99cbc428f6eccc8a43f65078
+Completed in 87ms (View: 0 | 200 OK [http://localhost/data/kns_totals?temporal=day&ruleset_id=1024&kpi=rse]
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2009-11-12 14:04:21) [GET]
+Rendering template within layouts/main
+Rendering dashboard/index
+Completed in 224ms (View: 81 | 200 OK [http://localhost/]
+
+
+Processing ReportingApiController#kns_totals to google_table (for 127.0.0.1 at 2009-11-12 14:04:21) [GET]
+  Parameters: {"kpi"=>"rse,rf", "callback"=>"drawGoogleChart", "client_id"=>"1024", "num_range"=>"0-7", "temporal"=>"day"}
+MemCacheError (No connection to server): No connection to server
+Cache miss: 997565e6c96f37d5c174694a9ce6cc4b42988caf ({:expires_in=>900 seconds})
+MemCacheError (No connection to server): No connection to server
+Cache write (will save 610.53ms): 997565e6c96f37d5c174694a9ce6cc4b42988caf
+Completed in 845ms (View: 0 | 200 OK [http://localhost/data/kns_totals?client_id=1024&num_range=0-7&kpi=rse,rf&temporal=day&format=google_table&callback=drawGoogleChart]
+
+
+Processing ReportingApiController#kns_totals (for 127.0.0.1 at 2009-11-12 14:04:29) [GET]
+  Parameters: {"rel_range"=>"current_month", "kpi"=>"rse,rf", "client_id"=>"1024", "temporal"=>"day"}
+MemCacheError (No connection to server): No connection to server
+Cache miss: 87c75bd4e6051342a1424c445f4da46f69c0bc94 ({:expires_in=>900 seconds})
+MemCacheError (No connection to server): No connection to server
+Cache write (will save 738.89ms): 87c75bd4e6051342a1424c445f4da46f69c0bc94
+Completed in 853ms (View: 0 | 200 OK [http://localhost/data/kns_totals?client_id=1024&kpi=rse,rf&temporal=day&rel_range=current_month]
+
+
+Processing ReportingApiController#kns_totals (for 127.0.0.1 at 2009-11-12 14:04:40) [GET]
+  Parameters: {"rel_range"=>"current_month", "kpi"=>"rse,rf,brse", "client_id"=>"1024", "temporal"=>"day"}
+Completed in 120ms (View: 0 | 200 OK [http://localhost/data/kns_totals?client_id=1024&kpi=rse,rf,brse&temporal=day&rel_range=current_month]
+
+
+Processing ReportingApiController#kns_totals (for 127.0.0.1 at 2009-11-12 14:05:08) [GET]
+  Parameters: {"rel_range"=>"current_month", "kpi"=>"rse,rf,brse", "client_id"=>"1024", "temporal"=>"day"}
+MemCacheError (No connection to server): No connection to server
+Cache miss: 8b7c27b7b869241c1d4e05909b3ea1c28d34b1cb ({:expires_in=>900 seconds})
+MemCacheError (No connection to server): No connection to server
+Cache write (will save 679.95ms): 8b7c27b7b869241c1d4e05909b3ea1c28d34b1cb
+Completed in 795ms (View: 0 | 200 OK [http://localhost/data/kns_totals?client_id=1024&kpi=rse,rf,brse&temporal=day&rel_range=current_month]
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2009-11-12 14:05:24) [GET]
+Rendering template within layouts/main
+Rendering dashboard/index
+Completed in 217ms (View: 63 | 200 OK [http://localhost/]
+
+
+Processing ReportingApiController#kns_totals to google_table (for 127.0.0.1 at 2009-11-12 14:05:25) [GET]
+  Parameters: {"kpi"=>"rse,rf", "callback"=>"drawGoogleChart", "client_id"=>"1024", "num_range"=>"0-7", "temporal"=>"day"}
+MemCacheError (No connection to server): No connection to server
+Cache miss: 997565e6c96f37d5c174694a9ce6cc4b42988caf ({:expires_in=>900 seconds})
+MemCacheError (No connection to server): No connection to server
+Cache write (will save 40.15ms): 997565e6c96f37d5c174694a9ce6cc4b42988caf
+Completed in 173ms (View: 0 | 200 OK [http://localhost/data/kns_totals?client_id=1024&num_range=0-7&kpi=rse,rf&temporal=day&format=google_table&callback=drawGoogleChart]
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2009-11-12 14:05:51) [GET]
+Rendering template within layouts/main
+Rendering dashboard/index
+Completed in 291ms (View: 146 | 200 OK [http://localhost/]
+
+
+Processing ReportingApiController#kns_totals to google_table (for 127.0.0.1 at 2009-11-12 14:05:52) [GET]
+  Parameters: {"kpi"=>"rse,rf,brse", "callback"=>"drawGoogleChart", "client_id"=>"1024", "num_range"=>"0-7", "temporal"=>"day"}
+MemCacheError (No connection to server): No connection to server
+Cache miss: 32a64a4a15be21bef4217f387d243dc1b681de5a ({:expires_in=>900 seconds})
+MemCacheError (No connection to server): No connection to server
+Cache write (will save 611.95ms): 32a64a4a15be21bef4217f387d243dc1b681de5a
+Completed in 829ms (View: 0 | 200 OK [http://localhost/data/kns_totals?client_id=1024&num_range=0-7&kpi=rse,rf,brse&temporal=day&format=google_table&callback=drawGoogleChart]
+/!\ FAILSAFE /!\  Wed Nov 25 14:35:31 -0700 2009
+  Status: 500 Internal Server Error
+  Can't connect to MySQL server on '127.0.0.1' (61)
+    /usr/local/lib/ruby/gems/1.8/gems/dbd-mysql-0.4.3/lib/dbd/Mysql.rb:106:in `error'
+    /usr/local/lib/ruby/gems/1.8/gems/dbd-mysql-0.4.3/lib/dbd/mysql/driver.rb:70:in `connect'
+    /usr/local/lib/ruby/gems/1.8/gems/dbi-0.4.2/lib/dbi/handles/driver.rb:33:in `connect'
+    /usr/local/lib/ruby/gems/1.8/gems/dbi-0.4.2/lib/dbi.rb:148:in `connect'
+    /Users/mikefarmer/Dropbox/Kynetx/analytx/lib/db_wrapper.rb:254:in `initialize'
+    /Users/mikefarmer/Dropbox/Kynetx/analytx/app/controllers/dashboard_controller.rb:7:in `new'
+    /Users/mikefarmer/Dropbox/Kynetx/analytx/app/controllers/dashboard_controller.rb:7:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:392:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:392:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:159:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:158:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:158:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:282:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:281:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:281:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/command.rb:212:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /usr/local/bin/mongrel_rails:19:in `load'
+    /usr/local/bin/mongrel_rails:19
+/!\ FAILSAFE /!\  Wed Nov 25 14:36:37 -0700 2009
+  Status: 500 Internal Server Error
+  Can't connect to MySQL server on '127.0.0.1' (61)
+    /usr/local/lib/ruby/gems/1.8/gems/dbd-mysql-0.4.3/lib/dbd/Mysql.rb:106:in `error'
+    /usr/local/lib/ruby/gems/1.8/gems/dbd-mysql-0.4.3/lib/dbd/mysql/driver.rb:70:in `connect'
+    /usr/local/lib/ruby/gems/1.8/gems/dbi-0.4.2/lib/dbi/handles/driver.rb:33:in `connect'
+    /usr/local/lib/ruby/gems/1.8/gems/dbi-0.4.2/lib/dbi.rb:148:in `connect'
+    /Users/mikefarmer/Dropbox/Kynetx/analytx/lib/db_wrapper.rb:254:in `initialize'
+    /Users/mikefarmer/Dropbox/Kynetx/analytx/app/controllers/dashboard_controller.rb:7:in `new'
+    /Users/mikefarmer/Dropbox/Kynetx/analytx/app/controllers/dashboard_controller.rb:7:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:392:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:392:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:159:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:158:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:158:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:282:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:281:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:281:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/command.rb:212:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /usr/local/bin/mongrel_rails:19:in `load'
+    /usr/local/bin/mongrel_rails:19
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2009-11-25 14:42:10) [GET]
+Rendering template within layouts/main
+Rendering dashboard/index
+Completed in 312ms (View: 113 | 200 OK [http://localhost/]
+
+
+Processing ReportingApiController#kns_totals to google_table (for 127.0.0.1 at 2009-11-25 14:42:10) [GET]
+  Parameters: {"kpi"=>"rse,rf,brse", "callback"=>"drawGoogleChart", "client_id"=>"1024", "num_range"=>"0-7", "temporal"=>"day"}
+MemCacheError (No connection to server): No connection to server
+Cache miss: 9927af464548e8d2a0c1afc9655805b892769287 ({:expires_in=>900 seconds})
+MemCacheError (No connection to server): No connection to server
+Cache write (will save 684.71ms): 9927af464548e8d2a0c1afc9655805b892769287
+Completed in 978ms (View: 0 | 200 OK [http://localhost/data/kns_totals?client_id=1024&num_range=0-7&kpi=rse,rf,brse&temporal=day&format=google_table&callback=drawGoogleChart]
+
+
+Processing ReportingApiController#kns_totals (for 127.0.0.1 at 2009-11-25 14:42:24) [GET]
+  Parameters: {"rel_range"=>"current_month", "kpi"=>"rse,rf", "client_id"=>"1024", "temporal"=>"day"}
+MemCacheError (No connection to server): No connection to server
+Cache miss: 10a9e60c433d8b35b4eda361372f5c4184f2b655 ({:expires_in=>900 seconds})
+MemCacheError (No connection to server): No connection to server
+Cache write (will save 722.99ms): 10a9e60c433d8b35b4eda361372f5c4184f2b655
+Completed in 851ms (View: 0 | 200 OK [http://localhost/data/kns_totals?client_id=1024&kpi=rse,rf&temporal=day&rel_range=current_month]
+
+
+Processing ReportingApiController#kns_totals (for 127.0.0.1 at 2009-11-25 14:42:50) [GET]
+  Parameters: {"rel_range"=>"current_month", "kpi"=>"rse,rf", "client_id"=>"1024,a18x3", "temporal"=>"day"}
+MemCacheError (No connection to server): No connection to server
+Cache miss: 851072a7c1e189132918d51dbd5db6d66c6eb10f ({:expires_in=>900 seconds})
+MemCacheError (No connection to server): No connection to server
+Cache write (will save 724.92ms): 851072a7c1e189132918d51dbd5db6d66c6eb10f
+Completed in 854ms (View: 0 | 200 OK [http://localhost/data/kns_totals?client_id=1024,a18x3&kpi=rse,rf&temporal=day&rel_range=current_month]
+
+
+Processing ReportingApiController#kns_totals (for 127.0.0.1 at 2009-11-25 14:43:11) [GET]
+  Parameters: {"rel_range"=>"current_month", "kpi"=>"rse,rf", "client_id"=>"kynetx_all", "temporal"=>"day"}
+MemCacheError (No connection to server): No connection to server
+Cache miss: 98993ab5d9be3182a0987aca7f73cf47e7f7b106 ({:expires_in=>900 seconds})
+MemCacheError (No connection to server): No connection to server
+Cache write (will save 3934.91ms): 98993ab5d9be3182a0987aca7f73cf47e7f7b106
+Completed in 4070ms (View: 0 | 200 OK [http://localhost/data/kns_totals?client_id=kynetx_all&kpi=rse,rf&temporal=day&rel_range=current_month]
+
+
+Processing ReportingApiController#kns_totals (for 127.0.0.1 at 2009-11-25 14:43:55) [GET]
+  Parameters: {"rel_range"=>"previous_month", "kpi"=>"rse,rf", "client_id"=>"kynetx_all", "temporal"=>"day"}
+MemCacheError (No connection to server): No connection to server
+Cache miss: 50046b06956910a80882adbb02c95c516239596e ({:expires_in=>900 seconds})
+MemCacheError (No connection to server): No connection to server
+Cache write (will save 2333.84ms): 50046b06956910a80882adbb02c95c516239596e
+Completed in 2456ms (View: 0 | 200 OK [http://localhost/data/kns_totals?client_id=kynetx_all&kpi=rse,rf&temporal=day&rel_range=previous_month]
+
+
+Processing ReportingApiController#kns_totals (for 127.0.0.1 at 2009-11-25 14:47:33) [GET]
+  Parameters: {"rel_range"=>"previous_month", "kpi"=>"rse,rf", "client_id"=>"kynetx_all", "temporal"=>"day"}
+MemCacheError (No connection to server): No connection to server
+Cache miss: 50046b06956910a80882adbb02c95c516239596e ({:expires_in=>900 seconds})
+MemCacheError (No connection to server): No connection to server
+Cache write (will save 2448.29ms): 50046b06956910a80882adbb02c95c516239596e
+Completed in 2562ms (View: 0 | 200 OK [http://localhost/data/kns_totals?client_id=kynetx_all&kpi=rse,rf&temporal=day&rel_range=previous_month]
+
+
+Processing ReportingApiController#kns_totals (for 127.0.0.1 at 2009-11-25 14:47:48) [GET]
+  Parameters: {"rel_range"=>"current_month", "kpi"=>"rse,rf", "client_id"=>"kynetx_all", "temporal"=>"day"}
+MemCacheError (No connection to server): No connection to server
+Cache miss: 98993ab5d9be3182a0987aca7f73cf47e7f7b106 ({:expires_in=>900 seconds})
+MemCacheError (No connection to server): No connection to server
+Cache write (will save 2378.78ms): 98993ab5d9be3182a0987aca7f73cf47e7f7b106
+Completed in 2581ms (View: 0 | 200 OK [http://localhost/data/kns_totals?client_id=kynetx_all&kpi=rse,rf&temporal=day&rel_range=current_month]

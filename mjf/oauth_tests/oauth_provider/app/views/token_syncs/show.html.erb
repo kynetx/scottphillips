@@ -1,0 +1,16 @@
+<% title "Token Sync" %>
+
+<p>
+  <strong>Name:</strong>
+  <%=h @token_sync.peer_name %>
+</p>
+<p>
+  <strong>callback_url:</strong>
+  <%=h @token_sync.callback_url %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_token_sync_path(@token_sync) %> |
+  <%= link_to "Destroy", @token_sync, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", token_syncs_path %>
+</p>

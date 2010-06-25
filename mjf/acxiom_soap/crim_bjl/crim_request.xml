@@ -1,0 +1,17 @@
+<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:def="http://DefaultNamespace">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <def:getCount soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <UserID xsi:type="xsd:string">?</UserID>
+         <Password xsi:type="xsd:string">?</Password>
+         <Version xsi:type="xsd:string">?</Version>
+         <ClientCode xsi:type="xsd:string">2642<ClientCode>
+         <Name xsi:type="xsd:string">?</Name>
+         <State xsi:type="xsd:string">?</State>
+         <Birthdate xsi:type="xsd:string">?</Birthdate>
+         <ConvictionDate xsi:type="xsd:string">?</ConvictionDate>
+         <Offense xsi:type="xsd:string">?</Offense>
+         <IncludeNullDobs xsi:type="xsd:string">?</IncludeNullDobs>
+      </def:getCount>
+   </soapenv:Body>
+</soapenv:Envelope>

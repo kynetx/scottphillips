@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+	<title>Kynetx | Analytx</title>
+	<!-- The AUTH_TOKEN protects against CSS attacks. The other half of this is located in application.js
+		which allows all ajax requests to have the AUTH_TOKEN sent along in the data.  A new AUTH_TOKEN
+		is created at the beginning of each session.  This fix was found on 
+		http://henrik.nyh.se/2008/05/rails-authenticity-token-with-jquery on 12-31-2008 -->
+	<%= javascript_tag "var AUTH_TOKEN = #{form_authenticity_token.inspect};" if protect_against_forgery? %>
+	<%= stylesheet_link_tag :all, :cache=>true %>
+	<%= javascript_include_tag :defaults %>
+	<!--[if IE]><script language="javascript" type="text/javascript" src="/javascripts/excanvas.pack.js"></script><![endif]-->
+	<%= javascript_include_tag "jquery.flot.js" %>
+	<%= javascript_include_tag "dashboard_charts.js" %>
+	<script type='text/javascript' src='http://www.google.com/jsapi'></script>
+	<%= javascript_include_tag "google_charts.js" %>
+	
+</head>
+
+<body>
+	<div id="header">
+		<%= image_tag("analytx_logo.png", :alt => "analytx", :style => "display: block; float:left")%>
+		<%= yield :nav_highlight %>
+		<div id="navigation">
+				<%= link_to "Dashboard", {:controller => "dashboard", :action => "index"}, :id => "dashboard_link" %>&nbsp;&nbsp;|&nbsp;&nbsp;
+				<a href="#">Browse</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+				<a href="#">Explore</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+				<%= link_to "API", {:controller => 'reporting_api', :action => 'api_ref'}, :id => "api_link" %>
+
+		</div>
+	</div>
+	<div id="content">
+			<%= @content_for_layout %>
+	</div>
+	<div id="footer">
+		Powered By Kynetx
+	</div>
+
+</body>
+</html>

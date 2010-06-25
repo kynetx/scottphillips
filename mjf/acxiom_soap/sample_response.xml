@@ -1,0 +1,93 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <soapenv:Header>
+      <tt1:Tracking xmlns:tt1="http://acxiom.com/TransactionTracking/1.0">
+         <tt1:TransactionID>B735CC140A640D31000A80EFC24BD562</tt1:TransactionID>
+      </tt1:Tracking>
+   </soapenv:Header>
+   <soapenv:Body>
+      <ns1:cleanAddressResponse xsi:type="ns1:cleanAddressResponse" xmlns:ns1="http://id.acxiom.com/abilitec-postal/1.0">
+         <result>
+            <addressAbility>
+               <addressNotFound>false</addressNotFound>
+               <aliasMatch>false</aliasMatch>
+               <alternateAddress/>
+               <alternateAddressMatch>false</alternateAddressMatch>
+               <carrierRouteId>C017</carrierRouteId>
+               <cityAbbreviation/>
+               <correctedCityAndOrState>false</correctedCityAndOrState>
+               <correctedPrimaryAddress>false</correctedPrimaryAddress>
+               <correctedSecondaryAddress>false</correctedSecondaryAddress>
+               <countyCode>019</countyCode>
+               <deliveryPointBarCode>743</deliveryPointBarCode>
+               <earlyWarningSystemMatch>false</earlyWarningSystemMatch>
+               <failureToMatchLastAddressLine>false</failureToMatchLastAddressLine>
+               <financeNumber>154500</financeNumber>
+               <mainCity>IDAHO FALLS</mainCity>
+               <mainState>ID</mainState>
+               <match>true</match>
+               <missingPoBoxNumber>false</missingPoBoxNumber>
+               <missingRuralRouteHcBoxNumber>false</missingRuralRouteHcBoxNumber>
+               <missingSecondaryNumberInHighrise>false</missingSecondaryNumberInHighrise>
+               <missingStreetNumber>false</missingStreetNumber>
+               <multipleMatchMissingIncorrectDirection>false</multipleMatchMissingIncorrectDirection>
+               <multipleMatchMissingIncorrectSuffix>false</multipleMatchMissingIncorrectSuffix>
+               <multipleMatchPrimaryAddressField>false</multipleMatchPrimaryAddressField>
+               <multipleMatchSecondaryAddressField>false</multipleMatchSecondaryAddressField>
+               <noSuchPrimaryNumber>false</noSuchPrimaryNumber>
+               <poBoxNumberNotOnFile>false</poBoxNumberNotOnFile>
+               <recordTypeCode>S</recordTypeCode>
+               <returnCode>1</returnCode>
+               <ruralRouteHcBoxNotOnFile>false</ruralRouteHcBoxNotOnFile>
+               <secondaryNumberNotFound>false</secondaryNumberNotFound>
+               <zipCodeChanged>false</zipCodeChanged>
+            </addressAbility>
+            <deliveryPointValidation>
+               <accurateSource>Y</accurateSource>
+               <addressNotFound>false</addressNotFound>
+               <aliasMatch>false</aliasMatch>
+               <alternateAddressMatch>false</alternateAddressMatch>
+               <commercialMailReceivingAgency>false</commercialMailReceivingAgency>
+               <correctedCityAndOrState>false</correctedCityAndOrState>
+               <correctedPrimaryAddress>false</correctedPrimaryAddress>
+               <correctedSecondaryAddress>false</correctedSecondaryAddress>
+               <deliverability>1</deliverability>
+               <earlyWarningSystemMatch>false</earlyWarningSystemMatch>
+               <failureToMatchLastAddressLine>false</failureToMatchLastAddressLine>
+               <match>true</match>
+               <missingPoBoxNumber>false</missingPoBoxNumber>
+               <missingRuralRouteHcBoxNumber>false</missingRuralRouteHcBoxNumber>
+               <missingSecondaryNumber>false</missingSecondaryNumber>
+               <missingStreetNumber>false</missingStreetNumber>
+               <multipleMatchMissingIncorrectDirection>false</multipleMatchMissingIncorrectDirection>
+               <multipleMatchMissingIncorrectSuffix>false</multipleMatchMissingIncorrectSuffix>
+               <multipleMatchPrimaryAddressField>false</multipleMatchPrimaryAddressField>
+               <multipleMatchSecondaryAddressField>false</multipleMatchSecondaryAddressField>
+               <noSuchPrimaryNumber>false</noSuchPrimaryNumber>
+               <poBoxNumberNotOnFile>false</poBoxNumberNotOnFile>
+               <ruralRouteHcBoxNotOnFile>false</ruralRouteHcBoxNotOnFile>
+               <secondaryNumberNotFound>false</secondaryNumberNotFound>
+               <streetFrontMatch>false</streetFrontMatch>
+               <zipCodeChanged>false</zipCodeChanged>
+            </deliveryPointValidation>
+            <lacsFlag xsi:nil="1"/>
+            <lineOfTravel>0388A</lineOfTravel>
+            <parsedAddress>
+               <city>IDAHO FALLS</city>
+               <locality/>
+               <postOfficeBox xsi:nil="1"/>
+               <postalCode>83401-3575</postalCode>
+               <state>ID</state>
+               <streetInfo>
+                  <name>CAPSTONE</name>
+                  <number>3674</number>
+                  <postDirection/>
+                  <preDirection/>
+                  <suffix>DR</suffix>
+               </streetInfo>
+               <unit/>
+               <unitDescription/>
+            </parsedAddress>
+         </result>
+      </ns1:cleanAddressResponse>
+   </soapenv:Body>
+</soapenv:Envelope>
