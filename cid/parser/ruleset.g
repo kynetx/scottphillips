@@ -1,10 +1,40 @@
 grammar ruleset;
-options {output=AST;}
+options {
+	output=AST;
+  backtrack=true;
 
-ID  :	('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'0'..'9'|'_')*
-    ;
+}
+@members { 
+public String getErrorMessage(RecognitionException e, String[] tokenNames)
+{
+	List stack = getRuleInvocationStack(e, this.getClass().getName()); 
+	String msg = null; 
+	if ( e instanceof NoViableAltException ) {
+		NoViableAltException nvae = (NoViableAltException)e; 
+		msg = " no viable alt; token= " + e.token + " (decision=" + nvae.decisionNumber + 
+			" state " + nvae.stateNumber + ")" + " decision=<<" + nvae.grammarDecisionDescription + ">>";
+     	} 
+	else  {
+		msg = super.getErrorMessage(e, tokenNames); 
+	}
+	System.out.println(stack + " " + msg);
+	return stack + " " + msg;
+    }
 
-INT :	'0'..'9'+
+
+  public String getTokenErrorDisplay(Token t) {
+    return t.toString();
+  } 
+
+}
+
+//ID  :	('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'0'..'9'|'_')*
+//    ;
+
+ID 	: ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_')*
+	;
+
+INT :	('-')? '0'..'9'+
     ;
 
 FLOAT
@@ -78,6 +108,7 @@ ruleset
  	
  	
  	
+ 	
 rulesetname
 	:  ID | INT
 	;
@@ -87,7 +118,7 @@ rulesetname
  	
  	
 rule	:	 'rule' ID 'is' rule_state '{'
-	select pre_block? emit_block? action ';'? callbacks? post_block?
+	select pre_block? emit_block? (action ';'?) callbacks? post_block?
 	'}'
 	; 	
 
@@ -177,23 +208,30 @@ unconditional_action
 	;
 	
 primrule 
-	: rule_label? namespace? ID '(' (expr ','?)* ')' (modifier_clause)* |
-	  rule_label? emit_block	
+	: 
+	rule_label? namespace? ID '(' (expr ','?)* ')' modifier_clause? 
+		{System.out.println("found primrule: "+$primrule.text);}
+		
+	|rule_label? emit_block	
+	
 	;
           
 rule_label : ID '=>';          
 
-modifier_clause 
-	: 'with' modifier |
-	 'and' modifier
+modifier_clause   
+	: 
+		'with' modifierx ('and' modifierx)*
+		{System.out.println("found mod clause expr: "+$modifier_clause.text);}
 	;
 	
+modifierx	
+	: ID '=' STRING 
+		{System.out.println("found modifier  expr: " + $modifierx.text);}
 
-modifier
-	: ID '=' expr |
-	  ID '=' JS
+	| ID '=' JS
+		{System.out.println("found modifier  JS expr: " + $modifierx.text);}
 	;
-		
+	
 actionblock
 	: blocktype '{' (primrule ';'?)* '}'	
 	;
@@ -202,14 +240,14 @@ blocktype: 'choose'
          | 'every';
          	
 
-pre_block: 'pre' '{' decl ';' ';' '}';
+pre_block: 'pre' '{' (decl ';'?) '}';
 
           
 foreach: 
 	'foreach' expr setting
 	;         
 
-select	:	'select' (using|when) foreach
+select	:	'select' (using|when) foreach?
 	;
 	 	
 using	:	'using' STRING setting;
@@ -239,7 +277,7 @@ event_prim
 	'(' event_seq ')'
 	;
 	
-setting :	'setting' '(' ID ',' ')';
+setting :	'setting' '(' (ID ','?)* ')';
 
 event_domain 
 	:	'web'
@@ -307,7 +345,7 @@ equality_expr
 	
 predop: '<=' | '>=' | '<' | '>' | '==' | '!=' | 'eq' | 'neq' | 'like';		
 	
-add_expr: mult_expr (add_op mult_expr)*;		
+add_expr : mult_expr (add_op mult_expr)*;		
 
 add_op: '+'|'-';
 
@@ -333,7 +371,6 @@ operator_expr
 	
 factor options { backtrack = true; }
 	: INT
-      | '-' INT
       | STRING
       | REGEXP
       | 'true'

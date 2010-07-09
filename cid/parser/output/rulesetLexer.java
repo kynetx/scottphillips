@@ -1,4 +1,4 @@
-// $ANTLR 3.2 Sep 23, 2009 12:02:23 /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g 2010-07-09 10:43:44
+// $ANTLR 3.2 Sep 23, 2009 12:02:23 /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g 2010-07-09 15:29:59
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -3586,8 +3586,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:4:5: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )* )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:4:7: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
+            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:34:5: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' )* )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:34:7: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' )*
             {
             if ( (input.LA(1)>='A' && input.LA(1)<='Z')||input.LA(1)=='_'||(input.LA(1)>='a' && input.LA(1)<='z') ) {
                 input.consume();
@@ -3598,13 +3598,13 @@ public class rulesetLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:4:31: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
+            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:34:31: ( 'a' .. 'z' | 'A' .. 'Z' | '_' )*
             loop1:
             do {
                 int alt1=2;
                 int LA1_0 = input.LA(1);
 
-                if ( ((LA1_0>='0' && LA1_0<='9')||(LA1_0>='A' && LA1_0<='Z')||LA1_0=='_'||(LA1_0>='a' && LA1_0<='z')) ) {
+                if ( ((LA1_0>='A' && LA1_0<='Z')||LA1_0=='_'||(LA1_0>='a' && LA1_0<='z')) ) {
                     alt1=1;
                 }
 
@@ -3613,7 +3613,7 @@ public class rulesetLexer extends Lexer {
             	case 1 :
             	    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:
             	    {
-            	    if ( (input.LA(1)>='0' && input.LA(1)<='9')||(input.LA(1)>='A' && input.LA(1)<='Z')||input.LA(1)=='_'||(input.LA(1)>='a' && input.LA(1)<='z') ) {
+            	    if ( (input.LA(1)>='A' && input.LA(1)<='Z')||input.LA(1)=='_'||(input.LA(1)>='a' && input.LA(1)<='z') ) {
             	        input.consume();
 
             	    }
@@ -3647,24 +3647,42 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:7:5: ( ( '0' .. '9' )+ )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:7:7: ( '0' .. '9' )+
+            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:37:5: ( ( '-' )? ( '0' .. '9' )+ )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:37:7: ( '-' )? ( '0' .. '9' )+
             {
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:7:7: ( '0' .. '9' )+
-            int cnt2=0;
-            loop2:
-            do {
-                int alt2=2;
-                int LA2_0 = input.LA(1);
+            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:37:7: ( '-' )?
+            int alt2=2;
+            int LA2_0 = input.LA(1);
 
-                if ( ((LA2_0>='0' && LA2_0<='9')) ) {
-                    alt2=1;
+            if ( (LA2_0=='-') ) {
+                alt2=1;
+            }
+            switch (alt2) {
+                case 1 :
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:37:8: '-'
+                    {
+                    match('-'); 
+
+                    }
+                    break;
+
+            }
+
+            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:37:14: ( '0' .. '9' )+
+            int cnt3=0;
+            loop3:
+            do {
+                int alt3=2;
+                int LA3_0 = input.LA(1);
+
+                if ( ((LA3_0>='0' && LA3_0<='9')) ) {
+                    alt3=1;
                 }
 
 
-                switch (alt2) {
+                switch (alt3) {
             	case 1 :
-            	    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:7:7: '0' .. '9'
+            	    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:37:14: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -3672,12 +3690,12 @@ public class rulesetLexer extends Lexer {
             	    break;
 
             	default :
-            	    if ( cnt2 >= 1 ) break loop2;
+            	    if ( cnt3 >= 1 ) break loop3;
                         EarlyExitException eee =
-                            new EarlyExitException(2, input);
+                            new EarlyExitException(3, input);
                         throw eee;
                 }
-                cnt2++;
+                cnt3++;
             } while (true);
 
 
@@ -3696,45 +3714,15 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = FLOAT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:11:5: ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )? | '.' ( '0' .. '9' )+ ( EXPONENT )? | ( '0' .. '9' )+ EXPONENT )
-            int alt9=3;
-            alt9 = dfa9.predict(input);
-            switch (alt9) {
+            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:41:5: ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )? | '.' ( '0' .. '9' )+ ( EXPONENT )? | ( '0' .. '9' )+ EXPONENT )
+            int alt10=3;
+            alt10 = dfa10.predict(input);
+            switch (alt10) {
                 case 1 :
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:11:9: ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )?
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:41:9: ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )?
                     {
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:11:9: ( '0' .. '9' )+
-                    int cnt3=0;
-                    loop3:
-                    do {
-                        int alt3=2;
-                        int LA3_0 = input.LA(1);
-
-                        if ( ((LA3_0>='0' && LA3_0<='9')) ) {
-                            alt3=1;
-                        }
-
-
-                        switch (alt3) {
-                    	case 1 :
-                    	    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:11:10: '0' .. '9'
-                    	    {
-                    	    matchRange('0','9'); 
-
-                    	    }
-                    	    break;
-
-                    	default :
-                    	    if ( cnt3 >= 1 ) break loop3;
-                                EarlyExitException eee =
-                                    new EarlyExitException(3, input);
-                                throw eee;
-                        }
-                        cnt3++;
-                    } while (true);
-
-                    match('.'); 
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:11:25: ( '0' .. '9' )*
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:41:9: ( '0' .. '9' )+
+                    int cnt4=0;
                     loop4:
                     do {
                         int alt4=2;
@@ -3747,7 +3735,7 @@ public class rulesetLexer extends Lexer {
 
                         switch (alt4) {
                     	case 1 :
-                    	    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:11:26: '0' .. '9'
+                    	    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:41:10: '0' .. '9'
                     	    {
                     	    matchRange('0','9'); 
 
@@ -3755,20 +3743,50 @@ public class rulesetLexer extends Lexer {
                     	    break;
 
                     	default :
-                    	    break loop4;
+                    	    if ( cnt4 >= 1 ) break loop4;
+                                EarlyExitException eee =
+                                    new EarlyExitException(4, input);
+                                throw eee;
+                        }
+                        cnt4++;
+                    } while (true);
+
+                    match('.'); 
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:41:25: ( '0' .. '9' )*
+                    loop5:
+                    do {
+                        int alt5=2;
+                        int LA5_0 = input.LA(1);
+
+                        if ( ((LA5_0>='0' && LA5_0<='9')) ) {
+                            alt5=1;
+                        }
+
+
+                        switch (alt5) {
+                    	case 1 :
+                    	    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:41:26: '0' .. '9'
+                    	    {
+                    	    matchRange('0','9'); 
+
+                    	    }
+                    	    break;
+
+                    	default :
+                    	    break loop5;
                         }
                     } while (true);
 
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:11:37: ( EXPONENT )?
-                    int alt5=2;
-                    int LA5_0 = input.LA(1);
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:41:37: ( EXPONENT )?
+                    int alt6=2;
+                    int LA6_0 = input.LA(1);
 
-                    if ( (LA5_0=='E'||LA5_0=='e') ) {
-                        alt5=1;
+                    if ( (LA6_0=='E'||LA6_0=='e') ) {
+                        alt6=1;
                     }
-                    switch (alt5) {
+                    switch (alt6) {
                         case 1 :
-                            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:11:37: EXPONENT
+                            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:41:37: EXPONENT
                             {
                             mEXPONENT(); 
 
@@ -3781,24 +3799,24 @@ public class rulesetLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:12:9: '.' ( '0' .. '9' )+ ( EXPONENT )?
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:42:9: '.' ( '0' .. '9' )+ ( EXPONENT )?
                     {
                     match('.'); 
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:12:13: ( '0' .. '9' )+
-                    int cnt6=0;
-                    loop6:
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:42:13: ( '0' .. '9' )+
+                    int cnt7=0;
+                    loop7:
                     do {
-                        int alt6=2;
-                        int LA6_0 = input.LA(1);
+                        int alt7=2;
+                        int LA7_0 = input.LA(1);
 
-                        if ( ((LA6_0>='0' && LA6_0<='9')) ) {
-                            alt6=1;
+                        if ( ((LA7_0>='0' && LA7_0<='9')) ) {
+                            alt7=1;
                         }
 
 
-                        switch (alt6) {
+                        switch (alt7) {
                     	case 1 :
-                    	    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:12:14: '0' .. '9'
+                    	    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:42:14: '0' .. '9'
                     	    {
                     	    matchRange('0','9'); 
 
@@ -3806,24 +3824,24 @@ public class rulesetLexer extends Lexer {
                     	    break;
 
                     	default :
-                    	    if ( cnt6 >= 1 ) break loop6;
+                    	    if ( cnt7 >= 1 ) break loop7;
                                 EarlyExitException eee =
-                                    new EarlyExitException(6, input);
+                                    new EarlyExitException(7, input);
                                 throw eee;
                         }
-                        cnt6++;
+                        cnt7++;
                     } while (true);
 
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:12:25: ( EXPONENT )?
-                    int alt7=2;
-                    int LA7_0 = input.LA(1);
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:42:25: ( EXPONENT )?
+                    int alt8=2;
+                    int LA8_0 = input.LA(1);
 
-                    if ( (LA7_0=='E'||LA7_0=='e') ) {
-                        alt7=1;
+                    if ( (LA8_0=='E'||LA8_0=='e') ) {
+                        alt8=1;
                     }
-                    switch (alt7) {
+                    switch (alt8) {
                         case 1 :
-                            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:12:25: EXPONENT
+                            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:42:25: EXPONENT
                             {
                             mEXPONENT(); 
 
@@ -3836,23 +3854,23 @@ public class rulesetLexer extends Lexer {
                     }
                     break;
                 case 3 :
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:13:9: ( '0' .. '9' )+ EXPONENT
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:43:9: ( '0' .. '9' )+ EXPONENT
                     {
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:13:9: ( '0' .. '9' )+
-                    int cnt8=0;
-                    loop8:
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:43:9: ( '0' .. '9' )+
+                    int cnt9=0;
+                    loop9:
                     do {
-                        int alt8=2;
-                        int LA8_0 = input.LA(1);
+                        int alt9=2;
+                        int LA9_0 = input.LA(1);
 
-                        if ( ((LA8_0>='0' && LA8_0<='9')) ) {
-                            alt8=1;
+                        if ( ((LA9_0>='0' && LA9_0<='9')) ) {
+                            alt9=1;
                         }
 
 
-                        switch (alt8) {
+                        switch (alt9) {
                     	case 1 :
-                    	    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:13:10: '0' .. '9'
+                    	    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:43:10: '0' .. '9'
                     	    {
                     	    matchRange('0','9'); 
 
@@ -3860,12 +3878,12 @@ public class rulesetLexer extends Lexer {
                     	    break;
 
                     	default :
-                    	    if ( cnt8 >= 1 ) break loop8;
+                    	    if ( cnt9 >= 1 ) break loop9;
                                 EarlyExitException eee =
-                                    new EarlyExitException(8, input);
+                                    new EarlyExitException(9, input);
                                 throw eee;
                         }
-                        cnt8++;
+                        cnt9++;
                     } while (true);
 
                     mEXPONENT(); 
@@ -3887,52 +3905,52 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:17:5: ( '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n' | '/*' ( options {greedy=false; } : . )* '*/' )
-            int alt13=2;
-            int LA13_0 = input.LA(1);
+            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:47:5: ( '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n' | '/*' ( options {greedy=false; } : . )* '*/' )
+            int alt14=2;
+            int LA14_0 = input.LA(1);
 
-            if ( (LA13_0=='/') ) {
-                int LA13_1 = input.LA(2);
+            if ( (LA14_0=='/') ) {
+                int LA14_1 = input.LA(2);
 
-                if ( (LA13_1=='/') ) {
-                    alt13=1;
+                if ( (LA14_1=='/') ) {
+                    alt14=1;
                 }
-                else if ( (LA13_1=='*') ) {
-                    alt13=2;
+                else if ( (LA14_1=='*') ) {
+                    alt14=2;
                 }
                 else {
                     NoViableAltException nvae =
-                        new NoViableAltException("", 13, 1, input);
+                        new NoViableAltException("", 14, 1, input);
 
                     throw nvae;
                 }
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 13, 0, input);
+                    new NoViableAltException("", 14, 0, input);
 
                 throw nvae;
             }
-            switch (alt13) {
+            switch (alt14) {
                 case 1 :
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:17:9: '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n'
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:47:9: '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n'
                     {
                     match("//"); 
 
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:17:14: (~ ( '\\n' | '\\r' ) )*
-                    loop10:
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:47:14: (~ ( '\\n' | '\\r' ) )*
+                    loop11:
                     do {
-                        int alt10=2;
-                        int LA10_0 = input.LA(1);
+                        int alt11=2;
+                        int LA11_0 = input.LA(1);
 
-                        if ( ((LA10_0>='\u0000' && LA10_0<='\t')||(LA10_0>='\u000B' && LA10_0<='\f')||(LA10_0>='\u000E' && LA10_0<='\uFFFF')) ) {
-                            alt10=1;
+                        if ( ((LA11_0>='\u0000' && LA11_0<='\t')||(LA11_0>='\u000B' && LA11_0<='\f')||(LA11_0>='\u000E' && LA11_0<='\uFFFF')) ) {
+                            alt11=1;
                         }
 
 
-                        switch (alt10) {
+                        switch (alt11) {
                     	case 1 :
-                    	    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:17:14: ~ ( '\\n' | '\\r' )
+                    	    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:47:14: ~ ( '\\n' | '\\r' )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -3948,20 +3966,20 @@ public class rulesetLexer extends Lexer {
                     	    break;
 
                     	default :
-                    	    break loop10;
+                    	    break loop11;
                         }
                     } while (true);
 
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:17:28: ( '\\r' )?
-                    int alt11=2;
-                    int LA11_0 = input.LA(1);
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:47:28: ( '\\r' )?
+                    int alt12=2;
+                    int LA12_0 = input.LA(1);
 
-                    if ( (LA11_0=='\r') ) {
-                        alt11=1;
+                    if ( (LA12_0=='\r') ) {
+                        alt12=1;
                     }
-                    switch (alt11) {
+                    switch (alt12) {
                         case 1 :
-                            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:17:28: '\\r'
+                            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:47:28: '\\r'
                             {
                             match('\r'); 
 
@@ -3976,36 +3994,36 @@ public class rulesetLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:18:9: '/*' ( options {greedy=false; } : . )* '*/'
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:48:9: '/*' ( options {greedy=false; } : . )* '*/'
                     {
                     match("/*"); 
 
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:18:14: ( options {greedy=false; } : . )*
-                    loop12:
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:48:14: ( options {greedy=false; } : . )*
+                    loop13:
                     do {
-                        int alt12=2;
-                        int LA12_0 = input.LA(1);
+                        int alt13=2;
+                        int LA13_0 = input.LA(1);
 
-                        if ( (LA12_0=='*') ) {
-                            int LA12_1 = input.LA(2);
+                        if ( (LA13_0=='*') ) {
+                            int LA13_1 = input.LA(2);
 
-                            if ( (LA12_1=='/') ) {
-                                alt12=2;
+                            if ( (LA13_1=='/') ) {
+                                alt13=2;
                             }
-                            else if ( ((LA12_1>='\u0000' && LA12_1<='.')||(LA12_1>='0' && LA12_1<='\uFFFF')) ) {
-                                alt12=1;
+                            else if ( ((LA13_1>='\u0000' && LA13_1<='.')||(LA13_1>='0' && LA13_1<='\uFFFF')) ) {
+                                alt13=1;
                             }
 
 
                         }
-                        else if ( ((LA12_0>='\u0000' && LA12_0<=')')||(LA12_0>='+' && LA12_0<='\uFFFF')) ) {
-                            alt12=1;
+                        else if ( ((LA13_0>='\u0000' && LA13_0<=')')||(LA13_0>='+' && LA13_0<='\uFFFF')) ) {
+                            alt13=1;
                         }
 
 
-                        switch (alt12) {
+                        switch (alt13) {
                     	case 1 :
-                    	    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:18:42: .
+                    	    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:48:42: .
                     	    {
                     	    matchAny(); 
 
@@ -4013,7 +4031,7 @@ public class rulesetLexer extends Lexer {
                     	    break;
 
                     	default :
-                    	    break loop12;
+                    	    break loop13;
                         }
                     } while (true);
 
@@ -4038,8 +4056,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:21:5: ( ( ' ' | '\\t' | '\\r' | '\\n' ) )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:21:9: ( ' ' | '\\t' | '\\r' | '\\n' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:51:5: ( ( ' ' | '\\t' | '\\r' | '\\n' ) )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:51:9: ( ' ' | '\\t' | '\\r' | '\\n' )
             {
             if ( (input.LA(1)>='\t' && input.LA(1)<='\n')||input.LA(1)=='\r'||input.LA(1)==' ' ) {
                 input.consume();
@@ -4067,34 +4085,34 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:29:5: ( '\"' ( ESC_SEQ | ~ ( '\\\\' | '\"' ) )* '\"' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:29:8: '\"' ( ESC_SEQ | ~ ( '\\\\' | '\"' ) )* '\"'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:59:5: ( '\"' ( ESC_SEQ | ~ ( '\\\\' | '\"' ) )* '\"' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:59:8: '\"' ( ESC_SEQ | ~ ( '\\\\' | '\"' ) )* '\"'
             {
             match('\"'); 
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:29:12: ( ESC_SEQ | ~ ( '\\\\' | '\"' ) )*
-            loop14:
+            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:59:12: ( ESC_SEQ | ~ ( '\\\\' | '\"' ) )*
+            loop15:
             do {
-                int alt14=3;
-                int LA14_0 = input.LA(1);
+                int alt15=3;
+                int LA15_0 = input.LA(1);
 
-                if ( (LA14_0=='\\') ) {
-                    alt14=1;
+                if ( (LA15_0=='\\') ) {
+                    alt15=1;
                 }
-                else if ( ((LA14_0>='\u0000' && LA14_0<='!')||(LA14_0>='#' && LA14_0<='[')||(LA14_0>=']' && LA14_0<='\uFFFF')) ) {
-                    alt14=2;
+                else if ( ((LA15_0>='\u0000' && LA15_0<='!')||(LA15_0>='#' && LA15_0<='[')||(LA15_0>=']' && LA15_0<='\uFFFF')) ) {
+                    alt15=2;
                 }
 
 
-                switch (alt14) {
+                switch (alt15) {
             	case 1 :
-            	    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:29:14: ESC_SEQ
+            	    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:59:14: ESC_SEQ
             	    {
             	    mESC_SEQ(); 
 
             	    }
             	    break;
             	case 2 :
-            	    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:29:24: ~ ( '\\\\' | '\"' )
+            	    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:59:24: ~ ( '\\\\' | '\"' )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -4110,7 +4128,7 @@ public class rulesetLexer extends Lexer {
             	    break;
 
             	default :
-            	    break loop14;
+            	    break loop15;
                 }
             } while (true);
 
@@ -4131,36 +4149,36 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = CHAR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:32:5: ( '\\'' ( ESC_SEQ | ~ ( '\\'' | '\\\\' ) ) '\\'' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:32:8: '\\'' ( ESC_SEQ | ~ ( '\\'' | '\\\\' ) ) '\\''
+            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:62:5: ( '\\'' ( ESC_SEQ | ~ ( '\\'' | '\\\\' ) ) '\\'' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:62:8: '\\'' ( ESC_SEQ | ~ ( '\\'' | '\\\\' ) ) '\\''
             {
             match('\''); 
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:32:13: ( ESC_SEQ | ~ ( '\\'' | '\\\\' ) )
-            int alt15=2;
-            int LA15_0 = input.LA(1);
+            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:62:13: ( ESC_SEQ | ~ ( '\\'' | '\\\\' ) )
+            int alt16=2;
+            int LA16_0 = input.LA(1);
 
-            if ( (LA15_0=='\\') ) {
-                alt15=1;
+            if ( (LA16_0=='\\') ) {
+                alt16=1;
             }
-            else if ( ((LA15_0>='\u0000' && LA15_0<='&')||(LA15_0>='(' && LA15_0<='[')||(LA15_0>=']' && LA15_0<='\uFFFF')) ) {
-                alt15=2;
+            else if ( ((LA16_0>='\u0000' && LA16_0<='&')||(LA16_0>='(' && LA16_0<='[')||(LA16_0>=']' && LA16_0<='\uFFFF')) ) {
+                alt16=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 15, 0, input);
+                    new NoViableAltException("", 16, 0, input);
 
                 throw nvae;
             }
-            switch (alt15) {
+            switch (alt16) {
                 case 1 :
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:32:15: ESC_SEQ
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:62:15: ESC_SEQ
                     {
                     mESC_SEQ(); 
 
                     }
                     break;
                 case 2 :
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:32:25: ~ ( '\\'' | '\\\\' )
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:62:25: ~ ( '\\'' | '\\\\' )
                     {
                     if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                         input.consume();
@@ -4192,8 +4210,8 @@ public class rulesetLexer extends Lexer {
     // $ANTLR start "EXPONENT"
     public final void mEXPONENT() throws RecognitionException {
         try {
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:36:10: ( ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+ )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:36:12: ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+
+            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:66:10: ( ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+ )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:66:12: ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+
             {
             if ( input.LA(1)=='E'||input.LA(1)=='e' ) {
                 input.consume();
@@ -4204,14 +4222,14 @@ public class rulesetLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:36:22: ( '+' | '-' )?
-            int alt16=2;
-            int LA16_0 = input.LA(1);
+            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:66:22: ( '+' | '-' )?
+            int alt17=2;
+            int LA17_0 = input.LA(1);
 
-            if ( (LA16_0=='+'||LA16_0=='-') ) {
-                alt16=1;
+            if ( (LA17_0=='+'||LA17_0=='-') ) {
+                alt17=1;
             }
-            switch (alt16) {
+            switch (alt17) {
                 case 1 :
                     // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:
                     {
@@ -4230,21 +4248,21 @@ public class rulesetLexer extends Lexer {
 
             }
 
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:36:33: ( '0' .. '9' )+
-            int cnt17=0;
-            loop17:
+            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:66:33: ( '0' .. '9' )+
+            int cnt18=0;
+            loop18:
             do {
-                int alt17=2;
-                int LA17_0 = input.LA(1);
+                int alt18=2;
+                int LA18_0 = input.LA(1);
 
-                if ( ((LA17_0>='0' && LA17_0<='9')) ) {
-                    alt17=1;
+                if ( ((LA18_0>='0' && LA18_0<='9')) ) {
+                    alt18=1;
                 }
 
 
-                switch (alt17) {
+                switch (alt18) {
             	case 1 :
-            	    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:36:34: '0' .. '9'
+            	    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:66:34: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -4252,12 +4270,12 @@ public class rulesetLexer extends Lexer {
             	    break;
 
             	default :
-            	    if ( cnt17 >= 1 ) break loop17;
+            	    if ( cnt18 >= 1 ) break loop18;
                         EarlyExitException eee =
-                            new EarlyExitException(17, input);
+                            new EarlyExitException(18, input);
                         throw eee;
                 }
-                cnt17++;
+                cnt18++;
             } while (true);
 
 
@@ -4272,8 +4290,8 @@ public class rulesetLexer extends Lexer {
     // $ANTLR start "HEX_DIGIT"
     public final void mHEX_DIGIT() throws RecognitionException {
         try {
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:39:11: ( ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:39:13: ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:69:11: ( ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:69:13: ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )
             {
             if ( (input.LA(1)>='0' && input.LA(1)<='9')||(input.LA(1)>='A' && input.LA(1)<='F')||(input.LA(1)>='a' && input.LA(1)<='f') ) {
                 input.consume();
@@ -4296,11 +4314,11 @@ public class rulesetLexer extends Lexer {
     // $ANTLR start "ESC_SEQ"
     public final void mESC_SEQ() throws RecognitionException {
         try {
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:43:5: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' ) | UNICODE_ESC | OCTAL_ESC )
-            int alt18=3;
-            int LA18_0 = input.LA(1);
+            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:73:5: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' ) | UNICODE_ESC | OCTAL_ESC )
+            int alt19=3;
+            int LA19_0 = input.LA(1);
 
-            if ( (LA18_0=='\\') ) {
+            if ( (LA19_0=='\\') ) {
                 switch ( input.LA(2) ) {
                 case '\"':
                 case '\'':
@@ -4311,12 +4329,12 @@ public class rulesetLexer extends Lexer {
                 case 'r':
                 case 't':
                     {
-                    alt18=1;
+                    alt19=1;
                     }
                     break;
                 case 'u':
                     {
-                    alt18=2;
+                    alt19=2;
                     }
                     break;
                 case '0':
@@ -4328,12 +4346,12 @@ public class rulesetLexer extends Lexer {
                 case '6':
                 case '7':
                     {
-                    alt18=3;
+                    alt19=3;
                     }
                     break;
                 default:
                     NoViableAltException nvae =
-                        new NoViableAltException("", 18, 1, input);
+                        new NoViableAltException("", 19, 1, input);
 
                     throw nvae;
                 }
@@ -4341,13 +4359,13 @@ public class rulesetLexer extends Lexer {
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 18, 0, input);
+                    new NoViableAltException("", 19, 0, input);
 
                 throw nvae;
             }
-            switch (alt18) {
+            switch (alt19) {
                 case 1 :
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:43:9: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' )
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:73:9: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' )
                     {
                     match('\\'); 
                     if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||input.LA(1)=='t' ) {
@@ -4363,14 +4381,14 @@ public class rulesetLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:44:9: UNICODE_ESC
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:74:9: UNICODE_ESC
                     {
                     mUNICODE_ESC(); 
 
                     }
                     break;
                 case 3 :
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:45:9: OCTAL_ESC
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:75:9: OCTAL_ESC
                     {
                     mOCTAL_ESC(); 
 
@@ -4387,71 +4405,71 @@ public class rulesetLexer extends Lexer {
     // $ANTLR start "OCTAL_ESC"
     public final void mOCTAL_ESC() throws RecognitionException {
         try {
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:50:5: ( '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) )
-            int alt19=3;
-            int LA19_0 = input.LA(1);
+            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:80:5: ( '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) )
+            int alt20=3;
+            int LA20_0 = input.LA(1);
 
-            if ( (LA19_0=='\\') ) {
-                int LA19_1 = input.LA(2);
+            if ( (LA20_0=='\\') ) {
+                int LA20_1 = input.LA(2);
 
-                if ( ((LA19_1>='0' && LA19_1<='3')) ) {
-                    int LA19_2 = input.LA(3);
+                if ( ((LA20_1>='0' && LA20_1<='3')) ) {
+                    int LA20_2 = input.LA(3);
 
-                    if ( ((LA19_2>='0' && LA19_2<='7')) ) {
-                        int LA19_4 = input.LA(4);
+                    if ( ((LA20_2>='0' && LA20_2<='7')) ) {
+                        int LA20_5 = input.LA(4);
 
-                        if ( ((LA19_4>='0' && LA19_4<='7')) ) {
-                            alt19=1;
+                        if ( ((LA20_5>='0' && LA20_5<='7')) ) {
+                            alt20=1;
                         }
                         else {
-                            alt19=2;}
+                            alt20=2;}
                     }
                     else {
-                        alt19=3;}
+                        alt20=3;}
                 }
-                else if ( ((LA19_1>='4' && LA19_1<='7')) ) {
-                    int LA19_3 = input.LA(3);
+                else if ( ((LA20_1>='4' && LA20_1<='7')) ) {
+                    int LA20_3 = input.LA(3);
 
-                    if ( ((LA19_3>='0' && LA19_3<='7')) ) {
-                        alt19=2;
+                    if ( ((LA20_3>='0' && LA20_3<='7')) ) {
+                        alt20=2;
                     }
                     else {
-                        alt19=3;}
+                        alt20=3;}
                 }
                 else {
                     NoViableAltException nvae =
-                        new NoViableAltException("", 19, 1, input);
+                        new NoViableAltException("", 20, 1, input);
 
                     throw nvae;
                 }
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 19, 0, input);
+                    new NoViableAltException("", 20, 0, input);
 
                 throw nvae;
             }
-            switch (alt19) {
+            switch (alt20) {
                 case 1 :
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:50:9: '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' )
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:80:9: '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' )
                     {
                     match('\\'); 
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:50:14: ( '0' .. '3' )
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:50:15: '0' .. '3'
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:80:14: ( '0' .. '3' )
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:80:15: '0' .. '3'
                     {
                     matchRange('0','3'); 
 
                     }
 
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:50:25: ( '0' .. '7' )
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:50:26: '0' .. '7'
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:80:25: ( '0' .. '7' )
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:80:26: '0' .. '7'
                     {
                     matchRange('0','7'); 
 
                     }
 
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:50:36: ( '0' .. '7' )
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:50:37: '0' .. '7'
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:80:36: ( '0' .. '7' )
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:80:37: '0' .. '7'
                     {
                     matchRange('0','7'); 
 
@@ -4461,18 +4479,18 @@ public class rulesetLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:51:9: '\\\\' ( '0' .. '7' ) ( '0' .. '7' )
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:81:9: '\\\\' ( '0' .. '7' ) ( '0' .. '7' )
                     {
                     match('\\'); 
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:51:14: ( '0' .. '7' )
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:51:15: '0' .. '7'
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:81:14: ( '0' .. '7' )
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:81:15: '0' .. '7'
                     {
                     matchRange('0','7'); 
 
                     }
 
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:51:25: ( '0' .. '7' )
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:51:26: '0' .. '7'
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:81:25: ( '0' .. '7' )
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:81:26: '0' .. '7'
                     {
                     matchRange('0','7'); 
 
@@ -4482,11 +4500,11 @@ public class rulesetLexer extends Lexer {
                     }
                     break;
                 case 3 :
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:52:9: '\\\\' ( '0' .. '7' )
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:82:9: '\\\\' ( '0' .. '7' )
                     {
                     match('\\'); 
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:52:14: ( '0' .. '7' )
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:52:15: '0' .. '7'
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:82:14: ( '0' .. '7' )
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:82:15: '0' .. '7'
                     {
                     matchRange('0','7'); 
 
@@ -4506,8 +4524,8 @@ public class rulesetLexer extends Lexer {
     // $ANTLR start "UNICODE_ESC"
     public final void mUNICODE_ESC() throws RecognitionException {
         try {
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:57:5: ( '\\\\' 'u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:57:9: '\\\\' 'u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT
+            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:87:5: ( '\\\\' 'u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:87:9: '\\\\' 'u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT
             {
             match('\\'); 
             match('u'); 
@@ -4529,37 +4547,37 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = HTML;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:60:7: ( '<<' ( options {greedy=false; } : . )* '>>' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:60:9: '<<' ( options {greedy=false; } : . )* '>>'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:90:7: ( '<<' ( options {greedy=false; } : . )* '>>' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:90:9: '<<' ( options {greedy=false; } : . )* '>>'
             {
             match("<<"); 
 
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:60:14: ( options {greedy=false; } : . )*
-            loop20:
+            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:90:14: ( options {greedy=false; } : . )*
+            loop21:
             do {
-                int alt20=2;
-                int LA20_0 = input.LA(1);
+                int alt21=2;
+                int LA21_0 = input.LA(1);
 
-                if ( (LA20_0=='>') ) {
-                    int LA20_1 = input.LA(2);
+                if ( (LA21_0=='>') ) {
+                    int LA21_1 = input.LA(2);
 
-                    if ( (LA20_1=='>') ) {
-                        alt20=2;
+                    if ( (LA21_1=='>') ) {
+                        alt21=2;
                     }
-                    else if ( ((LA20_1>='\u0000' && LA20_1<='=')||(LA20_1>='?' && LA20_1<='\uFFFF')) ) {
-                        alt20=1;
+                    else if ( ((LA21_1>='\u0000' && LA21_1<='=')||(LA21_1>='?' && LA21_1<='\uFFFF')) ) {
+                        alt21=1;
                     }
 
 
                 }
-                else if ( ((LA20_0>='\u0000' && LA20_0<='=')||(LA20_0>='?' && LA20_0<='\uFFFF')) ) {
-                    alt20=1;
+                else if ( ((LA21_0>='\u0000' && LA21_0<='=')||(LA21_0>='?' && LA21_0<='\uFFFF')) ) {
+                    alt21=1;
                 }
 
 
-                switch (alt20) {
+                switch (alt21) {
             	case 1 :
-            	    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:60:42: .
+            	    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:90:42: .
             	    {
             	    matchAny(); 
 
@@ -4567,7 +4585,7 @@ public class rulesetLexer extends Lexer {
             	    break;
 
             	default :
-            	    break loop20;
+            	    break loop21;
                 }
             } while (true);
 
@@ -4589,37 +4607,37 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = JS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:62:5: ( '<|' ( options {greedy=false; } : . )* '|>' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:62:7: '<|' ( options {greedy=false; } : . )* '|>'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:92:5: ( '<|' ( options {greedy=false; } : . )* '|>' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:92:7: '<|' ( options {greedy=false; } : . )* '|>'
             {
             match("<|"); 
 
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:62:12: ( options {greedy=false; } : . )*
-            loop21:
+            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:92:12: ( options {greedy=false; } : . )*
+            loop22:
             do {
-                int alt21=2;
-                int LA21_0 = input.LA(1);
+                int alt22=2;
+                int LA22_0 = input.LA(1);
 
-                if ( (LA21_0=='|') ) {
-                    int LA21_1 = input.LA(2);
+                if ( (LA22_0=='|') ) {
+                    int LA22_1 = input.LA(2);
 
-                    if ( (LA21_1=='>') ) {
-                        alt21=2;
+                    if ( (LA22_1=='>') ) {
+                        alt22=2;
                     }
-                    else if ( ((LA21_1>='\u0000' && LA21_1<='=')||(LA21_1>='?' && LA21_1<='\uFFFF')) ) {
-                        alt21=1;
+                    else if ( ((LA22_1>='\u0000' && LA22_1<='=')||(LA22_1>='?' && LA22_1<='\uFFFF')) ) {
+                        alt22=1;
                     }
 
 
                 }
-                else if ( ((LA21_0>='\u0000' && LA21_0<='{')||(LA21_0>='}' && LA21_0<='\uFFFF')) ) {
-                    alt21=1;
+                else if ( ((LA22_0>='\u0000' && LA22_0<='{')||(LA22_0>='}' && LA22_0<='\uFFFF')) ) {
+                    alt22=1;
                 }
 
 
-                switch (alt21) {
+                switch (alt22) {
             	case 1 :
-            	    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:62:40: .
+            	    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:92:40: .
             	    {
             	    matchAny(); 
 
@@ -4627,7 +4645,7 @@ public class rulesetLexer extends Lexer {
             	    break;
 
             	default :
-            	    break loop21;
+            	    break loop22;
                 }
             } while (true);
 
@@ -4649,27 +4667,27 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = REGEXP;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:65:8: ( '/' ( options {greedy=false; } : . )* '/' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:65:10: '/' ( options {greedy=false; } : . )* '/'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:95:8: ( '/' ( options {greedy=false; } : . )* '/' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:95:10: '/' ( options {greedy=false; } : . )* '/'
             {
             match('/'); 
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:65:15: ( options {greedy=false; } : . )*
-            loop22:
+            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:95:15: ( options {greedy=false; } : . )*
+            loop23:
             do {
-                int alt22=2;
-                int LA22_0 = input.LA(1);
+                int alt23=2;
+                int LA23_0 = input.LA(1);
 
-                if ( (LA22_0=='/') ) {
-                    alt22=2;
+                if ( (LA23_0=='/') ) {
+                    alt23=2;
                 }
-                else if ( ((LA22_0>='\u0000' && LA22_0<='.')||(LA22_0>='0' && LA22_0<='\uFFFF')) ) {
-                    alt22=1;
+                else if ( ((LA23_0>='\u0000' && LA23_0<='.')||(LA23_0>='0' && LA23_0<='\uFFFF')) ) {
+                    alt23=1;
                 }
 
 
-                switch (alt22) {
+                switch (alt23) {
             	case 1 :
-            	    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:65:43: .
+            	    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:95:43: .
             	    {
             	    matchAny(); 
 
@@ -4677,7 +4695,7 @@ public class rulesetLexer extends Lexer {
             	    break;
 
             	default :
-            	    break loop22;
+            	    break loop23;
                 }
             } while (true);
 
@@ -4695,9 +4713,9 @@ public class rulesetLexer extends Lexer {
 
     public void mTokens() throws RecognitionException {
         // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:8: ( T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | T__63 | T__64 | T__65 | T__66 | T__67 | T__68 | T__69 | T__70 | T__71 | T__72 | T__73 | T__74 | T__75 | T__76 | T__77 | T__78 | T__79 | T__80 | T__81 | T__82 | T__83 | T__84 | T__85 | T__86 | T__87 | T__88 | T__89 | T__90 | T__91 | T__92 | T__93 | T__94 | T__95 | T__96 | T__97 | T__98 | T__99 | T__100 | T__101 | T__102 | T__103 | T__104 | T__105 | T__106 | T__107 | T__108 | T__109 | T__110 | T__111 | T__112 | T__113 | T__114 | T__115 | T__116 | T__117 | T__118 | T__119 | T__120 | T__121 | T__122 | T__123 | T__124 | T__125 | T__126 | T__127 | T__128 | T__129 | T__130 | T__131 | T__132 | T__133 | T__134 | T__135 | T__136 | T__137 | T__138 | T__139 | T__140 | T__141 | T__142 | T__143 | T__144 | T__145 | T__146 | T__147 | T__148 | T__149 | T__150 | T__151 | T__152 | T__153 | T__154 | T__155 | T__156 | T__157 | T__158 | T__159 | T__160 | T__161 | T__162 | T__163 | T__164 | T__165 | T__166 | T__167 | T__168 | T__169 | T__170 | T__171 | T__172 | T__173 | T__174 | T__175 | T__176 | T__177 | T__178 | T__179 | T__180 | ID | INT | FLOAT | COMMENT | WS | STRING | CHAR | HTML | JS | REGEXP )
-        int alt23=172;
-        alt23 = dfa23.predict(input);
-        switch (alt23) {
+        int alt24=172;
+        alt24 = dfa24.predict(input);
+        switch (alt24) {
             case 1 :
                 // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:10: T__19
                 {
@@ -5908,21 +5926,21 @@ public class rulesetLexer extends Lexer {
     }
 
 
-    protected DFA9 dfa9 = new DFA9(this);
-    protected DFA23 dfa23 = new DFA23(this);
-    static final String DFA9_eotS =
+    protected DFA10 dfa10 = new DFA10(this);
+    protected DFA24 dfa24 = new DFA24(this);
+    static final String DFA10_eotS =
         "\5\uffff";
-    static final String DFA9_eofS =
+    static final String DFA10_eofS =
         "\5\uffff";
-    static final String DFA9_minS =
+    static final String DFA10_minS =
         "\2\56\3\uffff";
-    static final String DFA9_maxS =
+    static final String DFA10_maxS =
         "\1\71\1\145\3\uffff";
-    static final String DFA9_acceptS =
+    static final String DFA10_acceptS =
         "\2\uffff\1\2\1\1\1\3";
-    static final String DFA9_specialS =
+    static final String DFA10_specialS =
         "\5\uffff}>";
-    static final String[] DFA9_transitionS = {
+    static final String[] DFA10_transitionS = {
             "\1\2\1\uffff\12\1",
             "\1\3\1\uffff\12\1\13\uffff\1\4\37\uffff\1\4",
             "",
@@ -5930,53 +5948,53 @@ public class rulesetLexer extends Lexer {
             ""
     };
 
-    static final short[] DFA9_eot = DFA.unpackEncodedString(DFA9_eotS);
-    static final short[] DFA9_eof = DFA.unpackEncodedString(DFA9_eofS);
-    static final char[] DFA9_min = DFA.unpackEncodedStringToUnsignedChars(DFA9_minS);
-    static final char[] DFA9_max = DFA.unpackEncodedStringToUnsignedChars(DFA9_maxS);
-    static final short[] DFA9_accept = DFA.unpackEncodedString(DFA9_acceptS);
-    static final short[] DFA9_special = DFA.unpackEncodedString(DFA9_specialS);
-    static final short[][] DFA9_transition;
+    static final short[] DFA10_eot = DFA.unpackEncodedString(DFA10_eotS);
+    static final short[] DFA10_eof = DFA.unpackEncodedString(DFA10_eofS);
+    static final char[] DFA10_min = DFA.unpackEncodedStringToUnsignedChars(DFA10_minS);
+    static final char[] DFA10_max = DFA.unpackEncodedStringToUnsignedChars(DFA10_maxS);
+    static final short[] DFA10_accept = DFA.unpackEncodedString(DFA10_acceptS);
+    static final short[] DFA10_special = DFA.unpackEncodedString(DFA10_specialS);
+    static final short[][] DFA10_transition;
 
     static {
-        int numStates = DFA9_transitionS.length;
-        DFA9_transition = new short[numStates][];
+        int numStates = DFA10_transitionS.length;
+        DFA10_transition = new short[numStates][];
         for (int i=0; i<numStates; i++) {
-            DFA9_transition[i] = DFA.unpackEncodedString(DFA9_transitionS[i]);
+            DFA10_transition[i] = DFA.unpackEncodedString(DFA10_transitionS[i]);
         }
     }
 
-    class DFA9 extends DFA {
+    class DFA10 extends DFA {
 
-        public DFA9(BaseRecognizer recognizer) {
+        public DFA10(BaseRecognizer recognizer) {
             this.recognizer = recognizer;
-            this.decisionNumber = 9;
-            this.eot = DFA9_eot;
-            this.eof = DFA9_eof;
-            this.min = DFA9_min;
-            this.max = DFA9_max;
-            this.accept = DFA9_accept;
-            this.special = DFA9_special;
-            this.transition = DFA9_transition;
+            this.decisionNumber = 10;
+            this.eot = DFA10_eot;
+            this.eof = DFA10_eof;
+            this.min = DFA10_min;
+            this.max = DFA10_max;
+            this.accept = DFA10_accept;
+            this.special = DFA10_special;
+            this.transition = DFA10_transition;
         }
         public String getDescription() {
-            return "10:1: FLOAT : ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )? | '.' ( '0' .. '9' )+ ( EXPONENT )? | ( '0' .. '9' )+ EXPONENT );";
+            return "40:1: FLOAT : ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )? | '.' ( '0' .. '9' )+ ( EXPONENT )? | ( '0' .. '9' )+ EXPONENT );";
         }
     }
-    static final String DFA23_eotS =
+    static final String DFA24_eotS =
         "\1\uffff\1\61\2\uffff\1\61\1\uffff\6\61\1\136\1\61\1\uffff\2\61"+
-        "\1\154\1\157\1\61\3\uffff\6\61\1\u008c\1\u008e\1\uffff\1\u0090\2"+
-        "\uffff\1\u0093\3\uffff\1\61\1\u0099\10\61\1\uffff\1\u00a5\3\uffff"+
+        "\1\154\1\160\1\61\3\uffff\6\61\1\u008d\1\u008f\1\uffff\1\u0091\2"+
+        "\uffff\1\u0095\3\uffff\1\61\1\u009b\10\61\1\uffff\1\157\3\uffff"+
         "\3\61\1\u00ab\1\u00ac\1\u00af\11\61\1\u00bc\11\61\1\u00c6\14\61"+
-        "\3\uffff\14\61\5\uffff\4\61\1\u00ef\5\61\1\u00f6\2\61\1\u00fa\1"+
-        "\u00fc\11\61\11\uffff\1\u0094\3\uffff\4\61\2\uffff\12\61\1\uffff"+
-        "\5\61\2\uffff\2\61\1\uffff\4\61\1\u012a\5\61\1\u0130\1\61\1\uffff"+
-        "\1\u0132\2\61\1\u0136\1\u0137\4\61\1\uffff\1\u013d\10\61\1\u0146"+
-        "\3\61\1\u014b\15\61\1\u0159\6\61\1\u0160\1\61\1\u0163\3\61\1\uffff"+
-        "\1\u0167\3\61\1\u016c\1\61\1\uffff\3\61\1\uffff\1\61\1\uffff\1\u0173"+
-        "\2\61\1\u0177\7\61\1\u0094\1\uffff\1\u017f\1\uffff\1\u0094\2\uffff"+
-        "\2\61\1\u0183\5\61\1\u0189\1\u018a\2\61\1\u018d\1\61\1\u0190\14"+
-        "\61\1\uffff\1\u019d\4\61\1\uffff\1\61\1\uffff\3\61\2\uffff\1\u01a7"+
+        "\3\uffff\14\61\6\uffff\4\61\1\u00ef\5\61\1\u00f6\2\61\1\u00fa\1"+
+        "\u00fc\11\61\11\uffff\1\u0094\3\uffff\4\61\2\uffff\17\61\2\uffff"+
+        "\2\61\1\uffff\4\61\1\u012a\5\61\1\u0130\1\61\1\uffff\1\u0132\2\61"+
+        "\1\u0136\1\u0137\4\61\1\uffff\1\u013d\10\61\1\u0146\3\61\1\u014b"+
+        "\15\61\1\u0159\6\61\1\u0160\1\61\1\u0163\3\61\1\uffff\1\u0167\3"+
+        "\61\1\u016c\1\61\1\uffff\3\61\1\uffff\1\61\1\uffff\1\u0173\2\61"+
+        "\1\u0177\7\61\1\u0094\2\uffff\1\u017f\1\uffff\1\u0094\1\uffff\2"+
+        "\61\1\u0183\5\61\1\u0189\1\u018a\2\61\1\u018d\1\61\1\u0190\14\61"+
+        "\1\uffff\1\u019d\4\61\1\uffff\1\61\1\uffff\3\61\2\uffff\1\u01a7"+
         "\1\u01a8\3\61\1\uffff\1\u01ac\7\61\1\uffff\4\61\1\uffff\1\61\1\u01b9"+
         "\1\61\1\u01bb\2\61\1\u01be\1\u01bf\1\u01c0\1\u01c1\1\61\1\u01c3"+
         "\1\61\1\uffff\3\61\1\u01c8\1\u01ca\1\u01cb\1\uffff\1\u01cd\1\61"+
@@ -6007,66 +6025,68 @@ public class rulesetLexer extends Lexer {
         "\1\u02b1\1\uffff\1\u02b2\1\u02b3\1\u02b4\2\61\1\u02b7\1\61\4\uffff"+
         "\1\u02b9\1\61\1\uffff\1\u02bb\1\uffff\1\61\1\uffff\2\61\1\u02bf"+
         "\1\uffff";
-    static final String DFA23_eofS =
+    static final String DFA24_eofS =
         "\u02c0\uffff";
-    static final String DFA23_minS =
+    static final String DFA24_minS =
         "\1\11\1\141\2\uffff\1\146\1\uffff\1\141\1\143\1\141\1\154\1\141"+
-        "\1\145\1\75\1\141\1\uffff\1\141\1\145\2\75\1\141\3\uffff\1\141\1"+
-        "\143\1\145\1\146\1\141\1\154\1\55\1\174\1\uffff\1\75\2\uffff\1\0"+
-        "\3\uffff\1\141\1\60\1\141\1\165\1\123\1\115\1\123\1\124\2\145\1"+
-        "\uffff\1\56\3\uffff\1\154\1\151\1\160\3\60\1\154\1\151\1\162\1\157"+
-        "\1\156\1\151\1\164\1\144\1\164\1\60\1\160\1\164\1\141\1\164\1\161"+
-        "\1\155\1\163\1\160\1\145\1\60\1\164\1\151\1\162\1\143\1\145\1\141"+
-        "\1\163\1\162\1\142\1\143\1\162\1\154\3\uffff\1\151\1\163\1\145\2"+
-        "\151\1\160\1\144\1\156\2\164\1\145\1\142\5\uffff\1\147\1\163\1\153"+
-        "\1\156\1\60\1\145\1\147\1\143\1\145\1\144\1\60\1\151\1\146\2\60"+
-        "\1\146\1\154\1\164\1\146\1\160\1\155\1\163\2\157\11\uffff\2\0\2"+
-        "\uffff\1\163\1\141\1\163\1\165\2\uffff\1\151\1\166\1\145\1\117\1"+
-        "\114\1\123\1\115\1\141\1\171\1\144\1\uffff\1\145\1\163\1\154\1\157"+
-        "\1\165\2\uffff\1\143\1\145\1\uffff\1\145\1\164\1\154\1\163\1\60"+
-        "\1\155\1\143\2\141\1\151\1\60\1\145\1\uffff\1\60\1\150\1\172\2\60"+
-        "\2\145\1\154\1\156\1\uffff\1\60\1\164\1\157\1\154\1\150\1\143\1"+
-        "\141\1\156\1\157\1\60\1\162\1\143\1\155\1\60\1\145\1\156\1\157\1"+
-        "\164\1\151\1\147\1\145\1\164\1\156\1\154\1\164\1\153\1\143\1\60"+
-        "\1\164\2\165\1\141\1\150\1\156\1\60\1\153\1\60\1\164\1\145\1\147"+
-        "\1\uffff\1\60\1\145\1\153\1\156\1\60\1\141\1\uffff\2\157\1\167\1"+
-        "\uffff\1\145\1\uffff\1\60\1\143\1\141\1\60\1\146\1\160\1\154\1\141"+
-        "\1\143\1\142\1\147\7\0\1\164\1\144\1\60\1\162\1\156\1\141\1\162"+
-        "\1\116\2\60\1\114\1\162\1\60\1\163\1\60\1\145\1\141\1\165\1\151"+
-        "\1\164\1\162\1\144\1\145\1\165\2\145\1\141\1\uffff\1\60\1\164\1"+
-        "\171\1\163\1\166\1\uffff\1\162\1\uffff\2\157\1\151\2\uffff\2\60"+
-        "\1\151\1\164\1\171\1\uffff\1\60\1\162\1\142\1\141\1\153\1\162\1"+
-        "\147\1\163\1\uffff\2\145\2\151\1\uffff\1\143\1\60\1\156\1\60\1\164"+
-        "\1\147\4\60\1\164\1\60\1\150\1\uffff\1\150\1\154\1\164\3\60\1\uffff"+
-        "\1\60\1\151\1\uffff\2\60\1\164\1\uffff\1\166\1\60\1\147\1\60\1\uffff"+
-        "\1\164\1\156\1\165\1\162\1\145\1\60\1\uffff\1\154\1\163\1\60\1\uffff"+
-        "\1\145\1\141\2\151\1\162\1\141\1\154\1\uffff\1\0\1\157\1\60\1\uffff"+
-        "\2\60\1\163\1\171\1\60\2\uffff\2\60\1\uffff\1\60\1\145\1\uffff\1"+
-        "\60\1\143\2\162\1\151\1\163\1\60\2\162\1\60\1\164\1\143\1\uffff"+
-        "\1\151\1\163\1\60\1\145\1\60\1\162\1\60\1\156\1\162\2\uffff\1\143"+
-        "\2\60\1\uffff\1\163\1\141\1\142\2\60\2\145\1\156\1\163\1\164\1\156"+
-        "\1\164\1\uffff\1\144\1\uffff\1\60\1\145\4\uffff\1\145\1\uffff\2"+
-        "\60\2\145\1\uffff\1\156\2\uffff\1\60\1\uffff\1\156\2\uffff\1\150"+
-        "\1\151\1\uffff\1\60\1\uffff\1\145\1\60\3\145\1\uffff\1\151\1\145"+
-        "\1\uffff\1\162\1\164\1\143\1\156\1\151\1\154\1\145\1\162\1\uffff"+
-        "\1\60\2\uffff\1\143\1\60\2\uffff\1\60\2\uffff\1\164\1\uffff\1\145"+
-        "\1\143\1\145\1\166\1\145\1\uffff\1\60\1\145\1\uffff\1\60\1\150\1"+
-        "\157\1\60\1\uffff\1\60\1\uffff\1\60\1\uffff\1\60\1\145\1\151\2\uffff"+
-        "\1\164\1\143\1\154\2\uffff\2\60\1\164\1\163\1\60\1\147\2\60\1\uffff"+
-        "\2\162\1\uffff\1\60\1\uffff\3\60\1\uffff\1\147\1\60\1\145\1\uffff"+
-        "\1\60\1\uffff\2\60\1\156\1\143\1\165\1\164\1\145\1\143\1\141\1\60"+
-        "\1\160\2\60\1\171\1\uffff\1\162\2\uffff\2\60\1\145\1\60\1\145\1"+
-        "\143\1\uffff\1\60\1\uffff\1\60\1\156\4\uffff\1\144\1\164\1\141\1"+
-        "\153\1\145\2\uffff\2\60\1\uffff\1\60\1\uffff\1\60\1\uffff\1\163"+
-        "\1\60\2\uffff\1\60\2\uffff\1\60\1\uffff\1\167\3\uffff\1\60\1\153"+
-        "\1\162\1\60\1\156\1\150\1\164\1\uffff\1\164\1\uffff\1\156\1\uffff"+
-        "\1\60\1\151\2\uffff\1\60\1\uffff\1\60\1\164\2\uffff\3\60\1\143\1"+
-        "\163\1\60\4\uffff\1\60\3\uffff\1\60\1\uffff\1\60\1\143\1\uffff\1"+
-        "\143\1\60\1\145\1\151\1\141\1\uffff\1\160\2\uffff\1\151\3\uffff"+
-        "\1\153\1\60\4\uffff\2\145\1\uffff\1\163\1\157\1\154\1\164\1\157"+
-        "\1\60\1\uffff\3\60\1\156\1\171\1\60\1\156\4\uffff\1\60\1\164\1\uffff"+
-        "\1\60\1\uffff\1\151\1\uffff\1\143\1\163\1\60\1\uffff";
-    static final String DFA23_maxS =
+        "\1\145\1\75\1\141\1\uffff\1\141\1\145\1\75\1\60\1\141\3\uffff\1"+
+        "\141\1\143\1\145\1\146\1\141\1\154\1\55\1\174\1\uffff\1\75\2\uffff"+
+        "\1\0\3\uffff\1\141\1\60\1\141\1\165\1\123\1\115\1\123\1\124\2\145"+
+        "\1\uffff\1\56\3\uffff\1\154\1\151\1\160\3\101\1\154\1\151\1\162"+
+        "\1\157\1\156\1\151\1\164\1\144\1\164\1\101\1\160\1\164\1\141\1\164"+
+        "\1\161\1\155\1\163\1\160\1\145\1\101\1\164\1\151\1\162\1\143\1\145"+
+        "\1\141\1\163\1\162\1\142\1\143\1\162\1\154\3\uffff\1\151\1\163\1"+
+        "\145\2\151\1\160\1\144\1\156\2\164\1\145\1\142\6\uffff\1\147\1\163"+
+        "\1\153\1\156\1\101\1\145\1\147\1\143\1\145\1\144\1\101\1\151\1\146"+
+        "\2\101\1\146\1\154\1\164\1\146\1\160\1\155\1\163\2\157\11\uffff"+
+        "\2\0\2\uffff\1\163\1\141\1\163\1\165\2\uffff\1\151\1\166\1\145\1"+
+        "\117\1\114\1\123\1\115\1\141\1\171\1\144\1\145\1\163\1\154\1\157"+
+        "\1\165\2\uffff\1\143\1\145\1\uffff\1\145\1\164\1\154\1\163\1\101"+
+        "\1\155\1\143\2\141\1\151\1\101\1\145\1\uffff\1\101\1\150\1\172\2"+
+        "\101\2\145\1\154\1\156\1\uffff\1\101\1\164\1\157\1\154\1\150\1\143"+
+        "\1\141\1\156\1\157\1\101\1\162\1\143\1\155\1\101\1\145\1\156\1\157"+
+        "\1\164\1\151\1\147\1\145\1\164\1\156\1\154\1\164\1\153\1\143\1\101"+
+        "\1\164\2\165\1\141\1\150\1\156\1\101\1\153\1\101\1\164\1\145\1\147"+
+        "\1\uffff\1\101\1\145\1\153\1\156\1\101\1\141\1\uffff\2\157\1\167"+
+        "\1\uffff\1\145\1\uffff\1\101\1\143\1\141\1\101\1\146\1\160\1\154"+
+        "\1\141\1\143\1\142\1\147\7\0\1\164\1\144\1\101\1\162\1\156\1\141"+
+        "\1\162\1\116\2\101\1\114\1\162\1\101\1\163\1\101\1\145\1\141\1\165"+
+        "\1\151\1\164\1\162\1\144\1\145\1\165\2\145\1\141\1\uffff\1\101\1"+
+        "\164\1\171\1\163\1\166\1\uffff\1\162\1\uffff\2\157\1\151\2\uffff"+
+        "\2\101\1\151\1\164\1\171\1\uffff\1\101\1\162\1\142\1\141\1\153\1"+
+        "\162\1\147\1\163\1\uffff\2\145\2\151\1\uffff\1\143\1\101\1\156\1"+
+        "\101\1\164\1\147\4\101\1\164\1\101\1\150\1\uffff\1\150\1\154\1\164"+
+        "\3\101\1\uffff\1\101\1\151\1\uffff\2\101\1\164\1\uffff\1\166\1\101"+
+        "\1\147\1\101\1\uffff\1\164\1\156\1\165\1\162\1\145\1\101\1\uffff"+
+        "\1\154\1\163\1\101\1\uffff\1\145\1\141\2\151\1\162\1\141\1\154\1"+
+        "\uffff\1\0\1\157\1\101\1\uffff\2\101\1\163\1\171\1\101\2\uffff\2"+
+        "\101\1\uffff\1\101\1\145\1\uffff\1\101\1\143\2\162\1\151\1\163\1"+
+        "\101\2\162\1\101\1\164\1\143\1\uffff\1\151\1\163\1\101\1\145\1\101"+
+        "\1\162\1\101\1\156\1\162\2\uffff\1\143\2\101\1\uffff\1\163\1\141"+
+        "\1\142\2\101\2\145\1\156\1\163\1\164\1\156\1\164\1\uffff\1\144\1"+
+        "\uffff\1\101\1\145\4\uffff\1\145\1\uffff\2\101\2\145\1\uffff\1\156"+
+        "\2\uffff\1\101\1\uffff\1\156\2\uffff\1\150\1\151\1\uffff\1\101\1"+
+        "\uffff\1\145\1\101\3\145\1\uffff\1\151\1\145\1\uffff\1\162\1\164"+
+        "\1\143\1\156\1\151\1\154\1\145\1\162\1\uffff\1\101\2\uffff\1\143"+
+        "\1\101\2\uffff\1\101\2\uffff\1\164\1\uffff\1\145\1\143\1\145\1\166"+
+        "\1\145\1\uffff\1\101\1\145\1\uffff\1\101\1\150\1\157\1\101\1\uffff"+
+        "\1\101\1\uffff\1\101\1\uffff\1\101\1\145\1\151\2\uffff\1\164\1\143"+
+        "\1\154\2\uffff\2\101\1\164\1\163\1\101\1\147\2\101\1\uffff\2\162"+
+        "\1\uffff\1\101\1\uffff\3\101\1\uffff\1\147\1\101\1\145\1\uffff\1"+
+        "\101\1\uffff\2\101\1\156\1\143\1\165\1\164\1\145\1\143\1\141\1\101"+
+        "\1\160\2\101\1\171\1\uffff\1\162\2\uffff\2\101\1\145\1\101\1\145"+
+        "\1\143\1\uffff\1\101\1\uffff\1\101\1\156\4\uffff\1\144\1\164\1\141"+
+        "\1\153\1\145\2\uffff\2\101\1\uffff\1\101\1\uffff\1\101\1\uffff\1"+
+        "\163\1\101\2\uffff\1\101\2\uffff\1\101\1\uffff\1\167\3\uffff\1\101"+
+        "\1\153\1\162\1\101\1\156\1\150\1\164\1\uffff\1\164\1\uffff\1\156"+
+        "\1\uffff\1\101\1\151\2\uffff\1\101\1\uffff\1\101\1\164\2\uffff\3"+
+        "\101\1\143\1\163\1\101\4\uffff\1\101\3\uffff\1\101\1\uffff\1\101"+
+        "\1\143\1\uffff\1\143\1\101\1\145\1\151\1\141\1\uffff\1\160\2\uffff"+
+        "\1\151\3\uffff\1\153\1\101\4\uffff\2\145\1\uffff\1\163\1\157\1\154"+
+        "\1\164\1\157\1\101\1\uffff\3\101\1\156\1\171\1\101\1\156\4\uffff"+
+        "\1\101\1\164\1\uffff\1\101\1\uffff\1\151\1\uffff\1\143\1\163\1\101"+
+        "\1\uffff";
+    static final String DFA24_maxS =
         "\1\175\1\165\2\uffff\1\163\1\uffff\2\165\1\157\1\170\2\165\1\76"+
         "\1\167\1\uffff\1\157\1\151\1\75\1\76\1\157\3\uffff\1\162\1\163\1"+
         "\145\1\162\1\165\1\157\2\174\1\uffff\1\75\2\uffff\1\uffff\3\uffff"+
@@ -6075,91 +6095,90 @@ public class rulesetLexer extends Lexer {
         "\156\1\167\1\164\1\144\1\164\1\172\1\160\1\164\1\141\1\164\1\161"+
         "\1\155\1\163\1\160\1\145\1\172\1\164\1\151\1\162\1\154\1\151\1\157"+
         "\1\163\1\162\1\143\1\164\1\162\1\154\3\uffff\1\165\1\163\1\145\2"+
-        "\151\1\164\2\156\2\164\2\145\5\uffff\1\147\1\163\1\153\1\156\1\172"+
+        "\151\1\164\2\156\2\164\2\145\6\uffff\1\147\1\163\1\153\1\156\1\172"+
         "\1\145\1\147\1\143\1\151\1\144\1\172\1\151\1\164\2\172\1\146\1\154"+
         "\1\171\1\163\1\160\1\155\1\163\2\157\11\uffff\2\uffff\2\uffff\1"+
         "\163\1\141\1\163\1\165\2\uffff\1\151\1\166\1\145\1\117\1\114\1\123"+
-        "\1\115\1\141\1\171\1\144\1\uffff\1\145\1\163\1\154\1\157\1\165\2"+
-        "\uffff\1\143\1\145\1\uffff\1\145\1\164\1\154\1\163\1\172\1\155\1"+
-        "\143\2\141\1\151\1\172\1\145\1\uffff\1\172\1\150\3\172\2\145\1\154"+
-        "\1\162\1\uffff\1\172\1\164\1\157\1\154\1\150\1\143\1\141\1\156\1"+
-        "\157\1\172\1\162\1\143\1\155\1\172\1\145\1\156\1\157\1\164\1\151"+
-        "\1\147\1\145\1\164\1\156\1\154\1\164\1\153\1\143\1\172\1\164\2\165"+
-        "\1\141\1\150\1\156\1\172\1\153\1\172\1\164\1\145\1\147\1\uffff\1"+
-        "\172\1\145\1\153\1\156\1\172\1\141\1\uffff\1\161\1\157\1\167\1\uffff"+
-        "\1\145\1\uffff\1\172\1\143\1\141\1\172\1\146\1\160\1\154\1\141\1"+
-        "\143\1\142\1\147\7\uffff\1\164\1\144\1\172\1\162\1\156\1\141\1\162"+
-        "\1\116\2\172\1\114\1\162\1\172\1\163\1\172\1\145\1\141\1\165\1\151"+
-        "\1\164\1\162\1\144\1\145\1\165\2\145\1\141\1\uffff\1\172\1\164\1"+
-        "\171\1\163\1\166\1\uffff\1\162\1\uffff\1\172\1\157\1\151\2\uffff"+
-        "\2\172\1\151\1\164\1\171\1\uffff\1\172\1\162\1\142\1\141\1\153\1"+
-        "\162\1\147\1\163\1\uffff\2\145\2\151\1\uffff\1\143\1\172\1\156\1"+
-        "\172\1\164\1\147\4\172\1\164\1\172\1\150\1\uffff\1\150\1\154\1\164"+
-        "\3\172\1\uffff\1\172\1\151\1\uffff\2\172\1\164\1\uffff\1\166\1\172"+
-        "\1\147\1\172\1\uffff\1\164\1\156\1\165\1\162\1\145\1\172\1\uffff"+
-        "\1\154\1\163\1\172\1\uffff\1\145\1\141\2\151\1\162\1\141\1\154\1"+
-        "\uffff\1\uffff\1\157\1\172\1\uffff\2\172\1\163\1\171\1\172\2\uffff"+
-        "\2\172\1\uffff\1\172\1\145\1\uffff\1\172\1\143\2\162\1\151\1\163"+
-        "\1\172\2\162\1\172\1\164\1\143\1\uffff\1\151\1\163\1\172\1\145\1"+
-        "\172\1\162\1\172\1\156\1\162\2\uffff\1\143\2\172\1\uffff\1\163\1"+
-        "\141\1\142\2\172\2\145\1\156\1\163\1\164\1\156\1\164\1\uffff\1\144"+
-        "\1\uffff\1\172\1\145\4\uffff\1\145\1\uffff\2\172\2\145\1\uffff\1"+
-        "\156\2\uffff\1\172\1\uffff\1\156\2\uffff\1\150\1\151\1\uffff\1\172"+
-        "\1\uffff\1\145\1\172\3\145\1\uffff\1\151\1\157\1\uffff\1\162\1\164"+
-        "\1\143\1\156\1\151\1\154\1\145\1\162\1\uffff\1\172\2\uffff\1\143"+
-        "\1\172\2\uffff\1\172\2\uffff\1\164\1\uffff\1\145\1\143\1\145\1\166"+
-        "\1\145\1\uffff\1\172\1\145\1\uffff\1\172\1\150\1\157\1\172\1\uffff"+
-        "\1\172\1\uffff\1\172\1\uffff\1\172\1\145\1\151\2\uffff\1\164\1\143"+
-        "\1\154\2\uffff\2\172\1\164\1\163\1\172\1\147\2\172\1\uffff\2\162"+
-        "\1\uffff\1\172\1\uffff\3\172\1\uffff\1\147\1\172\1\145\1\uffff\1"+
-        "\172\1\uffff\2\172\1\156\1\143\1\165\1\164\1\145\1\143\1\141\1\172"+
-        "\1\160\2\172\1\171\1\uffff\1\162\2\uffff\2\172\1\145\1\172\1\145"+
-        "\1\143\1\uffff\1\172\1\uffff\1\172\1\156\4\uffff\1\144\1\164\1\141"+
-        "\1\153\1\145\2\uffff\2\172\1\uffff\1\172\1\uffff\1\172\1\uffff\1"+
-        "\163\1\172\2\uffff\1\172\2\uffff\1\172\1\uffff\1\167\3\uffff\1\172"+
-        "\1\153\1\162\1\172\1\156\1\150\1\164\1\uffff\1\164\1\uffff\1\156"+
-        "\1\uffff\1\172\1\151\2\uffff\1\172\1\uffff\1\172\1\164\2\uffff\3"+
-        "\172\1\143\1\163\1\172\4\uffff\1\172\3\uffff\1\172\1\uffff\1\172"+
-        "\1\143\1\uffff\1\143\1\172\1\145\1\151\1\141\1\uffff\1\160\2\uffff"+
-        "\1\151\3\uffff\1\153\1\172\4\uffff\2\145\1\uffff\1\163\1\157\1\154"+
-        "\1\164\1\157\1\172\1\uffff\3\172\1\156\1\171\1\172\1\156\4\uffff"+
-        "\1\172\1\164\1\uffff\1\172\1\uffff\1\151\1\uffff\1\143\1\163\1\172"+
-        "\1\uffff";
-    static final String DFA23_acceptS =
+        "\1\115\1\141\1\171\1\144\1\145\1\163\1\154\1\157\1\165\2\uffff\1"+
+        "\143\1\145\1\uffff\1\145\1\164\1\154\1\163\1\172\1\155\1\143\2\141"+
+        "\1\151\1\172\1\145\1\uffff\1\172\1\150\3\172\2\145\1\154\1\162\1"+
+        "\uffff\1\172\1\164\1\157\1\154\1\150\1\143\1\141\1\156\1\157\1\172"+
+        "\1\162\1\143\1\155\1\172\1\145\1\156\1\157\1\164\1\151\1\147\1\145"+
+        "\1\164\1\156\1\154\1\164\1\153\1\143\1\172\1\164\2\165\1\141\1\150"+
+        "\1\156\1\172\1\153\1\172\1\164\1\145\1\147\1\uffff\1\172\1\145\1"+
+        "\153\1\156\1\172\1\141\1\uffff\1\161\1\157\1\167\1\uffff\1\145\1"+
+        "\uffff\1\172\1\143\1\141\1\172\1\146\1\160\1\154\1\141\1\143\1\142"+
+        "\1\147\7\uffff\1\164\1\144\1\172\1\162\1\156\1\141\1\162\1\116\2"+
+        "\172\1\114\1\162\1\172\1\163\1\172\1\145\1\141\1\165\1\151\1\164"+
+        "\1\162\1\144\1\145\1\165\2\145\1\141\1\uffff\1\172\1\164\1\171\1"+
+        "\163\1\166\1\uffff\1\162\1\uffff\1\172\1\157\1\151\2\uffff\2\172"+
+        "\1\151\1\164\1\171\1\uffff\1\172\1\162\1\142\1\141\1\153\1\162\1"+
+        "\147\1\163\1\uffff\2\145\2\151\1\uffff\1\143\1\172\1\156\1\172\1"+
+        "\164\1\147\4\172\1\164\1\172\1\150\1\uffff\1\150\1\154\1\164\3\172"+
+        "\1\uffff\1\172\1\151\1\uffff\2\172\1\164\1\uffff\1\166\1\172\1\147"+
+        "\1\172\1\uffff\1\164\1\156\1\165\1\162\1\145\1\172\1\uffff\1\154"+
+        "\1\163\1\172\1\uffff\1\145\1\141\2\151\1\162\1\141\1\154\1\uffff"+
+        "\1\uffff\1\157\1\172\1\uffff\2\172\1\163\1\171\1\172\2\uffff\2\172"+
+        "\1\uffff\1\172\1\145\1\uffff\1\172\1\143\2\162\1\151\1\163\1\172"+
+        "\2\162\1\172\1\164\1\143\1\uffff\1\151\1\163\1\172\1\145\1\172\1"+
+        "\162\1\172\1\156\1\162\2\uffff\1\143\2\172\1\uffff\1\163\1\141\1"+
+        "\142\2\172\2\145\1\156\1\163\1\164\1\156\1\164\1\uffff\1\144\1\uffff"+
+        "\1\172\1\145\4\uffff\1\145\1\uffff\2\172\2\145\1\uffff\1\156\2\uffff"+
+        "\1\172\1\uffff\1\156\2\uffff\1\150\1\151\1\uffff\1\172\1\uffff\1"+
+        "\145\1\172\3\145\1\uffff\1\151\1\157\1\uffff\1\162\1\164\1\143\1"+
+        "\156\1\151\1\154\1\145\1\162\1\uffff\1\172\2\uffff\1\143\1\172\2"+
+        "\uffff\1\172\2\uffff\1\164\1\uffff\1\145\1\143\1\145\1\166\1\145"+
+        "\1\uffff\1\172\1\145\1\uffff\1\172\1\150\1\157\1\172\1\uffff\1\172"+
+        "\1\uffff\1\172\1\uffff\1\172\1\145\1\151\2\uffff\1\164\1\143\1\154"+
+        "\2\uffff\2\172\1\164\1\163\1\172\1\147\2\172\1\uffff\2\162\1\uffff"+
+        "\1\172\1\uffff\3\172\1\uffff\1\147\1\172\1\145\1\uffff\1\172\1\uffff"+
+        "\2\172\1\156\1\143\1\165\1\164\1\145\1\143\1\141\1\172\1\160\2\172"+
+        "\1\171\1\uffff\1\162\2\uffff\2\172\1\145\1\172\1\145\1\143\1\uffff"+
+        "\1\172\1\uffff\1\172\1\156\4\uffff\1\144\1\164\1\141\1\153\1\145"+
+        "\2\uffff\2\172\1\uffff\1\172\1\uffff\1\172\1\uffff\1\163\1\172\2"+
+        "\uffff\1\172\2\uffff\1\172\1\uffff\1\167\3\uffff\1\172\1\153\1\162"+
+        "\1\172\1\156\1\150\1\164\1\uffff\1\164\1\uffff\1\156\1\uffff\1\172"+
+        "\1\151\2\uffff\1\172\1\uffff\1\172\1\164\2\uffff\3\172\1\143\1\163"+
+        "\1\172\4\uffff\1\172\3\uffff\1\172\1\uffff\1\172\1\143\1\uffff\1"+
+        "\143\1\172\1\145\1\151\1\141\1\uffff\1\160\2\uffff\1\151\3\uffff"+
+        "\1\153\1\172\4\uffff\2\145\1\uffff\1\163\1\157\1\154\1\164\1\157"+
+        "\1\172\1\uffff\3\172\1\156\1\171\1\172\1\156\4\uffff\1\172\1\164"+
+        "\1\uffff\1\172\1\uffff\1\151\1\uffff\1\143\1\163\1\172\1\uffff";
+    static final String DFA24_acceptS =
         "\2\uffff\1\2\1\3\1\uffff\1\6\10\uffff\1\24\5\uffff\1\47\1\50\1\51"+
         "\10\uffff\1\105\1\uffff\1\113\1\121\1\uffff\1\123\1\130\1\131\12"+
         "\uffff\1\u00a3\1\uffff\1\u00a7\1\u00a8\1\u00a9\46\uffff\1\52\1\112"+
-        "\1\21\14\uffff\1\32\1\117\1\33\1\u008d\1\120\30\uffff\1\100\1\106"+
-        "\1\u00aa\1\u00ab\1\110\1\104\1\103\1\107\1\111\2\uffff\1\122\1\u00ac"+
-        "\4\uffff\1\134\1\u00a5\12\uffff\1\u00a4\5\uffff\1\5\1\13\2\uffff"+
-        "\1\27\14\uffff\1\141\11\uffff\1\114\50\uffff\1\150\6\uffff\1\147"+
-        "\3\uffff\1\64\1\uffff\1\75\55\uffff\1\42\5\uffff\1\53\1\uffff\1"+
-        "\165\3\uffff\1\65\1\115\5\uffff\1\164\10\uffff\1\101\4\uffff\1\25"+
-        "\15\uffff\1\146\6\uffff\1\74\2\uffff\1\35\3\uffff\1\56\4\uffff\1"+
-        "\u0098\6\uffff\1\u00a0\3\uffff\1\u0087\7\uffff\1\u00a6\3\uffff\1"+
-        "\154\5\uffff\1\171\1\172\2\uffff\1\u0091\2\uffff\1\4\14\uffff\1"+
-        "\34\11\uffff\1\u008f\1\12\3\uffff\1\166\14\uffff\1\124\1\uffff\1"+
-        "\144\2\uffff\1\126\1\45\1\46\1\143\1\uffff\1\30\4\uffff\1\u008e"+
-        "\1\uffff\1\31\1\62\1\uffff\1\u0086\1\uffff\1\36\1\116\2\uffff\1"+
-        "\135\1\uffff\1\u009e\5\uffff\1\161\2\uffff\1\u0080\10\uffff\1\142"+
-        "\1\uffff\1\u0088\1\152\2\uffff\1\170\1\173\1\uffff\1\u0084\1\u0096"+
-        "\1\uffff\1\37\5\uffff\1\7\2\uffff\1\127\4\uffff\1\u00a1\1\uffff"+
-        "\1\125\1\uffff\1\u009c\3\uffff\1\41\1\55\3\uffff\1\17\1\23\10\uffff"+
-        "\1\151\2\uffff\1\136\1\uffff\1\u0085\3\uffff\1\177\3\uffff\1\61"+
-        "\1\uffff\1\155\16\uffff\1\u0081\1\uffff\1\153\1\175\6\uffff\1\145"+
-        "\1\uffff\1\26\2\uffff\1\10\1\43\1\u0090\1\u0095\5\uffff\1\20\1\54"+
-        "\2\uffff\1\70\1\uffff\1\60\1\uffff\1\u008a\2\uffff\1\176\1\u0099"+
-        "\1\uffff\1\u0089\1\163\1\uffff\1\137\1\uffff\1\72\1\160\1\63\7\uffff"+
-        "\1\u008c\1\uffff\1\76\1\uffff\1\u0097\2\uffff\1\1\1\140\1\uffff"+
-        "\1\u009d\2\uffff\1\16\1\57\6\uffff\1\132\1\15\1\73\1\u0083\1\uffff"+
-        "\1\u0094\1\u0082\1\u009f\1\uffff\1\66\2\uffff\1\167\5\uffff\1\133"+
-        "\1\uffff\1\u009b\1\44\1\uffff\1\102\1\11\1\40\2\uffff\1\174\1\22"+
-        "\1\67\1\71\2\uffff\1\u008b\6\uffff\1\14\7\uffff\1\u0092\1\77\1\156"+
-        "\1\162\2\uffff\1\u009a\1\uffff\1\u00a2\1\uffff\1\157\3\uffff\1\u0093";
-    static final String DFA23_specialS =
-        "\43\uffff\1\2\155\uffff\1\6\1\11\165\uffff\1\5\1\12\1\0\1\4\1\10"+
-        "\1\7\1\3\161\uffff\1\1\u013f\uffff}>";
-    static final String[] DFA23_transitionS = {
+        "\1\21\14\uffff\1\32\1\117\1\33\1\u008d\1\u00a4\1\120\30\uffff\1"+
+        "\100\1\106\1\u00aa\1\u00ab\1\110\1\104\1\103\1\107\1\111\2\uffff"+
+        "\1\u00ac\1\122\4\uffff\1\u00a5\1\134\17\uffff\1\5\1\13\2\uffff\1"+
+        "\27\14\uffff\1\141\11\uffff\1\114\50\uffff\1\150\6\uffff\1\147\3"+
+        "\uffff\1\64\1\uffff\1\75\55\uffff\1\42\5\uffff\1\53\1\uffff\1\165"+
+        "\3\uffff\1\65\1\115\5\uffff\1\164\10\uffff\1\101\4\uffff\1\25\15"+
+        "\uffff\1\146\6\uffff\1\74\2\uffff\1\35\3\uffff\1\56\4\uffff\1\u0098"+
+        "\6\uffff\1\u00a0\3\uffff\1\u0087\7\uffff\1\u00a6\3\uffff\1\154\5"+
+        "\uffff\1\171\1\172\2\uffff\1\u0091\2\uffff\1\4\14\uffff\1\34\11"+
+        "\uffff\1\u008f\1\12\3\uffff\1\166\14\uffff\1\124\1\uffff\1\144\2"+
+        "\uffff\1\126\1\45\1\46\1\143\1\uffff\1\30\4\uffff\1\u008e\1\uffff"+
+        "\1\31\1\62\1\uffff\1\u0086\1\uffff\1\36\1\116\2\uffff\1\135\1\uffff"+
+        "\1\u009e\5\uffff\1\161\2\uffff\1\u0080\10\uffff\1\142\1\uffff\1"+
+        "\u0088\1\152\2\uffff\1\170\1\173\1\uffff\1\u0084\1\u0096\1\uffff"+
+        "\1\37\5\uffff\1\7\2\uffff\1\127\4\uffff\1\u00a1\1\uffff\1\125\1"+
+        "\uffff\1\u009c\3\uffff\1\41\1\55\3\uffff\1\17\1\23\10\uffff\1\151"+
+        "\2\uffff\1\136\1\uffff\1\u0085\3\uffff\1\177\3\uffff\1\61\1\uffff"+
+        "\1\155\16\uffff\1\u0081\1\uffff\1\153\1\175\6\uffff\1\145\1\uffff"+
+        "\1\26\2\uffff\1\10\1\43\1\u0090\1\u0095\5\uffff\1\20\1\54\2\uffff"+
+        "\1\70\1\uffff\1\60\1\uffff\1\u008a\2\uffff\1\176\1\u0099\1\uffff"+
+        "\1\u0089\1\163\1\uffff\1\137\1\uffff\1\72\1\160\1\63\7\uffff\1\u008c"+
+        "\1\uffff\1\76\1\uffff\1\u0097\2\uffff\1\1\1\140\1\uffff\1\u009d"+
+        "\2\uffff\1\16\1\57\6\uffff\1\132\1\15\1\73\1\u0083\1\uffff\1\u0094"+
+        "\1\u0082\1\u009f\1\uffff\1\66\2\uffff\1\167\5\uffff\1\133\1\uffff"+
+        "\1\u009b\1\44\1\uffff\1\102\1\11\1\40\2\uffff\1\174\1\22\1\67\1"+
+        "\71\2\uffff\1\u008b\6\uffff\1\14\7\uffff\1\u0092\1\77\1\156\1\162"+
+        "\2\uffff\1\u009a\1\uffff\1\u00a2\1\uffff\1\157\3\uffff\1\u0093";
+    static final String DFA24_specialS =
+        "\43\uffff\1\3\156\uffff\1\7\1\10\164\uffff\1\5\1\4\1\11\1\2\1\6"+
+        "\1\12\1\1\161\uffff\1\0\u013f\uffff}>";
+    static final String[] DFA24_transitionS = {
             "\2\63\2\uffff\1\63\22\uffff\1\63\1\41\1\64\2\uffff\1\44\1\37"+
             "\1\65\1\24\1\26\1\42\1\21\1\25\1\22\1\50\1\43\12\62\1\16\1\5"+
             "\1\35\1\14\1\40\2\uffff\7\61\1\56\1\61\1\53\7\61\1\55\5\61\1"+
@@ -6188,39 +6207,39 @@ public class rulesetLexer extends Lexer {
             "\1\144\3\uffff\1\147\3\uffff\1\146\5\uffff\1\145",
             "\1\152\2\uffff\1\151\1\150",
             "\1\153",
-            "\1\155\1\156",
-            "\1\161\1\uffff\1\164\1\uffff\1\163\3\uffff\1\162\5\uffff\1"+
-            "\160",
+            "\12\157\3\uffff\1\155\1\156",
+            "\1\162\1\uffff\1\165\1\uffff\1\164\3\uffff\1\163\5\uffff\1"+
+            "\161",
             "",
             "",
             "",
-            "\1\166\7\uffff\1\167\10\uffff\1\165",
-            "\1\172\12\uffff\1\173\1\uffff\1\171\2\uffff\1\170",
-            "\1\174",
-            "\1\177\7\uffff\1\176\3\uffff\1\175",
-            "\1\u0081\1\u0080\2\uffff\1\u0085\3\uffff\1\u0082\5\uffff\1"+
-            "\u0084\5\uffff\1\u0083",
-            "\1\u0086\2\uffff\1\u0087",
-            "\1\u0088\16\uffff\1\u008a\1\u0089\76\uffff\1\u008b",
-            "\1\u008d",
+            "\1\167\7\uffff\1\170\10\uffff\1\166",
+            "\1\173\12\uffff\1\174\1\uffff\1\172\2\uffff\1\171",
+            "\1\175",
+            "\1\u0080\7\uffff\1\177\3\uffff\1\176",
+            "\1\u0082\1\u0081\2\uffff\1\u0086\3\uffff\1\u0083\5\uffff\1"+
+            "\u0085\5\uffff\1\u0084",
+            "\1\u0087\2\uffff\1\u0088",
+            "\1\u0089\16\uffff\1\u008b\1\u008a\76\uffff\1\u008c",
+            "\1\u008e",
             "",
-            "\1\u008f",
-            "",
-            "",
-            "\52\u0094\1\u0092\4\u0094\1\u0091\uffd0\u0094",
+            "\1\u0090",
             "",
             "",
+            "\52\u0094\1\u0093\4\u0094\1\u0092\uffd0\u0094",
             "",
-            "\1\u0097\3\uffff\1\u0096\3\uffff\1\u0095\5\uffff\1\u0098",
+            "",
+            "",
+            "\1\u0098\3\uffff\1\u0097\3\uffff\1\u0096\5\uffff\1\u0099",
             "\12\u009a",
-            "\1\u009c\15\uffff\1\u009b",
-            "\1\u009d",
+            "\1\u009d\15\uffff\1\u009c",
             "\1\u009e",
             "\1\u009f",
             "\1\u00a0",
             "\1\u00a1",
             "\1\u00a2",
-            "\1\u00a3\12\uffff\1\u00a4",
+            "\1\u00a3",
+            "\1\u00a4\12\uffff\1\u00a5",
             "",
             "\1\u009a\1\uffff\12\62\13\uffff\1\u009a\37\uffff\1\u009a",
             "",
@@ -6229,10 +6248,9 @@ public class rulesetLexer extends Lexer {
             "\1\u00a6",
             "\1\u00a7",
             "\1\u00a8\1\u00aa\1\uffff\1\u00a9",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\1\u00ad\22\61\1\u00ae"+
-            "\6\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\1\u00ad\22\61\1\u00ae\6\61",
             "\1\u00b1\5\uffff\1\u00b0",
             "\1\u00b2\2\uffff\1\u00b3",
             "\1\u00b4",
@@ -6242,7 +6260,7 @@ public class rulesetLexer extends Lexer {
             "\1\u00b9",
             "\1\u00ba",
             "\1\u00bb",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
             "\1\u00bd",
             "\1\u00be",
             "\1\u00bf",
@@ -6252,7 +6270,7 @@ public class rulesetLexer extends Lexer {
             "\1\u00c3",
             "\1\u00c4",
             "\1\u00c5",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
             "\1\u00c7",
             "\1\u00c8",
             "\1\u00c9",
@@ -6285,21 +6303,22 @@ public class rulesetLexer extends Lexer {
             "",
             "",
             "",
+            "",
             "\1\u00eb",
             "\1\u00ec",
             "\1\u00ed",
             "\1\u00ee",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
             "\1\u00f0",
             "\1\u00f1",
             "\1\u00f2",
             "\1\u00f4\3\uffff\1\u00f3",
             "\1\u00f5",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
             "\1\u00f7",
             "\1\u00f8\15\uffff\1\u00f9",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\2\61\1\u00fb\27\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\2\61\1\u00fb\27\61",
             "\1\u00fd",
             "\1\u00fe",
             "\1\u00ff\4\uffff\1\u0100",
@@ -6318,8 +6337,8 @@ public class rulesetLexer extends Lexer {
             "",
             "",
             "",
-            "\12\u010b\1\u010a\2\u010b\1\u0109\41\u010b\1\u0108\uffd0\u010b",
-            "\52\u010e\1\u010d\4\u010e\1\u010c\uffd0\u010e",
+            "\12\u0109\1\u010b\2\u0109\1\u010a\41\u0109\1\u0108\uffd0\u0109",
+            "\52\u010e\1\u010c\4\u010e\1\u010d\uffd0\u010e",
             "",
             "",
             "\1\u010f",
@@ -6338,7 +6357,6 @@ public class rulesetLexer extends Lexer {
             "\1\u011a",
             "\1\u011b",
             "\1\u011c",
-            "",
             "\1\u011d",
             "\1\u011e",
             "\1\u011f",
@@ -6353,27 +6371,26 @@ public class rulesetLexer extends Lexer {
             "\1\u0125",
             "\1\u0126",
             "\1\u0127",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\4\61\1\u0129\1\61"+
-            "\1\u0128\23\61",
+            "\32\61\4\uffff\1\61\1\uffff\4\61\1\u0129\1\61\1\u0128\23\61",
             "\1\u012b",
             "\1\u012c",
             "\1\u012d",
             "\1\u012e",
             "\1\u012f",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
             "\1\u0131",
             "",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
             "\1\u0133",
             "\1\u0134",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\5\61\1\u0135\24\61",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\5\61\1\u0135\24\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
             "\1\u0138",
             "\1\u0139",
             "\1\u013a",
             "\1\u013b\3\uffff\1\u013c",
             "",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
             "\1\u013e",
             "\1\u013f",
             "\1\u0140",
@@ -6382,11 +6399,11 @@ public class rulesetLexer extends Lexer {
             "\1\u0143",
             "\1\u0144",
             "\1\u0145",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
             "\1\u0147",
             "\1\u0148",
             "\1\u0149",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\23\61\1\u014a\6\61",
+            "\32\61\4\uffff\1\61\1\uffff\23\61\1\u014a\6\61",
             "\1\u014c",
             "\1\u014d",
             "\1\u014e",
@@ -6400,26 +6417,25 @@ public class rulesetLexer extends Lexer {
             "\1\u0156",
             "\1\u0157",
             "\1\u0158",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
             "\1\u015a",
             "\1\u015b",
             "\1\u015c",
             "\1\u015d",
             "\1\u015e",
             "\1\u015f",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
             "\1\u0161",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\6\61\1\u0162\23\61",
+            "\32\61\4\uffff\1\61\1\uffff\6\61\1\u0162\23\61",
             "\1\u0164",
             "\1\u0165",
             "\1\u0166",
             "",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
             "\1\u0168",
             "\1\u0169",
             "\1\u016a",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\21\61\1\u016b\10"+
-            "\61",
+            "\32\61\4\uffff\1\61\1\uffff\21\61\1\u016b\10\61",
             "\1\u016d",
             "",
             "\1\u016e\1\uffff\1\u016f",
@@ -6428,10 +6444,10 @@ public class rulesetLexer extends Lexer {
             "",
             "\1\u0172",
             "",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
             "\1\u0174",
             "\1\u0175",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\22\61\1\u0176\7\61",
+            "\32\61\4\uffff\1\61\1\uffff\22\61\1\u0176\7\61",
             "\1\u0178",
             "\1\u0179",
             "\1\u017a",
@@ -6439,28 +6455,28 @@ public class rulesetLexer extends Lexer {
             "\1\u017c",
             "\1\u017d",
             "\1\u017e",
-            "\12\u010b\1\u010a\2\u010b\1\u0109\41\u010b\1\u0108\uffd0\u010b",
-            "\12\u0094\1\u010a\ufff5\u0094",
+            "\12\u0109\1\u010b\2\u0109\1\u010a\41\u0109\1\u0108\uffd0\u0109",
+            "\12\u0109\1\u010b\2\u0109\1\u010a\41\u0109\1\u0108\uffd0\u0109",
+            "\12\u0094\1\u010b\ufff5\u0094",
             "\0\u0094",
-            "\12\u010b\1\u010a\2\u010b\1\u0109\41\u010b\1\u0108\uffd0\u010b",
-            "\52\u010e\1\u010d\4\u010e\1\u010c\uffd0\u010e",
-            "\52\u010e\1\u010d\4\u010e\1\u0180\uffd0\u010e",
-            "\52\u010e\1\u010d\4\u010e\1\u010c\uffd0\u010e",
+            "\52\u010e\1\u010c\4\u010e\1\u0180\uffd0\u010e",
+            "\52\u010e\1\u010c\4\u010e\1\u010d\uffd0\u010e",
+            "\52\u010e\1\u010c\4\u010e\1\u010d\uffd0\u010e",
             "\1\u0181",
             "\1\u0182",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
             "\1\u0184",
             "\1\u0185",
             "\1\u0186",
             "\1\u0187",
             "\1\u0188",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
             "\1\u018b",
             "\1\u018c",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
             "\1\u018e",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\22\61\1\u018f\7\61",
+            "\32\61\4\uffff\1\61\1\uffff\22\61\1\u018f\7\61",
             "\1\u0191",
             "\1\u0192",
             "\1\u0193",
@@ -6474,7 +6490,7 @@ public class rulesetLexer extends Lexer {
             "\1\u019b",
             "\1\u019c",
             "",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
             "\1\u019e",
             "\1\u019f",
             "\1\u01a0",
@@ -6487,13 +6503,13 @@ public class rulesetLexer extends Lexer {
             "\1\u01a6",
             "",
             "",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
             "\1\u01a9",
             "\1\u01aa",
             "\1\u01ab",
             "",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
             "\1\u01ad",
             "\1\u01ae",
             "\1\u01af",
@@ -6508,49 +6524,48 @@ public class rulesetLexer extends Lexer {
             "\1\u01b7",
             "",
             "\1\u01b8",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
             "\1\u01ba",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
             "\1\u01bc",
             "\1\u01bd",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
             "\1\u01c2",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
             "\1\u01c4",
             "",
             "\1\u01c5",
             "\1\u01c6",
             "\1\u01c7",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\10\61\1\u01c9\21"+
-            "\61",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\10\61\1\u01c9\21\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
             "",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\22\61\1\u01cc\7\61",
+            "\32\61\4\uffff\1\61\1\uffff\22\61\1\u01cc\7\61",
             "\1\u01ce",
             "",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
             "\1\u01d1",
             "",
             "\1\u01d2",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
             "\1\u01d4",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
             "",
             "\1\u01d6",
             "\1\u01d7",
             "\1\u01d8",
             "\1\u01d9",
             "\1\u01da",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
             "",
             "\1\u01dc",
             "\1\u01dd",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
             "",
             "\1\u01df",
             "\1\u01e0",
@@ -6560,56 +6575,56 @@ public class rulesetLexer extends Lexer {
             "\1\u01e4",
             "\1\u01e5",
             "",
-            "\52\u010e\1\u010d\4\u010e\1\u010c\uffd0\u010e",
+            "\52\u010e\1\u010c\4\u010e\1\u010d\uffd0\u010e",
             "\1\u01e6",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
             "",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\22\61\1\u01e8\7\61",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\22\61\1\u01e8\7\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
             "\1\u01eb",
             "\1\u01ec",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
             "",
             "",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\22\61\1\u01ef\7\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\22\61\1\u01ef\7\61",
             "",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
             "\1\u01f2",
             "",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
             "\1\u01f4",
             "\1\u01f5",
             "\1\u01f6",
             "\1\u01f7",
             "\1\u01f8",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
             "\1\u01fa",
             "\1\u01fb",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
             "\1\u01fd",
             "\1\u01fe",
             "",
             "\1\u01ff",
             "\1\u0200",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
             "\1\u0202",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
             "\1\u0204",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
             "\1\u0206",
             "\1\u0207",
             "",
             "",
             "\1\u0208",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
             "",
             "\1\u020b",
             "\1\u020c",
             "\1\u020d",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
             "\1\u0210",
             "\1\u0211",
             "\1\u0212",
@@ -6620,7 +6635,7 @@ public class rulesetLexer extends Lexer {
             "",
             "\1\u0217",
             "",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
             "\1\u0219",
             "",
             "",
@@ -6628,15 +6643,15 @@ public class rulesetLexer extends Lexer {
             "",
             "\1\u021a",
             "",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\22\61\1\u021c\7\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\22\61\1\u021c\7\61",
             "\1\u021e",
             "\1\u021f",
             "",
             "\1\u0220",
             "",
             "",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
             "",
             "\1\u0222",
             "",
@@ -6644,10 +6659,10 @@ public class rulesetLexer extends Lexer {
             "\1\u0223",
             "\1\u0224",
             "",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
             "",
             "\1\u0226",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
             "\1\u0228",
             "\1\u0229",
             "\1\u022a",
@@ -6664,14 +6679,14 @@ public class rulesetLexer extends Lexer {
             "\1\u0234",
             "\1\u0235",
             "",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
             "",
             "",
             "\1\u0237",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
             "",
             "",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
             "",
             "",
             "\1\u023a",
@@ -6682,19 +6697,19 @@ public class rulesetLexer extends Lexer {
             "\1\u023e",
             "\1\u023f",
             "",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
             "\1\u0241",
             "",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
             "\1\u0243",
             "\1\u0244",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
             "",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
             "",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
             "",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
             "\1\u0249",
             "\1\u024a",
             "",
@@ -6704,32 +6719,32 @@ public class rulesetLexer extends Lexer {
             "\1\u024d",
             "",
             "",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
             "\1\u0250",
             "\1\u0251",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
             "\1\u0253",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\22\61\1\u0255\7\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\22\61\1\u0255\7\61",
             "",
             "\1\u0257",
             "\1\u0258",
             "",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
             "",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\22\61\1\u025b\7\61",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\22\61\1\u025b\7\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
             "",
             "\1\u025e",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
             "\1\u0260",
             "",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
             "",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
             "\1\u0264",
             "\1\u0265",
             "\1\u0266",
@@ -6737,25 +6752,25 @@ public class rulesetLexer extends Lexer {
             "\1\u0268",
             "\1\u0269",
             "\1\u026a",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
             "\1\u026c",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\1\u026e\31\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\1\u026e\31\61",
             "\1\u0270",
             "",
             "\1\u0271",
             "",
             "",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
             "\1\u0274",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
             "\1\u0276",
             "\1\u0277",
             "",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
             "",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
             "\1\u027a",
             "",
             "",
@@ -6768,30 +6783,30 @@ public class rulesetLexer extends Lexer {
             "\1\u027f",
             "",
             "",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
             "",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
             "",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
             "",
             "\1\u0284",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
             "",
             "",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
             "",
             "",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
             "",
             "\1\u0288",
             "",
             "",
             "",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
             "\1\u028a",
             "\1\u028b",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
             "\1\u028d",
             "\1\u028e",
             "\1\u028f",
@@ -6800,37 +6815,37 @@ public class rulesetLexer extends Lexer {
             "",
             "\1\u0291",
             "",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
             "\1\u0293",
             "",
             "",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
             "",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
             "\1\u0296",
             "",
             "",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
             "\1\u029a",
             "\1\u029b",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
             "",
             "",
             "",
             "",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
             "",
             "",
             "",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
             "",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
             "\1\u02a0",
             "",
             "\1\u02a1",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
             "\1\u02a3",
             "\1\u02a4",
             "\1\u02a5",
@@ -6843,7 +6858,7 @@ public class rulesetLexer extends Lexer {
             "",
             "",
             "\1\u02a8",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
             "",
             "",
             "",
@@ -6856,60 +6871,60 @@ public class rulesetLexer extends Lexer {
             "\1\u02ae",
             "\1\u02af",
             "\1\u02b0",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
             "",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
             "\1\u02b5",
             "\1\u02b6",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
             "\1\u02b8",
             "",
             "",
             "",
             "",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
             "\1\u02ba",
             "",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
             "",
             "\1\u02bc",
             "",
             "\1\u02bd",
             "\1\u02be",
-            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
             ""
     };
 
-    static final short[] DFA23_eot = DFA.unpackEncodedString(DFA23_eotS);
-    static final short[] DFA23_eof = DFA.unpackEncodedString(DFA23_eofS);
-    static final char[] DFA23_min = DFA.unpackEncodedStringToUnsignedChars(DFA23_minS);
-    static final char[] DFA23_max = DFA.unpackEncodedStringToUnsignedChars(DFA23_maxS);
-    static final short[] DFA23_accept = DFA.unpackEncodedString(DFA23_acceptS);
-    static final short[] DFA23_special = DFA.unpackEncodedString(DFA23_specialS);
-    static final short[][] DFA23_transition;
+    static final short[] DFA24_eot = DFA.unpackEncodedString(DFA24_eotS);
+    static final short[] DFA24_eof = DFA.unpackEncodedString(DFA24_eofS);
+    static final char[] DFA24_min = DFA.unpackEncodedStringToUnsignedChars(DFA24_minS);
+    static final char[] DFA24_max = DFA.unpackEncodedStringToUnsignedChars(DFA24_maxS);
+    static final short[] DFA24_accept = DFA.unpackEncodedString(DFA24_acceptS);
+    static final short[] DFA24_special = DFA.unpackEncodedString(DFA24_specialS);
+    static final short[][] DFA24_transition;
 
     static {
-        int numStates = DFA23_transitionS.length;
-        DFA23_transition = new short[numStates][];
+        int numStates = DFA24_transitionS.length;
+        DFA24_transition = new short[numStates][];
         for (int i=0; i<numStates; i++) {
-            DFA23_transition[i] = DFA.unpackEncodedString(DFA23_transitionS[i]);
+            DFA24_transition[i] = DFA.unpackEncodedString(DFA24_transitionS[i]);
         }
     }
 
-    class DFA23 extends DFA {
+    class DFA24 extends DFA {
 
-        public DFA23(BaseRecognizer recognizer) {
+        public DFA24(BaseRecognizer recognizer) {
             this.recognizer = recognizer;
-            this.decisionNumber = 23;
-            this.eot = DFA23_eot;
-            this.eof = DFA23_eof;
-            this.min = DFA23_min;
-            this.max = DFA23_max;
-            this.accept = DFA23_accept;
-            this.special = DFA23_special;
-            this.transition = DFA23_transition;
+            this.decisionNumber = 24;
+            this.eot = DFA24_eot;
+            this.eof = DFA24_eof;
+            this.min = DFA24_min;
+            this.max = DFA24_max;
+            this.accept = DFA24_accept;
+            this.special = DFA24_special;
+            this.transition = DFA24_transition;
         }
         public String getDescription() {
             return "1:1: Tokens : ( T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | T__63 | T__64 | T__65 | T__66 | T__67 | T__68 | T__69 | T__70 | T__71 | T__72 | T__73 | T__74 | T__75 | T__76 | T__77 | T__78 | T__79 | T__80 | T__81 | T__82 | T__83 | T__84 | T__85 | T__86 | T__87 | T__88 | T__89 | T__90 | T__91 | T__92 | T__93 | T__94 | T__95 | T__96 | T__97 | T__98 | T__99 | T__100 | T__101 | T__102 | T__103 | T__104 | T__105 | T__106 | T__107 | T__108 | T__109 | T__110 | T__111 | T__112 | T__113 | T__114 | T__115 | T__116 | T__117 | T__118 | T__119 | T__120 | T__121 | T__122 | T__123 | T__124 | T__125 | T__126 | T__127 | T__128 | T__129 | T__130 | T__131 | T__132 | T__133 | T__134 | T__135 | T__136 | T__137 | T__138 | T__139 | T__140 | T__141 | T__142 | T__143 | T__144 | T__145 | T__146 | T__147 | T__148 | T__149 | T__150 | T__151 | T__152 | T__153 | T__154 | T__155 | T__156 | T__157 | T__158 | T__159 | T__160 | T__161 | T__162 | T__163 | T__164 | T__165 | T__166 | T__167 | T__168 | T__169 | T__170 | T__171 | T__172 | T__173 | T__174 | T__175 | T__176 | T__177 | T__178 | T__179 | T__180 | ID | INT | FLOAT | COMMENT | WS | STRING | CHAR | HTML | JS | REGEXP );";
@@ -6919,152 +6934,152 @@ public class rulesetLexer extends Lexer {
         	int _s = s;
             switch ( s ) {
                     case 0 : 
-                        int LA23_266 = input.LA(1);
+                        int LA24_384 = input.LA(1);
 
                         s = -1;
-                        if ( ((LA23_266>='\u0000' && LA23_266<='\uFFFF')) ) {s = 148;}
+                        if ( (LA24_384=='/') ) {s = 269;}
+
+                        else if ( (LA24_384=='*') ) {s = 268;}
+
+                        else if ( ((LA24_384>='\u0000' && LA24_384<=')')||(LA24_384>='+' && LA24_384<='.')||(LA24_384>='0' && LA24_384<='\uFFFF')) ) {s = 270;}
 
                         else s = 383;
 
                         if ( s>=0 ) return s;
                         break;
                     case 1 : 
-                        int LA23_384 = input.LA(1);
+                        int LA24_270 = input.LA(1);
 
                         s = -1;
-                        if ( (LA23_384=='/') ) {s = 268;}
+                        if ( (LA24_270=='/') ) {s = 269;}
 
-                        else if ( (LA23_384=='*') ) {s = 269;}
+                        else if ( (LA24_270=='*') ) {s = 268;}
 
-                        else if ( ((LA23_384>='\u0000' && LA23_384<=')')||(LA23_384>='+' && LA23_384<='.')||(LA23_384>='0' && LA23_384<='\uFFFF')) ) {s = 270;}
+                        else if ( ((LA24_270>='\u0000' && LA24_270<=')')||(LA24_270>='+' && LA24_270<='.')||(LA24_270>='0' && LA24_270<='\uFFFF')) ) {s = 270;}
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 2 : 
+                        int LA24_267 = input.LA(1);
+
+                        s = -1;
+                        if ( ((LA24_267>='\u0000' && LA24_267<='\uFFFF')) ) {s = 148;}
 
                         else s = 383;
 
                         if ( s>=0 ) return s;
                         break;
-                    case 2 : 
-                        int LA23_35 = input.LA(1);
-
-                        s = -1;
-                        if ( (LA23_35=='/') ) {s = 145;}
-
-                        else if ( (LA23_35=='*') ) {s = 146;}
-
-                        else if ( ((LA23_35>='\u0000' && LA23_35<=')')||(LA23_35>='+' && LA23_35<='.')||(LA23_35>='0' && LA23_35<='\uFFFF')) ) {s = 148;}
-
-                        else s = 147;
-
-                        if ( s>=0 ) return s;
-                        break;
                     case 3 : 
-                        int LA23_270 = input.LA(1);
+                        int LA24_35 = input.LA(1);
 
                         s = -1;
-                        if ( (LA23_270=='/') ) {s = 268;}
+                        if ( (LA24_35=='/') ) {s = 146;}
 
-                        else if ( (LA23_270=='*') ) {s = 269;}
+                        else if ( (LA24_35=='*') ) {s = 147;}
 
-                        else if ( ((LA23_270>='\u0000' && LA23_270<=')')||(LA23_270>='+' && LA23_270<='.')||(LA23_270>='0' && LA23_270<='\uFFFF')) ) {s = 270;}
+                        else if ( ((LA24_35>='\u0000' && LA24_35<=')')||(LA24_35>='+' && LA24_35<='.')||(LA24_35>='0' && LA24_35<='\uFFFF')) ) {s = 148;}
+
+                        else s = 149;
 
                         if ( s>=0 ) return s;
                         break;
                     case 4 : 
-                        int LA23_267 = input.LA(1);
+                        int LA24_265 = input.LA(1);
 
                         s = -1;
-                        if ( (LA23_267=='/') ) {s = 264;}
+                        if ( (LA24_265=='\r') ) {s = 266;}
 
-                        else if ( (LA23_267=='\r') ) {s = 265;}
+                        else if ( (LA24_265=='\n') ) {s = 267;}
 
-                        else if ( (LA23_267=='\n') ) {s = 266;}
+                        else if ( (LA24_265=='/') ) {s = 264;}
 
-                        else if ( ((LA23_267>='\u0000' && LA23_267<='\t')||(LA23_267>='\u000B' && LA23_267<='\f')||(LA23_267>='\u000E' && LA23_267<='.')||(LA23_267>='0' && LA23_267<='\uFFFF')) ) {s = 267;}
+                        else if ( ((LA24_265>='\u0000' && LA24_265<='\t')||(LA24_265>='\u000B' && LA24_265<='\f')||(LA24_265>='\u000E' && LA24_265<='.')||(LA24_265>='0' && LA24_265<='\uFFFF')) ) {s = 265;}
 
                         if ( s>=0 ) return s;
                         break;
                     case 5 : 
-                        int LA23_264 = input.LA(1);
+                        int LA24_264 = input.LA(1);
 
                         s = -1;
-                        if ( (LA23_264=='/') ) {s = 264;}
+                        if ( (LA24_264=='\r') ) {s = 266;}
 
-                        else if ( (LA23_264=='\r') ) {s = 265;}
+                        else if ( (LA24_264=='\n') ) {s = 267;}
 
-                        else if ( (LA23_264=='\n') ) {s = 266;}
+                        else if ( (LA24_264=='/') ) {s = 264;}
 
-                        else if ( ((LA23_264>='\u0000' && LA23_264<='\t')||(LA23_264>='\u000B' && LA23_264<='\f')||(LA23_264>='\u000E' && LA23_264<='.')||(LA23_264>='0' && LA23_264<='\uFFFF')) ) {s = 267;}
+                        else if ( ((LA24_264>='\u0000' && LA24_264<='\t')||(LA24_264>='\u000B' && LA24_264<='\f')||(LA24_264>='\u000E' && LA24_264<='.')||(LA24_264>='0' && LA24_264<='\uFFFF')) ) {s = 265;}
 
                         else s = 148;
 
                         if ( s>=0 ) return s;
                         break;
                     case 6 : 
-                        int LA23_145 = input.LA(1);
+                        int LA24_268 = input.LA(1);
 
                         s = -1;
-                        if ( (LA23_145=='/') ) {s = 264;}
+                        if ( (LA24_268=='/') ) {s = 384;}
 
-                        else if ( (LA23_145=='\r') ) {s = 265;}
+                        else if ( (LA24_268=='*') ) {s = 268;}
 
-                        else if ( (LA23_145=='\n') ) {s = 266;}
-
-                        else if ( ((LA23_145>='\u0000' && LA23_145<='\t')||(LA23_145>='\u000B' && LA23_145<='\f')||(LA23_145>='\u000E' && LA23_145<='.')||(LA23_145>='0' && LA23_145<='\uFFFF')) ) {s = 267;}
-
-                        else s = 148;
+                        else if ( ((LA24_268>='\u0000' && LA24_268<=')')||(LA24_268>='+' && LA24_268<='.')||(LA24_268>='0' && LA24_268<='\uFFFF')) ) {s = 270;}
 
                         if ( s>=0 ) return s;
                         break;
                     case 7 : 
-                        int LA23_269 = input.LA(1);
+                        int LA24_146 = input.LA(1);
 
                         s = -1;
-                        if ( (LA23_269=='/') ) {s = 384;}
+                        if ( (LA24_146=='/') ) {s = 264;}
 
-                        else if ( (LA23_269=='*') ) {s = 269;}
+                        else if ( ((LA24_146>='\u0000' && LA24_146<='\t')||(LA24_146>='\u000B' && LA24_146<='\f')||(LA24_146>='\u000E' && LA24_146<='.')||(LA24_146>='0' && LA24_146<='\uFFFF')) ) {s = 265;}
 
-                        else if ( ((LA23_269>='\u0000' && LA23_269<=')')||(LA23_269>='+' && LA23_269<='.')||(LA23_269>='0' && LA23_269<='\uFFFF')) ) {s = 270;}
+                        else if ( (LA24_146=='\r') ) {s = 266;}
 
-                        if ( s>=0 ) return s;
-                        break;
-                    case 8 : 
-                        int LA23_268 = input.LA(1);
-
-                        s = -1;
-                        if ( (LA23_268=='/') ) {s = 268;}
-
-                        else if ( (LA23_268=='*') ) {s = 269;}
-
-                        else if ( ((LA23_268>='\u0000' && LA23_268<=')')||(LA23_268>='+' && LA23_268<='.')||(LA23_268>='0' && LA23_268<='\uFFFF')) ) {s = 270;}
+                        else if ( (LA24_146=='\n') ) {s = 267;}
 
                         else s = 148;
 
                         if ( s>=0 ) return s;
                         break;
-                    case 9 : 
-                        int LA23_146 = input.LA(1);
+                    case 8 : 
+                        int LA24_147 = input.LA(1);
 
                         s = -1;
-                        if ( (LA23_146=='/') ) {s = 268;}
+                        if ( (LA24_147=='*') ) {s = 268;}
 
-                        else if ( (LA23_146=='*') ) {s = 269;}
+                        else if ( (LA24_147=='/') ) {s = 269;}
 
-                        else if ( ((LA23_146>='\u0000' && LA23_146<=')')||(LA23_146>='+' && LA23_146<='.')||(LA23_146>='0' && LA23_146<='\uFFFF')) ) {s = 270;}
+                        else if ( ((LA24_147>='\u0000' && LA24_147<=')')||(LA24_147>='+' && LA24_147<='.')||(LA24_147>='0' && LA24_147<='\uFFFF')) ) {s = 270;}
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 9 : 
+                        int LA24_266 = input.LA(1);
+
+                        s = -1;
+                        if ( ((LA24_266>='\u0000' && LA24_266<='\t')||(LA24_266>='\u000B' && LA24_266<='\uFFFF')) ) {s = 148;}
+
+                        else if ( (LA24_266=='\n') ) {s = 267;}
 
                         if ( s>=0 ) return s;
                         break;
                     case 10 : 
-                        int LA23_265 = input.LA(1);
+                        int LA24_269 = input.LA(1);
 
                         s = -1;
-                        if ( (LA23_265=='\n') ) {s = 266;}
+                        if ( (LA24_269=='/') ) {s = 269;}
 
-                        else if ( ((LA23_265>='\u0000' && LA23_265<='\t')||(LA23_265>='\u000B' && LA23_265<='\uFFFF')) ) {s = 148;}
+                        else if ( (LA24_269=='*') ) {s = 268;}
+
+                        else if ( ((LA24_269>='\u0000' && LA24_269<=')')||(LA24_269>='+' && LA24_269<='.')||(LA24_269>='0' && LA24_269<='\uFFFF')) ) {s = 270;}
+
+                        else s = 148;
 
                         if ( s>=0 ) return s;
                         break;
             }
             NoViableAltException nvae =
-                new NoViableAltException(getDescription(), 23, _s, input);
+                new NoViableAltException(getDescription(), 24, _s, input);
             error(nvae);
             throw nvae;
         }
