@@ -1,4 +1,4 @@
-// $ANTLR 3.2 Sep 23, 2009 12:02:23 /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g 2010-07-09 08:55:00
+// $ANTLR 3.2 Sep 23, 2009 12:02:23 /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g 2010-07-09 10:43:44
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -3586,8 +3586,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:3:5: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )* )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:3:7: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
+            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:4:5: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )* )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:4:7: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
             {
             if ( (input.LA(1)>='A' && input.LA(1)<='Z')||input.LA(1)=='_'||(input.LA(1)>='a' && input.LA(1)<='z') ) {
                 input.consume();
@@ -3598,7 +3598,7 @@ public class rulesetLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:3:31: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
+            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:4:31: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
             loop1:
             do {
                 int alt1=2;
@@ -3647,10 +3647,10 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:6:5: ( ( '0' .. '9' )+ )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:6:7: ( '0' .. '9' )+
+            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:7:5: ( ( '0' .. '9' )+ )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:7:7: ( '0' .. '9' )+
             {
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:6:7: ( '0' .. '9' )+
+            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:7:7: ( '0' .. '9' )+
             int cnt2=0;
             loop2:
             do {
@@ -3664,7 +3664,7 @@ public class rulesetLexer extends Lexer {
 
                 switch (alt2) {
             	case 1 :
-            	    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:6:7: '0' .. '9'
+            	    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:7:7: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -3696,14 +3696,14 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = FLOAT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:10:5: ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )? | '.' ( '0' .. '9' )+ ( EXPONENT )? | ( '0' .. '9' )+ EXPONENT )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:11:5: ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )? | '.' ( '0' .. '9' )+ ( EXPONENT )? | ( '0' .. '9' )+ EXPONENT )
             int alt9=3;
             alt9 = dfa9.predict(input);
             switch (alt9) {
                 case 1 :
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:10:9: ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )?
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:11:9: ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )?
                     {
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:10:9: ( '0' .. '9' )+
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:11:9: ( '0' .. '9' )+
                     int cnt3=0;
                     loop3:
                     do {
@@ -3717,7 +3717,7 @@ public class rulesetLexer extends Lexer {
 
                         switch (alt3) {
                     	case 1 :
-                    	    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:10:10: '0' .. '9'
+                    	    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:11:10: '0' .. '9'
                     	    {
                     	    matchRange('0','9'); 
 
@@ -3734,7 +3734,7 @@ public class rulesetLexer extends Lexer {
                     } while (true);
 
                     match('.'); 
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:10:25: ( '0' .. '9' )*
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:11:25: ( '0' .. '9' )*
                     loop4:
                     do {
                         int alt4=2;
@@ -3747,7 +3747,7 @@ public class rulesetLexer extends Lexer {
 
                         switch (alt4) {
                     	case 1 :
-                    	    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:10:26: '0' .. '9'
+                    	    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:11:26: '0' .. '9'
                     	    {
                     	    matchRange('0','9'); 
 
@@ -3759,7 +3759,7 @@ public class rulesetLexer extends Lexer {
                         }
                     } while (true);
 
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:10:37: ( EXPONENT )?
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:11:37: ( EXPONENT )?
                     int alt5=2;
                     int LA5_0 = input.LA(1);
 
@@ -3768,7 +3768,7 @@ public class rulesetLexer extends Lexer {
                     }
                     switch (alt5) {
                         case 1 :
-                            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:10:37: EXPONENT
+                            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:11:37: EXPONENT
                             {
                             mEXPONENT(); 
 
@@ -3781,10 +3781,10 @@ public class rulesetLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:11:9: '.' ( '0' .. '9' )+ ( EXPONENT )?
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:12:9: '.' ( '0' .. '9' )+ ( EXPONENT )?
                     {
                     match('.'); 
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:11:13: ( '0' .. '9' )+
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:12:13: ( '0' .. '9' )+
                     int cnt6=0;
                     loop6:
                     do {
@@ -3798,7 +3798,7 @@ public class rulesetLexer extends Lexer {
 
                         switch (alt6) {
                     	case 1 :
-                    	    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:11:14: '0' .. '9'
+                    	    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:12:14: '0' .. '9'
                     	    {
                     	    matchRange('0','9'); 
 
@@ -3814,7 +3814,7 @@ public class rulesetLexer extends Lexer {
                         cnt6++;
                     } while (true);
 
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:11:25: ( EXPONENT )?
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:12:25: ( EXPONENT )?
                     int alt7=2;
                     int LA7_0 = input.LA(1);
 
@@ -3823,7 +3823,7 @@ public class rulesetLexer extends Lexer {
                     }
                     switch (alt7) {
                         case 1 :
-                            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:11:25: EXPONENT
+                            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:12:25: EXPONENT
                             {
                             mEXPONENT(); 
 
@@ -3836,9 +3836,9 @@ public class rulesetLexer extends Lexer {
                     }
                     break;
                 case 3 :
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:12:9: ( '0' .. '9' )+ EXPONENT
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:13:9: ( '0' .. '9' )+ EXPONENT
                     {
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:12:9: ( '0' .. '9' )+
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:13:9: ( '0' .. '9' )+
                     int cnt8=0;
                     loop8:
                     do {
@@ -3852,7 +3852,7 @@ public class rulesetLexer extends Lexer {
 
                         switch (alt8) {
                     	case 1 :
-                    	    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:12:10: '0' .. '9'
+                    	    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:13:10: '0' .. '9'
                     	    {
                     	    matchRange('0','9'); 
 
@@ -3887,7 +3887,7 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:16:5: ( '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n' | '/*' ( options {greedy=false; } : . )* '*/' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:17:5: ( '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n' | '/*' ( options {greedy=false; } : . )* '*/' )
             int alt13=2;
             int LA13_0 = input.LA(1);
 
@@ -3915,11 +3915,11 @@ public class rulesetLexer extends Lexer {
             }
             switch (alt13) {
                 case 1 :
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:16:9: '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n'
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:17:9: '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n'
                     {
                     match("//"); 
 
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:16:14: (~ ( '\\n' | '\\r' ) )*
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:17:14: (~ ( '\\n' | '\\r' ) )*
                     loop10:
                     do {
                         int alt10=2;
@@ -3932,7 +3932,7 @@ public class rulesetLexer extends Lexer {
 
                         switch (alt10) {
                     	case 1 :
-                    	    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:16:14: ~ ( '\\n' | '\\r' )
+                    	    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:17:14: ~ ( '\\n' | '\\r' )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -3952,7 +3952,7 @@ public class rulesetLexer extends Lexer {
                         }
                     } while (true);
 
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:16:28: ( '\\r' )?
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:17:28: ( '\\r' )?
                     int alt11=2;
                     int LA11_0 = input.LA(1);
 
@@ -3961,7 +3961,7 @@ public class rulesetLexer extends Lexer {
                     }
                     switch (alt11) {
                         case 1 :
-                            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:16:28: '\\r'
+                            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:17:28: '\\r'
                             {
                             match('\r'); 
 
@@ -3976,11 +3976,11 @@ public class rulesetLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:17:9: '/*' ( options {greedy=false; } : . )* '*/'
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:18:9: '/*' ( options {greedy=false; } : . )* '*/'
                     {
                     match("/*"); 
 
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:17:14: ( options {greedy=false; } : . )*
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:18:14: ( options {greedy=false; } : . )*
                     loop12:
                     do {
                         int alt12=2;
@@ -4005,7 +4005,7 @@ public class rulesetLexer extends Lexer {
 
                         switch (alt12) {
                     	case 1 :
-                    	    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:17:42: .
+                    	    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:18:42: .
                     	    {
                     	    matchAny(); 
 
@@ -4038,8 +4038,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:20:5: ( ( ' ' | '\\t' | '\\r' | '\\n' ) )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:20:9: ( ' ' | '\\t' | '\\r' | '\\n' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:21:5: ( ( ' ' | '\\t' | '\\r' | '\\n' ) )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:21:9: ( ' ' | '\\t' | '\\r' | '\\n' )
             {
             if ( (input.LA(1)>='\t' && input.LA(1)<='\n')||input.LA(1)=='\r'||input.LA(1)==' ' ) {
                 input.consume();
@@ -4067,11 +4067,11 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:28:5: ( '\"' ( ESC_SEQ | ~ ( '\\\\' | '\"' ) )* '\"' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:28:8: '\"' ( ESC_SEQ | ~ ( '\\\\' | '\"' ) )* '\"'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:29:5: ( '\"' ( ESC_SEQ | ~ ( '\\\\' | '\"' ) )* '\"' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:29:8: '\"' ( ESC_SEQ | ~ ( '\\\\' | '\"' ) )* '\"'
             {
             match('\"'); 
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:28:12: ( ESC_SEQ | ~ ( '\\\\' | '\"' ) )*
+            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:29:12: ( ESC_SEQ | ~ ( '\\\\' | '\"' ) )*
             loop14:
             do {
                 int alt14=3;
@@ -4087,14 +4087,14 @@ public class rulesetLexer extends Lexer {
 
                 switch (alt14) {
             	case 1 :
-            	    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:28:14: ESC_SEQ
+            	    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:29:14: ESC_SEQ
             	    {
             	    mESC_SEQ(); 
 
             	    }
             	    break;
             	case 2 :
-            	    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:28:24: ~ ( '\\\\' | '\"' )
+            	    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:29:24: ~ ( '\\\\' | '\"' )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -4131,11 +4131,11 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = CHAR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:31:5: ( '\\'' ( ESC_SEQ | ~ ( '\\'' | '\\\\' ) ) '\\'' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:31:8: '\\'' ( ESC_SEQ | ~ ( '\\'' | '\\\\' ) ) '\\''
+            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:32:5: ( '\\'' ( ESC_SEQ | ~ ( '\\'' | '\\\\' ) ) '\\'' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:32:8: '\\'' ( ESC_SEQ | ~ ( '\\'' | '\\\\' ) ) '\\''
             {
             match('\''); 
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:31:13: ( ESC_SEQ | ~ ( '\\'' | '\\\\' ) )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:32:13: ( ESC_SEQ | ~ ( '\\'' | '\\\\' ) )
             int alt15=2;
             int LA15_0 = input.LA(1);
 
@@ -4153,14 +4153,14 @@ public class rulesetLexer extends Lexer {
             }
             switch (alt15) {
                 case 1 :
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:31:15: ESC_SEQ
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:32:15: ESC_SEQ
                     {
                     mESC_SEQ(); 
 
                     }
                     break;
                 case 2 :
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:31:25: ~ ( '\\'' | '\\\\' )
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:32:25: ~ ( '\\'' | '\\\\' )
                     {
                     if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                         input.consume();
@@ -4192,8 +4192,8 @@ public class rulesetLexer extends Lexer {
     // $ANTLR start "EXPONENT"
     public final void mEXPONENT() throws RecognitionException {
         try {
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:35:10: ( ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+ )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:35:12: ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+
+            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:36:10: ( ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+ )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:36:12: ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+
             {
             if ( input.LA(1)=='E'||input.LA(1)=='e' ) {
                 input.consume();
@@ -4204,7 +4204,7 @@ public class rulesetLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:35:22: ( '+' | '-' )?
+            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:36:22: ( '+' | '-' )?
             int alt16=2;
             int LA16_0 = input.LA(1);
 
@@ -4230,7 +4230,7 @@ public class rulesetLexer extends Lexer {
 
             }
 
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:35:33: ( '0' .. '9' )+
+            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:36:33: ( '0' .. '9' )+
             int cnt17=0;
             loop17:
             do {
@@ -4244,7 +4244,7 @@ public class rulesetLexer extends Lexer {
 
                 switch (alt17) {
             	case 1 :
-            	    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:35:34: '0' .. '9'
+            	    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:36:34: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -4272,8 +4272,8 @@ public class rulesetLexer extends Lexer {
     // $ANTLR start "HEX_DIGIT"
     public final void mHEX_DIGIT() throws RecognitionException {
         try {
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:38:11: ( ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:38:13: ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:39:11: ( ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:39:13: ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )
             {
             if ( (input.LA(1)>='0' && input.LA(1)<='9')||(input.LA(1)>='A' && input.LA(1)<='F')||(input.LA(1)>='a' && input.LA(1)<='f') ) {
                 input.consume();
@@ -4296,7 +4296,7 @@ public class rulesetLexer extends Lexer {
     // $ANTLR start "ESC_SEQ"
     public final void mESC_SEQ() throws RecognitionException {
         try {
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:42:5: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' ) | UNICODE_ESC | OCTAL_ESC )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:43:5: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' ) | UNICODE_ESC | OCTAL_ESC )
             int alt18=3;
             int LA18_0 = input.LA(1);
 
@@ -4347,7 +4347,7 @@ public class rulesetLexer extends Lexer {
             }
             switch (alt18) {
                 case 1 :
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:42:9: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' )
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:43:9: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' )
                     {
                     match('\\'); 
                     if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||input.LA(1)=='t' ) {
@@ -4363,14 +4363,14 @@ public class rulesetLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:43:9: UNICODE_ESC
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:44:9: UNICODE_ESC
                     {
                     mUNICODE_ESC(); 
 
                     }
                     break;
                 case 3 :
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:44:9: OCTAL_ESC
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:45:9: OCTAL_ESC
                     {
                     mOCTAL_ESC(); 
 
@@ -4387,7 +4387,7 @@ public class rulesetLexer extends Lexer {
     // $ANTLR start "OCTAL_ESC"
     public final void mOCTAL_ESC() throws RecognitionException {
         try {
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:49:5: ( '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:50:5: ( '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) )
             int alt19=3;
             int LA19_0 = input.LA(1);
 
@@ -4433,41 +4433,13 @@ public class rulesetLexer extends Lexer {
             }
             switch (alt19) {
                 case 1 :
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:49:9: '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' )
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:50:9: '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' )
                     {
                     match('\\'); 
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:49:14: ( '0' .. '3' )
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:49:15: '0' .. '3'
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:50:14: ( '0' .. '3' )
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:50:15: '0' .. '3'
                     {
                     matchRange('0','3'); 
-
-                    }
-
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:49:25: ( '0' .. '7' )
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:49:26: '0' .. '7'
-                    {
-                    matchRange('0','7'); 
-
-                    }
-
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:49:36: ( '0' .. '7' )
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:49:37: '0' .. '7'
-                    {
-                    matchRange('0','7'); 
-
-                    }
-
-
-                    }
-                    break;
-                case 2 :
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:50:9: '\\\\' ( '0' .. '7' ) ( '0' .. '7' )
-                    {
-                    match('\\'); 
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:50:14: ( '0' .. '7' )
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:50:15: '0' .. '7'
-                    {
-                    matchRange('0','7'); 
 
                     }
 
@@ -4478,15 +4450,43 @@ public class rulesetLexer extends Lexer {
 
                     }
 
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:50:36: ( '0' .. '7' )
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:50:37: '0' .. '7'
+                    {
+                    matchRange('0','7'); 
+
+                    }
+
 
                     }
                     break;
-                case 3 :
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:51:9: '\\\\' ( '0' .. '7' )
+                case 2 :
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:51:9: '\\\\' ( '0' .. '7' ) ( '0' .. '7' )
                     {
                     match('\\'); 
                     // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:51:14: ( '0' .. '7' )
                     // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:51:15: '0' .. '7'
+                    {
+                    matchRange('0','7'); 
+
+                    }
+
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:51:25: ( '0' .. '7' )
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:51:26: '0' .. '7'
+                    {
+                    matchRange('0','7'); 
+
+                    }
+
+
+                    }
+                    break;
+                case 3 :
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:52:9: '\\\\' ( '0' .. '7' )
+                    {
+                    match('\\'); 
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:52:14: ( '0' .. '7' )
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:52:15: '0' .. '7'
                     {
                     matchRange('0','7'); 
 
@@ -4506,8 +4506,8 @@ public class rulesetLexer extends Lexer {
     // $ANTLR start "UNICODE_ESC"
     public final void mUNICODE_ESC() throws RecognitionException {
         try {
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:56:5: ( '\\\\' 'u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:56:9: '\\\\' 'u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT
+            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:57:5: ( '\\\\' 'u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:57:9: '\\\\' 'u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT
             {
             match('\\'); 
             match('u'); 
@@ -4529,12 +4529,12 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = HTML;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:59:7: ( '<<' ( options {greedy=false; } : . )* '>>' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:59:9: '<<' ( options {greedy=false; } : . )* '>>'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:60:7: ( '<<' ( options {greedy=false; } : . )* '>>' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:60:9: '<<' ( options {greedy=false; } : . )* '>>'
             {
             match("<<"); 
 
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:59:14: ( options {greedy=false; } : . )*
+            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:60:14: ( options {greedy=false; } : . )*
             loop20:
             do {
                 int alt20=2;
@@ -4559,7 +4559,7 @@ public class rulesetLexer extends Lexer {
 
                 switch (alt20) {
             	case 1 :
-            	    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:59:42: .
+            	    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:60:42: .
             	    {
             	    matchAny(); 
 
@@ -4589,12 +4589,12 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = JS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:61:5: ( '<|' ( options {greedy=false; } : . )* '|>' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:61:7: '<|' ( options {greedy=false; } : . )* '|>'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:62:5: ( '<|' ( options {greedy=false; } : . )* '|>' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:62:7: '<|' ( options {greedy=false; } : . )* '|>'
             {
             match("<|"); 
 
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:61:12: ( options {greedy=false; } : . )*
+            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:62:12: ( options {greedy=false; } : . )*
             loop21:
             do {
                 int alt21=2;
@@ -4619,7 +4619,7 @@ public class rulesetLexer extends Lexer {
 
                 switch (alt21) {
             	case 1 :
-            	    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:61:40: .
+            	    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:62:40: .
             	    {
             	    matchAny(); 
 
@@ -4649,11 +4649,11 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = REGEXP;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:64:8: ( '/' ( options {greedy=false; } : . )* '/' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:64:10: '/' ( options {greedy=false; } : . )* '/'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:65:8: ( '/' ( options {greedy=false; } : . )* '/' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:65:10: '/' ( options {greedy=false; } : . )* '/'
             {
             match('/'); 
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:64:15: ( options {greedy=false; } : . )*
+            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:65:15: ( options {greedy=false; } : . )*
             loop22:
             do {
                 int alt22=2;
@@ -4669,7 +4669,7 @@ public class rulesetLexer extends Lexer {
 
                 switch (alt22) {
             	case 1 :
-            	    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:64:43: .
+            	    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:65:43: .
             	    {
             	    matchAny(); 
 
@@ -5960,7 +5960,7 @@ public class rulesetLexer extends Lexer {
             this.transition = DFA9_transition;
         }
         public String getDescription() {
-            return "9:1: FLOAT : ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )? | '.' ( '0' .. '9' )+ ( EXPONENT )? | ( '0' .. '9' )+ EXPONENT );";
+            return "10:1: FLOAT : ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )? | '.' ( '0' .. '9' )+ ( EXPONENT )? | ( '0' .. '9' )+ EXPONENT );";
         }
     }
     static final String DFA23_eotS =

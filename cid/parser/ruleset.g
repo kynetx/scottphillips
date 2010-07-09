@@ -1,4 +1,5 @@
 grammar ruleset;
+options {output=AST;}
 
 ID  :	('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'0'..'9'|'_')*
     ;
@@ -68,9 +69,14 @@ ruleset
  	: 'ruleset' rulesetname '{' 
  		( meta_block 
  		| dispatch_block
- 		| global_decls )*
+ 		| global_decls 
+ 		| rule  )*
  	'}' EOF
  	;
+ 	
+ 	
+ 	
+ 	
  	
 rulesetname
 	:  ID | INT
@@ -80,12 +86,12 @@ rulesetname
  	
  	
  	
- 	
 rule	:	 'rule' ID 'is' rule_state '{'
-		select pre_block emit_block action ';' callbacks post_block
+	select pre_block? emit_block? action ';'? callbacks? post_block?
 	'}'
 	; 	
 
+//		select pre_block emit_block action ';' callbacks post_block
 
 
 post_block: post '{' post_statement ';' ';' '}' post_alternate;
@@ -104,13 +110,13 @@ post_statement: persistent_expr ('if' expr)
   ;
 
 
-callbacks: 'callbacks' '{' success failure '}';
+callbacks: 'callbacks' '{' success? failure? '}';
 
-success: 'success' '{' click ';'  ';' '}';
+success: 'success' '{' click ';'? '}';
 
-failure: 'failure' '{' click ';'  ';' '}';
+failure: 'failure' '{' click ';'?   '}';
 
-click: ('click' | 'change') ID '=' STRING click_link;
+click: ('click' | 'change') ID '=' STRING click_link?;
 
 click_link: 'triggers' persistent_expr;
 
@@ -171,23 +177,25 @@ unconditional_action
 	;
 	
 primrule 
-	: rule_label namespace ID '(' expr ',' ')' modifier_clause |
-	  rule_label emit_block	
+	: rule_label? namespace? ID '(' (expr ','?)* ')' (modifier_clause)* |
+	  rule_label? emit_block	
 	;
           
 rule_label : ID '=>';          
 
-modifier_clause
-	: 'with' modifier 'and'
+modifier_clause 
+	: 'with' modifier |
+	 'and' modifier
 	;
 	
 
-modifier: ID '=' expr |
-	 ID '=' JS
+modifier
+	: ID '=' expr |
+	  ID '=' JS
 	;
 		
 actionblock
-	: blocktype '{' primrule ';' ';' '}'	
+	: blocktype '{' (primrule ';'?)* '}'	
 	;
 	
 blocktype: 'choose'
@@ -209,13 +217,15 @@ using	:	'using' STRING setting;
 when	:'when' event_seq;
 
 event_seq  options { backtrack = true; }
-	:	event_or ('then'|'before') event_or 
+	:	event_or 'then'|
+		event_or 'before'|
+		event_or 
 	;	
 
-event_or:	event_and ('or') event_and;
+event_or:	event_and ('or' event_and)*;
 
 event_and
-	:	event_btwn ('and') event_btwn
+	:	event_btwn ('and' event_btwn)*
 	;
 
 event_btwn
@@ -270,7 +280,7 @@ expr options { backtrack = true; } : function_def | conditional_expression
 	;	
 	
 function_def options { backtrack = true; }
-	: 'function' '(' (ID ','?)* ')' '{' fundecls* expr ';' '}'
+	: 'function' '(' (ID ','?)* ')' '{' fundecls* expr ';'? '}'
 	;	
 	
 fundecls options { backtrack = true; }
@@ -292,22 +302,22 @@ conjunction
 	;
 	
 equality_expr 
-	: add_expr predop add_expr	
+	: add_expr (predop add_expr)*
 	;
 	
 predop: '<=' | '>=' | '<' | '>' | '==' | '!=' | 'eq' | 'neq' | 'like';		
 	
-add_expr: mult_expr add_op mult_expr;		
+add_expr: mult_expr (add_op mult_expr)*;		
 
 add_op: '+'|'-';
 
 mult_expr
-	: unary_expr mult_op unary_expr	
+	: unary_expr (mult_op unary_expr)*
 	;
 
 mult_op: '*'|'/'|'%';
 
-unary_expr
+unary_expr options { backtrack = true; }
 	: 'not' unary_expr | 
 	'seen' STRING 'in' var_domain ':' ID timeframe	|
 	'seen' STRING ('before' | 'after') STRING 'in' var_domain ':' ID |
@@ -318,10 +328,11 @@ unary_expr
 	
 
 operator_expr
-	: factor operator	
+	: factor operator*	
 	;
 	
-factor options { backtrack = true; }: INT
+factor options { backtrack = true; }
+	: INT
       | '-' INT
       | STRING
       | REGEXP
@@ -332,7 +343,7 @@ factor options { backtrack = true; }: INT
       | trail_exp
       | function_app
       | '[' expr ',' ']'
-      | '{' hash_line ',' '}'
+      | '{' (hash_line ','?)* '}'
       | ID 
       | '(' expr ')'
 	;	
@@ -342,8 +353,8 @@ hash_line
 	;
 	
 function_app 
-	:namespace ID '(' expr ',' ')' |
-	 ID '(' expr ',' ')'	
+	:namespace ID '(' (expr ','?)* ')' |
+	 ID '(' (expr ','?)* ')'	
 	;
 
 namespace
@@ -359,7 +370,7 @@ persistent_var
 	: var_domain ':' ID	
 	;
 operator 
-	: '.' operator_op '(' expr ',' ')'	
+	: '.' operator_op '(' expr ','? ')'	
 	;	
 		
 operator_op 
