@@ -244,7 +244,7 @@ on_expr : 'on' (STRING|REGEXP)
  	
  	
 global_decls 
-	: 'global' '{' ( global ';')+ ';'? '}'	
+	: 'global' '{' ( global ';')+  '}'	
 	; 	
  	
 global 	: emit_block | dataset | datasource | css_emit | decl
@@ -261,9 +261,7 @@ css_emit
 decl    options { backtrack = true; } : 
 	ID '=' HTML |
 	ID '=' JS |
-	ID '=' expr  |
-	ID '=' factor
-	
+	ID '=' expr  	
 	;	
 	
 	
@@ -272,11 +270,11 @@ expr options { backtrack = true; } : function_def | conditional_expression
 	;	
 	
 function_def options { backtrack = true; }
-	: 'function' '(' (ID ','?)* ')' '{' fundecls* expr '}'
+	: 'function' '(' (ID ','?)* ')' '{' fundecls* expr ';' '}'
 	;	
 	
 fundecls options { backtrack = true; }
-	: (decl ';'?) 
+	: decl ';' 
 	;
 
 	
@@ -286,11 +284,11 @@ conditional_expression options { backtrack = true; }
 	;	
 
 disjunction 
-	: conjunction '||' conjunction	
+	: conjunction ('||' conjunction)*
 	;	
 	
 conjunction 
-	: equality_expr '&&' equality_expr 	
+	: equality_expr ('&&' equality_expr)*
 	;
 	
 equality_expr 
