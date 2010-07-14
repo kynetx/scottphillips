@@ -1,37 +1,57 @@
-grammar ruleset;
+grammar Ruleset;
 options {
-	output=AST;
-  backtrack=true;
+  output=AST;
+//  backtrack=true;
+  memoize=true;
+//  language=C;
+//  ASTLabelType=pANTLR3_BASE_TREE;
 
 }
+@header {
+	package com.kynetx;
+	import java.util.HashMap;
+}
+@lexer::header {
+	package com.kynetx;
+}
+
 @members { 
-public String getErrorMessage(RecognitionException e, String[] tokenNames)
-{
-	List stack = getRuleInvocationStack(e, this.getClass().getName()); 
-	String msg = null; 
-	if ( e instanceof NoViableAltException ) {
-		NoViableAltException nvae = (NoViableAltException)e; 
-		msg = " no viable alt; token= " + e.token + " (decision=" + nvae.decisionNumber + 
-			" state " + nvae.stateNumber + ")" + " decision=<<" + nvae.grammarDecisionDescription + ">>";
-     	} 
-	else  {
-		msg = super.getErrorMessage(e, tokenNames); 
+
+	public HashMap rule_json = new HashMap();
+	public HashMap current_top = null;
+
+	public boolean checkname = true;
+
+	public String strip_string(String value)
+	{ 
+		return value.substring(1,value.length() - 1);
 	}
-	System.out.println(stack + " " + msg);
-	return stack + " " + msg;
-    }
+	/*
+	 * Strip Crap off that we do not want any more.
+	 */
+	public String strip_wrappers(String start, String end, String value)
+	{
+		return value.substring(start.length(),value.length() - end.length()).trim();	
+	}
 
-
-  public String getTokenErrorDisplay(Token t) {
-    return t.toString();
-  } 
-
+	public void store_in_hash(HashMap start_hash,String subhash,String key, Object value)
+	{
+		HashMap themap = (HashMap)start_hash.get(subhash);
+		if(themap == null)
+		{
+			themap = new HashMap();
+			start_hash.put(subhash,themap);
+		}
+		themap.put(key,value);
+	}
 }
+
+
 
 //ID  :	('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'0'..'9'|'_')*
 //    ;
 
-ID 	: ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_')*
+ID 	: ('a'..'z'|'A'..'Z'|'_'|'0'..'9') ('a'..'z'|'A'..'Z'|'0'..'9'|'_')*
 	;
 
 INT :	('-')? '0'..'9'+
@@ -43,10 +63,14 @@ FLOAT
     |   ('0'..'9')+ EXPONENT
     ;
 
-COMMENT
-    :   '//' ~('\n'|'\r')* '\r'? '\n' {$channel=HIDDEN;}
-    |   '/*' ( options {greedy=false;} : . )* '*/' {$channel=HIDDEN;}
-    ;
+REGEXP	: '/'   ( options {greedy=false;} : . )*  '/';
+
+
+//COMMENT
+//    :   '//' ~('\n'|'\r')* '\r'? '\n' {$channel=2;}
+//    |   '/*' ( options {greedy=false;} : . )* '*/' {$channel=2;}
+//    ;
+
 
 WS  :   ( ' '
         | '\t'
@@ -92,37 +116,46 @@ HTML 	: '<<' ( options {greedy=false;} : . )* '>>'
 JS 	: '<|' ( options {greedy=false;} : . )* '|>'
 	;
 	
-REGEXP	: '/'  ( options {greedy=false;} : . )*  '/';
+
 	
 
-ruleset 
- 	: 'ruleset' rulesetname '{' 
- 		( meta_block 
- 		| dispatch_block
+ruleset  options {backtrack=false;}
+@init {
+	 current_top = rule_json;
+}
+@after  {
+	current_top = null;
+}
+ 	:  'ruleset' rulesetname { current_top.put("ruleset_name",$rulesetname.text); } '{' 
+ 		( meta_block  | comment
+ 		| dispatch_block 
  		| global_decls 
- 		| rule  )*
+ 		| rule )+
  	'}' EOF
  	;
- 	
- 	
- 	
- 	
- 	
- 	
+
+
+CMT    :   
+	'//' ~('\n'|'\r')* '\r'? '\n' 
+    |   '/*' ( options {greedy=false;} : . )* '*/' 
+    ;
+
+comment options {backtrack=false;}
+    :   CMT
+    ;
+     	 	
 rulesetname
 	:  ID | INT
 	;
- 	
- 	
- 	
- 	
- 	
+ 	 	
 rule	:	 'rule' ID 'is' rule_state '{'
-	select pre_block? emit_block? (action ';'?) callbacks? post_block?
+	select_clause pre_block? emit_block? (action ';'?) callbacks? post_block?
 	'}'
 	; 	
 
 //		select pre_block emit_block action ';' callbacks post_block
+
+
 
 
 post_block: post '{' post_statement ';' ';' '}' post_alternate;
@@ -208,9 +241,13 @@ unconditional_action
 	;
 	
 primrule 
+@init {
+}
+@after {
+}
 	: 
 	rule_label? namespace? ID '(' (expr ','?)* ')' modifier_clause? 
-		{System.out.println("found primrule: "+$primrule.text);}
+		{}
 		
 	|rule_label? emit_block	
 	
@@ -218,18 +255,12 @@ primrule
           
 rule_label : ID '=>';          
 
-modifier_clause   
-	: 
-		'with' modifierx ('and' modifierx)*
-		{System.out.println("found mod clause expr: "+$modifier_clause.text);}
+modifier_clause 
+	:  'with' modifier ('and' modifier)*
 	;
 	
-modifierx	
-	: ID '=' STRING 
-		{System.out.println("found modifier  expr: " + $modifierx.text);}
-
-	| ID '=' JS
-		{System.out.println("found modifier  JS expr: " + $modifierx.text);}
+modifier 
+	: ID '=' (expr | JS)		
 	;
 	
 actionblock
@@ -247,7 +278,7 @@ foreach:
 	'foreach' expr setting
 	;         
 
-select	:	'select' (using|when) foreach?
+select_clause	:	'select' (using|when) foreach?
 	;
 	 	
 using	:	'using' STRING setting;
@@ -463,7 +494,7 @@ dispatch_block
 	: 'dispatch' '{' dispatch* '}'
 	;
 
-dispatch:	'domain' STRING dispatch_target	 ;
+dispatch:	'domain' STRING dispatch_target?	 ;
 
 dispatch_target
 	:	'->' STRING
@@ -473,16 +504,48 @@ dispatch_target
  	
  	
 meta_block 
-	: 'meta' '{' pragma*
-	'}'
+@init {
+	 rule_json.put("meta",new HashMap());
+	 current_top = (HashMap)rule_json.get("meta");
+	 current_top.put("keys",new HashMap());
+	 HashMap keys_map = new HashMap();
+	 
+}
+@after  {
+	if(!keys_map.isEmpty())
+	{
+		current_top.put("keys",keys_map);
+	}
+		
+	current_top = rule_json;	
+}	
+	: 'meta' '{' pragma[keys_map]* '}'  
 	
 	;
 	
-pragma 	: desc_block | 'name' STRING | 'author' STRING | 'key' ('errorstack'|'googleanalytics'|'twitter'|'amazon'|'kpds'|'google' | ID) key_value 
+pragma[HashMap keys_map] 
+@init {
+	HashMap key_values = new HashMap();
+	
+}
+
+	: desc_block 
+	| meta_name
+	| 'author' author=STRING   { ((HashMap)rule_json.get("meta")).put("author",$author.text); }
+	| 'key' what=('errorstack'|'googleanalytics'|'twitter'|'amazon'|'kpds'|'google' | ID) key_value[key_values]  { 
+		if(!key_values.isEmpty()) 
+			keys_map.put($what.text,key_values); 
+		else 
+			keys_map.put($what.text,strip_string($key_value.text)); 
+	}
 	| authz_pragma
 	| logging_pargma
 	| 'use' 'module' ID alias?
 	| 'use' ('css' | 'javascript') 'resource' location
+	;
+	
+meta_name 
+	:  'name' thename=STRING { ((HashMap)rule_json.get("meta")).put("name",strip_string($thename.text)); }
 	;
 	
 authz_pragma
@@ -498,14 +561,17 @@ alias	: 'alias' ID;
 location: STRING | ID;
 
 desc_block
-	:	'description' (HTML|STRING)
+	: 'description' desc=(HTML|STRING) { ((HashMap)rule_json.get("meta")).put("description",strip_wrappers("<<",">>",$desc.text)); }
 	;
 
 	
-key_value 
-	: STRING | name_value_pair+	 
+key_value[HashMap key_values] 
+	: STRING | '{' (name_value_pair[key_values] ','?)+ '}'	 
 	;
 	
-name_value_pair 
-	: STRING ':' (INT | STRING)
+name_value_pair[HashMap key_values] 
+@init {
+	Object value = null;
+}
+	: k=STRING ':' (v=INT {value = Integer.parseInt($v.text);System.out.println("found int");} | v=FLOAT {value = Float.parseFloat($v.text);} | v=STRING {value = $v.text;}) {key_values.put(strip_string($k.text),value);}
 	;

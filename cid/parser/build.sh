@@ -1,0 +1,1 @@
+gcc -I/usr/local/include -Ioutput -o rules_parser output/RulesetLexer.c  output/RulesetParser.c output/main.c -lantlr3c -ljson

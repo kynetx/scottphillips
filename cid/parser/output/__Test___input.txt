@@ -1,10 +1,16 @@
-ruleset 1024 {
+ruleset 10 {
+
     meta {
-        name "1024 Production"
-        description <<
-Production copy of the Azigo 1024 rule     
->>
-        logging off        key errorstack "d895cc0802263e1c523349091752b25"
-    
+      description <<
+      Ruleset for testing something or other.
+      >>
+    }
+ /* This is a test */
+    rule test0 is active {
+        select using "/test/" setting()
+
+	alert("hello");
+
     }
 }
+

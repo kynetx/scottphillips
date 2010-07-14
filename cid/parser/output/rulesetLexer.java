@@ -1,11 +1,14 @@
-// $ANTLR 3.2 Sep 23, 2009 12:02:23 /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g 2010-07-09 15:29:59
+// $ANTLR 3.2 Sep 23, 2009 12:02:23 /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g 2010-07-13 19:40:06
+
+	package com.kynetx;
+
 
 import org.antlr.runtime.*;
 import java.util.Stack;
 import java.util.List;
 import java.util.ArrayList;
 
-public class rulesetLexer extends Lexer {
+public class RulesetLexer extends Lexer {
     public static final int EXPONENT=6;
     public static final int T__29=29;
     public static final int T__28=28;
@@ -40,9 +43,8 @@ public class rulesetLexer extends Lexer {
     public static final int T__90=90;
     public static final int T__147=147;
     public static final int T__149=149;
-    public static final int REGEXP=18;
+    public static final int REGEXP=8;
     public static final int T__154=154;
-    public static final int COMMENT=8;
     public static final int T__155=155;
     public static final int T__156=156;
     public static final int T__99=99;
@@ -80,6 +82,7 @@ public class rulesetLexer extends Lexer {
     public static final int T__126=126;
     public static final int T__125=125;
     public static final int T__128=128;
+    public static final int CMT=18;
     public static final int T__127=127;
     public static final int WS=9;
     public static final int T__71=71;
@@ -188,23 +191,23 @@ public class rulesetLexer extends Lexer {
     // delegates
     // delegators
 
-    public rulesetLexer() {;} 
-    public rulesetLexer(CharStream input) {
+    public RulesetLexer() {;} 
+    public RulesetLexer(CharStream input) {
         this(input, new RecognizerSharedState());
     }
-    public rulesetLexer(CharStream input, RecognizerSharedState state) {
+    public RulesetLexer(CharStream input, RecognizerSharedState state) {
         super(input,state);
 
     }
-    public String getGrammarFileName() { return "/Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g"; }
+    public String getGrammarFileName() { return "/Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g"; }
 
     // $ANTLR start "T__19"
     public final void mT__19() throws RecognitionException {
         try {
             int _type = T__19;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:3:7: ( 'ruleset' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:3:9: 'ruleset'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:7:7: ( 'ruleset' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:7:9: 'ruleset'
             {
             match("ruleset"); 
 
@@ -224,8 +227,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__20;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:4:7: ( '{' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:4:9: '{'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:8:7: ( '{' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:8:9: '{'
             {
             match('{'); 
 
@@ -244,8 +247,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__21;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:5:7: ( '}' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:5:9: '}'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:9:7: ( '}' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:9:9: '}'
             {
             match('}'); 
 
@@ -264,8 +267,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__22;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:6:7: ( 'rule' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:6:9: 'rule'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:10:7: ( 'rule' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:10:9: 'rule'
             {
             match("rule"); 
 
@@ -285,8 +288,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__23;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:7:7: ( 'is' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:7:9: 'is'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:11:7: ( 'is' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:11:9: 'is'
             {
             match("is"); 
 
@@ -306,8 +309,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__24;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:8:7: ( ';' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:8:9: ';'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:12:7: ( ';' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:12:9: ';'
             {
             match(';'); 
 
@@ -326,8 +329,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__25;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:9:7: ( 'fired' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:9:9: 'fired'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:13:7: ( 'fired' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:13:9: 'fired'
             {
             match("fired"); 
 
@@ -347,8 +350,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__26;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:10:7: ( 'always' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:10:9: 'always'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:14:7: ( 'always' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:14:9: 'always'
             {
             match("always"); 
 
@@ -368,8 +371,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__27;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:11:7: ( 'notfired' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:11:9: 'notfired'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:15:7: ( 'notfired' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:15:9: 'notfired'
             {
             match("notfired"); 
 
@@ -389,8 +392,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__28;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:12:7: ( 'else' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:12:9: 'else'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:16:7: ( 'else' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:16:9: 'else'
             {
             match("else"); 
 
@@ -410,8 +413,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__29;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:13:7: ( 'if' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:13:9: 'if'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:17:7: ( 'if' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:17:9: 'if'
             {
             match("if"); 
 
@@ -431,8 +434,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__30;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:14:7: ( 'callbacks' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:14:9: 'callbacks'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:18:7: ( 'callbacks' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:18:9: 'callbacks'
             {
             match("callbacks"); 
 
@@ -452,8 +455,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__31;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:15:7: ( 'success' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:15:9: 'success'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:19:7: ( 'success' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:19:9: 'success'
             {
             match("success"); 
 
@@ -473,8 +476,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__32;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:16:7: ( 'failure' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:16:9: 'failure'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:20:7: ( 'failure' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:20:9: 'failure'
             {
             match("failure"); 
 
@@ -494,8 +497,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__33;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:17:7: ( 'click' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:17:9: 'click'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:21:7: ( 'click' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:21:9: 'click'
             {
             match("click"); 
 
@@ -515,8 +518,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__34;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:18:7: ( 'change' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:18:9: 'change'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:22:7: ( 'change' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:22:9: 'change'
             {
             match("change"); 
 
@@ -536,8 +539,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__35;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:19:7: ( '=' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:19:9: '='
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:23:7: ( '=' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:23:9: '='
             {
             match('='); 
 
@@ -556,8 +559,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__36;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:20:7: ( 'triggers' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:20:9: 'triggers'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:24:7: ( 'triggers' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:24:9: 'triggers'
             {
             match("triggers"); 
 
@@ -577,8 +580,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__37;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:21:7: ( 'clear' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:21:9: 'clear'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:25:7: ( 'clear' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:25:9: 'clear'
             {
             match("clear"); 
 
@@ -598,8 +601,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__38;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:22:7: ( ':' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:22:9: ':'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:26:7: ( ':' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:26:9: ':'
             {
             match(':'); 
 
@@ -618,8 +621,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__39;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:23:7: ( 'set' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:23:9: 'set'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:27:7: ( 'set' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:27:9: 'set'
             {
             match("set"); 
 
@@ -639,8 +642,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__40;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:24:7: ( 'forget' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:24:9: 'forget'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:28:7: ( 'forget' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:28:9: 'forget'
             {
             match("forget"); 
 
@@ -660,8 +663,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__41;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:25:7: ( 'in' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:25:9: 'in'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:29:7: ( 'in' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:29:9: 'in'
             {
             match("in"); 
 
@@ -681,8 +684,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__42;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:26:7: ( 'mark' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:26:9: 'mark'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:30:7: ( 'mark' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:30:9: 'mark'
             {
             match("mark"); 
 
@@ -702,8 +705,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__43;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:27:7: ( 'with' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:27:9: 'with'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:31:7: ( 'with' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:31:9: 'with'
             {
             match("with"); 
 
@@ -723,8 +726,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__44;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:28:7: ( '+=' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:28:9: '+='
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:32:7: ( '+=' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:32:9: '+='
             {
             match("+="); 
 
@@ -744,8 +747,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__45;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:29:7: ( '-=' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:29:9: '-='
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:33:7: ( '-=' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:33:9: '-='
             {
             match("-="); 
 
@@ -765,8 +768,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__46;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:30:7: ( 'from' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:30:9: 'from'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:34:7: ( 'from' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:34:9: 'from'
             {
             match("from"); 
 
@@ -786,8 +789,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__47;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:31:7: ( 'log' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:31:9: 'log'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:35:7: ( 'log' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:35:9: 'log'
             {
             match("log"); 
 
@@ -807,8 +810,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__48;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:32:7: ( 'last' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:32:9: 'last'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:36:7: ( 'last' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:36:9: 'last'
             {
             match("last"); 
 
@@ -828,8 +831,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__49;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:33:7: ( 'raise' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:33:9: 'raise'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:37:7: ( 'raise' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:37:9: 'raise'
             {
             match("raise"); 
 
@@ -849,8 +852,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__50;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:34:7: ( 'explicit' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:34:9: 'explicit'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:38:7: ( 'explicit' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:38:9: 'explicit'
             {
             match("explicit"); 
 
@@ -870,8 +873,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__51;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:35:7: ( 'event' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:35:9: 'event'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:39:7: ( 'event' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:39:9: 'event'
             {
             match("event"); 
 
@@ -891,8 +894,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__52;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:36:7: ( 'for' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:36:9: 'for'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:40:7: ( 'for' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:40:9: 'for'
             {
             match("for"); 
 
@@ -912,8 +915,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__53;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:37:7: ( 'active' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:37:9: 'active'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:41:7: ( 'active' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:41:9: 'active'
             {
             match("active"); 
 
@@ -933,8 +936,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__54;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:38:7: ( 'inactive' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:38:9: 'inactive'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:42:7: ( 'inactive' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:42:9: 'inactive'
             {
             match("inactive"); 
 
@@ -954,8 +957,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__55;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:39:7: ( 'test' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:39:9: 'test'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:43:7: ( 'test' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:43:9: 'test'
             {
             match("test"); 
 
@@ -975,8 +978,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__56;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:40:7: ( 'then' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:40:9: 'then'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:44:7: ( 'then' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:44:9: 'then'
             {
             match("then"); 
 
@@ -996,8 +999,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__57;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:41:7: ( '(' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:41:9: '('
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:45:7: ( '(' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:45:9: '('
             {
             match('('); 
 
@@ -1016,8 +1019,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__58;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:42:7: ( ',' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:42:9: ','
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:46:7: ( ',' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:46:9: ','
             {
             match(','); 
 
@@ -1036,8 +1039,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__59;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:43:7: ( ')' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:43:9: ')'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:47:7: ( ')' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:47:9: ')'
             {
             match(')'); 
 
@@ -1056,8 +1059,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__60;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:44:7: ( '=>' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:44:9: '=>'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:48:7: ( '=>' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:48:9: '=>'
             {
             match("=>"); 
 
@@ -1077,8 +1080,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__61;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:45:7: ( 'and' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:45:9: 'and'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:49:7: ( 'and' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:49:9: 'and'
             {
             match("and"); 
 
@@ -1098,8 +1101,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__62;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:46:7: ( 'choose' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:46:9: 'choose'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:50:7: ( 'choose' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:50:9: 'choose'
             {
             match("choose"); 
 
@@ -1119,8 +1122,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__63;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:47:7: ( 'every' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:47:9: 'every'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:51:7: ( 'every' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:51:9: 'every'
             {
             match("every"); 
 
@@ -1140,8 +1143,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__64;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:48:7: ( 'pre' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:48:9: 'pre'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:52:7: ( 'pre' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:52:9: 'pre'
             {
             match("pre"); 
 
@@ -1161,8 +1164,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__65;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:49:7: ( 'foreach' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:49:9: 'foreach'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:53:7: ( 'foreach' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:53:9: 'foreach'
             {
             match("foreach"); 
 
@@ -1182,8 +1185,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__66;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:50:7: ( 'select' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:50:9: 'select'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:54:7: ( 'select' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:54:9: 'select'
             {
             match("select"); 
 
@@ -1203,8 +1206,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__67;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:51:7: ( 'using' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:51:9: 'using'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:55:7: ( 'using' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:55:9: 'using'
             {
             match("using"); 
 
@@ -1224,8 +1227,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__68;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:52:7: ( 'when' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:52:9: 'when'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:56:7: ( 'when' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:56:9: 'when'
             {
             match("when"); 
 
@@ -1245,8 +1248,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__69;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:53:7: ( 'before' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:53:9: 'before'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:57:7: ( 'before' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:57:9: 'before'
             {
             match("before"); 
 
@@ -1266,8 +1269,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__70;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:54:7: ( 'or' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:54:9: 'or'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:58:7: ( 'or' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:58:9: 'or'
             {
             match("or"); 
 
@@ -1287,8 +1290,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__71;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:55:7: ( 'not' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:55:9: 'not'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:59:7: ( 'not' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:59:9: 'not'
             {
             match("not"); 
 
@@ -1308,8 +1311,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__72;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:56:7: ( 'between' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:56:9: 'between'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:60:7: ( 'between' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:60:9: 'between'
             {
             match("between"); 
 
@@ -1329,8 +1332,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__73;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:57:7: ( 'pageview' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:57:9: 'pageview'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:61:7: ( 'pageview' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:61:9: 'pageview'
             {
             match("pageview"); 
 
@@ -1350,8 +1353,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__74;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:58:7: ( 'submit' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:58:9: 'submit'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:62:7: ( 'submit' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:62:9: 'submit'
             {
             match("submit"); 
 
@@ -1371,8 +1374,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__75;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:59:7: ( 'dblclick' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:59:9: 'dblclick'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:63:7: ( 'dblclick' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:63:9: 'dblclick'
             {
             match("dblclick"); 
 
@@ -1392,8 +1395,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__76;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:60:7: ( 'update' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:60:9: 'update'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:64:7: ( 'update' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:64:9: 'update'
             {
             match("update"); 
 
@@ -1413,8 +1416,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__77;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:61:7: ( 'setting' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:61:9: 'setting'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:65:7: ( 'setting' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:65:9: 'setting'
             {
             match("setting"); 
 
@@ -1434,8 +1437,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__78;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:62:7: ( 'web' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:62:9: 'web'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:66:7: ( 'web' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:66:9: 'web'
             {
             match("web"); 
 
@@ -1455,8 +1458,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__79;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:63:7: ( 'on' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:63:9: 'on'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:67:7: ( 'on' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:67:9: 'on'
             {
             match("on"); 
 
@@ -1476,8 +1479,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__80;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:64:7: ( 'global' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:64:9: 'global'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:68:7: ( 'global' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:68:9: 'global'
             {
             match("global"); 
 
@@ -1497,8 +1500,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__81;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:65:7: ( 'datasource' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:65:9: 'datasource'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:69:7: ( 'datasource' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:69:9: 'datasource'
             {
             match("datasource"); 
 
@@ -1518,8 +1521,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__82;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:66:7: ( '<-' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:66:9: '<-'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:70:7: ( '<-' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:70:9: '<-'
             {
             match("<-"); 
 
@@ -1539,8 +1542,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__83;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:67:7: ( 'css' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:67:9: 'css'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:71:7: ( 'css' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:71:9: 'css'
             {
             match("css"); 
 
@@ -1560,8 +1563,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__84;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:68:7: ( 'function' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:68:9: 'function'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:72:7: ( 'function' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:72:9: 'function'
             {
             match("function"); 
 
@@ -1581,8 +1584,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__85;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:69:7: ( '|' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:69:9: '|'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:73:7: ( '|' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:73:9: '|'
             {
             match('|'); 
 
@@ -1601,8 +1604,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__86;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:70:7: ( '||' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:70:9: '||'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:74:7: ( '||' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:74:9: '||'
             {
             match("||"); 
 
@@ -1622,8 +1625,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__87;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:71:7: ( '&&' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:71:9: '&&'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:75:7: ( '&&' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:75:9: '&&'
             {
             match("&&"); 
 
@@ -1643,8 +1646,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__88;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:72:7: ( '<=' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:72:9: '<='
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:76:7: ( '<=' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:76:9: '<='
             {
             match("<="); 
 
@@ -1664,8 +1667,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__89;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:73:7: ( '>=' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:73:9: '>='
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:77:7: ( '>=' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:77:9: '>='
             {
             match(">="); 
 
@@ -1685,8 +1688,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__90;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:74:7: ( '<' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:74:9: '<'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:78:7: ( '<' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:78:9: '<'
             {
             match('<'); 
 
@@ -1705,8 +1708,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__91;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:75:7: ( '>' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:75:9: '>'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:79:7: ( '>' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:79:9: '>'
             {
             match('>'); 
 
@@ -1725,8 +1728,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__92;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:76:7: ( '==' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:76:9: '=='
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:80:7: ( '==' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:80:9: '=='
             {
             match("=="); 
 
@@ -1746,8 +1749,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__93;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:77:7: ( '!=' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:77:9: '!='
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:81:7: ( '!=' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:81:9: '!='
             {
             match("!="); 
 
@@ -1767,8 +1770,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__94;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:78:7: ( 'eq' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:78:9: 'eq'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:82:7: ( 'eq' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:82:9: 'eq'
             {
             match("eq"); 
 
@@ -1788,8 +1791,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__95;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:79:7: ( 'neq' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:79:9: 'neq'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:83:7: ( 'neq' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:83:9: 'neq'
             {
             match("neq"); 
 
@@ -1809,8 +1812,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__96;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:80:7: ( 'like' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:80:9: 'like'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:84:7: ( 'like' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:84:9: 'like'
             {
             match("like"); 
 
@@ -1830,8 +1833,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__97;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:81:7: ( '+' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:81:9: '+'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:85:7: ( '+' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:85:9: '+'
             {
             match('+'); 
 
@@ -1850,8 +1853,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__98;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:82:7: ( '-' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:82:9: '-'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:86:7: ( '-' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:86:9: '-'
             {
             match('-'); 
 
@@ -1870,8 +1873,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__99;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:83:7: ( '*' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:83:9: '*'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:87:7: ( '*' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:87:9: '*'
             {
             match('*'); 
 
@@ -1890,8 +1893,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__100;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:84:8: ( '/' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:84:10: '/'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:88:8: ( '/' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:88:10: '/'
             {
             match('/'); 
 
@@ -1910,8 +1913,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__101;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:85:8: ( '%' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:85:10: '%'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:89:8: ( '%' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:89:10: '%'
             {
             match('%'); 
 
@@ -1930,8 +1933,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__102;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:86:8: ( 'seen' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:86:10: 'seen'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:90:8: ( 'seen' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:90:10: 'seen'
             {
             match("seen"); 
 
@@ -1951,8 +1954,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__103;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:87:8: ( 'after' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:87:10: 'after'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:91:8: ( 'after' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:91:10: 'after'
             {
             match("after"); 
 
@@ -1972,8 +1975,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__104;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:88:8: ( 'true' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:88:10: 'true'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:92:8: ( 'true' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:92:10: 'true'
             {
             match("true"); 
 
@@ -1993,8 +1996,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__105;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:89:8: ( 'false' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:89:10: 'false'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:93:8: ( 'false' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:93:10: 'false'
             {
             match("false"); 
 
@@ -2014,8 +2017,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__106;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:90:8: ( '[' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:90:10: '['
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:94:8: ( '[' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:94:10: '['
             {
             match('['); 
 
@@ -2034,8 +2037,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__107;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:91:8: ( ']' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:91:10: ']'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:95:8: ( ']' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:95:10: ']'
             {
             match(']'); 
 
@@ -2054,8 +2057,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__108;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:92:8: ( 'current' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:92:10: 'current'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:96:8: ( 'current' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:96:10: 'current'
             {
             match("current"); 
 
@@ -2075,8 +2078,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__109;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:93:8: ( 'history' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:93:10: 'history'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:97:8: ( 'history' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:97:10: 'history'
             {
             match("history"); 
 
@@ -2096,8 +2099,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__110;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:94:8: ( '.' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:94:10: '.'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:98:8: ( '.' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:98:10: '.'
             {
             match('.'); 
 
@@ -2116,8 +2119,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__111;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:95:8: ( 'pick' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:95:10: 'pick'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:99:8: ( 'pick' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:99:10: 'pick'
             {
             match("pick"); 
 
@@ -2137,8 +2140,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__112;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:96:8: ( 'match' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:96:10: 'match'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:100:8: ( 'match' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:100:10: 'match'
             {
             match("match"); 
 
@@ -2158,8 +2161,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__113;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:97:8: ( 'length' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:97:10: 'length'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:101:8: ( 'length' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:101:10: 'length'
             {
             match("length"); 
 
@@ -2179,8 +2182,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__114;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:98:8: ( 'replace' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:98:10: 'replace'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:102:8: ( 'replace' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:102:10: 'replace'
             {
             match("replace"); 
 
@@ -2200,8 +2203,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__115;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:99:8: ( 'as' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:99:10: 'as'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:103:8: ( 'as' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:103:10: 'as'
             {
             match("as"); 
 
@@ -2221,8 +2224,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__116;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:100:8: ( 'head' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:100:10: 'head'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:104:8: ( 'head' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:104:10: 'head'
             {
             match("head"); 
 
@@ -2242,8 +2245,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__117;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:101:8: ( 'tail' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:101:10: 'tail'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:105:8: ( 'tail' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:105:10: 'tail'
             {
             match("tail"); 
 
@@ -2263,8 +2266,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__118;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:102:8: ( 'sort' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:102:10: 'sort'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:106:8: ( 'sort' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:106:10: 'sort'
             {
             match("sort"); 
 
@@ -2284,8 +2287,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__119;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:103:8: ( 'filter' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:103:10: 'filter'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:107:8: ( 'filter' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:107:10: 'filter'
             {
             match("filter"); 
 
@@ -2305,8 +2308,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__120;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:104:8: ( 'map' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:104:10: 'map'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:108:8: ( 'map' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:108:10: 'map'
             {
             match("map"); 
 
@@ -2326,8 +2329,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__121;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:105:8: ( 'uc' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:105:10: 'uc'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:109:8: ( 'uc' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:109:10: 'uc'
             {
             match("uc"); 
 
@@ -2347,8 +2350,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__122;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:106:8: ( 'lc' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:106:10: 'lc'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:110:8: ( 'lc' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:110:10: 'lc'
             {
             match("lc"); 
 
@@ -2368,8 +2371,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__123;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:107:8: ( 'split' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:107:10: 'split'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:111:8: ( 'split' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:111:10: 'split'
             {
             match("split"); 
 
@@ -2389,8 +2392,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__124;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:108:8: ( 'join' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:108:10: 'join'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:112:8: ( 'join' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:112:10: 'join'
             {
             match("join"); 
 
@@ -2410,8 +2413,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__125;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:109:8: ( 'query' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:109:10: 'query'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:113:8: ( 'query' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:113:10: 'query'
             {
             match("query"); 
 
@@ -2431,8 +2434,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__126;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:110:8: ( 'has' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:110:10: 'has'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:114:8: ( 'has' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:114:10: 'has'
             {
             match("has"); 
 
@@ -2452,8 +2455,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__127;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:111:8: ( 'union' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:111:10: 'union'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:115:8: ( 'union' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:115:10: 'union'
             {
             match("union"); 
 
@@ -2473,8 +2476,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__128;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:112:8: ( 'difference' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:112:10: 'difference'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:116:8: ( 'difference' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:116:10: 'difference'
             {
             match("difference"); 
 
@@ -2494,8 +2497,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__129;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:113:8: ( 'intersection' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:113:10: 'intersection'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:117:8: ( 'intersection' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:117:10: 'intersection'
             {
             match("intersection"); 
 
@@ -2515,8 +2518,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__130;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:114:8: ( 'unique' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:114:10: 'unique'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:118:8: ( 'unique' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:118:10: 'unique'
             {
             match("unique"); 
 
@@ -2536,8 +2539,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__131;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:115:8: ( 'once' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:115:10: 'once'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:119:8: ( 'once' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:119:10: 'once'
             {
             match("once"); 
 
@@ -2557,8 +2560,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__132;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:116:8: ( 'duplicates' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:116:10: 'duplicates'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:120:8: ( 'duplicates' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:120:10: 'duplicates'
             {
             match("duplicates"); 
 
@@ -2578,8 +2581,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__133;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:117:8: ( 'within' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:117:10: 'within'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:121:8: ( 'within' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:121:10: 'within'
             {
             match("within"); 
 
@@ -2599,8 +2602,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__134;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:118:8: ( 'ent' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:118:10: 'ent'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:122:8: ( 'ent' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:122:10: 'ent'
             {
             match("ent"); 
 
@@ -2620,8 +2623,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__135;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:119:8: ( 'app' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:119:10: 'app'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:123:8: ( 'app' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:123:10: 'app'
             {
             match("app"); 
 
@@ -2641,8 +2644,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__136;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:120:8: ( 'emit' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:120:10: 'emit'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:124:8: ( 'emit' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:124:10: 'emit'
             {
             match("emit"); 
 
@@ -2662,8 +2665,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__137;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:121:8: ( 'dataset' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:121:10: 'dataset'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:125:8: ( 'dataset' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:125:10: 'dataset'
             {
             match("dataset"); 
 
@@ -2683,8 +2686,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__138;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:122:8: ( 'JSON' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:122:10: 'JSON'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:126:8: ( 'JSON' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:126:10: 'JSON'
             {
             match("JSON"); 
 
@@ -2704,8 +2707,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__139;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:123:8: ( 'XML' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:123:10: 'XML'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:127:8: ( 'XML' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:127:10: 'XML'
             {
             match("XML"); 
 
@@ -2725,8 +2728,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__140;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:124:8: ( 'RSS' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:124:10: 'RSS'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:128:8: ( 'RSS' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:128:10: 'RSS'
             {
             match("RSS"); 
 
@@ -2746,8 +2749,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__141;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:125:8: ( 'HTML' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:125:10: 'HTML'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:129:8: ( 'HTML' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:129:10: 'HTML'
             {
             match("HTML"); 
 
@@ -2767,8 +2770,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__142;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:126:8: ( 'cachable' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:126:10: 'cachable'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:130:8: ( 'cachable' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:130:10: 'cachable'
             {
             match("cachable"); 
 
@@ -2788,8 +2791,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__143;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:127:8: ( 'years' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:127:10: 'years'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:131:8: ( 'years' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:131:10: 'years'
             {
             match("years"); 
 
@@ -2809,8 +2812,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__144;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:128:8: ( 'months' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:128:10: 'months'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:132:8: ( 'months' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:132:10: 'months'
             {
             match("months"); 
 
@@ -2830,8 +2833,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__145;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:129:8: ( 'weeks' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:129:10: 'weeks'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:133:8: ( 'weeks' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:133:10: 'weeks'
             {
             match("weeks"); 
 
@@ -2851,8 +2854,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__146;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:130:8: ( 'days' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:130:10: 'days'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:134:8: ( 'days' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:134:10: 'days'
             {
             match("days"); 
 
@@ -2872,8 +2875,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__147;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:131:8: ( 'hours' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:131:10: 'hours'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:135:8: ( 'hours' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:135:10: 'hours'
             {
             match("hours"); 
 
@@ -2893,8 +2896,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__148;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:132:8: ( 'minutes' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:132:10: 'minutes'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:136:8: ( 'minutes' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:136:10: 'minutes'
             {
             match("minutes"); 
 
@@ -2914,8 +2917,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__149;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:133:8: ( 'seconds' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:133:10: 'seconds'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:137:8: ( 'seconds' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:137:10: 'seconds'
             {
             match("seconds"); 
 
@@ -2935,8 +2938,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__150;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:134:8: ( 'year' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:134:10: 'year'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:138:8: ( 'year' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:138:10: 'year'
             {
             match("year"); 
 
@@ -2956,8 +2959,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__151;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:135:8: ( 'month' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:135:10: 'month'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:139:8: ( 'month' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:139:10: 'month'
             {
             match("month"); 
 
@@ -2977,8 +2980,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__152;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:136:8: ( 'week' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:136:10: 'week'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:140:8: ( 'week' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:140:10: 'week'
             {
             match("week"); 
 
@@ -2998,8 +3001,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__153;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:137:8: ( 'day' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:137:10: 'day'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:141:8: ( 'day' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:141:10: 'day'
             {
             match("day"); 
 
@@ -3019,8 +3022,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__154;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:138:8: ( 'hour' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:138:10: 'hour'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:142:8: ( 'hour' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:142:10: 'hour'
             {
             match("hour"); 
 
@@ -3040,8 +3043,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__155;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:139:8: ( 'minute' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:139:10: 'minute'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:143:8: ( 'minute' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:143:10: 'minute'
             {
             match("minute"); 
 
@@ -3061,8 +3064,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__156;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:140:8: ( 'second' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:140:10: 'second'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:144:8: ( 'second' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:144:10: 'second'
             {
             match("second"); 
 
@@ -3082,8 +3085,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__157;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:141:8: ( 'dispatch' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:141:10: 'dispatch'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:145:8: ( 'dispatch' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:145:10: 'dispatch'
             {
             match("dispatch"); 
 
@@ -3103,8 +3106,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__158;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:142:8: ( 'domain' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:142:10: 'domain'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:146:8: ( 'domain' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:146:10: 'domain'
             {
             match("domain"); 
 
@@ -3124,8 +3127,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__159;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:143:8: ( '->' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:143:10: '->'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:147:8: ( '->' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:147:10: '->'
             {
             match("->"); 
 
@@ -3145,8 +3148,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__160;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:144:8: ( 'meta' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:144:10: 'meta'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:148:8: ( 'meta' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:148:10: 'meta'
             {
             match("meta"); 
 
@@ -3166,10 +3169,10 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__161;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:145:8: ( 'name' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:145:10: 'name'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:149:8: ( 'author' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:149:10: 'author'
             {
-            match("name"); 
+            match("author"); 
 
 
             }
@@ -3187,10 +3190,10 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__162;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:146:8: ( 'author' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:146:10: 'author'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:150:8: ( 'key' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:150:10: 'key'
             {
-            match("author"); 
+            match("key"); 
 
 
             }
@@ -3208,10 +3211,10 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__163;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:147:8: ( 'key' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:147:10: 'key'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:151:8: ( 'errorstack' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:151:10: 'errorstack'
             {
-            match("key"); 
+            match("errorstack"); 
 
 
             }
@@ -3229,10 +3232,10 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__164;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:148:8: ( 'errorstack' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:148:10: 'errorstack'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:152:8: ( 'googleanalytics' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:152:10: 'googleanalytics'
             {
-            match("errorstack"); 
+            match("googleanalytics"); 
 
 
             }
@@ -3250,10 +3253,10 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__165;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:149:8: ( 'googleanalytics' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:149:10: 'googleanalytics'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:153:8: ( 'twitter' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:153:10: 'twitter'
             {
-            match("googleanalytics"); 
+            match("twitter"); 
 
 
             }
@@ -3271,10 +3274,10 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__166;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:150:8: ( 'twitter' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:150:10: 'twitter'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:154:8: ( 'amazon' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:154:10: 'amazon'
             {
-            match("twitter"); 
+            match("amazon"); 
 
 
             }
@@ -3292,10 +3295,10 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__167;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:151:8: ( 'amazon' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:151:10: 'amazon'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:155:8: ( 'kpds' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:155:10: 'kpds'
             {
-            match("amazon"); 
+            match("kpds"); 
 
 
             }
@@ -3313,10 +3316,10 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__168;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:152:8: ( 'kpds' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:152:10: 'kpds'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:156:8: ( 'google' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:156:10: 'google'
             {
-            match("kpds"); 
+            match("google"); 
 
 
             }
@@ -3334,10 +3337,10 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__169;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:153:8: ( 'google' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:153:10: 'google'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:157:8: ( 'use' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:157:10: 'use'
             {
-            match("google"); 
+            match("use"); 
 
 
             }
@@ -3355,10 +3358,10 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__170;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:154:8: ( 'use' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:154:10: 'use'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:158:8: ( 'module' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:158:10: 'module'
             {
-            match("use"); 
+            match("module"); 
 
 
             }
@@ -3376,10 +3379,10 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__171;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:155:8: ( 'module' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:155:10: 'module'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:159:8: ( 'javascript' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:159:10: 'javascript'
             {
-            match("module"); 
+            match("javascript"); 
 
 
             }
@@ -3397,10 +3400,10 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__172;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:156:8: ( 'javascript' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:156:10: 'javascript'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:160:8: ( 'resource' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:160:10: 'resource'
             {
-            match("javascript"); 
+            match("resource"); 
 
 
             }
@@ -3418,10 +3421,10 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__173;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:157:8: ( 'resource' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:157:10: 'resource'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:161:8: ( 'name' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:161:10: 'name'
             {
-            match("resource"); 
+            match("name"); 
 
 
             }
@@ -3439,8 +3442,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__174;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:158:8: ( 'authz' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:158:10: 'authz'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:162:8: ( 'authz' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:162:10: 'authz'
             {
             match("authz"); 
 
@@ -3460,8 +3463,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__175;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:159:8: ( 'require' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:159:10: 'require'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:163:8: ( 'require' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:163:10: 'require'
             {
             match("require"); 
 
@@ -3481,8 +3484,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__176;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:160:8: ( 'user' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:160:10: 'user'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:164:8: ( 'user' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:164:10: 'user'
             {
             match("user"); 
 
@@ -3502,8 +3505,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__177;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:161:8: ( 'logging' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:161:10: 'logging'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:165:8: ( 'logging' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:165:10: 'logging'
             {
             match("logging"); 
 
@@ -3523,8 +3526,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__178;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:162:8: ( 'off' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:162:10: 'off'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:166:8: ( 'off' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:166:10: 'off'
             {
             match("off"); 
 
@@ -3544,8 +3547,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__179;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:163:8: ( 'alias' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:163:10: 'alias'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:167:8: ( 'alias' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:167:10: 'alias'
             {
             match("alias"); 
 
@@ -3565,8 +3568,8 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = T__180;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:164:8: ( 'description' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:164:10: 'description'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:168:8: ( 'description' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:168:10: 'description'
             {
             match("description"); 
 
@@ -3586,10 +3589,10 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:34:5: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' )* )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:34:7: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' )*
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:54:5: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )* )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:54:7: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
             {
-            if ( (input.LA(1)>='A' && input.LA(1)<='Z')||input.LA(1)=='_'||(input.LA(1)>='a' && input.LA(1)<='z') ) {
+            if ( (input.LA(1)>='0' && input.LA(1)<='9')||(input.LA(1)>='A' && input.LA(1)<='Z')||input.LA(1)=='_'||(input.LA(1)>='a' && input.LA(1)<='z') ) {
                 input.consume();
 
             }
@@ -3598,22 +3601,22 @@ public class rulesetLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:34:31: ( 'a' .. 'z' | 'A' .. 'Z' | '_' )*
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:54:40: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
             loop1:
             do {
                 int alt1=2;
                 int LA1_0 = input.LA(1);
 
-                if ( ((LA1_0>='A' && LA1_0<='Z')||LA1_0=='_'||(LA1_0>='a' && LA1_0<='z')) ) {
+                if ( ((LA1_0>='0' && LA1_0<='9')||(LA1_0>='A' && LA1_0<='Z')||LA1_0=='_'||(LA1_0>='a' && LA1_0<='z')) ) {
                     alt1=1;
                 }
 
 
                 switch (alt1) {
             	case 1 :
-            	    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:
+            	    // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:
             	    {
-            	    if ( (input.LA(1)>='A' && input.LA(1)<='Z')||input.LA(1)=='_'||(input.LA(1)>='a' && input.LA(1)<='z') ) {
+            	    if ( (input.LA(1)>='0' && input.LA(1)<='9')||(input.LA(1)>='A' && input.LA(1)<='Z')||input.LA(1)=='_'||(input.LA(1)>='a' && input.LA(1)<='z') ) {
             	        input.consume();
 
             	    }
@@ -3647,10 +3650,10 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:37:5: ( ( '-' )? ( '0' .. '9' )+ )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:37:7: ( '-' )? ( '0' .. '9' )+
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:57:5: ( ( '-' )? ( '0' .. '9' )+ )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:57:7: ( '-' )? ( '0' .. '9' )+
             {
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:37:7: ( '-' )?
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:57:7: ( '-' )?
             int alt2=2;
             int LA2_0 = input.LA(1);
 
@@ -3659,7 +3662,7 @@ public class rulesetLexer extends Lexer {
             }
             switch (alt2) {
                 case 1 :
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:37:8: '-'
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:57:8: '-'
                     {
                     match('-'); 
 
@@ -3668,7 +3671,7 @@ public class rulesetLexer extends Lexer {
 
             }
 
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:37:14: ( '0' .. '9' )+
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:57:14: ( '0' .. '9' )+
             int cnt3=0;
             loop3:
             do {
@@ -3682,7 +3685,7 @@ public class rulesetLexer extends Lexer {
 
                 switch (alt3) {
             	case 1 :
-            	    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:37:14: '0' .. '9'
+            	    // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:57:14: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -3714,14 +3717,14 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = FLOAT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:41:5: ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )? | '.' ( '0' .. '9' )+ ( EXPONENT )? | ( '0' .. '9' )+ EXPONENT )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:61:5: ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )? | '.' ( '0' .. '9' )+ ( EXPONENT )? | ( '0' .. '9' )+ EXPONENT )
             int alt10=3;
             alt10 = dfa10.predict(input);
             switch (alt10) {
                 case 1 :
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:41:9: ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )?
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:61:9: ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )?
                     {
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:41:9: ( '0' .. '9' )+
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:61:9: ( '0' .. '9' )+
                     int cnt4=0;
                     loop4:
                     do {
@@ -3735,7 +3738,7 @@ public class rulesetLexer extends Lexer {
 
                         switch (alt4) {
                     	case 1 :
-                    	    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:41:10: '0' .. '9'
+                    	    // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:61:10: '0' .. '9'
                     	    {
                     	    matchRange('0','9'); 
 
@@ -3752,7 +3755,7 @@ public class rulesetLexer extends Lexer {
                     } while (true);
 
                     match('.'); 
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:41:25: ( '0' .. '9' )*
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:61:25: ( '0' .. '9' )*
                     loop5:
                     do {
                         int alt5=2;
@@ -3765,7 +3768,7 @@ public class rulesetLexer extends Lexer {
 
                         switch (alt5) {
                     	case 1 :
-                    	    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:41:26: '0' .. '9'
+                    	    // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:61:26: '0' .. '9'
                     	    {
                     	    matchRange('0','9'); 
 
@@ -3777,7 +3780,7 @@ public class rulesetLexer extends Lexer {
                         }
                     } while (true);
 
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:41:37: ( EXPONENT )?
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:61:37: ( EXPONENT )?
                     int alt6=2;
                     int LA6_0 = input.LA(1);
 
@@ -3786,7 +3789,7 @@ public class rulesetLexer extends Lexer {
                     }
                     switch (alt6) {
                         case 1 :
-                            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:41:37: EXPONENT
+                            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:61:37: EXPONENT
                             {
                             mEXPONENT(); 
 
@@ -3799,10 +3802,10 @@ public class rulesetLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:42:9: '.' ( '0' .. '9' )+ ( EXPONENT )?
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:62:9: '.' ( '0' .. '9' )+ ( EXPONENT )?
                     {
                     match('.'); 
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:42:13: ( '0' .. '9' )+
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:62:13: ( '0' .. '9' )+
                     int cnt7=0;
                     loop7:
                     do {
@@ -3816,7 +3819,7 @@ public class rulesetLexer extends Lexer {
 
                         switch (alt7) {
                     	case 1 :
-                    	    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:42:14: '0' .. '9'
+                    	    // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:62:14: '0' .. '9'
                     	    {
                     	    matchRange('0','9'); 
 
@@ -3832,7 +3835,7 @@ public class rulesetLexer extends Lexer {
                         cnt7++;
                     } while (true);
 
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:42:25: ( EXPONENT )?
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:62:25: ( EXPONENT )?
                     int alt8=2;
                     int LA8_0 = input.LA(1);
 
@@ -3841,7 +3844,7 @@ public class rulesetLexer extends Lexer {
                     }
                     switch (alt8) {
                         case 1 :
-                            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:42:25: EXPONENT
+                            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:62:25: EXPONENT
                             {
                             mEXPONENT(); 
 
@@ -3854,9 +3857,9 @@ public class rulesetLexer extends Lexer {
                     }
                     break;
                 case 3 :
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:43:9: ( '0' .. '9' )+ EXPONENT
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:63:9: ( '0' .. '9' )+ EXPONENT
                     {
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:43:9: ( '0' .. '9' )+
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:63:9: ( '0' .. '9' )+
                     int cnt9=0;
                     loop9:
                     do {
@@ -3870,7 +3873,7 @@ public class rulesetLexer extends Lexer {
 
                         switch (alt9) {
                     	case 1 :
-                    	    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:43:10: '0' .. '9'
+                    	    // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:63:10: '0' .. '9'
                     	    {
                     	    matchRange('0','9'); 
 
@@ -3900,164 +3903,62 @@ public class rulesetLexer extends Lexer {
     }
     // $ANTLR end "FLOAT"
 
-    // $ANTLR start "COMMENT"
-    public final void mCOMMENT() throws RecognitionException {
+    // $ANTLR start "REGEXP"
+    public final void mREGEXP() throws RecognitionException {
         try {
-            int _type = COMMENT;
+            int _type = REGEXP;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:47:5: ( '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n' | '/*' ( options {greedy=false; } : . )* '*/' )
-            int alt14=2;
-            int LA14_0 = input.LA(1);
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:66:8: ( '/' ( options {greedy=false; } : . )* '/' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:66:10: '/' ( options {greedy=false; } : . )* '/'
+            {
+            match('/'); 
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:66:16: ( options {greedy=false; } : . )*
+            loop11:
+            do {
+                int alt11=2;
+                int LA11_0 = input.LA(1);
 
-            if ( (LA14_0=='/') ) {
-                int LA14_1 = input.LA(2);
-
-                if ( (LA14_1=='/') ) {
-                    alt14=1;
+                if ( (LA11_0=='/') ) {
+                    alt11=2;
                 }
-                else if ( (LA14_1=='*') ) {
-                    alt14=2;
+                else if ( ((LA11_0>='\u0000' && LA11_0<='.')||(LA11_0>='0' && LA11_0<='\uFFFF')) ) {
+                    alt11=1;
                 }
-                else {
-                    NoViableAltException nvae =
-                        new NoViableAltException("", 14, 1, input);
 
-                    throw nvae;
+
+                switch (alt11) {
+            	case 1 :
+            	    // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:66:44: .
+            	    {
+            	    matchAny(); 
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop11;
                 }
-            }
-            else {
-                NoViableAltException nvae =
-                    new NoViableAltException("", 14, 0, input);
+            } while (true);
 
-                throw nvae;
-            }
-            switch (alt14) {
-                case 1 :
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:47:9: '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n'
-                    {
-                    match("//"); 
-
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:47:14: (~ ( '\\n' | '\\r' ) )*
-                    loop11:
-                    do {
-                        int alt11=2;
-                        int LA11_0 = input.LA(1);
-
-                        if ( ((LA11_0>='\u0000' && LA11_0<='\t')||(LA11_0>='\u000B' && LA11_0<='\f')||(LA11_0>='\u000E' && LA11_0<='\uFFFF')) ) {
-                            alt11=1;
-                        }
-
-
-                        switch (alt11) {
-                    	case 1 :
-                    	    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:47:14: ~ ( '\\n' | '\\r' )
-                    	    {
-                    	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
-                    	        input.consume();
-
-                    	    }
-                    	    else {
-                    	        MismatchedSetException mse = new MismatchedSetException(null,input);
-                    	        recover(mse);
-                    	        throw mse;}
-
-
-                    	    }
-                    	    break;
-
-                    	default :
-                    	    break loop11;
-                        }
-                    } while (true);
-
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:47:28: ( '\\r' )?
-                    int alt12=2;
-                    int LA12_0 = input.LA(1);
-
-                    if ( (LA12_0=='\r') ) {
-                        alt12=1;
-                    }
-                    switch (alt12) {
-                        case 1 :
-                            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:47:28: '\\r'
-                            {
-                            match('\r'); 
-
-                            }
-                            break;
-
-                    }
-
-                    match('\n'); 
-                    _channel=HIDDEN;
-
-                    }
-                    break;
-                case 2 :
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:48:9: '/*' ( options {greedy=false; } : . )* '*/'
-                    {
-                    match("/*"); 
-
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:48:14: ( options {greedy=false; } : . )*
-                    loop13:
-                    do {
-                        int alt13=2;
-                        int LA13_0 = input.LA(1);
-
-                        if ( (LA13_0=='*') ) {
-                            int LA13_1 = input.LA(2);
-
-                            if ( (LA13_1=='/') ) {
-                                alt13=2;
-                            }
-                            else if ( ((LA13_1>='\u0000' && LA13_1<='.')||(LA13_1>='0' && LA13_1<='\uFFFF')) ) {
-                                alt13=1;
-                            }
-
-
-                        }
-                        else if ( ((LA13_0>='\u0000' && LA13_0<=')')||(LA13_0>='+' && LA13_0<='\uFFFF')) ) {
-                            alt13=1;
-                        }
-
-
-                        switch (alt13) {
-                    	case 1 :
-                    	    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:48:42: .
-                    	    {
-                    	    matchAny(); 
-
-                    	    }
-                    	    break;
-
-                    	default :
-                    	    break loop13;
-                        }
-                    } while (true);
-
-                    match("*/"); 
-
-                    _channel=HIDDEN;
-
-                    }
-                    break;
+            match('/'); 
 
             }
+
             state.type = _type;
             state.channel = _channel;
         }
         finally {
         }
     }
-    // $ANTLR end "COMMENT"
+    // $ANTLR end "REGEXP"
 
     // $ANTLR start "WS"
     public final void mWS() throws RecognitionException {
         try {
             int _type = WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:51:5: ( ( ' ' | '\\t' | '\\r' | '\\n' ) )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:51:9: ( ' ' | '\\t' | '\\r' | '\\n' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:75:5: ( ( ' ' | '\\t' | '\\r' | '\\n' ) )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:75:9: ( ' ' | '\\t' | '\\r' | '\\n' )
             {
             if ( (input.LA(1)>='\t' && input.LA(1)<='\n')||input.LA(1)=='\r'||input.LA(1)==' ' ) {
                 input.consume();
@@ -4085,34 +3986,34 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:59:5: ( '\"' ( ESC_SEQ | ~ ( '\\\\' | '\"' ) )* '\"' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:59:8: '\"' ( ESC_SEQ | ~ ( '\\\\' | '\"' ) )* '\"'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:83:5: ( '\"' ( ESC_SEQ | ~ ( '\\\\' | '\"' ) )* '\"' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:83:8: '\"' ( ESC_SEQ | ~ ( '\\\\' | '\"' ) )* '\"'
             {
             match('\"'); 
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:59:12: ( ESC_SEQ | ~ ( '\\\\' | '\"' ) )*
-            loop15:
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:83:12: ( ESC_SEQ | ~ ( '\\\\' | '\"' ) )*
+            loop12:
             do {
-                int alt15=3;
-                int LA15_0 = input.LA(1);
+                int alt12=3;
+                int LA12_0 = input.LA(1);
 
-                if ( (LA15_0=='\\') ) {
-                    alt15=1;
+                if ( (LA12_0=='\\') ) {
+                    alt12=1;
                 }
-                else if ( ((LA15_0>='\u0000' && LA15_0<='!')||(LA15_0>='#' && LA15_0<='[')||(LA15_0>=']' && LA15_0<='\uFFFF')) ) {
-                    alt15=2;
+                else if ( ((LA12_0>='\u0000' && LA12_0<='!')||(LA12_0>='#' && LA12_0<='[')||(LA12_0>=']' && LA12_0<='\uFFFF')) ) {
+                    alt12=2;
                 }
 
 
-                switch (alt15) {
+                switch (alt12) {
             	case 1 :
-            	    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:59:14: ESC_SEQ
+            	    // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:83:14: ESC_SEQ
             	    {
             	    mESC_SEQ(); 
 
             	    }
             	    break;
             	case 2 :
-            	    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:59:24: ~ ( '\\\\' | '\"' )
+            	    // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:83:24: ~ ( '\\\\' | '\"' )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -4128,7 +4029,7 @@ public class rulesetLexer extends Lexer {
             	    break;
 
             	default :
-            	    break loop15;
+            	    break loop12;
                 }
             } while (true);
 
@@ -4149,36 +4050,36 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = CHAR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:62:5: ( '\\'' ( ESC_SEQ | ~ ( '\\'' | '\\\\' ) ) '\\'' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:62:8: '\\'' ( ESC_SEQ | ~ ( '\\'' | '\\\\' ) ) '\\''
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:86:5: ( '\\'' ( ESC_SEQ | ~ ( '\\'' | '\\\\' ) ) '\\'' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:86:8: '\\'' ( ESC_SEQ | ~ ( '\\'' | '\\\\' ) ) '\\''
             {
             match('\''); 
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:62:13: ( ESC_SEQ | ~ ( '\\'' | '\\\\' ) )
-            int alt16=2;
-            int LA16_0 = input.LA(1);
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:86:13: ( ESC_SEQ | ~ ( '\\'' | '\\\\' ) )
+            int alt13=2;
+            int LA13_0 = input.LA(1);
 
-            if ( (LA16_0=='\\') ) {
-                alt16=1;
+            if ( (LA13_0=='\\') ) {
+                alt13=1;
             }
-            else if ( ((LA16_0>='\u0000' && LA16_0<='&')||(LA16_0>='(' && LA16_0<='[')||(LA16_0>=']' && LA16_0<='\uFFFF')) ) {
-                alt16=2;
+            else if ( ((LA13_0>='\u0000' && LA13_0<='&')||(LA13_0>='(' && LA13_0<='[')||(LA13_0>=']' && LA13_0<='\uFFFF')) ) {
+                alt13=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 16, 0, input);
+                    new NoViableAltException("", 13, 0, input);
 
                 throw nvae;
             }
-            switch (alt16) {
+            switch (alt13) {
                 case 1 :
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:62:15: ESC_SEQ
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:86:15: ESC_SEQ
                     {
                     mESC_SEQ(); 
 
                     }
                     break;
                 case 2 :
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:62:25: ~ ( '\\'' | '\\\\' )
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:86:25: ~ ( '\\'' | '\\\\' )
                     {
                     if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                         input.consume();
@@ -4210,8 +4111,8 @@ public class rulesetLexer extends Lexer {
     // $ANTLR start "EXPONENT"
     public final void mEXPONENT() throws RecognitionException {
         try {
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:66:10: ( ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+ )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:66:12: ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:90:10: ( ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+ )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:90:12: ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+
             {
             if ( input.LA(1)=='E'||input.LA(1)=='e' ) {
                 input.consume();
@@ -4222,16 +4123,16 @@ public class rulesetLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:66:22: ( '+' | '-' )?
-            int alt17=2;
-            int LA17_0 = input.LA(1);
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:90:22: ( '+' | '-' )?
+            int alt14=2;
+            int LA14_0 = input.LA(1);
 
-            if ( (LA17_0=='+'||LA17_0=='-') ) {
-                alt17=1;
+            if ( (LA14_0=='+'||LA14_0=='-') ) {
+                alt14=1;
             }
-            switch (alt17) {
+            switch (alt14) {
                 case 1 :
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:
                     {
                     if ( input.LA(1)=='+'||input.LA(1)=='-' ) {
                         input.consume();
@@ -4248,21 +4149,21 @@ public class rulesetLexer extends Lexer {
 
             }
 
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:66:33: ( '0' .. '9' )+
-            int cnt18=0;
-            loop18:
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:90:33: ( '0' .. '9' )+
+            int cnt15=0;
+            loop15:
             do {
-                int alt18=2;
-                int LA18_0 = input.LA(1);
+                int alt15=2;
+                int LA15_0 = input.LA(1);
 
-                if ( ((LA18_0>='0' && LA18_0<='9')) ) {
-                    alt18=1;
+                if ( ((LA15_0>='0' && LA15_0<='9')) ) {
+                    alt15=1;
                 }
 
 
-                switch (alt18) {
+                switch (alt15) {
             	case 1 :
-            	    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:66:34: '0' .. '9'
+            	    // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:90:34: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -4270,12 +4171,12 @@ public class rulesetLexer extends Lexer {
             	    break;
 
             	default :
-            	    if ( cnt18 >= 1 ) break loop18;
+            	    if ( cnt15 >= 1 ) break loop15;
                         EarlyExitException eee =
-                            new EarlyExitException(18, input);
+                            new EarlyExitException(15, input);
                         throw eee;
                 }
-                cnt18++;
+                cnt15++;
             } while (true);
 
 
@@ -4290,8 +4191,8 @@ public class rulesetLexer extends Lexer {
     // $ANTLR start "HEX_DIGIT"
     public final void mHEX_DIGIT() throws RecognitionException {
         try {
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:69:11: ( ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:69:13: ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:93:11: ( ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:93:13: ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )
             {
             if ( (input.LA(1)>='0' && input.LA(1)<='9')||(input.LA(1)>='A' && input.LA(1)<='F')||(input.LA(1)>='a' && input.LA(1)<='f') ) {
                 input.consume();
@@ -4314,11 +4215,11 @@ public class rulesetLexer extends Lexer {
     // $ANTLR start "ESC_SEQ"
     public final void mESC_SEQ() throws RecognitionException {
         try {
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:73:5: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' ) | UNICODE_ESC | OCTAL_ESC )
-            int alt19=3;
-            int LA19_0 = input.LA(1);
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:97:5: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' ) | UNICODE_ESC | OCTAL_ESC )
+            int alt16=3;
+            int LA16_0 = input.LA(1);
 
-            if ( (LA19_0=='\\') ) {
+            if ( (LA16_0=='\\') ) {
                 switch ( input.LA(2) ) {
                 case '\"':
                 case '\'':
@@ -4329,12 +4230,12 @@ public class rulesetLexer extends Lexer {
                 case 'r':
                 case 't':
                     {
-                    alt19=1;
+                    alt16=1;
                     }
                     break;
                 case 'u':
                     {
-                    alt19=2;
+                    alt16=2;
                     }
                     break;
                 case '0':
@@ -4346,12 +4247,12 @@ public class rulesetLexer extends Lexer {
                 case '6':
                 case '7':
                     {
-                    alt19=3;
+                    alt16=3;
                     }
                     break;
                 default:
                     NoViableAltException nvae =
-                        new NoViableAltException("", 19, 1, input);
+                        new NoViableAltException("", 16, 1, input);
 
                     throw nvae;
                 }
@@ -4359,13 +4260,13 @@ public class rulesetLexer extends Lexer {
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 19, 0, input);
+                    new NoViableAltException("", 16, 0, input);
 
                 throw nvae;
             }
-            switch (alt19) {
+            switch (alt16) {
                 case 1 :
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:73:9: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' )
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:97:9: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' )
                     {
                     match('\\'); 
                     if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||input.LA(1)=='t' ) {
@@ -4381,14 +4282,14 @@ public class rulesetLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:74:9: UNICODE_ESC
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:98:9: UNICODE_ESC
                     {
                     mUNICODE_ESC(); 
 
                     }
                     break;
                 case 3 :
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:75:9: OCTAL_ESC
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:99:9: OCTAL_ESC
                     {
                     mOCTAL_ESC(); 
 
@@ -4405,71 +4306,71 @@ public class rulesetLexer extends Lexer {
     // $ANTLR start "OCTAL_ESC"
     public final void mOCTAL_ESC() throws RecognitionException {
         try {
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:80:5: ( '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) )
-            int alt20=3;
-            int LA20_0 = input.LA(1);
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:104:5: ( '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) )
+            int alt17=3;
+            int LA17_0 = input.LA(1);
 
-            if ( (LA20_0=='\\') ) {
-                int LA20_1 = input.LA(2);
+            if ( (LA17_0=='\\') ) {
+                int LA17_1 = input.LA(2);
 
-                if ( ((LA20_1>='0' && LA20_1<='3')) ) {
-                    int LA20_2 = input.LA(3);
+                if ( ((LA17_1>='0' && LA17_1<='3')) ) {
+                    int LA17_2 = input.LA(3);
 
-                    if ( ((LA20_2>='0' && LA20_2<='7')) ) {
-                        int LA20_5 = input.LA(4);
+                    if ( ((LA17_2>='0' && LA17_2<='7')) ) {
+                        int LA17_5 = input.LA(4);
 
-                        if ( ((LA20_5>='0' && LA20_5<='7')) ) {
-                            alt20=1;
+                        if ( ((LA17_5>='0' && LA17_5<='7')) ) {
+                            alt17=1;
                         }
                         else {
-                            alt20=2;}
+                            alt17=2;}
                     }
                     else {
-                        alt20=3;}
+                        alt17=3;}
                 }
-                else if ( ((LA20_1>='4' && LA20_1<='7')) ) {
-                    int LA20_3 = input.LA(3);
+                else if ( ((LA17_1>='4' && LA17_1<='7')) ) {
+                    int LA17_3 = input.LA(3);
 
-                    if ( ((LA20_3>='0' && LA20_3<='7')) ) {
-                        alt20=2;
+                    if ( ((LA17_3>='0' && LA17_3<='7')) ) {
+                        alt17=2;
                     }
                     else {
-                        alt20=3;}
+                        alt17=3;}
                 }
                 else {
                     NoViableAltException nvae =
-                        new NoViableAltException("", 20, 1, input);
+                        new NoViableAltException("", 17, 1, input);
 
                     throw nvae;
                 }
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 20, 0, input);
+                    new NoViableAltException("", 17, 0, input);
 
                 throw nvae;
             }
-            switch (alt20) {
+            switch (alt17) {
                 case 1 :
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:80:9: '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' )
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:104:9: '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' )
                     {
                     match('\\'); 
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:80:14: ( '0' .. '3' )
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:80:15: '0' .. '3'
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:104:14: ( '0' .. '3' )
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:104:15: '0' .. '3'
                     {
                     matchRange('0','3'); 
 
                     }
 
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:80:25: ( '0' .. '7' )
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:80:26: '0' .. '7'
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:104:25: ( '0' .. '7' )
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:104:26: '0' .. '7'
                     {
                     matchRange('0','7'); 
 
                     }
 
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:80:36: ( '0' .. '7' )
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:80:37: '0' .. '7'
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:104:36: ( '0' .. '7' )
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:104:37: '0' .. '7'
                     {
                     matchRange('0','7'); 
 
@@ -4479,18 +4380,18 @@ public class rulesetLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:81:9: '\\\\' ( '0' .. '7' ) ( '0' .. '7' )
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:105:9: '\\\\' ( '0' .. '7' ) ( '0' .. '7' )
                     {
                     match('\\'); 
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:81:14: ( '0' .. '7' )
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:81:15: '0' .. '7'
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:105:14: ( '0' .. '7' )
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:105:15: '0' .. '7'
                     {
                     matchRange('0','7'); 
 
                     }
 
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:81:25: ( '0' .. '7' )
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:81:26: '0' .. '7'
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:105:25: ( '0' .. '7' )
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:105:26: '0' .. '7'
                     {
                     matchRange('0','7'); 
 
@@ -4500,11 +4401,11 @@ public class rulesetLexer extends Lexer {
                     }
                     break;
                 case 3 :
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:82:9: '\\\\' ( '0' .. '7' )
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:106:9: '\\\\' ( '0' .. '7' )
                     {
                     match('\\'); 
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:82:14: ( '0' .. '7' )
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:82:15: '0' .. '7'
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:106:14: ( '0' .. '7' )
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:106:15: '0' .. '7'
                     {
                     matchRange('0','7'); 
 
@@ -4524,8 +4425,8 @@ public class rulesetLexer extends Lexer {
     // $ANTLR start "UNICODE_ESC"
     public final void mUNICODE_ESC() throws RecognitionException {
         try {
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:87:5: ( '\\\\' 'u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:87:9: '\\\\' 'u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:111:5: ( '\\\\' 'u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:111:9: '\\\\' 'u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT
             {
             match('\\'); 
             match('u'); 
@@ -4547,37 +4448,37 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = HTML;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:90:7: ( '<<' ( options {greedy=false; } : . )* '>>' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:90:9: '<<' ( options {greedy=false; } : . )* '>>'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:114:7: ( '<<' ( options {greedy=false; } : . )* '>>' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:114:9: '<<' ( options {greedy=false; } : . )* '>>'
             {
             match("<<"); 
 
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:90:14: ( options {greedy=false; } : . )*
-            loop21:
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:114:14: ( options {greedy=false; } : . )*
+            loop18:
             do {
-                int alt21=2;
-                int LA21_0 = input.LA(1);
+                int alt18=2;
+                int LA18_0 = input.LA(1);
 
-                if ( (LA21_0=='>') ) {
-                    int LA21_1 = input.LA(2);
+                if ( (LA18_0=='>') ) {
+                    int LA18_1 = input.LA(2);
 
-                    if ( (LA21_1=='>') ) {
-                        alt21=2;
+                    if ( (LA18_1=='>') ) {
+                        alt18=2;
                     }
-                    else if ( ((LA21_1>='\u0000' && LA21_1<='=')||(LA21_1>='?' && LA21_1<='\uFFFF')) ) {
-                        alt21=1;
+                    else if ( ((LA18_1>='\u0000' && LA18_1<='=')||(LA18_1>='?' && LA18_1<='\uFFFF')) ) {
+                        alt18=1;
                     }
 
 
                 }
-                else if ( ((LA21_0>='\u0000' && LA21_0<='=')||(LA21_0>='?' && LA21_0<='\uFFFF')) ) {
-                    alt21=1;
+                else if ( ((LA18_0>='\u0000' && LA18_0<='=')||(LA18_0>='?' && LA18_0<='\uFFFF')) ) {
+                    alt18=1;
                 }
 
 
-                switch (alt21) {
+                switch (alt18) {
             	case 1 :
-            	    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:90:42: .
+            	    // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:114:42: .
             	    {
             	    matchAny(); 
 
@@ -4585,7 +4486,7 @@ public class rulesetLexer extends Lexer {
             	    break;
 
             	default :
-            	    break loop21;
+            	    break loop18;
                 }
             } while (true);
 
@@ -4607,37 +4508,37 @@ public class rulesetLexer extends Lexer {
         try {
             int _type = JS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:92:5: ( '<|' ( options {greedy=false; } : . )* '|>' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:92:7: '<|' ( options {greedy=false; } : . )* '|>'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:116:5: ( '<|' ( options {greedy=false; } : . )* '|>' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:116:7: '<|' ( options {greedy=false; } : . )* '|>'
             {
             match("<|"); 
 
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:92:12: ( options {greedy=false; } : . )*
-            loop22:
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:116:12: ( options {greedy=false; } : . )*
+            loop19:
             do {
-                int alt22=2;
-                int LA22_0 = input.LA(1);
+                int alt19=2;
+                int LA19_0 = input.LA(1);
 
-                if ( (LA22_0=='|') ) {
-                    int LA22_1 = input.LA(2);
+                if ( (LA19_0=='|') ) {
+                    int LA19_1 = input.LA(2);
 
-                    if ( (LA22_1=='>') ) {
-                        alt22=2;
+                    if ( (LA19_1=='>') ) {
+                        alt19=2;
                     }
-                    else if ( ((LA22_1>='\u0000' && LA22_1<='=')||(LA22_1>='?' && LA22_1<='\uFFFF')) ) {
-                        alt22=1;
+                    else if ( ((LA19_1>='\u0000' && LA19_1<='=')||(LA19_1>='?' && LA19_1<='\uFFFF')) ) {
+                        alt19=1;
                     }
 
 
                 }
-                else if ( ((LA22_0>='\u0000' && LA22_0<='{')||(LA22_0>='}' && LA22_0<='\uFFFF')) ) {
-                    alt22=1;
+                else if ( ((LA19_0>='\u0000' && LA19_0<='{')||(LA19_0>='}' && LA19_0<='\uFFFF')) ) {
+                    alt19=1;
                 }
 
 
-                switch (alt22) {
+                switch (alt19) {
             	case 1 :
-            	    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:92:40: .
+            	    // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:116:40: .
             	    {
             	    matchAny(); 
 
@@ -4645,7 +4546,7 @@ public class rulesetLexer extends Lexer {
             	    break;
 
             	default :
-            	    break loop22;
+            	    break loop19;
                 }
             } while (true);
 
@@ -4662,1261 +4563,1361 @@ public class rulesetLexer extends Lexer {
     }
     // $ANTLR end "JS"
 
-    // $ANTLR start "REGEXP"
-    public final void mREGEXP() throws RecognitionException {
+    // $ANTLR start "CMT"
+    public final void mCMT() throws RecognitionException {
         try {
-            int _type = REGEXP;
+            int _type = CMT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:95:8: ( '/' ( options {greedy=false; } : . )* '/' )
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:95:10: '/' ( options {greedy=false; } : . )* '/'
-            {
-            match('/'); 
-            // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:95:15: ( options {greedy=false; } : . )*
-            loop23:
-            do {
-                int alt23=2;
-                int LA23_0 = input.LA(1);
+            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:138:8: ( '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n' | '/*' ( options {greedy=false; } : . )* '*/' )
+            int alt23=2;
+            int LA23_0 = input.LA(1);
 
-                if ( (LA23_0=='/') ) {
-                    alt23=2;
-                }
-                else if ( ((LA23_0>='\u0000' && LA23_0<='.')||(LA23_0>='0' && LA23_0<='\uFFFF')) ) {
+            if ( (LA23_0=='/') ) {
+                int LA23_1 = input.LA(2);
+
+                if ( (LA23_1=='/') ) {
                     alt23=1;
                 }
-
-
-                switch (alt23) {
-            	case 1 :
-            	    // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:95:43: .
-            	    {
-            	    matchAny(); 
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop23;
+                else if ( (LA23_1=='*') ) {
+                    alt23=2;
                 }
-            } while (true);
+                else {
+                    NoViableAltException nvae =
+                        new NoViableAltException("", 23, 1, input);
 
-            match('/'); 
+                    throw nvae;
+                }
+            }
+            else {
+                NoViableAltException nvae =
+                    new NoViableAltException("", 23, 0, input);
+
+                throw nvae;
+            }
+            switch (alt23) {
+                case 1 :
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:138:12: '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n'
+                    {
+                    match("//"); 
+
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:138:17: (~ ( '\\n' | '\\r' ) )*
+                    loop20:
+                    do {
+                        int alt20=2;
+                        int LA20_0 = input.LA(1);
+
+                        if ( ((LA20_0>='\u0000' && LA20_0<='\t')||(LA20_0>='\u000B' && LA20_0<='\f')||(LA20_0>='\u000E' && LA20_0<='\uFFFF')) ) {
+                            alt20=1;
+                        }
+
+
+                        switch (alt20) {
+                    	case 1 :
+                    	    // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:138:17: ~ ( '\\n' | '\\r' )
+                    	    {
+                    	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
+                    	        input.consume();
+
+                    	    }
+                    	    else {
+                    	        MismatchedSetException mse = new MismatchedSetException(null,input);
+                    	        recover(mse);
+                    	        throw mse;}
+
+
+                    	    }
+                    	    break;
+
+                    	default :
+                    	    break loop20;
+                        }
+                    } while (true);
+
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:138:31: ( '\\r' )?
+                    int alt21=2;
+                    int LA21_0 = input.LA(1);
+
+                    if ( (LA21_0=='\r') ) {
+                        alt21=1;
+                    }
+                    switch (alt21) {
+                        case 1 :
+                            // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:138:31: '\\r'
+                            {
+                            match('\r'); 
+
+                            }
+                            break;
+
+                    }
+
+                    match('\n'); 
+
+                    }
+                    break;
+                case 2 :
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:139:9: '/*' ( options {greedy=false; } : . )* '*/'
+                    {
+                    match("/*"); 
+
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:139:14: ( options {greedy=false; } : . )*
+                    loop22:
+                    do {
+                        int alt22=2;
+                        int LA22_0 = input.LA(1);
+
+                        if ( (LA22_0=='*') ) {
+                            int LA22_1 = input.LA(2);
+
+                            if ( (LA22_1=='/') ) {
+                                alt22=2;
+                            }
+                            else if ( ((LA22_1>='\u0000' && LA22_1<='.')||(LA22_1>='0' && LA22_1<='\uFFFF')) ) {
+                                alt22=1;
+                            }
+
+
+                        }
+                        else if ( ((LA22_0>='\u0000' && LA22_0<=')')||(LA22_0>='+' && LA22_0<='\uFFFF')) ) {
+                            alt22=1;
+                        }
+
+
+                        switch (alt22) {
+                    	case 1 :
+                    	    // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:139:42: .
+                    	    {
+                    	    matchAny(); 
+
+                    	    }
+                    	    break;
+
+                    	default :
+                    	    break loop22;
+                        }
+                    } while (true);
+
+                    match("*/"); 
+
+
+                    }
+                    break;
 
             }
-
             state.type = _type;
             state.channel = _channel;
         }
         finally {
         }
     }
-    // $ANTLR end "REGEXP"
+    // $ANTLR end "CMT"
 
     public void mTokens() throws RecognitionException {
-        // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:8: ( T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | T__63 | T__64 | T__65 | T__66 | T__67 | T__68 | T__69 | T__70 | T__71 | T__72 | T__73 | T__74 | T__75 | T__76 | T__77 | T__78 | T__79 | T__80 | T__81 | T__82 | T__83 | T__84 | T__85 | T__86 | T__87 | T__88 | T__89 | T__90 | T__91 | T__92 | T__93 | T__94 | T__95 | T__96 | T__97 | T__98 | T__99 | T__100 | T__101 | T__102 | T__103 | T__104 | T__105 | T__106 | T__107 | T__108 | T__109 | T__110 | T__111 | T__112 | T__113 | T__114 | T__115 | T__116 | T__117 | T__118 | T__119 | T__120 | T__121 | T__122 | T__123 | T__124 | T__125 | T__126 | T__127 | T__128 | T__129 | T__130 | T__131 | T__132 | T__133 | T__134 | T__135 | T__136 | T__137 | T__138 | T__139 | T__140 | T__141 | T__142 | T__143 | T__144 | T__145 | T__146 | T__147 | T__148 | T__149 | T__150 | T__151 | T__152 | T__153 | T__154 | T__155 | T__156 | T__157 | T__158 | T__159 | T__160 | T__161 | T__162 | T__163 | T__164 | T__165 | T__166 | T__167 | T__168 | T__169 | T__170 | T__171 | T__172 | T__173 | T__174 | T__175 | T__176 | T__177 | T__178 | T__179 | T__180 | ID | INT | FLOAT | COMMENT | WS | STRING | CHAR | HTML | JS | REGEXP )
+        // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:8: ( T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | T__63 | T__64 | T__65 | T__66 | T__67 | T__68 | T__69 | T__70 | T__71 | T__72 | T__73 | T__74 | T__75 | T__76 | T__77 | T__78 | T__79 | T__80 | T__81 | T__82 | T__83 | T__84 | T__85 | T__86 | T__87 | T__88 | T__89 | T__90 | T__91 | T__92 | T__93 | T__94 | T__95 | T__96 | T__97 | T__98 | T__99 | T__100 | T__101 | T__102 | T__103 | T__104 | T__105 | T__106 | T__107 | T__108 | T__109 | T__110 | T__111 | T__112 | T__113 | T__114 | T__115 | T__116 | T__117 | T__118 | T__119 | T__120 | T__121 | T__122 | T__123 | T__124 | T__125 | T__126 | T__127 | T__128 | T__129 | T__130 | T__131 | T__132 | T__133 | T__134 | T__135 | T__136 | T__137 | T__138 | T__139 | T__140 | T__141 | T__142 | T__143 | T__144 | T__145 | T__146 | T__147 | T__148 | T__149 | T__150 | T__151 | T__152 | T__153 | T__154 | T__155 | T__156 | T__157 | T__158 | T__159 | T__160 | T__161 | T__162 | T__163 | T__164 | T__165 | T__166 | T__167 | T__168 | T__169 | T__170 | T__171 | T__172 | T__173 | T__174 | T__175 | T__176 | T__177 | T__178 | T__179 | T__180 | ID | INT | FLOAT | REGEXP | WS | STRING | CHAR | HTML | JS | CMT )
         int alt24=172;
         alt24 = dfa24.predict(input);
         switch (alt24) {
             case 1 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:10: T__19
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:10: T__19
                 {
                 mT__19(); 
 
                 }
                 break;
             case 2 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:16: T__20
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:16: T__20
                 {
                 mT__20(); 
 
                 }
                 break;
             case 3 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:22: T__21
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:22: T__21
                 {
                 mT__21(); 
 
                 }
                 break;
             case 4 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:28: T__22
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:28: T__22
                 {
                 mT__22(); 
 
                 }
                 break;
             case 5 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:34: T__23
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:34: T__23
                 {
                 mT__23(); 
 
                 }
                 break;
             case 6 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:40: T__24
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:40: T__24
                 {
                 mT__24(); 
 
                 }
                 break;
             case 7 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:46: T__25
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:46: T__25
                 {
                 mT__25(); 
 
                 }
                 break;
             case 8 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:52: T__26
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:52: T__26
                 {
                 mT__26(); 
 
                 }
                 break;
             case 9 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:58: T__27
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:58: T__27
                 {
                 mT__27(); 
 
                 }
                 break;
             case 10 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:64: T__28
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:64: T__28
                 {
                 mT__28(); 
 
                 }
                 break;
             case 11 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:70: T__29
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:70: T__29
                 {
                 mT__29(); 
 
                 }
                 break;
             case 12 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:76: T__30
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:76: T__30
                 {
                 mT__30(); 
 
                 }
                 break;
             case 13 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:82: T__31
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:82: T__31
                 {
                 mT__31(); 
 
                 }
                 break;
             case 14 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:88: T__32
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:88: T__32
                 {
                 mT__32(); 
 
                 }
                 break;
             case 15 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:94: T__33
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:94: T__33
                 {
                 mT__33(); 
 
                 }
                 break;
             case 16 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:100: T__34
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:100: T__34
                 {
                 mT__34(); 
 
                 }
                 break;
             case 17 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:106: T__35
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:106: T__35
                 {
                 mT__35(); 
 
                 }
                 break;
             case 18 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:112: T__36
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:112: T__36
                 {
                 mT__36(); 
 
                 }
                 break;
             case 19 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:118: T__37
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:118: T__37
                 {
                 mT__37(); 
 
                 }
                 break;
             case 20 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:124: T__38
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:124: T__38
                 {
                 mT__38(); 
 
                 }
                 break;
             case 21 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:130: T__39
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:130: T__39
                 {
                 mT__39(); 
 
                 }
                 break;
             case 22 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:136: T__40
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:136: T__40
                 {
                 mT__40(); 
 
                 }
                 break;
             case 23 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:142: T__41
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:142: T__41
                 {
                 mT__41(); 
 
                 }
                 break;
             case 24 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:148: T__42
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:148: T__42
                 {
                 mT__42(); 
 
                 }
                 break;
             case 25 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:154: T__43
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:154: T__43
                 {
                 mT__43(); 
 
                 }
                 break;
             case 26 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:160: T__44
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:160: T__44
                 {
                 mT__44(); 
 
                 }
                 break;
             case 27 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:166: T__45
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:166: T__45
                 {
                 mT__45(); 
 
                 }
                 break;
             case 28 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:172: T__46
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:172: T__46
                 {
                 mT__46(); 
 
                 }
                 break;
             case 29 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:178: T__47
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:178: T__47
                 {
                 mT__47(); 
 
                 }
                 break;
             case 30 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:184: T__48
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:184: T__48
                 {
                 mT__48(); 
 
                 }
                 break;
             case 31 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:190: T__49
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:190: T__49
                 {
                 mT__49(); 
 
                 }
                 break;
             case 32 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:196: T__50
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:196: T__50
                 {
                 mT__50(); 
 
                 }
                 break;
             case 33 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:202: T__51
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:202: T__51
                 {
                 mT__51(); 
 
                 }
                 break;
             case 34 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:208: T__52
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:208: T__52
                 {
                 mT__52(); 
 
                 }
                 break;
             case 35 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:214: T__53
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:214: T__53
                 {
                 mT__53(); 
 
                 }
                 break;
             case 36 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:220: T__54
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:220: T__54
                 {
                 mT__54(); 
 
                 }
                 break;
             case 37 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:226: T__55
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:226: T__55
                 {
                 mT__55(); 
 
                 }
                 break;
             case 38 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:232: T__56
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:232: T__56
                 {
                 mT__56(); 
 
                 }
                 break;
             case 39 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:238: T__57
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:238: T__57
                 {
                 mT__57(); 
 
                 }
                 break;
             case 40 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:244: T__58
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:244: T__58
                 {
                 mT__58(); 
 
                 }
                 break;
             case 41 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:250: T__59
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:250: T__59
                 {
                 mT__59(); 
 
                 }
                 break;
             case 42 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:256: T__60
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:256: T__60
                 {
                 mT__60(); 
 
                 }
                 break;
             case 43 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:262: T__61
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:262: T__61
                 {
                 mT__61(); 
 
                 }
                 break;
             case 44 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:268: T__62
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:268: T__62
                 {
                 mT__62(); 
 
                 }
                 break;
             case 45 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:274: T__63
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:274: T__63
                 {
                 mT__63(); 
 
                 }
                 break;
             case 46 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:280: T__64
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:280: T__64
                 {
                 mT__64(); 
 
                 }
                 break;
             case 47 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:286: T__65
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:286: T__65
                 {
                 mT__65(); 
 
                 }
                 break;
             case 48 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:292: T__66
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:292: T__66
                 {
                 mT__66(); 
 
                 }
                 break;
             case 49 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:298: T__67
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:298: T__67
                 {
                 mT__67(); 
 
                 }
                 break;
             case 50 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:304: T__68
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:304: T__68
                 {
                 mT__68(); 
 
                 }
                 break;
             case 51 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:310: T__69
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:310: T__69
                 {
                 mT__69(); 
 
                 }
                 break;
             case 52 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:316: T__70
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:316: T__70
                 {
                 mT__70(); 
 
                 }
                 break;
             case 53 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:322: T__71
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:322: T__71
                 {
                 mT__71(); 
 
                 }
                 break;
             case 54 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:328: T__72
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:328: T__72
                 {
                 mT__72(); 
 
                 }
                 break;
             case 55 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:334: T__73
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:334: T__73
                 {
                 mT__73(); 
 
                 }
                 break;
             case 56 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:340: T__74
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:340: T__74
                 {
                 mT__74(); 
 
                 }
                 break;
             case 57 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:346: T__75
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:346: T__75
                 {
                 mT__75(); 
 
                 }
                 break;
             case 58 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:352: T__76
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:352: T__76
                 {
                 mT__76(); 
 
                 }
                 break;
             case 59 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:358: T__77
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:358: T__77
                 {
                 mT__77(); 
 
                 }
                 break;
             case 60 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:364: T__78
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:364: T__78
                 {
                 mT__78(); 
 
                 }
                 break;
             case 61 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:370: T__79
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:370: T__79
                 {
                 mT__79(); 
 
                 }
                 break;
             case 62 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:376: T__80
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:376: T__80
                 {
                 mT__80(); 
 
                 }
                 break;
             case 63 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:382: T__81
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:382: T__81
                 {
                 mT__81(); 
 
                 }
                 break;
             case 64 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:388: T__82
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:388: T__82
                 {
                 mT__82(); 
 
                 }
                 break;
             case 65 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:394: T__83
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:394: T__83
                 {
                 mT__83(); 
 
                 }
                 break;
             case 66 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:400: T__84
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:400: T__84
                 {
                 mT__84(); 
 
                 }
                 break;
             case 67 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:406: T__85
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:406: T__85
                 {
                 mT__85(); 
 
                 }
                 break;
             case 68 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:412: T__86
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:412: T__86
                 {
                 mT__86(); 
 
                 }
                 break;
             case 69 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:418: T__87
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:418: T__87
                 {
                 mT__87(); 
 
                 }
                 break;
             case 70 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:424: T__88
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:424: T__88
                 {
                 mT__88(); 
 
                 }
                 break;
             case 71 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:430: T__89
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:430: T__89
                 {
                 mT__89(); 
 
                 }
                 break;
             case 72 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:436: T__90
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:436: T__90
                 {
                 mT__90(); 
 
                 }
                 break;
             case 73 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:442: T__91
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:442: T__91
                 {
                 mT__91(); 
 
                 }
                 break;
             case 74 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:448: T__92
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:448: T__92
                 {
                 mT__92(); 
 
                 }
                 break;
             case 75 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:454: T__93
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:454: T__93
                 {
                 mT__93(); 
 
                 }
                 break;
             case 76 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:460: T__94
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:460: T__94
                 {
                 mT__94(); 
 
                 }
                 break;
             case 77 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:466: T__95
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:466: T__95
                 {
                 mT__95(); 
 
                 }
                 break;
             case 78 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:472: T__96
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:472: T__96
                 {
                 mT__96(); 
 
                 }
                 break;
             case 79 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:478: T__97
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:478: T__97
                 {
                 mT__97(); 
 
                 }
                 break;
             case 80 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:484: T__98
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:484: T__98
                 {
                 mT__98(); 
 
                 }
                 break;
             case 81 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:490: T__99
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:490: T__99
                 {
                 mT__99(); 
 
                 }
                 break;
             case 82 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:496: T__100
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:496: T__100
                 {
                 mT__100(); 
 
                 }
                 break;
             case 83 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:503: T__101
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:503: T__101
                 {
                 mT__101(); 
 
                 }
                 break;
             case 84 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:510: T__102
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:510: T__102
                 {
                 mT__102(); 
 
                 }
                 break;
             case 85 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:517: T__103
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:517: T__103
                 {
                 mT__103(); 
 
                 }
                 break;
             case 86 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:524: T__104
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:524: T__104
                 {
                 mT__104(); 
 
                 }
                 break;
             case 87 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:531: T__105
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:531: T__105
                 {
                 mT__105(); 
 
                 }
                 break;
             case 88 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:538: T__106
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:538: T__106
                 {
                 mT__106(); 
 
                 }
                 break;
             case 89 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:545: T__107
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:545: T__107
                 {
                 mT__107(); 
 
                 }
                 break;
             case 90 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:552: T__108
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:552: T__108
                 {
                 mT__108(); 
 
                 }
                 break;
             case 91 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:559: T__109
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:559: T__109
                 {
                 mT__109(); 
 
                 }
                 break;
             case 92 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:566: T__110
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:566: T__110
                 {
                 mT__110(); 
 
                 }
                 break;
             case 93 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:573: T__111
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:573: T__111
                 {
                 mT__111(); 
 
                 }
                 break;
             case 94 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:580: T__112
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:580: T__112
                 {
                 mT__112(); 
 
                 }
                 break;
             case 95 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:587: T__113
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:587: T__113
                 {
                 mT__113(); 
 
                 }
                 break;
             case 96 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:594: T__114
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:594: T__114
                 {
                 mT__114(); 
 
                 }
                 break;
             case 97 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:601: T__115
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:601: T__115
                 {
                 mT__115(); 
 
                 }
                 break;
             case 98 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:608: T__116
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:608: T__116
                 {
                 mT__116(); 
 
                 }
                 break;
             case 99 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:615: T__117
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:615: T__117
                 {
                 mT__117(); 
 
                 }
                 break;
             case 100 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:622: T__118
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:622: T__118
                 {
                 mT__118(); 
 
                 }
                 break;
             case 101 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:629: T__119
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:629: T__119
                 {
                 mT__119(); 
 
                 }
                 break;
             case 102 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:636: T__120
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:636: T__120
                 {
                 mT__120(); 
 
                 }
                 break;
             case 103 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:643: T__121
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:643: T__121
                 {
                 mT__121(); 
 
                 }
                 break;
             case 104 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:650: T__122
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:650: T__122
                 {
                 mT__122(); 
 
                 }
                 break;
             case 105 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:657: T__123
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:657: T__123
                 {
                 mT__123(); 
 
                 }
                 break;
             case 106 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:664: T__124
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:664: T__124
                 {
                 mT__124(); 
 
                 }
                 break;
             case 107 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:671: T__125
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:671: T__125
                 {
                 mT__125(); 
 
                 }
                 break;
             case 108 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:678: T__126
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:678: T__126
                 {
                 mT__126(); 
 
                 }
                 break;
             case 109 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:685: T__127
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:685: T__127
                 {
                 mT__127(); 
 
                 }
                 break;
             case 110 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:692: T__128
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:692: T__128
                 {
                 mT__128(); 
 
                 }
                 break;
             case 111 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:699: T__129
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:699: T__129
                 {
                 mT__129(); 
 
                 }
                 break;
             case 112 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:706: T__130
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:706: T__130
                 {
                 mT__130(); 
 
                 }
                 break;
             case 113 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:713: T__131
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:713: T__131
                 {
                 mT__131(); 
 
                 }
                 break;
             case 114 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:720: T__132
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:720: T__132
                 {
                 mT__132(); 
 
                 }
                 break;
             case 115 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:727: T__133
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:727: T__133
                 {
                 mT__133(); 
 
                 }
                 break;
             case 116 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:734: T__134
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:734: T__134
                 {
                 mT__134(); 
 
                 }
                 break;
             case 117 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:741: T__135
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:741: T__135
                 {
                 mT__135(); 
 
                 }
                 break;
             case 118 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:748: T__136
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:748: T__136
                 {
                 mT__136(); 
 
                 }
                 break;
             case 119 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:755: T__137
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:755: T__137
                 {
                 mT__137(); 
 
                 }
                 break;
             case 120 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:762: T__138
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:762: T__138
                 {
                 mT__138(); 
 
                 }
                 break;
             case 121 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:769: T__139
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:769: T__139
                 {
                 mT__139(); 
 
                 }
                 break;
             case 122 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:776: T__140
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:776: T__140
                 {
                 mT__140(); 
 
                 }
                 break;
             case 123 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:783: T__141
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:783: T__141
                 {
                 mT__141(); 
 
                 }
                 break;
             case 124 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:790: T__142
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:790: T__142
                 {
                 mT__142(); 
 
                 }
                 break;
             case 125 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:797: T__143
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:797: T__143
                 {
                 mT__143(); 
 
                 }
                 break;
             case 126 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:804: T__144
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:804: T__144
                 {
                 mT__144(); 
 
                 }
                 break;
             case 127 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:811: T__145
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:811: T__145
                 {
                 mT__145(); 
 
                 }
                 break;
             case 128 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:818: T__146
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:818: T__146
                 {
                 mT__146(); 
 
                 }
                 break;
             case 129 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:825: T__147
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:825: T__147
                 {
                 mT__147(); 
 
                 }
                 break;
             case 130 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:832: T__148
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:832: T__148
                 {
                 mT__148(); 
 
                 }
                 break;
             case 131 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:839: T__149
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:839: T__149
                 {
                 mT__149(); 
 
                 }
                 break;
             case 132 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:846: T__150
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:846: T__150
                 {
                 mT__150(); 
 
                 }
                 break;
             case 133 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:853: T__151
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:853: T__151
                 {
                 mT__151(); 
 
                 }
                 break;
             case 134 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:860: T__152
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:860: T__152
                 {
                 mT__152(); 
 
                 }
                 break;
             case 135 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:867: T__153
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:867: T__153
                 {
                 mT__153(); 
 
                 }
                 break;
             case 136 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:874: T__154
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:874: T__154
                 {
                 mT__154(); 
 
                 }
                 break;
             case 137 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:881: T__155
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:881: T__155
                 {
                 mT__155(); 
 
                 }
                 break;
             case 138 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:888: T__156
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:888: T__156
                 {
                 mT__156(); 
 
                 }
                 break;
             case 139 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:895: T__157
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:895: T__157
                 {
                 mT__157(); 
 
                 }
                 break;
             case 140 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:902: T__158
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:902: T__158
                 {
                 mT__158(); 
 
                 }
                 break;
             case 141 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:909: T__159
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:909: T__159
                 {
                 mT__159(); 
 
                 }
                 break;
             case 142 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:916: T__160
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:916: T__160
                 {
                 mT__160(); 
 
                 }
                 break;
             case 143 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:923: T__161
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:923: T__161
                 {
                 mT__161(); 
 
                 }
                 break;
             case 144 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:930: T__162
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:930: T__162
                 {
                 mT__162(); 
 
                 }
                 break;
             case 145 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:937: T__163
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:937: T__163
                 {
                 mT__163(); 
 
                 }
                 break;
             case 146 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:944: T__164
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:944: T__164
                 {
                 mT__164(); 
 
                 }
                 break;
             case 147 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:951: T__165
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:951: T__165
                 {
                 mT__165(); 
 
                 }
                 break;
             case 148 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:958: T__166
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:958: T__166
                 {
                 mT__166(); 
 
                 }
                 break;
             case 149 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:965: T__167
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:965: T__167
                 {
                 mT__167(); 
 
                 }
                 break;
             case 150 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:972: T__168
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:972: T__168
                 {
                 mT__168(); 
 
                 }
                 break;
             case 151 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:979: T__169
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:979: T__169
                 {
                 mT__169(); 
 
                 }
                 break;
             case 152 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:986: T__170
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:986: T__170
                 {
                 mT__170(); 
 
                 }
                 break;
             case 153 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:993: T__171
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:993: T__171
                 {
                 mT__171(); 
 
                 }
                 break;
             case 154 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:1000: T__172
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:1000: T__172
                 {
                 mT__172(); 
 
                 }
                 break;
             case 155 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:1007: T__173
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:1007: T__173
                 {
                 mT__173(); 
 
                 }
                 break;
             case 156 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:1014: T__174
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:1014: T__174
                 {
                 mT__174(); 
 
                 }
                 break;
             case 157 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:1021: T__175
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:1021: T__175
                 {
                 mT__175(); 
 
                 }
                 break;
             case 158 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:1028: T__176
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:1028: T__176
                 {
                 mT__176(); 
 
                 }
                 break;
             case 159 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:1035: T__177
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:1035: T__177
                 {
                 mT__177(); 
 
                 }
                 break;
             case 160 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:1042: T__178
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:1042: T__178
                 {
                 mT__178(); 
 
                 }
                 break;
             case 161 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:1049: T__179
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:1049: T__179
                 {
                 mT__179(); 
 
                 }
                 break;
             case 162 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:1056: T__180
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:1056: T__180
                 {
                 mT__180(); 
 
                 }
                 break;
             case 163 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:1063: ID
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:1063: ID
                 {
                 mID(); 
 
                 }
                 break;
             case 164 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:1066: INT
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:1066: INT
                 {
                 mINT(); 
 
                 }
                 break;
             case 165 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:1070: FLOAT
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:1070: FLOAT
                 {
                 mFLOAT(); 
 
                 }
                 break;
             case 166 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:1076: COMMENT
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:1076: REGEXP
                 {
-                mCOMMENT(); 
+                mREGEXP(); 
 
                 }
                 break;
             case 167 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:1084: WS
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:1083: WS
                 {
                 mWS(); 
 
                 }
                 break;
             case 168 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:1087: STRING
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:1086: STRING
                 {
                 mSTRING(); 
 
                 }
                 break;
             case 169 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:1094: CHAR
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:1093: CHAR
                 {
                 mCHAR(); 
 
                 }
                 break;
             case 170 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:1099: HTML
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:1098: HTML
                 {
                 mHTML(); 
 
                 }
                 break;
             case 171 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:1104: JS
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:1103: JS
                 {
                 mJS(); 
 
                 }
                 break;
             case 172 :
-                // /Users/ciddennis/Development/sandboxes/cid/parser/ruleset.g:1:1107: REGEXP
+                // /Users/ciddennis/Development/sandboxes/cid/parser/Ruleset.g:1:1106: CMT
                 {
-                mREGEXP(); 
+                mCMT(); 
 
                 }
                 break;
@@ -5978,213 +5979,211 @@ public class rulesetLexer extends Lexer {
             this.transition = DFA10_transition;
         }
         public String getDescription() {
-            return "40:1: FLOAT : ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )? | '.' ( '0' .. '9' )+ ( EXPONENT )? | ( '0' .. '9' )+ EXPONENT );";
+            return "60:1: FLOAT : ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )? | '.' ( '0' .. '9' )+ ( EXPONENT )? | ( '0' .. '9' )+ EXPONENT );";
         }
     }
     static final String DFA24_eotS =
-        "\1\uffff\1\61\2\uffff\1\61\1\uffff\6\61\1\136\1\61\1\uffff\2\61"+
-        "\1\154\1\160\1\61\3\uffff\6\61\1\u008d\1\u008f\1\uffff\1\u0091\2"+
-        "\uffff\1\u0095\3\uffff\1\61\1\u009b\10\61\1\uffff\1\157\3\uffff"+
-        "\3\61\1\u00ab\1\u00ac\1\u00af\11\61\1\u00bc\11\61\1\u00c6\14\61"+
-        "\3\uffff\14\61\6\uffff\4\61\1\u00ef\5\61\1\u00f6\2\61\1\u00fa\1"+
-        "\u00fc\11\61\11\uffff\1\u0094\3\uffff\4\61\2\uffff\17\61\2\uffff"+
-        "\2\61\1\uffff\4\61\1\u012a\5\61\1\u0130\1\61\1\uffff\1\u0132\2\61"+
-        "\1\u0136\1\u0137\4\61\1\uffff\1\u013d\10\61\1\u0146\3\61\1\u014b"+
-        "\15\61\1\u0159\6\61\1\u0160\1\61\1\u0163\3\61\1\uffff\1\u0167\3"+
-        "\61\1\u016c\1\61\1\uffff\3\61\1\uffff\1\61\1\uffff\1\u0173\2\61"+
-        "\1\u0177\7\61\1\u0094\2\uffff\1\u017f\1\uffff\1\u0094\1\uffff\2"+
-        "\61\1\u0183\5\61\1\u0189\1\u018a\2\61\1\u018d\1\61\1\u0190\14\61"+
-        "\1\uffff\1\u019d\4\61\1\uffff\1\61\1\uffff\3\61\2\uffff\1\u01a7"+
-        "\1\u01a8\3\61\1\uffff\1\u01ac\7\61\1\uffff\4\61\1\uffff\1\61\1\u01b9"+
-        "\1\61\1\u01bb\2\61\1\u01be\1\u01bf\1\u01c0\1\u01c1\1\61\1\u01c3"+
-        "\1\61\1\uffff\3\61\1\u01c8\1\u01ca\1\u01cb\1\uffff\1\u01cd\1\61"+
-        "\1\uffff\1\u01cf\1\u01d0\1\61\1\uffff\1\61\1\u01d3\1\61\1\u01d5"+
-        "\1\uffff\5\61\1\u01db\1\uffff\2\61\1\u01de\1\uffff\7\61\1\uffff"+
-        "\1\u017f\1\61\1\u01e7\1\uffff\1\u01e9\1\u01ea\2\61\1\u01ed\2\uffff"+
-        "\1\u01ee\1\u01f0\1\uffff\1\u01f1\1\61\1\uffff\1\u01f3\5\61\1\u01f9"+
-        "\2\61\1\u01fc\2\61\1\uffff\2\61\1\u0201\1\61\1\u0203\1\61\1\u0205"+
-        "\2\61\2\uffff\1\61\1\u0209\1\u020a\1\uffff\3\61\1\u020e\1\u020f"+
-        "\7\61\1\uffff\1\61\1\uffff\1\u0218\1\61\4\uffff\1\61\1\uffff\1\u021b"+
-        "\1\u021d\2\61\1\uffff\1\61\2\uffff\1\u0221\1\uffff\1\61\2\uffff"+
-        "\2\61\1\uffff\1\u0225\1\uffff\1\61\1\u0227\3\61\1\uffff\2\61\1\uffff"+
-        "\10\61\1\uffff\1\u0236\2\uffff\1\61\1\u0238\2\uffff\1\u0239\2\uffff"+
-        "\1\61\1\uffff\5\61\1\uffff\1\u0240\1\61\1\uffff\1\u0242\2\61\1\u0245"+
-        "\1\uffff\1\u0246\1\uffff\1\u0247\1\uffff\1\u0248\2\61\2\uffff\3"+
-        "\61\2\uffff\1\u024e\1\u024f\2\61\1\u0252\1\61\1\u0254\1\u0256\1"+
-        "\uffff\2\61\1\uffff\1\u0259\1\uffff\1\u025a\1\u025c\1\u025d\1\uffff"+
-        "\1\61\1\u025f\1\61\1\uffff\1\u0261\1\uffff\1\u0262\1\u0263\7\61"+
-        "\1\u026b\1\61\1\u026d\1\u026f\1\61\1\uffff\1\61\2\uffff\1\u0272"+
-        "\1\u0273\1\61\1\u0275\2\61\1\uffff\1\u0278\1\uffff\1\u0279\1\61"+
-        "\4\uffff\5\61\2\uffff\1\u0280\1\u0281\1\uffff\1\u0282\1\uffff\1"+
-        "\u0283\1\uffff\1\61\1\u0285\2\uffff\1\u0286\2\uffff\1\u0287\1\uffff"+
-        "\1\61\3\uffff\1\u0289\2\61\1\u028c\3\61\1\uffff\1\61\1\uffff\1\61"+
-        "\1\uffff\1\u0292\1\61\2\uffff\1\u0294\1\uffff\1\u0295\1\61\2\uffff"+
-        "\1\u0297\1\u0298\1\u0299\2\61\1\u029c\4\uffff\1\u029d\3\uffff\1"+
-        "\u029e\1\uffff\1\u029f\1\61\1\uffff\1\61\1\u02a2\3\61\1\uffff\1"+
-        "\61\2\uffff\1\61\3\uffff\1\61\1\u02a9\4\uffff\2\61\1\uffff\5\61"+
-        "\1\u02b1\1\uffff\1\u02b2\1\u02b3\1\u02b4\2\61\1\u02b7\1\61\4\uffff"+
-        "\1\u02b9\1\61\1\uffff\1\u02bb\1\uffff\1\61\1\uffff\2\61\1\u02bf"+
-        "\1\uffff";
+        "\1\uffff\1\62\2\uffff\1\62\1\uffff\6\62\1\136\1\62\1\uffff\2\62"+
+        "\1\154\1\157\1\62\3\uffff\6\62\1\u008d\1\u008f\1\uffff\1\u0091\2"+
+        "\uffff\1\u0094\3\uffff\1\62\1\u009b\11\62\4\uffff\3\62\1\u00ad\1"+
+        "\u00ae\1\u00b1\11\62\1\u00be\11\62\1\u00c8\14\62\3\uffff\14\62\6"+
+        "\uffff\4\62\1\u00f1\5\62\1\u00f8\2\62\1\u00fc\1\u00fe\11\62\11\uffff"+
+        "\1\u0095\3\uffff\4\62\2\uffff\21\62\2\uffff\2\62\1\uffff\4\62\1"+
+        "\u012d\5\62\1\u0133\1\62\1\uffff\1\u0135\2\62\1\u0139\1\u013a\4"+
+        "\62\1\uffff\1\u0140\10\62\1\u0149\3\62\1\u014e\15\62\1\u015c\6\62"+
+        "\1\u0163\1\62\1\u0166\3\62\1\uffff\1\u016a\3\62\1\u016f\1\62\1\uffff"+
+        "\3\62\1\uffff\1\62\1\uffff\1\u0176\2\62\1\u017a\7\62\1\u0095\1\uffff"+
+        "\1\u0182\2\uffff\1\u0095\1\uffff\2\62\1\u0186\5\62\1\u018c\1\u018d"+
+        "\2\62\1\u0190\2\62\1\u0193\14\62\1\uffff\1\u01a0\4\62\1\uffff\1"+
+        "\62\1\uffff\3\62\2\uffff\1\u01aa\1\u01ab\3\62\1\uffff\1\u01af\7"+
+        "\62\1\uffff\4\62\1\uffff\1\62\1\u01bc\1\62\1\u01be\2\62\1\u01c1"+
+        "\1\u01c2\1\u01c3\1\u01c4\1\62\1\u01c6\1\62\1\uffff\3\62\1\u01cb"+
+        "\1\u01cd\1\u01ce\1\uffff\1\u01d0\1\62\1\uffff\1\u01d2\1\u01d3\1"+
+        "\62\1\uffff\1\62\1\u01d6\1\62\1\u01d8\1\uffff\5\62\1\u01de\1\uffff"+
+        "\2\62\1\u01e1\1\uffff\7\62\1\uffff\1\u0095\1\62\1\u01ea\1\uffff"+
+        "\1\u01ec\1\u01ed\2\62\1\u01f0\2\uffff\1\u01f1\1\u01f3\1\uffff\1"+
+        "\u01f4\1\62\1\uffff\1\u01f6\5\62\1\u01fc\2\62\1\u01ff\2\62\1\uffff"+
+        "\2\62\1\u0204\1\62\1\u0206\1\62\1\u0208\2\62\2\uffff\1\62\1\u020c"+
+        "\1\u020d\1\uffff\3\62\1\u0211\1\u0212\7\62\1\uffff\1\62\1\uffff"+
+        "\1\u021b\1\62\4\uffff\1\62\1\uffff\1\u021e\1\u0220\2\62\1\uffff"+
+        "\1\62\2\uffff\1\u0224\1\uffff\1\62\2\uffff\2\62\1\uffff\1\u0228"+
+        "\1\uffff\1\62\1\u022a\3\62\1\uffff\2\62\1\uffff\10\62\1\uffff\1"+
+        "\u0239\2\uffff\1\62\1\u023b\2\uffff\1\u023c\2\uffff\1\62\1\uffff"+
+        "\5\62\1\uffff\1\u0243\1\62\1\uffff\1\u0245\2\62\1\u0248\1\uffff"+
+        "\1\u0249\1\uffff\1\u024a\1\uffff\1\u024b\2\62\2\uffff\3\62\2\uffff"+
+        "\1\u0251\1\u0252\2\62\1\u0255\1\62\1\u0257\1\u0259\1\uffff\2\62"+
+        "\1\uffff\1\u025c\1\uffff\1\u025d\1\u025f\1\u0260\1\uffff\1\62\1"+
+        "\u0262\1\62\1\uffff\1\u0264\1\uffff\1\u0265\1\u0266\7\62\1\u026e"+
+        "\1\62\1\u0270\1\u0272\1\62\1\uffff\1\62\2\uffff\1\u0275\1\u0276"+
+        "\1\62\1\u0278\2\62\1\uffff\1\u027b\1\uffff\1\u027c\1\62\4\uffff"+
+        "\5\62\2\uffff\1\u0283\1\u0284\1\uffff\1\u0285\1\uffff\1\u0286\1"+
+        "\uffff\1\62\1\u0288\2\uffff\1\u0289\2\uffff\1\u028a\1\uffff\1\62"+
+        "\3\uffff\1\u028c\2\62\1\u028f\3\62\1\uffff\1\62\1\uffff\1\62\1\uffff"+
+        "\1\u0295\1\62\2\uffff\1\u0297\1\uffff\1\u0298\1\62\2\uffff\1\u029a"+
+        "\1\u029b\1\u029c\2\62\1\u029f\4\uffff\1\u02a0\3\uffff\1\u02a1\1"+
+        "\uffff\1\u02a2\1\62\1\uffff\1\62\1\u02a5\3\62\1\uffff\1\62\2\uffff"+
+        "\1\62\3\uffff\1\62\1\u02ac\4\uffff\2\62\1\uffff\5\62\1\u02b4\1\uffff"+
+        "\1\u02b5\1\u02b6\1\u02b7\2\62\1\u02ba\1\62\4\uffff\1\u02bc\1\62"+
+        "\1\uffff\1\u02be\1\uffff\1\62\1\uffff\2\62\1\u02c2\1\uffff";
     static final String DFA24_eofS =
-        "\u02c0\uffff";
+        "\u02c3\uffff";
     static final String DFA24_minS =
         "\1\11\1\141\2\uffff\1\146\1\uffff\1\141\1\143\1\141\1\154\1\141"+
         "\1\145\1\75\1\141\1\uffff\1\141\1\145\1\75\1\60\1\141\3\uffff\1"+
         "\141\1\143\1\145\1\146\1\141\1\154\1\55\1\174\1\uffff\1\75\2\uffff"+
         "\1\0\3\uffff\1\141\1\60\1\141\1\165\1\123\1\115\1\123\1\124\2\145"+
-        "\1\uffff\1\56\3\uffff\1\154\1\151\1\160\3\101\1\154\1\151\1\162"+
-        "\1\157\1\156\1\151\1\164\1\144\1\164\1\101\1\160\1\164\1\141\1\164"+
-        "\1\161\1\155\1\163\1\160\1\145\1\101\1\164\1\151\1\162\1\143\1\145"+
-        "\1\141\1\163\1\162\1\142\1\143\1\162\1\154\3\uffff\1\151\1\163\1"+
-        "\145\2\151\1\160\1\144\1\156\2\164\1\145\1\142\6\uffff\1\147\1\163"+
-        "\1\153\1\156\1\101\1\145\1\147\1\143\1\145\1\144\1\101\1\151\1\146"+
-        "\2\101\1\146\1\154\1\164\1\146\1\160\1\155\1\163\2\157\11\uffff"+
-        "\2\0\2\uffff\1\163\1\141\1\163\1\165\2\uffff\1\151\1\166\1\145\1"+
-        "\117\1\114\1\123\1\115\1\141\1\171\1\144\1\145\1\163\1\154\1\157"+
-        "\1\165\2\uffff\1\143\1\145\1\uffff\1\145\1\164\1\154\1\163\1\101"+
-        "\1\155\1\143\2\141\1\151\1\101\1\145\1\uffff\1\101\1\150\1\172\2"+
-        "\101\2\145\1\154\1\156\1\uffff\1\101\1\164\1\157\1\154\1\150\1\143"+
-        "\1\141\1\156\1\157\1\101\1\162\1\143\1\155\1\101\1\145\1\156\1\157"+
-        "\1\164\1\151\1\147\1\145\1\164\1\156\1\154\1\164\1\153\1\143\1\101"+
-        "\1\164\2\165\1\141\1\150\1\156\1\101\1\153\1\101\1\164\1\145\1\147"+
-        "\1\uffff\1\101\1\145\1\153\1\156\1\101\1\141\1\uffff\2\157\1\167"+
-        "\1\uffff\1\145\1\uffff\1\101\1\143\1\141\1\101\1\146\1\160\1\154"+
-        "\1\141\1\143\1\142\1\147\7\0\1\164\1\144\1\101\1\162\1\156\1\141"+
-        "\1\162\1\116\2\101\1\114\1\162\1\101\1\163\1\101\1\145\1\141\1\165"+
-        "\1\151\1\164\1\162\1\144\1\145\1\165\2\145\1\141\1\uffff\1\101\1"+
-        "\164\1\171\1\163\1\166\1\uffff\1\162\1\uffff\2\157\1\151\2\uffff"+
-        "\2\101\1\151\1\164\1\171\1\uffff\1\101\1\162\1\142\1\141\1\153\1"+
-        "\162\1\147\1\163\1\uffff\2\145\2\151\1\uffff\1\143\1\101\1\156\1"+
-        "\101\1\164\1\147\4\101\1\164\1\101\1\150\1\uffff\1\150\1\154\1\164"+
-        "\3\101\1\uffff\1\101\1\151\1\uffff\2\101\1\164\1\uffff\1\166\1\101"+
-        "\1\147\1\101\1\uffff\1\164\1\156\1\165\1\162\1\145\1\101\1\uffff"+
-        "\1\154\1\163\1\101\1\uffff\1\145\1\141\2\151\1\162\1\141\1\154\1"+
-        "\uffff\1\0\1\157\1\101\1\uffff\2\101\1\163\1\171\1\101\2\uffff\2"+
-        "\101\1\uffff\1\101\1\145\1\uffff\1\101\1\143\2\162\1\151\1\163\1"+
-        "\101\2\162\1\101\1\164\1\143\1\uffff\1\151\1\163\1\101\1\145\1\101"+
-        "\1\162\1\101\1\156\1\162\2\uffff\1\143\2\101\1\uffff\1\163\1\141"+
-        "\1\142\2\101\2\145\1\156\1\163\1\164\1\156\1\164\1\uffff\1\144\1"+
-        "\uffff\1\101\1\145\4\uffff\1\145\1\uffff\2\101\2\145\1\uffff\1\156"+
-        "\2\uffff\1\101\1\uffff\1\156\2\uffff\1\150\1\151\1\uffff\1\101\1"+
-        "\uffff\1\145\1\101\3\145\1\uffff\1\151\1\145\1\uffff\1\162\1\164"+
-        "\1\143\1\156\1\151\1\154\1\145\1\162\1\uffff\1\101\2\uffff\1\143"+
-        "\1\101\2\uffff\1\101\2\uffff\1\164\1\uffff\1\145\1\143\1\145\1\166"+
-        "\1\145\1\uffff\1\101\1\145\1\uffff\1\101\1\150\1\157\1\101\1\uffff"+
-        "\1\101\1\uffff\1\101\1\uffff\1\101\1\145\1\151\2\uffff\1\164\1\143"+
-        "\1\154\2\uffff\2\101\1\164\1\163\1\101\1\147\2\101\1\uffff\2\162"+
-        "\1\uffff\1\101\1\uffff\3\101\1\uffff\1\147\1\101\1\145\1\uffff\1"+
-        "\101\1\uffff\2\101\1\156\1\143\1\165\1\164\1\145\1\143\1\141\1\101"+
-        "\1\160\2\101\1\171\1\uffff\1\162\2\uffff\2\101\1\145\1\101\1\145"+
-        "\1\143\1\uffff\1\101\1\uffff\1\101\1\156\4\uffff\1\144\1\164\1\141"+
-        "\1\153\1\145\2\uffff\2\101\1\uffff\1\101\1\uffff\1\101\1\uffff\1"+
-        "\163\1\101\2\uffff\1\101\2\uffff\1\101\1\uffff\1\167\3\uffff\1\101"+
-        "\1\153\1\162\1\101\1\156\1\150\1\164\1\uffff\1\164\1\uffff\1\156"+
-        "\1\uffff\1\101\1\151\2\uffff\1\101\1\uffff\1\101\1\164\2\uffff\3"+
-        "\101\1\143\1\163\1\101\4\uffff\1\101\3\uffff\1\101\1\uffff\1\101"+
-        "\1\143\1\uffff\1\143\1\101\1\145\1\151\1\141\1\uffff\1\160\2\uffff"+
-        "\1\151\3\uffff\1\153\1\101\4\uffff\2\145\1\uffff\1\163\1\157\1\154"+
-        "\1\164\1\157\1\101\1\uffff\3\101\1\156\1\171\1\101\1\156\4\uffff"+
-        "\1\101\1\164\1\uffff\1\101\1\uffff\1\151\1\uffff\1\143\1\163\1\101"+
-        "\1\uffff";
+        "\1\56\4\uffff\1\154\1\151\1\160\3\60\1\154\1\151\1\162\1\157\1\156"+
+        "\1\151\1\164\1\144\1\164\1\60\1\160\1\164\1\141\1\164\1\161\1\155"+
+        "\1\163\1\160\1\145\1\60\1\164\1\151\1\162\1\143\1\145\1\141\1\163"+
+        "\1\162\1\142\1\143\1\162\1\154\3\uffff\1\151\1\163\1\145\2\151\1"+
+        "\160\1\144\1\156\2\164\1\145\1\142\6\uffff\1\147\1\163\1\153\1\156"+
+        "\1\60\1\145\1\147\1\143\1\145\1\144\1\60\1\151\1\146\2\60\1\146"+
+        "\1\154\1\164\1\146\1\160\1\155\1\163\2\157\11\uffff\2\0\2\uffff"+
+        "\1\163\1\141\1\163\1\165\2\uffff\1\151\1\166\1\145\1\117\1\114\1"+
+        "\123\1\115\1\141\1\171\1\144\1\56\1\53\1\145\1\163\1\154\1\157\1"+
+        "\165\2\uffff\1\143\1\145\1\uffff\1\145\1\164\1\154\1\163\1\60\1"+
+        "\155\1\143\2\141\1\151\1\60\1\145\1\uffff\1\60\1\150\1\172\2\60"+
+        "\2\145\1\154\1\156\1\uffff\1\60\1\164\1\157\1\154\1\150\1\143\1"+
+        "\141\1\156\1\157\1\60\1\162\1\143\1\155\1\60\1\145\1\156\1\157\1"+
+        "\164\1\151\1\147\1\145\1\164\1\156\1\154\1\164\1\153\1\143\1\60"+
+        "\1\164\2\165\1\141\1\150\1\156\1\60\1\153\1\60\1\164\1\145\1\147"+
+        "\1\uffff\1\60\1\145\1\153\1\156\1\60\1\141\1\uffff\2\157\1\167\1"+
+        "\uffff\1\145\1\uffff\1\60\1\143\1\141\1\60\1\146\1\160\1\154\1\141"+
+        "\1\143\1\142\1\147\7\0\1\164\1\144\1\60\1\162\1\156\1\141\1\162"+
+        "\1\116\2\60\1\114\1\162\1\60\1\163\2\60\1\145\1\141\1\165\1\151"+
+        "\1\164\1\162\1\144\1\145\1\165\2\145\1\141\1\uffff\1\60\1\164\1"+
+        "\171\1\163\1\166\1\uffff\1\162\1\uffff\2\157\1\151\2\uffff\2\60"+
+        "\1\151\1\164\1\171\1\uffff\1\60\1\162\1\142\1\141\1\153\1\162\1"+
+        "\147\1\163\1\uffff\2\145\2\151\1\uffff\1\143\1\60\1\156\1\60\1\164"+
+        "\1\147\4\60\1\164\1\60\1\150\1\uffff\1\150\1\154\1\164\3\60\1\uffff"+
+        "\1\60\1\151\1\uffff\2\60\1\164\1\uffff\1\166\1\60\1\147\1\60\1\uffff"+
+        "\1\164\1\156\1\165\1\162\1\145\1\60\1\uffff\1\154\1\163\1\60\1\uffff"+
+        "\1\145\1\141\2\151\1\162\1\141\1\154\1\uffff\1\0\1\157\1\60\1\uffff"+
+        "\2\60\1\163\1\171\1\60\2\uffff\2\60\1\uffff\1\60\1\145\1\uffff\1"+
+        "\60\1\143\2\162\1\151\1\163\1\60\2\162\1\60\1\164\1\143\1\uffff"+
+        "\1\151\1\163\1\60\1\145\1\60\1\162\1\60\1\156\1\162\2\uffff\1\143"+
+        "\2\60\1\uffff\1\163\1\141\1\142\2\60\2\145\1\156\1\163\1\164\1\156"+
+        "\1\164\1\uffff\1\144\1\uffff\1\60\1\145\4\uffff\1\145\1\uffff\2"+
+        "\60\2\145\1\uffff\1\156\2\uffff\1\60\1\uffff\1\156\2\uffff\1\150"+
+        "\1\151\1\uffff\1\60\1\uffff\1\145\1\60\3\145\1\uffff\1\151\1\145"+
+        "\1\uffff\1\162\1\164\1\143\1\156\1\151\1\154\1\145\1\162\1\uffff"+
+        "\1\60\2\uffff\1\143\1\60\2\uffff\1\60\2\uffff\1\164\1\uffff\1\145"+
+        "\1\143\1\145\1\166\1\145\1\uffff\1\60\1\145\1\uffff\1\60\1\150\1"+
+        "\157\1\60\1\uffff\1\60\1\uffff\1\60\1\uffff\1\60\1\145\1\151\2\uffff"+
+        "\1\164\1\143\1\154\2\uffff\2\60\1\164\1\163\1\60\1\147\2\60\1\uffff"+
+        "\2\162\1\uffff\1\60\1\uffff\3\60\1\uffff\1\147\1\60\1\145\1\uffff"+
+        "\1\60\1\uffff\2\60\1\156\1\143\1\165\1\164\1\145\1\143\1\141\1\60"+
+        "\1\160\2\60\1\171\1\uffff\1\162\2\uffff\2\60\1\145\1\60\1\145\1"+
+        "\143\1\uffff\1\60\1\uffff\1\60\1\156\4\uffff\1\144\1\164\1\141\1"+
+        "\153\1\145\2\uffff\2\60\1\uffff\1\60\1\uffff\1\60\1\uffff\1\163"+
+        "\1\60\2\uffff\1\60\2\uffff\1\60\1\uffff\1\167\3\uffff\1\60\1\153"+
+        "\1\162\1\60\1\156\1\150\1\164\1\uffff\1\164\1\uffff\1\156\1\uffff"+
+        "\1\60\1\151\2\uffff\1\60\1\uffff\1\60\1\164\2\uffff\3\60\1\143\1"+
+        "\163\1\60\4\uffff\1\60\3\uffff\1\60\1\uffff\1\60\1\143\1\uffff\1"+
+        "\143\1\60\1\145\1\151\1\141\1\uffff\1\160\2\uffff\1\151\3\uffff"+
+        "\1\153\1\60\4\uffff\2\145\1\uffff\1\163\1\157\1\154\1\164\1\157"+
+        "\1\60\1\uffff\3\60\1\156\1\171\1\60\1\156\4\uffff\1\60\1\164\1\uffff"+
+        "\1\60\1\uffff\1\151\1\uffff\1\143\1\163\1\60\1\uffff";
     static final String DFA24_maxS =
         "\1\175\1\165\2\uffff\1\163\1\uffff\2\165\1\157\1\170\2\165\1\76"+
         "\1\167\1\uffff\1\157\1\151\1\75\1\76\1\157\3\uffff\1\162\1\163\1"+
         "\145\1\162\1\165\1\157\2\174\1\uffff\1\75\2\uffff\1\uffff\3\uffff"+
-        "\1\157\1\71\1\157\1\165\1\123\1\115\1\123\1\124\1\145\1\160\1\uffff"+
-        "\1\145\3\uffff\1\154\1\151\1\163\3\172\1\162\1\154\1\162\1\157\1"+
-        "\156\1\167\1\164\1\144\1\164\1\172\1\160\1\164\1\141\1\164\1\161"+
-        "\1\155\1\163\1\160\1\145\1\172\1\164\1\151\1\162\1\154\1\151\1\157"+
-        "\1\163\1\162\1\143\1\164\1\162\1\154\3\uffff\1\165\1\163\1\145\2"+
-        "\151\1\164\2\156\2\164\2\145\6\uffff\1\147\1\163\1\153\1\156\1\172"+
-        "\1\145\1\147\1\143\1\151\1\144\1\172\1\151\1\164\2\172\1\146\1\154"+
-        "\1\171\1\163\1\160\1\155\1\163\2\157\11\uffff\2\uffff\2\uffff\1"+
-        "\163\1\141\1\163\1\165\2\uffff\1\151\1\166\1\145\1\117\1\114\1\123"+
-        "\1\115\1\141\1\171\1\144\1\145\1\163\1\154\1\157\1\165\2\uffff\1"+
-        "\143\1\145\1\uffff\1\145\1\164\1\154\1\163\1\172\1\155\1\143\2\141"+
-        "\1\151\1\172\1\145\1\uffff\1\172\1\150\3\172\2\145\1\154\1\162\1"+
-        "\uffff\1\172\1\164\1\157\1\154\1\150\1\143\1\141\1\156\1\157\1\172"+
-        "\1\162\1\143\1\155\1\172\1\145\1\156\1\157\1\164\1\151\1\147\1\145"+
-        "\1\164\1\156\1\154\1\164\1\153\1\143\1\172\1\164\2\165\1\141\1\150"+
-        "\1\156\1\172\1\153\1\172\1\164\1\145\1\147\1\uffff\1\172\1\145\1"+
-        "\153\1\156\1\172\1\141\1\uffff\1\161\1\157\1\167\1\uffff\1\145\1"+
-        "\uffff\1\172\1\143\1\141\1\172\1\146\1\160\1\154\1\141\1\143\1\142"+
-        "\1\147\7\uffff\1\164\1\144\1\172\1\162\1\156\1\141\1\162\1\116\2"+
-        "\172\1\114\1\162\1\172\1\163\1\172\1\145\1\141\1\165\1\151\1\164"+
-        "\1\162\1\144\1\145\1\165\2\145\1\141\1\uffff\1\172\1\164\1\171\1"+
-        "\163\1\166\1\uffff\1\162\1\uffff\1\172\1\157\1\151\2\uffff\2\172"+
-        "\1\151\1\164\1\171\1\uffff\1\172\1\162\1\142\1\141\1\153\1\162\1"+
-        "\147\1\163\1\uffff\2\145\2\151\1\uffff\1\143\1\172\1\156\1\172\1"+
-        "\164\1\147\4\172\1\164\1\172\1\150\1\uffff\1\150\1\154\1\164\3\172"+
-        "\1\uffff\1\172\1\151\1\uffff\2\172\1\164\1\uffff\1\166\1\172\1\147"+
-        "\1\172\1\uffff\1\164\1\156\1\165\1\162\1\145\1\172\1\uffff\1\154"+
-        "\1\163\1\172\1\uffff\1\145\1\141\2\151\1\162\1\141\1\154\1\uffff"+
-        "\1\uffff\1\157\1\172\1\uffff\2\172\1\163\1\171\1\172\2\uffff\2\172"+
-        "\1\uffff\1\172\1\145\1\uffff\1\172\1\143\2\162\1\151\1\163\1\172"+
-        "\2\162\1\172\1\164\1\143\1\uffff\1\151\1\163\1\172\1\145\1\172\1"+
-        "\162\1\172\1\156\1\162\2\uffff\1\143\2\172\1\uffff\1\163\1\141\1"+
-        "\142\2\172\2\145\1\156\1\163\1\164\1\156\1\164\1\uffff\1\144\1\uffff"+
-        "\1\172\1\145\4\uffff\1\145\1\uffff\2\172\2\145\1\uffff\1\156\2\uffff"+
-        "\1\172\1\uffff\1\156\2\uffff\1\150\1\151\1\uffff\1\172\1\uffff\1"+
-        "\145\1\172\3\145\1\uffff\1\151\1\157\1\uffff\1\162\1\164\1\143\1"+
-        "\156\1\151\1\154\1\145\1\162\1\uffff\1\172\2\uffff\1\143\1\172\2"+
-        "\uffff\1\172\2\uffff\1\164\1\uffff\1\145\1\143\1\145\1\166\1\145"+
-        "\1\uffff\1\172\1\145\1\uffff\1\172\1\150\1\157\1\172\1\uffff\1\172"+
-        "\1\uffff\1\172\1\uffff\1\172\1\145\1\151\2\uffff\1\164\1\143\1\154"+
-        "\2\uffff\2\172\1\164\1\163\1\172\1\147\2\172\1\uffff\2\162\1\uffff"+
-        "\1\172\1\uffff\3\172\1\uffff\1\147\1\172\1\145\1\uffff\1\172\1\uffff"+
-        "\2\172\1\156\1\143\1\165\1\164\1\145\1\143\1\141\1\172\1\160\2\172"+
-        "\1\171\1\uffff\1\162\2\uffff\2\172\1\145\1\172\1\145\1\143\1\uffff"+
-        "\1\172\1\uffff\1\172\1\156\4\uffff\1\144\1\164\1\141\1\153\1\145"+
-        "\2\uffff\2\172\1\uffff\1\172\1\uffff\1\172\1\uffff\1\163\1\172\2"+
-        "\uffff\1\172\2\uffff\1\172\1\uffff\1\167\3\uffff\1\172\1\153\1\162"+
-        "\1\172\1\156\1\150\1\164\1\uffff\1\164\1\uffff\1\156\1\uffff\1\172"+
-        "\1\151\2\uffff\1\172\1\uffff\1\172\1\164\2\uffff\3\172\1\143\1\163"+
-        "\1\172\4\uffff\1\172\3\uffff\1\172\1\uffff\1\172\1\143\1\uffff\1"+
-        "\143\1\172\1\145\1\151\1\141\1\uffff\1\160\2\uffff\1\151\3\uffff"+
-        "\1\153\1\172\4\uffff\2\145\1\uffff\1\163\1\157\1\154\1\164\1\157"+
-        "\1\172\1\uffff\3\172\1\156\1\171\1\172\1\156\4\uffff\1\172\1\164"+
-        "\1\uffff\1\172\1\uffff\1\151\1\uffff\1\143\1\163\1\172\1\uffff";
+        "\1\157\1\71\1\157\1\165\1\123\1\115\1\123\1\124\1\145\1\160\1\145"+
+        "\4\uffff\1\154\1\151\1\163\3\172\1\162\1\154\1\162\1\157\1\156\1"+
+        "\167\1\164\1\144\1\164\1\172\1\160\1\164\1\141\1\164\1\161\1\155"+
+        "\1\163\1\160\1\145\1\172\1\164\1\151\1\162\1\154\1\151\1\157\1\163"+
+        "\1\162\1\143\1\164\1\162\1\154\3\uffff\1\165\1\163\1\145\2\151\1"+
+        "\164\2\156\2\164\2\145\6\uffff\1\147\1\163\1\153\1\156\1\172\1\145"+
+        "\1\147\1\143\1\151\1\144\1\172\1\151\1\164\2\172\1\146\1\154\1\171"+
+        "\1\163\1\160\1\155\1\163\2\157\11\uffff\2\uffff\2\uffff\1\163\1"+
+        "\141\1\163\1\165\2\uffff\1\151\1\166\1\145\1\117\1\114\1\123\1\115"+
+        "\1\141\1\171\1\144\1\145\1\71\1\145\1\163\1\154\1\157\1\165\2\uffff"+
+        "\1\143\1\145\1\uffff\1\145\1\164\1\154\1\163\1\172\1\155\1\143\2"+
+        "\141\1\151\1\172\1\145\1\uffff\1\172\1\150\3\172\2\145\1\154\1\162"+
+        "\1\uffff\1\172\1\164\1\157\1\154\1\150\1\143\1\141\1\156\1\157\1"+
+        "\172\1\162\1\143\1\155\1\172\1\145\1\156\1\157\1\164\1\151\1\147"+
+        "\1\145\1\164\1\156\1\154\1\164\1\153\1\143\1\172\1\164\2\165\1\141"+
+        "\1\150\1\156\1\172\1\153\1\172\1\164\1\145\1\147\1\uffff\1\172\1"+
+        "\145\1\153\1\156\1\172\1\141\1\uffff\1\161\1\157\1\167\1\uffff\1"+
+        "\145\1\uffff\1\172\1\143\1\141\1\172\1\146\1\160\1\154\1\141\1\143"+
+        "\1\142\1\147\7\uffff\1\164\1\144\1\172\1\162\1\156\1\141\1\162\1"+
+        "\116\2\172\1\114\1\162\1\172\1\163\1\71\1\172\1\145\1\141\1\165"+
+        "\1\151\1\164\1\162\1\144\1\145\1\165\2\145\1\141\1\uffff\1\172\1"+
+        "\164\1\171\1\163\1\166\1\uffff\1\162\1\uffff\1\172\1\157\1\151\2"+
+        "\uffff\2\172\1\151\1\164\1\171\1\uffff\1\172\1\162\1\142\1\141\1"+
+        "\153\1\162\1\147\1\163\1\uffff\2\145\2\151\1\uffff\1\143\1\172\1"+
+        "\156\1\172\1\164\1\147\4\172\1\164\1\172\1\150\1\uffff\1\150\1\154"+
+        "\1\164\3\172\1\uffff\1\172\1\151\1\uffff\2\172\1\164\1\uffff\1\166"+
+        "\1\172\1\147\1\172\1\uffff\1\164\1\156\1\165\1\162\1\145\1\172\1"+
+        "\uffff\1\154\1\163\1\172\1\uffff\1\145\1\141\2\151\1\162\1\141\1"+
+        "\154\1\uffff\1\uffff\1\157\1\172\1\uffff\2\172\1\163\1\171\1\172"+
+        "\2\uffff\2\172\1\uffff\1\172\1\145\1\uffff\1\172\1\143\2\162\1\151"+
+        "\1\163\1\172\2\162\1\172\1\164\1\143\1\uffff\1\151\1\163\1\172\1"+
+        "\145\1\172\1\162\1\172\1\156\1\162\2\uffff\1\143\2\172\1\uffff\1"+
+        "\163\1\141\1\142\2\172\2\145\1\156\1\163\1\164\1\156\1\164\1\uffff"+
+        "\1\144\1\uffff\1\172\1\145\4\uffff\1\145\1\uffff\2\172\2\145\1\uffff"+
+        "\1\156\2\uffff\1\172\1\uffff\1\156\2\uffff\1\150\1\151\1\uffff\1"+
+        "\172\1\uffff\1\145\1\172\3\145\1\uffff\1\151\1\157\1\uffff\1\162"+
+        "\1\164\1\143\1\156\1\151\1\154\1\145\1\162\1\uffff\1\172\2\uffff"+
+        "\1\143\1\172\2\uffff\1\172\2\uffff\1\164\1\uffff\1\145\1\143\1\145"+
+        "\1\166\1\145\1\uffff\1\172\1\145\1\uffff\1\172\1\150\1\157\1\172"+
+        "\1\uffff\1\172\1\uffff\1\172\1\uffff\1\172\1\145\1\151\2\uffff\1"+
+        "\164\1\143\1\154\2\uffff\2\172\1\164\1\163\1\172\1\147\2\172\1\uffff"+
+        "\2\162\1\uffff\1\172\1\uffff\3\172\1\uffff\1\147\1\172\1\145\1\uffff"+
+        "\1\172\1\uffff\2\172\1\156\1\143\1\165\1\164\1\145\1\143\1\141\1"+
+        "\172\1\160\2\172\1\171\1\uffff\1\162\2\uffff\2\172\1\145\1\172\1"+
+        "\145\1\143\1\uffff\1\172\1\uffff\1\172\1\156\4\uffff\1\144\1\164"+
+        "\1\141\1\153\1\145\2\uffff\2\172\1\uffff\1\172\1\uffff\1\172\1\uffff"+
+        "\1\163\1\172\2\uffff\1\172\2\uffff\1\172\1\uffff\1\167\3\uffff\1"+
+        "\172\1\153\1\162\1\172\1\156\1\150\1\164\1\uffff\1\164\1\uffff\1"+
+        "\156\1\uffff\1\172\1\151\2\uffff\1\172\1\uffff\1\172\1\164\2\uffff"+
+        "\3\172\1\143\1\163\1\172\4\uffff\1\172\3\uffff\1\172\1\uffff\1\172"+
+        "\1\143\1\uffff\1\143\1\172\1\145\1\151\1\141\1\uffff\1\160\2\uffff"+
+        "\1\151\3\uffff\1\153\1\172\4\uffff\2\145\1\uffff\1\163\1\157\1\154"+
+        "\1\164\1\157\1\172\1\uffff\3\172\1\156\1\171\1\172\1\156\4\uffff"+
+        "\1\172\1\164\1\uffff\1\172\1\uffff\1\151\1\uffff\1\143\1\163\1\172"+
+        "\1\uffff";
     static final String DFA24_acceptS =
         "\2\uffff\1\2\1\3\1\uffff\1\6\10\uffff\1\24\5\uffff\1\47\1\50\1\51"+
-        "\10\uffff\1\105\1\uffff\1\113\1\121\1\uffff\1\123\1\130\1\131\12"+
-        "\uffff\1\u00a3\1\uffff\1\u00a7\1\u00a8\1\u00a9\46\uffff\1\52\1\112"+
-        "\1\21\14\uffff\1\32\1\117\1\33\1\u008d\1\u00a4\1\120\30\uffff\1"+
-        "\100\1\106\1\u00aa\1\u00ab\1\110\1\104\1\103\1\107\1\111\2\uffff"+
-        "\1\u00ac\1\122\4\uffff\1\u00a5\1\134\17\uffff\1\5\1\13\2\uffff\1"+
-        "\27\14\uffff\1\141\11\uffff\1\114\50\uffff\1\150\6\uffff\1\147\3"+
-        "\uffff\1\64\1\uffff\1\75\55\uffff\1\42\5\uffff\1\53\1\uffff\1\165"+
-        "\3\uffff\1\65\1\115\5\uffff\1\164\10\uffff\1\101\4\uffff\1\25\15"+
-        "\uffff\1\146\6\uffff\1\74\2\uffff\1\35\3\uffff\1\56\4\uffff\1\u0098"+
-        "\6\uffff\1\u00a0\3\uffff\1\u0087\7\uffff\1\u00a6\3\uffff\1\154\5"+
-        "\uffff\1\171\1\172\2\uffff\1\u0091\2\uffff\1\4\14\uffff\1\34\11"+
-        "\uffff\1\u008f\1\12\3\uffff\1\166\14\uffff\1\124\1\uffff\1\144\2"+
-        "\uffff\1\126\1\45\1\46\1\143\1\uffff\1\30\4\uffff\1\u008e\1\uffff"+
-        "\1\31\1\62\1\uffff\1\u0086\1\uffff\1\36\1\116\2\uffff\1\135\1\uffff"+
-        "\1\u009e\5\uffff\1\161\2\uffff\1\u0080\10\uffff\1\142\1\uffff\1"+
-        "\u0088\1\152\2\uffff\1\170\1\173\1\uffff\1\u0084\1\u0096\1\uffff"+
-        "\1\37\5\uffff\1\7\2\uffff\1\127\4\uffff\1\u00a1\1\uffff\1\125\1"+
-        "\uffff\1\u009c\3\uffff\1\41\1\55\3\uffff\1\17\1\23\10\uffff\1\151"+
-        "\2\uffff\1\136\1\uffff\1\u0085\3\uffff\1\177\3\uffff\1\61\1\uffff"+
-        "\1\155\16\uffff\1\u0081\1\uffff\1\153\1\175\6\uffff\1\145\1\uffff"+
-        "\1\26\2\uffff\1\10\1\43\1\u0090\1\u0095\5\uffff\1\20\1\54\2\uffff"+
-        "\1\70\1\uffff\1\60\1\uffff\1\u008a\2\uffff\1\176\1\u0099\1\uffff"+
-        "\1\u0089\1\163\1\uffff\1\137\1\uffff\1\72\1\160\1\63\7\uffff\1\u008c"+
-        "\1\uffff\1\76\1\uffff\1\u0097\2\uffff\1\1\1\140\1\uffff\1\u009d"+
-        "\2\uffff\1\16\1\57\6\uffff\1\132\1\15\1\73\1\u0083\1\uffff\1\u0094"+
-        "\1\u0082\1\u009f\1\uffff\1\66\2\uffff\1\167\5\uffff\1\133\1\uffff"+
-        "\1\u009b\1\44\1\uffff\1\102\1\11\1\40\2\uffff\1\174\1\22\1\67\1"+
-        "\71\2\uffff\1\u008b\6\uffff\1\14\7\uffff\1\u0092\1\77\1\156\1\162"+
-        "\2\uffff\1\u009a\1\uffff\1\u00a2\1\uffff\1\157\3\uffff\1\u0093";
+        "\10\uffff\1\105\1\uffff\1\113\1\121\1\uffff\1\123\1\130\1\131\13"+
+        "\uffff\1\u00a3\1\u00a7\1\u00a8\1\u00a9\46\uffff\1\52\1\112\1\21"+
+        "\14\uffff\1\32\1\117\1\33\1\u008d\1\120\1\u00a4\30\uffff\1\100\1"+
+        "\106\1\u00aa\1\u00ab\1\110\1\104\1\103\1\107\1\111\2\uffff\1\122"+
+        "\1\u00a6\4\uffff\1\u00a5\1\134\21\uffff\1\5\1\13\2\uffff\1\27\14"+
+        "\uffff\1\141\11\uffff\1\114\50\uffff\1\150\6\uffff\1\147\3\uffff"+
+        "\1\64\1\uffff\1\75\56\uffff\1\42\5\uffff\1\53\1\uffff\1\165\3\uffff"+
+        "\1\65\1\115\5\uffff\1\164\10\uffff\1\101\4\uffff\1\25\15\uffff\1"+
+        "\146\6\uffff\1\74\2\uffff\1\35\3\uffff\1\56\4\uffff\1\u0097\6\uffff"+
+        "\1\u00a0\3\uffff\1\u0087\7\uffff\1\u00ac\3\uffff\1\154\5\uffff\1"+
+        "\171\1\172\2\uffff\1\u0090\2\uffff\1\4\14\uffff\1\34\11\uffff\1"+
+        "\u009b\1\12\3\uffff\1\166\14\uffff\1\124\1\uffff\1\144\2\uffff\1"+
+        "\126\1\45\1\46\1\143\1\uffff\1\30\4\uffff\1\u008e\1\uffff\1\31\1"+
+        "\62\1\uffff\1\u0086\1\uffff\1\36\1\116\2\uffff\1\135\1\uffff\1\u009e"+
+        "\5\uffff\1\161\2\uffff\1\u0080\10\uffff\1\142\1\uffff\1\u0088\1"+
+        "\152\2\uffff\1\170\1\173\1\uffff\1\u0084\1\u0095\1\uffff\1\37\5"+
+        "\uffff\1\7\2\uffff\1\127\4\uffff\1\u00a1\1\uffff\1\125\1\uffff\1"+
+        "\u009c\3\uffff\1\41\1\55\3\uffff\1\17\1\23\10\uffff\1\151\2\uffff"+
+        "\1\136\1\uffff\1\u0085\3\uffff\1\177\3\uffff\1\61\1\uffff\1\155"+
+        "\16\uffff\1\u0081\1\uffff\1\153\1\175\6\uffff\1\145\1\uffff\1\26"+
+        "\2\uffff\1\10\1\43\1\u008f\1\u0094\5\uffff\1\20\1\54\2\uffff\1\70"+
+        "\1\uffff\1\60\1\uffff\1\u008a\2\uffff\1\176\1\u0098\1\uffff\1\u0089"+
+        "\1\163\1\uffff\1\137\1\uffff\1\72\1\160\1\63\7\uffff\1\u008c\1\uffff"+
+        "\1\76\1\uffff\1\u0096\2\uffff\1\1\1\140\1\uffff\1\u009d\2\uffff"+
+        "\1\16\1\57\6\uffff\1\132\1\15\1\73\1\u0083\1\uffff\1\u0093\1\u0082"+
+        "\1\u009f\1\uffff\1\66\2\uffff\1\167\5\uffff\1\133\1\uffff\1\u009a"+
+        "\1\44\1\uffff\1\102\1\11\1\40\2\uffff\1\174\1\22\1\67\1\71\2\uffff"+
+        "\1\u008b\6\uffff\1\14\7\uffff\1\u0091\1\77\1\156\1\162\2\uffff\1"+
+        "\u0099\1\uffff\1\u00a2\1\uffff\1\157\3\uffff\1\u0092";
     static final String DFA24_specialS =
-        "\43\uffff\1\3\156\uffff\1\7\1\10\164\uffff\1\5\1\4\1\11\1\2\1\6"+
-        "\1\12\1\1\161\uffff\1\0\u013f\uffff}>";
+        "\43\uffff\1\5\156\uffff\1\2\1\1\166\uffff\1\11\1\4\1\6\1\12\1\7"+
+        "\1\0\1\3\162\uffff\1\10\u013f\uffff}>";
     static final String[] DFA24_transitionS = {
             "\2\63\2\uffff\1\63\22\uffff\1\63\1\41\1\64\2\uffff\1\44\1\37"+
-            "\1\65\1\24\1\26\1\42\1\21\1\25\1\22\1\50\1\43\12\62\1\16\1\5"+
-            "\1\35\1\14\1\40\2\uffff\7\61\1\56\1\61\1\53\7\61\1\55\5\61\1"+
-            "\54\2\61\1\45\1\uffff\1\46\1\uffff\1\61\1\uffff\1\7\1\31\1\12"+
+            "\1\65\1\24\1\26\1\42\1\21\1\25\1\22\1\50\1\43\12\61\1\16\1\5"+
+            "\1\35\1\14\1\40\2\uffff\7\62\1\56\1\62\1\53\7\62\1\55\5\62\1"+
+            "\54\2\62\1\45\1\uffff\1\46\1\uffff\1\62\1\uffff\1\7\1\31\1\12"+
             "\1\33\1\11\1\6\1\34\1\47\1\4\1\51\1\60\1\23\1\17\1\10\1\32\1"+
-            "\27\1\52\1\1\1\13\1\15\1\30\1\61\1\20\1\61\1\57\1\61\1\2\1\36"+
+            "\27\1\52\1\1\1\13\1\15\1\30\1\62\1\20\1\62\1\57\1\62\1\2\1\36"+
             "\1\3",
             "\1\67\3\uffff\1\70\17\uffff\1\66",
             "",
@@ -6207,7 +6206,7 @@ public class rulesetLexer extends Lexer {
             "\1\144\3\uffff\1\147\3\uffff\1\146\5\uffff\1\145",
             "\1\152\2\uffff\1\151\1\150",
             "\1\153",
-            "\12\157\3\uffff\1\155\1\156",
+            "\12\160\3\uffff\1\155\1\156",
             "\1\162\1\uffff\1\165\1\uffff\1\164\3\uffff\1\163\5\uffff\1"+
             "\161",
             "",
@@ -6226,7 +6225,7 @@ public class rulesetLexer extends Lexer {
             "\1\u0090",
             "",
             "",
-            "\52\u0094\1\u0093\4\u0094\1\u0092\uffd0\u0094",
+            "\52\u0095\1\u0093\4\u0095\1\u0092\uffd0\u0095",
             "",
             "",
             "",
@@ -6240,29 +6239,28 @@ public class rulesetLexer extends Lexer {
             "\1\u00a2",
             "\1\u00a3",
             "\1\u00a4\12\uffff\1\u00a5",
-            "",
-            "\1\u009a\1\uffff\12\62\13\uffff\1\u009a\37\uffff\1\u009a",
-            "",
+            "\1\u009a\1\uffff\12\u00a6\13\uffff\1\u00a7\37\uffff\1\u00a7",
             "",
             "",
-            "\1\u00a6",
-            "\1\u00a7",
-            "\1\u00a8\1\u00aa\1\uffff\1\u00a9",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
-            "\32\61\4\uffff\1\61\1\uffff\1\u00ad\22\61\1\u00ae\6\61",
-            "\1\u00b1\5\uffff\1\u00b0",
-            "\1\u00b2\2\uffff\1\u00b3",
-            "\1\u00b4",
-            "\1\u00b5",
+            "",
+            "",
+            "\1\u00a8",
+            "\1\u00a9",
+            "\1\u00aa\1\u00ac\1\uffff\1\u00ab",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\1\u00af\22\62\1\u00b0"+
+            "\6\62",
+            "\1\u00b3\5\uffff\1\u00b2",
+            "\1\u00b4\2\uffff\1\u00b5",
             "\1\u00b6",
-            "\1\u00b8\15\uffff\1\u00b7",
-            "\1\u00b9",
-            "\1\u00ba",
+            "\1\u00b7",
+            "\1\u00b8",
+            "\1\u00ba\15\uffff\1\u00b9",
             "\1\u00bb",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\1\u00bc",
             "\1\u00bd",
-            "\1\u00be",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
             "\1\u00bf",
             "\1\u00c0",
             "\1\u00c1",
@@ -6270,64 +6268,66 @@ public class rulesetLexer extends Lexer {
             "\1\u00c3",
             "\1\u00c4",
             "\1\u00c5",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\1\u00c6",
             "\1\u00c7",
-            "\1\u00c8",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
             "\1\u00c9",
-            "\1\u00cb\10\uffff\1\u00ca",
-            "\1\u00cd\3\uffff\1\u00cc",
-            "\1\u00ce\15\uffff\1\u00cf",
-            "\1\u00d0",
-            "\1\u00d1",
-            "\1\u00d3\1\u00d2",
-            "\1\u00d7\1\uffff\1\u00d6\6\uffff\1\u00d5\7\uffff\1\u00d4",
-            "\1\u00d8",
-            "\1\u00d9",
+            "\1\u00ca",
+            "\1\u00cb",
+            "\1\u00cd\10\uffff\1\u00cc",
+            "\1\u00cf\3\uffff\1\u00ce",
+            "\1\u00d0\15\uffff\1\u00d1",
+            "\1\u00d2",
+            "\1\u00d3",
+            "\1\u00d5\1\u00d4",
+            "\1\u00d9\1\uffff\1\u00d8\6\uffff\1\u00d7\7\uffff\1\u00d6",
+            "\1\u00da",
+            "\1\u00db",
             "",
             "",
             "",
-            "\1\u00da\13\uffff\1\u00db",
-            "\1\u00dc",
-            "\1\u00dd",
+            "\1\u00dc\13\uffff\1\u00dd",
             "\1\u00de",
             "\1\u00df",
-            "\1\u00e2\1\uffff\1\u00e0\1\uffff\1\u00e1",
-            "\1\u00e4\11\uffff\1\u00e3",
-            "\1\u00e5",
-            "\1\u00e6",
+            "\1\u00e0",
+            "\1\u00e1",
+            "\1\u00e4\1\uffff\1\u00e2\1\uffff\1\u00e3",
+            "\1\u00e6\11\uffff\1\u00e5",
             "\1\u00e7",
             "\1\u00e8",
-            "\1\u00e9\2\uffff\1\u00ea",
+            "\1\u00e9",
+            "\1\u00ea",
+            "\1\u00eb\2\uffff\1\u00ec",
             "",
             "",
             "",
             "",
             "",
             "",
-            "\1\u00eb",
-            "\1\u00ec",
             "\1\u00ed",
             "\1\u00ee",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\1\u00ef",
             "\1\u00f0",
-            "\1\u00f1",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
             "\1\u00f2",
-            "\1\u00f4\3\uffff\1\u00f3",
-            "\1\u00f5",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\1\u00f3",
+            "\1\u00f4",
+            "\1\u00f6\3\uffff\1\u00f5",
             "\1\u00f7",
-            "\1\u00f8\15\uffff\1\u00f9",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
-            "\32\61\4\uffff\1\61\1\uffff\2\61\1\u00fb\27\61",
-            "\1\u00fd",
-            "\1\u00fe",
-            "\1\u00ff\4\uffff\1\u0100",
-            "\1\u0101\14\uffff\1\u0102",
-            "\1\u0103",
-            "\1\u0104",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
+            "\1\u00f9",
+            "\1\u00fa\15\uffff\1\u00fb",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\2\62\1\u00fd\27\62",
+            "\1\u00ff",
+            "\1\u0100",
+            "\1\u0101\4\uffff\1\u0102",
+            "\1\u0103\14\uffff\1\u0104",
             "\1\u0105",
             "\1\u0106",
             "\1\u0107",
+            "\1\u0108",
+            "\1\u0109",
             "",
             "",
             "",
@@ -6337,18 +6337,16 @@ public class rulesetLexer extends Lexer {
             "",
             "",
             "",
-            "\12\u0109\1\u010b\2\u0109\1\u010a\41\u0109\1\u0108\uffd0\u0109",
-            "\52\u010e\1\u010c\4\u010e\1\u010d\uffd0\u010e",
+            "\12\u010d\1\u010c\2\u010d\1\u010b\41\u010d\1\u010a\uffd0\u010d",
+            "\52\u0110\1\u010e\4\u0110\1\u010f\uffd0\u0110",
             "",
             "",
-            "\1\u010f",
-            "\1\u0110",
             "\1\u0111",
             "\1\u0112",
-            "",
-            "",
             "\1\u0113",
             "\1\u0114",
+            "",
+            "",
             "\1\u0115",
             "\1\u0116",
             "\1\u0117",
@@ -6359,54 +6357,56 @@ public class rulesetLexer extends Lexer {
             "\1\u011c",
             "\1\u011d",
             "\1\u011e",
-            "\1\u011f",
+            "\1\u009a\1\uffff\12\u00a6\13\uffff\1\u00a7\37\uffff\1\u00a7",
+            "\1\u009a\1\uffff\1\u009a\2\uffff\12\u011f",
             "\1\u0120",
             "\1\u0121",
-            "",
-            "",
             "\1\u0122",
             "\1\u0123",
-            "",
             "\1\u0124",
+            "",
+            "",
             "\1\u0125",
             "\1\u0126",
+            "",
             "\1\u0127",
-            "\32\61\4\uffff\1\61\1\uffff\4\61\1\u0129\1\61\1\u0128\23\61",
-            "\1\u012b",
-            "\1\u012c",
-            "\1\u012d",
+            "\1\u0128",
+            "\1\u0129",
+            "\1\u012a",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\4\62\1\u012c\1\62"+
+            "\1\u012b\23\62",
             "\1\u012e",
             "\1\u012f",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\1\u0130",
             "\1\u0131",
-            "",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
-            "\1\u0133",
+            "\1\u0132",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
             "\1\u0134",
-            "\32\61\4\uffff\1\61\1\uffff\5\61\1\u0135\24\61",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
-            "\1\u0138",
-            "\1\u0139",
-            "\1\u013a",
-            "\1\u013b\3\uffff\1\u013c",
             "",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
-            "\1\u013e",
-            "\1\u013f",
-            "\1\u0140",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
+            "\1\u0136",
+            "\1\u0137",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\5\62\1\u0138\24\62",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
+            "\1\u013b",
+            "\1\u013c",
+            "\1\u013d",
+            "\1\u013e\3\uffff\1\u013f",
+            "",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
             "\1\u0141",
             "\1\u0142",
             "\1\u0143",
             "\1\u0144",
             "\1\u0145",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\1\u0146",
             "\1\u0147",
             "\1\u0148",
-            "\1\u0149",
-            "\32\61\4\uffff\1\61\1\uffff\23\61\1\u014a\6\61",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
+            "\1\u014a",
+            "\1\u014b",
             "\1\u014c",
-            "\1\u014d",
-            "\1\u014e",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\23\62\1\u014d\6\62",
             "\1\u014f",
             "\1\u0150",
             "\1\u0151",
@@ -6417,69 +6417,71 @@ public class rulesetLexer extends Lexer {
             "\1\u0156",
             "\1\u0157",
             "\1\u0158",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\1\u0159",
             "\1\u015a",
             "\1\u015b",
-            "\1\u015c",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
             "\1\u015d",
             "\1\u015e",
             "\1\u015f",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\1\u0160",
             "\1\u0161",
-            "\32\61\4\uffff\1\61\1\uffff\6\61\1\u0162\23\61",
+            "\1\u0162",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
             "\1\u0164",
-            "\1\u0165",
-            "\1\u0166",
-            "",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\6\62\1\u0165\23\62",
+            "\1\u0167",
             "\1\u0168",
             "\1\u0169",
-            "\1\u016a",
-            "\32\61\4\uffff\1\61\1\uffff\21\61\1\u016b\10\61",
+            "",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
+            "\1\u016b",
+            "\1\u016c",
             "\1\u016d",
-            "",
-            "\1\u016e\1\uffff\1\u016f",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\21\62\1\u016e\10"+
+            "\62",
             "\1\u0170",
-            "\1\u0171",
             "",
-            "\1\u0172",
-            "",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\1\u0171\1\uffff\1\u0172",
+            "\1\u0173",
             "\1\u0174",
+            "",
             "\1\u0175",
-            "\32\61\4\uffff\1\61\1\uffff\22\61\1\u0176\7\61",
+            "",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
+            "\1\u0177",
             "\1\u0178",
-            "\1\u0179",
-            "\1\u017a",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\22\62\1\u0179\7\62",
             "\1\u017b",
             "\1\u017c",
             "\1\u017d",
             "\1\u017e",
-            "\12\u0109\1\u010b\2\u0109\1\u010a\41\u0109\1\u0108\uffd0\u0109",
-            "\12\u0109\1\u010b\2\u0109\1\u010a\41\u0109\1\u0108\uffd0\u0109",
-            "\12\u0094\1\u010b\ufff5\u0094",
-            "\0\u0094",
-            "\52\u010e\1\u010c\4\u010e\1\u0180\uffd0\u010e",
-            "\52\u010e\1\u010c\4\u010e\1\u010d\uffd0\u010e",
-            "\52\u010e\1\u010c\4\u010e\1\u010d\uffd0\u010e",
+            "\1\u017f",
+            "\1\u0180",
             "\1\u0181",
-            "\1\u0182",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\12\u010d\1\u010c\2\u010d\1\u010b\41\u010d\1\u010a\uffd0\u010d",
+            "\12\u0095\1\u010c\ufff5\u0095",
+            "\0\u0095",
+            "\12\u010d\1\u010c\2\u010d\1\u010b\41\u010d\1\u010a\uffd0\u010d",
+            "\52\u0110\1\u010e\4\u0110\1\u0183\uffd0\u0110",
+            "\52\u0110\1\u010e\4\u0110\1\u010f\uffd0\u0110",
+            "\52\u0110\1\u010e\4\u0110\1\u010f\uffd0\u0110",
             "\1\u0184",
             "\1\u0185",
-            "\1\u0186",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
             "\1\u0187",
             "\1\u0188",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\1\u0189",
+            "\1\u018a",
             "\1\u018b",
-            "\1\u018c",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
             "\1\u018e",
-            "\32\61\4\uffff\1\61\1\uffff\22\61\1\u018f\7\61",
+            "\1\u018f",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
             "\1\u0191",
-            "\1\u0192",
-            "\1\u0193",
+            "\12\u011f",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\22\62\1\u0192\7\62",
             "\1\u0194",
             "\1\u0195",
             "\1\u0196",
@@ -6489,411 +6491,415 @@ public class rulesetLexer extends Lexer {
             "\1\u019a",
             "\1\u019b",
             "\1\u019c",
-            "",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\1\u019d",
             "\1\u019e",
             "\1\u019f",
-            "\1\u01a0",
+            "",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
             "\1\u01a1",
-            "",
             "\1\u01a2",
+            "\1\u01a3",
+            "\1\u01a4",
             "",
-            "\1\u01a3\12\uffff\1\u01a4",
             "\1\u01a5",
-            "\1\u01a6",
             "",
-            "",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\1\u01a6\12\uffff\1\u01a7",
+            "\1\u01a8",
             "\1\u01a9",
-            "\1\u01aa",
-            "\1\u01ab",
             "",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
+            "",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
+            "\1\u01ac",
             "\1\u01ad",
             "\1\u01ae",
-            "\1\u01af",
+            "",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
             "\1\u01b0",
             "\1\u01b1",
             "\1\u01b2",
             "\1\u01b3",
-            "",
             "\1\u01b4",
             "\1\u01b5",
             "\1\u01b6",
+            "",
             "\1\u01b7",
-            "",
             "\1\u01b8",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\1\u01b9",
             "\1\u01ba",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
-            "\1\u01bc",
+            "",
+            "\1\u01bb",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
             "\1\u01bd",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
-            "\1\u01c2",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
-            "\1\u01c4",
-            "",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
+            "\1\u01bf",
+            "\1\u01c0",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
             "\1\u01c5",
-            "\1\u01c6",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
             "\1\u01c7",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
-            "\32\61\4\uffff\1\61\1\uffff\10\61\1\u01c9\21\61",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
             "",
-            "\32\61\4\uffff\1\61\1\uffff\22\61\1\u01cc\7\61",
-            "\1\u01ce",
+            "\1\u01c8",
+            "\1\u01c9",
+            "\1\u01ca",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\10\62\1\u01cc\21"+
+            "\62",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
             "",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\22\62\1\u01cf\7\62",
             "\1\u01d1",
             "",
-            "\1\u01d2",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
             "\1\u01d4",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
             "",
-            "\1\u01d6",
+            "\1\u01d5",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
             "\1\u01d7",
-            "\1\u01d8",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
+            "",
             "\1\u01d9",
             "\1\u01da",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
-            "",
+            "\1\u01db",
             "\1\u01dc",
             "\1\u01dd",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
             "",
             "\1\u01df",
             "\1\u01e0",
-            "\1\u01e1",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
+            "",
             "\1\u01e2",
             "\1\u01e3",
             "\1\u01e4",
             "\1\u01e5",
-            "",
-            "\52\u010e\1\u010c\4\u010e\1\u010d\uffd0\u010e",
             "\1\u01e6",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\1\u01e7",
+            "\1\u01e8",
             "",
-            "\32\61\4\uffff\1\61\1\uffff\22\61\1\u01e8\7\61",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
-            "\1\u01eb",
-            "\1\u01ec",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\52\u0110\1\u010e\4\u0110\1\u010f\uffd0\u0110",
+            "\1\u01e9",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
+            "",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\22\62\1\u01eb\7\62",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
+            "\1\u01ee",
+            "\1\u01ef",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
             "",
             "",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
-            "\32\61\4\uffff\1\61\1\uffff\22\61\1\u01ef\7\61",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\22\62\1\u01f2\7\62",
             "",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
-            "\1\u01f2",
-            "",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
-            "\1\u01f4",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
             "\1\u01f5",
-            "\1\u01f6",
+            "",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
             "\1\u01f7",
             "\1\u01f8",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\1\u01f9",
             "\1\u01fa",
             "\1\u01fb",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
             "\1\u01fd",
             "\1\u01fe",
-            "",
-            "\1\u01ff",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
             "\1\u0200",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\1\u0201",
+            "",
             "\1\u0202",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
-            "\1\u0204",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
-            "\1\u0206",
+            "\1\u0203",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
+            "\1\u0205",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
             "\1\u0207",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
+            "\1\u0209",
+            "\1\u020a",
             "",
-            "",
-            "\1\u0208",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
             "",
             "\1\u020b",
-            "\1\u020c",
-            "\1\u020d",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
+            "",
+            "\1\u020e",
+            "\1\u020f",
             "\1\u0210",
-            "\1\u0211",
-            "\1\u0212",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
             "\1\u0213",
             "\1\u0214",
             "\1\u0215",
             "\1\u0216",
-            "",
             "\1\u0217",
-            "",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\1\u0218",
             "\1\u0219",
-            "",
-            "",
-            "",
             "",
             "\1\u021a",
             "",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
-            "\32\61\4\uffff\1\61\1\uffff\22\61\1\u021c\7\61",
-            "\1\u021e",
-            "\1\u021f",
-            "",
-            "\1\u0220",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
+            "\1\u021c",
             "",
             "",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
             "",
+            "",
+            "\1\u021d",
+            "",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\22\62\1\u021f\7\62",
+            "\1\u0221",
             "\1\u0222",
             "",
-            "",
             "\1\u0223",
-            "\1\u0224",
             "",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
+            "",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
+            "",
+            "\1\u0225",
+            "",
             "",
             "\1\u0226",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
-            "\1\u0228",
-            "\1\u0229",
-            "\1\u022a",
+            "\1\u0227",
             "",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
+            "",
+            "\1\u0229",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
             "\1\u022b",
-            "\1\u022d\11\uffff\1\u022c",
+            "\1\u022c",
+            "\1\u022d",
             "",
             "\1\u022e",
-            "\1\u022f",
-            "\1\u0230",
+            "\1\u0230\11\uffff\1\u022f",
+            "",
             "\1\u0231",
             "\1\u0232",
             "\1\u0233",
             "\1\u0234",
             "\1\u0235",
-            "",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
-            "",
-            "",
+            "\1\u0236",
             "\1\u0237",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\1\u0238",
             "",
-            "",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
             "",
             "",
             "\1\u023a",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
             "",
-            "\1\u023b",
-            "\1\u023c",
+            "",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
+            "",
+            "",
             "\1\u023d",
+            "",
             "\1\u023e",
             "\1\u023f",
-            "",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\1\u0240",
             "\1\u0241",
+            "\1\u0242",
             "",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
-            "\1\u0243",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
             "\1\u0244",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
             "",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
+            "\1\u0246",
+            "\1\u0247",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
             "",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
             "",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
-            "\1\u0249",
-            "\1\u024a",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
             "",
-            "",
-            "\1\u024b",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
             "\1\u024c",
             "\1\u024d",
             "",
             "",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\1\u024e",
+            "\1\u024f",
             "\1\u0250",
-            "\1\u0251",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
+            "",
+            "",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
             "\1\u0253",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
-            "\32\61\4\uffff\1\61\1\uffff\22\61\1\u0255\7\61",
+            "\1\u0254",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
+            "\1\u0256",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\22\62\1\u0258\7\62",
             "",
-            "\1\u0257",
-            "\1\u0258",
+            "\1\u025a",
+            "\1\u025b",
             "",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
             "",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
-            "\32\61\4\uffff\1\61\1\uffff\22\61\1\u025b\7\61",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\22\62\1\u025e\7\62",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
             "",
-            "\1\u025e",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
-            "\1\u0260",
+            "\1\u0261",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
+            "\1\u0263",
             "",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
             "",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
-            "\1\u0264",
-            "\1\u0265",
-            "\1\u0266",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
             "\1\u0267",
             "\1\u0268",
             "\1\u0269",
             "\1\u026a",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\1\u026b",
             "\1\u026c",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
-            "\32\61\4\uffff\1\61\1\uffff\1\u026e\31\61",
-            "\1\u0270",
+            "\1\u026d",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
+            "\1\u026f",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\1\u0271\31\62",
+            "\1\u0273",
             "",
-            "\1\u0271",
-            "",
-            "",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
             "\1\u0274",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
-            "\1\u0276",
+            "",
+            "",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
             "\1\u0277",
-            "",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
-            "",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
+            "\1\u0279",
             "\1\u027a",
             "",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
             "",
-            "",
-            "",
-            "\1\u027b",
-            "\1\u027c",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
             "\1\u027d",
+            "",
+            "",
+            "",
+            "",
             "\1\u027e",
             "\1\u027f",
+            "\1\u0280",
+            "\1\u0281",
+            "\1\u0282",
             "",
             "",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
             "",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
             "",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
             "",
-            "\1\u0284",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
-            "",
-            "",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\1\u0287",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
             "",
             "",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
-            "",
-            "\1\u0288",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
             "",
             "",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
             "",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
-            "\1\u028a",
             "\1\u028b",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
+            "",
+            "",
+            "",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
             "\1\u028d",
             "\1\u028e",
-            "\1\u028f",
-            "",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
             "\1\u0290",
-            "",
             "\1\u0291",
+            "\1\u0292",
             "",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
             "\1\u0293",
             "",
+            "\1\u0294",
             "",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
-            "",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
             "\1\u0296",
             "",
             "",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
-            "\1\u029a",
-            "\1\u029b",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
+            "",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
+            "\1\u0299",
+            "",
+            "",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
+            "\1\u029d",
+            "\1\u029e",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
             "",
             "",
             "",
             "",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
             "",
             "",
             "",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
             "",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
-            "\1\u02a0",
-            "",
-            "\1\u02a1",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
             "\1\u02a3",
+            "",
             "\1\u02a4",
-            "\1\u02a5",
-            "",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
             "\1\u02a6",
-            "",
-            "",
             "\1\u02a7",
-            "",
-            "",
-            "",
             "\1\u02a8",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
             "",
-            "",
+            "\1\u02a9",
             "",
             "",
             "\1\u02aa",
-            "\1\u02ab",
             "",
-            "\1\u02ac",
+            "",
+            "",
+            "\1\u02ab",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
+            "",
+            "",
+            "",
+            "",
             "\1\u02ad",
             "\1\u02ae",
+            "",
             "\1\u02af",
             "\1\u02b0",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\1\u02b1",
+            "\1\u02b2",
+            "\1\u02b3",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
             "",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
-            "\1\u02b5",
-            "\1\u02b6",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
             "\1\u02b8",
+            "\1\u02b9",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
+            "\1\u02bb",
             "",
             "",
             "",
             "",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
-            "\1\u02ba",
-            "",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
-            "",
-            "\1\u02bc",
-            "",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
             "\1\u02bd",
-            "\1\u02be",
-            "\32\61\4\uffff\1\61\1\uffff\32\61",
+            "",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
+            "",
+            "\1\u02bf",
+            "",
+            "\1\u02c0",
+            "\1\u02c1",
+            "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
             ""
     };
 
@@ -6927,49 +6933,77 @@ public class rulesetLexer extends Lexer {
             this.transition = DFA24_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | T__63 | T__64 | T__65 | T__66 | T__67 | T__68 | T__69 | T__70 | T__71 | T__72 | T__73 | T__74 | T__75 | T__76 | T__77 | T__78 | T__79 | T__80 | T__81 | T__82 | T__83 | T__84 | T__85 | T__86 | T__87 | T__88 | T__89 | T__90 | T__91 | T__92 | T__93 | T__94 | T__95 | T__96 | T__97 | T__98 | T__99 | T__100 | T__101 | T__102 | T__103 | T__104 | T__105 | T__106 | T__107 | T__108 | T__109 | T__110 | T__111 | T__112 | T__113 | T__114 | T__115 | T__116 | T__117 | T__118 | T__119 | T__120 | T__121 | T__122 | T__123 | T__124 | T__125 | T__126 | T__127 | T__128 | T__129 | T__130 | T__131 | T__132 | T__133 | T__134 | T__135 | T__136 | T__137 | T__138 | T__139 | T__140 | T__141 | T__142 | T__143 | T__144 | T__145 | T__146 | T__147 | T__148 | T__149 | T__150 | T__151 | T__152 | T__153 | T__154 | T__155 | T__156 | T__157 | T__158 | T__159 | T__160 | T__161 | T__162 | T__163 | T__164 | T__165 | T__166 | T__167 | T__168 | T__169 | T__170 | T__171 | T__172 | T__173 | T__174 | T__175 | T__176 | T__177 | T__178 | T__179 | T__180 | ID | INT | FLOAT | COMMENT | WS | STRING | CHAR | HTML | JS | REGEXP );";
+            return "1:1: Tokens : ( T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | T__63 | T__64 | T__65 | T__66 | T__67 | T__68 | T__69 | T__70 | T__71 | T__72 | T__73 | T__74 | T__75 | T__76 | T__77 | T__78 | T__79 | T__80 | T__81 | T__82 | T__83 | T__84 | T__85 | T__86 | T__87 | T__88 | T__89 | T__90 | T__91 | T__92 | T__93 | T__94 | T__95 | T__96 | T__97 | T__98 | T__99 | T__100 | T__101 | T__102 | T__103 | T__104 | T__105 | T__106 | T__107 | T__108 | T__109 | T__110 | T__111 | T__112 | T__113 | T__114 | T__115 | T__116 | T__117 | T__118 | T__119 | T__120 | T__121 | T__122 | T__123 | T__124 | T__125 | T__126 | T__127 | T__128 | T__129 | T__130 | T__131 | T__132 | T__133 | T__134 | T__135 | T__136 | T__137 | T__138 | T__139 | T__140 | T__141 | T__142 | T__143 | T__144 | T__145 | T__146 | T__147 | T__148 | T__149 | T__150 | T__151 | T__152 | T__153 | T__154 | T__155 | T__156 | T__157 | T__158 | T__159 | T__160 | T__161 | T__162 | T__163 | T__164 | T__165 | T__166 | T__167 | T__168 | T__169 | T__170 | T__171 | T__172 | T__173 | T__174 | T__175 | T__176 | T__177 | T__178 | T__179 | T__180 | ID | INT | FLOAT | REGEXP | WS | STRING | CHAR | HTML | JS | CMT );";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             IntStream input = _input;
         	int _s = s;
             switch ( s ) {
                     case 0 : 
-                        int LA24_384 = input.LA(1);
+                        int LA24_271 = input.LA(1);
 
                         s = -1;
-                        if ( (LA24_384=='/') ) {s = 269;}
+                        if ( (LA24_271=='/') ) {s = 271;}
 
-                        else if ( (LA24_384=='*') ) {s = 268;}
+                        else if ( (LA24_271=='*') ) {s = 270;}
 
-                        else if ( ((LA24_384>='\u0000' && LA24_384<=')')||(LA24_384>='+' && LA24_384<='.')||(LA24_384>='0' && LA24_384<='\uFFFF')) ) {s = 270;}
+                        else if ( ((LA24_271>='\u0000' && LA24_271<=')')||(LA24_271>='+' && LA24_271<='.')||(LA24_271>='0' && LA24_271<='\uFFFF')) ) {s = 272;}
 
-                        else s = 383;
+                        else s = 149;
 
                         if ( s>=0 ) return s;
                         break;
                     case 1 : 
-                        int LA24_270 = input.LA(1);
+                        int LA24_147 = input.LA(1);
 
                         s = -1;
-                        if ( (LA24_270=='/') ) {s = 269;}
+                        if ( (LA24_147=='*') ) {s = 270;}
 
-                        else if ( (LA24_270=='*') ) {s = 268;}
+                        else if ( (LA24_147=='/') ) {s = 271;}
 
-                        else if ( ((LA24_270>='\u0000' && LA24_270<=')')||(LA24_270>='+' && LA24_270<='.')||(LA24_270>='0' && LA24_270<='\uFFFF')) ) {s = 270;}
+                        else if ( ((LA24_147>='\u0000' && LA24_147<=')')||(LA24_147>='+' && LA24_147<='.')||(LA24_147>='0' && LA24_147<='\uFFFF')) ) {s = 272;}
 
                         if ( s>=0 ) return s;
                         break;
                     case 2 : 
-                        int LA24_267 = input.LA(1);
+                        int LA24_146 = input.LA(1);
 
                         s = -1;
-                        if ( ((LA24_267>='\u0000' && LA24_267<='\uFFFF')) ) {s = 148;}
+                        if ( (LA24_146=='/') ) {s = 266;}
 
-                        else s = 383;
+                        else if ( (LA24_146=='\r') ) {s = 267;}
+
+                        else if ( (LA24_146=='\n') ) {s = 268;}
+
+                        else if ( ((LA24_146>='\u0000' && LA24_146<='\t')||(LA24_146>='\u000B' && LA24_146<='\f')||(LA24_146>='\u000E' && LA24_146<='.')||(LA24_146>='0' && LA24_146<='\uFFFF')) ) {s = 269;}
+
+                        else s = 149;
 
                         if ( s>=0 ) return s;
                         break;
                     case 3 : 
+                        int LA24_272 = input.LA(1);
+
+                        s = -1;
+                        if ( (LA24_272=='/') ) {s = 271;}
+
+                        else if ( (LA24_272=='*') ) {s = 270;}
+
+                        else if ( ((LA24_272>='\u0000' && LA24_272<=')')||(LA24_272>='+' && LA24_272<='.')||(LA24_272>='0' && LA24_272<='\uFFFF')) ) {s = 272;}
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 4 : 
+                        int LA24_267 = input.LA(1);
+
+                        s = -1;
+                        if ( ((LA24_267>='\u0000' && LA24_267<='\t')||(LA24_267>='\u000B' && LA24_267<='\uFFFF')) ) {s = 149;}
+
+                        else if ( (LA24_267=='\n') ) {s = 268;}
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 5 : 
                         int LA24_35 = input.LA(1);
 
                         s = -1;
@@ -6977,37 +7011,7 @@ public class rulesetLexer extends Lexer {
 
                         else if ( (LA24_35=='*') ) {s = 147;}
 
-                        else if ( ((LA24_35>='\u0000' && LA24_35<=')')||(LA24_35>='+' && LA24_35<='.')||(LA24_35>='0' && LA24_35<='\uFFFF')) ) {s = 148;}
-
-                        else s = 149;
-
-                        if ( s>=0 ) return s;
-                        break;
-                    case 4 : 
-                        int LA24_265 = input.LA(1);
-
-                        s = -1;
-                        if ( (LA24_265=='\r') ) {s = 266;}
-
-                        else if ( (LA24_265=='\n') ) {s = 267;}
-
-                        else if ( (LA24_265=='/') ) {s = 264;}
-
-                        else if ( ((LA24_265>='\u0000' && LA24_265<='\t')||(LA24_265>='\u000B' && LA24_265<='\f')||(LA24_265>='\u000E' && LA24_265<='.')||(LA24_265>='0' && LA24_265<='\uFFFF')) ) {s = 265;}
-
-                        if ( s>=0 ) return s;
-                        break;
-                    case 5 : 
-                        int LA24_264 = input.LA(1);
-
-                        s = -1;
-                        if ( (LA24_264=='\r') ) {s = 266;}
-
-                        else if ( (LA24_264=='\n') ) {s = 267;}
-
-                        else if ( (LA24_264=='/') ) {s = 264;}
-
-                        else if ( ((LA24_264>='\u0000' && LA24_264<='\t')||(LA24_264>='\u000B' && LA24_264<='\f')||(LA24_264>='\u000E' && LA24_264<='.')||(LA24_264>='0' && LA24_264<='\uFFFF')) ) {s = 265;}
+                        else if ( ((LA24_35>='\u0000' && LA24_35<=')')||(LA24_35>='+' && LA24_35<='.')||(LA24_35>='0' && LA24_35<='\uFFFF')) ) {s = 149;}
 
                         else s = 148;
 
@@ -7017,39 +7021,35 @@ public class rulesetLexer extends Lexer {
                         int LA24_268 = input.LA(1);
 
                         s = -1;
-                        if ( (LA24_268=='/') ) {s = 384;}
+                        if ( ((LA24_268>='\u0000' && LA24_268<='\uFFFF')) ) {s = 149;}
 
-                        else if ( (LA24_268=='*') ) {s = 268;}
-
-                        else if ( ((LA24_268>='\u0000' && LA24_268<=')')||(LA24_268>='+' && LA24_268<='.')||(LA24_268>='0' && LA24_268<='\uFFFF')) ) {s = 270;}
+                        else s = 386;
 
                         if ( s>=0 ) return s;
                         break;
                     case 7 : 
-                        int LA24_146 = input.LA(1);
+                        int LA24_270 = input.LA(1);
 
                         s = -1;
-                        if ( (LA24_146=='/') ) {s = 264;}
+                        if ( (LA24_270=='/') ) {s = 387;}
 
-                        else if ( ((LA24_146>='\u0000' && LA24_146<='\t')||(LA24_146>='\u000B' && LA24_146<='\f')||(LA24_146>='\u000E' && LA24_146<='.')||(LA24_146>='0' && LA24_146<='\uFFFF')) ) {s = 265;}
+                        else if ( (LA24_270=='*') ) {s = 270;}
 
-                        else if ( (LA24_146=='\r') ) {s = 266;}
-
-                        else if ( (LA24_146=='\n') ) {s = 267;}
-
-                        else s = 148;
+                        else if ( ((LA24_270>='\u0000' && LA24_270<=')')||(LA24_270>='+' && LA24_270<='.')||(LA24_270>='0' && LA24_270<='\uFFFF')) ) {s = 272;}
 
                         if ( s>=0 ) return s;
                         break;
                     case 8 : 
-                        int LA24_147 = input.LA(1);
+                        int LA24_387 = input.LA(1);
 
                         s = -1;
-                        if ( (LA24_147=='*') ) {s = 268;}
+                        if ( (LA24_387=='/') ) {s = 271;}
 
-                        else if ( (LA24_147=='/') ) {s = 269;}
+                        else if ( (LA24_387=='*') ) {s = 270;}
 
-                        else if ( ((LA24_147>='\u0000' && LA24_147<=')')||(LA24_147>='+' && LA24_147<='.')||(LA24_147>='0' && LA24_147<='\uFFFF')) ) {s = 270;}
+                        else if ( ((LA24_387>='\u0000' && LA24_387<=')')||(LA24_387>='+' && LA24_387<='.')||(LA24_387>='0' && LA24_387<='\uFFFF')) ) {s = 272;}
+
+                        else s = 149;
 
                         if ( s>=0 ) return s;
                         break;
@@ -7057,9 +7057,15 @@ public class rulesetLexer extends Lexer {
                         int LA24_266 = input.LA(1);
 
                         s = -1;
-                        if ( ((LA24_266>='\u0000' && LA24_266<='\t')||(LA24_266>='\u000B' && LA24_266<='\uFFFF')) ) {s = 148;}
+                        if ( (LA24_266=='/') ) {s = 266;}
 
-                        else if ( (LA24_266=='\n') ) {s = 267;}
+                        else if ( (LA24_266=='\r') ) {s = 267;}
+
+                        else if ( (LA24_266=='\n') ) {s = 268;}
+
+                        else if ( ((LA24_266>='\u0000' && LA24_266<='\t')||(LA24_266>='\u000B' && LA24_266<='\f')||(LA24_266>='\u000E' && LA24_266<='.')||(LA24_266>='0' && LA24_266<='\uFFFF')) ) {s = 269;}
+
+                        else s = 149;
 
                         if ( s>=0 ) return s;
                         break;
@@ -7067,13 +7073,13 @@ public class rulesetLexer extends Lexer {
                         int LA24_269 = input.LA(1);
 
                         s = -1;
-                        if ( (LA24_269=='/') ) {s = 269;}
+                        if ( (LA24_269=='/') ) {s = 266;}
 
-                        else if ( (LA24_269=='*') ) {s = 268;}
+                        else if ( (LA24_269=='\r') ) {s = 267;}
 
-                        else if ( ((LA24_269>='\u0000' && LA24_269<=')')||(LA24_269>='+' && LA24_269<='.')||(LA24_269>='0' && LA24_269<='\uFFFF')) ) {s = 270;}
+                        else if ( (LA24_269=='\n') ) {s = 268;}
 
-                        else s = 148;
+                        else if ( ((LA24_269>='\u0000' && LA24_269<='\t')||(LA24_269>='\u000B' && LA24_269<='\f')||(LA24_269>='\u000E' && LA24_269<='.')||(LA24_269>='0' && LA24_269<='\uFFFF')) ) {s = 269;}
 
                         if ( s>=0 ) return s;
                         break;

@@ -1,0 +1,238 @@
+antlr3collections.lo antlr3collections.o: src/antlr3collections.c \
+  include/antlr3.h include/antlr3defs.h include/antlr3errors.h \
+  antlr3config.h /usr/include/stdio.h /usr/include/_types.h \
+  /usr/include/sys/_types.h /usr/include/sys/cdefs.h \
+  /usr/include/machine/_types.h /usr/include/i386/_types.h \
+  /usr/include/secure/_stdio.h /usr/include/secure/_common.h \
+  /usr/lib/gcc/i686-apple-darwin10/4.2.1/include/stdint.h \
+  /usr/include/sys/types.h /usr/include/sys/appleapiopts.h \
+  /usr/include/machine/types.h /usr/include/i386/types.h \
+  /usr/include/i386/_types.h /usr/include/machine/endian.h \
+  /usr/include/i386/endian.h /usr/include/sys/_endian.h \
+  /usr/include/libkern/_OSByteOrder.h \
+  /usr/include/libkern/i386/_OSByteOrder.h /usr/include/sys/_structs.h \
+  /usr/include/sys/stat.h /usr/include/Availability.h \
+  /usr/include/AvailabilityInternal.h /usr/include/stdlib.h \
+  /usr/include/sys/wait.h /usr/include/sys/signal.h \
+  /usr/include/machine/signal.h /usr/include/i386/signal.h \
+  /usr/include/i386/_structs.h /usr/include/machine/_structs.h \
+  /usr/include/mach/i386/_structs.h /usr/include/sys/resource.h \
+  /usr/include/alloca.h \
+  /usr/lib/gcc/i686-apple-darwin10/4.2.1/include/stddef.h \
+  /usr/lib/gcc/i686-apple-darwin10/4.2.1/include/stdarg.h \
+  /usr/include/string.h /usr/include/secure/_string.h \
+  /usr/include/strings.h /usr/include/inttypes.h /usr/include/unistd.h \
+  /usr/include/sys/unistd.h /usr/include/sys/select.h \
+  /usr/include/sys/_select.h /usr/include/netinet/in.h \
+  /usr/include/sys/socket.h /usr/include/machine/_param.h \
+  /usr/include/i386/_param.h /usr/include/netinet6/in6.h \
+  /usr/include/netinet/tcp.h /usr/include/arpa/nameser.h \
+  /usr/include/sys/param.h /usr/include/sys/syslimits.h \
+  /usr/include/machine/param.h /usr/include/i386/param.h \
+  /usr/include/i386/_param.h \
+  /usr/lib/gcc/i686-apple-darwin10/4.2.1/include/limits.h \
+  /usr/lib/gcc/i686-apple-darwin10/4.2.1/include/syslimits.h \
+  /usr/include/limits.h /usr/include/machine/limits.h \
+  /usr/include/i386/limits.h /usr/include/i386/_limits.h \
+  /usr/include/netdb.h /usr/include/sys/malloc.h /usr/include/ctype.h \
+  /usr/include/runetype.h include/antlr3interfaces.h \
+  include/antlr3convertutf.h include/antlr3exception.h \
+  include/antlr3encodings.h include/antlr3string.h \
+  include/antlr3collections.h include/antlr3bitset.h \
+  include/antlr3input.h include/antlr3commontoken.h \
+  include/antlr3intstream.h include/antlr3cyclicdfa.h \
+  include/antlr3baserecognizer.h include/antlr3tokenstream.h \
+  include/antlr3debugeventlistener.h include/antlr3basetree.h \
+  include/antlr3commontreenodestream.h include/antlr3commontreeadaptor.h \
+  include/antlr3basetreeadaptor.h include/antlr3commontree.h \
+  include/antlr3recognizersharedstate.h include/antlr3lexer.h \
+  include/antlr3parser.h include/antlr3treeparser.h \
+  include/antlr3filestream.h include/antlr3rewritestreams.h
+
+include/antlr3.h:
+
+include/antlr3defs.h:
+
+include/antlr3errors.h:
+
+antlr3config.h:
+
+/usr/include/stdio.h:
+
+/usr/include/_types.h:
+
+/usr/include/sys/_types.h:
+
+/usr/include/sys/cdefs.h:
+
+/usr/include/machine/_types.h:
+
+/usr/include/i386/_types.h:
+
+/usr/include/secure/_stdio.h:
+
+/usr/include/secure/_common.h:
+
+/usr/lib/gcc/i686-apple-darwin10/4.2.1/include/stdint.h:
+
+/usr/include/sys/types.h:
+
+/usr/include/sys/appleapiopts.h:
+
+/usr/include/machine/types.h:
+
+/usr/include/i386/types.h:
+
+/usr/include/i386/_types.h:
+
+/usr/include/machine/endian.h:
+
+/usr/include/i386/endian.h:
+
+/usr/include/sys/_endian.h:
+
+/usr/include/libkern/_OSByteOrder.h:
+
+/usr/include/libkern/i386/_OSByteOrder.h:
+
+/usr/include/sys/_structs.h:
+
+/usr/include/sys/stat.h:
+
+/usr/include/Availability.h:
+
+/usr/include/AvailabilityInternal.h:
+
+/usr/include/stdlib.h:
+
+/usr/include/sys/wait.h:
+
+/usr/include/sys/signal.h:
+
+/usr/include/machine/signal.h:
+
+/usr/include/i386/signal.h:
+
+/usr/include/i386/_structs.h:
+
+/usr/include/machine/_structs.h:
+
+/usr/include/mach/i386/_structs.h:
+
+/usr/include/sys/resource.h:
+
+/usr/include/alloca.h:
+
+/usr/lib/gcc/i686-apple-darwin10/4.2.1/include/stddef.h:
+
+/usr/lib/gcc/i686-apple-darwin10/4.2.1/include/stdarg.h:
+
+/usr/include/string.h:
+
+/usr/include/secure/_string.h:
+
+/usr/include/strings.h:
+
+/usr/include/inttypes.h:
+
+/usr/include/unistd.h:
+
+/usr/include/sys/unistd.h:
+
+/usr/include/sys/select.h:
+
+/usr/include/sys/_select.h:
+
+/usr/include/netinet/in.h:
+
+/usr/include/sys/socket.h:
+
+/usr/include/machine/_param.h:
+
+/usr/include/i386/_param.h:
+
+/usr/include/netinet6/in6.h:
+
+/usr/include/netinet/tcp.h:
+
+/usr/include/arpa/nameser.h:
+
+/usr/include/sys/param.h:
+
+/usr/include/sys/syslimits.h:
+
+/usr/include/machine/param.h:
+
+/usr/include/i386/param.h:
+
+/usr/include/i386/_param.h:
+
+/usr/lib/gcc/i686-apple-darwin10/4.2.1/include/limits.h:
+
+/usr/lib/gcc/i686-apple-darwin10/4.2.1/include/syslimits.h:
+
+/usr/include/limits.h:
+
+/usr/include/machine/limits.h:
+
+/usr/include/i386/limits.h:
+
+/usr/include/i386/_limits.h:
+
+/usr/include/netdb.h:
+
+/usr/include/sys/malloc.h:
+
+/usr/include/ctype.h:
+
+/usr/include/runetype.h:
+
+include/antlr3interfaces.h:
+
+include/antlr3convertutf.h:
+
+include/antlr3exception.h:
+
+include/antlr3encodings.h:
+
+include/antlr3string.h:
+
+include/antlr3collections.h:
+
+include/antlr3bitset.h:
+
+include/antlr3input.h:
+
+include/antlr3commontoken.h:
+
+include/antlr3intstream.h:
+
+include/antlr3cyclicdfa.h:
+
+include/antlr3baserecognizer.h:
+
+include/antlr3tokenstream.h:
+
+include/antlr3debugeventlistener.h:
+
+include/antlr3basetree.h:
+
+include/antlr3commontreenodestream.h:
+
+include/antlr3commontreeadaptor.h:
+
+include/antlr3basetreeadaptor.h:
+
+include/antlr3commontree.h:
+
+include/antlr3recognizersharedstate.h:
+
+include/antlr3lexer.h:
+
+include/antlr3parser.h:
+
+include/antlr3treeparser.h:
+
+include/antlr3filestream.h:
+
+include/antlr3rewritestreams.h:
