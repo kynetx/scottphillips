@@ -9,9 +9,9 @@ public class ParseRuleset
 		{
 			System.out.println("Starting");
 			ANTLRFileStream input = new ANTLRFileStream(args[0]);
-			com.kynetx.RulesetLexer lexer = new com.kynetx.RulesetLexer(input); 
+			com.kynetx.RuleSet2Lexer lexer = new com.kynetx.RuleSet2Lexer(input); 
 			CommonTokenStream tokens = new CommonTokenStream(lexer); 
-			com.kynetx.RulesetParser parser = new com.kynetx.RulesetParser(tokens);
+			com.kynetx.RuleSet2Parser parser = new com.kynetx.RuleSet2Parser(tokens);
 			parser.ruleset();
 			System.out.println("Done");
 			System.out.println("Rule name is " + parser.rule_json.get("ruleset_name"));

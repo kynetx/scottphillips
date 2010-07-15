@@ -2,11 +2,16 @@ grammar Ruleset;
 options {
   output=AST;
 //  backtrack=true;
-  memoize=true;
+//  memoize=true;
 //  language=C;
 //  ASTLabelType=pANTLR3_BASE_TREE;
 
 }
+
+
+// Handle Escaping in string http://stackoverflow.com/questions/504402/how-to-handle-escape-sequences-in-string-literals-in-antlr-3
+
+
 @header {
 	package com.kynetx;
 	import java.util.HashMap;
@@ -126,7 +131,7 @@ ruleset  options {backtrack=false;}
 @after  {
 	current_top = null;
 }
- 	:  'ruleset' rulesetname { current_top.put("ruleset_name",$rulesetname.text); } '{' 
+ 	:  comment? 'ruleset' rulesetname { current_top.put("ruleset_name",$rulesetname.text); } '{' 
  		( meta_block  | comment
  		| dispatch_block 
  		| global_decls 
@@ -135,13 +140,23 @@ ruleset  options {backtrack=false;}
  	;
 
 
+//CMT    :   
+//    |   '/*' ( options {greedy=false;} : . )* '*/' 
+//    ;
+
 CMT    :   
-	'//' ~('\n'|'\r')* '\r'? '\n' 
-    |   '/*' ( options {greedy=false;} : . )* '*/' 
+	'//' ( options {greedy=false;} : .)+  '\n' 
     ;
 
-comment options {backtrack=false;}
-    :   CMT
+mult_line_comment_or_regx
+	: REGEXP;
+
+single_line_comment 
+	: CMT
+	;
+	
+comment  
+    :   (single_line_comment)=>  single_line_comment | mult_line_comment_or_regx 
     ;
      	 	
 rulesetname
@@ -228,31 +243,30 @@ rule_state: 'active'
           ;	 	
           
 
-action 	: conditional_action | unconditional_action 
+action 
+	: 
+	(unconditional_action)=> unconditional_action | conditional_action 
 	;
 
 
-conditional_action 
+conditional_action
 	: 'if' expr 'then' unconditional_action	
 	;
 
 unconditional_action 
-	: primrule | actionblock
+	: (actionblock)=> actionblock | primrule 
 	;
 	
 primrule 
-@init {
-}
-@after {
-}
 	: 
-	rule_label? namespace? ID '(' (expr ','?)* ')' modifier_clause? 
-		{}
-		
+	rule_label? namespace? ID '(' arguments ')' modifier_clause? 
 	|rule_label? emit_block	
 	
 	;
-          
+
+arguments
+	: (expr)? (',' expr)* 
+	;          
 rule_label : ID '=>';          
 
 modifier_clause 
@@ -271,7 +285,7 @@ blocktype: 'choose'
          | 'every';
          	
 
-pre_block: 'pre' '{' (decl ';'?) '}';
+pre_block: 'pre' '{' (decl ';'?)? '}';
 
           
 foreach: 
@@ -560,7 +574,7 @@ alias	: 'alias' ID;
 		
 location: STRING | ID;
 
-desc_block
+desc_block options { k=1; }
 	: 'description' desc=(HTML|STRING) { ((HashMap)rule_json.get("meta")).put("description",strip_wrappers("<<",">>",$desc.text)); }
 	;
 

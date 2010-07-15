@@ -1,4 +1,4 @@
 . ./myclasspath.sh
-java org.antlr.Tool Ruleset.g -o output
+java org.antlr.Tool RuleSet2.g -o output
 mkdir output/classes
-javac -d output/classes  output/Rule*.java json_java/*.java ParseRuleset.java
+javac -d output/classes  output/RuleSet2*.java json_java/*.java ParseRuleset.java

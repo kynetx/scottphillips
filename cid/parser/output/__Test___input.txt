@@ -1,16 +1,35 @@
+// dispatch with some rules
+
 ruleset 10 {
 
     meta {
+      authz require user
+      name  "tst"
+      author "bob"
+          key errorstack "192345"
+      key googleanalytics  "fg593940"
+
+   key twitter {
+        "consumer_key": "jPlIPAk1g848tonC2yNA",
+        "consumer_secret" : "3HNb7NfksjflskIm2BuxKPSg6JYvMtLahvkMt6Std5SO0"
+      }
+key googleanalytics "kfjsklfjslkfjslkfs"
+
+     key googleanalytics "kfjsklfjslkfjslkfs"
+      key twitter {
+        "consumer_key": 583758935739,
+        "consumer_secret" : "3HNb7NfksjflskIm2BuxKPSg6JYvMtLahvkMt6Std5SO0"
+      }
       description <<
       Ruleset for testing something or other.
       >>
-    }
- /* This is a test */
-    rule test0 is active {
-        select using "/test/" setting()
-
-	alert("hello");
 
     }
+
+    dispatch {
+      domain "www.google.com" -> "966337974"
+      domain "google.com" -> "966337974"
+      domain "www.circuitcity.com" -> "966337982"
+    }
+
 }
-
