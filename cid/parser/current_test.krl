@@ -72,6 +72,7 @@ ruleset 10 {
 	
 		simple = simple + 1;
 
+		preoptest = a + b  < c + d > e + f;
 
 		simplea = simplea + 1 + 3 + 4;
 

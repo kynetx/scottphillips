@@ -16,6 +16,7 @@ options {
 	package com.kynetx;
 	import java.util.HashMap;
 	import java.util.ArrayList;
+//	import org.json.*;
 }
 @lexer::header {
 	package com.kynetx;
@@ -50,6 +51,63 @@ options {
 		}
 		themap.put(key,value);
 	}
+	
+	public void  add_to_expression(ArrayList result,String type,String op, Object oresult)
+	{
+		HashMap tmp = new HashMap();
+		tmp.put("op",op);
+		tmp.put("type",type);
+		tmp.put("result",oresult); 
+		result.add(tmp);
+	}
+	public void puts(String str)
+	{
+		System.out.println(str);
+	}
+	
+	public HashMap build_exp_result(ArrayList operators)
+	{
+//		puts("Start " + operators.size() ) ;
+		HashMap result = new HashMap();
+		ArrayList args_array = new ArrayList();
+		result.put("args",args_array);
+		for(int i = 0;i < operators.size(); i++)
+		{
+//			puts("at " + i);
+			HashMap value = (HashMap)operators.get(i);				
+						
+			// Are we at the end?
+			if(i == operators.size() - 1 ||  i == 0)
+			{
+				if(i == 0)
+				{
+//					puts("O Opt " + value.get("op") + " - " + i);
+					result.put("op",value.get("op"));
+					result.put("type",value.get("type"));
+				}
+
+				args_array.add(value.get("result"));
+			}
+			else
+			{
+				HashMap tmp = new HashMap();
+				ArrayList new_args_array = new ArrayList();
+				// We really need the next operator for the ast
+				HashMap value2 = (HashMap)operators.get(i+1);				
+										
+				tmp.put("op",value2.get("op"));
+				tmp.put("type",value2.get("type"));
+				tmp.put("args",new_args_array);
+
+				new_args_array.add(value.get("result"));
+				
+				args_array.add(tmp); 
+				args_array = new_args_array;
+			}
+		}
+//		puts("End " ) ;
+		return result;
+	}
 }
 
 
@@ -58,7 +116,6 @@ fragment predop: '<=' | '>=' | '<' | '>' | '==' | '!=' | 'eq' | 'neq' | 'like';
 	
 fragment add_op: '+'|'-';
 
-fragment mult_op: '*'|'/'|'%';
 
 VAR  :	('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_')*
     ;
@@ -242,143 +299,176 @@ decl[ArrayList  block_array]
 
 //expr options : function_def | conditional_expression	
 
-expr returns[HashMap result]
+expr returns[Object result]
 @init {
 	HashMap result_hash = new HashMap();
-
 }
 	: fd=function_def[result_hash] {
 		$result = result_hash;
 	}
-	| conditional_expression[result_hash] {
-//		result_hash.put(
-		$result = result_hash;	
+	| c=conditional_expression {
+		$result = $c.result;
 	}
 	;	
 	
 function_def[HashMap  expr_hash]
 @init {
-		ArrayList block_array = new ArrayList();
-
+	ArrayList block_array = new ArrayList();
 }
 	: 'function' '(' v1=VAR? (',' v2=VAR )* ')' '{' d1=decl[block_array]? (';' d2=decl[block_array])* ';'? e1=expr '}' {
 	}
 	;	
 
 	
-conditional_expression[HashMap expr_hash] 
-	:  disjunction[expr_hash] ('=>' expr '|' expr)?
+conditional_expression returns[Object result]
+	:  d=disjunction ('=>' expr '|' expr)?
+	   { $result = $d.result; }
 	;	
 	
 
-disjunction[HashMap expr_hash] 
-	: conjunction[expr_hash] ('||' conjunction[expr_hash])*
+disjunction returns[Object result]
+@init {
+	boolean found_op = false;
+	ArrayList result = new ArrayList();
+}
+	: me1=conjunction (op='||' me2=conjunction{
+		found_op = true;
+		if(result.isEmpty())
+		{
+			 add_to_expression(result,"pred",$op.text,$me1.result);
+			 add_to_expression(result,"pred",$op.text,$me2.result);
+		}			 
+		else
+			 add_to_expression(result,"pred",$op.text,$me2.result);
+
+	})* {
+		if(found_op)
+			$result = build_exp_result(result); 
+		else
+			$result = $me1.result;
+	}
 	;	
 	
-conjunction[HashMap expr_hash] 
-	: equality_expr[expr_hash] ('&&' equality_expr[expr_hash])*
+conjunction returns[Object result]
+@init {
+	boolean found_op = false;
+	ArrayList result = new ArrayList();
+}	 
+	: me1=equality_expr (op='&&' me2=equality_expr {
+		found_op = true;
+		if(result.isEmpty())
+		{
+			 add_to_expression(result,"prim",$op.text,$me1.result);
+			 add_to_expression(result,"prim",$op.text,$me2.result);
+		}
+		else
+			 add_to_expression(result,"prim",$op.text,$me2.result);
+
+	})*  { 
+		if(found_op)
+			$result = build_exp_result(result); 
+		else
+			$result = $me1.result;
+	 }
 	;
 	
-equality_expr[HashMap expr_hash] 
-	: add_expr[expr_hash] {
-	}
-	 (predop add_expr[expr_hash]{
-	 })*
+equality_expr returns[Object result]
+@init {
+	boolean found_op = false;
+	ArrayList result = new ArrayList();
+}	 
+	: me1=add_expr (op=predop me2=add_expr {
+		found_op = true;
+		if(result.isEmpty())
+		{
+			 add_to_expression(result,"prim",$op.text,$me1.result);
+			 add_to_expression(result,"prim",$op.text,$me2.result);
+		}
+		else
+			 add_to_expression(result,"prim",$op.text,$me2.result);
+	})* { 
+		if(found_op)
+			$result = build_exp_result(result); 
+		else
+			$result = $me1.result;
+	 }
 	;
 	 
-	
-add_expr[HashMap expr_hash]
+	 
+add_expr returns[Object result]
 @init {
-	ArrayList operators = new ArrayList();
-	int opt_cnt = 0;
+	boolean found_op = false;
+	ArrayList result = new ArrayList();
 }	 
-	: me1=mult_expr[expr_hash] (op=add_op me2=mult_expr[expr_hash]  {
-		if(opt_cnt == 0)
+	: me1=mult_expr (op=add_op me2=mult_expr  {
+		found_op = true;
+		if(result.isEmpty())
 		{
-			// Add first one
-			HashMap tmp = new HashMap();
-			tmp.put("op",$op.text);
-			tmp.put("type","prim");
-			tmp.put("result",$me1.result);
-			operators.add(tmp);
+			 add_to_expression(result,"prim",$op.text,$me1.result);
+			 add_to_expression(result,"prim",$op.text,$me2.result);
+		}
+		else
+			 add_to_expression(result,"prim",$op.text,$me2.result);
+	}
+	)*  { 
+		if(found_op)
+			$result = build_exp_result(result); 
+		else
+			$result = $me1.result;
+ }
+	;		
 
-			// Add Second one
-			 tmp = new HashMap();
-			tmp.put("op",$op.text);
-			tmp.put("type","prim");
-			tmp.put("result",$me2.result);
-			operators.add(tmp);
-			opt_cnt = opt_cnt + 1;
+
+mult_op: '*'|'/'|'%';
+
+mult_expr  returns[Object result]
+@init {
+	boolean found_op = false;
+	ArrayList result = new ArrayList();
+}	 
+	: me1=unary_expr (op=mult_op me2=unary_expr
+	{	
+		found_op = true;
+		if(result.isEmpty())
+		{
+			System.out.println("a oper " + $op.text);
+			 add_to_expression(result,"prim",$op.text,$me1.result);
+			 add_to_expression(result,"prim",$op.text,$me2.result);
 		}
 		else
 		{
-			// Loopers
-			HashMap tmp = new HashMap();
-			tmp.put("op",$op.text);
-			tmp.put("type","prim");
-			tmp.put("result",$me2.result);
-			operators.add(tmp);
-			opt_cnt = opt_cnt + 1;
+			System.out.println("b oper " + $op.text);
+			 add_to_expression(result,"prim",$op.text,$me2.result);
 		}
-		
-	})* {
-		ArrayList args_array = new ArrayList();
-		expr_hash.put("args",args_array);
-		for(int i = 0;i<operators.size();i++)
+			 
+	})*  { 
+		if(found_op)
 		{
-			HashMap value = (HashMap)operators.get(i);				
-			HashMap tmp = new HashMap();
-			tmp.put("op",value.get("op"));
-			tmp.put("type",value.get("type"));
-			
-			if(i == 0)
-			{
-				expr_hash.put("op",value.get("op"));
-				expr_hash.put("type",value.get("type"));
+			puts("Result Cound = " + result.size());
+			$result = build_exp_result(result); 
 			}
-			
-			// Are we at the end?
-			if(i == (operators.size() - 1))
-			{
-				args_array.add(value.get("result"));
-			}
-			else
-			{
-				// Are we on the first one?
-				if(i == 0)
-				{
-					args_array.add(value.get("result"));
-				}
-				else
-				{
-					ArrayList new_args_array = new ArrayList();
-					new_args_array.add(value.get("result"));
-					tmp.put("args",new_args_array);
-					args_array.add(tmp); 
-					args_array = new_args_array;
-				}
-			}
-		}
-	};		
-
-
-mult_expr[HashMap expr_hash]  returns[Object result]
-	: u=unary_expr[expr_hash] { $result = $u.result; }(mult_op unary_expr[expr_hash])*
+		else
+			$result = $me1.result;
+ }
 	;
 
 
-unary_expr[HashMap expr_hash]  returns[Object result] options { backtrack = true; }
-	: 'not' unary_expr[expr_hash] | 
+unary_expr  returns[Object result] options { backtrack = true; }
+	: 'not' unary_expr | 
 	'seen' STRING 'in' var_domain ':' VAR timeframe	|
 	'seen' STRING ('before' | 'after') STRING 'in' var_domain ':' VAR |
 	var_domain ':' VAR predop expr timeframe |
 	var_domain ':' VAR timeframe |
-	oe=operator_expr[expr_hash] { $result = $oe.result; }
+	oe=operator_expr { $result = $oe.result; }
 	;
-	
+	 
 
-operator_expr[HashMap expr_hash] returns[Object result]
-	: f=factor[expr_hash] {$result = $f.result;  }
+operator_expr returns[Object result]
+@init 
+{
+
+}
+	: f=factor {$result = $f.result;  }
 	 operator*	
 	;
 
@@ -390,10 +480,10 @@ fragment operator_op
 	: 'pick'|'match'|'length'|'replace'|'as'|'head'|'tail'|'sort'
       |'filter'|'map'|'uc'|'lc' |'split' | 'join' | 'query'
       | 'has' | 'union' | 'difference' | 'intersection' | 'unique' | 'once'
-      | 'duplicates';
+      | 'duplicates'; 
       	
 // TODO: REGEX needs to be added      | REGEXP  	
-factor[HashMap expr_hash] returns[Object result] options { backtrack = true; }
+factor returns[Object result] options { backtrack = true; }
 	: v=INT { 
 		HashMap tmp = new HashMap();
 		tmp.put("type","num");
@@ -415,7 +505,7 @@ factor[HashMap expr_hash] returns[Object result] options { backtrack = true; }
 		tmp.put("val",$v.text);
 		$result = tmp;
 }
-      | '(' expr ')'
+      | '(' e=expr ')' { $result=$e.result; }     
 	;	
 fragment var_domain: 'ent' | 'app';	
 	
@@ -473,7 +563,7 @@ cachable returns[Object what]
 	$what = null;
 }
 	: 
-		ca='cachable' ('for' tm=INT per=(period))? {
+		ca='cachable' ('for' tm=INT per=period)? {
  			if($tm.text != null)
  			{
 	 			$what = new HashMap();
