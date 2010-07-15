@@ -454,12 +454,12 @@ mult_expr  returns[Object result]
 
 
 unary_expr  returns[Object result] options { backtrack = true; }
-	: 'not' unary_expr | 
-	'seen' STRING 'in' var_domain ':' VAR timeframe	|
-	'seen' STRING ('before' | 'after') STRING 'in' var_domain ':' VAR |
-	var_domain ':' VAR predop expr timeframe |
-	var_domain ':' VAR timeframe |
-	oe=operator_expr { $result = $oe.result; }
+	: 'not' unary_expr 
+	| 'seen' STRING 'in' var_domain ':' VAR timeframe	
+	| 'seen' STRING ('before' | 'after') STRING 'in' var_domain ':' VAR 
+	| var_domain ':' VAR predop expr timeframe 
+	| var_domain ':' VAR timeframe 
+	| oe=operator_expr { $result = $oe.result; }
 	;
 	 
 
@@ -490,10 +490,32 @@ factor returns[Object result] options { backtrack = true; }
 		tmp.put("val",Integer.parseInt($v.text));
 		$result = tmp;
 	}
-      | v=STRING  { $result=$v.text; }    
-      | v='true'  { $result=$v.text; }
-      | v='false'  { $result=$v.text; }
-      | VAR '[' expr ']'
+      | v= STRING  { 
+      		HashMap tmp = new HashMap();
+		tmp.put("type","str");
+		tmp.put("val",strip_string($v.text));
+		$result = tmp;
+	}    
+      | v= ('true'| 'false')  { 
+      		HashMap tmp = new HashMap();
+		tmp.put("type","bool");
+		tmp.put("val",$v.text);
+		$result = tmp;
+	}
+      | v=VAR '[' e=expr ']'  { 
+      		HashMap tmp = new HashMap();
+		HashMap val = new HashMap();
+
+		HashMap index = new HashMap();
+		index.putAll((HashMap)$e.result);
+		val.put("var_expr",$v.text);
+
+		val.put("index",index);
+		tmp.put("type","array_ref");
+
+		tmp.put("val",val);
+		$result = tmp;
+      }
       | var_domain ':' VAR
       | trail_exp
       | function_app

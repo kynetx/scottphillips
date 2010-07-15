@@ -71,6 +71,8 @@ ruleset 10 {
 	                  };
 	
 		simple = simple + 1;
+		
+		
 
 		preoptest = a + b  < c + d > e + f;
 
@@ -79,6 +81,10 @@ ruleset 10 {
 		mike = (mike + 1 * 5 / joe - alliace) ||  (rmike + bob * rjoe - ralliace);
 		
 		joe = seen "bob" in app:joe within 1 hour;
+		bob = "asdfsad";
+		
+		bob = joe [ a + b ];
+
      
      }
 }
