@@ -1,4 +1,4 @@
-// $ANTLR 3.2 Sep 23, 2009 12:02:23 RuleSet2.g 2010-07-15 16:35:02
+// $ANTLR 3.2 Sep 23, 2009 12:02:23 RuleSet2.g 2010-07-16 10:24:34
 
 	package com.kynetx;
 	import java.util.HashMap;
@@ -17,7 +17,7 @@ import org.antlr.runtime.tree.*;
 
 public class RuleSet2Parser extends Parser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "VAR", "INT", "EXPONENT", "FLOAT", "NUM", "COMMENT", "WS", "ESC_SEQ", "STRING", "HTML", "JS", "HEX_DIGIT", "UNICODE_ESC", "OCTAL_ESC", "'<='", "'>='", "'<'", "'>'", "'=='", "'!='", "'eq'", "'neq'", "'like'", "'+'", "'-'", "'ruleset'", "'{'", "'}'", "'global'", "'dataset'", "'datasource'", "':'", "'JSON'", "'XML'", "'RSS'", "'HTML'", "'<-'", "';'", "'='", "'function'", "'('", "','", "')'", "'=>'", "'|'", "'||'", "'&&'", "'*'", "'/'", "'%'", "'not'", "'seen'", "'in'", "'before'", "'after'", "'.'", "'pick'", "'match'", "'length'", "'replace'", "'as'", "'head'", "'tail'", "'sort'", "'filter'", "'map'", "'uc'", "'lc'", "'split'", "'join'", "'query'", "'has'", "'union'", "'difference'", "'intersection'", "'unique'", "'once'", "'duplicates'", "'true'", "'false'", "'['", "']'", "'ent'", "'app'", "'current'", "'history'", "'within'", "'css'", "'years'", "'months'", "'weeks'", "'days'", "'hours'", "'minutes'", "'seconds'", "'year'", "'month'", "'week'", "'day'", "'hour'", "'minute'", "'second'", "'cachable'", "'for'", "'emit'", "'meta'", "'description'", "'name'", "'author'", "'key'", "'errorstack'", "'googleanalytics'", "'twitter'", "'amazon'", "'kpds'", "'google'", "'authz'", "'require'", "'user'", "'logging'", "'on'", "'off'", "'use'", "'module'", "'alias'", "'javascript'", "'resource'", "'dispatch'", "'domain'", "'->'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "VAR", "INT", "EXPONENT", "FLOAT", "NUM", "COMMENT", "WS", "ESC_SEQ", "STRING", "HTML", "JS", "HEX_DIGIT", "UNICODE_ESC", "OCTAL_ESC", "'<='", "'>='", "'<'", "'>'", "'=='", "'!='", "'eq'", "'neq'", "'like'", "'+'", "'-'", "'ruleset'", "'{'", "'}'", "'global'", "'dataset'", "'datasource'", "':'", "'JSON'", "'XML'", "'RSS'", "'HTML'", "'<-'", "';'", "'='", "'function'", "'('", "','", "')'", "'=>'", "'|'", "'||'", "'&&'", "'*'", "'/'", "'%'", "'not'", "'seen'", "'in'", "'before'", "'after'", "'.'", "'pick'", "'match'", "'length'", "'replace'", "'as'", "'head'", "'tail'", "'sort'", "'filter'", "'map'", "'uc'", "'lc'", "'split'", "'join'", "'query'", "'has'", "'union'", "'difference'", "'intersection'", "'unique'", "'once'", "'duplicates'", "'true'", "'false'", "'['", "']'", "'current'", "'history'", "'ent'", "'app'", "'within'", "'css'", "'years'", "'months'", "'weeks'", "'days'", "'hours'", "'minutes'", "'seconds'", "'year'", "'month'", "'week'", "'day'", "'hour'", "'minute'", "'second'", "'cachable'", "'for'", "'emit'", "'meta'", "'description'", "'name'", "'author'", "'key'", "'errorstack'", "'googleanalytics'", "'twitter'", "'amazon'", "'kpds'", "'google'", "'authz'", "'require'", "'user'", "'logging'", "'on'", "'off'", "'use'", "'module'", "'alias'", "'javascript'", "'resource'", "'dispatch'", "'domain'", "'->'"
     };
     public static final int EXPONENT=6;
     public static final int T__29=29;
@@ -2840,7 +2840,7 @@ public class RuleSet2Parser extends Parser {
     };
 
     // $ANTLR start "factor"
-    // RuleSet2.g:486:1: factor returns [Object result] options {backtrack=true; } : (v= INT | v= STRING | v= ( 'true' | 'false' ) | v= VAR '[' e= expr ']' | var_domain ':' VAR | trail_exp | function_app | '[' expr ',' ']' | '{' ( hash_line ( ',' )? )* '}' | v= VAR | '(' e= expr ')' );
+    // RuleSet2.g:486:1: factor returns [Object result] options {backtrack=true; } : (v= INT | v= STRING | v= ( 'true' | 'false' ) | v= VAR '[' e= expr ']' | d= var_domain ':' v= VAR | 'current' d= var_domain ':' v= VAR | 'history' e= expr d= var_domain ':' v= VAR | n= namespace p= VAR '(' (e= expr ( ',' )? )* ')' | v= VAR '(' (e= expr ( ',' )? )* ')' | '[' e= expr ( ',' e2= expr )* ']' | '{' h1= hash_line ( ',' h2= hash_line )* '}' | v= VAR | '(' e= expr ')' );
     public final RuleSet2Parser.factor_return factor() throws RecognitionException {
         RuleSet2Parser.factor_return retval = new RuleSet2Parser.factor_return();
         retval.start = input.LT(1);
@@ -2848,56 +2848,80 @@ public class RuleSet2Parser extends Parser {
         Object root_0 = null;
 
         Token v=null;
+        Token p=null;
         Token char_literal71=null;
         Token char_literal72=null;
-        Token char_literal74=null;
-        Token VAR75=null;
+        Token char_literal73=null;
+        Token string_literal74=null;
+        Token char_literal75=null;
+        Token string_literal76=null;
+        Token char_literal77=null;
         Token char_literal78=null;
+        Token char_literal79=null;
         Token char_literal80=null;
         Token char_literal81=null;
         Token char_literal82=null;
+        Token char_literal83=null;
         Token char_literal84=null;
         Token char_literal85=null;
         Token char_literal86=null;
         Token char_literal87=null;
+        Token char_literal88=null;
+        Token char_literal89=null;
+        Token char_literal90=null;
+        Token char_literal91=null;
         RuleSet2Parser.expr_return e = null;
 
-        RuleSet2Parser.var_domain_return var_domain73 = null;
+        RuleSet2Parser.var_domain_return d = null;
 
-        RuleSet2Parser.trail_exp_return trail_exp76 = null;
+        RuleSet2Parser.namespace_return n = null;
 
-        RuleSet2Parser.function_app_return function_app77 = null;
+        RuleSet2Parser.expr_return e2 = null;
 
-        RuleSet2Parser.expr_return expr79 = null;
+        RuleSet2Parser.hash_line_return h1 = null;
 
-        RuleSet2Parser.hash_line_return hash_line83 = null;
+        RuleSet2Parser.hash_line_return h2 = null;
 
 
         Object v_tree=null;
+        Object p_tree=null;
         Object char_literal71_tree=null;
         Object char_literal72_tree=null;
-        Object char_literal74_tree=null;
-        Object VAR75_tree=null;
+        Object char_literal73_tree=null;
+        Object string_literal74_tree=null;
+        Object char_literal75_tree=null;
+        Object string_literal76_tree=null;
+        Object char_literal77_tree=null;
         Object char_literal78_tree=null;
+        Object char_literal79_tree=null;
         Object char_literal80_tree=null;
         Object char_literal81_tree=null;
         Object char_literal82_tree=null;
+        Object char_literal83_tree=null;
         Object char_literal84_tree=null;
         Object char_literal85_tree=null;
         Object char_literal86_tree=null;
         Object char_literal87_tree=null;
+        Object char_literal88_tree=null;
+        Object char_literal89_tree=null;
+        Object char_literal90_tree=null;
+        Object char_literal91_tree=null;
+
+
+              ArrayList exprs2 = new ArrayList();
+
 
         try {
-            // RuleSet2.g:487:2: (v= INT | v= STRING | v= ( 'true' | 'false' ) | v= VAR '[' e= expr ']' | var_domain ':' VAR | trail_exp | function_app | '[' expr ',' ']' | '{' ( hash_line ( ',' )? )* '}' | v= VAR | '(' e= expr ')' )
-            int alt23=11;
-            alt23 = dfa23.predict(input);
-            switch (alt23) {
+            // RuleSet2.g:491:2: (v= INT | v= STRING | v= ( 'true' | 'false' ) | v= VAR '[' e= expr ']' | d= var_domain ':' v= VAR | 'current' d= var_domain ':' v= VAR | 'history' e= expr d= var_domain ':' v= VAR | n= namespace p= VAR '(' (e= expr ( ',' )? )* ')' | v= VAR '(' (e= expr ( ',' )? )* ')' | '[' e= expr ( ',' e2= expr )* ']' | '{' h1= hash_line ( ',' h2= hash_line )* '}' | v= VAR | '(' e= expr ')' )
+            int alt27=13;
+            alt27 = dfa27.predict(input);
+            switch (alt27) {
                 case 1 :
-                    // RuleSet2.g:487:4: v= INT
+                    // RuleSet2.g:491:4: v= INT
                     {
                     root_0 = (Object)adaptor.nil();
 
-                    v=(Token)match(input,INT,FOLLOW_INT_in_factor1633); if (state.failed) return retval;
+                    v=(Token)match(input,INT,FOLLOW_INT_in_factor1638); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     v_tree = (Object)adaptor.create(v);
                     adaptor.addChild(root_0, v_tree);
@@ -2914,11 +2938,11 @@ public class RuleSet2Parser extends Parser {
                     }
                     break;
                 case 2 :
-                    // RuleSet2.g:493:9: v= STRING
+                    // RuleSet2.g:497:9: v= STRING
                     {
                     root_0 = (Object)adaptor.nil();
 
-                    v=(Token)match(input,STRING,FOLLOW_STRING_in_factor1648); if (state.failed) return retval;
+                    v=(Token)match(input,STRING,FOLLOW_STRING_in_factor1653); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     v_tree = (Object)adaptor.create(v);
                     adaptor.addChild(root_0, v_tree);
@@ -2935,7 +2959,7 @@ public class RuleSet2Parser extends Parser {
                     }
                     break;
                 case 3 :
-                    // RuleSet2.g:499:9: v= ( 'true' | 'false' )
+                    // RuleSet2.g:503:9: v= ( 'true' | 'false' )
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -2963,27 +2987,27 @@ public class RuleSet2Parser extends Parser {
                     }
                     break;
                 case 4 :
-                    // RuleSet2.g:505:9: v= VAR '[' e= expr ']'
+                    // RuleSet2.g:509:9: v= VAR '[' e= expr ']'
                     {
                     root_0 = (Object)adaptor.nil();
 
-                    v=(Token)match(input,VAR,FOLLOW_VAR_in_factor1688); if (state.failed) return retval;
+                    v=(Token)match(input,VAR,FOLLOW_VAR_in_factor1693); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     v_tree = (Object)adaptor.create(v);
                     adaptor.addChild(root_0, v_tree);
                     }
-                    char_literal71=(Token)match(input,84,FOLLOW_84_in_factor1690); if (state.failed) return retval;
+                    char_literal71=(Token)match(input,84,FOLLOW_84_in_factor1695); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     char_literal71_tree = (Object)adaptor.create(char_literal71);
                     adaptor.addChild(root_0, char_literal71_tree);
                     }
-                    pushFollow(FOLLOW_expr_in_factor1694);
+                    pushFollow(FOLLOW_expr_in_factor1699);
                     e=expr();
 
                     state._fsp--;
                     if (state.failed) return retval;
                     if ( state.backtracking==0 ) adaptor.addChild(root_0, e.getTree());
-                    char_literal72=(Token)match(input,85,FOLLOW_85_in_factor1696); if (state.failed) return retval;
+                    char_literal72=(Token)match(input,85,FOLLOW_85_in_factor1701); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     char_literal72_tree = (Object)adaptor.create(char_literal72);
                     adaptor.addChild(root_0, char_literal72_tree);
@@ -3008,118 +3032,171 @@ public class RuleSet2Parser extends Parser {
                     }
                     break;
                 case 5 :
-                    // RuleSet2.g:519:9: var_domain ':' VAR
+                    // RuleSet2.g:523:9: d= var_domain ':' v= VAR
                     {
                     root_0 = (Object)adaptor.nil();
 
-                    pushFollow(FOLLOW_var_domain_in_factor1709);
-                    var_domain73=var_domain();
+                    pushFollow(FOLLOW_var_domain_in_factor1716);
+                    d=var_domain();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, var_domain73.getTree());
-                    char_literal74=(Token)match(input,35,FOLLOW_35_in_factor1711); if (state.failed) return retval;
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, d.getTree());
+                    char_literal73=(Token)match(input,35,FOLLOW_35_in_factor1718); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    char_literal74_tree = (Object)adaptor.create(char_literal74);
-                    adaptor.addChild(root_0, char_literal74_tree);
+                    char_literal73_tree = (Object)adaptor.create(char_literal73);
+                    adaptor.addChild(root_0, char_literal73_tree);
                     }
-                    VAR75=(Token)match(input,VAR,FOLLOW_VAR_in_factor1713); if (state.failed) return retval;
+                    v=(Token)match(input,VAR,FOLLOW_VAR_in_factor1722); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    VAR75_tree = (Object)adaptor.create(VAR75);
-                    adaptor.addChild(root_0, VAR75_tree);
+                    v_tree = (Object)adaptor.create(v);
+                    adaptor.addChild(root_0, v_tree);
+                    }
+                    if ( state.backtracking==0 ) {
+
+                      	      	HashMap tmp = new HashMap();
+                      	      	tmp.put("domain",(d!=null?input.toString(d.start,d.stop):null));
+                      	      	tmp.put("name",(v!=null?v.getText():null));
+                      	      	tmp.put("type","persistent");
+                      	      	retval.result = tmp;
+                            
                     }
 
                     }
                     break;
                 case 6 :
-                    // RuleSet2.g:520:9: trail_exp
+                    // RuleSet2.g:530:9: 'current' d= var_domain ':' v= VAR
                     {
                     root_0 = (Object)adaptor.nil();
 
-                    pushFollow(FOLLOW_trail_exp_in_factor1723);
-                    trail_exp76=trail_exp();
+                    string_literal74=(Token)match(input,86,FOLLOW_86_in_factor1734); if (state.failed) return retval;
+                    if ( state.backtracking==0 ) {
+                    string_literal74_tree = (Object)adaptor.create(string_literal74);
+                    adaptor.addChild(root_0, string_literal74_tree);
+                    }
+                    pushFollow(FOLLOW_var_domain_in_factor1738);
+                    d=var_domain();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, trail_exp76.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, d.getTree());
+                    char_literal75=(Token)match(input,35,FOLLOW_35_in_factor1740); if (state.failed) return retval;
+                    if ( state.backtracking==0 ) {
+                    char_literal75_tree = (Object)adaptor.create(char_literal75);
+                    adaptor.addChild(root_0, char_literal75_tree);
+                    }
+                    v=(Token)match(input,VAR,FOLLOW_VAR_in_factor1744); if (state.failed) return retval;
+                    if ( state.backtracking==0 ) {
+                    v_tree = (Object)adaptor.create(v);
+                    adaptor.addChild(root_0, v_tree);
+                    }
+                    if ( state.backtracking==0 ) {
+
+                            	      	HashMap tmp = new HashMap();
+                      	      	tmp.put("domain",(d!=null?input.toString(d.start,d.stop):null));
+                      	      	tmp.put("name",(v!=null?v.getText():null));
+                      	      	tmp.put("type","persistent");
+                      	      	retval.result = tmp;
+                            
+                    }
 
                     }
                     break;
                 case 7 :
-                    // RuleSet2.g:521:9: function_app
+                    // RuleSet2.g:537:9: 'history' e= expr d= var_domain ':' v= VAR
                     {
                     root_0 = (Object)adaptor.nil();
 
-                    pushFollow(FOLLOW_function_app_in_factor1733);
-                    function_app77=function_app();
+                    string_literal76=(Token)match(input,87,FOLLOW_87_in_factor1757); if (state.failed) return retval;
+                    if ( state.backtracking==0 ) {
+                    string_literal76_tree = (Object)adaptor.create(string_literal76);
+                    adaptor.addChild(root_0, string_literal76_tree);
+                    }
+                    pushFollow(FOLLOW_expr_in_factor1761);
+                    e=expr();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, function_app77.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, e.getTree());
+                    pushFollow(FOLLOW_var_domain_in_factor1765);
+                    d=var_domain();
+
+                    state._fsp--;
+                    if (state.failed) return retval;
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, d.getTree());
+                    char_literal77=(Token)match(input,35,FOLLOW_35_in_factor1767); if (state.failed) return retval;
+                    if ( state.backtracking==0 ) {
+                    char_literal77_tree = (Object)adaptor.create(char_literal77);
+                    adaptor.addChild(root_0, char_literal77_tree);
+                    }
+                    v=(Token)match(input,VAR,FOLLOW_VAR_in_factor1771); if (state.failed) return retval;
+                    if ( state.backtracking==0 ) {
+                    v_tree = (Object)adaptor.create(v);
+                    adaptor.addChild(root_0, v_tree);
+                    }
+                    if ( state.backtracking==0 ) {
+
+                            	      	HashMap tmp = new HashMap();
+                      	      	tmp.put("domain",(d!=null?input.toString(d.start,d.stop):null));
+                      	      	tmp.put("name",(v!=null?v.getText():null));
+                      	      	tmp.put("type","trail_history");
+                            	      	HashMap tmp2 = new HashMap();
+                      	      	tmp2.putAll((HashMap)(e!=null?e.result:null));
+                      	      	tmp.put("offset",tmp2);
+                      	      	retval.result = tmp;
+                            
+                    }
 
                     }
                     break;
                 case 8 :
-                    // RuleSet2.g:522:9: '[' expr ',' ']'
+                    // RuleSet2.g:547:9: n= namespace p= VAR '(' (e= expr ( ',' )? )* ')'
                     {
                     root_0 = (Object)adaptor.nil();
 
-                    char_literal78=(Token)match(input,84,FOLLOW_84_in_factor1743); if (state.failed) return retval;
+                    pushFollow(FOLLOW_namespace_in_factor1785);
+                    n=namespace();
+
+                    state._fsp--;
+                    if (state.failed) return retval;
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, n.getTree());
+                    p=(Token)match(input,VAR,FOLLOW_VAR_in_factor1789); if (state.failed) return retval;
+                    if ( state.backtracking==0 ) {
+                    p_tree = (Object)adaptor.create(p);
+                    adaptor.addChild(root_0, p_tree);
+                    }
+                    char_literal78=(Token)match(input,44,FOLLOW_44_in_factor1791); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     char_literal78_tree = (Object)adaptor.create(char_literal78);
                     adaptor.addChild(root_0, char_literal78_tree);
                     }
-                    pushFollow(FOLLOW_expr_in_factor1745);
-                    expr79=expr();
-
-                    state._fsp--;
-                    if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, expr79.getTree());
-                    char_literal80=(Token)match(input,45,FOLLOW_45_in_factor1747); if (state.failed) return retval;
-                    if ( state.backtracking==0 ) {
-                    char_literal80_tree = (Object)adaptor.create(char_literal80);
-                    adaptor.addChild(root_0, char_literal80_tree);
-                    }
-                    char_literal81=(Token)match(input,85,FOLLOW_85_in_factor1749); if (state.failed) return retval;
-                    if ( state.backtracking==0 ) {
-                    char_literal81_tree = (Object)adaptor.create(char_literal81);
-                    adaptor.addChild(root_0, char_literal81_tree);
-                    }
-
-                    }
-                    break;
-                case 9 :
-                    // RuleSet2.g:523:9: '{' ( hash_line ( ',' )? )* '}'
-                    {
-                    root_0 = (Object)adaptor.nil();
-
-                    char_literal82=(Token)match(input,30,FOLLOW_30_in_factor1759); if (state.failed) return retval;
-                    if ( state.backtracking==0 ) {
-                    char_literal82_tree = (Object)adaptor.create(char_literal82);
-                    adaptor.addChild(root_0, char_literal82_tree);
-                    }
-                    // RuleSet2.g:523:13: ( hash_line ( ',' )? )*
+                    // RuleSet2.g:547:31: (e= expr ( ',' )? )*
                     loop22:
                     do {
                         int alt22=2;
                         int LA22_0 = input.LA(1);
 
-                        if ( (LA22_0==STRING) ) {
+                        if ( ((LA22_0>=VAR && LA22_0<=INT)||LA22_0==STRING||LA22_0==30||(LA22_0>=43 && LA22_0<=44)||(LA22_0>=54 && LA22_0<=55)||(LA22_0>=82 && LA22_0<=84)||(LA22_0>=86 && LA22_0<=89)) ) {
                             alt22=1;
                         }
 
 
                         switch (alt22) {
                     	case 1 :
-                    	    // RuleSet2.g:523:14: hash_line ( ',' )?
+                    	    // RuleSet2.g:547:32: e= expr ( ',' )?
                     	    {
-                    	    pushFollow(FOLLOW_hash_line_in_factor1762);
-                    	    hash_line83=hash_line();
+                    	    pushFollow(FOLLOW_expr_in_factor1796);
+                    	    e=expr();
 
                     	    state._fsp--;
                     	    if (state.failed) return retval;
-                    	    if ( state.backtracking==0 ) adaptor.addChild(root_0, hash_line83.getTree());
-                    	    // RuleSet2.g:523:24: ( ',' )?
+                    	    if ( state.backtracking==0 ) adaptor.addChild(root_0, e.getTree());
+                    	    if ( state.backtracking==0 ) {
+
+                    	                  exprs2.add((e!=null?e.result:null));
+                    	            	
+                    	    }
+                    	    // RuleSet2.g:550:8: ( ',' )?
                     	    int alt21=2;
                     	    int LA21_0 = input.LA(1);
 
@@ -3128,12 +3205,12 @@ public class RuleSet2Parser extends Parser {
                     	    }
                     	    switch (alt21) {
                     	        case 1 :
-                    	            // RuleSet2.g:523:24: ','
+                    	            // RuleSet2.g:550:8: ','
                     	            {
-                    	            char_literal84=(Token)match(input,45,FOLLOW_45_in_factor1764); if (state.failed) return retval;
+                    	            char_literal79=(Token)match(input,45,FOLLOW_45_in_factor1807); if (state.failed) return retval;
                     	            if ( state.backtracking==0 ) {
-                    	            char_literal84_tree = (Object)adaptor.create(char_literal84);
-                    	            adaptor.addChild(root_0, char_literal84_tree);
+                    	            char_literal79_tree = (Object)adaptor.create(char_literal79);
+                    	            adaptor.addChild(root_0, char_literal79_tree);
                     	            }
 
                     	            }
@@ -3150,20 +3227,278 @@ public class RuleSet2Parser extends Parser {
                         }
                     } while (true);
 
-                    char_literal85=(Token)match(input,31,FOLLOW_31_in_factor1769); if (state.failed) return retval;
+                    char_literal80=(Token)match(input,46,FOLLOW_46_in_factor1812); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    char_literal85_tree = (Object)adaptor.create(char_literal85);
-                    adaptor.addChild(root_0, char_literal85_tree);
+                    char_literal80_tree = (Object)adaptor.create(char_literal80);
+                    adaptor.addChild(root_0, char_literal80_tree);
+                    }
+                    if ( state.backtracking==0 ) {
+
+                      	      	HashMap tmp = new HashMap();
+                      	      	tmp.put("predicate",(p!=null?p.getText():null));
+                      	      	tmp.put("source",(n!=null?input.toString(n.start,n.stop):null));
+                      	      	tmp.put("args",exprs2);
+                      	      	retval.result = tmp;
+                            
+                    }
+
+                    }
+                    break;
+                case 9 :
+                    // RuleSet2.g:557:9: v= VAR '(' (e= expr ( ',' )? )* ')'
+                    {
+                    root_0 = (Object)adaptor.nil();
+
+                    v=(Token)match(input,VAR,FOLLOW_VAR_in_factor1827); if (state.failed) return retval;
+                    if ( state.backtracking==0 ) {
+                    v_tree = (Object)adaptor.create(v);
+                    adaptor.addChild(root_0, v_tree);
+                    }
+                    char_literal81=(Token)match(input,44,FOLLOW_44_in_factor1829); if (state.failed) return retval;
+                    if ( state.backtracking==0 ) {
+                    char_literal81_tree = (Object)adaptor.create(char_literal81);
+                    adaptor.addChild(root_0, char_literal81_tree);
+                    }
+                    // RuleSet2.g:557:19: (e= expr ( ',' )? )*
+                    loop24:
+                    do {
+                        int alt24=2;
+                        int LA24_0 = input.LA(1);
+
+                        if ( ((LA24_0>=VAR && LA24_0<=INT)||LA24_0==STRING||LA24_0==30||(LA24_0>=43 && LA24_0<=44)||(LA24_0>=54 && LA24_0<=55)||(LA24_0>=82 && LA24_0<=84)||(LA24_0>=86 && LA24_0<=89)) ) {
+                            alt24=1;
+                        }
+
+
+                        switch (alt24) {
+                    	case 1 :
+                    	    // RuleSet2.g:557:20: e= expr ( ',' )?
+                    	    {
+                    	    pushFollow(FOLLOW_expr_in_factor1834);
+                    	    e=expr();
+
+                    	    state._fsp--;
+                    	    if (state.failed) return retval;
+                    	    if ( state.backtracking==0 ) adaptor.addChild(root_0, e.getTree());
+                    	    if ( state.backtracking==0 ) {
+
+                    	                  exprs2.add((e!=null?e.result:null));
+                    	            	
+                    	    }
+                    	    // RuleSet2.g:560:2: ( ',' )?
+                    	    int alt23=2;
+                    	    int LA23_0 = input.LA(1);
+
+                    	    if ( (LA23_0==45) ) {
+                    	        alt23=1;
+                    	    }
+                    	    switch (alt23) {
+                    	        case 1 :
+                    	            // RuleSet2.g:560:2: ','
+                    	            {
+                    	            char_literal82=(Token)match(input,45,FOLLOW_45_in_factor1838); if (state.failed) return retval;
+                    	            if ( state.backtracking==0 ) {
+                    	            char_literal82_tree = (Object)adaptor.create(char_literal82);
+                    	            adaptor.addChild(root_0, char_literal82_tree);
+                    	            }
+
+                    	            }
+                    	            break;
+
+                    	    }
+
+
+                    	    }
+                    	    break;
+
+                    	default :
+                    	    break loop24;
+                        }
+                    } while (true);
+
+                    char_literal83=(Token)match(input,46,FOLLOW_46_in_factor1843); if (state.failed) return retval;
+                    if ( state.backtracking==0 ) {
+                    char_literal83_tree = (Object)adaptor.create(char_literal83);
+                    adaptor.addChild(root_0, char_literal83_tree);
+                    }
+                    if ( state.backtracking==0 ) {
+
+                      	      	HashMap tmp = new HashMap();
+                      	      	tmp.put("type","app");
+                      	      	HashMap tmp2 = new HashMap();
+                      	      	tmp2.put("val",(v!=null?v.getText():null));
+                      	      	tmp2.put("type","var");
+                      	      	tmp.put("function_expr",tmp2);
+                      	      	tmp.put("args",exprs2);
+                      	      	retval.result = tmp;
+                            
+                            
                     }
 
                     }
                     break;
                 case 10 :
-                    // RuleSet2.g:524:9: v= VAR
+                    // RuleSet2.g:571:9: '[' e= expr ( ',' e2= expr )* ']'
                     {
                     root_0 = (Object)adaptor.nil();
 
-                    v=(Token)match(input,VAR,FOLLOW_VAR_in_factor1781); if (state.failed) return retval;
+                    char_literal84=(Token)match(input,84,FOLLOW_84_in_factor1855); if (state.failed) return retval;
+                    if ( state.backtracking==0 ) {
+                    char_literal84_tree = (Object)adaptor.create(char_literal84);
+                    adaptor.addChild(root_0, char_literal84_tree);
+                    }
+                    pushFollow(FOLLOW_expr_in_factor1859);
+                    e=expr();
+
+                    state._fsp--;
+                    if (state.failed) return retval;
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, e.getTree());
+                    if ( state.backtracking==0 ) {
+
+                            			exprs2.add((e!=null?e.result:null));
+                            		 
+                    }
+                    // RuleSet2.g:573:12: ( ',' e2= expr )*
+                    loop25:
+                    do {
+                        int alt25=2;
+                        int LA25_0 = input.LA(1);
+
+                        if ( (LA25_0==45) ) {
+                            alt25=1;
+                        }
+
+
+                        switch (alt25) {
+                    	case 1 :
+                    	    // RuleSet2.g:573:13: ',' e2= expr
+                    	    {
+                    	    char_literal85=(Token)match(input,45,FOLLOW_45_in_factor1864); if (state.failed) return retval;
+                    	    if ( state.backtracking==0 ) {
+                    	    char_literal85_tree = (Object)adaptor.create(char_literal85);
+                    	    adaptor.addChild(root_0, char_literal85_tree);
+                    	    }
+                    	    pushFollow(FOLLOW_expr_in_factor1868);
+                    	    e2=expr();
+
+                    	    state._fsp--;
+                    	    if (state.failed) return retval;
+                    	    if ( state.backtracking==0 ) adaptor.addChild(root_0, e2.getTree());
+                    	    if ( state.backtracking==0 ) {
+
+                    	            			exprs2.add((e2!=null?e2.result:null));
+                    	            		 
+                    	    }
+
+                    	    }
+                    	    break;
+
+                    	default :
+                    	    break loop25;
+                        }
+                    } while (true);
+
+                    char_literal86=(Token)match(input,85,FOLLOW_85_in_factor1873); if (state.failed) return retval;
+                    if ( state.backtracking==0 ) {
+                    char_literal86_tree = (Object)adaptor.create(char_literal86);
+                    adaptor.addChild(root_0, char_literal86_tree);
+                    }
+                    if ( state.backtracking==0 ) {
+
+                            			HashMap tmp = new HashMap();
+                            			tmp.put("val",exprs2);	
+                            			tmp.put("type","array");
+                            		 
+                      	      	retval.result = tmp;
+                            
+                    }
+
+                    }
+                    break;
+                case 11 :
+                    // RuleSet2.g:582:9: '{' h1= hash_line ( ',' h2= hash_line )* '}'
+                    {
+                    root_0 = (Object)adaptor.nil();
+
+                    char_literal87=(Token)match(input,30,FOLLOW_30_in_factor1885); if (state.failed) return retval;
+                    if ( state.backtracking==0 ) {
+                    char_literal87_tree = (Object)adaptor.create(char_literal87);
+                    adaptor.addChild(root_0, char_literal87_tree);
+                    }
+                    pushFollow(FOLLOW_hash_line_in_factor1889);
+                    h1=hash_line();
+
+                    state._fsp--;
+                    if (state.failed) return retval;
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, h1.getTree());
+                    if ( state.backtracking==0 ) {
+
+                            			exprs2.add((h1!=null?h1.result:null));
+                            		 
+                    }
+                    // RuleSet2.g:584:12: ( ',' h2= hash_line )*
+                    loop26:
+                    do {
+                        int alt26=2;
+                        int LA26_0 = input.LA(1);
+
+                        if ( (LA26_0==45) ) {
+                            alt26=1;
+                        }
+
+
+                        switch (alt26) {
+                    	case 1 :
+                    	    // RuleSet2.g:584:13: ',' h2= hash_line
+                    	    {
+                    	    char_literal88=(Token)match(input,45,FOLLOW_45_in_factor1894); if (state.failed) return retval;
+                    	    if ( state.backtracking==0 ) {
+                    	    char_literal88_tree = (Object)adaptor.create(char_literal88);
+                    	    adaptor.addChild(root_0, char_literal88_tree);
+                    	    }
+                    	    pushFollow(FOLLOW_hash_line_in_factor1898);
+                    	    h2=hash_line();
+
+                    	    state._fsp--;
+                    	    if (state.failed) return retval;
+                    	    if ( state.backtracking==0 ) adaptor.addChild(root_0, h2.getTree());
+                    	    if ( state.backtracking==0 ) {
+
+                    	            			exprs2.add((h2!=null?h2.result:null));
+                    	            		 
+                    	    }
+
+                    	    }
+                    	    break;
+
+                    	default :
+                    	    break loop26;
+                        }
+                    } while (true);
+
+                    char_literal89=(Token)match(input,31,FOLLOW_31_in_factor1904); if (state.failed) return retval;
+                    if ( state.backtracking==0 ) {
+                    char_literal89_tree = (Object)adaptor.create(char_literal89);
+                    adaptor.addChild(root_0, char_literal89_tree);
+                    }
+                    if ( state.backtracking==0 ) {
+
+                            			HashMap tmp = new HashMap();
+                            			tmp.put("val",exprs2);	
+                            			tmp.put("type","hashraw");
+                            		 
+                      	      	retval.result = tmp;
+                      	
+                    }
+
+                    }
+                    break;
+                case 12 :
+                    // RuleSet2.g:593:9: v= VAR
+                    {
+                    root_0 = (Object)adaptor.nil();
+
+                    v=(Token)match(input,VAR,FOLLOW_VAR_in_factor1918); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     v_tree = (Object)adaptor.create(v);
                     adaptor.addChild(root_0, v_tree);
@@ -3179,29 +3514,31 @@ public class RuleSet2Parser extends Parser {
 
                     }
                     break;
-                case 11 :
-                    // RuleSet2.g:530:9: '(' e= expr ')'
+                case 13 :
+                    // RuleSet2.g:599:9: '(' e= expr ')'
                     {
                     root_0 = (Object)adaptor.nil();
 
-                    char_literal86=(Token)match(input,44,FOLLOW_44_in_factor1794); if (state.failed) return retval;
+                    char_literal90=(Token)match(input,44,FOLLOW_44_in_factor1931); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    char_literal86_tree = (Object)adaptor.create(char_literal86);
-                    adaptor.addChild(root_0, char_literal86_tree);
+                    char_literal90_tree = (Object)adaptor.create(char_literal90);
+                    adaptor.addChild(root_0, char_literal90_tree);
                     }
-                    pushFollow(FOLLOW_expr_in_factor1798);
+                    pushFollow(FOLLOW_expr_in_factor1935);
                     e=expr();
 
                     state._fsp--;
                     if (state.failed) return retval;
                     if ( state.backtracking==0 ) adaptor.addChild(root_0, e.getTree());
-                    char_literal87=(Token)match(input,46,FOLLOW_46_in_factor1800); if (state.failed) return retval;
+                    char_literal91=(Token)match(input,46,FOLLOW_46_in_factor1937); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    char_literal87_tree = (Object)adaptor.create(char_literal87);
-                    adaptor.addChild(root_0, char_literal87_tree);
+                    char_literal91_tree = (Object)adaptor.create(char_literal91);
+                    adaptor.addChild(root_0, char_literal91_tree);
                     }
                     if ( state.backtracking==0 ) {
-                       retval.result =(e!=null?e.result:null); 
+                       
+                            		retval.result =(e!=null?e.result:null); 
+                            	
                     }
 
                     }
@@ -3234,27 +3571,27 @@ public class RuleSet2Parser extends Parser {
     };
 
     // $ANTLR start "var_domain"
-    // RuleSet2.g:532:10: fragment var_domain : ( 'ent' | 'app' );
+    // RuleSet2.g:603:10: fragment var_domain : ( 'ent' | 'app' );
     public final RuleSet2Parser.var_domain_return var_domain() throws RecognitionException {
         RuleSet2Parser.var_domain_return retval = new RuleSet2Parser.var_domain_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
 
-        Token set88=null;
+        Token set92=null;
 
-        Object set88_tree=null;
+        Object set92_tree=null;
 
         try {
-            // RuleSet2.g:532:20: ( 'ent' | 'app' )
+            // RuleSet2.g:603:20: ( 'ent' | 'app' )
             // RuleSet2.g:
             {
             root_0 = (Object)adaptor.nil();
 
-            set88=(Token)input.LT(1);
-            if ( (input.LA(1)>=86 && input.LA(1)<=87) ) {
+            set92=(Token)input.LT(1);
+            if ( (input.LA(1)>=88 && input.LA(1)<=89) ) {
                 input.consume();
-                if ( state.backtracking==0 ) adaptor.addChild(root_0, (Object)adaptor.create(set88));
+                if ( state.backtracking==0 ) adaptor.addChild(root_0, (Object)adaptor.create(set92));
                 state.errorRecovery=false;state.failed=false;
             }
             else {
@@ -3286,285 +3623,46 @@ public class RuleSet2Parser extends Parser {
     }
     // $ANTLR end "var_domain"
 
-    public static class function_app_return extends ParserRuleReturnScope {
-        Object tree;
-        public Object getTree() { return tree; }
-    };
-
-    // $ANTLR start "function_app"
-    // RuleSet2.g:536:1: function_app : ( namespace VAR '(' ( expr ( ',' )? )* ')' | VAR '(' ( expr ( ',' )? )* ')' );
-    public final RuleSet2Parser.function_app_return function_app() throws RecognitionException {
-        RuleSet2Parser.function_app_return retval = new RuleSet2Parser.function_app_return();
-        retval.start = input.LT(1);
-
-        Object root_0 = null;
-
-        Token VAR90=null;
-        Token char_literal91=null;
-        Token char_literal93=null;
-        Token char_literal94=null;
-        Token VAR95=null;
-        Token char_literal96=null;
-        Token char_literal98=null;
-        Token char_literal99=null;
-        RuleSet2Parser.namespace_return namespace89 = null;
-
-        RuleSet2Parser.expr_return expr92 = null;
-
-        RuleSet2Parser.expr_return expr97 = null;
-
-
-        Object VAR90_tree=null;
-        Object char_literal91_tree=null;
-        Object char_literal93_tree=null;
-        Object char_literal94_tree=null;
-        Object VAR95_tree=null;
-        Object char_literal96_tree=null;
-        Object char_literal98_tree=null;
-        Object char_literal99_tree=null;
-
-        try {
-            // RuleSet2.g:537:2: ( namespace VAR '(' ( expr ( ',' )? )* ')' | VAR '(' ( expr ( ',' )? )* ')' )
-            int alt28=2;
-            int LA28_0 = input.LA(1);
-
-            if ( (LA28_0==VAR) ) {
-                int LA28_1 = input.LA(2);
-
-                if ( (LA28_1==35) ) {
-                    alt28=1;
-                }
-                else if ( (LA28_1==44) ) {
-                    alt28=2;
-                }
-                else {
-                    if (state.backtracking>0) {state.failed=true; return retval;}
-                    NoViableAltException nvae =
-                        new NoViableAltException("", 28, 1, input);
-
-                    throw nvae;
-                }
-            }
-            else {
-                if (state.backtracking>0) {state.failed=true; return retval;}
-                NoViableAltException nvae =
-                    new NoViableAltException("", 28, 0, input);
-
-                throw nvae;
-            }
-            switch (alt28) {
-                case 1 :
-                    // RuleSet2.g:537:3: namespace VAR '(' ( expr ( ',' )? )* ')'
-                    {
-                    root_0 = (Object)adaptor.nil();
-
-                    pushFollow(FOLLOW_namespace_in_function_app1835);
-                    namespace89=namespace();
-
-                    state._fsp--;
-                    if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, namespace89.getTree());
-                    VAR90=(Token)match(input,VAR,FOLLOW_VAR_in_function_app1837); if (state.failed) return retval;
-                    if ( state.backtracking==0 ) {
-                    VAR90_tree = (Object)adaptor.create(VAR90);
-                    adaptor.addChild(root_0, VAR90_tree);
-                    }
-                    char_literal91=(Token)match(input,44,FOLLOW_44_in_function_app1839); if (state.failed) return retval;
-                    if ( state.backtracking==0 ) {
-                    char_literal91_tree = (Object)adaptor.create(char_literal91);
-                    adaptor.addChild(root_0, char_literal91_tree);
-                    }
-                    // RuleSet2.g:537:21: ( expr ( ',' )? )*
-                    loop25:
-                    do {
-                        int alt25=2;
-                        int LA25_0 = input.LA(1);
-
-                        if ( ((LA25_0>=VAR && LA25_0<=INT)||LA25_0==STRING||LA25_0==30||(LA25_0>=43 && LA25_0<=44)||(LA25_0>=54 && LA25_0<=55)||(LA25_0>=82 && LA25_0<=84)||(LA25_0>=86 && LA25_0<=89)) ) {
-                            alt25=1;
-                        }
-
-
-                        switch (alt25) {
-                    	case 1 :
-                    	    // RuleSet2.g:537:22: expr ( ',' )?
-                    	    {
-                    	    pushFollow(FOLLOW_expr_in_function_app1842);
-                    	    expr92=expr();
-
-                    	    state._fsp--;
-                    	    if (state.failed) return retval;
-                    	    if ( state.backtracking==0 ) adaptor.addChild(root_0, expr92.getTree());
-                    	    // RuleSet2.g:537:27: ( ',' )?
-                    	    int alt24=2;
-                    	    int LA24_0 = input.LA(1);
-
-                    	    if ( (LA24_0==45) ) {
-                    	        alt24=1;
-                    	    }
-                    	    switch (alt24) {
-                    	        case 1 :
-                    	            // RuleSet2.g:537:27: ','
-                    	            {
-                    	            char_literal93=(Token)match(input,45,FOLLOW_45_in_function_app1844); if (state.failed) return retval;
-                    	            if ( state.backtracking==0 ) {
-                    	            char_literal93_tree = (Object)adaptor.create(char_literal93);
-                    	            adaptor.addChild(root_0, char_literal93_tree);
-                    	            }
-
-                    	            }
-                    	            break;
-
-                    	    }
-
-
-                    	    }
-                    	    break;
-
-                    	default :
-                    	    break loop25;
-                        }
-                    } while (true);
-
-                    char_literal94=(Token)match(input,46,FOLLOW_46_in_function_app1849); if (state.failed) return retval;
-                    if ( state.backtracking==0 ) {
-                    char_literal94_tree = (Object)adaptor.create(char_literal94);
-                    adaptor.addChild(root_0, char_literal94_tree);
-                    }
-
-                    }
-                    break;
-                case 2 :
-                    // RuleSet2.g:538:4: VAR '(' ( expr ( ',' )? )* ')'
-                    {
-                    root_0 = (Object)adaptor.nil();
-
-                    VAR95=(Token)match(input,VAR,FOLLOW_VAR_in_function_app1855); if (state.failed) return retval;
-                    if ( state.backtracking==0 ) {
-                    VAR95_tree = (Object)adaptor.create(VAR95);
-                    adaptor.addChild(root_0, VAR95_tree);
-                    }
-                    char_literal96=(Token)match(input,44,FOLLOW_44_in_function_app1857); if (state.failed) return retval;
-                    if ( state.backtracking==0 ) {
-                    char_literal96_tree = (Object)adaptor.create(char_literal96);
-                    adaptor.addChild(root_0, char_literal96_tree);
-                    }
-                    // RuleSet2.g:538:12: ( expr ( ',' )? )*
-                    loop27:
-                    do {
-                        int alt27=2;
-                        int LA27_0 = input.LA(1);
-
-                        if ( ((LA27_0>=VAR && LA27_0<=INT)||LA27_0==STRING||LA27_0==30||(LA27_0>=43 && LA27_0<=44)||(LA27_0>=54 && LA27_0<=55)||(LA27_0>=82 && LA27_0<=84)||(LA27_0>=86 && LA27_0<=89)) ) {
-                            alt27=1;
-                        }
-
-
-                        switch (alt27) {
-                    	case 1 :
-                    	    // RuleSet2.g:538:13: expr ( ',' )?
-                    	    {
-                    	    pushFollow(FOLLOW_expr_in_function_app1860);
-                    	    expr97=expr();
-
-                    	    state._fsp--;
-                    	    if (state.failed) return retval;
-                    	    if ( state.backtracking==0 ) adaptor.addChild(root_0, expr97.getTree());
-                    	    // RuleSet2.g:538:18: ( ',' )?
-                    	    int alt26=2;
-                    	    int LA26_0 = input.LA(1);
-
-                    	    if ( (LA26_0==45) ) {
-                    	        alt26=1;
-                    	    }
-                    	    switch (alt26) {
-                    	        case 1 :
-                    	            // RuleSet2.g:538:18: ','
-                    	            {
-                    	            char_literal98=(Token)match(input,45,FOLLOW_45_in_function_app1862); if (state.failed) return retval;
-                    	            if ( state.backtracking==0 ) {
-                    	            char_literal98_tree = (Object)adaptor.create(char_literal98);
-                    	            adaptor.addChild(root_0, char_literal98_tree);
-                    	            }
-
-                    	            }
-                    	            break;
-
-                    	    }
-
-
-                    	    }
-                    	    break;
-
-                    	default :
-                    	    break loop27;
-                        }
-                    } while (true);
-
-                    char_literal99=(Token)match(input,46,FOLLOW_46_in_function_app1867); if (state.failed) return retval;
-                    if ( state.backtracking==0 ) {
-                    char_literal99_tree = (Object)adaptor.create(char_literal99);
-                    adaptor.addChild(root_0, char_literal99_tree);
-                    }
-
-                    }
-                    break;
-
-            }
-            retval.stop = input.LT(-1);
-
-            if ( state.backtracking==0 ) {
-
-            retval.tree = (Object)adaptor.rulePostProcessing(root_0);
-            adaptor.setTokenBoundaries(retval.tree, retval.start, retval.stop);
-            }
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-    	retval.tree = (Object)adaptor.errorNode(input, retval.start, input.LT(-1), re);
-
-        }
-        finally {
-        }
-        return retval;
-    }
-    // $ANTLR end "function_app"
-
     public static class namespace_return extends ParserRuleReturnScope {
+        public String result;
         Object tree;
         public Object getTree() { return tree; }
     };
 
     // $ANTLR start "namespace"
-    // RuleSet2.g:541:10: fragment namespace : VAR ':' ;
+    // RuleSet2.g:608:10: fragment namespace returns [String result] : v= VAR ':' ;
     public final RuleSet2Parser.namespace_return namespace() throws RecognitionException {
         RuleSet2Parser.namespace_return retval = new RuleSet2Parser.namespace_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
 
-        Token VAR100=null;
-        Token char_literal101=null;
+        Token v=null;
+        Token char_literal93=null;
 
-        Object VAR100_tree=null;
-        Object char_literal101_tree=null;
+        Object v_tree=null;
+        Object char_literal93_tree=null;
 
         try {
-            // RuleSet2.g:542:2: ( VAR ':' )
-            // RuleSet2.g:542:4: VAR ':'
+            // RuleSet2.g:609:2: (v= VAR ':' )
+            // RuleSet2.g:609:4: v= VAR ':'
             {
             root_0 = (Object)adaptor.nil();
 
-            VAR100=(Token)match(input,VAR,FOLLOW_VAR_in_namespace1881); if (state.failed) return retval;
+            v=(Token)match(input,VAR,FOLLOW_VAR_in_namespace1980); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            VAR100_tree = (Object)adaptor.create(VAR100);
-            adaptor.addChild(root_0, VAR100_tree);
+            v_tree = (Object)adaptor.create(v);
+            adaptor.addChild(root_0, v_tree);
             }
-            char_literal101=(Token)match(input,35,FOLLOW_35_in_namespace1883); if (state.failed) return retval;
+            char_literal93=(Token)match(input,35,FOLLOW_35_in_namespace1982); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            char_literal101_tree = (Object)adaptor.create(char_literal101);
-            adaptor.addChild(root_0, char_literal101_tree);
+            char_literal93_tree = (Object)adaptor.create(char_literal93);
+            adaptor.addChild(root_0, char_literal93_tree);
+            }
+            if ( state.backtracking==0 ) {
+
+              		retval.result = (v!=null?v.getText():null);
+              	
             }
 
             }
@@ -3589,191 +3687,53 @@ public class RuleSet2Parser extends Parser {
     }
     // $ANTLR end "namespace"
 
-    public static class trail_exp_return extends ParserRuleReturnScope {
-        Object tree;
-        public Object getTree() { return tree; }
-    };
-
-    // $ANTLR start "trail_exp"
-    // RuleSet2.g:545:1: trail_exp : ( 'current' var_domain ':' VAR | 'history' expr var_domain ':' VAR );
-    public final RuleSet2Parser.trail_exp_return trail_exp() throws RecognitionException {
-        RuleSet2Parser.trail_exp_return retval = new RuleSet2Parser.trail_exp_return();
-        retval.start = input.LT(1);
-
-        Object root_0 = null;
-
-        Token string_literal102=null;
-        Token char_literal104=null;
-        Token VAR105=null;
-        Token string_literal106=null;
-        Token char_literal109=null;
-        Token VAR110=null;
-        RuleSet2Parser.var_domain_return var_domain103 = null;
-
-        RuleSet2Parser.expr_return expr107 = null;
-
-        RuleSet2Parser.var_domain_return var_domain108 = null;
-
-
-        Object string_literal102_tree=null;
-        Object char_literal104_tree=null;
-        Object VAR105_tree=null;
-        Object string_literal106_tree=null;
-        Object char_literal109_tree=null;
-        Object VAR110_tree=null;
-
-        try {
-            // RuleSet2.g:546:2: ( 'current' var_domain ':' VAR | 'history' expr var_domain ':' VAR )
-            int alt29=2;
-            int LA29_0 = input.LA(1);
-
-            if ( (LA29_0==88) ) {
-                alt29=1;
-            }
-            else if ( (LA29_0==89) ) {
-                alt29=2;
-            }
-            else {
-                if (state.backtracking>0) {state.failed=true; return retval;}
-                NoViableAltException nvae =
-                    new NoViableAltException("", 29, 0, input);
-
-                throw nvae;
-            }
-            switch (alt29) {
-                case 1 :
-                    // RuleSet2.g:546:3: 'current' var_domain ':' VAR
-                    {
-                    root_0 = (Object)adaptor.nil();
-
-                    string_literal102=(Token)match(input,88,FOLLOW_88_in_trail_exp1896); if (state.failed) return retval;
-                    if ( state.backtracking==0 ) {
-                    string_literal102_tree = (Object)adaptor.create(string_literal102);
-                    adaptor.addChild(root_0, string_literal102_tree);
-                    }
-                    pushFollow(FOLLOW_var_domain_in_trail_exp1898);
-                    var_domain103=var_domain();
-
-                    state._fsp--;
-                    if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, var_domain103.getTree());
-                    char_literal104=(Token)match(input,35,FOLLOW_35_in_trail_exp1900); if (state.failed) return retval;
-                    if ( state.backtracking==0 ) {
-                    char_literal104_tree = (Object)adaptor.create(char_literal104);
-                    adaptor.addChild(root_0, char_literal104_tree);
-                    }
-                    VAR105=(Token)match(input,VAR,FOLLOW_VAR_in_trail_exp1902); if (state.failed) return retval;
-                    if ( state.backtracking==0 ) {
-                    VAR105_tree = (Object)adaptor.create(VAR105);
-                    adaptor.addChild(root_0, VAR105_tree);
-                    }
-
-                    }
-                    break;
-                case 2 :
-                    // RuleSet2.g:547:4: 'history' expr var_domain ':' VAR
-                    {
-                    root_0 = (Object)adaptor.nil();
-
-                    string_literal106=(Token)match(input,89,FOLLOW_89_in_trail_exp1908); if (state.failed) return retval;
-                    if ( state.backtracking==0 ) {
-                    string_literal106_tree = (Object)adaptor.create(string_literal106);
-                    adaptor.addChild(root_0, string_literal106_tree);
-                    }
-                    pushFollow(FOLLOW_expr_in_trail_exp1910);
-                    expr107=expr();
-
-                    state._fsp--;
-                    if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, expr107.getTree());
-                    pushFollow(FOLLOW_var_domain_in_trail_exp1912);
-                    var_domain108=var_domain();
-
-                    state._fsp--;
-                    if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, var_domain108.getTree());
-                    char_literal109=(Token)match(input,35,FOLLOW_35_in_trail_exp1914); if (state.failed) return retval;
-                    if ( state.backtracking==0 ) {
-                    char_literal109_tree = (Object)adaptor.create(char_literal109);
-                    adaptor.addChild(root_0, char_literal109_tree);
-                    }
-                    VAR110=(Token)match(input,VAR,FOLLOW_VAR_in_trail_exp1916); if (state.failed) return retval;
-                    if ( state.backtracking==0 ) {
-                    VAR110_tree = (Object)adaptor.create(VAR110);
-                    adaptor.addChild(root_0, VAR110_tree);
-                    }
-
-                    }
-                    break;
-
-            }
-            retval.stop = input.LT(-1);
-
-            if ( state.backtracking==0 ) {
-
-            retval.tree = (Object)adaptor.rulePostProcessing(root_0);
-            adaptor.setTokenBoundaries(retval.tree, retval.start, retval.stop);
-            }
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-    	retval.tree = (Object)adaptor.errorNode(input, retval.start, input.LT(-1), re);
-
-        }
-        finally {
-        }
-        return retval;
-    }
-    // $ANTLR end "trail_exp"
-
     public static class timeframe_return extends ParserRuleReturnScope {
         Object tree;
         public Object getTree() { return tree; }
     };
 
     // $ANTLR start "timeframe"
-    // RuleSet2.g:550:1: timeframe : 'within' expr ( period ) ;
+    // RuleSet2.g:616:1: timeframe : 'within' expr ( period ) ;
     public final RuleSet2Parser.timeframe_return timeframe() throws RecognitionException {
         RuleSet2Parser.timeframe_return retval = new RuleSet2Parser.timeframe_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
 
-        Token string_literal111=null;
-        RuleSet2Parser.expr_return expr112 = null;
+        Token string_literal94=null;
+        RuleSet2Parser.expr_return expr95 = null;
 
-        RuleSet2Parser.period_return period113 = null;
+        RuleSet2Parser.period_return period96 = null;
 
 
-        Object string_literal111_tree=null;
+        Object string_literal94_tree=null;
 
         try {
-            // RuleSet2.g:551:2: ( 'within' expr ( period ) )
-            // RuleSet2.g:551:5: 'within' expr ( period )
+            // RuleSet2.g:617:2: ( 'within' expr ( period ) )
+            // RuleSet2.g:617:5: 'within' expr ( period )
             {
             root_0 = (Object)adaptor.nil();
 
-            string_literal111=(Token)match(input,90,FOLLOW_90_in_timeframe1929); if (state.failed) return retval;
+            string_literal94=(Token)match(input,90,FOLLOW_90_in_timeframe2001); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            string_literal111_tree = (Object)adaptor.create(string_literal111);
-            adaptor.addChild(root_0, string_literal111_tree);
+            string_literal94_tree = (Object)adaptor.create(string_literal94);
+            adaptor.addChild(root_0, string_literal94_tree);
             }
-            pushFollow(FOLLOW_expr_in_timeframe1931);
-            expr112=expr();
+            pushFollow(FOLLOW_expr_in_timeframe2003);
+            expr95=expr();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) adaptor.addChild(root_0, expr112.getTree());
-            // RuleSet2.g:551:19: ( period )
-            // RuleSet2.g:551:21: period
+            if ( state.backtracking==0 ) adaptor.addChild(root_0, expr95.getTree());
+            // RuleSet2.g:617:19: ( period )
+            // RuleSet2.g:617:21: period
             {
-            pushFollow(FOLLOW_period_in_timeframe1935);
-            period113=period();
+            pushFollow(FOLLOW_period_in_timeframe2007);
+            period96=period();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) adaptor.addChild(root_0, period113.getTree());
+            if ( state.backtracking==0 ) adaptor.addChild(root_0, period96.getTree());
 
             }
 
@@ -3801,48 +3761,58 @@ public class RuleSet2Parser extends Parser {
     // $ANTLR end "timeframe"
 
     public static class hash_line_return extends ParserRuleReturnScope {
+        public HashMap result;
         Object tree;
         public Object getTree() { return tree; }
     };
 
     // $ANTLR start "hash_line"
-    // RuleSet2.g:554:1: hash_line : STRING ':' expr ;
+    // RuleSet2.g:620:1: hash_line returns [HashMap result] : s= STRING ':' e= expr ;
     public final RuleSet2Parser.hash_line_return hash_line() throws RecognitionException {
         RuleSet2Parser.hash_line_return retval = new RuleSet2Parser.hash_line_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
 
-        Token STRING114=null;
-        Token char_literal115=null;
-        RuleSet2Parser.expr_return expr116 = null;
+        Token s=null;
+        Token char_literal97=null;
+        RuleSet2Parser.expr_return e = null;
 
 
-        Object STRING114_tree=null;
-        Object char_literal115_tree=null;
+        Object s_tree=null;
+        Object char_literal97_tree=null;
 
         try {
-            // RuleSet2.g:555:2: ( STRING ':' expr )
-            // RuleSet2.g:555:4: STRING ':' expr
+            // RuleSet2.g:621:2: (s= STRING ':' e= expr )
+            // RuleSet2.g:621:4: s= STRING ':' e= expr
             {
             root_0 = (Object)adaptor.nil();
 
-            STRING114=(Token)match(input,STRING,FOLLOW_STRING_in_hash_line1951); if (state.failed) return retval;
+            s=(Token)match(input,STRING,FOLLOW_STRING_in_hash_line2029); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            STRING114_tree = (Object)adaptor.create(STRING114);
-            adaptor.addChild(root_0, STRING114_tree);
+            s_tree = (Object)adaptor.create(s);
+            adaptor.addChild(root_0, s_tree);
             }
-            char_literal115=(Token)match(input,35,FOLLOW_35_in_hash_line1953); if (state.failed) return retval;
+            char_literal97=(Token)match(input,35,FOLLOW_35_in_hash_line2031); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            char_literal115_tree = (Object)adaptor.create(char_literal115);
-            adaptor.addChild(root_0, char_literal115_tree);
+            char_literal97_tree = (Object)adaptor.create(char_literal97);
+            adaptor.addChild(root_0, char_literal97_tree);
             }
-            pushFollow(FOLLOW_expr_in_hash_line1955);
-            expr116=expr();
+            pushFollow(FOLLOW_expr_in_hash_line2035);
+            e=expr();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) adaptor.addChild(root_0, expr116.getTree());
+            if ( state.backtracking==0 ) adaptor.addChild(root_0, e.getTree());
+            if ( state.backtracking==0 ) {
+
+              		HashMap tmp = new HashMap();
+              		tmp.put("lhs",strip_string((s!=null?s.getText():null)));
+              		tmp.put("rhs",(e!=null?e.result:null));
+              //		tmp.put("val",(e!=null?e.result:null));
+              		retval.result = tmp;
+              	
+            }
 
             }
 
@@ -3873,7 +3843,7 @@ public class RuleSet2Parser extends Parser {
     };
 
     // $ANTLR start "css_emit"
-    // RuleSet2.g:558:1: css_emit returns [String emit_value] : 'css' (h= HTML | h= STRING ) ;
+    // RuleSet2.g:630:1: css_emit returns [String emit_value] : 'css' (h= HTML | h= STRING ) ;
     public final RuleSet2Parser.css_emit_return css_emit() throws RecognitionException {
         RuleSet2Parser.css_emit_return retval = new RuleSet2Parser.css_emit_return();
         retval.start = input.LT(1);
@@ -3881,44 +3851,44 @@ public class RuleSet2Parser extends Parser {
         Object root_0 = null;
 
         Token h=null;
-        Token string_literal117=null;
+        Token string_literal98=null;
 
         Object h_tree=null;
-        Object string_literal117_tree=null;
+        Object string_literal98_tree=null;
 
         try {
-            // RuleSet2.g:559:2: ( 'css' (h= HTML | h= STRING ) )
-            // RuleSet2.g:559:4: 'css' (h= HTML | h= STRING )
+            // RuleSet2.g:631:2: ( 'css' (h= HTML | h= STRING ) )
+            // RuleSet2.g:631:4: 'css' (h= HTML | h= STRING )
             {
             root_0 = (Object)adaptor.nil();
 
-            string_literal117=(Token)match(input,91,FOLLOW_91_in_css_emit1970); if (state.failed) return retval;
+            string_literal98=(Token)match(input,91,FOLLOW_91_in_css_emit2053); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            string_literal117_tree = (Object)adaptor.create(string_literal117);
-            adaptor.addChild(root_0, string_literal117_tree);
+            string_literal98_tree = (Object)adaptor.create(string_literal98);
+            adaptor.addChild(root_0, string_literal98_tree);
             }
-            // RuleSet2.g:559:10: (h= HTML | h= STRING )
-            int alt30=2;
-            int LA30_0 = input.LA(1);
+            // RuleSet2.g:631:10: (h= HTML | h= STRING )
+            int alt28=2;
+            int LA28_0 = input.LA(1);
 
-            if ( (LA30_0==HTML) ) {
-                alt30=1;
+            if ( (LA28_0==HTML) ) {
+                alt28=1;
             }
-            else if ( (LA30_0==STRING) ) {
-                alt30=2;
+            else if ( (LA28_0==STRING) ) {
+                alt28=2;
             }
             else {
                 if (state.backtracking>0) {state.failed=true; return retval;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 30, 0, input);
+                    new NoViableAltException("", 28, 0, input);
 
                 throw nvae;
             }
-            switch (alt30) {
+            switch (alt28) {
                 case 1 :
-                    // RuleSet2.g:559:12: h= HTML
+                    // RuleSet2.g:631:12: h= HTML
                     {
-                    h=(Token)match(input,HTML,FOLLOW_HTML_in_css_emit1976); if (state.failed) return retval;
+                    h=(Token)match(input,HTML,FOLLOW_HTML_in_css_emit2059); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     h_tree = (Object)adaptor.create(h);
                     adaptor.addChild(root_0, h_tree);
@@ -3930,9 +3900,9 @@ public class RuleSet2Parser extends Parser {
                     }
                     break;
                 case 2 :
-                    // RuleSet2.g:560:3: h= STRING
+                    // RuleSet2.g:632:3: h= STRING
                     {
-                    h=(Token)match(input,STRING,FOLLOW_STRING_in_css_emit1984); if (state.failed) return retval;
+                    h=(Token)match(input,STRING,FOLLOW_STRING_in_css_emit2067); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     h_tree = (Object)adaptor.create(h);
                     adaptor.addChild(root_0, h_tree);
@@ -3975,27 +3945,27 @@ public class RuleSet2Parser extends Parser {
     };
 
     // $ANTLR start "period"
-    // RuleSet2.g:564:10: fragment period : ( 'years' | 'months' | 'weeks' | 'days' | 'hours' | 'minutes' | 'seconds' | 'year' | 'month' | 'week' | 'day' | 'hour' | 'minute' | 'second' );
+    // RuleSet2.g:636:10: fragment period : ( 'years' | 'months' | 'weeks' | 'days' | 'hours' | 'minutes' | 'seconds' | 'year' | 'month' | 'week' | 'day' | 'hour' | 'minute' | 'second' );
     public final RuleSet2Parser.period_return period() throws RecognitionException {
         RuleSet2Parser.period_return retval = new RuleSet2Parser.period_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
 
-        Token set118=null;
+        Token set99=null;
 
-        Object set118_tree=null;
+        Object set99_tree=null;
 
         try {
-            // RuleSet2.g:565:2: ( 'years' | 'months' | 'weeks' | 'days' | 'hours' | 'minutes' | 'seconds' | 'year' | 'month' | 'week' | 'day' | 'hour' | 'minute' | 'second' )
+            // RuleSet2.g:637:2: ( 'years' | 'months' | 'weeks' | 'days' | 'hours' | 'minutes' | 'seconds' | 'year' | 'month' | 'week' | 'day' | 'hour' | 'minute' | 'second' )
             // RuleSet2.g:
             {
             root_0 = (Object)adaptor.nil();
 
-            set118=(Token)input.LT(1);
+            set99=(Token)input.LT(1);
             if ( (input.LA(1)>=92 && input.LA(1)<=105) ) {
                 input.consume();
-                if ( state.backtracking==0 ) adaptor.addChild(root_0, (Object)adaptor.create(set118));
+                if ( state.backtracking==0 ) adaptor.addChild(root_0, (Object)adaptor.create(set99));
                 state.errorRecovery=false;state.failed=false;
             }
             else {
@@ -4034,7 +4004,7 @@ public class RuleSet2Parser extends Parser {
     };
 
     // $ANTLR start "cachable"
-    // RuleSet2.g:583:1: cachable returns [Object what] : ca= 'cachable' ( 'for' tm= INT per= period )? ;
+    // RuleSet2.g:655:1: cachable returns [Object what] : ca= 'cachable' ( 'for' tm= INT per= period )? ;
     public final RuleSet2Parser.cachable_return cachable() throws RecognitionException {
         RuleSet2Parser.cachable_return retval = new RuleSet2Parser.cachable_return();
         retval.start = input.LT(1);
@@ -4043,50 +4013,50 @@ public class RuleSet2Parser extends Parser {
 
         Token ca=null;
         Token tm=null;
-        Token string_literal119=null;
+        Token string_literal100=null;
         RuleSet2Parser.period_return per = null;
 
 
         Object ca_tree=null;
         Object tm_tree=null;
-        Object string_literal119_tree=null;
+        Object string_literal100_tree=null;
 
 
         	retval.what = null;
 
         try {
-            // RuleSet2.g:587:2: (ca= 'cachable' ( 'for' tm= INT per= period )? )
-            // RuleSet2.g:588:3: ca= 'cachable' ( 'for' tm= INT per= period )?
+            // RuleSet2.g:659:2: (ca= 'cachable' ( 'for' tm= INT per= period )? )
+            // RuleSet2.g:660:3: ca= 'cachable' ( 'for' tm= INT per= period )?
             {
             root_0 = (Object)adaptor.nil();
 
-            ca=(Token)match(input,106,FOLLOW_106_in_cachable2124); if (state.failed) return retval;
+            ca=(Token)match(input,106,FOLLOW_106_in_cachable2207); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
             ca_tree = (Object)adaptor.create(ca);
             adaptor.addChild(root_0, ca_tree);
             }
-            // RuleSet2.g:588:17: ( 'for' tm= INT per= period )?
-            int alt31=2;
-            int LA31_0 = input.LA(1);
+            // RuleSet2.g:660:17: ( 'for' tm= INT per= period )?
+            int alt29=2;
+            int LA29_0 = input.LA(1);
 
-            if ( (LA31_0==107) ) {
-                alt31=1;
+            if ( (LA29_0==107) ) {
+                alt29=1;
             }
-            switch (alt31) {
+            switch (alt29) {
                 case 1 :
-                    // RuleSet2.g:588:18: 'for' tm= INT per= period
+                    // RuleSet2.g:660:18: 'for' tm= INT per= period
                     {
-                    string_literal119=(Token)match(input,107,FOLLOW_107_in_cachable2127); if (state.failed) return retval;
+                    string_literal100=(Token)match(input,107,FOLLOW_107_in_cachable2210); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    string_literal119_tree = (Object)adaptor.create(string_literal119);
-                    adaptor.addChild(root_0, string_literal119_tree);
+                    string_literal100_tree = (Object)adaptor.create(string_literal100);
+                    adaptor.addChild(root_0, string_literal100_tree);
                     }
-                    tm=(Token)match(input,INT,FOLLOW_INT_in_cachable2131); if (state.failed) return retval;
+                    tm=(Token)match(input,INT,FOLLOW_INT_in_cachable2214); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     tm_tree = (Object)adaptor.create(tm);
                     adaptor.addChild(root_0, tm_tree);
                     }
-                    pushFollow(FOLLOW_period_in_cachable2135);
+                    pushFollow(FOLLOW_period_in_cachable2218);
                     per=period();
 
                     state._fsp--;
@@ -4146,7 +4116,7 @@ public class RuleSet2Parser extends Parser {
     };
 
     // $ANTLR start "emit_block"
-    // RuleSet2.g:608:1: emit_block returns [String emit_value] : 'emit' (h= HTML | h= STRING | h= JS ) ;
+    // RuleSet2.g:680:1: emit_block returns [String emit_value] : 'emit' (h= HTML | h= STRING | h= JS ) ;
     public final RuleSet2Parser.emit_block_return emit_block() throws RecognitionException {
         RuleSet2Parser.emit_block_return retval = new RuleSet2Parser.emit_block_return();
         retval.start = input.LT(1);
@@ -4154,53 +4124,53 @@ public class RuleSet2Parser extends Parser {
         Object root_0 = null;
 
         Token h=null;
-        Token string_literal120=null;
+        Token string_literal101=null;
 
         Object h_tree=null;
-        Object string_literal120_tree=null;
+        Object string_literal101_tree=null;
 
         try {
-            // RuleSet2.g:609:2: ( 'emit' (h= HTML | h= STRING | h= JS ) )
-            // RuleSet2.g:609:4: 'emit' (h= HTML | h= STRING | h= JS )
+            // RuleSet2.g:681:2: ( 'emit' (h= HTML | h= STRING | h= JS ) )
+            // RuleSet2.g:681:4: 'emit' (h= HTML | h= STRING | h= JS )
             {
             root_0 = (Object)adaptor.nil();
 
-            string_literal120=(Token)match(input,108,FOLLOW_108_in_emit_block2159); if (state.failed) return retval;
+            string_literal101=(Token)match(input,108,FOLLOW_108_in_emit_block2242); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            string_literal120_tree = (Object)adaptor.create(string_literal120);
-            adaptor.addChild(root_0, string_literal120_tree);
+            string_literal101_tree = (Object)adaptor.create(string_literal101);
+            adaptor.addChild(root_0, string_literal101_tree);
             }
-            // RuleSet2.g:609:11: (h= HTML | h= STRING | h= JS )
-            int alt32=3;
+            // RuleSet2.g:681:11: (h= HTML | h= STRING | h= JS )
+            int alt30=3;
             switch ( input.LA(1) ) {
             case HTML:
                 {
-                alt32=1;
+                alt30=1;
                 }
                 break;
             case STRING:
                 {
-                alt32=2;
+                alt30=2;
                 }
                 break;
             case JS:
                 {
-                alt32=3;
+                alt30=3;
                 }
                 break;
             default:
                 if (state.backtracking>0) {state.failed=true; return retval;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 32, 0, input);
+                    new NoViableAltException("", 30, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt32) {
+            switch (alt30) {
                 case 1 :
-                    // RuleSet2.g:609:13: h= HTML
+                    // RuleSet2.g:681:13: h= HTML
                     {
-                    h=(Token)match(input,HTML,FOLLOW_HTML_in_emit_block2165); if (state.failed) return retval;
+                    h=(Token)match(input,HTML,FOLLOW_HTML_in_emit_block2248); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     h_tree = (Object)adaptor.create(h);
                     adaptor.addChild(root_0, h_tree);
@@ -4212,9 +4182,9 @@ public class RuleSet2Parser extends Parser {
                     }
                     break;
                 case 2 :
-                    // RuleSet2.g:610:3: h= STRING
+                    // RuleSet2.g:682:3: h= STRING
                     {
-                    h=(Token)match(input,STRING,FOLLOW_STRING_in_emit_block2173); if (state.failed) return retval;
+                    h=(Token)match(input,STRING,FOLLOW_STRING_in_emit_block2256); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     h_tree = (Object)adaptor.create(h);
                     adaptor.addChild(root_0, h_tree);
@@ -4226,9 +4196,9 @@ public class RuleSet2Parser extends Parser {
                     }
                     break;
                 case 3 :
-                    // RuleSet2.g:611:3: h= JS
+                    // RuleSet2.g:683:3: h= JS
                     {
-                    h=(Token)match(input,JS,FOLLOW_JS_in_emit_block2181); if (state.failed) return retval;
+                    h=(Token)match(input,JS,FOLLOW_JS_in_emit_block2264); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     h_tree = (Object)adaptor.create(h);
                     adaptor.addChild(root_0, h_tree);
@@ -4271,7 +4241,7 @@ public class RuleSet2Parser extends Parser {
     };
 
     // $ANTLR start "meta_block"
-    // RuleSet2.g:615:1: meta_block : 'meta' '{' ( 'description' desc= ( HTML | STRING ) | 'name' thename= STRING | 'author' author= STRING | 'key' what= ( 'errorstack' | 'googleanalytics' | 'twitter' | 'amazon' | 'kpds' | 'google' | VAR ) (key_value= STRING | '{' ( name_value_pair[key_values] ( ',' name_value_pair[key_values] )* ) '}' )+ | 'authz' 'require' 'user' | 'logging' ( 'on' | 'off' ) | 'use' 'module' name= VAR ( 'alias' alias= VAR )? | 'use' rtype= ( 'css' | 'javascript' ) 'resource' (url= STRING | name= VAR ) )* '}' ;
+    // RuleSet2.g:687:1: meta_block : 'meta' '{' ( 'description' desc= ( HTML | STRING ) | 'name' thename= STRING | 'author' author= STRING | 'key' what= ( 'errorstack' | 'googleanalytics' | 'twitter' | 'amazon' | 'kpds' | 'google' | VAR ) (key_value= STRING | '{' ( name_value_pair[key_values] ( ',' name_value_pair[key_values] )* ) '}' )+ | 'authz' 'require' 'user' | 'logging' ( 'on' | 'off' ) | 'use' 'module' name= VAR ( 'alias' alias= VAR )? | 'use' rtype= ( 'css' | 'javascript' ) 'resource' (url= STRING | name= VAR ) )* '}' ;
     public final RuleSet2Parser.meta_block_return meta_block() throws RecognitionException {
         RuleSet2Parser.meta_block_return retval = new RuleSet2Parser.meta_block_return();
         retval.start = input.LT(1);
@@ -4287,29 +4257,29 @@ public class RuleSet2Parser extends Parser {
         Token alias=null;
         Token rtype=null;
         Token url=null;
+        Token string_literal102=null;
+        Token char_literal103=null;
+        Token string_literal104=null;
+        Token string_literal105=null;
+        Token string_literal106=null;
+        Token string_literal107=null;
+        Token char_literal108=null;
+        Token char_literal110=null;
+        Token char_literal112=null;
+        Token string_literal113=null;
+        Token string_literal114=null;
+        Token string_literal115=null;
+        Token string_literal116=null;
+        Token set117=null;
+        Token string_literal118=null;
+        Token string_literal119=null;
+        Token string_literal120=null;
         Token string_literal121=null;
-        Token char_literal122=null;
-        Token string_literal123=null;
-        Token string_literal124=null;
-        Token string_literal125=null;
-        Token string_literal126=null;
-        Token char_literal127=null;
-        Token char_literal129=null;
-        Token char_literal131=null;
-        Token string_literal132=null;
-        Token string_literal133=null;
-        Token string_literal134=null;
-        Token string_literal135=null;
-        Token set136=null;
-        Token string_literal137=null;
-        Token string_literal138=null;
-        Token string_literal139=null;
-        Token string_literal140=null;
-        Token string_literal141=null;
-        Token char_literal142=null;
-        RuleSet2Parser.name_value_pair_return name_value_pair128 = null;
+        Token string_literal122=null;
+        Token char_literal123=null;
+        RuleSet2Parser.name_value_pair_return name_value_pair109 = null;
 
-        RuleSet2Parser.name_value_pair_return name_value_pair130 = null;
+        RuleSet2Parser.name_value_pair_return name_value_pair111 = null;
 
 
         Object desc_tree=null;
@@ -4321,26 +4291,26 @@ public class RuleSet2Parser extends Parser {
         Object alias_tree=null;
         Object rtype_tree=null;
         Object url_tree=null;
+        Object string_literal102_tree=null;
+        Object char_literal103_tree=null;
+        Object string_literal104_tree=null;
+        Object string_literal105_tree=null;
+        Object string_literal106_tree=null;
+        Object string_literal107_tree=null;
+        Object char_literal108_tree=null;
+        Object char_literal110_tree=null;
+        Object char_literal112_tree=null;
+        Object string_literal113_tree=null;
+        Object string_literal114_tree=null;
+        Object string_literal115_tree=null;
+        Object string_literal116_tree=null;
+        Object set117_tree=null;
+        Object string_literal118_tree=null;
+        Object string_literal119_tree=null;
+        Object string_literal120_tree=null;
         Object string_literal121_tree=null;
-        Object char_literal122_tree=null;
-        Object string_literal123_tree=null;
-        Object string_literal124_tree=null;
-        Object string_literal125_tree=null;
-        Object string_literal126_tree=null;
-        Object char_literal127_tree=null;
-        Object char_literal129_tree=null;
-        Object char_literal131_tree=null;
-        Object string_literal132_tree=null;
-        Object string_literal133_tree=null;
-        Object string_literal134_tree=null;
-        Object string_literal135_tree=null;
-        Object set136_tree=null;
-        Object string_literal137_tree=null;
-        Object string_literal138_tree=null;
-        Object string_literal139_tree=null;
-        Object string_literal140_tree=null;
-        Object string_literal141_tree=null;
-        Object char_literal142_tree=null;
+        Object string_literal122_tree=null;
+        Object char_literal123_tree=null;
 
 
         	 HashMap meta_block_hash = (HashMap)rule_json.get("meta");
@@ -4349,34 +4319,34 @@ public class RuleSet2Parser extends Parser {
         	 HashMap key_values = new HashMap();
 
         try {
-            // RuleSet2.g:632:2: ( 'meta' '{' ( 'description' desc= ( HTML | STRING ) | 'name' thename= STRING | 'author' author= STRING | 'key' what= ( 'errorstack' | 'googleanalytics' | 'twitter' | 'amazon' | 'kpds' | 'google' | VAR ) (key_value= STRING | '{' ( name_value_pair[key_values] ( ',' name_value_pair[key_values] )* ) '}' )+ | 'authz' 'require' 'user' | 'logging' ( 'on' | 'off' ) | 'use' 'module' name= VAR ( 'alias' alias= VAR )? | 'use' rtype= ( 'css' | 'javascript' ) 'resource' (url= STRING | name= VAR ) )* '}' )
-            // RuleSet2.g:632:4: 'meta' '{' ( 'description' desc= ( HTML | STRING ) | 'name' thename= STRING | 'author' author= STRING | 'key' what= ( 'errorstack' | 'googleanalytics' | 'twitter' | 'amazon' | 'kpds' | 'google' | VAR ) (key_value= STRING | '{' ( name_value_pair[key_values] ( ',' name_value_pair[key_values] )* ) '}' )+ | 'authz' 'require' 'user' | 'logging' ( 'on' | 'off' ) | 'use' 'module' name= VAR ( 'alias' alias= VAR )? | 'use' rtype= ( 'css' | 'javascript' ) 'resource' (url= STRING | name= VAR ) )* '}'
+            // RuleSet2.g:704:2: ( 'meta' '{' ( 'description' desc= ( HTML | STRING ) | 'name' thename= STRING | 'author' author= STRING | 'key' what= ( 'errorstack' | 'googleanalytics' | 'twitter' | 'amazon' | 'kpds' | 'google' | VAR ) (key_value= STRING | '{' ( name_value_pair[key_values] ( ',' name_value_pair[key_values] )* ) '}' )+ | 'authz' 'require' 'user' | 'logging' ( 'on' | 'off' ) | 'use' 'module' name= VAR ( 'alias' alias= VAR )? | 'use' rtype= ( 'css' | 'javascript' ) 'resource' (url= STRING | name= VAR ) )* '}' )
+            // RuleSet2.g:704:4: 'meta' '{' ( 'description' desc= ( HTML | STRING ) | 'name' thename= STRING | 'author' author= STRING | 'key' what= ( 'errorstack' | 'googleanalytics' | 'twitter' | 'amazon' | 'kpds' | 'google' | VAR ) (key_value= STRING | '{' ( name_value_pair[key_values] ( ',' name_value_pair[key_values] )* ) '}' )+ | 'authz' 'require' 'user' | 'logging' ( 'on' | 'off' ) | 'use' 'module' name= VAR ( 'alias' alias= VAR )? | 'use' rtype= ( 'css' | 'javascript' ) 'resource' (url= STRING | name= VAR ) )* '}'
             {
             root_0 = (Object)adaptor.nil();
 
-            string_literal121=(Token)match(input,109,FOLLOW_109_in_meta_block2213); if (state.failed) return retval;
+            string_literal102=(Token)match(input,109,FOLLOW_109_in_meta_block2296); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            string_literal121_tree = (Object)adaptor.create(string_literal121);
-            adaptor.addChild(root_0, string_literal121_tree);
+            string_literal102_tree = (Object)adaptor.create(string_literal102);
+            adaptor.addChild(root_0, string_literal102_tree);
             }
-            char_literal122=(Token)match(input,30,FOLLOW_30_in_meta_block2215); if (state.failed) return retval;
+            char_literal103=(Token)match(input,30,FOLLOW_30_in_meta_block2298); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            char_literal122_tree = (Object)adaptor.create(char_literal122);
-            adaptor.addChild(root_0, char_literal122_tree);
+            char_literal103_tree = (Object)adaptor.create(char_literal103);
+            adaptor.addChild(root_0, char_literal103_tree);
             }
-            // RuleSet2.g:633:2: ( 'description' desc= ( HTML | STRING ) | 'name' thename= STRING | 'author' author= STRING | 'key' what= ( 'errorstack' | 'googleanalytics' | 'twitter' | 'amazon' | 'kpds' | 'google' | VAR ) (key_value= STRING | '{' ( name_value_pair[key_values] ( ',' name_value_pair[key_values] )* ) '}' )+ | 'authz' 'require' 'user' | 'logging' ( 'on' | 'off' ) | 'use' 'module' name= VAR ( 'alias' alias= VAR )? | 'use' rtype= ( 'css' | 'javascript' ) 'resource' (url= STRING | name= VAR ) )*
-            loop37:
+            // RuleSet2.g:705:2: ( 'description' desc= ( HTML | STRING ) | 'name' thename= STRING | 'author' author= STRING | 'key' what= ( 'errorstack' | 'googleanalytics' | 'twitter' | 'amazon' | 'kpds' | 'google' | VAR ) (key_value= STRING | '{' ( name_value_pair[key_values] ( ',' name_value_pair[key_values] )* ) '}' )+ | 'authz' 'require' 'user' | 'logging' ( 'on' | 'off' ) | 'use' 'module' name= VAR ( 'alias' alias= VAR )? | 'use' rtype= ( 'css' | 'javascript' ) 'resource' (url= STRING | name= VAR ) )*
+            loop35:
             do {
-                int alt37=9;
-                alt37 = dfa37.predict(input);
-                switch (alt37) {
+                int alt35=9;
+                alt35 = dfa35.predict(input);
+                switch (alt35) {
             	case 1 :
-            	    // RuleSet2.g:633:4: 'description' desc= ( HTML | STRING )
+            	    // RuleSet2.g:705:4: 'description' desc= ( HTML | STRING )
             	    {
-            	    string_literal123=(Token)match(input,110,FOLLOW_110_in_meta_block2221); if (state.failed) return retval;
+            	    string_literal104=(Token)match(input,110,FOLLOW_110_in_meta_block2304); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
-            	    string_literal123_tree = (Object)adaptor.create(string_literal123);
-            	    adaptor.addChild(root_0, string_literal123_tree);
+            	    string_literal104_tree = (Object)adaptor.create(string_literal104);
+            	    adaptor.addChild(root_0, string_literal104_tree);
             	    }
             	    desc=(Token)input.LT(1);
             	    if ( (input.LA(1)>=STRING && input.LA(1)<=HTML) ) {
@@ -4397,14 +4367,14 @@ public class RuleSet2Parser extends Parser {
             	    }
             	    break;
             	case 2 :
-            	    // RuleSet2.g:634:5: 'name' thename= STRING
+            	    // RuleSet2.g:706:5: 'name' thename= STRING
             	    {
-            	    string_literal124=(Token)match(input,111,FOLLOW_111_in_meta_block2239); if (state.failed) return retval;
+            	    string_literal105=(Token)match(input,111,FOLLOW_111_in_meta_block2322); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
-            	    string_literal124_tree = (Object)adaptor.create(string_literal124);
-            	    adaptor.addChild(root_0, string_literal124_tree);
+            	    string_literal105_tree = (Object)adaptor.create(string_literal105);
+            	    adaptor.addChild(root_0, string_literal105_tree);
             	    }
-            	    thename=(Token)match(input,STRING,FOLLOW_STRING_in_meta_block2243); if (state.failed) return retval;
+            	    thename=(Token)match(input,STRING,FOLLOW_STRING_in_meta_block2326); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
             	    thename_tree = (Object)adaptor.create(thename);
             	    adaptor.addChild(root_0, thename_tree);
@@ -4416,14 +4386,14 @@ public class RuleSet2Parser extends Parser {
             	    }
             	    break;
             	case 3 :
-            	    // RuleSet2.g:635:5: 'author' author= STRING
+            	    // RuleSet2.g:707:5: 'author' author= STRING
             	    {
-            	    string_literal125=(Token)match(input,112,FOLLOW_112_in_meta_block2253); if (state.failed) return retval;
+            	    string_literal106=(Token)match(input,112,FOLLOW_112_in_meta_block2336); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
-            	    string_literal125_tree = (Object)adaptor.create(string_literal125);
-            	    adaptor.addChild(root_0, string_literal125_tree);
+            	    string_literal106_tree = (Object)adaptor.create(string_literal106);
+            	    adaptor.addChild(root_0, string_literal106_tree);
             	    }
-            	    author=(Token)match(input,STRING,FOLLOW_STRING_in_meta_block2257); if (state.failed) return retval;
+            	    author=(Token)match(input,STRING,FOLLOW_STRING_in_meta_block2340); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
             	    author_tree = (Object)adaptor.create(author);
             	    adaptor.addChild(root_0, author_tree);
@@ -4435,12 +4405,12 @@ public class RuleSet2Parser extends Parser {
             	    }
             	    break;
             	case 4 :
-            	    // RuleSet2.g:636:5: 'key' what= ( 'errorstack' | 'googleanalytics' | 'twitter' | 'amazon' | 'kpds' | 'google' | VAR ) (key_value= STRING | '{' ( name_value_pair[key_values] ( ',' name_value_pair[key_values] )* ) '}' )+
+            	    // RuleSet2.g:708:5: 'key' what= ( 'errorstack' | 'googleanalytics' | 'twitter' | 'amazon' | 'kpds' | 'google' | VAR ) (key_value= STRING | '{' ( name_value_pair[key_values] ( ',' name_value_pair[key_values] )* ) '}' )+
             	    {
-            	    string_literal126=(Token)match(input,113,FOLLOW_113_in_meta_block2269); if (state.failed) return retval;
+            	    string_literal107=(Token)match(input,113,FOLLOW_113_in_meta_block2352); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
-            	    string_literal126_tree = (Object)adaptor.create(string_literal126);
-            	    adaptor.addChild(root_0, string_literal126_tree);
+            	    string_literal107_tree = (Object)adaptor.create(string_literal107);
+            	    adaptor.addChild(root_0, string_literal107_tree);
             	    }
             	    what=(Token)input.LT(1);
             	    if ( input.LA(1)==VAR||(input.LA(1)>=114 && input.LA(1)<=119) ) {
@@ -4454,26 +4424,26 @@ public class RuleSet2Parser extends Parser {
             	        throw mse;
             	    }
 
-            	    // RuleSet2.g:636:91: (key_value= STRING | '{' ( name_value_pair[key_values] ( ',' name_value_pair[key_values] )* ) '}' )+
-            	    int cnt34=0;
-            	    loop34:
+            	    // RuleSet2.g:708:91: (key_value= STRING | '{' ( name_value_pair[key_values] ( ',' name_value_pair[key_values] )* ) '}' )+
+            	    int cnt32=0;
+            	    loop32:
             	    do {
-            	        int alt34=3;
-            	        int LA34_0 = input.LA(1);
+            	        int alt32=3;
+            	        int LA32_0 = input.LA(1);
 
-            	        if ( (LA34_0==STRING) ) {
-            	            alt34=1;
+            	        if ( (LA32_0==STRING) ) {
+            	            alt32=1;
             	        }
-            	        else if ( (LA34_0==30) ) {
-            	            alt34=2;
+            	        else if ( (LA32_0==30) ) {
+            	            alt32=2;
             	        }
 
 
-            	        switch (alt34) {
+            	        switch (alt32) {
             	    	case 1 :
-            	    	    // RuleSet2.g:636:92: key_value= STRING
+            	    	    // RuleSet2.g:708:92: key_value= STRING
             	    	    {
-            	    	    key_value=(Token)match(input,STRING,FOLLOW_STRING_in_meta_block2295); if (state.failed) return retval;
+            	    	    key_value=(Token)match(input,STRING,FOLLOW_STRING_in_meta_block2378); if (state.failed) return retval;
             	    	    if ( state.backtracking==0 ) {
             	    	    key_value_tree = (Object)adaptor.create(key_value);
             	    	    adaptor.addChild(root_0, key_value_tree);
@@ -4482,77 +4452,77 @@ public class RuleSet2Parser extends Parser {
             	    	    }
             	    	    break;
             	    	case 2 :
-            	    	    // RuleSet2.g:636:111: '{' ( name_value_pair[key_values] ( ',' name_value_pair[key_values] )* ) '}'
+            	    	    // RuleSet2.g:708:111: '{' ( name_value_pair[key_values] ( ',' name_value_pair[key_values] )* ) '}'
             	    	    {
-            	    	    char_literal127=(Token)match(input,30,FOLLOW_30_in_meta_block2299); if (state.failed) return retval;
+            	    	    char_literal108=(Token)match(input,30,FOLLOW_30_in_meta_block2382); if (state.failed) return retval;
             	    	    if ( state.backtracking==0 ) {
-            	    	    char_literal127_tree = (Object)adaptor.create(char_literal127);
-            	    	    adaptor.addChild(root_0, char_literal127_tree);
+            	    	    char_literal108_tree = (Object)adaptor.create(char_literal108);
+            	    	    adaptor.addChild(root_0, char_literal108_tree);
             	    	    }
-            	    	    // RuleSet2.g:636:115: ( name_value_pair[key_values] ( ',' name_value_pair[key_values] )* )
-            	    	    // RuleSet2.g:636:116: name_value_pair[key_values] ( ',' name_value_pair[key_values] )*
+            	    	    // RuleSet2.g:708:115: ( name_value_pair[key_values] ( ',' name_value_pair[key_values] )* )
+            	    	    // RuleSet2.g:708:116: name_value_pair[key_values] ( ',' name_value_pair[key_values] )*
             	    	    {
-            	    	    pushFollow(FOLLOW_name_value_pair_in_meta_block2302);
-            	    	    name_value_pair128=name_value_pair(key_values);
+            	    	    pushFollow(FOLLOW_name_value_pair_in_meta_block2385);
+            	    	    name_value_pair109=name_value_pair(key_values);
 
             	    	    state._fsp--;
             	    	    if (state.failed) return retval;
-            	    	    if ( state.backtracking==0 ) adaptor.addChild(root_0, name_value_pair128.getTree());
-            	    	    // RuleSet2.g:636:144: ( ',' name_value_pair[key_values] )*
-            	    	    loop33:
+            	    	    if ( state.backtracking==0 ) adaptor.addChild(root_0, name_value_pair109.getTree());
+            	    	    // RuleSet2.g:708:144: ( ',' name_value_pair[key_values] )*
+            	    	    loop31:
             	    	    do {
-            	    	        int alt33=2;
-            	    	        int LA33_0 = input.LA(1);
+            	    	        int alt31=2;
+            	    	        int LA31_0 = input.LA(1);
 
-            	    	        if ( (LA33_0==45) ) {
-            	    	            alt33=1;
+            	    	        if ( (LA31_0==45) ) {
+            	    	            alt31=1;
             	    	        }
 
 
-            	    	        switch (alt33) {
+            	    	        switch (alt31) {
             	    	    	case 1 :
-            	    	    	    // RuleSet2.g:636:145: ',' name_value_pair[key_values]
+            	    	    	    // RuleSet2.g:708:145: ',' name_value_pair[key_values]
             	    	    	    {
-            	    	    	    char_literal129=(Token)match(input,45,FOLLOW_45_in_meta_block2306); if (state.failed) return retval;
+            	    	    	    char_literal110=(Token)match(input,45,FOLLOW_45_in_meta_block2389); if (state.failed) return retval;
             	    	    	    if ( state.backtracking==0 ) {
-            	    	    	    char_literal129_tree = (Object)adaptor.create(char_literal129);
-            	    	    	    adaptor.addChild(root_0, char_literal129_tree);
+            	    	    	    char_literal110_tree = (Object)adaptor.create(char_literal110);
+            	    	    	    adaptor.addChild(root_0, char_literal110_tree);
             	    	    	    }
-            	    	    	    pushFollow(FOLLOW_name_value_pair_in_meta_block2308);
-            	    	    	    name_value_pair130=name_value_pair(key_values);
+            	    	    	    pushFollow(FOLLOW_name_value_pair_in_meta_block2391);
+            	    	    	    name_value_pair111=name_value_pair(key_values);
 
             	    	    	    state._fsp--;
             	    	    	    if (state.failed) return retval;
-            	    	    	    if ( state.backtracking==0 ) adaptor.addChild(root_0, name_value_pair130.getTree());
+            	    	    	    if ( state.backtracking==0 ) adaptor.addChild(root_0, name_value_pair111.getTree());
 
             	    	    	    }
             	    	    	    break;
 
             	    	    	default :
-            	    	    	    break loop33;
+            	    	    	    break loop31;
             	    	        }
             	    	    } while (true);
 
 
             	    	    }
 
-            	    	    char_literal131=(Token)match(input,31,FOLLOW_31_in_meta_block2314); if (state.failed) return retval;
+            	    	    char_literal112=(Token)match(input,31,FOLLOW_31_in_meta_block2397); if (state.failed) return retval;
             	    	    if ( state.backtracking==0 ) {
-            	    	    char_literal131_tree = (Object)adaptor.create(char_literal131);
-            	    	    adaptor.addChild(root_0, char_literal131_tree);
+            	    	    char_literal112_tree = (Object)adaptor.create(char_literal112);
+            	    	    adaptor.addChild(root_0, char_literal112_tree);
             	    	    }
 
             	    	    }
             	    	    break;
 
             	    	default :
-            	    	    if ( cnt34 >= 1 ) break loop34;
+            	    	    if ( cnt32 >= 1 ) break loop32;
             	    	    if (state.backtracking>0) {state.failed=true; return retval;}
             	                EarlyExitException eee =
-            	                    new EarlyExitException(34, input);
+            	                    new EarlyExitException(32, input);
             	                throw eee;
             	        }
-            	        cnt34++;
+            	        cnt32++;
             	    } while (true);
 
             	    if ( state.backtracking==0 ) {
@@ -4567,22 +4537,22 @@ public class RuleSet2Parser extends Parser {
             	    }
             	    break;
             	case 5 :
-            	    // RuleSet2.g:642:4: 'authz' 'require' 'user'
+            	    // RuleSet2.g:714:4: 'authz' 'require' 'user'
             	    {
-            	    string_literal132=(Token)match(input,120,FOLLOW_120_in_meta_block2326); if (state.failed) return retval;
+            	    string_literal113=(Token)match(input,120,FOLLOW_120_in_meta_block2409); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
-            	    string_literal132_tree = (Object)adaptor.create(string_literal132);
-            	    adaptor.addChild(root_0, string_literal132_tree);
+            	    string_literal113_tree = (Object)adaptor.create(string_literal113);
+            	    adaptor.addChild(root_0, string_literal113_tree);
             	    }
-            	    string_literal133=(Token)match(input,121,FOLLOW_121_in_meta_block2328); if (state.failed) return retval;
+            	    string_literal114=(Token)match(input,121,FOLLOW_121_in_meta_block2411); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
-            	    string_literal133_tree = (Object)adaptor.create(string_literal133);
-            	    adaptor.addChild(root_0, string_literal133_tree);
+            	    string_literal114_tree = (Object)adaptor.create(string_literal114);
+            	    adaptor.addChild(root_0, string_literal114_tree);
             	    }
-            	    string_literal134=(Token)match(input,122,FOLLOW_122_in_meta_block2330); if (state.failed) return retval;
+            	    string_literal115=(Token)match(input,122,FOLLOW_122_in_meta_block2413); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
-            	    string_literal134_tree = (Object)adaptor.create(string_literal134);
-            	    adaptor.addChild(root_0, string_literal134_tree);
+            	    string_literal115_tree = (Object)adaptor.create(string_literal115);
+            	    adaptor.addChild(root_0, string_literal115_tree);
             	    }
             	    if ( state.backtracking==0 ) {
             	        
@@ -4596,17 +4566,17 @@ public class RuleSet2Parser extends Parser {
             	    }
             	    break;
             	case 6 :
-            	    // RuleSet2.g:648:4: 'logging' ( 'on' | 'off' )
+            	    // RuleSet2.g:720:4: 'logging' ( 'on' | 'off' )
             	    {
-            	    string_literal135=(Token)match(input,123,FOLLOW_123_in_meta_block2337); if (state.failed) return retval;
+            	    string_literal116=(Token)match(input,123,FOLLOW_123_in_meta_block2420); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
-            	    string_literal135_tree = (Object)adaptor.create(string_literal135);
-            	    adaptor.addChild(root_0, string_literal135_tree);
+            	    string_literal116_tree = (Object)adaptor.create(string_literal116);
+            	    adaptor.addChild(root_0, string_literal116_tree);
             	    }
-            	    set136=(Token)input.LT(1);
+            	    set117=(Token)input.LT(1);
             	    if ( (input.LA(1)>=124 && input.LA(1)<=125) ) {
             	        input.consume();
-            	        if ( state.backtracking==0 ) adaptor.addChild(root_0, (Object)adaptor.create(set136));
+            	        if ( state.backtracking==0 ) adaptor.addChild(root_0, (Object)adaptor.create(set117));
             	        state.errorRecovery=false;state.failed=false;
             	    }
             	    else {
@@ -4622,40 +4592,40 @@ public class RuleSet2Parser extends Parser {
             	    }
             	    break;
             	case 7 :
-            	    // RuleSet2.g:649:4: 'use' 'module' name= VAR ( 'alias' alias= VAR )?
+            	    // RuleSet2.g:721:4: 'use' 'module' name= VAR ( 'alias' alias= VAR )?
             	    {
-            	    string_literal137=(Token)match(input,126,FOLLOW_126_in_meta_block2350); if (state.failed) return retval;
+            	    string_literal118=(Token)match(input,126,FOLLOW_126_in_meta_block2433); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
-            	    string_literal137_tree = (Object)adaptor.create(string_literal137);
-            	    adaptor.addChild(root_0, string_literal137_tree);
+            	    string_literal118_tree = (Object)adaptor.create(string_literal118);
+            	    adaptor.addChild(root_0, string_literal118_tree);
             	    }
-            	    string_literal138=(Token)match(input,127,FOLLOW_127_in_meta_block2352); if (state.failed) return retval;
+            	    string_literal119=(Token)match(input,127,FOLLOW_127_in_meta_block2435); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
-            	    string_literal138_tree = (Object)adaptor.create(string_literal138);
-            	    adaptor.addChild(root_0, string_literal138_tree);
+            	    string_literal119_tree = (Object)adaptor.create(string_literal119);
+            	    adaptor.addChild(root_0, string_literal119_tree);
             	    }
-            	    name=(Token)match(input,VAR,FOLLOW_VAR_in_meta_block2356); if (state.failed) return retval;
+            	    name=(Token)match(input,VAR,FOLLOW_VAR_in_meta_block2439); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
             	    name_tree = (Object)adaptor.create(name);
             	    adaptor.addChild(root_0, name_tree);
             	    }
-            	    // RuleSet2.g:649:28: ( 'alias' alias= VAR )?
-            	    int alt35=2;
-            	    int LA35_0 = input.LA(1);
+            	    // RuleSet2.g:721:28: ( 'alias' alias= VAR )?
+            	    int alt33=2;
+            	    int LA33_0 = input.LA(1);
 
-            	    if ( (LA35_0==128) ) {
-            	        alt35=1;
+            	    if ( (LA33_0==128) ) {
+            	        alt33=1;
             	    }
-            	    switch (alt35) {
+            	    switch (alt33) {
             	        case 1 :
-            	            // RuleSet2.g:649:29: 'alias' alias= VAR
+            	            // RuleSet2.g:721:29: 'alias' alias= VAR
             	            {
-            	            string_literal139=(Token)match(input,128,FOLLOW_128_in_meta_block2359); if (state.failed) return retval;
+            	            string_literal120=(Token)match(input,128,FOLLOW_128_in_meta_block2442); if (state.failed) return retval;
             	            if ( state.backtracking==0 ) {
-            	            string_literal139_tree = (Object)adaptor.create(string_literal139);
-            	            adaptor.addChild(root_0, string_literal139_tree);
+            	            string_literal120_tree = (Object)adaptor.create(string_literal120);
+            	            adaptor.addChild(root_0, string_literal120_tree);
             	            }
-            	            alias=(Token)match(input,VAR,FOLLOW_VAR_in_meta_block2363); if (state.failed) return retval;
+            	            alias=(Token)match(input,VAR,FOLLOW_VAR_in_meta_block2446); if (state.failed) return retval;
             	            if ( state.backtracking==0 ) {
             	            alias_tree = (Object)adaptor.create(alias);
             	            adaptor.addChild(root_0, alias_tree);
@@ -4681,12 +4651,12 @@ public class RuleSet2Parser extends Parser {
             	    }
             	    break;
             	case 8 :
-            	    // RuleSet2.g:658:4: 'use' rtype= ( 'css' | 'javascript' ) 'resource' (url= STRING | name= VAR )
+            	    // RuleSet2.g:730:4: 'use' rtype= ( 'css' | 'javascript' ) 'resource' (url= STRING | name= VAR )
             	    {
-            	    string_literal140=(Token)match(input,126,FOLLOW_126_in_meta_block2372); if (state.failed) return retval;
+            	    string_literal121=(Token)match(input,126,FOLLOW_126_in_meta_block2455); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
-            	    string_literal140_tree = (Object)adaptor.create(string_literal140);
-            	    adaptor.addChild(root_0, string_literal140_tree);
+            	    string_literal121_tree = (Object)adaptor.create(string_literal121);
+            	    adaptor.addChild(root_0, string_literal121_tree);
             	    }
             	    rtype=(Token)input.LT(1);
             	    if ( input.LA(1)==91||input.LA(1)==129 ) {
@@ -4700,33 +4670,33 @@ public class RuleSet2Parser extends Parser {
             	        throw mse;
             	    }
 
-            	    string_literal141=(Token)match(input,130,FOLLOW_130_in_meta_block2384); if (state.failed) return retval;
+            	    string_literal122=(Token)match(input,130,FOLLOW_130_in_meta_block2467); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
-            	    string_literal141_tree = (Object)adaptor.create(string_literal141);
-            	    adaptor.addChild(root_0, string_literal141_tree);
+            	    string_literal122_tree = (Object)adaptor.create(string_literal122);
+            	    adaptor.addChild(root_0, string_literal122_tree);
             	    }
-            	    // RuleSet2.g:658:50: (url= STRING | name= VAR )
-            	    int alt36=2;
-            	    int LA36_0 = input.LA(1);
+            	    // RuleSet2.g:730:50: (url= STRING | name= VAR )
+            	    int alt34=2;
+            	    int LA34_0 = input.LA(1);
 
-            	    if ( (LA36_0==STRING) ) {
-            	        alt36=1;
+            	    if ( (LA34_0==STRING) ) {
+            	        alt34=1;
             	    }
-            	    else if ( (LA36_0==VAR) ) {
-            	        alt36=2;
+            	    else if ( (LA34_0==VAR) ) {
+            	        alt34=2;
             	    }
             	    else {
             	        if (state.backtracking>0) {state.failed=true; return retval;}
             	        NoViableAltException nvae =
-            	            new NoViableAltException("", 36, 0, input);
+            	            new NoViableAltException("", 34, 0, input);
 
             	        throw nvae;
             	    }
-            	    switch (alt36) {
+            	    switch (alt34) {
             	        case 1 :
-            	            // RuleSet2.g:658:51: url= STRING
+            	            // RuleSet2.g:730:51: url= STRING
             	            {
-            	            url=(Token)match(input,STRING,FOLLOW_STRING_in_meta_block2389); if (state.failed) return retval;
+            	            url=(Token)match(input,STRING,FOLLOW_STRING_in_meta_block2472); if (state.failed) return retval;
             	            if ( state.backtracking==0 ) {
             	            url_tree = (Object)adaptor.create(url);
             	            adaptor.addChild(root_0, url_tree);
@@ -4735,9 +4705,9 @@ public class RuleSet2Parser extends Parser {
             	            }
             	            break;
             	        case 2 :
-            	            // RuleSet2.g:658:64: name= VAR
+            	            // RuleSet2.g:730:64: name= VAR
             	            {
-            	            name=(Token)match(input,VAR,FOLLOW_VAR_in_meta_block2395); if (state.failed) return retval;
+            	            name=(Token)match(input,VAR,FOLLOW_VAR_in_meta_block2478); if (state.failed) return retval;
             	            if ( state.backtracking==0 ) {
             	            name_tree = (Object)adaptor.create(name);
             	            adaptor.addChild(root_0, name_tree);
@@ -4774,14 +4744,14 @@ public class RuleSet2Parser extends Parser {
             	    break;
 
             	default :
-            	    break loop37;
+            	    break loop35;
                 }
             } while (true);
 
-            char_literal142=(Token)match(input,31,FOLLOW_31_in_meta_block2408); if (state.failed) return retval;
+            char_literal123=(Token)match(input,31,FOLLOW_31_in_meta_block2491); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            char_literal142_tree = (Object)adaptor.create(char_literal142);
-            adaptor.addChild(root_0, char_literal142_tree);
+            char_literal123_tree = (Object)adaptor.create(char_literal123);
+            adaptor.addChild(root_0, char_literal123_tree);
             }
 
             }
@@ -4824,7 +4794,7 @@ public class RuleSet2Parser extends Parser {
     };
 
     // $ANTLR start "dispatch_block"
-    // RuleSet2.g:683:1: dispatch_block : 'dispatch' '{' ( 'domain' domain= STRING ( '->' rsid= STRING )? )* '}' ;
+    // RuleSet2.g:755:1: dispatch_block : 'dispatch' '{' ( 'domain' domain= STRING ( '->' rsid= STRING )? )* '}' ;
     public final RuleSet2Parser.dispatch_block_return dispatch_block() throws RecognitionException {
         RuleSet2Parser.dispatch_block_return retval = new RuleSet2Parser.dispatch_block_return();
         retval.start = input.LT(1);
@@ -4833,81 +4803,81 @@ public class RuleSet2Parser extends Parser {
 
         Token domain=null;
         Token rsid=null;
-        Token string_literal143=null;
-        Token char_literal144=null;
-        Token string_literal145=null;
-        Token string_literal146=null;
-        Token char_literal147=null;
+        Token string_literal124=null;
+        Token char_literal125=null;
+        Token string_literal126=null;
+        Token string_literal127=null;
+        Token char_literal128=null;
 
         Object domain_tree=null;
         Object rsid_tree=null;
-        Object string_literal143_tree=null;
-        Object char_literal144_tree=null;
-        Object string_literal145_tree=null;
-        Object string_literal146_tree=null;
-        Object char_literal147_tree=null;
+        Object string_literal124_tree=null;
+        Object char_literal125_tree=null;
+        Object string_literal126_tree=null;
+        Object string_literal127_tree=null;
+        Object char_literal128_tree=null;
 
 
         	 ArrayList dispatch_block_array = (ArrayList)rule_json.get("dispatch");
 
         try {
-            // RuleSet2.g:689:2: ( 'dispatch' '{' ( 'domain' domain= STRING ( '->' rsid= STRING )? )* '}' )
-            // RuleSet2.g:689:4: 'dispatch' '{' ( 'domain' domain= STRING ( '->' rsid= STRING )? )* '}'
+            // RuleSet2.g:761:2: ( 'dispatch' '{' ( 'domain' domain= STRING ( '->' rsid= STRING )? )* '}' )
+            // RuleSet2.g:761:4: 'dispatch' '{' ( 'domain' domain= STRING ( '->' rsid= STRING )? )* '}'
             {
             root_0 = (Object)adaptor.nil();
 
-            string_literal143=(Token)match(input,131,FOLLOW_131_in_dispatch_block2439); if (state.failed) return retval;
+            string_literal124=(Token)match(input,131,FOLLOW_131_in_dispatch_block2522); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            string_literal143_tree = (Object)adaptor.create(string_literal143);
-            adaptor.addChild(root_0, string_literal143_tree);
+            string_literal124_tree = (Object)adaptor.create(string_literal124);
+            adaptor.addChild(root_0, string_literal124_tree);
             }
-            char_literal144=(Token)match(input,30,FOLLOW_30_in_dispatch_block2441); if (state.failed) return retval;
+            char_literal125=(Token)match(input,30,FOLLOW_30_in_dispatch_block2524); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            char_literal144_tree = (Object)adaptor.create(char_literal144);
-            adaptor.addChild(root_0, char_literal144_tree);
+            char_literal125_tree = (Object)adaptor.create(char_literal125);
+            adaptor.addChild(root_0, char_literal125_tree);
             }
-            // RuleSet2.g:689:19: ( 'domain' domain= STRING ( '->' rsid= STRING )? )*
-            loop39:
+            // RuleSet2.g:761:19: ( 'domain' domain= STRING ( '->' rsid= STRING )? )*
+            loop37:
             do {
-                int alt39=2;
-                int LA39_0 = input.LA(1);
+                int alt37=2;
+                int LA37_0 = input.LA(1);
 
-                if ( (LA39_0==132) ) {
-                    alt39=1;
+                if ( (LA37_0==132) ) {
+                    alt37=1;
                 }
 
 
-                switch (alt39) {
+                switch (alt37) {
             	case 1 :
-            	    // RuleSet2.g:689:20: 'domain' domain= STRING ( '->' rsid= STRING )?
+            	    // RuleSet2.g:761:20: 'domain' domain= STRING ( '->' rsid= STRING )?
             	    {
-            	    string_literal145=(Token)match(input,132,FOLLOW_132_in_dispatch_block2444); if (state.failed) return retval;
+            	    string_literal126=(Token)match(input,132,FOLLOW_132_in_dispatch_block2527); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
-            	    string_literal145_tree = (Object)adaptor.create(string_literal145);
-            	    adaptor.addChild(root_0, string_literal145_tree);
+            	    string_literal126_tree = (Object)adaptor.create(string_literal126);
+            	    adaptor.addChild(root_0, string_literal126_tree);
             	    }
-            	    domain=(Token)match(input,STRING,FOLLOW_STRING_in_dispatch_block2448); if (state.failed) return retval;
+            	    domain=(Token)match(input,STRING,FOLLOW_STRING_in_dispatch_block2531); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
             	    domain_tree = (Object)adaptor.create(domain);
             	    adaptor.addChild(root_0, domain_tree);
             	    }
-            	    // RuleSet2.g:689:43: ( '->' rsid= STRING )?
-            	    int alt38=2;
-            	    int LA38_0 = input.LA(1);
+            	    // RuleSet2.g:761:43: ( '->' rsid= STRING )?
+            	    int alt36=2;
+            	    int LA36_0 = input.LA(1);
 
-            	    if ( (LA38_0==133) ) {
-            	        alt38=1;
+            	    if ( (LA36_0==133) ) {
+            	        alt36=1;
             	    }
-            	    switch (alt38) {
+            	    switch (alt36) {
             	        case 1 :
-            	            // RuleSet2.g:689:44: '->' rsid= STRING
+            	            // RuleSet2.g:761:44: '->' rsid= STRING
             	            {
-            	            string_literal146=(Token)match(input,133,FOLLOW_133_in_dispatch_block2451); if (state.failed) return retval;
+            	            string_literal127=(Token)match(input,133,FOLLOW_133_in_dispatch_block2534); if (state.failed) return retval;
             	            if ( state.backtracking==0 ) {
-            	            string_literal146_tree = (Object)adaptor.create(string_literal146);
-            	            adaptor.addChild(root_0, string_literal146_tree);
+            	            string_literal127_tree = (Object)adaptor.create(string_literal127);
+            	            adaptor.addChild(root_0, string_literal127_tree);
             	            }
-            	            rsid=(Token)match(input,STRING,FOLLOW_STRING_in_dispatch_block2455); if (state.failed) return retval;
+            	            rsid=(Token)match(input,STRING,FOLLOW_STRING_in_dispatch_block2538); if (state.failed) return retval;
             	            if ( state.backtracking==0 ) {
             	            rsid_tree = (Object)adaptor.create(rsid);
             	            adaptor.addChild(root_0, rsid_tree);
@@ -4934,14 +4904,14 @@ public class RuleSet2Parser extends Parser {
             	    break;
 
             	default :
-            	    break loop39;
+            	    break loop37;
                 }
             } while (true);
 
-            char_literal147=(Token)match(input,31,FOLLOW_31_in_dispatch_block2465); if (state.failed) return retval;
+            char_literal128=(Token)match(input,31,FOLLOW_31_in_dispatch_block2548); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            char_literal147_tree = (Object)adaptor.create(char_literal147);
-            adaptor.addChild(root_0, char_literal147_tree);
+            char_literal128_tree = (Object)adaptor.create(char_literal128);
+            adaptor.addChild(root_0, char_literal128_tree);
             }
 
             }
@@ -4976,7 +4946,7 @@ public class RuleSet2Parser extends Parser {
     };
 
     // $ANTLR start "name_value_pair"
-    // RuleSet2.g:703:1: name_value_pair[HashMap key_values] : k= STRING ':' (v= INT | v= FLOAT | v= STRING ) ;
+    // RuleSet2.g:775:1: name_value_pair[HashMap key_values] : k= STRING ':' (v= INT | v= FLOAT | v= STRING ) ;
     public final RuleSet2Parser.name_value_pair_return name_value_pair(HashMap key_values) throws RecognitionException {
         RuleSet2Parser.name_value_pair_return retval = new RuleSet2Parser.name_value_pair_return();
         retval.start = input.LT(1);
@@ -4985,62 +4955,62 @@ public class RuleSet2Parser extends Parser {
 
         Token k=null;
         Token v=null;
-        Token char_literal148=null;
+        Token char_literal129=null;
 
         Object k_tree=null;
         Object v_tree=null;
-        Object char_literal148_tree=null;
+        Object char_literal129_tree=null;
 
 
         	Object value = null;
 
         try {
-            // RuleSet2.g:707:2: (k= STRING ':' (v= INT | v= FLOAT | v= STRING ) )
-            // RuleSet2.g:707:4: k= STRING ':' (v= INT | v= FLOAT | v= STRING )
+            // RuleSet2.g:779:2: (k= STRING ':' (v= INT | v= FLOAT | v= STRING ) )
+            // RuleSet2.g:779:4: k= STRING ':' (v= INT | v= FLOAT | v= STRING )
             {
             root_0 = (Object)adaptor.nil();
 
-            k=(Token)match(input,STRING,FOLLOW_STRING_in_name_value_pair2488); if (state.failed) return retval;
+            k=(Token)match(input,STRING,FOLLOW_STRING_in_name_value_pair2571); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
             k_tree = (Object)adaptor.create(k);
             adaptor.addChild(root_0, k_tree);
             }
-            char_literal148=(Token)match(input,35,FOLLOW_35_in_name_value_pair2490); if (state.failed) return retval;
+            char_literal129=(Token)match(input,35,FOLLOW_35_in_name_value_pair2573); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            char_literal148_tree = (Object)adaptor.create(char_literal148);
-            adaptor.addChild(root_0, char_literal148_tree);
+            char_literal129_tree = (Object)adaptor.create(char_literal129);
+            adaptor.addChild(root_0, char_literal129_tree);
             }
-            // RuleSet2.g:707:17: (v= INT | v= FLOAT | v= STRING )
-            int alt40=3;
+            // RuleSet2.g:779:17: (v= INT | v= FLOAT | v= STRING )
+            int alt38=3;
             switch ( input.LA(1) ) {
             case INT:
                 {
-                alt40=1;
+                alt38=1;
                 }
                 break;
             case FLOAT:
                 {
-                alt40=2;
+                alt38=2;
                 }
                 break;
             case STRING:
                 {
-                alt40=3;
+                alt38=3;
                 }
                 break;
             default:
                 if (state.backtracking>0) {state.failed=true; return retval;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 40, 0, input);
+                    new NoViableAltException("", 38, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt40) {
+            switch (alt38) {
                 case 1 :
-                    // RuleSet2.g:708:3: v= INT
+                    // RuleSet2.g:780:3: v= INT
                     {
-                    v=(Token)match(input,INT,FOLLOW_INT_in_name_value_pair2498); if (state.failed) return retval;
+                    v=(Token)match(input,INT,FOLLOW_INT_in_name_value_pair2581); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     v_tree = (Object)adaptor.create(v);
                     adaptor.addChild(root_0, v_tree);
@@ -5052,9 +5022,9 @@ public class RuleSet2Parser extends Parser {
                     }
                     break;
                 case 2 :
-                    // RuleSet2.g:709:5: v= FLOAT
+                    // RuleSet2.g:781:5: v= FLOAT
                     {
-                    v=(Token)match(input,FLOAT,FOLLOW_FLOAT_in_name_value_pair2509); if (state.failed) return retval;
+                    v=(Token)match(input,FLOAT,FOLLOW_FLOAT_in_name_value_pair2592); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     v_tree = (Object)adaptor.create(v);
                     adaptor.addChild(root_0, v_tree);
@@ -5066,9 +5036,9 @@ public class RuleSet2Parser extends Parser {
                     }
                     break;
                 case 3 :
-                    // RuleSet2.g:710:5: v= STRING
+                    // RuleSet2.g:782:5: v= STRING
                     {
-                    v=(Token)match(input,STRING,FOLLOW_STRING_in_name_value_pair2520); if (state.failed) return retval;
+                    v=(Token)match(input,STRING,FOLLOW_STRING_in_name_value_pair2603); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     v_tree = (Object)adaptor.create(v);
                     adaptor.addChild(root_0, v_tree);
@@ -5224,49 +5194,169 @@ public class RuleSet2Parser extends Parser {
         RuleSet2Parser.expr_return e = null;
 
 
-        // RuleSet2.g:505:9: (v= VAR '[' e= expr ']' )
-        // RuleSet2.g:505:9: v= VAR '[' e= expr ']'
+        // RuleSet2.g:509:9: (v= VAR '[' e= expr ']' )
+        // RuleSet2.g:509:9: v= VAR '[' e= expr ']'
         {
-        v=(Token)match(input,VAR,FOLLOW_VAR_in_synpred9_RuleSet21688); if (state.failed) return ;
-        match(input,84,FOLLOW_84_in_synpred9_RuleSet21690); if (state.failed) return ;
-        pushFollow(FOLLOW_expr_in_synpred9_RuleSet21694);
+        v=(Token)match(input,VAR,FOLLOW_VAR_in_synpred9_RuleSet21693); if (state.failed) return ;
+        match(input,84,FOLLOW_84_in_synpred9_RuleSet21695); if (state.failed) return ;
+        pushFollow(FOLLOW_expr_in_synpred9_RuleSet21699);
         e=expr();
 
         state._fsp--;
         if (state.failed) return ;
-        match(input,85,FOLLOW_85_in_synpred9_RuleSet21696); if (state.failed) return ;
+        match(input,85,FOLLOW_85_in_synpred9_RuleSet21701); if (state.failed) return ;
 
         }
     }
     // $ANTLR end synpred9_RuleSet2
 
-    // $ANTLR start synpred12_RuleSet2
-    public final void synpred12_RuleSet2_fragment() throws RecognitionException {   
-        // RuleSet2.g:521:9: ( function_app )
-        // RuleSet2.g:521:9: function_app
+    // $ANTLR start synpred13_RuleSet2
+    public final void synpred13_RuleSet2_fragment() throws RecognitionException {   
+        Token p=null;
+        RuleSet2Parser.namespace_return n = null;
+
+        RuleSet2Parser.expr_return e = null;
+
+
+        // RuleSet2.g:547:9: (n= namespace p= VAR '(' (e= expr ( ',' )? )* ')' )
+        // RuleSet2.g:547:9: n= namespace p= VAR '(' (e= expr ( ',' )? )* ')'
         {
-        pushFollow(FOLLOW_function_app_in_synpred12_RuleSet21733);
-        function_app();
+        pushFollow(FOLLOW_namespace_in_synpred13_RuleSet21785);
+        n=namespace();
 
         state._fsp--;
         if (state.failed) return ;
+        p=(Token)match(input,VAR,FOLLOW_VAR_in_synpred13_RuleSet21789); if (state.failed) return ;
+        match(input,44,FOLLOW_44_in_synpred13_RuleSet21791); if (state.failed) return ;
+        // RuleSet2.g:547:31: (e= expr ( ',' )? )*
+        loop40:
+        do {
+            int alt40=2;
+            int LA40_0 = input.LA(1);
+
+            if ( ((LA40_0>=VAR && LA40_0<=INT)||LA40_0==STRING||LA40_0==30||(LA40_0>=43 && LA40_0<=44)||(LA40_0>=54 && LA40_0<=55)||(LA40_0>=82 && LA40_0<=84)||(LA40_0>=86 && LA40_0<=89)) ) {
+                alt40=1;
+            }
+
+
+            switch (alt40) {
+        	case 1 :
+        	    // RuleSet2.g:547:32: e= expr ( ',' )?
+        	    {
+        	    pushFollow(FOLLOW_expr_in_synpred13_RuleSet21796);
+        	    e=expr();
+
+        	    state._fsp--;
+        	    if (state.failed) return ;
+        	    // RuleSet2.g:550:8: ( ',' )?
+        	    int alt39=2;
+        	    int LA39_0 = input.LA(1);
+
+        	    if ( (LA39_0==45) ) {
+        	        alt39=1;
+        	    }
+        	    switch (alt39) {
+        	        case 1 :
+        	            // RuleSet2.g:550:8: ','
+        	            {
+        	            match(input,45,FOLLOW_45_in_synpred13_RuleSet21807); if (state.failed) return ;
+
+        	            }
+        	            break;
+
+        	    }
+
+
+        	    }
+        	    break;
+
+        	default :
+        	    break loop40;
+            }
+        } while (true);
+
+        match(input,46,FOLLOW_46_in_synpred13_RuleSet21812); if (state.failed) return ;
 
         }
     }
-    // $ANTLR end synpred12_RuleSet2
+    // $ANTLR end synpred13_RuleSet2
 
-    // $ANTLR start synpred15_RuleSet2
-    public final void synpred15_RuleSet2_fragment() throws RecognitionException {   
+    // $ANTLR start synpred14_RuleSet2
+    public final void synpred14_RuleSet2_fragment() throws RecognitionException {   
+        Token v=null;
+        RuleSet2Parser.expr_return e = null;
+
+
+        // RuleSet2.g:557:9: (v= VAR '(' (e= expr ( ',' )? )* ')' )
+        // RuleSet2.g:557:9: v= VAR '(' (e= expr ( ',' )? )* ')'
+        {
+        v=(Token)match(input,VAR,FOLLOW_VAR_in_synpred14_RuleSet21827); if (state.failed) return ;
+        match(input,44,FOLLOW_44_in_synpred14_RuleSet21829); if (state.failed) return ;
+        // RuleSet2.g:557:19: (e= expr ( ',' )? )*
+        loop42:
+        do {
+            int alt42=2;
+            int LA42_0 = input.LA(1);
+
+            if ( ((LA42_0>=VAR && LA42_0<=INT)||LA42_0==STRING||LA42_0==30||(LA42_0>=43 && LA42_0<=44)||(LA42_0>=54 && LA42_0<=55)||(LA42_0>=82 && LA42_0<=84)||(LA42_0>=86 && LA42_0<=89)) ) {
+                alt42=1;
+            }
+
+
+            switch (alt42) {
+        	case 1 :
+        	    // RuleSet2.g:557:20: e= expr ( ',' )?
+        	    {
+        	    pushFollow(FOLLOW_expr_in_synpred14_RuleSet21834);
+        	    e=expr();
+
+        	    state._fsp--;
+        	    if (state.failed) return ;
+        	    // RuleSet2.g:560:2: ( ',' )?
+        	    int alt41=2;
+        	    int LA41_0 = input.LA(1);
+
+        	    if ( (LA41_0==45) ) {
+        	        alt41=1;
+        	    }
+        	    switch (alt41) {
+        	        case 1 :
+        	            // RuleSet2.g:560:2: ','
+        	            {
+        	            match(input,45,FOLLOW_45_in_synpred14_RuleSet21838); if (state.failed) return ;
+
+        	            }
+        	            break;
+
+        	    }
+
+
+        	    }
+        	    break;
+
+        	default :
+        	    break loop42;
+            }
+        } while (true);
+
+        match(input,46,FOLLOW_46_in_synpred14_RuleSet21843); if (state.failed) return ;
+
+        }
+    }
+    // $ANTLR end synpred14_RuleSet2
+
+    // $ANTLR start synpred17_RuleSet2
+    public final void synpred17_RuleSet2_fragment() throws RecognitionException {   
         Token v=null;
 
-        // RuleSet2.g:524:9: (v= VAR )
-        // RuleSet2.g:524:9: v= VAR
+        // RuleSet2.g:593:9: (v= VAR )
+        // RuleSet2.g:593:9: v= VAR
         {
-        v=(Token)match(input,VAR,FOLLOW_VAR_in_synpred15_RuleSet21781); if (state.failed) return ;
+        v=(Token)match(input,VAR,FOLLOW_VAR_in_synpred17_RuleSet21918); if (state.failed) return ;
 
         }
     }
-    // $ANTLR end synpred15_RuleSet2
+    // $ANTLR end synpred17_RuleSet2
 
     // Delegated rules
 
@@ -5275,20 +5365,6 @@ public class RuleSet2Parser extends Parser {
         int start = input.mark();
         try {
             synpred9_RuleSet2_fragment(); // can never throw exception
-        } catch (RecognitionException re) {
-            System.err.println("impossible: "+re);
-        }
-        boolean success = !state.failed;
-        input.rewind(start);
-        state.backtracking--;
-        state.failed=false;
-        return success;
-    }
-    public final boolean synpred15_RuleSet2() {
-        state.backtracking++;
-        int start = input.mark();
-        try {
-            synpred15_RuleSet2_fragment(); // can never throw exception
         } catch (RecognitionException re) {
             System.err.println("impossible: "+re);
         }
@@ -5326,6 +5402,34 @@ public class RuleSet2Parser extends Parser {
         state.failed=false;
         return success;
     }
+    public final boolean synpred14_RuleSet2() {
+        state.backtracking++;
+        int start = input.mark();
+        try {
+            synpred14_RuleSet2_fragment(); // can never throw exception
+        } catch (RecognitionException re) {
+            System.err.println("impossible: "+re);
+        }
+        boolean success = !state.failed;
+        input.rewind(start);
+        state.backtracking--;
+        state.failed=false;
+        return success;
+    }
+    public final boolean synpred17_RuleSet2() {
+        state.backtracking++;
+        int start = input.mark();
+        try {
+            synpred17_RuleSet2_fragment(); // can never throw exception
+        } catch (RecognitionException re) {
+            System.err.println("impossible: "+re);
+        }
+        boolean success = !state.failed;
+        input.rewind(start);
+        state.backtracking--;
+        state.failed=false;
+        return success;
+    }
     public final boolean synpred3_RuleSet2() {
         state.backtracking++;
         int start = input.mark();
@@ -5340,11 +5444,11 @@ public class RuleSet2Parser extends Parser {
         state.failed=false;
         return success;
     }
-    public final boolean synpred12_RuleSet2() {
+    public final boolean synpred13_RuleSet2() {
         state.backtracking++;
         int start = input.mark();
         try {
-            synpred12_RuleSet2_fragment(); // can never throw exception
+            synpred13_RuleSet2_fragment(); // can never throw exception
         } catch (RecognitionException re) {
             System.err.println("impossible: "+re);
         }
@@ -5371,8 +5475,8 @@ public class RuleSet2Parser extends Parser {
 
 
     protected DFA18 dfa18 = new DFA18(this);
-    protected DFA23 dfa23 = new DFA23(this);
-    protected DFA37 dfa37 = new DFA37(this);
+    protected DFA27 dfa27 = new DFA27(this);
+    protected DFA35 dfa35 = new DFA35(this);
     static final String DFA18_eotS =
         "\21\uffff";
     static final String DFA18_eofS =
@@ -5387,7 +5491,7 @@ public class RuleSet2Parser extends Parser {
         "\2\uffff\1\0\1\1\15\uffff}>";
     static final String[] DFA18_transitionS = {
             "\2\4\6\uffff\1\4\21\uffff\1\4\15\uffff\1\4\11\uffff\1\1\1\2"+
-            "\32\uffff\3\4\1\uffff\2\3\2\4",
+            "\32\uffff\3\4\1\uffff\2\4\2\3",
             "",
             "\1\uffff",
             "\1\uffff",
@@ -5482,22 +5586,22 @@ public class RuleSet2Parser extends Parser {
             throw nvae;
         }
     }
-    static final String DFA23_eotS =
-        "\16\uffff";
-    static final String DFA23_eofS =
-        "\16\uffff";
-    static final String DFA23_minS =
-        "\1\4\3\uffff\1\0\11\uffff";
-    static final String DFA23_maxS =
-        "\1\131\3\uffff\1\0\11\uffff";
-    static final String DFA23_acceptS =
-        "\1\uffff\1\1\1\2\1\3\1\uffff\1\5\1\6\1\uffff\1\10\1\11\1\13\1\4"+
-        "\1\7\1\12";
-    static final String DFA23_specialS =
-        "\4\uffff\1\0\11\uffff}>";
-    static final String[] DFA23_transitionS = {
+    static final String DFA27_eotS =
+        "\17\uffff";
+    static final String DFA27_eofS =
+        "\17\uffff";
+    static final String DFA27_minS =
+        "\1\4\3\uffff\1\0\12\uffff";
+    static final String DFA27_maxS =
+        "\1\131\3\uffff\1\0\12\uffff";
+    static final String DFA27_acceptS =
+        "\1\uffff\1\1\1\2\1\3\1\uffff\1\5\1\6\1\7\1\12\1\13\1\15\1\4\1\10"+
+        "\1\11\1\14";
+    static final String DFA27_specialS =
+        "\4\uffff\1\0\12\uffff}>";
+    static final String[] DFA27_transitionS = {
             "\1\4\1\1\6\uffff\1\2\21\uffff\1\11\15\uffff\1\12\45\uffff\2"+
-            "\3\1\10\1\uffff\2\5\2\6",
+            "\3\1\10\1\uffff\1\6\1\7\2\5",
             "",
             "",
             "",
@@ -5510,83 +5614,86 @@ public class RuleSet2Parser extends Parser {
             "",
             "",
             "",
+            "",
             ""
     };
 
-    static final short[] DFA23_eot = DFA.unpackEncodedString(DFA23_eotS);
-    static final short[] DFA23_eof = DFA.unpackEncodedString(DFA23_eofS);
-    static final char[] DFA23_min = DFA.unpackEncodedStringToUnsignedChars(DFA23_minS);
-    static final char[] DFA23_max = DFA.unpackEncodedStringToUnsignedChars(DFA23_maxS);
-    static final short[] DFA23_accept = DFA.unpackEncodedString(DFA23_acceptS);
-    static final short[] DFA23_special = DFA.unpackEncodedString(DFA23_specialS);
-    static final short[][] DFA23_transition;
+    static final short[] DFA27_eot = DFA.unpackEncodedString(DFA27_eotS);
+    static final short[] DFA27_eof = DFA.unpackEncodedString(DFA27_eofS);
+    static final char[] DFA27_min = DFA.unpackEncodedStringToUnsignedChars(DFA27_minS);
+    static final char[] DFA27_max = DFA.unpackEncodedStringToUnsignedChars(DFA27_maxS);
+    static final short[] DFA27_accept = DFA.unpackEncodedString(DFA27_acceptS);
+    static final short[] DFA27_special = DFA.unpackEncodedString(DFA27_specialS);
+    static final short[][] DFA27_transition;
 
     static {
-        int numStates = DFA23_transitionS.length;
-        DFA23_transition = new short[numStates][];
+        int numStates = DFA27_transitionS.length;
+        DFA27_transition = new short[numStates][];
         for (int i=0; i<numStates; i++) {
-            DFA23_transition[i] = DFA.unpackEncodedString(DFA23_transitionS[i]);
+            DFA27_transition[i] = DFA.unpackEncodedString(DFA27_transitionS[i]);
         }
     }
 
-    class DFA23 extends DFA {
+    class DFA27 extends DFA {
 
-        public DFA23(BaseRecognizer recognizer) {
+        public DFA27(BaseRecognizer recognizer) {
             this.recognizer = recognizer;
-            this.decisionNumber = 23;
-            this.eot = DFA23_eot;
-            this.eof = DFA23_eof;
-            this.min = DFA23_min;
-            this.max = DFA23_max;
-            this.accept = DFA23_accept;
-            this.special = DFA23_special;
-            this.transition = DFA23_transition;
+            this.decisionNumber = 27;
+            this.eot = DFA27_eot;
+            this.eof = DFA27_eof;
+            this.min = DFA27_min;
+            this.max = DFA27_max;
+            this.accept = DFA27_accept;
+            this.special = DFA27_special;
+            this.transition = DFA27_transition;
         }
         public String getDescription() {
-            return "486:1: factor returns [Object result] options {backtrack=true; } : (v= INT | v= STRING | v= ( 'true' | 'false' ) | v= VAR '[' e= expr ']' | var_domain ':' VAR | trail_exp | function_app | '[' expr ',' ']' | '{' ( hash_line ( ',' )? )* '}' | v= VAR | '(' e= expr ')' );";
+            return "486:1: factor returns [Object result] options {backtrack=true; } : (v= INT | v= STRING | v= ( 'true' | 'false' ) | v= VAR '[' e= expr ']' | d= var_domain ':' v= VAR | 'current' d= var_domain ':' v= VAR | 'history' e= expr d= var_domain ':' v= VAR | n= namespace p= VAR '(' (e= expr ( ',' )? )* ')' | v= VAR '(' (e= expr ( ',' )? )* ')' | '[' e= expr ( ',' e2= expr )* ']' | '{' h1= hash_line ( ',' h2= hash_line )* '}' | v= VAR | '(' e= expr ')' );";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             TokenStream input = (TokenStream)_input;
         	int _s = s;
             switch ( s ) {
                     case 0 : 
-                        int LA23_4 = input.LA(1);
+                        int LA27_4 = input.LA(1);
 
                          
-                        int index23_4 = input.index();
+                        int index27_4 = input.index();
                         input.rewind();
                         s = -1;
                         if ( (synpred9_RuleSet2()) ) {s = 11;}
 
-                        else if ( (synpred12_RuleSet2()) ) {s = 12;}
+                        else if ( (synpred13_RuleSet2()) ) {s = 12;}
 
-                        else if ( (synpred15_RuleSet2()) ) {s = 13;}
+                        else if ( (synpred14_RuleSet2()) ) {s = 13;}
+
+                        else if ( (synpred17_RuleSet2()) ) {s = 14;}
 
                          
-                        input.seek(index23_4);
+                        input.seek(index27_4);
                         if ( s>=0 ) return s;
                         break;
             }
             if (state.backtracking>0) {state.failed=true; return -1;}
             NoViableAltException nvae =
-                new NoViableAltException(getDescription(), 23, _s, input);
+                new NoViableAltException(getDescription(), 27, _s, input);
             error(nvae);
             throw nvae;
         }
     }
-    static final String DFA37_eotS =
+    static final String DFA35_eotS =
         "\13\uffff";
-    static final String DFA37_eofS =
+    static final String DFA35_eofS =
         "\13\uffff";
-    static final String DFA37_minS =
+    static final String DFA35_minS =
         "\1\37\7\uffff\1\133\2\uffff";
-    static final String DFA37_maxS =
+    static final String DFA35_maxS =
         "\1\176\7\uffff\1\u0081\2\uffff";
-    static final String DFA37_acceptS =
+    static final String DFA35_acceptS =
         "\1\uffff\1\11\1\1\1\2\1\3\1\4\1\5\1\6\1\uffff\1\7\1\10";
-    static final String DFA37_specialS =
+    static final String DFA35_specialS =
         "\13\uffff}>";
-    static final String[] DFA37_transitionS = {
+    static final String[] DFA35_transitionS = {
             "\1\1\116\uffff\1\2\1\3\1\4\1\5\6\uffff\1\6\2\uffff\1\7\2\uffff"+
             "\1\10",
             "",
@@ -5601,37 +5708,37 @@ public class RuleSet2Parser extends Parser {
             ""
     };
 
-    static final short[] DFA37_eot = DFA.unpackEncodedString(DFA37_eotS);
-    static final short[] DFA37_eof = DFA.unpackEncodedString(DFA37_eofS);
-    static final char[] DFA37_min = DFA.unpackEncodedStringToUnsignedChars(DFA37_minS);
-    static final char[] DFA37_max = DFA.unpackEncodedStringToUnsignedChars(DFA37_maxS);
-    static final short[] DFA37_accept = DFA.unpackEncodedString(DFA37_acceptS);
-    static final short[] DFA37_special = DFA.unpackEncodedString(DFA37_specialS);
-    static final short[][] DFA37_transition;
+    static final short[] DFA35_eot = DFA.unpackEncodedString(DFA35_eotS);
+    static final short[] DFA35_eof = DFA.unpackEncodedString(DFA35_eofS);
+    static final char[] DFA35_min = DFA.unpackEncodedStringToUnsignedChars(DFA35_minS);
+    static final char[] DFA35_max = DFA.unpackEncodedStringToUnsignedChars(DFA35_maxS);
+    static final short[] DFA35_accept = DFA.unpackEncodedString(DFA35_acceptS);
+    static final short[] DFA35_special = DFA.unpackEncodedString(DFA35_specialS);
+    static final short[][] DFA35_transition;
 
     static {
-        int numStates = DFA37_transitionS.length;
-        DFA37_transition = new short[numStates][];
+        int numStates = DFA35_transitionS.length;
+        DFA35_transition = new short[numStates][];
         for (int i=0; i<numStates; i++) {
-            DFA37_transition[i] = DFA.unpackEncodedString(DFA37_transitionS[i]);
+            DFA35_transition[i] = DFA.unpackEncodedString(DFA35_transitionS[i]);
         }
     }
 
-    class DFA37 extends DFA {
+    class DFA35 extends DFA {
 
-        public DFA37(BaseRecognizer recognizer) {
+        public DFA35(BaseRecognizer recognizer) {
             this.recognizer = recognizer;
-            this.decisionNumber = 37;
-            this.eot = DFA37_eot;
-            this.eof = DFA37_eof;
-            this.min = DFA37_min;
-            this.max = DFA37_max;
-            this.accept = DFA37_accept;
-            this.special = DFA37_special;
-            this.transition = DFA37_transition;
+            this.decisionNumber = 35;
+            this.eot = DFA35_eot;
+            this.eof = DFA35_eof;
+            this.min = DFA35_min;
+            this.max = DFA35_max;
+            this.accept = DFA35_accept;
+            this.special = DFA35_special;
+            this.transition = DFA35_transition;
         }
         public String getDescription() {
-            return "()* loopback of 633:2: ( 'description' desc= ( HTML | STRING ) | 'name' thename= STRING | 'author' author= STRING | 'key' what= ( 'errorstack' | 'googleanalytics' | 'twitter' | 'amazon' | 'kpds' | 'google' | VAR ) (key_value= STRING | '{' ( name_value_pair[key_values] ( ',' name_value_pair[key_values] )* ) '}' )+ | 'authz' 'require' 'user' | 'logging' ( 'on' | 'off' ) | 'use' 'module' name= VAR ( 'alias' alias= VAR )? | 'use' rtype= ( 'css' | 'javascript' ) 'resource' (url= STRING | name= VAR ) )*";
+            return "()* loopback of 705:2: ( 'description' desc= ( HTML | STRING ) | 'name' thename= STRING | 'author' author= STRING | 'key' what= ( 'errorstack' | 'googleanalytics' | 'twitter' | 'amazon' | 'kpds' | 'google' | VAR ) (key_value= STRING | '{' ( name_value_pair[key_values] ( ',' name_value_pair[key_values] )* ) '}' )+ | 'authz' 'require' 'user' | 'logging' ( 'on' | 'off' ) | 'use' 'module' name= VAR ( 'alias' alias= VAR )? | 'use' rtype= ( 'css' | 'javascript' ) 'resource' (url= STRING | name= VAR ) )*";
         }
     }
  
@@ -5710,7 +5817,7 @@ public class RuleSet2Parser extends Parser {
     public static final BitSet FOLLOW_unary_expr_in_unary_expr1364 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_55_in_unary_expr1370 = new BitSet(new long[]{0x0000000000001000L});
     public static final BitSet FOLLOW_STRING_in_unary_expr1372 = new BitSet(new long[]{0x0100000000000000L});
-    public static final BitSet FOLLOW_56_in_unary_expr1374 = new BitSet(new long[]{0x0000000000000000L,0x0000000000C00000L});
+    public static final BitSet FOLLOW_56_in_unary_expr1374 = new BitSet(new long[]{0x0000000000000000L,0x0000000003000000L});
     public static final BitSet FOLLOW_var_domain_in_unary_expr1376 = new BitSet(new long[]{0x0000000800000000L});
     public static final BitSet FOLLOW_35_in_unary_expr1378 = new BitSet(new long[]{0x0000000000000010L});
     public static final BitSet FOLLOW_VAR_in_unary_expr1380 = new BitSet(new long[]{0x0000000000000000L,0x0000000004000000L});
@@ -5719,7 +5826,7 @@ public class RuleSet2Parser extends Parser {
     public static final BitSet FOLLOW_STRING_in_unary_expr1390 = new BitSet(new long[]{0x0600000000000000L});
     public static final BitSet FOLLOW_set_in_unary_expr1392 = new BitSet(new long[]{0x0000000000001000L});
     public static final BitSet FOLLOW_STRING_in_unary_expr1400 = new BitSet(new long[]{0x0100000000000000L});
-    public static final BitSet FOLLOW_56_in_unary_expr1402 = new BitSet(new long[]{0x0000000000000000L,0x0000000000C00000L});
+    public static final BitSet FOLLOW_56_in_unary_expr1402 = new BitSet(new long[]{0x0000000000000000L,0x0000000003000000L});
     public static final BitSet FOLLOW_var_domain_in_unary_expr1404 = new BitSet(new long[]{0x0000000800000000L});
     public static final BitSet FOLLOW_35_in_unary_expr1406 = new BitSet(new long[]{0x0000000000000010L});
     public static final BitSet FOLLOW_VAR_in_unary_expr1408 = new BitSet(new long[]{0x0000000000000002L});
@@ -5743,118 +5850,118 @@ public class RuleSet2Parser extends Parser {
     public static final BitSet FOLLOW_45_in_operator1499 = new BitSet(new long[]{0x0000400000000000L});
     public static final BitSet FOLLOW_46_in_operator1502 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_set_in_operator_op0 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_INT_in_factor1633 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_STRING_in_factor1648 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_set_in_factor1668 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_VAR_in_factor1688 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
-    public static final BitSet FOLLOW_84_in_factor1690 = new BitSet(new long[]{0x00C0180040001030L,0x0000000003DC0000L});
-    public static final BitSet FOLLOW_expr_in_factor1694 = new BitSet(new long[]{0x0000000000000000L,0x0000000000200000L});
-    public static final BitSet FOLLOW_85_in_factor1696 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_var_domain_in_factor1709 = new BitSet(new long[]{0x0000000800000000L});
-    public static final BitSet FOLLOW_35_in_factor1711 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_VAR_in_factor1713 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_trail_exp_in_factor1723 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_function_app_in_factor1733 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_84_in_factor1743 = new BitSet(new long[]{0x00C0180040001030L,0x0000000003DC0000L});
-    public static final BitSet FOLLOW_expr_in_factor1745 = new BitSet(new long[]{0x0000200000000000L});
-    public static final BitSet FOLLOW_45_in_factor1747 = new BitSet(new long[]{0x0000000000000000L,0x0000000000200000L});
-    public static final BitSet FOLLOW_85_in_factor1749 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_30_in_factor1759 = new BitSet(new long[]{0x0000000080001000L});
-    public static final BitSet FOLLOW_hash_line_in_factor1762 = new BitSet(new long[]{0x0000200080001000L});
-    public static final BitSet FOLLOW_45_in_factor1764 = new BitSet(new long[]{0x0000000080001000L});
-    public static final BitSet FOLLOW_31_in_factor1769 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_VAR_in_factor1781 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_44_in_factor1794 = new BitSet(new long[]{0x00C0180040001030L,0x0000000003DC0000L});
-    public static final BitSet FOLLOW_expr_in_factor1798 = new BitSet(new long[]{0x0000400000000000L});
-    public static final BitSet FOLLOW_46_in_factor1800 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_INT_in_factor1638 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_STRING_in_factor1653 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_set_in_factor1673 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_VAR_in_factor1693 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+    public static final BitSet FOLLOW_84_in_factor1695 = new BitSet(new long[]{0x00C0180040001030L,0x0000000003DC0000L});
+    public static final BitSet FOLLOW_expr_in_factor1699 = new BitSet(new long[]{0x0000000000000000L,0x0000000000200000L});
+    public static final BitSet FOLLOW_85_in_factor1701 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_var_domain_in_factor1716 = new BitSet(new long[]{0x0000000800000000L});
+    public static final BitSet FOLLOW_35_in_factor1718 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_VAR_in_factor1722 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_86_in_factor1734 = new BitSet(new long[]{0x0000000000000000L,0x0000000003000000L});
+    public static final BitSet FOLLOW_var_domain_in_factor1738 = new BitSet(new long[]{0x0000000800000000L});
+    public static final BitSet FOLLOW_35_in_factor1740 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_VAR_in_factor1744 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_87_in_factor1757 = new BitSet(new long[]{0x00C0180040001030L,0x0000000003DC0000L});
+    public static final BitSet FOLLOW_expr_in_factor1761 = new BitSet(new long[]{0x0000000000000000L,0x0000000003000000L});
+    public static final BitSet FOLLOW_var_domain_in_factor1765 = new BitSet(new long[]{0x0000000800000000L});
+    public static final BitSet FOLLOW_35_in_factor1767 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_VAR_in_factor1771 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_namespace_in_factor1785 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_VAR_in_factor1789 = new BitSet(new long[]{0x0000100000000000L});
+    public static final BitSet FOLLOW_44_in_factor1791 = new BitSet(new long[]{0x00C0580040001030L,0x0000000003DC0000L});
+    public static final BitSet FOLLOW_expr_in_factor1796 = new BitSet(new long[]{0x00C0780040001030L,0x0000000003DC0000L});
+    public static final BitSet FOLLOW_45_in_factor1807 = new BitSet(new long[]{0x00C0580040001030L,0x0000000003DC0000L});
+    public static final BitSet FOLLOW_46_in_factor1812 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_VAR_in_factor1827 = new BitSet(new long[]{0x0000100000000000L});
+    public static final BitSet FOLLOW_44_in_factor1829 = new BitSet(new long[]{0x00C0580040001030L,0x0000000003DC0000L});
+    public static final BitSet FOLLOW_expr_in_factor1834 = new BitSet(new long[]{0x00C0780040001030L,0x0000000003DC0000L});
+    public static final BitSet FOLLOW_45_in_factor1838 = new BitSet(new long[]{0x00C0580040001030L,0x0000000003DC0000L});
+    public static final BitSet FOLLOW_46_in_factor1843 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_84_in_factor1855 = new BitSet(new long[]{0x00C0180040001030L,0x0000000003DC0000L});
+    public static final BitSet FOLLOW_expr_in_factor1859 = new BitSet(new long[]{0x0000200000000000L,0x0000000000200000L});
+    public static final BitSet FOLLOW_45_in_factor1864 = new BitSet(new long[]{0x00C0180040001030L,0x0000000003DC0000L});
+    public static final BitSet FOLLOW_expr_in_factor1868 = new BitSet(new long[]{0x0000200000000000L,0x0000000000200000L});
+    public static final BitSet FOLLOW_85_in_factor1873 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_30_in_factor1885 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_hash_line_in_factor1889 = new BitSet(new long[]{0x0000200080000000L});
+    public static final BitSet FOLLOW_45_in_factor1894 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_hash_line_in_factor1898 = new BitSet(new long[]{0x0000200080000000L});
+    public static final BitSet FOLLOW_31_in_factor1904 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_VAR_in_factor1918 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_44_in_factor1931 = new BitSet(new long[]{0x00C0180040001030L,0x0000000003DC0000L});
+    public static final BitSet FOLLOW_expr_in_factor1935 = new BitSet(new long[]{0x0000400000000000L});
+    public static final BitSet FOLLOW_46_in_factor1937 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_set_in_var_domain0 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_namespace_in_function_app1835 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_VAR_in_function_app1837 = new BitSet(new long[]{0x0000100000000000L});
-    public static final BitSet FOLLOW_44_in_function_app1839 = new BitSet(new long[]{0x00C0580040001030L,0x0000000003DC0000L});
-    public static final BitSet FOLLOW_expr_in_function_app1842 = new BitSet(new long[]{0x00C0780040001030L,0x0000000003DC0000L});
-    public static final BitSet FOLLOW_45_in_function_app1844 = new BitSet(new long[]{0x00C0580040001030L,0x0000000003DC0000L});
-    public static final BitSet FOLLOW_46_in_function_app1849 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_VAR_in_function_app1855 = new BitSet(new long[]{0x0000100000000000L});
-    public static final BitSet FOLLOW_44_in_function_app1857 = new BitSet(new long[]{0x00C0580040001030L,0x0000000003DC0000L});
-    public static final BitSet FOLLOW_expr_in_function_app1860 = new BitSet(new long[]{0x00C0780040001030L,0x0000000003DC0000L});
-    public static final BitSet FOLLOW_45_in_function_app1862 = new BitSet(new long[]{0x00C0580040001030L,0x0000000003DC0000L});
-    public static final BitSet FOLLOW_46_in_function_app1867 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_VAR_in_namespace1881 = new BitSet(new long[]{0x0000000800000000L});
-    public static final BitSet FOLLOW_35_in_namespace1883 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_88_in_trail_exp1896 = new BitSet(new long[]{0x0000000000000000L,0x0000000000C00000L});
-    public static final BitSet FOLLOW_var_domain_in_trail_exp1898 = new BitSet(new long[]{0x0000000800000000L});
-    public static final BitSet FOLLOW_35_in_trail_exp1900 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_VAR_in_trail_exp1902 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_89_in_trail_exp1908 = new BitSet(new long[]{0x00C0180040001030L,0x0000000003DC0000L});
-    public static final BitSet FOLLOW_expr_in_trail_exp1910 = new BitSet(new long[]{0x0000000000000000L,0x0000000000C00000L});
-    public static final BitSet FOLLOW_var_domain_in_trail_exp1912 = new BitSet(new long[]{0x0000000800000000L});
-    public static final BitSet FOLLOW_35_in_trail_exp1914 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_VAR_in_trail_exp1916 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_90_in_timeframe1929 = new BitSet(new long[]{0x00C0180040001030L,0x0000000003DC0000L});
-    public static final BitSet FOLLOW_expr_in_timeframe1931 = new BitSet(new long[]{0x0000000000000000L,0x000003FFF0000000L});
-    public static final BitSet FOLLOW_period_in_timeframe1935 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_STRING_in_hash_line1951 = new BitSet(new long[]{0x0000000800000000L});
-    public static final BitSet FOLLOW_35_in_hash_line1953 = new BitSet(new long[]{0x00C0180040001030L,0x0000000003DC0000L});
-    public static final BitSet FOLLOW_expr_in_hash_line1955 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_91_in_css_emit1970 = new BitSet(new long[]{0x0000000000003000L});
-    public static final BitSet FOLLOW_HTML_in_css_emit1976 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_STRING_in_css_emit1984 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_VAR_in_namespace1980 = new BitSet(new long[]{0x0000000800000000L});
+    public static final BitSet FOLLOW_35_in_namespace1982 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_90_in_timeframe2001 = new BitSet(new long[]{0x00C0180040001030L,0x0000000003DC0000L});
+    public static final BitSet FOLLOW_expr_in_timeframe2003 = new BitSet(new long[]{0x0000000000000000L,0x000003FFF0000000L});
+    public static final BitSet FOLLOW_period_in_timeframe2007 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_STRING_in_hash_line2029 = new BitSet(new long[]{0x0000000800000000L});
+    public static final BitSet FOLLOW_35_in_hash_line2031 = new BitSet(new long[]{0x00C0180040001030L,0x0000000003DC0000L});
+    public static final BitSet FOLLOW_expr_in_hash_line2035 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_91_in_css_emit2053 = new BitSet(new long[]{0x0000000000003000L});
+    public static final BitSet FOLLOW_HTML_in_css_emit2059 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_STRING_in_css_emit2067 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_set_in_period0 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_106_in_cachable2124 = new BitSet(new long[]{0x0000000000000002L,0x0000080000000000L});
-    public static final BitSet FOLLOW_107_in_cachable2127 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_INT_in_cachable2131 = new BitSet(new long[]{0x0000000000000000L,0x000003FFF0000000L});
-    public static final BitSet FOLLOW_period_in_cachable2135 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_108_in_emit_block2159 = new BitSet(new long[]{0x0000000000007000L});
-    public static final BitSet FOLLOW_HTML_in_emit_block2165 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_STRING_in_emit_block2173 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_JS_in_emit_block2181 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_109_in_meta_block2213 = new BitSet(new long[]{0x0000000040000000L});
-    public static final BitSet FOLLOW_30_in_meta_block2215 = new BitSet(new long[]{0x0000000080000000L,0x4903C00000000000L});
-    public static final BitSet FOLLOW_110_in_meta_block2221 = new BitSet(new long[]{0x0000000000003000L});
-    public static final BitSet FOLLOW_set_in_meta_block2225 = new BitSet(new long[]{0x0000000080000000L,0x4903C00000000000L});
-    public static final BitSet FOLLOW_111_in_meta_block2239 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_STRING_in_meta_block2243 = new BitSet(new long[]{0x0000000080000000L,0x4903C00000000000L});
-    public static final BitSet FOLLOW_112_in_meta_block2253 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_STRING_in_meta_block2257 = new BitSet(new long[]{0x0000000080000000L,0x4903C00000000000L});
-    public static final BitSet FOLLOW_113_in_meta_block2269 = new BitSet(new long[]{0x0000000000000010L,0x00FC000000000000L});
-    public static final BitSet FOLLOW_set_in_meta_block2273 = new BitSet(new long[]{0x0000000040001000L});
-    public static final BitSet FOLLOW_STRING_in_meta_block2295 = new BitSet(new long[]{0x00000000C0001000L,0x4903C00000000000L});
-    public static final BitSet FOLLOW_30_in_meta_block2299 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_name_value_pair_in_meta_block2302 = new BitSet(new long[]{0x0000200080000000L});
-    public static final BitSet FOLLOW_45_in_meta_block2306 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_name_value_pair_in_meta_block2308 = new BitSet(new long[]{0x0000200080000000L});
-    public static final BitSet FOLLOW_31_in_meta_block2314 = new BitSet(new long[]{0x00000000C0001000L,0x4903C00000000000L});
-    public static final BitSet FOLLOW_120_in_meta_block2326 = new BitSet(new long[]{0x0000000000000000L,0x0200000000000000L});
-    public static final BitSet FOLLOW_121_in_meta_block2328 = new BitSet(new long[]{0x0000000000000000L,0x0400000000000000L});
-    public static final BitSet FOLLOW_122_in_meta_block2330 = new BitSet(new long[]{0x0000000080000000L,0x4903C00000000000L});
-    public static final BitSet FOLLOW_123_in_meta_block2337 = new BitSet(new long[]{0x0000000000000000L,0x3000000000000000L});
-    public static final BitSet FOLLOW_set_in_meta_block2339 = new BitSet(new long[]{0x0000000080000000L,0x4903C00000000000L});
-    public static final BitSet FOLLOW_126_in_meta_block2350 = new BitSet(new long[]{0x0000000000000000L,0x8000000000000000L});
-    public static final BitSet FOLLOW_127_in_meta_block2352 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_VAR_in_meta_block2356 = new BitSet(new long[]{0x0000000080000000L,0x4903C00000000000L,0x0000000000000001L});
-    public static final BitSet FOLLOW_128_in_meta_block2359 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_VAR_in_meta_block2363 = new BitSet(new long[]{0x0000000080000000L,0x4903C00000000000L});
-    public static final BitSet FOLLOW_126_in_meta_block2372 = new BitSet(new long[]{0x0000000000000000L,0x0000000008000000L,0x0000000000000002L});
-    public static final BitSet FOLLOW_set_in_meta_block2376 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000004L});
-    public static final BitSet FOLLOW_130_in_meta_block2384 = new BitSet(new long[]{0x0000000000001010L});
-    public static final BitSet FOLLOW_STRING_in_meta_block2389 = new BitSet(new long[]{0x0000000080000000L,0x4903C00000000000L});
-    public static final BitSet FOLLOW_VAR_in_meta_block2395 = new BitSet(new long[]{0x0000000080000000L,0x4903C00000000000L});
-    public static final BitSet FOLLOW_31_in_meta_block2408 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_131_in_dispatch_block2439 = new BitSet(new long[]{0x0000000040000000L});
-    public static final BitSet FOLLOW_30_in_dispatch_block2441 = new BitSet(new long[]{0x0000000080000000L,0x0000000000000000L,0x0000000000000010L});
-    public static final BitSet FOLLOW_132_in_dispatch_block2444 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_STRING_in_dispatch_block2448 = new BitSet(new long[]{0x0000000080000000L,0x0000000000000000L,0x0000000000000030L});
-    public static final BitSet FOLLOW_133_in_dispatch_block2451 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_STRING_in_dispatch_block2455 = new BitSet(new long[]{0x0000000080000000L,0x0000000000000000L,0x0000000000000010L});
-    public static final BitSet FOLLOW_31_in_dispatch_block2465 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_STRING_in_name_value_pair2488 = new BitSet(new long[]{0x0000000800000000L});
-    public static final BitSet FOLLOW_35_in_name_value_pair2490 = new BitSet(new long[]{0x00000000000010A0L});
-    public static final BitSet FOLLOW_INT_in_name_value_pair2498 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_FLOAT_in_name_value_pair2509 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_STRING_in_name_value_pair2520 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_106_in_cachable2207 = new BitSet(new long[]{0x0000000000000002L,0x0000080000000000L});
+    public static final BitSet FOLLOW_107_in_cachable2210 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_INT_in_cachable2214 = new BitSet(new long[]{0x0000000000000000L,0x000003FFF0000000L});
+    public static final BitSet FOLLOW_period_in_cachable2218 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_108_in_emit_block2242 = new BitSet(new long[]{0x0000000000007000L});
+    public static final BitSet FOLLOW_HTML_in_emit_block2248 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_STRING_in_emit_block2256 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_JS_in_emit_block2264 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_109_in_meta_block2296 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_30_in_meta_block2298 = new BitSet(new long[]{0x0000000080000000L,0x4903C00000000000L});
+    public static final BitSet FOLLOW_110_in_meta_block2304 = new BitSet(new long[]{0x0000000000003000L});
+    public static final BitSet FOLLOW_set_in_meta_block2308 = new BitSet(new long[]{0x0000000080000000L,0x4903C00000000000L});
+    public static final BitSet FOLLOW_111_in_meta_block2322 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_STRING_in_meta_block2326 = new BitSet(new long[]{0x0000000080000000L,0x4903C00000000000L});
+    public static final BitSet FOLLOW_112_in_meta_block2336 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_STRING_in_meta_block2340 = new BitSet(new long[]{0x0000000080000000L,0x4903C00000000000L});
+    public static final BitSet FOLLOW_113_in_meta_block2352 = new BitSet(new long[]{0x0000000000000010L,0x00FC000000000000L});
+    public static final BitSet FOLLOW_set_in_meta_block2356 = new BitSet(new long[]{0x0000000040001000L});
+    public static final BitSet FOLLOW_STRING_in_meta_block2378 = new BitSet(new long[]{0x00000000C0001000L,0x4903C00000000000L});
+    public static final BitSet FOLLOW_30_in_meta_block2382 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_name_value_pair_in_meta_block2385 = new BitSet(new long[]{0x0000200080000000L});
+    public static final BitSet FOLLOW_45_in_meta_block2389 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_name_value_pair_in_meta_block2391 = new BitSet(new long[]{0x0000200080000000L});
+    public static final BitSet FOLLOW_31_in_meta_block2397 = new BitSet(new long[]{0x00000000C0001000L,0x4903C00000000000L});
+    public static final BitSet FOLLOW_120_in_meta_block2409 = new BitSet(new long[]{0x0000000000000000L,0x0200000000000000L});
+    public static final BitSet FOLLOW_121_in_meta_block2411 = new BitSet(new long[]{0x0000000000000000L,0x0400000000000000L});
+    public static final BitSet FOLLOW_122_in_meta_block2413 = new BitSet(new long[]{0x0000000080000000L,0x4903C00000000000L});
+    public static final BitSet FOLLOW_123_in_meta_block2420 = new BitSet(new long[]{0x0000000000000000L,0x3000000000000000L});
+    public static final BitSet FOLLOW_set_in_meta_block2422 = new BitSet(new long[]{0x0000000080000000L,0x4903C00000000000L});
+    public static final BitSet FOLLOW_126_in_meta_block2433 = new BitSet(new long[]{0x0000000000000000L,0x8000000000000000L});
+    public static final BitSet FOLLOW_127_in_meta_block2435 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_VAR_in_meta_block2439 = new BitSet(new long[]{0x0000000080000000L,0x4903C00000000000L,0x0000000000000001L});
+    public static final BitSet FOLLOW_128_in_meta_block2442 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_VAR_in_meta_block2446 = new BitSet(new long[]{0x0000000080000000L,0x4903C00000000000L});
+    public static final BitSet FOLLOW_126_in_meta_block2455 = new BitSet(new long[]{0x0000000000000000L,0x0000000008000000L,0x0000000000000002L});
+    public static final BitSet FOLLOW_set_in_meta_block2459 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000004L});
+    public static final BitSet FOLLOW_130_in_meta_block2467 = new BitSet(new long[]{0x0000000000001010L});
+    public static final BitSet FOLLOW_STRING_in_meta_block2472 = new BitSet(new long[]{0x0000000080000000L,0x4903C00000000000L});
+    public static final BitSet FOLLOW_VAR_in_meta_block2478 = new BitSet(new long[]{0x0000000080000000L,0x4903C00000000000L});
+    public static final BitSet FOLLOW_31_in_meta_block2491 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_131_in_dispatch_block2522 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_30_in_dispatch_block2524 = new BitSet(new long[]{0x0000000080000000L,0x0000000000000000L,0x0000000000000010L});
+    public static final BitSet FOLLOW_132_in_dispatch_block2527 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_STRING_in_dispatch_block2531 = new BitSet(new long[]{0x0000000080000000L,0x0000000000000000L,0x0000000000000030L});
+    public static final BitSet FOLLOW_133_in_dispatch_block2534 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_STRING_in_dispatch_block2538 = new BitSet(new long[]{0x0000000080000000L,0x0000000000000000L,0x0000000000000010L});
+    public static final BitSet FOLLOW_31_in_dispatch_block2548 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_STRING_in_name_value_pair2571 = new BitSet(new long[]{0x0000000800000000L});
+    public static final BitSet FOLLOW_35_in_name_value_pair2573 = new BitSet(new long[]{0x00000000000010A0L});
+    public static final BitSet FOLLOW_INT_in_name_value_pair2581 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_FLOAT_in_name_value_pair2592 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_STRING_in_name_value_pair2603 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_55_in_synpred2_RuleSet21370 = new BitSet(new long[]{0x0000000000001000L});
     public static final BitSet FOLLOW_STRING_in_synpred2_RuleSet21372 = new BitSet(new long[]{0x0100000000000000L});
-    public static final BitSet FOLLOW_56_in_synpred2_RuleSet21374 = new BitSet(new long[]{0x0000000000000000L,0x0000000000C00000L});
+    public static final BitSet FOLLOW_56_in_synpred2_RuleSet21374 = new BitSet(new long[]{0x0000000000000000L,0x0000000003000000L});
     public static final BitSet FOLLOW_var_domain_in_synpred2_RuleSet21376 = new BitSet(new long[]{0x0000000800000000L});
     public static final BitSet FOLLOW_35_in_synpred2_RuleSet21378 = new BitSet(new long[]{0x0000000000000010L});
     public static final BitSet FOLLOW_VAR_in_synpred2_RuleSet21380 = new BitSet(new long[]{0x0000000000000000L,0x0000000004000000L});
@@ -5863,7 +5970,7 @@ public class RuleSet2Parser extends Parser {
     public static final BitSet FOLLOW_STRING_in_synpred3_RuleSet21390 = new BitSet(new long[]{0x0600000000000000L});
     public static final BitSet FOLLOW_set_in_synpred3_RuleSet21392 = new BitSet(new long[]{0x0000000000001000L});
     public static final BitSet FOLLOW_STRING_in_synpred3_RuleSet21400 = new BitSet(new long[]{0x0100000000000000L});
-    public static final BitSet FOLLOW_56_in_synpred3_RuleSet21402 = new BitSet(new long[]{0x0000000000000000L,0x0000000000C00000L});
+    public static final BitSet FOLLOW_56_in_synpred3_RuleSet21402 = new BitSet(new long[]{0x0000000000000000L,0x0000000003000000L});
     public static final BitSet FOLLOW_var_domain_in_synpred3_RuleSet21404 = new BitSet(new long[]{0x0000000800000000L});
     public static final BitSet FOLLOW_35_in_synpred3_RuleSet21406 = new BitSet(new long[]{0x0000000000000010L});
     public static final BitSet FOLLOW_VAR_in_synpred3_RuleSet21408 = new BitSet(new long[]{0x0000000000000002L});
@@ -5877,11 +5984,21 @@ public class RuleSet2Parser extends Parser {
     public static final BitSet FOLLOW_35_in_synpred5_RuleSet21432 = new BitSet(new long[]{0x0000000000000010L});
     public static final BitSet FOLLOW_VAR_in_synpred5_RuleSet21434 = new BitSet(new long[]{0x0000000000000000L,0x0000000004000000L});
     public static final BitSet FOLLOW_timeframe_in_synpred5_RuleSet21436 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_VAR_in_synpred9_RuleSet21688 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
-    public static final BitSet FOLLOW_84_in_synpred9_RuleSet21690 = new BitSet(new long[]{0x00C0180040001030L,0x0000000003DC0000L});
-    public static final BitSet FOLLOW_expr_in_synpred9_RuleSet21694 = new BitSet(new long[]{0x0000000000000000L,0x0000000000200000L});
-    public static final BitSet FOLLOW_85_in_synpred9_RuleSet21696 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_function_app_in_synpred12_RuleSet21733 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_VAR_in_synpred15_RuleSet21781 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_VAR_in_synpred9_RuleSet21693 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+    public static final BitSet FOLLOW_84_in_synpred9_RuleSet21695 = new BitSet(new long[]{0x00C0180040001030L,0x0000000003DC0000L});
+    public static final BitSet FOLLOW_expr_in_synpred9_RuleSet21699 = new BitSet(new long[]{0x0000000000000000L,0x0000000000200000L});
+    public static final BitSet FOLLOW_85_in_synpred9_RuleSet21701 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_namespace_in_synpred13_RuleSet21785 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_VAR_in_synpred13_RuleSet21789 = new BitSet(new long[]{0x0000100000000000L});
+    public static final BitSet FOLLOW_44_in_synpred13_RuleSet21791 = new BitSet(new long[]{0x00C0580040001030L,0x0000000003DC0000L});
+    public static final BitSet FOLLOW_expr_in_synpred13_RuleSet21796 = new BitSet(new long[]{0x00C0780040001030L,0x0000000003DC0000L});
+    public static final BitSet FOLLOW_45_in_synpred13_RuleSet21807 = new BitSet(new long[]{0x00C0580040001030L,0x0000000003DC0000L});
+    public static final BitSet FOLLOW_46_in_synpred13_RuleSet21812 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_VAR_in_synpred14_RuleSet21827 = new BitSet(new long[]{0x0000100000000000L});
+    public static final BitSet FOLLOW_44_in_synpred14_RuleSet21829 = new BitSet(new long[]{0x00C0580040001030L,0x0000000003DC0000L});
+    public static final BitSet FOLLOW_expr_in_synpred14_RuleSet21834 = new BitSet(new long[]{0x00C0780040001030L,0x0000000003DC0000L});
+    public static final BitSet FOLLOW_45_in_synpred14_RuleSet21838 = new BitSet(new long[]{0x00C0580040001030L,0x0000000003DC0000L});
+    public static final BitSet FOLLOW_46_in_synpred14_RuleSet21843 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_VAR_in_synpred17_RuleSet21918 = new BitSet(new long[]{0x0000000000000002L});
 
 }

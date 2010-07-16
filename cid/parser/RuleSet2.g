@@ -484,6 +484,10 @@ fragment operator_op
       	
 // TODO: REGEX needs to be added      | REGEXP  	
 factor returns[Object result] options { backtrack = true; }
+@init {
+      ArrayList exprs2 = new ArrayList();
+
+}
 	: v=INT { 
 		HashMap tmp = new HashMap();
 		tmp.put("type","num");
@@ -516,43 +520,111 @@ factor returns[Object result] options { backtrack = true; }
 		tmp.put("val",val);
 		$result = tmp;
       }
-      | var_domain ':' VAR
-      | trail_exp
-      | function_app
-      | '[' expr ',' ']'
-      | '{' (hash_line ','?)* '}'
+      | d=var_domain ':' v=VAR {
+	      	HashMap tmp = new HashMap();
+	      	tmp.put("domain",$d.text);
+	      	tmp.put("name",$v.text);
+	      	tmp.put("type","persistent");
+	      	$result = tmp;
+      }
+      | 'current' d=var_domain ':' v=VAR {
+      	      	HashMap tmp = new HashMap();
+	      	tmp.put("domain",$d.text);
+	      	tmp.put("name",$v.text);
+	      	tmp.put("type","persistent");
+	      	$result = tmp;
+      } 
+      | 'history' e=expr d=var_domain ':' v=VAR {
+      	      	HashMap tmp = new HashMap();
+	      	tmp.put("domain",$d.text);
+	      	tmp.put("name",$v.text);
+	      	tmp.put("type","trail_history");
+      	      	HashMap tmp2 = new HashMap();
+	      	tmp2.putAll((HashMap)$e.result);
+	      	tmp.put("offset",tmp2);
+	      	$result = tmp;
+      }
+      | n=namespace p=VAR '(' (e=expr {
+            exprs2.add($e.result);
+      	}
+      	','?)* ')'  {
+	      	HashMap tmp = new HashMap();
+	      	tmp.put("predicate",$p.text);
+	      	tmp.put("source",$n.text);
+	      	tmp.put("args",exprs2);
+	      	$result = tmp;
+      }
+      | v=VAR '(' (e=expr{
+            exprs2.add($e.result);
+      	}
+	','?)* ')'	{
+	      	HashMap tmp = new HashMap();
+	      	tmp.put("type","app");
+	      	HashMap tmp2 = new HashMap();
+	      	tmp2.put("val",$v.text);
+	      	tmp2.put("type","var");
+	      	tmp.put("function_expr",tmp2);
+	      	tmp.put("args",exprs2);
+	      	$result = tmp;
+      
+      }
+      | '[' e=expr {
+      			exprs2.add($e.result);
+      		 } (',' e2=expr{
+      			exprs2.add($e2.result);
+      		 })* ']' {
+      			HashMap tmp = new HashMap();
+      			tmp.put("val",exprs2);	
+      			tmp.put("type","array");
+      		 
+	      	$result = tmp;
+      }
+      | '{' h1=hash_line {
+      			exprs2.add($h1.result);
+      		 } (',' h2=hash_line {
+      			exprs2.add($h2.result);
+      		 })* '}' {
+      			HashMap tmp = new HashMap();
+      			tmp.put("val",exprs2);	
+      			tmp.put("type","hashraw");
+      		 
+	      	$result = tmp;
+	}
       | v=VAR  { 
       		HashMap tmp = new HashMap();
 		tmp.put("type","var");
 		tmp.put("val",$v.text);
 		$result = tmp;
 }
-      | '(' e=expr ')' { $result=$e.result; }     
+      | '(' e=expr ')' { 
+      		$result=$e.result; 
+      	}     
 	;	
 fragment var_domain: 'ent' | 'app';	
 	
 
 
-function_app 
-	:namespace VAR '(' (expr ','?)* ')' 
-	| VAR '(' (expr ','?)* ')'	
-	;
 
-fragment namespace
-	: VAR ':'	
+fragment namespace returns[String result]
+	: v=VAR ':'
+	{
+		$result = $v.text;
+	}	
 	;
 	
-trail_exp 
-	:'current' var_domain ':' VAR 
-	| 'history' expr var_domain ':' VAR
-	;
 	
 timeframe
 	:  'within' expr ( period)	 
 	;
 	
-hash_line 
-	: STRING ':' expr	
+hash_line  returns[HashMap result] 
+	: s=STRING ':' e=expr  {
+		HashMap tmp = new HashMap();
+		tmp.put("lhs",strip_string($s.text));
+		tmp.put("rhs",$e.result);
+//		tmp.put("val",$e.result);
+		$result = tmp;
+	}	
 	;
 
 css_emit returns[String emit_value]

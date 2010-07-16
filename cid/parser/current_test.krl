@@ -84,7 +84,27 @@ ruleset 10 {
 		bob = "asdfsad";
 		
 		bob = joe [ a + b ];
+		
+		
+		
+		
+		mike = app:joe;
 
-     
+     	currentest = ent:mike;
+		currentesta = history ( a + b) ent:joe;
+		
+		
+		joe = [ mike, bob, city ] ||  [jack, 10, "bobbo"];
+		
+		
+		hashtest = { "bob" : (a + 5) , "joe" : "mike" , "moke" : [ a, b, c] };
+		hashtest = { "bob" : "joe"};
+
+		hashtest = { "bob" : "joe", "mike":"jackl"};
+		
+		
+		mike = jack:mike ( a + b , c + d );
+		mikea = mike ( a + b , c + d );
+
      }
 }
