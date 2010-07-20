@@ -1,7 +1,7 @@
 grammar RuleSet2;
 options {
   output=AST;
-//  backtrack=true;
+  backtrack=true;
 //  memoize=true;
 //  language=C;
 //  ASTLabelType=pANTLR3_BASE_TREE;
@@ -174,9 +174,9 @@ options {
 
 
 		
-fragment predop: '<=' | '>=' | '<' | '>' | '==' | '!=' | 'eq' | 'neq' | 'like';		
+predop: '<=' | '>=' | '<' | '>' | '==' | '!=' | 'eq' | 'neq' | 'like';		
 	
-fragment add_op: '+'|'-';
+add_op: '+'|'-';
 
 	
 VAR  :	('a'..'z'|'A'..'Z')+
@@ -765,31 +765,114 @@ mult_expr  returns[Object result]
 
 unary_expr  returns[Object result] options { backtrack = true; }
 @init {
-	check_operator = true;
+
 }
 	: 'not' unary_expr  
-	| 'seen' STRING 'in' var_domain ':' VAR timeframe	
-	| 'seen' STRING ('before' | 'after') STRING 'in' var_domain ':' VAR 
-	| var_domain ':' VAR ( (predop expr)? timeframe 
-	| var_domain ':' VAR timeframe 
-	| {check_operator}? oe=operator_expr { $result = $oe.result; }
-	;
+	| 'seen' rx=STRING 'in' vd=var_domain ':' v=VAR t=timeframe {
+      	      	HashMap tmp = new HashMap();
+	      	tmp.put("within",$t.result);
+	      	tmp.put("type","seen_timeframe");
+	      	tmp.put("var",$v.text);
+	      	tmp.put("regexp",strip_string($rx.text));
+	      	tmp.put("domain",$vd.text);
+	      	tmp.put("timeframe",t.time);
+	      	$result = tmp;		
+	}
+	| 'seen' rx_1=STRING op=('before' | 'after') rx_2=STRING 'in' vd=var_domain ':' v=VAR {
+      	      	HashMap tmp = new HashMap();
+	      	tmp.put("type","seen_compare");
+	      	tmp.put("domain",$vd.text);
+	      	tmp.put("regexp_1",strip_string($rx_1.text));
+	      	tmp.put("regexp_2",strip_string($rx_2.text));	      	
+	      	tmp.put("var",$v.text);
+	      	tmp.put("op",$op.text);
+	      	$result = tmp;		
+	}
+	| vd=var_domain ':' v=VAR pop=predop e=expr t=timeframe  {
+      	      	HashMap tmp = new HashMap();
+	      	tmp.put("within",$t.result);
+	      	tmp.put("timeframe",t.time);
+	      	tmp.put("type","persistent_ineq");
+	      	tmp.put("domain",$vd.text);
+	      	tmp.put("expr",$e.result);
+	      	tmp.put("var",$v.text);
+	      	tmp.put("ineq",$pop.text);
+	      	$result = tmp;		
+	
+	}
+	| vd=var_domain ':' v=VAR t=timeframe {
+      	      	HashMap tmp = new HashMap();
+	      	tmp.put("within",$t.result);
+	      	tmp.put("timeframe",t.time);
+	      	tmp.put("type","persistent_ineq");
+	      	tmp.put("domain",$vd.text);
+	      	tmp.put("ineq","==");
+	      	tmp.put("var",$v.text);
+	      	$result = tmp;		
+	
+	}
+	| oe=operator_expr { 
+		$result = $oe.result; 
+	}
+	; 
 	 
-
+ 
 operator_expr returns[Object result]
 @init 
 {
-
+	ArrayList operators = new ArrayList();
 }
-	: f=factor {$result = $f.result;  }
-	 operator*	
+	: f=factor  (o=operator { operators.add(o); })* {
+		if(operators.size() > 0)
+		{
+			HashMap the_result = null;
+			HashMap last_one = null;
+			ArrayList templist = new ArrayList();
+			for(int i = 0;i < operators.size();i++)
+			{
+				RuleSet2Parser.operator_return current = (RuleSet2Parser.operator_return)operators.get(i);
+				HashMap tmp = new HashMap();
+			      	tmp.put("type","operator");			
+		      		tmp.put("name",current.oper);
+				tmp.put("args",current.exprs);
+				templist.add(tmp);				
+			}
+			for(int i = (templist.size() - 1);i > -1;i--)
+			{
+				HashMap current = (HashMap)templist.get(i);
+				if(i == (templist.size() - 1))
+				{				
+					the_result = current;
+					current.put("obj",$f.result);
+				}
+				if(i != 0)
+				{
+					current.put("obj",templist.get(i-1));      		
+				}
+		      		last_one = current;		
+			}
+		      	$result = the_result;;		
+		}
+		else
+		{
+			$result = $f.result;
+		}		
+	}	
 	;
 
-fragment operator 
-	: ('.pick'|'.match'|'.length'|'.replace'|'.as'|'.head'|'.tail'|'.sort'
+fragment operator returns[String oper,ArrayList exprs]
+@init
+{	
+	ArrayList rexprs = new ArrayList();
+}
+	: o=('.pick'|'.match'|'.length'|'.replace'|'.as'|'.head'|'.tail'|'.sort'
       	|'.filter'|'.map'|'.uc'|'.lc' |'.split' | '.join' | '.query'
       	| '.has' | '.union' | '.difference' | '.intersection' | '.unique' | '.once'
-      	| '.duplicates') '(' expr ','? ')'	
+      	| '.duplicates') '(' e=expr {rexprs.add(e.result); } (',' e1=expr {rexprs.add(e1.result); } )* ')'	{
+      		// Remove .
+      		$oper = $o.text.substring(1,$o.text.length());
+      		$exprs = rexprs;
+      	}
 	;
 //	 
 		
@@ -924,8 +1007,12 @@ fragment namespace returns[String result]
 	;
 	
 	
-timeframe
-	:  'within' expr ( period)	 
+timeframe returns[Object result,String time]
+	:  'within' e=expr p=period {
+		$result = $e.result;
+		$time = $p.text;
+	}
+		
 	;
 	
 hash_line  returns[HashMap result] 

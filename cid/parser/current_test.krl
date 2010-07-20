@@ -3,6 +3,7 @@
 ruleset a10 {
 
     meta {
+/*
       description <<
       Ruleset for testing something or other.
       >>
@@ -31,17 +32,19 @@ ruleset a10 {
         "consumer_key": 583758935739,
         "consumer_secret" : "3HNb7NfksjflskIm2BuxKPSg6JYvMtLahvkMt6Std5SO0"
       }
-
+*/
     }
 
          dispatch {
+/*
       domain "www.google.com" -> "966337974"
       domain "google.com" -> "966337974"
       domain "www.circuitcity.com" -> "966337982"
+*/
     }
 
      global {
-          emit << dsfasdfasdfasdfasdfasdfasdf 
+ /*         emit << dsfasdfasdfasdfasdfasdfasdf 
           asdfasdfasf >>;
 
   		datasource foozle <- "http://www.windley.com/rss.xml" cachable for 3 hours;
@@ -107,22 +110,42 @@ ruleset a10 {
 		mike = jack:mike ( a + b , c + d );
 		mikea = mike ( a + b , c + d );
 
-			joe = seen "bob" in app:joe within 1 hour;
+			joe = seen "bob" in app:joe within 1+a+b hour;
+			
+			
+	   jack = not a;
+	   joe = seen "bob" in app:joe within a + b days;
+
+	 joe = seen "bob" before "joe" in app:mike;
+
+	 joe = app:jack eq a + b within 1+a+b hour;
+
+
+	 joe = app:jack within 1+a hour;
+*/
+
+	a = b.pick( a + b ).has(c+d);
+
+/*	a = b.pick( a + b, c + d ).has(l ,d).split("adfdfd");
+*/
 
      }
 
-
+/*
   rule testa is active {
         select using "/test/" setting()
         pre { 
         } 
+				
         { 
+
+
 		emit << asdfasfd >>;
 			replace( );
 			replace( );
 			replace( );
 			
-/*			dispatch();
+			dispatch();
 			
 			domain();
 			use();
@@ -136,8 +159,9 @@ ruleset a10 {
 			user();
 			replace( );
 			every();
-			everyone();*/
+			everyone();
 		}
+		
     }
 
     rule testb is active {
@@ -148,5 +172,5 @@ ruleset a10 {
         	replace("test","test");
 		}
     }
-
+*/
 }
