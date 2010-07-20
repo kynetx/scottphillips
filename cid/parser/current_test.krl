@@ -1,6 +1,7 @@
 // dispatch with some rules
 
-ruleset 10 {
+ruleset a10 {
+
     meta {
       description <<
       Ruleset for testing something or other.
@@ -48,7 +49,7 @@ ruleset 10 {
   		datasource foozlea:XML <- "http://www.windley.com/rss.xml" cachable;
   		datasource foozleb <- "http://www.windley.com/rss.xml";
 
-		css << safjasldfkjas;lkdfjasfd >>;
+		css << safjasldfkjas;lkdfjasfd every >>;
 		
 		css "asdfasdfasdfasfdasdf";
 		
@@ -94,7 +95,7 @@ ruleset 10 {
 		currentesta = history ( a + b) ent:joe;
 		
 		
-		joe = [ mike, bob, city ] ||  [jack, 10, "bobbo"];
+		joe = [ mike, bob, city ] ||  [jack, 10, "bobbo every"];
 		
 		
 		hashtest = { "bob" : (a + 5) , "joe" : "mike" , "moke" : [ a, b, c] };
@@ -106,5 +107,46 @@ ruleset 10 {
 		mike = jack:mike ( a + b , c + d );
 		mikea = mike ( a + b , c + d );
 
+			joe = seen "bob" in app:joe within 1 hour;
+
      }
+
+
+  rule testa is active {
+        select using "/test/" setting()
+        pre { 
+        } 
+        { 
+		emit << asdfasfd >>;
+			replace( );
+			replace( );
+			replace( );
+			
+/*			dispatch();
+			
+			domain();
+			use();
+			javascript();
+			resource();
+			logging();
+			on();
+			off();
+			authz();
+			require();
+			user();
+			replace( );
+			every();
+			everyone();*/
+		}
+    }
+
+    rule testb is active {
+        select using "/test/" setting()
+        pre { 
+        } 
+		{
+        	replace("test","test");
+		}
+    }
+
 }

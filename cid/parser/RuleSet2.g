@@ -23,16 +23,74 @@ options {
 }
 
 @members { 
-
+	public boolean check_operator = false;
 	public HashMap rule_json = new HashMap();
 	public HashMap current_top = null;
 
 	public boolean checkname = true;
+	
+	public class InvalidToken extends RecognitionException 
+	{	
+		String aMessage = "";
+		public InvalidToken(String inMessage, org.antlr.runtime.IntStream intstream)
+		{		
+			super(intstream);
+			aMessage = inMessage;
+		}
+		
+		public String getMessage()
+		{
+			return aMessage;
+		}
+	
+	}
 
 	public String strip_string(String value)
 	{ 
 		return value.substring(1,value.length() - 1);
 	}
+
+	public boolean isIn(String value,String[] other_values)
+	{
+		for(int i=0;i<other_values.length;i++)
+		{
+			if(value.equals(other_values[i]))
+				return true;
+		}		
+		return false;
+	}	
+	public String should_have_been(String value,String[] values)
+	{
+		if(values.length == 0)
+		{
+			return "Invalid value [" + value + "] found should have been " + values[0];			
+		}
+		else
+		{
+			String result = "Invalid value [" + value + "] found should have been one of [";
+			for(int i=0;i<values.length;i++)
+			{
+				result = result + values[i];
+				if(i < values.length - 1)
+				{
+					result = result + ", ";
+				}	
+			}
+			result = result + "]";
+			return result;
+		}
+	
+	}
+	
+	public void cn(String value,String[] values, org.antlr.runtime.IntStream input)  throws InvalidToken
+	{
+		for(int i=0;i<values.length;i++)
+		{
+			if(value.equals(values[i]))
+				return;
+		}
+		throw new InvalidToken(should_have_been(value,values), input); 
+	} 
 	/*
 	 * Strip Crap off that we do not want any more.
 	 */
@@ -41,6 +99,10 @@ options {
 		return value.substring(start.length(),value.length() - end.length()).trim();	
 	}
 
+	public String[] sar(String ... values)
+	{
+		return values;
+	}
 	public void store_in_hash(HashMap start_hash,String subhash,String key, Object value)
 	{
 		HashMap themap = (HashMap)start_hash.get(subhash);
@@ -116,9 +178,10 @@ fragment predop: '<=' | '>=' | '<' | '>' | '==' | '!=' | 'eq' | 'neq' | 'like';
 	
 fragment add_op: '+'|'-';
 
-
-VAR  :	('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_')*
+	
+VAR  :	('a'..'z'|'A'..'Z')+
     ;
+
 
 INT :	'0'..'9'+
     ;
@@ -129,10 +192,10 @@ FLOAT
     |   ('0'..'9')+ EXPONENT
     ;
     
-fragment NUM 	
-    : INT 
-    | FLOAT
-    ;
+//NUM 	
+//    : INT 
+//    | FLOAT
+//   ;
 
 COMMENT
     :   '//' ~('\n'|'\r')* '\r'? '\n' {$channel=HIDDEN;}
@@ -150,6 +213,12 @@ STRING
     :  '"' ( ESC_SEQ | ~('\\'|'"') )* '"'
     ;
 
+fragment REGEXP 
+	:
+	'\/' ( options {greedy=false;} : . )*  '\/' 
+	| '#' ( options {greedy=false;} : . )*  '#' 
+	;
+	
 //	: '<<' ( ~('\\<') )* '>>'
 HTML 	
 	: '<<' ( options {greedy=false;} : . )* '>>'
@@ -187,6 +256,12 @@ UNICODE_ESC
 
 
 
+/*
+
+ ruleset <name> { 
+ } 
+ 
+*/ 
 ruleset  options {backtrack=false;}
 @init {
  	 rule_json.put("global",new ArrayList());
@@ -195,18 +270,239 @@ ruleset  options {backtrack=false;}
  	 rule_json.put("meta", new HashMap());
 	 current_top = rule_json;
 }
-@after  {
-	current_top = null;
+@after  { 
+	current_top = null; 
 }
- 	:   'ruleset' rulesetname { current_top.put("ruleset_name",$rulesetname.text); } '{' 
- 		( meta_block | dispatch_block | global_block )+
- 	'}' EOF
+ 	:   	
+ 	must_be["ruleset"] 
+ 	rulesetname { current_top.put("ruleset_name",$rulesetname.text); } 
+ 	'{' 
+ 	( meta_block | dispatch_block | global_block | rule )+
+	'}' 
+	EOF
+ 	;
+ 	
+must_be[String what] 
+ 	: 	
+ 	v=VAR { cn($v.text, sar($what),input); } 
  	;
 
-rulesetname
-	:  VAR | INT
+must_be_one[String[\] what]  
+ 	: 	
+ 	v=VAR { cn($v.text,what,input); } 
+ 	;
+	
+rulesetname 
+	: VAR (VAR|INT)*
+	; 	 
+/*
+
+ rule <name> is <active|inactive|test> {
+
+ } 
+  
+*/ 
+rule	: 	must_be["rule"]
+		VAR 
+		must_be["is"]
+		must_be_one[sar("active","inactive","test")]
+		'{'
+		( select=VAR { cn($select.text, sar("select"),input); } (using|when) foreach?) pre_block? (action) callbacks? post_block?
+		'}' 
+	; 
+	
+	
+post_block: must_be_one[sar("fired","always","notfired")] '{' post_statement ';' ';' '}' post_alternate;
+
+
+post_alternate: must_be["else"] '{' post_statement ';' ';' '}';
+
+post_statement
+	: (persistent_expr 
+	| log_statement 
+  	| raise_statement
+  	| 'last')
+	(must_be["if"] expr)?
+  	;
+	
+	
+callbacks: 'callbacks' '{' success? failure? '}';
+
+success: 'success' '{' click ';'? '}';
+
+failure: 'failure' '{' click ';'?   '}';
+
+click: ('click' | 'change') VAR '=' STRING click_link?;
+
+click_link:  must_be["triggers"] persistent_expr;
+
+
+persistent_expr: persistent_clear
+   | persistent_set
+   | persistent_iterate
+   | trail_forget
+   | trail_mark;
+
+
+persistent_clear: 'clear'  var_domain ':' VAR;
+
+persistent_set: 'set'  var_domain ':' VAR;
+
+persistent_iterate: var_domain ':' VAR counter_op expr counter_start;
+
+trail_forget: 'forget'  STRING must_be["in"]  var_domain ':' VAR;
+
+trail_mark: 'mark' var_domain ':' VAR trail_with;
+
+trail_with: 'with' expr;
+
+
+counter_op: '+='
+          | '-=';
+
+counter_start: must_be["from"] expr;
+
+log_statement: must_be["log"]  expr;
+
+
+raise_statement: must_be["raise"] must_be["explicit"] must_be["event"]  VAR for_clause modifier_clause;
+  
+for_clause: must_be["for"]  VAR;
+		
+
+action 
+	: ((conditional_action)=> conditional_action | unconditional_action) ';'?
 	;
-//	: 'global' '{' ( emit_block | dataset | datasource | css_emit | decl ';')+  '}'
+	
+	
+conditional_action
+	: 'if' expr 'then' unconditional_action	
+	;
+
+unconditional_action  
+	: (at=VAR{  cn($at.text, sar("choose","every"),input); })? 
+	 '{' (primrule (';' primrule)*) ';'? '}'
+	| primrule 
+	; 
+	
+primrule 
+	:  (VAR '=>')? (
+		 namespace? VAR '(' (expr (',' expr)?)*  ')' modifier_clause?
+	|	emit_block )
+	
+	;		
+
+	
+using	:	'using' STRING setting;
+
+setting :	'setting' '(' (VAR (',' VAR )?)* ')';
+
+when	:  'when' event_seq;
+
+
+modifier_clause 
+	:  'with' modifier ('and' modifier)*
+	;
+	
+modifier 
+	: VAR '=' (expr | JS)		
+	;
+	
+	
+pre_block
+@init {
+	ArrayList tmp = new ArrayList();
+}	:
+	 'pre' '{' (decl[tmp] (';' decl[tmp])?)? '}'
+	 ;
+
+          
+foreach: 
+	'foreach' expr setting
+	;         
+
+event_seq  options { backtrack = true; }
+	:	event_or 'then'|
+		event_or 'before'|
+		event_or 
+	;	
+	
+	
+	
+
+event_or:	event_and ('or' event_and)*;
+
+event_and
+	:	event_btwn ('and' event_btwn)*
+	;
+
+event_btwn
+	:	event_prim ('not') 'between' '(' event_seq ',' event_seq ')';
+	 	
+ 	
+event_prim
+	:	event_domain 'pageview' (STRING|REGEXP) setting |
+	event_domain ('submit'|'click'|'dblclick'|'change'|'update') STRING on_expr  setting |
+	VAR VAR event_filter setting |
+	'(' event_seq ')'
+	;
+
+
+event_filter  
+	: VAR (STRING | REGEXP)
+	;	 
+
+on_expr : 'on' (STRING|REGEXP)	
+	; 
+	
+	 
+event_domain 
+	:	'web'
+	;			
+ 	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	
 global_block 
 @init {
@@ -303,19 +599,33 @@ expr returns[Object result]
 @init {
 	HashMap result_hash = new HashMap();
 }
-	: fd=function_def[result_hash] {
-		$result = result_hash;
+	: fd=function_def {
+		$result = $fd.result;
 	}
 	| c=conditional_expression {
 		$result = $c.result;
 	}
 	;	
 	
-function_def[HashMap  expr_hash]
+function_def returns[Object result]
 @init {
 	ArrayList block_array = new ArrayList();
 }
-	: 'function' '(' v1=VAR? (',' v2=VAR )* ')' '{' d1=decl[block_array]? (';' d2=decl[block_array])* ';'? e1=expr '}' {
+	: 'function' '(' args+=VAR? (',' args+=VAR )* ')' '{' decs+=decl[block_array]? (';' decs+=decl[block_array])* ';'? e1=expr '}' {
+		HashMap tmp = new HashMap();
+		ArrayList nargs = new ArrayList();
+		for(int i = 0;i< $args.size();i++)
+		{
+			nargs.add(((Token)$args.get(i)).getText());
+		}
+		tmp.put("vars",nargs);
+		tmp.put("type","function");
+		if(block_array.size() != 0)
+			tmp.put("decls",block_array);
+		if($e1.text != null)
+			tmp.put("expr",$e1.result);	
+				
+		$result = tmp;		
 	}
 	;	
 
@@ -454,12 +764,15 @@ mult_expr  returns[Object result]
 
 
 unary_expr  returns[Object result] options { backtrack = true; }
-	: 'not' unary_expr 
+@init {
+	check_operator = true;
+}
+	: 'not' unary_expr  
 	| 'seen' STRING 'in' var_domain ':' VAR timeframe	
 	| 'seen' STRING ('before' | 'after') STRING 'in' var_domain ':' VAR 
-	| var_domain ':' VAR predop expr timeframe 
+	| var_domain ':' VAR ( (predop expr)? timeframe 
 	| var_domain ':' VAR timeframe 
-	| oe=operator_expr { $result = $oe.result; }
+	| {check_operator}? oe=operator_expr { $result = $oe.result; }
 	;
 	 
 
@@ -472,16 +785,14 @@ operator_expr returns[Object result]
 	 operator*	
 	;
 
-operator 
-	: '.' operator_op '(' expr ','? ')'	
+fragment operator 
+	: ('.pick'|'.match'|'.length'|'.replace'|'.as'|'.head'|'.tail'|'.sort'
+      	|'.filter'|'.map'|'.uc'|'.lc' |'.split' | '.join' | '.query'
+      	| '.has' | '.union' | '.difference' | '.intersection' | '.unique' | '.once'
+      	| '.duplicates') '(' expr ','? ')'	
 	;
+//	 
 		
-fragment operator_op 
-	: 'pick'|'match'|'length'|'replace'|'as'|'head'|'tail'|'sort'
-      |'filter'|'map'|'uc'|'lc' |'split' | 'join' | 'query'
-      | 'has' | 'union' | 'difference' | 'intersection' | 'unique' | 'once'
-      | 'duplicates'; 
-      	
 // TODO: REGEX needs to be added      | REGEXP  	
 factor returns[Object result] options { backtrack = true; }
 @init {
@@ -702,10 +1013,15 @@ meta_block
 	}
 }	
 	: 'meta' '{' 
-	( 'description' desc=(HTML|STRING) 	{ meta_block_hash.put("description",strip_wrappers("<<",">>",$desc.text)); } 
-	 | 'name' thename=STRING 		{ meta_block_hash.put("name",strip_string($thename.text)); }
-	 | 'author' author=STRING   		{ meta_block_hash.put("author",strip_string($author.text)); }
-	 | 'key' what=('errorstack'|'googleanalytics'|'twitter'|'amazon'|'kpds'|'google' | VAR)  (key_value=STRING | '{' (name_value_pair[key_values] (',' name_value_pair[key_values])*) '}') +  { 
+	(  name=must_be_one[sar("description","name","author")] (html_desc=HTML|string_desc=STRING) 	
+		{ 
+			if($string_desc.text != null)
+				meta_block_hash.put($name.text,strip_string($string_desc.text)); 
+			else
+				meta_block_hash.put($name.text,strip_wrappers("<<",">>",$html_desc.text)); 
+	
+		} 
+	 | 'key' what=must_be_one[sar("errorstack","googleanalytics","twitter","amazon","kpds","google")] (key_value=STRING | '{' (name_value_pair[key_values] (',' name_value_pair[key_values])*) '}') +  { 
 		if(!key_values.isEmpty()) 
 			keys_map.put($what.text,key_values); 
 		else 
@@ -716,19 +1032,10 @@ meta_block
 		tmp.put("level","user");
 		tmp.put("type","required");
 		meta_block_hash.put("authz",tmp);
-	   }
-	| 'logging' ('on'|'off') {  meta_block_hash.put("logging","on"); }
-	| 'use' 'module' name=VAR ('alias' alias=VAR)? {
-		HashMap tmp = new HashMap(); 
-		tmp.put("name",$name.text);
-		tmp.put("type","module");
-		if($alias.text != null) {
-			tmp.put("alias",$alias.text);
-		}
-		use_list.add(tmp);
-	 }
-	| 'use' rtype=('css' | 'javascript') 'resource' (url=STRING | name=VAR)  {
-		HashMap tmp = new HashMap(); 
+	   } 
+	| 'logging' onoff=('on'|'off') {  meta_block_hash.put("logging",$onoff.text); }
+	| 'use' ( (rtype=('css'|'javascript') must_be["resource"] (url=STRING | nicename=VAR)    {
+		HashMap tmp = new HashMap();  
 		HashMap tmp2 = new HashMap();
 		if($url.text != null)
 		{
@@ -736,17 +1043,26 @@ meta_block
 			tmp2.put("type","url");
 		}
 		else
-		{
-			tmp2.put("location",$name.text);
+		{ 
+			tmp2.put("location",$nicename.text);
 			tmp2.put("type","name");			
-		}
+		} 
 		tmp.put("resource",tmp2);
 		
 		tmp.put("name",$name.text);
 		tmp.put("resource_type",$rtype.text);
 		use_list.add(tmp);
-	 }
-	 )*
+	 })
+	 	| ('module'  modname=VAR ('alias' alias=VAR)?) {
+		HashMap tmp = new HashMap(); 
+		tmp.put("name",$modname.text);
+		tmp.put("type","module");
+		if($alias.text != null) {
+			tmp.put("alias",$alias.text);
+		}
+		use_list.add(tmp);
+	 })
+		)*
 	 '}'  
 	
 	;
@@ -758,7 +1074,7 @@ dispatch_block
 }
 @after  {
 }	
-	: 'dispatch' '{' ('domain' domain=STRING ('->' rsid=STRING)? {
+	: must_be["dispatch"]  '{' (must_be["domain"] domain=STRING ('->' rsid=STRING)? {
 		HashMap tmp = new HashMap();
 		tmp.put("domain",strip_string($domain.text));
 		if($rsid.text != null)
@@ -782,3 +1098,5 @@ name_value_pair[HashMap key_values]
 		| v=STRING {value = strip_string($v.text);}) 
 		{key_values.put(strip_string($k.text),value);}
 	;
+	
+	
