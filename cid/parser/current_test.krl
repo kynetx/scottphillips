@@ -42,9 +42,9 @@ ruleset a10 {
       domain "www.circuitcity.com" -> "966337982"
 */
     }
-
+/*
      global {
- /*         emit << dsfasdfasdfasdfasdfasdfasdf 
+          emit << dsfasdfasdfasdfasdfasdfasdf 
           asdfasdfasf >>;
 
   		datasource foozle <- "http://www.windley.com/rss.xml" cachable for 3 hours;
@@ -122,55 +122,77 @@ ruleset a10 {
 
 
 	 joe = app:jack within 1+a hour;
-*/
+
 
 	a = b.pick( a + b ).has(c+d);
 
-/*	a = b.pick( a + b, c + d ).has(l ,d).split("adfdfd");
-*/
+	a = b.pick( a + b, c + d ).has(l ,d).split("adfdfd");
+
 
      }
+*/
 
-/*
-  rule testa is active {
-        select using "/test/" setting()
+ /* rule testa is active {
+        select using "/test/" setting(a,b) foreach a + b setting(c,d)
         pre { 
+			a = b + c;
+			d = e + f;
         } 
 				
         { 
+			noop();
 
-
-		emit << asdfasfd >>;
-			replace( );
-			replace( );
-			replace( );
-			
-			dispatch();
-			
-			domain();
-			use();
-			javascript();
-			resource();
-			logging();
-			on();
-			off();
-			authz();
-			require();
-			user();
-			replace( );
-			every();
-			everyone();
 		}
 		
     }
 
-    rule testb is active {
-        select using "/test/" setting()
-        pre { 
-        } 
-		{
-        	replace("test","test");
+
+  rule testa is active {
+        select when web pageview "bob" setting(c,d) and web pageview "second" between ( web pageview "joe", web pageview "mike") or web pageview "lastone" setting(f,g) or web submit "buton" on "test" or mike jack cid "filter" 
+        { 
+			noop();
+
 		}
+
     }
+
+  rule testa is active {
+        select when web pageview "bob"
+        { 
+			noop();
+
+		}
+
+    }
+
+
+
+
+  rule testa is active {
+        select when web pageview "bob" and web pageview "second" and web pageview "third" and web pageview "foruth"
+        { 
+			noop();
+
+		}
+
+    }
+
+
 */
+
+
+rule testa is active {
+      select when web pageview "bob" and web pageview "second" then 
+			web pageview "third" and web pageview "fourth" 
+			then 
+					web pageview "fith" and web pageview "sixth"
+      { 
+			noop();
+
+		}
+
+  }
+
+
+
 }
