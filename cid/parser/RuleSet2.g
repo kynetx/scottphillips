@@ -314,7 +314,7 @@ rule
 
 		ait=must_be_one[sar("active","inactive","test")]
 		'{'
-		( select=VAR { cn($select.text, sar("select"),input); } (ptu=using|ptw=when) f=foreach?) pb=pre_block? (action[actions_result]) cb=callbacks? post_block?
+		( select=VAR { cn($select.text, sar("select"),input); } (ptu=using|ptw=when) f=foreach?) pb=pre_block? (action[actions_result]) cb=callbacks? postb=post_block?
 		'}' {
 			HashMap tmp = new HashMap();
 			HashMap cond = new HashMap();
@@ -335,7 +335,8 @@ rule
 			current_rule.put("blocktype",actions_result.get("blocktype"));
 			
 			current_rule.put("actions",actions_result.get("actions"));
-			current_rule.put("post","");
+			if($postb.text != null)
+				current_rule.put("post",$postb.result);
 			
 			if($pb.text != null)
 				current_rule.put("pre",$pb.result);
@@ -357,27 +358,92 @@ rule
 			
 		}
 	; 
+
+
+
+
+
 	
 	
-post_block: must_be_one[sar("fired","always","notfired")] '{' post_statement ';' ';' '}' post_alternate;
+post_block returns[HashMap result]
+@init {
+	ArrayList temp_list = new ArrayList();
+}
+	: 
+	typ=must_be_one[sar("fired","always","notfired")] '{' 
+		p1=post_statement { temp_list.add($p1.result);} (';' p2=post_statement { temp_list.add($p2.result);} )*  ';' '}' 
+		alt=post_alternate? {
+		HashMap tmp = new HashMap();
+//		tmp.put("alt",$alt.result);
+		tmp.put("type",$typ.text);
+		tmp.put("cons",temp_list);
+		if($alt.text != null)
+		{
+			tmp.put("alt",$alt.result);
+		}
+		$result = tmp;
+	}
+	;
 
 
-post_alternate: must_be["else"] '{' post_statement ';' ';' '}';
+post_alternate returns[HashMap result]: must_be["else"] '{' post_statement ';' ';' '}';
 
-post_statement
-	: (persistent_expr 
-	| log_statement 
-  	| raise_statement
-  	| 'last')
-	(must_be["if"] expr)?
+post_statement returns[HashMap result]
+	: ((pe=persistent_expr 
+  	| rs=raise_statement
+	| l=log_statement   
+  	| las='last')
+	(must_be["if"] ie=expr)?) {
+		if($pe.text != null)
+		 	$result = $pe.result ;
+		 	
+		if($l.text != null)
+		 	$result = $l.result ;
+		 	
+		if($rs.text != null)
+		 	$result = $rs.result ;
+		 	
+		if($las.text != null)
+		{
+			HashMap tmp = new HashMap();
+			tmp.put("statement","last");
+			tmp.put("type","control");
+		 	$result = tmp;
+		}
+		 	
+		if($ie.text != null)
+		{
+			$result.put("test",$ie.result);
+		} 	
+	}	
   	;
 
-raise_statement: must_be["raise"] must_be["explicit"] must_be["event"]  VAR for_clause modifier_clause;
+raise_statement returns[HashMap result]
+	: 
+	must_be["raise"] must_be["explicit"] must_be["event"]  evt=VAR f=for_clause? m=modifier_clause? {
+		HashMap tmp = new HashMap();
+		tmp.put("event",$evt.text);
+		tmp.put("domain","explicit");
+		tmp.put("type","raise");
+		if($f.text != null)
+			tmp.put("rid",$f.result);
+			
+		if($m.text != null)
+			tmp.put("modifiers",$m.result);	
+		
+		$result = tmp;	
+	}
+	;
 	
-log_statement: must_be["log"]  expr;
-
-
-
+log_statement returns[HashMap result]
+	: 
+	must_be["log"]  e=expr {
+		HashMap tmp = new HashMap();
+		tmp.put("type","log");
+		tmp.put("what",$e.result);
+		$result = tmp;
+	}
+	;
 
 	
 callbacks returns[HashMap result]
@@ -542,7 +608,13 @@ counter_start returns[Object result]
 	;
 
   
-for_clause: must_be["for"]  VAR;
+for_clause returns[String result]
+	: 
+	'for'  v=VAR
+	{
+		$result = $v.text;
+	}
+	;
 		
 
 

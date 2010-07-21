@@ -212,5 +212,10 @@ rule testa is active {
 			}
 		}
 		
+		fired {
+			log a+b;
+			raise explicit event bob for asddd with bob = joe  and mike = jack;
+		}
+		
 	}
 }
