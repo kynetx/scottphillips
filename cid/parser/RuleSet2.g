@@ -306,6 +306,7 @@ rule
 @init{
 	 ArrayList rule_block_array = (ArrayList)rule_json.get("rules");
 	 HashMap current_rule = new HashMap();
+	 HashMap actions_result = new HashMap();
 }
 	: 	must_be["rule"]
 		name=VAR 
@@ -313,16 +314,27 @@ rule
 
 		ait=must_be_one[sar("active","inactive","test")]
 		'{'
-		( select=VAR { cn($select.text, sar("select"),input); } (ptu=using|ptw=when) f=foreach?) pb=pre_block? (action) callbacks? post_block?
+		( select=VAR { cn($select.text, sar("select"),input); } (ptu=using|ptw=when) f=foreach?) pb=pre_block? (action[actions_result]) cb=callbacks? post_block?
 		'}' {
 			HashMap tmp = new HashMap();
 			HashMap cond = new HashMap();
 			cond.put("val","true");
 			cond.put("type","bool");
-			current_rule.put("cond",cond);
-			current_rule.put("blocktype","every");
 			
-			current_rule.put("actions","");
+			if(actions_result.get("cond") != null)
+			{
+				current_rule.put("cond",actions_result.get("cond"));
+			}
+			else
+			{
+				HashMap condt = new HashMap();
+				condt.put("val","true");
+				condt.put("type","bool");
+				current_rule.put("cond",condt);
+			}
+			current_rule.put("blocktype",actions_result.get("blocktype"));
+			
+			current_rule.put("actions",actions_result.get("actions"));
 			current_rule.put("post","");
 			
 			if($pb.text != null)
@@ -331,7 +343,7 @@ rule
 			current_rule.put("name",$name.text);
 			current_rule.put("emit","");
 			current_rule.put("state",$ait.text);
-			current_rule.put("callbacks","");
+			current_rule.put("callbacks",$cb.result);
 			
 			if($ptu.text != null)
 				current_rule.put("pagetype",$ptu.result);
@@ -359,75 +371,286 @@ post_statement
   	| 'last')
 	(must_be["if"] expr)?
   	;
+
+raise_statement: must_be["raise"] must_be["explicit"] must_be["event"]  VAR for_clause modifier_clause;
 	
-	
-callbacks: 'callbacks' '{' success? failure? '}';
-
-success: 'success' '{' click ';'? '}';
-
-failure: 'failure' '{' click ';'?   '}';
-
-click: ('click' | 'change') VAR '=' STRING click_link?;
-
-click_link:  must_be["triggers"] persistent_expr;
-
-
-persistent_expr: persistent_clear
-   | persistent_set
-   | persistent_iterate
-   | trail_forget
-   | trail_mark;
-
-
-persistent_clear: 'clear'  var_domain ':' VAR;
-
-persistent_set: 'set'  var_domain ':' VAR;
-
-persistent_iterate: var_domain ':' VAR counter_op expr counter_start;
-
-trail_forget: 'forget'  STRING must_be["in"]  var_domain ':' VAR;
-
-trail_mark: 'mark' var_domain ':' VAR trail_with;
-
-trail_with: 'with' expr;
-
-
-counter_op: '+='
-          | '-=';
-
-counter_start: must_be["from"] expr;
-
 log_statement: must_be["log"]  expr;
 
 
-raise_statement: must_be["raise"] must_be["explicit"] must_be["event"]  VAR for_clause modifier_clause;
+
+
+	
+callbacks returns[HashMap result]
+	: 
+	'callbacks' '{' s=success? f=failure? '}' {
+		HashMap tmp = new HashMap();
+		if($s.text != null)
+		{
+			tmp.put("success",$s.result);
+			
+		}
+		if($f.text != null)
+		{
+			tmp.put("failure",$f.result);		
+		}
+		$result = tmp;
+	}
+	;
+
+success returns[ArrayList result] 
+@init {
+	ArrayList tmp_list = new ArrayList();
+}	
+	: 'success' '{' c=click {tmp_list.add($c.result);}  (';' c1=click {tmp_list.add($c1.result);} )* ';'?  '}' {
+		$result = tmp_list;
+	}
+	;
+
+failure  returns[ArrayList result] 
+@init {
+	ArrayList tmp_list = new ArrayList();
+}	
+	: 
+	'failure' '{' c=click {tmp_list.add($c.result);}  (';' c1=click  {tmp_list.add($c1.result);})*  ';'?  '}'{
+		$result = tmp_list;
+	}
+	;
+
+click returns[HashMap result]	: 
+	corc=('click' | 'change') attr=VAR '=' val=STRING cl=click_link? {
+		HashMap tmp = new HashMap();
+		tmp.put("type",$corc.text);
+		tmp.put("value",strip_string($val.text));
+		tmp.put("attribute",$attr.text);
+		tmp.put("trigger",$cl.result);
+		$result = tmp;	
+	}
+	;
+
+click_link returns[HashMap result]
+	:  
+	must_be["triggers"] p=persistent_expr  {
+		$result = $p.result;
+	}
+	;
+
+
+persistent_expr returns[HashMap result]
+	: 
+	pc=persistent_clear  {
+		$result = $pc.result;
+	}
+	| ps=persistent_set  {
+		$result = $ps.result;
+	}
+	| pi=persistent_iterate  {
+		$result = $pi.result;
+	}
+   	| tf=trail_forget  {
+		$result = $tf.result;
+	}
+   	| tm=trail_mark  {
+		$result = $tm.result;
+	}
+   	;
+
+
+persistent_clear returns[HashMap result]
+	: 
+	'clear'  dm=var_domain ':' name=VAR {
+		HashMap tmp = new HashMap();
+		tmp.put("action","clear");
+		tmp.put("name",$name.text);
+		tmp.put("domain",$dm.text);
+		tmp.put("type","persistent");
+		$result = tmp;
+	}
+	;
+
+persistent_set returns[HashMap result]
+	: 
+	'set'  dm=var_domain ':' name=VAR {
+		HashMap tmp = new HashMap();
+		tmp.put("action","set");
+		tmp.put("name",$name.text);
+		tmp.put("domain",$dm.text);
+		tmp.put("type","persistent");
+		$result = tmp;
+	}
+	;
+
+persistent_iterate returns[HashMap result]
+	: 
+	dm=var_domain ':' name=VAR op=counter_op v=expr from=counter_start {
+		HashMap tmp = new HashMap();
+		tmp.put("action","iterator");
+		tmp.put("name",$name.text);
+		tmp.put("domain",$dm.text);
+		tmp.put("type","persistent");
+		tmp.put("op",$op.text);
+		tmp.put("from",$from.result);
+		tmp.put("value",$v.result);
+		$result = tmp;
+	}
+	;
+
+trail_forget returns[HashMap result]
+	: 
+	'forget'  what=STRING must_be["in"]  dm=var_domain ':' name=VAR  {
+		HashMap tmp = new HashMap();
+		tmp.put("action","forget");
+		tmp.put("name",$name.text);
+		tmp.put("domain",$dm.text);
+		tmp.put("type","persistent");
+		tmp.put("regexp",strip_string($what.text));
+		$result = tmp;
+		
+	}
+	;
+
+trail_mark returns[HashMap result]
+	: 
+	'mark' dm=var_domain ':' name=VAR t=trail_with {
+		HashMap tmp = new HashMap();
+		tmp.put("action","mark");
+		tmp.put("name",$name.text);
+		tmp.put("domain",$dm.text);
+		tmp.put("type","persistent");
+		tmp.put("with",$t.result);
+		$result = tmp;		
+	}
+	;
+
+trail_with returns[Object result]
+	: 
+	'with' e=expr {
+		$result = $e.result;
+	}
+	;
+
+counter_op
+	: 
+	'+='
+        | '-='
+        ;
+
+counter_start returns[Object result]
+	: 
+	must_be["from"] e=expr {
+	 $result=e.result;
+	}
+	;
+
   
 for_clause: must_be["for"]  VAR;
 		
 
-action 
-	: ((conditional_action)=> conditional_action | unconditional_action) ';'?
+
+
+
+
+
+
+
+action[HashMap result]
+@init {
+	$result.put("blocktype","every");
+	HashMap condt = new HashMap();
+	condt.put("val","true");
+	condt.put("type","bool");
+	$result.put("cond",condt);
+	$result.put("actions",new ArrayList());
+} 
+	: (conditional_action[result] | unconditional_action[result]) ';'?
 	;
 	
 	
-conditional_action
-	: 'if' expr 'then' unconditional_action	
+conditional_action[HashMap result]
+	: 'if' e=expr 'then' unconditional_action[result]	 {
+		result.put("cond",$e.result);	
+	}
 	;
 
-unconditional_action  
-	: (at=VAR{  cn($at.text, sar("choose","every"),input); })? 
-	 '{' (primrule (';' primrule)*) ';'? '}'
-	| primrule 
+unconditional_action[HashMap result]  
+@init { 
+	ArrayList temp_list = new ArrayList();
+}
+	: ((at=must_be_one[sar("choose","every")] {result.put("blocktype",$at.text); } )?  '{' (p=primrule {temp_list.add($p.result);}  (';' p=primrule{temp_list.add($p.result);})*) ';'? '}'
+	| p=primrule{temp_list.add($p.result);}) {
+		result.put("actions",temp_list);
+	}
 	; 
 	
-primrule 
-	:  (VAR '=>')? (
-		 namespace? VAR '(' (expr (',' expr)?)*  ')' modifier_clause?
-	|	emit_block )
+primrule returns[HashMap result] 
+@init {
+	ArrayList temp_list = new ArrayList();
+}
+	:  (label=VAR '=>')? (
+		 src=namespace? name=VAR '(' (ex=expr{temp_list.add($ex.result);}  (',' ex1=expr{temp_list.add($ex1.result);})?)*  ')' m=modifier_clause? {
+		 	
+		 	HashMap tmp = new HashMap();
+		 	tmp.put("source",$src.result);
+		 	tmp.put("name",$name.text);
+		 	tmp.put("args",temp_list);
+		 	
+		 	if($label.text != null)
+			 	tmp.put("label",$label.text);
+			 	
+		 	tmp.put("modifiers",$m.result);
+		 	HashMap tmp2 = new HashMap();
+			tmp2.put("action",tmp);
+			$result = tmp2;
+		 	
+		 }
+	|	e=emit_block { 
+			HashMap tmp = new HashMap();
+			tmp.put("emit",$e.emit_value);
+			$result = tmp;
+		}
+	 )
 	
 	;		
 
 	
+modifier_clause returns[ArrayList result]
+@init {
+	ArrayList temp_list = new ArrayList();
+}
+	:  
+	'with' m=modifier {temp_list.add($m.result);} ('and' m1=modifier {temp_list.add($m1.result);})* 
+	{
+		$result = temp_list;
+	}
+	;
+	
+modifier returns[HashMap result]
+	: name=VAR '=' (e=expr | j=JS) {
+		HashMap tmp2 = new HashMap();
+		
+		HashMap tmp = new HashMap();
+		if($e.text != null)
+		{
+			tmp2.put("value",$e.result);
+		}
+		else
+		{
+			tmp.put("type","JS");
+			tmp.put("val",strip_wrappers("<|","|>",$j.text));		
+			tmp2.put("value",tmp);
+		}
+
+		tmp2.put("name",$name.text);
+		$result = tmp2;
+	}
+	;
+
+
+
+
+
+
+
+
 using returns[HashMap result]	
 	:	'using' p=STRING s=setting {
 			HashMap tmp = new HashMap();
@@ -448,16 +671,6 @@ setting returns[ArrayList result]
 	:	'setting' '(' (v=VAR{sresult.add($v.text);} (',' v2=VAR{sresult.add($v2.text);} )?)* ')' {
 		$result = sresult;
 	}
-	;
-
-
-modifier_clause 
-	:  
-	'with' modifier ('and' modifier)*
-	;
-	
-modifier 
-	: VAR '=' (expr | JS)		
 	;
 	
 	

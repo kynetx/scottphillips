@@ -132,7 +132,8 @@ ruleset a10 {
      }
 */
 
- /* rule testa is active {
+ /* 
+rule testa is active {
         select using "/test/" setting(a,b) foreach a + b setting(c,d)
         pre { 
 			a = b + c;
@@ -181,7 +182,8 @@ ruleset a10 {
 */
 
 
-rule testa is active {
+/*
+	rule testa is active {
       select when web pageview "bob" and web pageview "second" then 
 			web pageview "third" and web pageview "fourth" 
 			then 
@@ -193,6 +195,22 @@ rule testa is active {
 
   }
 
+*/
 
 
+	rule testa is active {
+        select using "/test/"  setting()
+		pre {
+		
+		}
+		
+		noop();
+		
+		callbacks {
+			success {
+				click bob = "joe" triggers mark ent:joe with a+b;
+			}
+		}
+		
+	}
 }
