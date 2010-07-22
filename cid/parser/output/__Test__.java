@@ -8,7 +8,7 @@ import com.kynetx.*;
 public class __Test__ {
 
     public static void main(String args[]) throws Exception {
-        RuleSet2Lexer lex = new RuleSet2Lexer(new ANTLRFileStream("/Users/ciddennis/crap/allrules/a99x7.krl", "UTF8"));
+        RuleSet2Lexer lex = new RuleSet2Lexer(new ANTLRFileStream("/Users/ciddennis/crap/allrules/a41x96.krl", "UTF8"));
         CommonTokenStream tokens = new CommonTokenStream(lex);
 
         RuleSet2Parser g = new RuleSet2Parser(tokens, 49100, null);

@@ -1,4 +1,4 @@
-// $ANTLR 3.2 Sep 23, 2009 12:02:23 /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g 2010-07-22 12:23:27
+// $ANTLR 3.2 Sep 23, 2009 12:02:23 /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g 2010-07-22 13:19:56
 
 	package com.kynetx;
 	import java.util.HashMap;
@@ -19,7 +19,7 @@ import org.antlr.runtime.tree.*;
 
 public class RuleSet2Parser extends DebugParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "VAR", "INT", "EXPONENT", "FLOAT", "COMMENT", "WS", "ESC_SEQ", "STRING", "REGEXP", "HTML", "JS", "HEX_DIGIT", "UNICODE_ESC", "OCTAL_ESC", "'<='", "'>='", "'<'", "'>'", "'=='", "'!='", "'eq'", "'neq'", "'like'", "'+'", "'-'", "'{'", "'}'", "';'", "'if'", "'callbacks'", "'success'", "'failure'", "'click'", "'change'", "'='", "'clear'", "':'", "'set'", "'forget'", "'mark'", "'with'", "'+='", "'-='", "'for'", "'then'", "'=>'", "'('", "','", "')'", "'and'", "'using'", "'setting'", "'pre'", "'foreach'", "'when'", "'before'", "'or'", "'not'", "'between'", "'web'", "'pageview'", "'submit'", "'dblclick'", "'update'", "'on'", "'global'", "'JSON'", "'XML'", "'RSS'", "'HTML'", "'<-'", "'function'", "'|'", "'||'", "'&&'", "'*'", "'/'", "'%'", "'seen'", "'after'", "'.pick'", "'.match'", "'.length'", "'.replace'", "'.as'", "'.head'", "'.tail'", "'.sort'", "'.filter'", "'.map'", "'.uc'", "'.lc'", "'.split'", "'.join'", "'.query'", "'.has'", "'.union'", "'.difference'", "'.intersection'", "'.unique'", "'.once'", "'.duplicates'", "'true'", "'false'", "'['", "']'", "'current'", "'history'", "'ent'", "'app'", "'within'", "'css'", "'cachable'", "'emit'", "'meta'", "'key'", "'authz'", "'require'", "'user'", "'logging'", "'off'", "'use'", "'javascript'", "'module'", "'alias'", "'->'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "VAR", "INT", "EXPONENT", "FLOAT", "COMMENT", "WS", "ESC_SEQ", "STRING", "REGEXP", "HTML", "JS", "HEX_DIGIT", "UNICODE_ESC", "OCTAL_ESC", "'<='", "'>='", "'<'", "'>'", "'=='", "'!='", "'eq'", "'neq'", "'like'", "'+'", "'-'", "'{'", "'}'", "';'", "'if'", "'callbacks'", "'success'", "'failure'", "'click'", "'change'", "'='", "':'", "'forget'", "'mark'", "'with'", "'+='", "'-='", "'for'", "'=>'", "'('", "','", "')'", "'and'", "'using'", "'setting'", "'pre'", "'foreach'", "'when'", "'or'", "'not'", "'between'", "'web'", "'pageview'", "'submit'", "'dblclick'", "'update'", "'on'", "'global'", "'JSON'", "'XML'", "'RSS'", "'HTML'", "'<-'", "'function'", "'|'", "'||'", "'&&'", "'*'", "'/'", "'%'", "'seen'", "'.pick'", "'.match'", "'.length'", "'.replace'", "'.as'", "'.head'", "'.tail'", "'.sort'", "'.filter'", "'.map'", "'.uc'", "'.lc'", "'.split'", "'.join'", "'.query'", "'.has'", "'.union'", "'.difference'", "'.intersection'", "'.unique'", "'.once'", "'.duplicates'", "'true'", "'false'", "'['", "']'", "'current'", "'history'", "'ent'", "'app'", "'within'", "'css'", "'cachable'", "'emit'", "'meta'", "'key'", "'authz'", "'require'", "'user'", "'logging'", "'off'", "'use'", "'javascript'", "'module'", "'alias'", "'->'"
     };
     public static final int EXPONENT=6;
     public static final int T__29=29;
@@ -60,13 +60,8 @@ public class RuleSet2Parser extends DebugParser {
     public static final int T__86=86;
     public static final int T__89=89;
     public static final int T__88=88;
-    public static final int T__126=126;
-    public static final int T__125=125;
-    public static final int T__128=128;
-    public static final int T__127=127;
     public static final int WS=9;
     public static final int T__71=71;
-    public static final int T__129=129;
     public static final int T__72=72;
     public static final int T__70=70;
     public static final int T__76=76;
@@ -153,81 +148,81 @@ public class RuleSet2Parser extends DebugParser {
     // delegators
 
     public static final String[] ruleNames = new String[] {
-        "invalidRule", "synpred190_RuleSet2", "synpred179_RuleSet2", "synpred6_RuleSet2", 
-        "emit_block", "synpred108_RuleSet2", "for_clause", "synpred65_RuleSet2", 
-        "synpred152_RuleSet2", "synpred3_RuleSet2", "synpred85_RuleSet2", 
-        "when", "synpred25_RuleSet2", "synpred56_RuleSet2", "mult_op", "synpred57_RuleSet2", 
-        "synpred160_RuleSet2", "synpred40_RuleSet2", "synpred134_RuleSet2", 
-        "synpred133_RuleSet2", "synpred120_RuleSet2", "synpred32_RuleSet2", 
-        "synpred12_RuleSet2", "synpred79_RuleSet2", "synpred48_RuleSet2", 
-        "synpred38_RuleSet2", "synpred67_RuleSet2", "synpred20_RuleSet2", 
-        "predop", "on_expr", "rule", "timeframe", "pre_block", "click", 
-        "synpred33_RuleSet2", "add_op", "action", "synpred27_RuleSet2", 
-        "synpred62_RuleSet2", "synpred93_RuleSet2", "synpred109_RuleSet2", 
-        "synpred192_RuleSet2", "operator_expr", "modifier_clause", "synpred137_RuleSet2", 
-        "synpred91_RuleSet2", "factor", "synpred86_RuleSet2", "persistent_iterate", 
-        "persistent_clear", "synpred138_RuleSet2", "synpred71_RuleSet2", 
-        "synpred10_RuleSet2", "name_value_pair", "hash_line", "synpred98_RuleSet2", 
-        "mult_expr", "synpred184_RuleSet2", "synpred36_RuleSet2", "rule_name", 
-        "click_link", "synpred55_RuleSet2", "synpred16_RuleSet2", "global_block", 
-        "synpred144_RuleSet2", "synpred141_RuleSet2", "synpred165_RuleSet2", 
-        "synpred158_RuleSet2", "css_emit", "synpred84_RuleSet2", "synpred121_RuleSet2", 
-        "post_block", "synpred22_RuleSet2", "synpred83_RuleSet2", "synpred89_RuleSet2", 
-        "synpred181_RuleSet2", "synpred13_RuleSet2", "unconditional_action", 
-        "synpred176_RuleSet2", "synpred2_RuleSet2", "success", "event_seq", 
-        "operator", "synpred99_RuleSet2", "period", "log_statement", "synpred47_RuleSet2", 
-        "synpred111_RuleSet2", "counter_op", "failure", "synpred76_RuleSet2", 
-        "synpred170_RuleSet2", "synpred45_RuleSet2", "synpred80_RuleSet2", 
-        "synpred128_RuleSet2", "synpred116_RuleSet2", "synpred4_RuleSet2", 
-        "synpred129_RuleSet2", "primrule", "synpred130_RuleSet2", "synpred31_RuleSet2", 
-        "synpred182_RuleSet2", "synpred97_RuleSet2", "synpred104_RuleSet2", 
-        "event_btwn", "synpred100_RuleSet2", "modifier", "function_def", 
-        "expr", "synpred183_RuleSet2", "synpred42_RuleSet2", "synpred1_RuleSet2", 
-        "synpred81_RuleSet2", "must_be", "synpred70_RuleSet2", "synpred145_RuleSet2", 
-        "synpred8_RuleSet2", "synpred64_RuleSet2", "synpred150_RuleSet2", 
-        "add_expr", "synpred172_RuleSet2", "synpred15_RuleSet2", "post_alternate", 
-        "synpred73_RuleSet2", "synpred115_RuleSet2", "synpred61_RuleSet2", 
-        "synpred90_RuleSet2", "callbacks", "dispatch_block", "meta_block", 
-        "synpred112_RuleSet2", "synpred63_RuleSet2", "synpred102_RuleSet2", 
-        "synpred35_RuleSet2", "synpred37_RuleSet2", "synpred187_RuleSet2", 
-        "synpred149_RuleSet2", "synpred41_RuleSet2", "synpred34_RuleSet2", 
-        "synpred26_RuleSet2", "synpred52_RuleSet2", "synpred131_RuleSet2", 
-        "synpred126_RuleSet2", "synpred54_RuleSet2", "synpred156_RuleSet2", 
-        "synpred50_RuleSet2", "synpred175_RuleSet2", "synpred18_RuleSet2", 
-        "synpred118_RuleSet2", "synpred174_RuleSet2", "synpred105_RuleSet2", 
-        "synpred29_RuleSet2", "synpred185_RuleSet2", "synpred123_RuleSet2", 
-        "synpred161_RuleSet2", "synpred142_RuleSet2", "synpred178_RuleSet2", 
-        "unary_expr", "synpred162_RuleSet2", "conjunction", "synpred168_RuleSet2", 
-        "synpred77_RuleSet2", "synpred94_RuleSet2", "event_prim", "synpred148_RuleSet2", 
-        "synpred49_RuleSet2", "synpred88_RuleSet2", "synpred180_RuleSet2", 
-        "synpred155_RuleSet2", "synpred132_RuleSet2", "synpred78_RuleSet2", 
-        "synpred139_RuleSet2", "counter_start", "equality_expr", "synpred103_RuleSet2", 
-        "synpred9_RuleSet2", "synpred135_RuleSet2", "event_or", "synpred87_RuleSet2", 
-        "synpred159_RuleSet2", "using", "synpred166_RuleSet2", "synpred44_RuleSet2", 
-        "synpred164_RuleSet2", "synpred106_RuleSet2", "synpred151_RuleSet2", 
-        "synpred191_RuleSet2", "persistent_set", "synpred143_RuleSet2", 
-        "synpred23_RuleSet2", "trail_with", "cachable", "synpred188_RuleSet2", 
-        "synpred21_RuleSet2", "synpred60_RuleSet2", "synpred96_RuleSet2", 
-        "synpred153_RuleSet2", "post_statement", "synpred171_RuleSet2", 
-        "synpred53_RuleSet2", "synpred186_RuleSet2", "decl", "synpred17_RuleSet2", 
-        "synpred66_RuleSet2", "synpred92_RuleSet2", "synpred140_RuleSet2", 
-        "raise_statement", "synpred39_RuleSet2", "synpred113_RuleSet2", 
-        "action_block", "rulesetname", "synpred114_RuleSet2", "synpred28_RuleSet2", 
-        "namespace", "synpred5_RuleSet2", "synpred68_RuleSet2", "synpred69_RuleSet2", 
-        "conditional_action", "synpred14_RuleSet2", "synpred11_RuleSet2", 
-        "synpred127_RuleSet2", "trail_mark", "synpred167_RuleSet2", "synpred163_RuleSet2", 
-        "conditional_expression", "synpred136_RuleSet2", "synpred147_RuleSet2", 
-        "synpred146_RuleSet2", "synpred24_RuleSet2", "must_be_one", "synpred119_RuleSet2", 
-        "disjunction", "persistent_expr", "synpred58_RuleSet2", "synpred43_RuleSet2", 
-        "synpred75_RuleSet2", "synpred95_RuleSet2", "synpred72_RuleSet2", 
-        "var_domain", "synpred107_RuleSet2", "synpred19_RuleSet2", "event_filter", 
-        "synpred125_RuleSet2", "ruleset", "synpred117_RuleSet2", "synpred59_RuleSet2", 
-        "synpred74_RuleSet2", "synpred154_RuleSet2", "event_and", "trail_forget", 
-        "synpred7_RuleSet2", "synpred122_RuleSet2", "foreach", "synpred82_RuleSet2", 
-        "synpred51_RuleSet2", "synpred110_RuleSet2", "synpred173_RuleSet2", 
-        "synpred169_RuleSet2", "synpred30_RuleSet2", "synpred157_RuleSet2", 
-        "synpred124_RuleSet2", "synpred101_RuleSet2", "synpred177_RuleSet2", 
-        "synpred46_RuleSet2", "synpred189_RuleSet2", "setting"
+        "invalidRule", "synpred165_RuleSet2", "synpred73_RuleSet2", "synpred46_RuleSet2", 
+        "synpred79_RuleSet2", "synpred148_RuleSet2", "synpred36_RuleSet2", 
+        "synpred16_RuleSet2", "synpred193_RuleSet2", "synpred134_RuleSet2", 
+        "hash_line", "synpred96_RuleSet2", "synpred12_RuleSet2", "synpred24_RuleSet2", 
+        "synpred180_RuleSet2", "synpred19_RuleSet2", "mult_op", "synpred194_RuleSet2", 
+        "pre_block", "synpred26_RuleSet2", "synpred42_RuleSet2", "synpred57_RuleSet2", 
+        "synpred192_RuleSet2", "synpred151_RuleSet2", "add_op", "conditional_expression", 
+        "operator", "meta_block", "synpred44_RuleSet2", "rule", "synpred107_RuleSet2", 
+        "synpred131_RuleSet2", "synpred39_RuleSet2", "synpred88_RuleSet2", 
+        "trail_mark", "synpred30_RuleSet2", "decl", "failure", "synpred82_RuleSet2", 
+        "synpred56_RuleSet2", "synpred156_RuleSet2", "log_statement", "action", 
+        "period", "synpred119_RuleSet2", "action_block", "synpred113_RuleSet2", 
+        "synpred81_RuleSet2", "synpred13_RuleSet2", "synpred59_RuleSet2", 
+        "event_prim", "synpred167_RuleSet2", "synpred35_RuleSet2", "var_domain", 
+        "synpred157_RuleSet2", "using", "event_and", "synpred77_RuleSet2", 
+        "synpred182_RuleSet2", "synpred177_RuleSet2", "synpred95_RuleSet2", 
+        "counter_op", "synpred117_RuleSet2", "timeframe", "synpred109_RuleSet2", 
+        "synpred126_RuleSet2", "synpred162_RuleSet2", "synpred8_RuleSet2", 
+        "synpred37_RuleSet2", "synpred94_RuleSet2", "synpred74_RuleSet2", 
+        "synpred10_RuleSet2", "synpred102_RuleSet2", "synpred175_RuleSet2", 
+        "synpred80_RuleSet2", "synpred190_RuleSet2", "callbacks", "rulesetname", 
+        "synpred128_RuleSet2", "primrule", "synpred164_RuleSet2", "synpred60_RuleSet2", 
+        "synpred152_RuleSet2", "synpred160_RuleSet2", "synpred7_RuleSet2", 
+        "synpred3_RuleSet2", "synpred122_RuleSet2", "synpred25_RuleSet2", 
+        "synpred191_RuleSet2", "synpred185_RuleSet2", "setting", "synpred137_RuleSet2", 
+        "synpred76_RuleSet2", "conditional_action", "persistent_iterate", 
+        "synpred22_RuleSet2", "synpred20_RuleSet2", "synpred114_RuleSet2", 
+        "synpred172_RuleSet2", "synpred166_RuleSet2", "modifier", "synpred189_RuleSet2", 
+        "synpred139_RuleSet2", "synpred90_RuleSet2", "synpred132_RuleSet2", 
+        "synpred38_RuleSet2", "synpred55_RuleSet2", "synpred150_RuleSet2", 
+        "unconditional_action", "synpred33_RuleSet2", "synpred142_RuleSet2", 
+        "equality_expr", "synpred104_RuleSet2", "synpred5_RuleSet2", "synpred145_RuleSet2", 
+        "synpred116_RuleSet2", "synpred144_RuleSet2", "synpred23_RuleSet2", 
+        "synpred181_RuleSet2", "synpred48_RuleSet2", "event_or", "emit_block", 
+        "counter_start", "synpred179_RuleSet2", "synpred105_RuleSet2", "synpred29_RuleSet2", 
+        "synpred133_RuleSet2", "name_value_pair", "synpred153_RuleSet2", 
+        "synpred143_RuleSet2", "synpred138_RuleSet2", "synpred28_RuleSet2", 
+        "synpred174_RuleSet2", "synpred158_RuleSet2", "disjunction", "ruleset", 
+        "synpred11_RuleSet2", "synpred99_RuleSet2", "predop", "success", 
+        "synpred92_RuleSet2", "synpred68_RuleSet2", "conjunction", "synpred91_RuleSet2", 
+        "persistent_expr", "add_expr", "post_block", "post_alternate", "synpred163_RuleSet2", 
+        "synpred135_RuleSet2", "raise_statement", "synpred87_RuleSet2", 
+        "synpred171_RuleSet2", "synpred125_RuleSet2", "synpred54_RuleSet2", 
+        "function_def", "synpred159_RuleSet2", "synpred63_RuleSet2", "synpred17_RuleSet2", 
+        "synpred40_RuleSet2", "synpred21_RuleSet2", "synpred71_RuleSet2", 
+        "synpred86_RuleSet2", "synpred9_RuleSet2", "synpred34_RuleSet2", 
+        "synpred183_RuleSet2", "synpred121_RuleSet2", "synpred14_RuleSet2", 
+        "synpred97_RuleSet2", "synpred31_RuleSet2", "event_btwn", "synpred75_RuleSet2", 
+        "click", "synpred84_RuleSet2", "persistent_clear_set", "synpred120_RuleSet2", 
+        "cachable", "namespace", "synpred83_RuleSet2", "synpred72_RuleSet2", 
+        "synpred101_RuleSet2", "synpred65_RuleSet2", "synpred2_RuleSet2", 
+        "synpred27_RuleSet2", "synpred169_RuleSet2", "click_link", "dispatch_block", 
+        "on_expr", "factor", "synpred66_RuleSet2", "foreach", "synpred155_RuleSet2", 
+        "synpred108_RuleSet2", "synpred130_RuleSet2", "synpred186_RuleSet2", 
+        "synpred124_RuleSet2", "synpred15_RuleSet2", "synpred178_RuleSet2", 
+        "synpred18_RuleSet2", "synpred67_RuleSet2", "synpred176_RuleSet2", 
+        "expr", "synpred85_RuleSet2", "synpred58_RuleSet2", "synpred50_RuleSet2", 
+        "operator_expr", "synpred78_RuleSet2", "modifier_clause", "synpred47_RuleSet2", 
+        "synpred64_RuleSet2", "synpred173_RuleSet2", "synpred141_RuleSet2", 
+        "synpred184_RuleSet2", "synpred61_RuleSet2", "synpred106_RuleSet2", 
+        "synpred146_RuleSet2", "synpred129_RuleSet2", "synpred52_RuleSet2", 
+        "synpred187_RuleSet2", "synpred62_RuleSet2", "synpred161_RuleSet2", 
+        "css_emit", "synpred32_RuleSet2", "synpred70_RuleSet2", "trail_with", 
+        "synpred110_RuleSet2", "synpred6_RuleSet2", "synpred1_RuleSet2", 
+        "synpred93_RuleSet2", "synpred53_RuleSet2", "for_clause", "synpred51_RuleSet2", 
+        "synpred136_RuleSet2", "synpred69_RuleSet2", "synpred111_RuleSet2", 
+        "synpred154_RuleSet2", "synpred41_RuleSet2", "trail_forget", "event_filter", 
+        "synpred112_RuleSet2", "synpred49_RuleSet2", "synpred127_RuleSet2", 
+        "synpred140_RuleSet2", "synpred100_RuleSet2", "post_statement", 
+        "synpred170_RuleSet2", "synpred168_RuleSet2", "synpred98_RuleSet2", 
+        "synpred4_RuleSet2", "synpred103_RuleSet2", "when", "unary_expr", 
+        "synpred118_RuleSet2", "synpred115_RuleSet2", "rule_name", "synpred188_RuleSet2", 
+        "synpred123_RuleSet2", "mult_expr", "global_block", "synpred149_RuleSet2", 
+        "event_seq", "synpred45_RuleSet2", "synpred43_RuleSet2", "synpred89_RuleSet2", 
+        "must_be", "synpred147_RuleSet2", "must_be_one"
     };
      
         public int ruleLevel = 0;
@@ -619,7 +614,7 @@ public class RuleSet2Parser extends DebugParser {
          	 rule_json.put("dispatch",new ArrayList());
          	 rule_json.put("rules",new ArrayList());
          	 rule_json.put("meta", new HashMap());
-        	 current_top = rule_json;
+        	 current_top = rule_json; 
 
         try { dbg.enterRule(getGrammarFileName(), "ruleset");
         if ( getRuleLevel()==0 ) {dbg.commence();}
@@ -635,14 +630,14 @@ public class RuleSet2Parser extends DebugParser {
             root_0 = (Object)adaptor.nil();
 
             dbg.location(282,3);
-            pushFollow(FOLLOW_must_be_in_ruleset806);
+            pushFollow(FOLLOW_must_be_in_ruleset818);
             must_be3=must_be("ruleset");
 
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, must_be3.getTree());
             dbg.location(283,3);
-            pushFollow(FOLLOW_rulesetname_in_ruleset812);
+            pushFollow(FOLLOW_rulesetname_in_ruleset824);
             rulesetname4=rulesetname();
 
             state._fsp--;
@@ -653,7 +648,7 @@ public class RuleSet2Parser extends DebugParser {
                current_top.put("ruleset_name",(rulesetname4!=null?input.toString(rulesetname4.start,rulesetname4.stop):null)); 
             }
             dbg.location(284,3);
-            char_literal5=(Token)match(input,29,FOLLOW_29_in_ruleset819); if (state.failed) return retval;
+            char_literal5=(Token)match(input,29,FOLLOW_29_in_ruleset831); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
             char_literal5_tree = (Object)adaptor.create(char_literal5);
             adaptor.addChild(root_0, char_literal5_tree);
@@ -668,7 +663,7 @@ public class RuleSet2Parser extends DebugParser {
                 try { dbg.enterDecision(1);
 
                 switch ( input.LA(1) ) {
-                case 118:
+                case 113:
                     {
                     alt1=1;
                     }
@@ -677,17 +672,17 @@ public class RuleSet2Parser extends DebugParser {
                     {
                     int LA1_3 = input.LA(2);
 
-                    if ( (LA1_3==29) ) {
-                        alt1=2;
-                    }
-                    else if ( ((LA1_3>=VAR && LA1_3<=INT)) ) {
+                    if ( ((LA1_3>=VAR && LA1_3<=INT)) ) {
                         alt1=4;
+                    }
+                    else if ( (LA1_3==29) ) {
+                        alt1=2;
                     }
 
 
                     }
                     break;
-                case 69:
+                case 65:
                     {
                     alt1=3;
                     }
@@ -704,7 +699,7 @@ public class RuleSet2Parser extends DebugParser {
             	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:285:5: meta_block
             	    {
             	    dbg.location(285,5);
-            	    pushFollow(FOLLOW_meta_block_in_ruleset826);
+            	    pushFollow(FOLLOW_meta_block_in_ruleset838);
             	    meta_block6=meta_block();
 
             	    state._fsp--;
@@ -719,7 +714,7 @@ public class RuleSet2Parser extends DebugParser {
             	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:285:18: dispatch_block
             	    {
             	    dbg.location(285,18);
-            	    pushFollow(FOLLOW_dispatch_block_in_ruleset830);
+            	    pushFollow(FOLLOW_dispatch_block_in_ruleset842);
             	    dispatch_block7=dispatch_block();
 
             	    state._fsp--;
@@ -734,7 +729,7 @@ public class RuleSet2Parser extends DebugParser {
             	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:285:35: global_block
             	    {
             	    dbg.location(285,35);
-            	    pushFollow(FOLLOW_global_block_in_ruleset834);
+            	    pushFollow(FOLLOW_global_block_in_ruleset846);
             	    global_block8=global_block();
 
             	    state._fsp--;
@@ -749,7 +744,7 @@ public class RuleSet2Parser extends DebugParser {
             	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:285:50: rule
             	    {
             	    dbg.location(285,50);
-            	    pushFollow(FOLLOW_rule_in_ruleset838);
+            	    pushFollow(FOLLOW_rule_in_ruleset850);
             	    rule9=rule();
 
             	    state._fsp--;
@@ -766,13 +761,13 @@ public class RuleSet2Parser extends DebugParser {
             } finally {dbg.exitSubRule(1);}
 
             dbg.location(286,2);
-            char_literal10=(Token)match(input,30,FOLLOW_30_in_ruleset844); if (state.failed) return retval;
+            char_literal10=(Token)match(input,30,FOLLOW_30_in_ruleset856); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
             char_literal10_tree = (Object)adaptor.create(char_literal10);
             adaptor.addChild(root_0, char_literal10_tree);
             }
             dbg.location(287,2);
-            EOF11=(Token)match(input,EOF,FOLLOW_EOF_in_ruleset848); if (state.failed) return retval;
+            EOF11=(Token)match(input,EOF,FOLLOW_EOF_in_ruleset860); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
             EOF11_tree = (Object)adaptor.create(EOF11);
             adaptor.addChild(root_0, EOF11_tree);
@@ -789,7 +784,7 @@ public class RuleSet2Parser extends DebugParser {
             }
             if ( state.backtracking==0 ) {
                
-              	current_top = null; 
+              	current_top = null;  
 
             }
         }
@@ -845,7 +840,7 @@ public class RuleSet2Parser extends DebugParser {
             root_0 = (Object)adaptor.nil();
 
             dbg.location(292,4);
-            v=(Token)match(input,VAR,FOLLOW_VAR_in_must_be871); if (state.failed) return retval;
+            v=(Token)match(input,VAR,FOLLOW_VAR_in_must_be883); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
             v_tree = (Object)adaptor.create(v);
             adaptor.addChild(root_0, v_tree);
@@ -917,7 +912,7 @@ public class RuleSet2Parser extends DebugParser {
             root_0 = (Object)adaptor.nil();
 
             dbg.location(297,4);
-            v=(Token)match(input,VAR,FOLLOW_VAR_in_must_be_one896); if (state.failed) return retval;
+            v=(Token)match(input,VAR,FOLLOW_VAR_in_must_be_one908); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
             v_tree = (Object)adaptor.create(v);
             adaptor.addChild(root_0, v_tree);
@@ -1116,7 +1111,7 @@ public class RuleSet2Parser extends DebugParser {
     };
 
     // $ANTLR start "rule"
-    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:315:1: rule : must_be[\"rule\"] name= rule_name must_be[\"is\"] ait= must_be_one[sar(\"active\",\"inactive\",\"test\")] '{' select= VAR (ptu= using | ptw= when ) (f= foreach )* (pb= pre_block )? (eb= emit_block )? ( action[actions_result] ) (cb= callbacks )? (postb= post_block )? '}' ;
+    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:315:1: rule : must_be[\"rule\"] name= rule_name must_be[\"is\"] ait= must_be_one[sar(\"active\",\"inactive\",\"test\")] '{' select= VAR (ptu= using | ptw= when ) (f= foreach )* (pb= pre_block )? ( ';' )? (eb= emit_block )? ( ';' )? ( action[actions_result] ) (cb= callbacks )? ( ';' )? (postb= post_block )? ( ';' )? '}' ;
     public final RuleSet2Parser.rule_return rule() throws RecognitionException {
         RuleSet2Parser.rule_return retval = new RuleSet2Parser.rule_return();
         retval.start = input.LT(1);
@@ -1125,7 +1120,11 @@ public class RuleSet2Parser extends DebugParser {
 
         Token select=null;
         Token char_literal16=null;
+        Token char_literal17=null;
         Token char_literal18=null;
+        Token char_literal20=null;
+        Token char_literal21=null;
+        Token char_literal22=null;
         RuleSet2Parser.rule_name_return name = null;
 
         RuleSet2Parser.must_be_one_return ait = null;
@@ -1148,12 +1147,16 @@ public class RuleSet2Parser extends DebugParser {
 
         RuleSet2Parser.must_be_return must_be15 = null;
 
-        RuleSet2Parser.action_return action17 = null;
+        RuleSet2Parser.action_return action19 = null;
 
 
         Object select_tree=null;
         Object char_literal16_tree=null;
+        Object char_literal17_tree=null;
         Object char_literal18_tree=null;
+        Object char_literal20_tree=null;
+        Object char_literal21_tree=null;
+        Object char_literal22_tree=null;
 
 
         	 ArrayList rule_block_array = (ArrayList)rule_json.get("rules");
@@ -1167,49 +1170,49 @@ public class RuleSet2Parser extends DebugParser {
         dbg.location(315, 1);
 
         try {
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:322:2: ( must_be[\"rule\"] name= rule_name must_be[\"is\"] ait= must_be_one[sar(\"active\",\"inactive\",\"test\")] '{' select= VAR (ptu= using | ptw= when ) (f= foreach )* (pb= pre_block )? (eb= emit_block )? ( action[actions_result] ) (cb= callbacks )? (postb= post_block )? '}' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:322:2: ( must_be[\"rule\"] name= rule_name must_be[\"is\"] ait= must_be_one[sar(\"active\",\"inactive\",\"test\")] '{' select= VAR (ptu= using | ptw= when ) (f= foreach )* (pb= pre_block )? ( ';' )? (eb= emit_block )? ( ';' )? ( action[actions_result] ) (cb= callbacks )? ( ';' )? (postb= post_block )? ( ';' )? '}' )
             dbg.enterAlt(1);
 
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:322:5: must_be[\"rule\"] name= rule_name must_be[\"is\"] ait= must_be_one[sar(\"active\",\"inactive\",\"test\")] '{' select= VAR (ptu= using | ptw= when ) (f= foreach )* (pb= pre_block )? (eb= emit_block )? ( action[actions_result] ) (cb= callbacks )? (postb= post_block )? '}'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:322:5: must_be[\"rule\"] name= rule_name must_be[\"is\"] ait= must_be_one[sar(\"active\",\"inactive\",\"test\")] '{' select= VAR (ptu= using | ptw= when ) (f= foreach )* (pb= pre_block )? ( ';' )? (eb= emit_block )? ( ';' )? ( action[actions_result] ) (cb= callbacks )? ( ';' )? (postb= post_block )? ( ';' )? '}'
             {
             root_0 = (Object)adaptor.nil();
 
             dbg.location(322,5);
-            pushFollow(FOLLOW_must_be_in_rule955);
+            pushFollow(FOLLOW_must_be_in_rule967);
             must_be14=must_be("rule");
 
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, must_be14.getTree());
             dbg.location(323,7);
-            pushFollow(FOLLOW_rule_name_in_rule962);
+            pushFollow(FOLLOW_rule_name_in_rule975);
             name=rule_name();
 
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, name.getTree());
             dbg.location(324,3);
-            pushFollow(FOLLOW_must_be_in_rule969);
+            pushFollow(FOLLOW_must_be_in_rule982);
             must_be15=must_be("is");
 
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, must_be15.getTree());
             dbg.location(326,6);
-            pushFollow(FOLLOW_must_be_one_in_rule978);
+            pushFollow(FOLLOW_must_be_one_in_rule992);
             ait=must_be_one(sar("active","inactive","test"));
 
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, ait.getTree());
             dbg.location(327,3);
-            char_literal16=(Token)match(input,29,FOLLOW_29_in_rule983); if (state.failed) return retval;
+            char_literal16=(Token)match(input,29,FOLLOW_29_in_rule997); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
             char_literal16_tree = (Object)adaptor.create(char_literal16);
             adaptor.addChild(root_0, char_literal16_tree);
             }
             dbg.location(328,12);
-            select=(Token)match(input,VAR,FOLLOW_VAR_in_rule993); if (state.failed) return retval;
+            select=(Token)match(input,VAR,FOLLOW_VAR_in_rule1007); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
             select_tree = (Object)adaptor.create(select);
             adaptor.addChild(root_0, select_tree);
@@ -1226,10 +1229,10 @@ public class RuleSet2Parser extends DebugParser {
 
             int LA2_0 = input.LA(1);
 
-            if ( (LA2_0==54) ) {
+            if ( (LA2_0==51) ) {
                 alt2=1;
             }
-            else if ( (LA2_0==58) ) {
+            else if ( (LA2_0==55) ) {
                 alt2=2;
             }
             else {
@@ -1249,7 +1252,7 @@ public class RuleSet2Parser extends DebugParser {
                     // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:328:61: ptu= using
                     {
                     dbg.location(328,64);
-                    pushFollow(FOLLOW_using_in_rule1000);
+                    pushFollow(FOLLOW_using_in_rule1014);
                     ptu=using();
 
                     state._fsp--;
@@ -1264,7 +1267,7 @@ public class RuleSet2Parser extends DebugParser {
                     // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:328:71: ptw= when
                     {
                     dbg.location(328,74);
-                    pushFollow(FOLLOW_when_in_rule1004);
+                    pushFollow(FOLLOW_when_in_rule1018);
                     ptw=when();
 
                     state._fsp--;
@@ -1288,7 +1291,7 @@ public class RuleSet2Parser extends DebugParser {
 
                 int LA3_0 = input.LA(1);
 
-                if ( (LA3_0==57) ) {
+                if ( (LA3_0==54) ) {
                     alt3=1;
                 }
 
@@ -1302,7 +1305,7 @@ public class RuleSet2Parser extends DebugParser {
             	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:328:82: f= foreach
             	    {
             	    dbg.location(328,83);
-            	    pushFollow(FOLLOW_foreach_in_rule1010);
+            	    pushFollow(FOLLOW_foreach_in_rule1024);
             	    f=foreach();
 
             	    state._fsp--;
@@ -1330,7 +1333,7 @@ public class RuleSet2Parser extends DebugParser {
 
             int LA4_0 = input.LA(1);
 
-            if ( (LA4_0==56) ) {
+            if ( (LA4_0==53) ) {
                 alt4=1;
             }
             } finally {dbg.exitDecision(4);}
@@ -1342,7 +1345,7 @@ public class RuleSet2Parser extends DebugParser {
                     // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:0:0: pb= pre_block
                     {
                     dbg.location(328,119);
-                    pushFollow(FOLLOW_pre_block_in_rule1017);
+                    pushFollow(FOLLOW_pre_block_in_rule1031);
                     pb=pre_block();
 
                     state._fsp--;
@@ -1355,15 +1358,15 @@ public class RuleSet2Parser extends DebugParser {
             }
             } finally {dbg.exitSubRule(4);}
 
-            dbg.location(328,133);
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:328:133: (eb= emit_block )?
+            dbg.location(328,131);
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:328:131: ( ';' )?
             int alt5=2;
             try { dbg.enterSubRule(5);
             try { dbg.enterDecision(5);
 
             int LA5_0 = input.LA(1);
 
-            if ( (LA5_0==117) ) {
+            if ( (LA5_0==31) ) {
                 int LA5_1 = input.LA(2);
 
                 if ( (synpred19_RuleSet2()) ) {
@@ -1376,10 +1379,46 @@ public class RuleSet2Parser extends DebugParser {
                 case 1 :
                     dbg.enterAlt(1);
 
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:0:0: ';'
+                    {
+                    dbg.location(328,131);
+                    char_literal17=(Token)match(input,31,FOLLOW_31_in_rule1034); if (state.failed) return retval;
+                    if ( state.backtracking==0 ) {
+                    char_literal17_tree = (Object)adaptor.create(char_literal17);
+                    adaptor.addChild(root_0, char_literal17_tree);
+                    }
+
+                    }
+                    break;
+
+            }
+            } finally {dbg.exitSubRule(5);}
+
+            dbg.location(328,138);
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:328:138: (eb= emit_block )?
+            int alt6=2;
+            try { dbg.enterSubRule(6);
+            try { dbg.enterDecision(6);
+
+            int LA6_0 = input.LA(1);
+
+            if ( (LA6_0==112) ) {
+                int LA6_1 = input.LA(2);
+
+                if ( (synpred20_RuleSet2()) ) {
+                    alt6=1;
+                }
+            }
+            } finally {dbg.exitDecision(6);}
+
+            switch (alt6) {
+                case 1 :
+                    dbg.enterAlt(1);
+
                     // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:0:0: eb= emit_block
                     {
-                    dbg.location(328,133);
-                    pushFollow(FOLLOW_emit_block_in_rule1022);
+                    dbg.location(328,138);
+                    pushFollow(FOLLOW_emit_block_in_rule1039);
                     eb=emit_block();
 
                     state._fsp--;
@@ -1390,45 +1429,77 @@ public class RuleSet2Parser extends DebugParser {
                     break;
 
             }
-            } finally {dbg.exitSubRule(5);}
+            } finally {dbg.exitSubRule(6);}
 
-            dbg.location(328,146);
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:328:146: ( action[actions_result] )
+            dbg.location(328,151);
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:328:151: ( ';' )?
+            int alt7=2;
+            try { dbg.enterSubRule(7);
+            try { dbg.enterDecision(7);
+
+            int LA7_0 = input.LA(1);
+
+            if ( (LA7_0==31) ) {
+                alt7=1;
+            }
+            } finally {dbg.exitDecision(7);}
+
+            switch (alt7) {
+                case 1 :
+                    dbg.enterAlt(1);
+
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:0:0: ';'
+                    {
+                    dbg.location(328,151);
+                    char_literal18=(Token)match(input,31,FOLLOW_31_in_rule1042); if (state.failed) return retval;
+                    if ( state.backtracking==0 ) {
+                    char_literal18_tree = (Object)adaptor.create(char_literal18);
+                    adaptor.addChild(root_0, char_literal18_tree);
+                    }
+
+                    }
+                    break;
+
+            }
+            } finally {dbg.exitSubRule(7);}
+
+            dbg.location(328,156);
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:328:156: ( action[actions_result] )
             dbg.enterAlt(1);
 
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:328:147: action[actions_result]
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:328:157: action[actions_result]
             {
-            dbg.location(328,147);
-            pushFollow(FOLLOW_action_in_rule1026);
-            action17=action(actions_result);
+            dbg.location(328,157);
+            pushFollow(FOLLOW_action_in_rule1046);
+            action19=action(actions_result);
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) adaptor.addChild(root_0, action17.getTree());
+            if ( state.backtracking==0 ) adaptor.addChild(root_0, action19.getTree());
 
             }
 
-            dbg.location(328,173);
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:328:173: (cb= callbacks )?
-            int alt6=2;
-            try { dbg.enterSubRule(6);
-            try { dbg.enterDecision(6);
+            dbg.location(328,183);
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:328:183: (cb= callbacks )?
+            int alt8=2;
+            try { dbg.enterSubRule(8);
+            try { dbg.enterDecision(8);
 
-            int LA6_0 = input.LA(1);
+            int LA8_0 = input.LA(1);
 
-            if ( (LA6_0==33) ) {
-                alt6=1;
+            if ( (LA8_0==33) ) {
+                alt8=1;
             }
-            } finally {dbg.exitDecision(6);}
+            } finally {dbg.exitDecision(8);}
 
-            switch (alt6) {
+            switch (alt8) {
                 case 1 :
                     dbg.enterAlt(1);
 
                     // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:0:0: cb= callbacks
                     {
-                    dbg.location(328,173);
-                    pushFollow(FOLLOW_callbacks_in_rule1032);
+                    dbg.location(328,183);
+                    pushFollow(FOLLOW_callbacks_in_rule1052);
                     cb=callbacks();
 
                     state._fsp--;
@@ -1439,29 +1510,65 @@ public class RuleSet2Parser extends DebugParser {
                     break;
 
             }
-            } finally {dbg.exitSubRule(6);}
+            } finally {dbg.exitSubRule(8);}
 
-            dbg.location(328,190);
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:328:190: (postb= post_block )?
-            int alt7=2;
-            try { dbg.enterSubRule(7);
-            try { dbg.enterDecision(7);
+            dbg.location(328,195);
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:328:195: ( ';' )?
+            int alt9=2;
+            try { dbg.enterSubRule(9);
+            try { dbg.enterDecision(9);
 
-            int LA7_0 = input.LA(1);
+            int LA9_0 = input.LA(1);
 
-            if ( (LA7_0==VAR) ) {
-                alt7=1;
+            if ( (LA9_0==31) ) {
+                int LA9_1 = input.LA(2);
+
+                if ( (synpred23_RuleSet2()) ) {
+                    alt9=1;
+                }
             }
-            } finally {dbg.exitDecision(7);}
+            } finally {dbg.exitDecision(9);}
 
-            switch (alt7) {
+            switch (alt9) {
+                case 1 :
+                    dbg.enterAlt(1);
+
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:0:0: ';'
+                    {
+                    dbg.location(328,195);
+                    char_literal20=(Token)match(input,31,FOLLOW_31_in_rule1055); if (state.failed) return retval;
+                    if ( state.backtracking==0 ) {
+                    char_literal20_tree = (Object)adaptor.create(char_literal20);
+                    adaptor.addChild(root_0, char_literal20_tree);
+                    }
+
+                    }
+                    break;
+
+            }
+            } finally {dbg.exitSubRule(9);}
+
+            dbg.location(328,205);
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:328:205: (postb= post_block )?
+            int alt10=2;
+            try { dbg.enterSubRule(10);
+            try { dbg.enterDecision(10);
+
+            int LA10_0 = input.LA(1);
+
+            if ( (LA10_0==VAR) ) {
+                alt10=1;
+            }
+            } finally {dbg.exitDecision(10);}
+
+            switch (alt10) {
                 case 1 :
                     dbg.enterAlt(1);
 
                     // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:0:0: postb= post_block
                     {
-                    dbg.location(328,190);
-                    pushFollow(FOLLOW_post_block_in_rule1037);
+                    dbg.location(328,205);
+                    pushFollow(FOLLOW_post_block_in_rule1060);
                     postb=post_block();
 
                     state._fsp--;
@@ -1472,13 +1579,45 @@ public class RuleSet2Parser extends DebugParser {
                     break;
 
             }
-            } finally {dbg.exitSubRule(7);}
+            } finally {dbg.exitSubRule(10);}
+
+            dbg.location(328,218);
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:328:218: ( ';' )?
+            int alt11=2;
+            try { dbg.enterSubRule(11);
+            try { dbg.enterDecision(11);
+
+            int LA11_0 = input.LA(1);
+
+            if ( (LA11_0==31) ) {
+                alt11=1;
+            }
+            } finally {dbg.exitDecision(11);}
+
+            switch (alt11) {
+                case 1 :
+                    dbg.enterAlt(1);
+
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:0:0: ';'
+                    {
+                    dbg.location(328,218);
+                    char_literal21=(Token)match(input,31,FOLLOW_31_in_rule1063); if (state.failed) return retval;
+                    if ( state.backtracking==0 ) {
+                    char_literal21_tree = (Object)adaptor.create(char_literal21);
+                    adaptor.addChild(root_0, char_literal21_tree);
+                    }
+
+                    }
+                    break;
+
+            }
+            } finally {dbg.exitSubRule(11);}
 
             dbg.location(329,3);
-            char_literal18=(Token)match(input,30,FOLLOW_30_in_rule1042); if (state.failed) return retval;
+            char_literal22=(Token)match(input,30,FOLLOW_30_in_rule1068); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            char_literal18_tree = (Object)adaptor.create(char_literal18);
-            adaptor.addChild(root_0, char_literal18_tree);
+            char_literal22_tree = (Object)adaptor.create(char_literal22);
+            adaptor.addChild(root_0, char_literal22_tree);
             }
             dbg.location(329,7);
             if ( state.backtracking==0 ) {
@@ -1486,7 +1625,7 @@ public class RuleSet2Parser extends DebugParser {
               			HashMap tmp = new HashMap();
               			HashMap cond = new HashMap();
               			cond.put("val","true");
-              			cond.put("type","bool"); 
+              			cond.put("type","bool");  
               		 	
               			if(actions_result.get("cond") != null)
               		 	{
@@ -1571,10 +1710,10 @@ public class RuleSet2Parser extends DebugParser {
 
         Object root_0 = null;
 
-        Token char_literal19=null;
-        Token char_literal20=null;
-        Token char_literal21=null;
-        Token char_literal22=null;
+        Token char_literal23=null;
+        Token char_literal24=null;
+        Token char_literal25=null;
+        Token char_literal26=null;
         RuleSet2Parser.must_be_one_return typ = null;
 
         RuleSet2Parser.post_statement_return p1 = null;
@@ -1584,10 +1723,10 @@ public class RuleSet2Parser extends DebugParser {
         RuleSet2Parser.post_alternate_return alt = null;
 
 
-        Object char_literal19_tree=null;
-        Object char_literal20_tree=null;
-        Object char_literal21_tree=null;
-        Object char_literal22_tree=null;
+        Object char_literal23_tree=null;
+        Object char_literal24_tree=null;
+        Object char_literal25_tree=null;
+        Object char_literal26_tree=null;
 
 
         	ArrayList temp_list = new ArrayList();
@@ -1606,20 +1745,20 @@ public class RuleSet2Parser extends DebugParser {
             root_0 = (Object)adaptor.nil();
 
             dbg.location(381,5);
-            pushFollow(FOLLOW_must_be_one_in_post_block1073);
+            pushFollow(FOLLOW_must_be_one_in_post_block1099);
             typ=must_be_one(sar("fired","always","notfired"));
 
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, typ.getTree());
             dbg.location(381,52);
-            char_literal19=(Token)match(input,29,FOLLOW_29_in_post_block1076); if (state.failed) return retval;
+            char_literal23=(Token)match(input,29,FOLLOW_29_in_post_block1102); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            char_literal19_tree = (Object)adaptor.create(char_literal19);
-            adaptor.addChild(root_0, char_literal19_tree);
+            char_literal23_tree = (Object)adaptor.create(char_literal23);
+            adaptor.addChild(root_0, char_literal23_tree);
             }
             dbg.location(382,5);
-            pushFollow(FOLLOW_post_statement_in_post_block1083);
+            pushFollow(FOLLOW_post_statement_in_post_block1109);
             p1=post_statement();
 
             state._fsp--;
@@ -1631,42 +1770,42 @@ public class RuleSet2Parser extends DebugParser {
             }
             dbg.location(382,51);
             // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:382:51: ( ';' p2= post_statement )*
-            try { dbg.enterSubRule(8);
+            try { dbg.enterSubRule(12);
 
-            loop8:
+            loop12:
             do {
-                int alt8=2;
-                try { dbg.enterDecision(8);
+                int alt12=2;
+                try { dbg.enterDecision(12);
 
-                int LA8_0 = input.LA(1);
+                int LA12_0 = input.LA(1);
 
-                if ( (LA8_0==31) ) {
-                    int LA8_1 = input.LA(2);
+                if ( (LA12_0==31) ) {
+                    int LA12_1 = input.LA(2);
 
-                    if ( (LA8_1==VAR||LA8_1==39||(LA8_1>=41 && LA8_1<=43)||(LA8_1>=112 && LA8_1<=113)) ) {
-                        alt8=1;
+                    if ( (LA12_1==VAR||(LA12_1>=40 && LA12_1<=41)||(LA12_1>=107 && LA12_1<=108)) ) {
+                        alt12=1;
                     }
 
 
                 }
 
 
-                } finally {dbg.exitDecision(8);}
+                } finally {dbg.exitDecision(12);}
 
-                switch (alt8) {
+                switch (alt12) {
             	case 1 :
             	    dbg.enterAlt(1);
 
             	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:382:52: ';' p2= post_statement
             	    {
             	    dbg.location(382,52);
-            	    char_literal20=(Token)match(input,31,FOLLOW_31_in_post_block1088); if (state.failed) return retval;
+            	    char_literal24=(Token)match(input,31,FOLLOW_31_in_post_block1114); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
-            	    char_literal20_tree = (Object)adaptor.create(char_literal20);
-            	    adaptor.addChild(root_0, char_literal20_tree);
+            	    char_literal24_tree = (Object)adaptor.create(char_literal24);
+            	    adaptor.addChild(root_0, char_literal24_tree);
             	    }
             	    dbg.location(382,58);
-            	    pushFollow(FOLLOW_post_statement_in_post_block1092);
+            	    pushFollow(FOLLOW_post_statement_in_post_block1118);
             	    p2=post_statement();
 
             	    state._fsp--;
@@ -1681,44 +1820,44 @@ public class RuleSet2Parser extends DebugParser {
             	    break;
 
             	default :
-            	    break loop8;
+            	    break loop12;
                 }
             } while (true);
-            } finally {dbg.exitSubRule(8);}
+            } finally {dbg.exitSubRule(12);}
 
             dbg.location(382,108);
-            char_literal21=(Token)match(input,31,FOLLOW_31_in_post_block1100); if (state.failed) return retval;
+            char_literal25=(Token)match(input,31,FOLLOW_31_in_post_block1126); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            char_literal21_tree = (Object)adaptor.create(char_literal21);
-            adaptor.addChild(root_0, char_literal21_tree);
+            char_literal25_tree = (Object)adaptor.create(char_literal25);
+            adaptor.addChild(root_0, char_literal25_tree);
             }
             dbg.location(382,112);
-            char_literal22=(Token)match(input,30,FOLLOW_30_in_post_block1102); if (state.failed) return retval;
+            char_literal26=(Token)match(input,30,FOLLOW_30_in_post_block1128); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            char_literal22_tree = (Object)adaptor.create(char_literal22);
-            adaptor.addChild(root_0, char_literal22_tree);
+            char_literal26_tree = (Object)adaptor.create(char_literal26);
+            adaptor.addChild(root_0, char_literal26_tree);
             }
             dbg.location(383,6);
             // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:383:6: (alt= post_alternate )?
-            int alt9=2;
-            try { dbg.enterSubRule(9);
-            try { dbg.enterDecision(9);
+            int alt13=2;
+            try { dbg.enterSubRule(13);
+            try { dbg.enterDecision(13);
 
-            int LA9_0 = input.LA(1);
+            int LA13_0 = input.LA(1);
 
-            if ( (LA9_0==VAR) ) {
-                alt9=1;
+            if ( (LA13_0==VAR) ) {
+                alt13=1;
             }
-            } finally {dbg.exitDecision(9);}
+            } finally {dbg.exitDecision(13);}
 
-            switch (alt9) {
+            switch (alt13) {
                 case 1 :
                     dbg.enterAlt(1);
 
                     // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:0:0: alt= post_alternate
                     {
                     dbg.location(383,6);
-                    pushFollow(FOLLOW_post_alternate_in_post_block1109);
+                    pushFollow(FOLLOW_post_alternate_in_post_block1135);
                     alt=post_alternate();
 
                     state._fsp--;
@@ -1729,7 +1868,7 @@ public class RuleSet2Parser extends DebugParser {
                     break;
 
             }
-            } finally {dbg.exitSubRule(9);}
+            } finally {dbg.exitSubRule(13);}
 
             dbg.location(383,23);
             if ( state.backtracking==0 ) {
@@ -1791,21 +1930,21 @@ public class RuleSet2Parser extends DebugParser {
 
         Object root_0 = null;
 
-        Token char_literal24=null;
-        Token char_literal25=null;
-        Token char_literal26=null;
-        Token char_literal27=null;
+        Token char_literal28=null;
+        Token char_literal29=null;
+        Token char_literal30=null;
+        Token char_literal31=null;
         RuleSet2Parser.post_statement_return p = null;
 
         RuleSet2Parser.post_statement_return p1 = null;
 
-        RuleSet2Parser.must_be_return must_be23 = null;
+        RuleSet2Parser.must_be_return must_be27 = null;
 
 
-        Object char_literal24_tree=null;
-        Object char_literal25_tree=null;
-        Object char_literal26_tree=null;
-        Object char_literal27_tree=null;
+        Object char_literal28_tree=null;
+        Object char_literal29_tree=null;
+        Object char_literal30_tree=null;
+        Object char_literal31_tree=null;
 
 
         	ArrayList temp_array = new ArrayList();
@@ -1824,39 +1963,39 @@ public class RuleSet2Parser extends DebugParser {
             root_0 = (Object)adaptor.nil();
 
             dbg.location(402,3);
-            pushFollow(FOLLOW_must_be_in_post_alternate1135);
-            must_be23=must_be("else");
+            pushFollow(FOLLOW_must_be_in_post_alternate1161);
+            must_be27=must_be("else");
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) adaptor.addChild(root_0, must_be23.getTree());
+            if ( state.backtracking==0 ) adaptor.addChild(root_0, must_be27.getTree());
             dbg.location(402,19);
-            char_literal24=(Token)match(input,29,FOLLOW_29_in_post_alternate1138); if (state.failed) return retval;
+            char_literal28=(Token)match(input,29,FOLLOW_29_in_post_alternate1164); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            char_literal24_tree = (Object)adaptor.create(char_literal24);
-            adaptor.addChild(root_0, char_literal24_tree);
+            char_literal28_tree = (Object)adaptor.create(char_literal28);
+            adaptor.addChild(root_0, char_literal28_tree);
             }
             dbg.location(402,23);
             // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:402:23: (p= post_statement ( ';' p1= post_statement )* )?
-            int alt11=2;
-            try { dbg.enterSubRule(11);
-            try { dbg.enterDecision(11);
+            int alt15=2;
+            try { dbg.enterSubRule(15);
+            try { dbg.enterDecision(15);
 
-            int LA11_0 = input.LA(1);
+            int LA15_0 = input.LA(1);
 
-            if ( (LA11_0==VAR||LA11_0==39||(LA11_0>=41 && LA11_0<=43)||(LA11_0>=112 && LA11_0<=113)) ) {
-                alt11=1;
+            if ( (LA15_0==VAR||(LA15_0>=40 && LA15_0<=41)||(LA15_0>=107 && LA15_0<=108)) ) {
+                alt15=1;
             }
-            } finally {dbg.exitDecision(11);}
+            } finally {dbg.exitDecision(15);}
 
-            switch (alt11) {
+            switch (alt15) {
                 case 1 :
                     dbg.enterAlt(1);
 
                     // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:402:24: p= post_statement ( ';' p1= post_statement )*
                     {
                     dbg.location(402,25);
-                    pushFollow(FOLLOW_post_statement_in_post_alternate1143);
+                    pushFollow(FOLLOW_post_statement_in_post_alternate1169);
                     p=post_statement();
 
                     state._fsp--;
@@ -1868,42 +2007,42 @@ public class RuleSet2Parser extends DebugParser {
                     }
                     dbg.location(402,70);
                     // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:402:70: ( ';' p1= post_statement )*
-                    try { dbg.enterSubRule(10);
+                    try { dbg.enterSubRule(14);
 
-                    loop10:
+                    loop14:
                     do {
-                        int alt10=2;
-                        try { dbg.enterDecision(10);
+                        int alt14=2;
+                        try { dbg.enterDecision(14);
 
-                        int LA10_0 = input.LA(1);
+                        int LA14_0 = input.LA(1);
 
-                        if ( (LA10_0==31) ) {
-                            int LA10_1 = input.LA(2);
+                        if ( (LA14_0==31) ) {
+                            int LA14_1 = input.LA(2);
 
-                            if ( (LA10_1==VAR||LA10_1==39||(LA10_1>=41 && LA10_1<=43)||(LA10_1>=112 && LA10_1<=113)) ) {
-                                alt10=1;
+                            if ( (LA14_1==VAR||(LA14_1>=40 && LA14_1<=41)||(LA14_1>=107 && LA14_1<=108)) ) {
+                                alt14=1;
                             }
 
 
                         }
 
 
-                        } finally {dbg.exitDecision(10);}
+                        } finally {dbg.exitDecision(14);}
 
-                        switch (alt10) {
+                        switch (alt14) {
                     	case 1 :
                     	    dbg.enterAlt(1);
 
                     	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:402:71: ';' p1= post_statement
                     	    {
                     	    dbg.location(402,71);
-                    	    char_literal25=(Token)match(input,31,FOLLOW_31_in_post_alternate1148); if (state.failed) return retval;
+                    	    char_literal29=(Token)match(input,31,FOLLOW_31_in_post_alternate1174); if (state.failed) return retval;
                     	    if ( state.backtracking==0 ) {
-                    	    char_literal25_tree = (Object)adaptor.create(char_literal25);
-                    	    adaptor.addChild(root_0, char_literal25_tree);
+                    	    char_literal29_tree = (Object)adaptor.create(char_literal29);
+                    	    adaptor.addChild(root_0, char_literal29_tree);
                     	    }
                     	    dbg.location(402,77);
-                    	    pushFollow(FOLLOW_post_statement_in_post_alternate1152);
+                    	    pushFollow(FOLLOW_post_statement_in_post_alternate1178);
                     	    p1=post_statement();
 
                     	    state._fsp--;
@@ -1918,55 +2057,55 @@ public class RuleSet2Parser extends DebugParser {
                     	    break;
 
                     	default :
-                    	    break loop10;
+                    	    break loop14;
                         }
                     } while (true);
-                    } finally {dbg.exitSubRule(10);}
+                    } finally {dbg.exitSubRule(14);}
 
 
                     }
                     break;
 
             }
-            } finally {dbg.exitSubRule(11);}
+            } finally {dbg.exitSubRule(15);}
 
             dbg.location(402,127);
             // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:402:127: ( ';' )?
-            int alt12=2;
-            try { dbg.enterSubRule(12);
-            try { dbg.enterDecision(12);
+            int alt16=2;
+            try { dbg.enterSubRule(16);
+            try { dbg.enterDecision(16);
 
-            int LA12_0 = input.LA(1);
+            int LA16_0 = input.LA(1);
 
-            if ( (LA12_0==31) ) {
-                alt12=1;
+            if ( (LA16_0==31) ) {
+                alt16=1;
             }
-            } finally {dbg.exitDecision(12);}
+            } finally {dbg.exitDecision(16);}
 
-            switch (alt12) {
+            switch (alt16) {
                 case 1 :
                     dbg.enterAlt(1);
 
                     // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:0:0: ';'
                     {
                     dbg.location(402,127);
-                    char_literal26=(Token)match(input,31,FOLLOW_31_in_post_alternate1160); if (state.failed) return retval;
+                    char_literal30=(Token)match(input,31,FOLLOW_31_in_post_alternate1186); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    char_literal26_tree = (Object)adaptor.create(char_literal26);
-                    adaptor.addChild(root_0, char_literal26_tree);
+                    char_literal30_tree = (Object)adaptor.create(char_literal30);
+                    adaptor.addChild(root_0, char_literal30_tree);
                     }
 
                     }
                     break;
 
             }
-            } finally {dbg.exitSubRule(12);}
+            } finally {dbg.exitSubRule(16);}
 
             dbg.location(402,132);
-            char_literal27=(Token)match(input,30,FOLLOW_30_in_post_alternate1163); if (state.failed) return retval;
+            char_literal31=(Token)match(input,30,FOLLOW_30_in_post_alternate1189); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            char_literal27_tree = (Object)adaptor.create(char_literal27);
-            adaptor.addChild(root_0, char_literal27_tree);
+            char_literal31_tree = (Object)adaptor.create(char_literal31);
+            adaptor.addChild(root_0, char_literal31_tree);
             }
             dbg.location(402,136);
             if ( state.backtracking==0 ) {
@@ -2020,7 +2159,7 @@ public class RuleSet2Parser extends DebugParser {
 
         Object root_0 = null;
 
-        Token string_literal28=null;
+        Token string_literal32=null;
         RuleSet2Parser.persistent_expr_return pe = null;
 
         RuleSet2Parser.raise_statement_return rs = null;
@@ -2032,7 +2171,7 @@ public class RuleSet2Parser extends DebugParser {
         RuleSet2Parser.expr_return ie = null;
 
 
-        Object string_literal28_tree=null;
+        Object string_literal32_tree=null;
 
         try { dbg.enterRule(getGrammarFileName(), "post_statement");
         if ( getRuleLevel()==0 ) {dbg.commence();}
@@ -2055,93 +2194,28 @@ public class RuleSet2Parser extends DebugParser {
             {
             dbg.location(407,5);
             // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:407:5: (pe= persistent_expr | rs= raise_statement | l= log_statement | las= must_be[\"last\"] )
-            int alt13=4;
-            try { dbg.enterSubRule(13);
-            try { dbg.enterDecision(13);
+            int alt17=4;
+            try { dbg.enterSubRule(17);
+            try { dbg.enterDecision(17);
 
-            int LA13_0 = input.LA(1);
-
-            if ( (LA13_0==39||(LA13_0>=41 && LA13_0<=43)||(LA13_0>=112 && LA13_0<=113)) ) {
-                alt13=1;
+            try {
+                isCyclicDecision = true;
+                alt17 = dfa17.predict(input);
             }
-            else if ( (LA13_0==VAR) ) {
-                switch ( input.LA(2) ) {
-                case INT:
-                case FLOAT:
-                case STRING:
-                case REGEXP:
-                case 29:
-                case 50:
-                case 61:
-                case 75:
-                case 82:
-                case 106:
-                case 107:
-                case 108:
-                case 110:
-                case 111:
-                case 112:
-                case 113:
-                    {
-                    alt13=3;
-                    }
-                    break;
-                case VAR:
-                    {
-                    int LA13_4 = input.LA(3);
-
-                    if ( (LA13_4==EOF||(LA13_4>=18 && LA13_4<=28)||(LA13_4>=30 && LA13_4<=32)||LA13_4==40||(LA13_4>=49 && LA13_4<=50)||(LA13_4>=77 && LA13_4<=81)||(LA13_4>=84 && LA13_4<=105)||LA13_4==108) ) {
-                        alt13=3;
-                    }
-                    else if ( (LA13_4==VAR) ) {
-                        alt13=2;
-                    }
-                    else {
-                        if (state.backtracking>0) {state.failed=true; return retval;}
-                        NoViableAltException nvae =
-                            new NoViableAltException("", 13, 4, input);
-
-                        dbg.recognitionException(nvae);
-                        throw nvae;
-                    }
-                    }
-                    break;
-                case EOF:
-                case 30:
-                case 31:
-                case 32:
-                    {
-                    alt13=4;
-                    }
-                    break;
-                default:
-                    if (state.backtracking>0) {state.failed=true; return retval;}
-                    NoViableAltException nvae =
-                        new NoViableAltException("", 13, 2, input);
-
-                    dbg.recognitionException(nvae);
-                    throw nvae;
-                }
-
-            }
-            else {
-                if (state.backtracking>0) {state.failed=true; return retval;}
-                NoViableAltException nvae =
-                    new NoViableAltException("", 13, 0, input);
-
+            catch (NoViableAltException nvae) {
                 dbg.recognitionException(nvae);
                 throw nvae;
             }
-            } finally {dbg.exitDecision(13);}
+            } finally {dbg.exitDecision(17);}
 
-            switch (alt13) {
+            switch (alt17) {
                 case 1 :
                     dbg.enterAlt(1);
 
                     // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:407:6: pe= persistent_expr
                     {
                     dbg.location(407,8);
-                    pushFollow(FOLLOW_persistent_expr_in_post_statement1181);
+                    pushFollow(FOLLOW_persistent_expr_in_post_statement1207);
                     pe=persistent_expr();
 
                     state._fsp--;
@@ -2156,7 +2230,7 @@ public class RuleSet2Parser extends DebugParser {
                     // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:408:6: rs= raise_statement
                     {
                     dbg.location(408,8);
-                    pushFollow(FOLLOW_raise_statement_in_post_statement1191);
+                    pushFollow(FOLLOW_raise_statement_in_post_statement1217);
                     rs=raise_statement();
 
                     state._fsp--;
@@ -2171,7 +2245,7 @@ public class RuleSet2Parser extends DebugParser {
                     // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:409:4: l= log_statement
                     {
                     dbg.location(409,5);
-                    pushFollow(FOLLOW_log_statement_in_post_statement1198);
+                    pushFollow(FOLLOW_log_statement_in_post_statement1224);
                     l=log_statement();
 
                     state._fsp--;
@@ -2186,7 +2260,7 @@ public class RuleSet2Parser extends DebugParser {
                     // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:410:4: las= must_be[\"last\"]
                     {
                     dbg.location(410,7);
-                    pushFollow(FOLLOW_must_be_in_post_statement1208);
+                    pushFollow(FOLLOW_must_be_in_post_statement1234);
                     las=must_be("last");
 
                     state._fsp--;
@@ -2197,35 +2271,35 @@ public class RuleSet2Parser extends DebugParser {
                     break;
 
             }
-            } finally {dbg.exitSubRule(13);}
+            } finally {dbg.exitSubRule(17);}
 
             dbg.location(411,2);
             // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:411:2: ( 'if' ie= expr )?
-            int alt14=2;
-            try { dbg.enterSubRule(14);
-            try { dbg.enterDecision(14);
+            int alt18=2;
+            try { dbg.enterSubRule(18);
+            try { dbg.enterDecision(18);
 
-            int LA14_0 = input.LA(1);
+            int LA18_0 = input.LA(1);
 
-            if ( (LA14_0==32) ) {
-                alt14=1;
+            if ( (LA18_0==32) ) {
+                alt18=1;
             }
-            } finally {dbg.exitDecision(14);}
+            } finally {dbg.exitDecision(18);}
 
-            switch (alt14) {
+            switch (alt18) {
                 case 1 :
                     dbg.enterAlt(1);
 
                     // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:411:3: 'if' ie= expr
                     {
                     dbg.location(411,3);
-                    string_literal28=(Token)match(input,32,FOLLOW_32_in_post_statement1214); if (state.failed) return retval;
+                    string_literal32=(Token)match(input,32,FOLLOW_32_in_post_statement1240); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    string_literal28_tree = (Object)adaptor.create(string_literal28);
-                    adaptor.addChild(root_0, string_literal28_tree);
+                    string_literal32_tree = (Object)adaptor.create(string_literal32);
+                    adaptor.addChild(root_0, string_literal32_tree);
                     }
                     dbg.location(411,10);
-                    pushFollow(FOLLOW_expr_in_post_statement1218);
+                    pushFollow(FOLLOW_expr_in_post_statement1244);
                     ie=expr();
 
                     state._fsp--;
@@ -2236,7 +2310,7 @@ public class RuleSet2Parser extends DebugParser {
                     break;
 
             }
-            } finally {dbg.exitSubRule(14);}
+            } finally {dbg.exitSubRule(18);}
 
 
             }
@@ -2318,11 +2392,11 @@ public class RuleSet2Parser extends DebugParser {
 
         RuleSet2Parser.modifier_clause_return m = null;
 
-        RuleSet2Parser.must_be_return must_be29 = null;
+        RuleSet2Parser.must_be_return must_be33 = null;
 
-        RuleSet2Parser.must_be_return must_be30 = null;
+        RuleSet2Parser.must_be_return must_be34 = null;
 
-        RuleSet2Parser.must_be_return must_be31 = null;
+        RuleSet2Parser.must_be_return must_be35 = null;
 
 
         Object evt_tree=null;
@@ -2341,53 +2415,53 @@ public class RuleSet2Parser extends DebugParser {
             root_0 = (Object)adaptor.nil();
 
             dbg.location(439,2);
-            pushFollow(FOLLOW_must_be_in_raise_statement1243);
-            must_be29=must_be("raise");
+            pushFollow(FOLLOW_must_be_in_raise_statement1269);
+            must_be33=must_be("raise");
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) adaptor.addChild(root_0, must_be29.getTree());
+            if ( state.backtracking==0 ) adaptor.addChild(root_0, must_be33.getTree());
             dbg.location(439,19);
-            pushFollow(FOLLOW_must_be_in_raise_statement1246);
-            must_be30=must_be("explicit");
+            pushFollow(FOLLOW_must_be_in_raise_statement1272);
+            must_be34=must_be("explicit");
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) adaptor.addChild(root_0, must_be30.getTree());
+            if ( state.backtracking==0 ) adaptor.addChild(root_0, must_be34.getTree());
             dbg.location(439,39);
-            pushFollow(FOLLOW_must_be_in_raise_statement1249);
-            must_be31=must_be("event");
+            pushFollow(FOLLOW_must_be_in_raise_statement1275);
+            must_be35=must_be("event");
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) adaptor.addChild(root_0, must_be31.getTree());
+            if ( state.backtracking==0 ) adaptor.addChild(root_0, must_be35.getTree());
             dbg.location(439,60);
-            evt=(Token)match(input,VAR,FOLLOW_VAR_in_raise_statement1255); if (state.failed) return retval;
+            evt=(Token)match(input,VAR,FOLLOW_VAR_in_raise_statement1281); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
             evt_tree = (Object)adaptor.create(evt);
             adaptor.addChild(root_0, evt_tree);
             }
             dbg.location(439,66);
             // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:439:66: (f= for_clause )?
-            int alt15=2;
-            try { dbg.enterSubRule(15);
-            try { dbg.enterDecision(15);
+            int alt19=2;
+            try { dbg.enterSubRule(19);
+            try { dbg.enterDecision(19);
 
-            int LA15_0 = input.LA(1);
+            int LA19_0 = input.LA(1);
 
-            if ( (LA15_0==47) ) {
-                alt15=1;
+            if ( (LA19_0==45) ) {
+                alt19=1;
             }
-            } finally {dbg.exitDecision(15);}
+            } finally {dbg.exitDecision(19);}
 
-            switch (alt15) {
+            switch (alt19) {
                 case 1 :
                     dbg.enterAlt(1);
 
                     // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:0:0: f= for_clause
                     {
                     dbg.location(439,66);
-                    pushFollow(FOLLOW_for_clause_in_raise_statement1259);
+                    pushFollow(FOLLOW_for_clause_in_raise_statement1285);
                     f=for_clause();
 
                     state._fsp--;
@@ -2398,29 +2472,29 @@ public class RuleSet2Parser extends DebugParser {
                     break;
 
             }
-            } finally {dbg.exitSubRule(15);}
+            } finally {dbg.exitSubRule(19);}
 
             dbg.location(439,80);
             // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:439:80: (m= modifier_clause )?
-            int alt16=2;
-            try { dbg.enterSubRule(16);
-            try { dbg.enterDecision(16);
+            int alt20=2;
+            try { dbg.enterSubRule(20);
+            try { dbg.enterDecision(20);
 
-            int LA16_0 = input.LA(1);
+            int LA20_0 = input.LA(1);
 
-            if ( (LA16_0==44) ) {
-                alt16=1;
+            if ( (LA20_0==42) ) {
+                alt20=1;
             }
-            } finally {dbg.exitDecision(16);}
+            } finally {dbg.exitDecision(20);}
 
-            switch (alt16) {
+            switch (alt20) {
                 case 1 :
                     dbg.enterAlt(1);
 
                     // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:0:0: m= modifier_clause
                     {
                     dbg.location(439,80);
-                    pushFollow(FOLLOW_modifier_clause_in_raise_statement1264);
+                    pushFollow(FOLLOW_modifier_clause_in_raise_statement1290);
                     m=modifier_clause();
 
                     state._fsp--;
@@ -2431,7 +2505,7 @@ public class RuleSet2Parser extends DebugParser {
                     break;
 
             }
-            } finally {dbg.exitSubRule(16);}
+            } finally {dbg.exitSubRule(20);}
 
             dbg.location(439,98);
             if ( state.backtracking==0 ) {
@@ -2497,7 +2571,7 @@ public class RuleSet2Parser extends DebugParser {
 
         RuleSet2Parser.expr_return e = null;
 
-        RuleSet2Parser.must_be_return must_be32 = null;
+        RuleSet2Parser.must_be_return must_be36 = null;
 
 
 
@@ -2515,14 +2589,14 @@ public class RuleSet2Parser extends DebugParser {
             root_0 = (Object)adaptor.nil();
 
             dbg.location(456,2);
-            pushFollow(FOLLOW_must_be_in_log_statement1284);
-            must_be32=must_be("log");
+            pushFollow(FOLLOW_must_be_in_log_statement1310);
+            must_be36=must_be("log");
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) adaptor.addChild(root_0, must_be32.getTree());
+            if ( state.backtracking==0 ) adaptor.addChild(root_0, must_be36.getTree());
             dbg.location(456,19);
-            pushFollow(FOLLOW_expr_in_log_statement1290);
+            pushFollow(FOLLOW_expr_in_log_statement1316);
             e=expr();
 
             state._fsp--;
@@ -2583,17 +2657,17 @@ public class RuleSet2Parser extends DebugParser {
 
         Object root_0 = null;
 
-        Token string_literal33=null;
-        Token char_literal34=null;
-        Token char_literal35=null;
+        Token string_literal37=null;
+        Token char_literal38=null;
+        Token char_literal39=null;
         RuleSet2Parser.success_return s = null;
 
         RuleSet2Parser.failure_return f = null;
 
 
-        Object string_literal33_tree=null;
-        Object char_literal34_tree=null;
-        Object char_literal35_tree=null;
+        Object string_literal37_tree=null;
+        Object char_literal38_tree=null;
+        Object char_literal39_tree=null;
 
         try { dbg.enterRule(getGrammarFileName(), "callbacks");
         if ( getRuleLevel()==0 ) {dbg.commence();}
@@ -2609,38 +2683,38 @@ public class RuleSet2Parser extends DebugParser {
             root_0 = (Object)adaptor.nil();
 
             dbg.location(467,2);
-            string_literal33=(Token)match(input,33,FOLLOW_33_in_callbacks1310); if (state.failed) return retval;
+            string_literal37=(Token)match(input,33,FOLLOW_33_in_callbacks1336); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            string_literal33_tree = (Object)adaptor.create(string_literal33);
-            adaptor.addChild(root_0, string_literal33_tree);
+            string_literal37_tree = (Object)adaptor.create(string_literal37);
+            adaptor.addChild(root_0, string_literal37_tree);
             }
             dbg.location(467,14);
-            char_literal34=(Token)match(input,29,FOLLOW_29_in_callbacks1312); if (state.failed) return retval;
+            char_literal38=(Token)match(input,29,FOLLOW_29_in_callbacks1338); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            char_literal34_tree = (Object)adaptor.create(char_literal34);
-            adaptor.addChild(root_0, char_literal34_tree);
+            char_literal38_tree = (Object)adaptor.create(char_literal38);
+            adaptor.addChild(root_0, char_literal38_tree);
             }
             dbg.location(467,19);
             // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:467:19: (s= success )?
-            int alt17=2;
-            try { dbg.enterSubRule(17);
-            try { dbg.enterDecision(17);
+            int alt21=2;
+            try { dbg.enterSubRule(21);
+            try { dbg.enterDecision(21);
 
-            int LA17_0 = input.LA(1);
+            int LA21_0 = input.LA(1);
 
-            if ( (LA17_0==34) ) {
-                alt17=1;
+            if ( (LA21_0==34) ) {
+                alt21=1;
             }
-            } finally {dbg.exitDecision(17);}
+            } finally {dbg.exitDecision(21);}
 
-            switch (alt17) {
+            switch (alt21) {
                 case 1 :
                     dbg.enterAlt(1);
 
                     // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:0:0: s= success
                     {
                     dbg.location(467,19);
-                    pushFollow(FOLLOW_success_in_callbacks1316);
+                    pushFollow(FOLLOW_success_in_callbacks1342);
                     s=success();
 
                     state._fsp--;
@@ -2651,29 +2725,29 @@ public class RuleSet2Parser extends DebugParser {
                     break;
 
             }
-            } finally {dbg.exitSubRule(17);}
+            } finally {dbg.exitSubRule(21);}
 
             dbg.location(467,30);
             // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:467:30: (f= failure )?
-            int alt18=2;
-            try { dbg.enterSubRule(18);
-            try { dbg.enterDecision(18);
+            int alt22=2;
+            try { dbg.enterSubRule(22);
+            try { dbg.enterDecision(22);
 
-            int LA18_0 = input.LA(1);
+            int LA22_0 = input.LA(1);
 
-            if ( (LA18_0==35) ) {
-                alt18=1;
+            if ( (LA22_0==35) ) {
+                alt22=1;
             }
-            } finally {dbg.exitDecision(18);}
+            } finally {dbg.exitDecision(22);}
 
-            switch (alt18) {
+            switch (alt22) {
                 case 1 :
                     dbg.enterAlt(1);
 
                     // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:0:0: f= failure
                     {
                     dbg.location(467,30);
-                    pushFollow(FOLLOW_failure_in_callbacks1321);
+                    pushFollow(FOLLOW_failure_in_callbacks1347);
                     f=failure();
 
                     state._fsp--;
@@ -2684,13 +2758,13 @@ public class RuleSet2Parser extends DebugParser {
                     break;
 
             }
-            } finally {dbg.exitSubRule(18);}
+            } finally {dbg.exitSubRule(22);}
 
             dbg.location(467,40);
-            char_literal35=(Token)match(input,30,FOLLOW_30_in_callbacks1324); if (state.failed) return retval;
+            char_literal39=(Token)match(input,30,FOLLOW_30_in_callbacks1350); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            char_literal35_tree = (Object)adaptor.create(char_literal35);
-            adaptor.addChild(root_0, char_literal35_tree);
+            char_literal39_tree = (Object)adaptor.create(char_literal39);
+            adaptor.addChild(root_0, char_literal39_tree);
             }
             dbg.location(467,44);
             if ( state.backtracking==0 ) {
@@ -2705,7 +2779,7 @@ public class RuleSet2Parser extends DebugParser {
               		{
               			tmp.put("failure",(f!=null?f.result:null));		
               		}
-              		retval.result = tmp;
+              		retval.result = tmp; 
               	
             }
 
@@ -2754,21 +2828,21 @@ public class RuleSet2Parser extends DebugParser {
 
         Object root_0 = null;
 
-        Token string_literal36=null;
-        Token char_literal37=null;
-        Token char_literal38=null;
-        Token char_literal39=null;
-        Token char_literal40=null;
+        Token string_literal40=null;
+        Token char_literal41=null;
+        Token char_literal42=null;
+        Token char_literal43=null;
+        Token char_literal44=null;
         RuleSet2Parser.click_return c = null;
 
         RuleSet2Parser.click_return c1 = null;
 
 
-        Object string_literal36_tree=null;
-        Object char_literal37_tree=null;
-        Object char_literal38_tree=null;
-        Object char_literal39_tree=null;
-        Object char_literal40_tree=null;
+        Object string_literal40_tree=null;
+        Object char_literal41_tree=null;
+        Object char_literal42_tree=null;
+        Object char_literal43_tree=null;
+        Object char_literal44_tree=null;
 
 
         	ArrayList tmp_list = new ArrayList();
@@ -2787,19 +2861,19 @@ public class RuleSet2Parser extends DebugParser {
             root_0 = (Object)adaptor.nil();
 
             dbg.location(486,4);
-            string_literal36=(Token)match(input,34,FOLLOW_34_in_success1347); if (state.failed) return retval;
+            string_literal40=(Token)match(input,34,FOLLOW_34_in_success1373); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            string_literal36_tree = (Object)adaptor.create(string_literal36);
-            adaptor.addChild(root_0, string_literal36_tree);
+            string_literal40_tree = (Object)adaptor.create(string_literal40);
+            adaptor.addChild(root_0, string_literal40_tree);
             }
             dbg.location(486,14);
-            char_literal37=(Token)match(input,29,FOLLOW_29_in_success1349); if (state.failed) return retval;
+            char_literal41=(Token)match(input,29,FOLLOW_29_in_success1375); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            char_literal37_tree = (Object)adaptor.create(char_literal37);
-            adaptor.addChild(root_0, char_literal37_tree);
+            char_literal41_tree = (Object)adaptor.create(char_literal41);
+            adaptor.addChild(root_0, char_literal41_tree);
             }
             dbg.location(486,19);
-            pushFollow(FOLLOW_click_in_success1353);
+            pushFollow(FOLLOW_click_in_success1379);
             c=click();
 
             state._fsp--;
@@ -2811,42 +2885,42 @@ public class RuleSet2Parser extends DebugParser {
             }
             dbg.location(486,54);
             // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:486:54: ( ';' c1= click )*
-            try { dbg.enterSubRule(19);
+            try { dbg.enterSubRule(23);
 
-            loop19:
+            loop23:
             do {
-                int alt19=2;
-                try { dbg.enterDecision(19);
+                int alt23=2;
+                try { dbg.enterDecision(23);
 
-                int LA19_0 = input.LA(1);
+                int LA23_0 = input.LA(1);
 
-                if ( (LA19_0==31) ) {
-                    int LA19_1 = input.LA(2);
+                if ( (LA23_0==31) ) {
+                    int LA23_1 = input.LA(2);
 
-                    if ( ((LA19_1>=36 && LA19_1<=37)) ) {
-                        alt19=1;
+                    if ( ((LA23_1>=36 && LA23_1<=37)) ) {
+                        alt23=1;
                     }
 
 
                 }
 
 
-                } finally {dbg.exitDecision(19);}
+                } finally {dbg.exitDecision(23);}
 
-                switch (alt19) {
+                switch (alt23) {
             	case 1 :
             	    dbg.enterAlt(1);
 
             	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:486:55: ';' c1= click
             	    {
             	    dbg.location(486,55);
-            	    char_literal38=(Token)match(input,31,FOLLOW_31_in_success1359); if (state.failed) return retval;
+            	    char_literal42=(Token)match(input,31,FOLLOW_31_in_success1385); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
-            	    char_literal38_tree = (Object)adaptor.create(char_literal38);
-            	    adaptor.addChild(root_0, char_literal38_tree);
+            	    char_literal42_tree = (Object)adaptor.create(char_literal42);
+            	    adaptor.addChild(root_0, char_literal42_tree);
             	    }
             	    dbg.location(486,61);
-            	    pushFollow(FOLLOW_click_in_success1363);
+            	    pushFollow(FOLLOW_click_in_success1389);
             	    c1=click();
 
             	    state._fsp--;
@@ -2861,48 +2935,48 @@ public class RuleSet2Parser extends DebugParser {
             	    break;
 
             	default :
-            	    break loop19;
+            	    break loop23;
                 }
             } while (true);
-            } finally {dbg.exitSubRule(19);}
+            } finally {dbg.exitSubRule(23);}
 
             dbg.location(486,99);
             // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:486:99: ( ';' )?
-            int alt20=2;
-            try { dbg.enterSubRule(20);
-            try { dbg.enterDecision(20);
+            int alt24=2;
+            try { dbg.enterSubRule(24);
+            try { dbg.enterDecision(24);
 
-            int LA20_0 = input.LA(1);
+            int LA24_0 = input.LA(1);
 
-            if ( (LA20_0==31) ) {
-                alt20=1;
+            if ( (LA24_0==31) ) {
+                alt24=1;
             }
-            } finally {dbg.exitDecision(20);}
+            } finally {dbg.exitDecision(24);}
 
-            switch (alt20) {
+            switch (alt24) {
                 case 1 :
                     dbg.enterAlt(1);
 
                     // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:0:0: ';'
                     {
                     dbg.location(486,99);
-                    char_literal39=(Token)match(input,31,FOLLOW_31_in_success1370); if (state.failed) return retval;
+                    char_literal43=(Token)match(input,31,FOLLOW_31_in_success1396); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    char_literal39_tree = (Object)adaptor.create(char_literal39);
-                    adaptor.addChild(root_0, char_literal39_tree);
+                    char_literal43_tree = (Object)adaptor.create(char_literal43);
+                    adaptor.addChild(root_0, char_literal43_tree);
                     }
 
                     }
                     break;
 
             }
-            } finally {dbg.exitSubRule(20);}
+            } finally {dbg.exitSubRule(24);}
 
             dbg.location(486,105);
-            char_literal40=(Token)match(input,30,FOLLOW_30_in_success1374); if (state.failed) return retval;
+            char_literal44=(Token)match(input,30,FOLLOW_30_in_success1400); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            char_literal40_tree = (Object)adaptor.create(char_literal40);
-            adaptor.addChild(root_0, char_literal40_tree);
+            char_literal44_tree = (Object)adaptor.create(char_literal44);
+            adaptor.addChild(root_0, char_literal44_tree);
             }
             dbg.location(486,109);
             if ( state.backtracking==0 ) {
@@ -2956,21 +3030,21 @@ public class RuleSet2Parser extends DebugParser {
 
         Object root_0 = null;
 
-        Token string_literal41=null;
-        Token char_literal42=null;
-        Token char_literal43=null;
-        Token char_literal44=null;
-        Token char_literal45=null;
+        Token string_literal45=null;
+        Token char_literal46=null;
+        Token char_literal47=null;
+        Token char_literal48=null;
+        Token char_literal49=null;
         RuleSet2Parser.click_return c = null;
 
         RuleSet2Parser.click_return c1 = null;
 
 
-        Object string_literal41_tree=null;
-        Object char_literal42_tree=null;
-        Object char_literal43_tree=null;
-        Object char_literal44_tree=null;
-        Object char_literal45_tree=null;
+        Object string_literal45_tree=null;
+        Object char_literal46_tree=null;
+        Object char_literal47_tree=null;
+        Object char_literal48_tree=null;
+        Object char_literal49_tree=null;
 
 
         	ArrayList tmp_list = new ArrayList();
@@ -2989,19 +3063,19 @@ public class RuleSet2Parser extends DebugParser {
             root_0 = (Object)adaptor.nil();
 
             dbg.location(496,2);
-            string_literal41=(Token)match(input,35,FOLLOW_35_in_failure1400); if (state.failed) return retval;
+            string_literal45=(Token)match(input,35,FOLLOW_35_in_failure1426); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            string_literal41_tree = (Object)adaptor.create(string_literal41);
-            adaptor.addChild(root_0, string_literal41_tree);
+            string_literal45_tree = (Object)adaptor.create(string_literal45);
+            adaptor.addChild(root_0, string_literal45_tree);
             }
             dbg.location(496,12);
-            char_literal42=(Token)match(input,29,FOLLOW_29_in_failure1402); if (state.failed) return retval;
+            char_literal46=(Token)match(input,29,FOLLOW_29_in_failure1428); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            char_literal42_tree = (Object)adaptor.create(char_literal42);
-            adaptor.addChild(root_0, char_literal42_tree);
+            char_literal46_tree = (Object)adaptor.create(char_literal46);
+            adaptor.addChild(root_0, char_literal46_tree);
             }
             dbg.location(496,17);
-            pushFollow(FOLLOW_click_in_failure1406);
+            pushFollow(FOLLOW_click_in_failure1432);
             c=click();
 
             state._fsp--;
@@ -3013,42 +3087,42 @@ public class RuleSet2Parser extends DebugParser {
             }
             dbg.location(496,52);
             // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:496:52: ( ';' c1= click )*
-            try { dbg.enterSubRule(21);
+            try { dbg.enterSubRule(25);
 
-            loop21:
+            loop25:
             do {
-                int alt21=2;
-                try { dbg.enterDecision(21);
+                int alt25=2;
+                try { dbg.enterDecision(25);
 
-                int LA21_0 = input.LA(1);
+                int LA25_0 = input.LA(1);
 
-                if ( (LA21_0==31) ) {
-                    int LA21_1 = input.LA(2);
+                if ( (LA25_0==31) ) {
+                    int LA25_1 = input.LA(2);
 
-                    if ( ((LA21_1>=36 && LA21_1<=37)) ) {
-                        alt21=1;
+                    if ( ((LA25_1>=36 && LA25_1<=37)) ) {
+                        alt25=1;
                     }
 
 
                 }
 
 
-                } finally {dbg.exitDecision(21);}
+                } finally {dbg.exitDecision(25);}
 
-                switch (alt21) {
+                switch (alt25) {
             	case 1 :
             	    dbg.enterAlt(1);
 
             	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:496:53: ';' c1= click
             	    {
             	    dbg.location(496,53);
-            	    char_literal43=(Token)match(input,31,FOLLOW_31_in_failure1412); if (state.failed) return retval;
+            	    char_literal47=(Token)match(input,31,FOLLOW_31_in_failure1438); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
-            	    char_literal43_tree = (Object)adaptor.create(char_literal43);
-            	    adaptor.addChild(root_0, char_literal43_tree);
+            	    char_literal47_tree = (Object)adaptor.create(char_literal47);
+            	    adaptor.addChild(root_0, char_literal47_tree);
             	    }
             	    dbg.location(496,59);
-            	    pushFollow(FOLLOW_click_in_failure1416);
+            	    pushFollow(FOLLOW_click_in_failure1442);
             	    c1=click();
 
             	    state._fsp--;
@@ -3063,48 +3137,48 @@ public class RuleSet2Parser extends DebugParser {
             	    break;
 
             	default :
-            	    break loop21;
+            	    break loop25;
                 }
             } while (true);
-            } finally {dbg.exitSubRule(21);}
+            } finally {dbg.exitSubRule(25);}
 
             dbg.location(496,98);
             // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:496:98: ( ';' )?
-            int alt22=2;
-            try { dbg.enterSubRule(22);
-            try { dbg.enterDecision(22);
+            int alt26=2;
+            try { dbg.enterSubRule(26);
+            try { dbg.enterDecision(26);
 
-            int LA22_0 = input.LA(1);
+            int LA26_0 = input.LA(1);
 
-            if ( (LA22_0==31) ) {
-                alt22=1;
+            if ( (LA26_0==31) ) {
+                alt26=1;
             }
-            } finally {dbg.exitDecision(22);}
+            } finally {dbg.exitDecision(26);}
 
-            switch (alt22) {
+            switch (alt26) {
                 case 1 :
                     dbg.enterAlt(1);
 
                     // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:0:0: ';'
                     {
                     dbg.location(496,98);
-                    char_literal44=(Token)match(input,31,FOLLOW_31_in_failure1424); if (state.failed) return retval;
+                    char_literal48=(Token)match(input,31,FOLLOW_31_in_failure1450); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    char_literal44_tree = (Object)adaptor.create(char_literal44);
-                    adaptor.addChild(root_0, char_literal44_tree);
+                    char_literal48_tree = (Object)adaptor.create(char_literal48);
+                    adaptor.addChild(root_0, char_literal48_tree);
                     }
 
                     }
                     break;
 
             }
-            } finally {dbg.exitSubRule(22);}
+            } finally {dbg.exitSubRule(26);}
 
             dbg.location(496,104);
-            char_literal45=(Token)match(input,30,FOLLOW_30_in_failure1428); if (state.failed) return retval;
+            char_literal49=(Token)match(input,30,FOLLOW_30_in_failure1454); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            char_literal45_tree = (Object)adaptor.create(char_literal45);
-            adaptor.addChild(root_0, char_literal45_tree);
+            char_literal49_tree = (Object)adaptor.create(char_literal49);
+            adaptor.addChild(root_0, char_literal49_tree);
             }
             dbg.location(496,107);
             if ( state.backtracking==0 ) {
@@ -3161,14 +3235,14 @@ public class RuleSet2Parser extends DebugParser {
         Token corc=null;
         Token attr=null;
         Token val=null;
-        Token char_literal46=null;
+        Token char_literal50=null;
         RuleSet2Parser.click_link_return cl = null;
 
 
         Object corc_tree=null;
         Object attr_tree=null;
         Object val_tree=null;
-        Object char_literal46_tree=null;
+        Object char_literal50_tree=null;
 
         try { dbg.enterRule(getGrammarFileName(), "click");
         if ( getRuleLevel()==0 ) {dbg.commence();}
@@ -3198,44 +3272,44 @@ public class RuleSet2Parser extends DebugParser {
             }
 
             dbg.location(502,32);
-            attr=(Token)match(input,VAR,FOLLOW_VAR_in_click1456); if (state.failed) return retval;
+            attr=(Token)match(input,VAR,FOLLOW_VAR_in_click1482); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
             attr_tree = (Object)adaptor.create(attr);
             adaptor.addChild(root_0, attr_tree);
             }
             dbg.location(502,37);
-            char_literal46=(Token)match(input,38,FOLLOW_38_in_click1458); if (state.failed) return retval;
+            char_literal50=(Token)match(input,38,FOLLOW_38_in_click1484); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            char_literal46_tree = (Object)adaptor.create(char_literal46);
-            adaptor.addChild(root_0, char_literal46_tree);
+            char_literal50_tree = (Object)adaptor.create(char_literal50);
+            adaptor.addChild(root_0, char_literal50_tree);
             }
             dbg.location(502,44);
-            val=(Token)match(input,STRING,FOLLOW_STRING_in_click1462); if (state.failed) return retval;
+            val=(Token)match(input,STRING,FOLLOW_STRING_in_click1488); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
             val_tree = (Object)adaptor.create(val);
             adaptor.addChild(root_0, val_tree);
             }
             dbg.location(502,54);
             // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:502:54: (cl= click_link )?
-            int alt23=2;
-            try { dbg.enterSubRule(23);
-            try { dbg.enterDecision(23);
+            int alt27=2;
+            try { dbg.enterSubRule(27);
+            try { dbg.enterDecision(27);
 
-            int LA23_0 = input.LA(1);
+            int LA27_0 = input.LA(1);
 
-            if ( (LA23_0==VAR) ) {
-                alt23=1;
+            if ( (LA27_0==VAR) ) {
+                alt27=1;
             }
-            } finally {dbg.exitDecision(23);}
+            } finally {dbg.exitDecision(27);}
 
-            switch (alt23) {
+            switch (alt27) {
                 case 1 :
                     dbg.enterAlt(1);
 
                     // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:0:0: cl= click_link
                     {
                     dbg.location(502,54);
-                    pushFollow(FOLLOW_click_link_in_click1466);
+                    pushFollow(FOLLOW_click_link_in_click1492);
                     cl=click_link();
 
                     state._fsp--;
@@ -3246,7 +3320,7 @@ public class RuleSet2Parser extends DebugParser {
                     break;
 
             }
-            } finally {dbg.exitSubRule(23);}
+            } finally {dbg.exitSubRule(27);}
 
             dbg.location(502,67);
             if ( state.backtracking==0 ) {
@@ -3307,7 +3381,7 @@ public class RuleSet2Parser extends DebugParser {
 
         RuleSet2Parser.persistent_expr_return p = null;
 
-        RuleSet2Parser.must_be_return must_be47 = null;
+        RuleSet2Parser.must_be_return must_be51 = null;
 
 
 
@@ -3325,14 +3399,14 @@ public class RuleSet2Parser extends DebugParser {
             root_0 = (Object)adaptor.nil();
 
             dbg.location(514,2);
-            pushFollow(FOLLOW_must_be_in_click_link1486);
-            must_be47=must_be("triggers");
+            pushFollow(FOLLOW_must_be_in_click_link1512);
+            must_be51=must_be("triggers");
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) adaptor.addChild(root_0, must_be47.getTree());
+            if ( state.backtracking==0 ) adaptor.addChild(root_0, must_be51.getTree());
             dbg.location(514,23);
-            pushFollow(FOLLOW_persistent_expr_in_click_link1491);
+            pushFollow(FOLLOW_persistent_expr_in_click_link1517);
             p=persistent_expr();
 
             state._fsp--;
@@ -3383,16 +3457,14 @@ public class RuleSet2Parser extends DebugParser {
     };
 
     // $ANTLR start "persistent_expr"
-    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:520:1: persistent_expr returns [HashMap result] : (pc= persistent_clear | ps= persistent_set | pi= persistent_iterate | tf= trail_forget | tm= trail_mark );
+    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:520:1: persistent_expr returns [HashMap result] : (pc= persistent_clear_set | pi= persistent_iterate | tf= trail_forget | tm= trail_mark );
     public final RuleSet2Parser.persistent_expr_return persistent_expr() throws RecognitionException {
         RuleSet2Parser.persistent_expr_return retval = new RuleSet2Parser.persistent_expr_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
 
-        RuleSet2Parser.persistent_clear_return pc = null;
-
-        RuleSet2Parser.persistent_set_return ps = null;
+        RuleSet2Parser.persistent_clear_set_return pc = null;
 
         RuleSet2Parser.persistent_iterate_return pi = null;
 
@@ -3408,64 +3480,59 @@ public class RuleSet2Parser extends DebugParser {
         dbg.location(520, 1);
 
         try {
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:521:2: (pc= persistent_clear | ps= persistent_set | pi= persistent_iterate | tf= trail_forget | tm= trail_mark )
-            int alt24=5;
-            try { dbg.enterDecision(24);
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:521:2: (pc= persistent_clear_set | pi= persistent_iterate | tf= trail_forget | tm= trail_mark )
+            int alt28=4;
+            try { dbg.enterDecision(28);
 
             switch ( input.LA(1) ) {
-            case 39:
+            case VAR:
                 {
-                alt24=1;
+                alt28=1;
+                }
+                break;
+            case 107:
+            case 108:
+                {
+                alt28=2;
+                }
+                break;
+            case 40:
+                {
+                alt28=3;
                 }
                 break;
             case 41:
                 {
-                alt24=2;
-                }
-                break;
-            case 112:
-            case 113:
-                {
-                alt24=3;
-                }
-                break;
-            case 42:
-                {
-                alt24=4;
-                }
-                break;
-            case 43:
-                {
-                alt24=5;
+                alt28=4;
                 }
                 break;
             default:
                 if (state.backtracking>0) {state.failed=true; return retval;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 24, 0, input);
+                    new NoViableAltException("", 28, 0, input);
 
                 dbg.recognitionException(nvae);
                 throw nvae;
             }
 
-            } finally {dbg.exitDecision(24);}
+            } finally {dbg.exitDecision(28);}
 
-            switch (alt24) {
+            switch (alt28) {
                 case 1 :
                     dbg.enterAlt(1);
 
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:522:2: pc= persistent_clear
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:522:2: pc= persistent_clear_set
                     {
                     root_0 = (Object)adaptor.nil();
 
                     dbg.location(522,4);
-                    pushFollow(FOLLOW_persistent_clear_in_persistent_expr1513);
-                    pc=persistent_clear();
+                    pushFollow(FOLLOW_persistent_clear_set_in_persistent_expr1539);
+                    pc=persistent_clear_set();
 
                     state._fsp--;
                     if (state.failed) return retval;
                     if ( state.backtracking==0 ) adaptor.addChild(root_0, pc.getTree());
-                    dbg.location(522,23);
+                    dbg.location(522,27);
                     if ( state.backtracking==0 ) {
 
                       		retval.result = (pc!=null?pc.result:null);
@@ -3477,41 +3544,18 @@ public class RuleSet2Parser extends DebugParser {
                 case 2 :
                     dbg.enterAlt(2);
 
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:525:4: ps= persistent_set
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:525:4: pi= persistent_iterate
                     {
                     root_0 = (Object)adaptor.nil();
 
                     dbg.location(525,6);
-                    pushFollow(FOLLOW_persistent_set_in_persistent_expr1523);
-                    ps=persistent_set();
-
-                    state._fsp--;
-                    if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, ps.getTree());
-                    dbg.location(525,23);
-                    if ( state.backtracking==0 ) {
-
-                      		retval.result = (ps!=null?ps.result:null);
-                      	
-                    }
-
-                    }
-                    break;
-                case 3 :
-                    dbg.enterAlt(3);
-
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:528:4: pi= persistent_iterate
-                    {
-                    root_0 = (Object)adaptor.nil();
-
-                    dbg.location(528,6);
-                    pushFollow(FOLLOW_persistent_iterate_in_persistent_expr1533);
+                    pushFollow(FOLLOW_persistent_iterate_in_persistent_expr1549);
                     pi=persistent_iterate();
 
                     state._fsp--;
                     if (state.failed) return retval;
                     if ( state.backtracking==0 ) adaptor.addChild(root_0, pi.getTree());
-                    dbg.location(528,27);
+                    dbg.location(525,27);
                     if ( state.backtracking==0 ) {
 
                       		retval.result = (pi!=null?pi.result:null);
@@ -3520,21 +3564,21 @@ public class RuleSet2Parser extends DebugParser {
 
                     }
                     break;
-                case 4 :
-                    dbg.enterAlt(4);
+                case 3 :
+                    dbg.enterAlt(3);
 
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:531:7: tf= trail_forget
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:528:7: tf= trail_forget
                     {
                     root_0 = (Object)adaptor.nil();
 
-                    dbg.location(531,9);
-                    pushFollow(FOLLOW_trail_forget_in_persistent_expr1546);
+                    dbg.location(528,9);
+                    pushFollow(FOLLOW_trail_forget_in_persistent_expr1562);
                     tf=trail_forget();
 
                     state._fsp--;
                     if (state.failed) return retval;
                     if ( state.backtracking==0 ) adaptor.addChild(root_0, tf.getTree());
-                    dbg.location(531,24);
+                    dbg.location(528,24);
                     if ( state.backtracking==0 ) {
 
                       		retval.result = (tf!=null?tf.result:null);
@@ -3543,21 +3587,21 @@ public class RuleSet2Parser extends DebugParser {
 
                     }
                     break;
-                case 5 :
-                    dbg.enterAlt(5);
+                case 4 :
+                    dbg.enterAlt(4);
 
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:534:7: tm= trail_mark
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:531:7: tm= trail_mark
                     {
                     root_0 = (Object)adaptor.nil();
 
-                    dbg.location(534,9);
-                    pushFollow(FOLLOW_trail_mark_in_persistent_expr1559);
+                    dbg.location(531,9);
+                    pushFollow(FOLLOW_trail_mark_in_persistent_expr1575);
                     tm=trail_mark();
 
                     state._fsp--;
                     if (state.failed) return retval;
                     if ( state.backtracking==0 ) adaptor.addChild(root_0, tm.getTree());
-                    dbg.location(534,22);
+                    dbg.location(531,22);
                     if ( state.backtracking==0 ) {
 
                       		retval.result = (tm!=null?tm.result:null);
@@ -3584,7 +3628,7 @@ public class RuleSet2Parser extends DebugParser {
         }
         finally {
         }
-        dbg.location(537, 5);
+        dbg.location(534, 5);
 
         }
         finally {
@@ -3597,73 +3641,74 @@ public class RuleSet2Parser extends DebugParser {
     }
     // $ANTLR end "persistent_expr"
 
-    public static class persistent_clear_return extends ParserRuleReturnScope {
+    public static class persistent_clear_set_return extends ParserRuleReturnScope {
         public HashMap result;
         Object tree;
         public Object getTree() { return tree; }
     };
 
-    // $ANTLR start "persistent_clear"
-    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:540:1: persistent_clear returns [HashMap result] : 'clear' dm= var_domain ':' name= VAR ;
-    public final RuleSet2Parser.persistent_clear_return persistent_clear() throws RecognitionException {
-        RuleSet2Parser.persistent_clear_return retval = new RuleSet2Parser.persistent_clear_return();
+    // $ANTLR start "persistent_clear_set"
+    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:537:1: persistent_clear_set returns [HashMap result] : cs= must_be_one[sar(\"clear\",\"set\")] dm= var_domain ':' name= VAR ;
+    public final RuleSet2Parser.persistent_clear_set_return persistent_clear_set() throws RecognitionException {
+        RuleSet2Parser.persistent_clear_set_return retval = new RuleSet2Parser.persistent_clear_set_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
 
         Token name=null;
-        Token string_literal48=null;
-        Token char_literal49=null;
+        Token char_literal52=null;
+        RuleSet2Parser.must_be_one_return cs = null;
+
         RuleSet2Parser.var_domain_return dm = null;
 
 
         Object name_tree=null;
-        Object string_literal48_tree=null;
-        Object char_literal49_tree=null;
+        Object char_literal52_tree=null;
 
-        try { dbg.enterRule(getGrammarFileName(), "persistent_clear");
+        try { dbg.enterRule(getGrammarFileName(), "persistent_clear_set");
         if ( getRuleLevel()==0 ) {dbg.commence();}
         incRuleLevel();
-        dbg.location(540, 1);
+        dbg.location(537, 1);
 
         try {
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:541:2: ( 'clear' dm= var_domain ':' name= VAR )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:538:2: (cs= must_be_one[sar(\"clear\",\"set\")] dm= var_domain ':' name= VAR )
             dbg.enterAlt(1);
 
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:542:2: 'clear' dm= var_domain ':' name= VAR
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:539:2: cs= must_be_one[sar(\"clear\",\"set\")] dm= var_domain ':' name= VAR
             {
             root_0 = (Object)adaptor.nil();
 
-            dbg.location(542,2);
-            string_literal48=(Token)match(input,39,FOLLOW_39_in_persistent_clear1582); if (state.failed) return retval;
-            if ( state.backtracking==0 ) {
-            string_literal48_tree = (Object)adaptor.create(string_literal48);
-            adaptor.addChild(root_0, string_literal48_tree);
-            }
-            dbg.location(542,13);
-            pushFollow(FOLLOW_var_domain_in_persistent_clear1587);
+            dbg.location(539,4);
+            pushFollow(FOLLOW_must_be_one_in_persistent_clear_set1600);
+            cs=must_be_one(sar("clear","set"));
+
+            state._fsp--;
+            if (state.failed) return retval;
+            if ( state.backtracking==0 ) adaptor.addChild(root_0, cs.getTree());
+            dbg.location(539,40);
+            pushFollow(FOLLOW_var_domain_in_persistent_clear_set1606);
             dm=var_domain();
 
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, dm.getTree());
-            dbg.location(542,25);
-            char_literal49=(Token)match(input,40,FOLLOW_40_in_persistent_clear1589); if (state.failed) return retval;
+            dbg.location(539,52);
+            char_literal52=(Token)match(input,39,FOLLOW_39_in_persistent_clear_set1608); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            char_literal49_tree = (Object)adaptor.create(char_literal49);
-            adaptor.addChild(root_0, char_literal49_tree);
+            char_literal52_tree = (Object)adaptor.create(char_literal52);
+            adaptor.addChild(root_0, char_literal52_tree);
             }
-            dbg.location(542,33);
-            name=(Token)match(input,VAR,FOLLOW_VAR_in_persistent_clear1593); if (state.failed) return retval;
+            dbg.location(539,60);
+            name=(Token)match(input,VAR,FOLLOW_VAR_in_persistent_clear_set1612); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
             name_tree = (Object)adaptor.create(name);
             adaptor.addChild(root_0, name_tree);
             }
-            dbg.location(542,38);
+            dbg.location(539,65);
             if ( state.backtracking==0 ) {
 
               		HashMap tmp = new HashMap();
-              		tmp.put("action","clear");
+              		tmp.put("action",(cs!=null?input.toString(cs.start,cs.stop):null));
               		tmp.put("name",(name!=null?name.getText():null));
               		tmp.put("domain",(dm!=null?input.toString(dm.start,dm.stop):null));
               		tmp.put("type","persistent");
@@ -3689,123 +3734,18 @@ public class RuleSet2Parser extends DebugParser {
         }
         finally {
         }
-        dbg.location(550, 2);
+        dbg.location(547, 2);
 
         }
         finally {
-            dbg.exitRule(getGrammarFileName(), "persistent_clear");
+            dbg.exitRule(getGrammarFileName(), "persistent_clear_set");
             decRuleLevel();
             if ( getRuleLevel()==0 ) {dbg.terminate();}
         }
 
         return retval;
     }
-    // $ANTLR end "persistent_clear"
-
-    public static class persistent_set_return extends ParserRuleReturnScope {
-        public HashMap result;
-        Object tree;
-        public Object getTree() { return tree; }
-    };
-
-    // $ANTLR start "persistent_set"
-    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:552:1: persistent_set returns [HashMap result] : 'set' dm= var_domain ':' name= VAR ;
-    public final RuleSet2Parser.persistent_set_return persistent_set() throws RecognitionException {
-        RuleSet2Parser.persistent_set_return retval = new RuleSet2Parser.persistent_set_return();
-        retval.start = input.LT(1);
-
-        Object root_0 = null;
-
-        Token name=null;
-        Token string_literal50=null;
-        Token char_literal51=null;
-        RuleSet2Parser.var_domain_return dm = null;
-
-
-        Object name_tree=null;
-        Object string_literal50_tree=null;
-        Object char_literal51_tree=null;
-
-        try { dbg.enterRule(getGrammarFileName(), "persistent_set");
-        if ( getRuleLevel()==0 ) {dbg.commence();}
-        incRuleLevel();
-        dbg.location(552, 1);
-
-        try {
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:553:2: ( 'set' dm= var_domain ':' name= VAR )
-            dbg.enterAlt(1);
-
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:554:2: 'set' dm= var_domain ':' name= VAR
-            {
-            root_0 = (Object)adaptor.nil();
-
-            dbg.location(554,2);
-            string_literal50=(Token)match(input,41,FOLLOW_41_in_persistent_set1611); if (state.failed) return retval;
-            if ( state.backtracking==0 ) {
-            string_literal50_tree = (Object)adaptor.create(string_literal50);
-            adaptor.addChild(root_0, string_literal50_tree);
-            }
-            dbg.location(554,11);
-            pushFollow(FOLLOW_var_domain_in_persistent_set1616);
-            dm=var_domain();
-
-            state._fsp--;
-            if (state.failed) return retval;
-            if ( state.backtracking==0 ) adaptor.addChild(root_0, dm.getTree());
-            dbg.location(554,23);
-            char_literal51=(Token)match(input,40,FOLLOW_40_in_persistent_set1618); if (state.failed) return retval;
-            if ( state.backtracking==0 ) {
-            char_literal51_tree = (Object)adaptor.create(char_literal51);
-            adaptor.addChild(root_0, char_literal51_tree);
-            }
-            dbg.location(554,31);
-            name=(Token)match(input,VAR,FOLLOW_VAR_in_persistent_set1622); if (state.failed) return retval;
-            if ( state.backtracking==0 ) {
-            name_tree = (Object)adaptor.create(name);
-            adaptor.addChild(root_0, name_tree);
-            }
-            dbg.location(554,36);
-            if ( state.backtracking==0 ) {
-
-              		HashMap tmp = new HashMap();
-              		tmp.put("action","set");
-              		tmp.put("name",(name!=null?name.getText():null));
-              		tmp.put("domain",(dm!=null?input.toString(dm.start,dm.stop):null));
-              		tmp.put("type","persistent");
-              		retval.result = tmp;
-              	
-            }
-
-            }
-
-            retval.stop = input.LT(-1);
-
-            if ( state.backtracking==0 ) {
-
-            retval.tree = (Object)adaptor.rulePostProcessing(root_0);
-            adaptor.setTokenBoundaries(retval.tree, retval.start, retval.stop);
-            }
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-    	retval.tree = (Object)adaptor.errorNode(input, retval.start, input.LT(-1), re);
-
-        }
-        finally {
-        }
-        dbg.location(562, 2);
-
-        }
-        finally {
-            dbg.exitRule(getGrammarFileName(), "persistent_set");
-            decRuleLevel();
-            if ( getRuleLevel()==0 ) {dbg.terminate();}
-        }
-
-        return retval;
-    }
-    // $ANTLR end "persistent_set"
+    // $ANTLR end "persistent_clear_set"
 
     public static class persistent_iterate_return extends ParserRuleReturnScope {
         public HashMap result;
@@ -3814,7 +3754,7 @@ public class RuleSet2Parser extends DebugParser {
     };
 
     // $ANTLR start "persistent_iterate"
-    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:564:1: persistent_iterate returns [HashMap result] : dm= var_domain ':' name= VAR op= counter_op v= expr from= counter_start ;
+    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:550:1: persistent_iterate returns [HashMap result] : dm= var_domain ':' name= VAR op= counter_op v= expr from= counter_start ;
     public final RuleSet2Parser.persistent_iterate_return persistent_iterate() throws RecognitionException {
         RuleSet2Parser.persistent_iterate_return retval = new RuleSet2Parser.persistent_iterate_return();
         retval.start = input.LT(1);
@@ -3822,7 +3762,7 @@ public class RuleSet2Parser extends DebugParser {
         Object root_0 = null;
 
         Token name=null;
-        Token char_literal52=null;
+        Token char_literal53=null;
         RuleSet2Parser.var_domain_return dm = null;
 
         RuleSet2Parser.counter_op_return op = null;
@@ -3833,62 +3773,62 @@ public class RuleSet2Parser extends DebugParser {
 
 
         Object name_tree=null;
-        Object char_literal52_tree=null;
+        Object char_literal53_tree=null;
 
         try { dbg.enterRule(getGrammarFileName(), "persistent_iterate");
         if ( getRuleLevel()==0 ) {dbg.commence();}
         incRuleLevel();
-        dbg.location(564, 1);
+        dbg.location(550, 1);
 
         try {
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:565:2: (dm= var_domain ':' name= VAR op= counter_op v= expr from= counter_start )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:551:2: (dm= var_domain ':' name= VAR op= counter_op v= expr from= counter_start )
             dbg.enterAlt(1);
 
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:566:2: dm= var_domain ':' name= VAR op= counter_op v= expr from= counter_start
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:552:2: dm= var_domain ':' name= VAR op= counter_op v= expr from= counter_start
             {
             root_0 = (Object)adaptor.nil();
 
-            dbg.location(566,4);
-            pushFollow(FOLLOW_var_domain_in_persistent_iterate1642);
+            dbg.location(552,4);
+            pushFollow(FOLLOW_var_domain_in_persistent_iterate1633);
             dm=var_domain();
 
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, dm.getTree());
-            dbg.location(566,16);
-            char_literal52=(Token)match(input,40,FOLLOW_40_in_persistent_iterate1644); if (state.failed) return retval;
+            dbg.location(552,16);
+            char_literal53=(Token)match(input,39,FOLLOW_39_in_persistent_iterate1635); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            char_literal52_tree = (Object)adaptor.create(char_literal52);
-            adaptor.addChild(root_0, char_literal52_tree);
+            char_literal53_tree = (Object)adaptor.create(char_literal53);
+            adaptor.addChild(root_0, char_literal53_tree);
             }
-            dbg.location(566,24);
-            name=(Token)match(input,VAR,FOLLOW_VAR_in_persistent_iterate1648); if (state.failed) return retval;
+            dbg.location(552,24);
+            name=(Token)match(input,VAR,FOLLOW_VAR_in_persistent_iterate1639); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
             name_tree = (Object)adaptor.create(name);
             adaptor.addChild(root_0, name_tree);
             }
-            dbg.location(566,31);
-            pushFollow(FOLLOW_counter_op_in_persistent_iterate1652);
+            dbg.location(552,31);
+            pushFollow(FOLLOW_counter_op_in_persistent_iterate1643);
             op=counter_op();
 
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, op.getTree());
-            dbg.location(566,44);
-            pushFollow(FOLLOW_expr_in_persistent_iterate1656);
+            dbg.location(552,44);
+            pushFollow(FOLLOW_expr_in_persistent_iterate1647);
             v=expr();
 
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, v.getTree());
-            dbg.location(566,54);
-            pushFollow(FOLLOW_counter_start_in_persistent_iterate1660);
+            dbg.location(552,54);
+            pushFollow(FOLLOW_counter_start_in_persistent_iterate1651);
             from=counter_start();
 
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, from.getTree());
-            dbg.location(566,69);
+            dbg.location(552,69);
             if ( state.backtracking==0 ) {
 
               		HashMap tmp = new HashMap();
@@ -3921,7 +3861,7 @@ public class RuleSet2Parser extends DebugParser {
         }
         finally {
         }
-        dbg.location(577, 2);
+        dbg.location(563, 2);
 
         }
         finally {
@@ -3941,7 +3881,7 @@ public class RuleSet2Parser extends DebugParser {
     };
 
     // $ANTLR start "trail_forget"
-    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:579:1: trail_forget returns [HashMap result] : 'forget' what= STRING must_be[\"in\"] dm= var_domain ':' name= VAR ;
+    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:565:1: trail_forget returns [HashMap result] : 'forget' what= STRING must_be[\"in\"] dm= var_domain ':' name= VAR ;
     public final RuleSet2Parser.trail_forget_return trail_forget() throws RecognitionException {
         RuleSet2Parser.trail_forget_return retval = new RuleSet2Parser.trail_forget_return();
         retval.start = input.LT(1);
@@ -3950,70 +3890,70 @@ public class RuleSet2Parser extends DebugParser {
 
         Token what=null;
         Token name=null;
-        Token string_literal53=null;
-        Token char_literal55=null;
+        Token string_literal54=null;
+        Token char_literal56=null;
         RuleSet2Parser.var_domain_return dm = null;
 
-        RuleSet2Parser.must_be_return must_be54 = null;
+        RuleSet2Parser.must_be_return must_be55 = null;
 
 
         Object what_tree=null;
         Object name_tree=null;
-        Object string_literal53_tree=null;
-        Object char_literal55_tree=null;
+        Object string_literal54_tree=null;
+        Object char_literal56_tree=null;
 
         try { dbg.enterRule(getGrammarFileName(), "trail_forget");
         if ( getRuleLevel()==0 ) {dbg.commence();}
         incRuleLevel();
-        dbg.location(579, 1);
+        dbg.location(565, 1);
 
         try {
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:580:2: ( 'forget' what= STRING must_be[\"in\"] dm= var_domain ':' name= VAR )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:566:2: ( 'forget' what= STRING must_be[\"in\"] dm= var_domain ':' name= VAR )
             dbg.enterAlt(1);
 
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:581:2: 'forget' what= STRING must_be[\"in\"] dm= var_domain ':' name= VAR
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:567:2: 'forget' what= STRING must_be[\"in\"] dm= var_domain ':' name= VAR
             {
             root_0 = (Object)adaptor.nil();
 
-            dbg.location(581,2);
-            string_literal53=(Token)match(input,42,FOLLOW_42_in_trail_forget1678); if (state.failed) return retval;
+            dbg.location(567,2);
+            string_literal54=(Token)match(input,40,FOLLOW_40_in_trail_forget1669); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            string_literal53_tree = (Object)adaptor.create(string_literal53);
-            adaptor.addChild(root_0, string_literal53_tree);
+            string_literal54_tree = (Object)adaptor.create(string_literal54);
+            adaptor.addChild(root_0, string_literal54_tree);
             }
-            dbg.location(581,16);
-            what=(Token)match(input,STRING,FOLLOW_STRING_in_trail_forget1683); if (state.failed) return retval;
+            dbg.location(567,16);
+            what=(Token)match(input,STRING,FOLLOW_STRING_in_trail_forget1674); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
             what_tree = (Object)adaptor.create(what);
             adaptor.addChild(root_0, what_tree);
             }
-            dbg.location(581,24);
-            pushFollow(FOLLOW_must_be_in_trail_forget1685);
-            must_be54=must_be("in");
+            dbg.location(567,24);
+            pushFollow(FOLLOW_must_be_in_trail_forget1676);
+            must_be55=must_be("in");
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) adaptor.addChild(root_0, must_be54.getTree());
-            dbg.location(581,41);
-            pushFollow(FOLLOW_var_domain_in_trail_forget1691);
+            if ( state.backtracking==0 ) adaptor.addChild(root_0, must_be55.getTree());
+            dbg.location(567,41);
+            pushFollow(FOLLOW_var_domain_in_trail_forget1682);
             dm=var_domain();
 
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, dm.getTree());
-            dbg.location(581,53);
-            char_literal55=(Token)match(input,40,FOLLOW_40_in_trail_forget1693); if (state.failed) return retval;
+            dbg.location(567,53);
+            char_literal56=(Token)match(input,39,FOLLOW_39_in_trail_forget1684); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            char_literal55_tree = (Object)adaptor.create(char_literal55);
-            adaptor.addChild(root_0, char_literal55_tree);
+            char_literal56_tree = (Object)adaptor.create(char_literal56);
+            adaptor.addChild(root_0, char_literal56_tree);
             }
-            dbg.location(581,61);
-            name=(Token)match(input,VAR,FOLLOW_VAR_in_trail_forget1697); if (state.failed) return retval;
+            dbg.location(567,61);
+            name=(Token)match(input,VAR,FOLLOW_VAR_in_trail_forget1688); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
             name_tree = (Object)adaptor.create(name);
             adaptor.addChild(root_0, name_tree);
             }
-            dbg.location(581,67);
+            dbg.location(567,67);
             if ( state.backtracking==0 ) {
 
               		HashMap tmp = new HashMap();
@@ -4045,7 +3985,7 @@ public class RuleSet2Parser extends DebugParser {
         }
         finally {
         }
-        dbg.location(591, 2);
+        dbg.location(577, 2);
 
         }
         finally {
@@ -4065,7 +4005,7 @@ public class RuleSet2Parser extends DebugParser {
     };
 
     // $ANTLR start "trail_mark"
-    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:593:1: trail_mark returns [HashMap result] : 'mark' dm= var_domain ':' name= VAR (t= trail_with )? ;
+    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:579:1: trail_mark returns [HashMap result] : 'mark' dm= var_domain ':' name= VAR (t= trail_with )? ;
     public final RuleSet2Parser.trail_mark_return trail_mark() throws RecognitionException {
         RuleSet2Parser.trail_mark_return retval = new RuleSet2Parser.trail_mark_return();
         retval.start = input.LT(1);
@@ -4073,76 +4013,76 @@ public class RuleSet2Parser extends DebugParser {
         Object root_0 = null;
 
         Token name=null;
-        Token string_literal56=null;
-        Token char_literal57=null;
+        Token string_literal57=null;
+        Token char_literal58=null;
         RuleSet2Parser.var_domain_return dm = null;
 
         RuleSet2Parser.trail_with_return t = null;
 
 
         Object name_tree=null;
-        Object string_literal56_tree=null;
-        Object char_literal57_tree=null;
+        Object string_literal57_tree=null;
+        Object char_literal58_tree=null;
 
         try { dbg.enterRule(getGrammarFileName(), "trail_mark");
         if ( getRuleLevel()==0 ) {dbg.commence();}
         incRuleLevel();
-        dbg.location(593, 1);
+        dbg.location(579, 1);
 
         try {
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:594:2: ( 'mark' dm= var_domain ':' name= VAR (t= trail_with )? )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:580:2: ( 'mark' dm= var_domain ':' name= VAR (t= trail_with )? )
             dbg.enterAlt(1);
 
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:595:2: 'mark' dm= var_domain ':' name= VAR (t= trail_with )?
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:581:2: 'mark' dm= var_domain ':' name= VAR (t= trail_with )?
             {
             root_0 = (Object)adaptor.nil();
 
-            dbg.location(595,2);
-            string_literal56=(Token)match(input,43,FOLLOW_43_in_trail_mark1716); if (state.failed) return retval;
+            dbg.location(581,2);
+            string_literal57=(Token)match(input,41,FOLLOW_41_in_trail_mark1707); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            string_literal56_tree = (Object)adaptor.create(string_literal56);
-            adaptor.addChild(root_0, string_literal56_tree);
+            string_literal57_tree = (Object)adaptor.create(string_literal57);
+            adaptor.addChild(root_0, string_literal57_tree);
             }
-            dbg.location(595,11);
-            pushFollow(FOLLOW_var_domain_in_trail_mark1720);
+            dbg.location(581,11);
+            pushFollow(FOLLOW_var_domain_in_trail_mark1711);
             dm=var_domain();
 
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, dm.getTree());
-            dbg.location(595,23);
-            char_literal57=(Token)match(input,40,FOLLOW_40_in_trail_mark1722); if (state.failed) return retval;
+            dbg.location(581,23);
+            char_literal58=(Token)match(input,39,FOLLOW_39_in_trail_mark1713); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            char_literal57_tree = (Object)adaptor.create(char_literal57);
-            adaptor.addChild(root_0, char_literal57_tree);
+            char_literal58_tree = (Object)adaptor.create(char_literal58);
+            adaptor.addChild(root_0, char_literal58_tree);
             }
-            dbg.location(595,31);
-            name=(Token)match(input,VAR,FOLLOW_VAR_in_trail_mark1726); if (state.failed) return retval;
+            dbg.location(581,31);
+            name=(Token)match(input,VAR,FOLLOW_VAR_in_trail_mark1717); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
             name_tree = (Object)adaptor.create(name);
             adaptor.addChild(root_0, name_tree);
             }
-            dbg.location(595,37);
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:595:37: (t= trail_with )?
-            int alt25=2;
-            try { dbg.enterSubRule(25);
-            try { dbg.enterDecision(25);
+            dbg.location(581,37);
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:581:37: (t= trail_with )?
+            int alt29=2;
+            try { dbg.enterSubRule(29);
+            try { dbg.enterDecision(29);
 
-            int LA25_0 = input.LA(1);
+            int LA29_0 = input.LA(1);
 
-            if ( (LA25_0==44) ) {
-                alt25=1;
+            if ( (LA29_0==42) ) {
+                alt29=1;
             }
-            } finally {dbg.exitDecision(25);}
+            } finally {dbg.exitDecision(29);}
 
-            switch (alt25) {
+            switch (alt29) {
                 case 1 :
                     dbg.enterAlt(1);
 
                     // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:0:0: t= trail_with
                     {
-                    dbg.location(595,37);
-                    pushFollow(FOLLOW_trail_with_in_trail_mark1730);
+                    dbg.location(581,37);
+                    pushFollow(FOLLOW_trail_with_in_trail_mark1721);
                     t=trail_with();
 
                     state._fsp--;
@@ -4153,9 +4093,9 @@ public class RuleSet2Parser extends DebugParser {
                     break;
 
             }
-            } finally {dbg.exitSubRule(25);}
+            } finally {dbg.exitSubRule(29);}
 
-            dbg.location(595,50);
+            dbg.location(581,50);
             if ( state.backtracking==0 ) {
 
               		HashMap tmp = new HashMap();
@@ -4187,7 +4127,7 @@ public class RuleSet2Parser extends DebugParser {
         }
         finally {
         }
-        dbg.location(605, 2);
+        dbg.location(591, 2);
 
         }
         finally {
@@ -4207,46 +4147,46 @@ public class RuleSet2Parser extends DebugParser {
     };
 
     // $ANTLR start "trail_with"
-    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:607:1: trail_with returns [Object result] : 'with' e= expr ;
+    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:593:1: trail_with returns [Object result] : 'with' e= expr ;
     public final RuleSet2Parser.trail_with_return trail_with() throws RecognitionException {
         RuleSet2Parser.trail_with_return retval = new RuleSet2Parser.trail_with_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
 
-        Token string_literal58=null;
+        Token string_literal59=null;
         RuleSet2Parser.expr_return e = null;
 
 
-        Object string_literal58_tree=null;
+        Object string_literal59_tree=null;
 
         try { dbg.enterRule(getGrammarFileName(), "trail_with");
         if ( getRuleLevel()==0 ) {dbg.commence();}
         incRuleLevel();
-        dbg.location(607, 1);
+        dbg.location(593, 1);
 
         try {
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:608:2: ( 'with' e= expr )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:594:2: ( 'with' e= expr )
             dbg.enterAlt(1);
 
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:609:2: 'with' e= expr
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:595:2: 'with' e= expr
             {
             root_0 = (Object)adaptor.nil();
 
-            dbg.location(609,2);
-            string_literal58=(Token)match(input,44,FOLLOW_44_in_trail_with1749); if (state.failed) return retval;
+            dbg.location(595,2);
+            string_literal59=(Token)match(input,42,FOLLOW_42_in_trail_with1740); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            string_literal58_tree = (Object)adaptor.create(string_literal58);
-            adaptor.addChild(root_0, string_literal58_tree);
+            string_literal59_tree = (Object)adaptor.create(string_literal59);
+            adaptor.addChild(root_0, string_literal59_tree);
             }
-            dbg.location(609,10);
-            pushFollow(FOLLOW_expr_in_trail_with1753);
+            dbg.location(595,10);
+            pushFollow(FOLLOW_expr_in_trail_with1744);
             e=expr();
 
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, e.getTree());
-            dbg.location(609,16);
+            dbg.location(595,16);
             if ( state.backtracking==0 ) {
 
               		retval.result = (e!=null?e.result:null);
@@ -4271,7 +4211,7 @@ public class RuleSet2Parser extends DebugParser {
         }
         finally {
         }
-        dbg.location(612, 2);
+        dbg.location(598, 2);
 
         }
         finally {
@@ -4290,35 +4230,35 @@ public class RuleSet2Parser extends DebugParser {
     };
 
     // $ANTLR start "counter_op"
-    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:614:1: counter_op : ( '+=' | '-=' );
+    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:600:1: counter_op : ( '+=' | '-=' );
     public final RuleSet2Parser.counter_op_return counter_op() throws RecognitionException {
         RuleSet2Parser.counter_op_return retval = new RuleSet2Parser.counter_op_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
 
-        Token set59=null;
+        Token set60=null;
 
-        Object set59_tree=null;
+        Object set60_tree=null;
 
         try { dbg.enterRule(getGrammarFileName(), "counter_op");
         if ( getRuleLevel()==0 ) {dbg.commence();}
         incRuleLevel();
-        dbg.location(614, 1);
+        dbg.location(600, 1);
 
         try {
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:615:2: ( '+=' | '-=' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:601:2: ( '+=' | '-=' )
             dbg.enterAlt(1);
 
             // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:
             {
             root_0 = (Object)adaptor.nil();
 
-            dbg.location(615,2);
-            set59=(Token)input.LT(1);
-            if ( (input.LA(1)>=45 && input.LA(1)<=46) ) {
+            dbg.location(601,2);
+            set60=(Token)input.LT(1);
+            if ( (input.LA(1)>=43 && input.LA(1)<=44) ) {
                 input.consume();
-                if ( state.backtracking==0 ) adaptor.addChild(root_0, (Object)adaptor.create(set59));
+                if ( state.backtracking==0 ) adaptor.addChild(root_0, (Object)adaptor.create(set60));
                 state.errorRecovery=false;state.failed=false;
             }
             else {
@@ -4347,7 +4287,7 @@ public class RuleSet2Parser extends DebugParser {
         }
         finally {
         }
-        dbg.location(618, 9);
+        dbg.location(604, 9);
 
         }
         finally {
@@ -4367,7 +4307,7 @@ public class RuleSet2Parser extends DebugParser {
     };
 
     // $ANTLR start "counter_start"
-    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:620:1: counter_start returns [Object result] : must_be[\"from\"] e= expr ;
+    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:606:1: counter_start returns [Object result] : must_be[\"from\"] e= expr ;
     public final RuleSet2Parser.counter_start_return counter_start() throws RecognitionException {
         RuleSet2Parser.counter_start_return retval = new RuleSet2Parser.counter_start_return();
         retval.start = input.LT(1);
@@ -4376,38 +4316,38 @@ public class RuleSet2Parser extends DebugParser {
 
         RuleSet2Parser.expr_return e = null;
 
-        RuleSet2Parser.must_be_return must_be60 = null;
+        RuleSet2Parser.must_be_return must_be61 = null;
 
 
 
         try { dbg.enterRule(getGrammarFileName(), "counter_start");
         if ( getRuleLevel()==0 ) {dbg.commence();}
         incRuleLevel();
-        dbg.location(620, 1);
+        dbg.location(606, 1);
 
         try {
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:621:2: ( must_be[\"from\"] e= expr )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:607:2: ( must_be[\"from\"] e= expr )
             dbg.enterAlt(1);
 
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:622:2: must_be[\"from\"] e= expr
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:608:2: must_be[\"from\"] e= expr
             {
             root_0 = (Object)adaptor.nil();
 
-            dbg.location(622,2);
-            pushFollow(FOLLOW_must_be_in_counter_start1803);
-            must_be60=must_be("from");
+            dbg.location(608,2);
+            pushFollow(FOLLOW_must_be_in_counter_start1794);
+            must_be61=must_be("from");
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) adaptor.addChild(root_0, must_be60.getTree());
-            dbg.location(622,19);
-            pushFollow(FOLLOW_expr_in_counter_start1808);
+            if ( state.backtracking==0 ) adaptor.addChild(root_0, must_be61.getTree());
+            dbg.location(608,19);
+            pushFollow(FOLLOW_expr_in_counter_start1799);
             e=expr();
 
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, e.getTree());
-            dbg.location(622,25);
+            dbg.location(608,25);
             if ( state.backtracking==0 ) {
 
               	 retval.result =e.result;
@@ -4432,7 +4372,7 @@ public class RuleSet2Parser extends DebugParser {
         }
         finally {
         }
-        dbg.location(625, 2);
+        dbg.location(611, 2);
 
         }
         finally {
@@ -4452,7 +4392,7 @@ public class RuleSet2Parser extends DebugParser {
     };
 
     // $ANTLR start "for_clause"
-    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:628:1: for_clause returns [String result] : 'for' v= VAR ;
+    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:614:1: for_clause returns [String result] : 'for' v= VAR ;
     public final RuleSet2Parser.for_clause_return for_clause() throws RecognitionException {
         RuleSet2Parser.for_clause_return retval = new RuleSet2Parser.for_clause_return();
         retval.start = input.LT(1);
@@ -4460,37 +4400,37 @@ public class RuleSet2Parser extends DebugParser {
         Object root_0 = null;
 
         Token v=null;
-        Token string_literal61=null;
+        Token string_literal62=null;
 
         Object v_tree=null;
-        Object string_literal61_tree=null;
+        Object string_literal62_tree=null;
 
         try { dbg.enterRule(getGrammarFileName(), "for_clause");
         if ( getRuleLevel()==0 ) {dbg.commence();}
         incRuleLevel();
-        dbg.location(628, 1);
+        dbg.location(614, 1);
 
         try {
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:629:2: ( 'for' v= VAR )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:615:2: ( 'for' v= VAR )
             dbg.enterAlt(1);
 
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:630:2: 'for' v= VAR
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:616:2: 'for' v= VAR
             {
             root_0 = (Object)adaptor.nil();
 
-            dbg.location(630,2);
-            string_literal61=(Token)match(input,47,FOLLOW_47_in_for_clause1829); if (state.failed) return retval;
+            dbg.location(616,2);
+            string_literal62=(Token)match(input,45,FOLLOW_45_in_for_clause1820); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            string_literal61_tree = (Object)adaptor.create(string_literal61);
-            adaptor.addChild(root_0, string_literal61_tree);
+            string_literal62_tree = (Object)adaptor.create(string_literal62);
+            adaptor.addChild(root_0, string_literal62_tree);
             }
-            dbg.location(630,10);
-            v=(Token)match(input,VAR,FOLLOW_VAR_in_for_clause1834); if (state.failed) return retval;
+            dbg.location(616,10);
+            v=(Token)match(input,VAR,FOLLOW_VAR_in_for_clause1825); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
             v_tree = (Object)adaptor.create(v);
             adaptor.addChild(root_0, v_tree);
             }
-            dbg.location(631,2);
+            dbg.location(617,2);
             if ( state.backtracking==0 ) {
 
               		retval.result = (v!=null?v.getText():null);
@@ -4515,7 +4455,7 @@ public class RuleSet2Parser extends DebugParser {
         }
         finally {
         }
-        dbg.location(634, 2);
+        dbg.location(620, 2);
 
         }
         finally {
@@ -4534,20 +4474,20 @@ public class RuleSet2Parser extends DebugParser {
     };
 
     // $ANTLR start "action"
-    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:644:1: action[HashMap result] : ( conditional_action[result] | unconditional_action[result] ) ( ';' )? ;
+    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:630:1: action[HashMap result] : ( conditional_action[result] | unconditional_action[result] ) ( ';' )? ;
     public final RuleSet2Parser.action_return action(HashMap result) throws RecognitionException {
         RuleSet2Parser.action_return retval = new RuleSet2Parser.action_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
 
-        Token char_literal64=null;
-        RuleSet2Parser.conditional_action_return conditional_action62 = null;
+        Token char_literal65=null;
+        RuleSet2Parser.conditional_action_return conditional_action63 = null;
 
-        RuleSet2Parser.unconditional_action_return unconditional_action63 = null;
+        RuleSet2Parser.unconditional_action_return unconditional_action64 = null;
 
 
-        Object char_literal64_tree=null;
+        Object char_literal65_tree=null;
 
 
         	result.put("blocktype","every");
@@ -4560,106 +4500,110 @@ public class RuleSet2Parser extends DebugParser {
         try { dbg.enterRule(getGrammarFileName(), "action");
         if ( getRuleLevel()==0 ) {dbg.commence();}
         incRuleLevel();
-        dbg.location(644, 1);
+        dbg.location(630, 1);
 
         try {
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:653:2: ( ( conditional_action[result] | unconditional_action[result] ) ( ';' )? )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:639:2: ( ( conditional_action[result] | unconditional_action[result] ) ( ';' )? )
             dbg.enterAlt(1);
 
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:654:2: ( conditional_action[result] | unconditional_action[result] ) ( ';' )?
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:640:2: ( conditional_action[result] | unconditional_action[result] ) ( ';' )?
             {
             root_0 = (Object)adaptor.nil();
 
-            dbg.location(654,2);
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:654:2: ( conditional_action[result] | unconditional_action[result] )
-            int alt26=2;
-            try { dbg.enterSubRule(26);
-            try { dbg.enterDecision(26);
+            dbg.location(640,2);
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:640:2: ( conditional_action[result] | unconditional_action[result] )
+            int alt30=2;
+            try { dbg.enterSubRule(30);
+            try { dbg.enterDecision(30);
 
-            int LA26_0 = input.LA(1);
+            int LA30_0 = input.LA(1);
 
-            if ( (LA26_0==32) ) {
-                alt26=1;
+            if ( (LA30_0==32) ) {
+                alt30=1;
             }
-            else if ( (LA26_0==VAR||LA26_0==29||LA26_0==117) ) {
-                alt26=2;
+            else if ( (LA30_0==VAR||LA30_0==29||LA30_0==112) ) {
+                alt30=2;
             }
             else {
                 if (state.backtracking>0) {state.failed=true; return retval;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 26, 0, input);
+                    new NoViableAltException("", 30, 0, input);
 
                 dbg.recognitionException(nvae);
                 throw nvae;
             }
-            } finally {dbg.exitDecision(26);}
+            } finally {dbg.exitDecision(30);}
 
-            switch (alt26) {
+            switch (alt30) {
                 case 1 :
                     dbg.enterAlt(1);
 
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:654:3: conditional_action[result]
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:640:3: conditional_action[result]
                     {
-                    dbg.location(654,3);
-                    pushFollow(FOLLOW_conditional_action_in_action1868);
-                    conditional_action62=conditional_action(result);
+                    dbg.location(640,3);
+                    pushFollow(FOLLOW_conditional_action_in_action1859);
+                    conditional_action63=conditional_action(result);
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, conditional_action62.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, conditional_action63.getTree());
 
                     }
                     break;
                 case 2 :
                     dbg.enterAlt(2);
 
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:654:32: unconditional_action[result]
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:640:32: unconditional_action[result]
                     {
-                    dbg.location(654,32);
-                    pushFollow(FOLLOW_unconditional_action_in_action1873);
-                    unconditional_action63=unconditional_action(result);
+                    dbg.location(640,32);
+                    pushFollow(FOLLOW_unconditional_action_in_action1864);
+                    unconditional_action64=unconditional_action(result);
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, unconditional_action63.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, unconditional_action64.getTree());
 
                     }
                     break;
 
             }
-            } finally {dbg.exitSubRule(26);}
+            } finally {dbg.exitSubRule(30);}
 
-            dbg.location(654,62);
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:654:62: ( ';' )?
-            int alt27=2;
-            try { dbg.enterSubRule(27);
-            try { dbg.enterDecision(27);
+            dbg.location(640,62);
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:640:62: ( ';' )?
+            int alt31=2;
+            try { dbg.enterSubRule(31);
+            try { dbg.enterDecision(31);
 
-            int LA27_0 = input.LA(1);
+            int LA31_0 = input.LA(1);
 
-            if ( (LA27_0==31) ) {
-                alt27=1;
+            if ( (LA31_0==31) ) {
+                int LA31_1 = input.LA(2);
+
+                if ( (synpred51_RuleSet2()) ) {
+                    alt31=1;
+                }
             }
-            } finally {dbg.exitDecision(27);}
+            } finally {dbg.exitDecision(31);}
 
-            switch (alt27) {
+            switch (alt31) {
                 case 1 :
                     dbg.enterAlt(1);
 
                     // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:0:0: ';'
                     {
-                    dbg.location(654,62);
-                    char_literal64=(Token)match(input,31,FOLLOW_31_in_action1877); if (state.failed) return retval;
+                    dbg.location(640,62);
+                    char_literal65=(Token)match(input,31,FOLLOW_31_in_action1868); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    char_literal64_tree = (Object)adaptor.create(char_literal64);
-                    adaptor.addChild(root_0, char_literal64_tree);
+                    char_literal65_tree = (Object)adaptor.create(char_literal65);
+                    adaptor.addChild(root_0, char_literal65_tree);
                     }
 
                     }
                     break;
 
             }
-            } finally {dbg.exitSubRule(27);}
+            } finally {dbg.exitSubRule(31);}
 
 
             }
@@ -4680,7 +4624,7 @@ public class RuleSet2Parser extends DebugParser {
         }
         finally {
         }
-        dbg.location(655, 2);
+        dbg.location(641, 2);
 
         }
         finally {
@@ -4699,66 +4643,117 @@ public class RuleSet2Parser extends DebugParser {
     };
 
     // $ANTLR start "conditional_action"
-    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:658:1: conditional_action[HashMap result] : 'if' e= expr 'then' unconditional_action[result] ;
+    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:644:1: conditional_action[HashMap result] : 'if' (e= expr )? must_be[\"then\"] unconditional_action[result] ;
     public final RuleSet2Parser.conditional_action_return conditional_action(HashMap result) throws RecognitionException {
         RuleSet2Parser.conditional_action_return retval = new RuleSet2Parser.conditional_action_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
 
-        Token string_literal65=null;
         Token string_literal66=null;
         RuleSet2Parser.expr_return e = null;
 
-        RuleSet2Parser.unconditional_action_return unconditional_action67 = null;
+        RuleSet2Parser.must_be_return must_be67 = null;
+
+        RuleSet2Parser.unconditional_action_return unconditional_action68 = null;
 
 
-        Object string_literal65_tree=null;
         Object string_literal66_tree=null;
 
         try { dbg.enterRule(getGrammarFileName(), "conditional_action");
         if ( getRuleLevel()==0 ) {dbg.commence();}
         incRuleLevel();
-        dbg.location(658, 1);
+        dbg.location(644, 1);
 
         try {
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:659:2: ( 'if' e= expr 'then' unconditional_action[result] )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:645:2: ( 'if' (e= expr )? must_be[\"then\"] unconditional_action[result] )
             dbg.enterAlt(1);
 
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:659:4: 'if' e= expr 'then' unconditional_action[result]
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:645:4: 'if' (e= expr )? must_be[\"then\"] unconditional_action[result]
             {
             root_0 = (Object)adaptor.nil();
 
-            dbg.location(659,4);
-            string_literal65=(Token)match(input,32,FOLLOW_32_in_conditional_action1894); if (state.failed) return retval;
-            if ( state.backtracking==0 ) {
-            string_literal65_tree = (Object)adaptor.create(string_literal65);
-            adaptor.addChild(root_0, string_literal65_tree);
-            }
-            dbg.location(659,10);
-            pushFollow(FOLLOW_expr_in_conditional_action1898);
-            e=expr();
-
-            state._fsp--;
-            if (state.failed) return retval;
-            if ( state.backtracking==0 ) adaptor.addChild(root_0, e.getTree());
-            dbg.location(659,16);
-            string_literal66=(Token)match(input,48,FOLLOW_48_in_conditional_action1900); if (state.failed) return retval;
+            dbg.location(645,4);
+            string_literal66=(Token)match(input,32,FOLLOW_32_in_conditional_action1885); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
             string_literal66_tree = (Object)adaptor.create(string_literal66);
             adaptor.addChild(root_0, string_literal66_tree);
             }
-            dbg.location(659,23);
-            pushFollow(FOLLOW_unconditional_action_in_conditional_action1902);
-            unconditional_action67=unconditional_action(result);
+            dbg.location(645,10);
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:645:10: (e= expr )?
+            int alt32=2;
+            try { dbg.enterSubRule(32);
+            try { dbg.enterDecision(32);
+
+            int LA32_0 = input.LA(1);
+
+            if ( (LA32_0==INT||LA32_0==FLOAT||(LA32_0>=STRING && LA32_0<=REGEXP)||LA32_0==29||LA32_0==47||LA32_0==57||LA32_0==71||LA32_0==78||(LA32_0>=101 && LA32_0<=103)||(LA32_0>=105 && LA32_0<=108)) ) {
+                alt32=1;
+            }
+            else if ( (LA32_0==VAR) ) {
+                int LA32_2 = input.LA(2);
+
+                if ( ((LA32_2>=18 && LA32_2<=28)||LA32_2==39||(LA32_2>=46 && LA32_2<=47)||(LA32_2>=73 && LA32_2<=77)||(LA32_2>=79 && LA32_2<=100)||LA32_2==103) ) {
+                    alt32=1;
+                }
+                else if ( (LA32_2==VAR) ) {
+                    int LA32_3 = input.LA(3);
+
+                    if ( (synpred52_RuleSet2()) ) {
+                        alt32=1;
+                    }
+                }
+            }
+            } finally {dbg.exitDecision(32);}
+
+            switch (alt32) {
+                case 1 :
+                    dbg.enterAlt(1);
+
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:0:0: e= expr
+                    {
+                    dbg.location(645,10);
+                    pushFollow(FOLLOW_expr_in_conditional_action1889);
+                    e=expr();
+
+                    state._fsp--;
+                    if (state.failed) return retval;
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, e.getTree());
+
+                    }
+                    break;
+
+            }
+            } finally {dbg.exitSubRule(32);}
+
+            dbg.location(645,17);
+            pushFollow(FOLLOW_must_be_in_conditional_action1892);
+            must_be67=must_be("then");
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) adaptor.addChild(root_0, unconditional_action67.getTree());
-            dbg.location(659,53);
+            if ( state.backtracking==0 ) adaptor.addChild(root_0, must_be67.getTree());
+            dbg.location(645,33);
+            pushFollow(FOLLOW_unconditional_action_in_conditional_action1895);
+            unconditional_action68=unconditional_action(result);
+
+            state._fsp--;
+            if (state.failed) return retval;
+            if ( state.backtracking==0 ) adaptor.addChild(root_0, unconditional_action68.getTree());
+            dbg.location(645,63);
             if ( state.backtracking==0 ) {
 
-              		result.put("cond",(e!=null?e.result:null));	
+              		if((e!=null?input.toString(e.start,e.stop):null) == null)
+              		{
+              			HashMap tmp = new HashMap();
+              			tmp.put("type","bool");
+              			tmp.put("val","true");
+              			result.put("cond",tmp);
+              		}
+              		else
+              		{
+              			result.put("cond",(e!=null?e.result:null));	 
+              		}
               	
             }
 
@@ -4780,7 +4775,7 @@ public class RuleSet2Parser extends DebugParser {
         }
         finally {
         }
-        dbg.location(662, 2);
+        dbg.location(658, 2);
 
         }
         finally {
@@ -4799,7 +4794,7 @@ public class RuleSet2Parser extends DebugParser {
     };
 
     // $ANTLR start "unconditional_action"
-    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:664:1: unconditional_action[HashMap result] : (p= primrule | action_block[result] );
+    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:660:1: unconditional_action[HashMap result] : (p= primrule | action_block[result] );
     public final RuleSet2Parser.unconditional_action_return unconditional_action(HashMap result) throws RecognitionException {
         RuleSet2Parser.unconditional_action_return retval = new RuleSet2Parser.unconditional_action_return();
         retval.start = input.LT(1);
@@ -4808,7 +4803,7 @@ public class RuleSet2Parser extends DebugParser {
 
         RuleSet2Parser.primrule_return p = null;
 
-        RuleSet2Parser.action_block_return action_block68 = null;
+        RuleSet2Parser.action_block_return action_block69 = null;
 
 
 
@@ -4818,71 +4813,71 @@ public class RuleSet2Parser extends DebugParser {
         try { dbg.enterRule(getGrammarFileName(), "unconditional_action");
         if ( getRuleLevel()==0 ) {dbg.commence();}
         incRuleLevel();
-        dbg.location(664, 1);
+        dbg.location(660, 1);
 
         try {
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:668:2: (p= primrule | action_block[result] )
-            int alt28=2;
-            try { dbg.enterDecision(28);
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:664:2: (p= primrule | action_block[result] )
+            int alt33=2;
+            try { dbg.enterDecision(33);
 
             switch ( input.LA(1) ) {
             case VAR:
                 {
-                int LA28_1 = input.LA(2);
+                int LA33_1 = input.LA(2);
 
-                if ( (LA28_1==40||(LA28_1>=49 && LA28_1<=50)) ) {
-                    alt28=1;
+                if ( (LA33_1==39||(LA33_1>=46 && LA33_1<=47)) ) {
+                    alt33=1;
                 }
-                else if ( (LA28_1==29) ) {
-                    alt28=2;
+                else if ( (LA33_1==29) ) {
+                    alt33=2;
                 }
                 else {
                     if (state.backtracking>0) {state.failed=true; return retval;}
                     NoViableAltException nvae =
-                        new NoViableAltException("", 28, 1, input);
+                        new NoViableAltException("", 33, 1, input);
 
                     dbg.recognitionException(nvae);
                     throw nvae;
                 }
                 }
                 break;
-            case 117:
+            case 112:
                 {
-                alt28=1;
+                alt33=1;
                 }
                 break;
             case 29:
                 {
-                alt28=2;
+                alt33=2;
                 }
                 break;
             default:
                 if (state.backtracking>0) {state.failed=true; return retval;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 28, 0, input);
+                    new NoViableAltException("", 33, 0, input);
 
                 dbg.recognitionException(nvae);
                 throw nvae;
             }
 
-            } finally {dbg.exitDecision(28);}
+            } finally {dbg.exitDecision(33);}
 
-            switch (alt28) {
+            switch (alt33) {
                 case 1 :
                     dbg.enterAlt(1);
 
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:668:4: p= primrule
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:664:4: p= primrule
                     {
                     root_0 = (Object)adaptor.nil();
 
-                    dbg.location(668,5);
-                    pushFollow(FOLLOW_primrule_in_unconditional_action1927);
+                    dbg.location(664,5);
+                    pushFollow(FOLLOW_primrule_in_unconditional_action1920);
                     p=primrule();
 
                     state._fsp--;
                     if (state.failed) return retval;
                     if ( state.backtracking==0 ) adaptor.addChild(root_0, p.getTree());
-                    dbg.location(668,15);
+                    dbg.location(664,15);
                     if ( state.backtracking==0 ) {
                       temp_list.add((p!=null?p.result:null)); result.put("actions",temp_list);
                     }
@@ -4892,17 +4887,17 @@ public class RuleSet2Parser extends DebugParser {
                 case 2 :
                     dbg.enterAlt(2);
 
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:669:6: action_block[result]
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:665:6: action_block[result]
                     {
                     root_0 = (Object)adaptor.nil();
 
-                    dbg.location(669,6);
-                    pushFollow(FOLLOW_action_block_in_unconditional_action1937);
-                    action_block68=action_block(result);
+                    dbg.location(665,6);
+                    pushFollow(FOLLOW_action_block_in_unconditional_action1930);
+                    action_block69=action_block(result);
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, action_block68.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, action_block69.getTree());
 
                     }
                     break;
@@ -4924,7 +4919,7 @@ public class RuleSet2Parser extends DebugParser {
         }
         finally {
         }
-        dbg.location(670, 2);
+        dbg.location(666, 2);
 
         }
         finally {
@@ -4943,26 +4938,26 @@ public class RuleSet2Parser extends DebugParser {
     };
 
     // $ANTLR start "action_block"
-    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:672:1: action_block[HashMap result] : (at= must_be_one[sar(\"choose\",\"every\")] )? '{' (p= primrule ( ';' p= primrule )* ) ( ';' )? '}' ;
+    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:668:1: action_block[HashMap result] : (at= must_be_one[sar(\"choose\",\"every\")] )? '{' (p= primrule ( ';' p= primrule )* ) ( ';' )? '}' ;
     public final RuleSet2Parser.action_block_return action_block(HashMap result) throws RecognitionException {
         RuleSet2Parser.action_block_return retval = new RuleSet2Parser.action_block_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
 
-        Token char_literal69=null;
         Token char_literal70=null;
         Token char_literal71=null;
         Token char_literal72=null;
+        Token char_literal73=null;
         RuleSet2Parser.must_be_one_return at = null;
 
         RuleSet2Parser.primrule_return p = null;
 
 
-        Object char_literal69_tree=null;
         Object char_literal70_tree=null;
         Object char_literal71_tree=null;
         Object char_literal72_tree=null;
+        Object char_literal73_tree=null;
 
          
         	ArrayList temp_list = new ArrayList(); 
@@ -4970,37 +4965,37 @@ public class RuleSet2Parser extends DebugParser {
         try { dbg.enterRule(getGrammarFileName(), "action_block");
         if ( getRuleLevel()==0 ) {dbg.commence();}
         incRuleLevel();
-        dbg.location(672, 1);
+        dbg.location(668, 1);
 
         try {
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:676:2: ( (at= must_be_one[sar(\"choose\",\"every\")] )? '{' (p= primrule ( ';' p= primrule )* ) ( ';' )? '}' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:672:2: ( (at= must_be_one[sar(\"choose\",\"every\")] )? '{' (p= primrule ( ';' p= primrule )* ) ( ';' )? '}' )
             dbg.enterAlt(1);
 
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:676:4: (at= must_be_one[sar(\"choose\",\"every\")] )? '{' (p= primrule ( ';' p= primrule )* ) ( ';' )? '}'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:672:4: (at= must_be_one[sar(\"choose\",\"every\")] )? '{' (p= primrule ( ';' p= primrule )* ) ( ';' )? '}'
             {
             root_0 = (Object)adaptor.nil();
 
-            dbg.location(676,6);
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:676:6: (at= must_be_one[sar(\"choose\",\"every\")] )?
-            int alt29=2;
-            try { dbg.enterSubRule(29);
-            try { dbg.enterDecision(29);
+            dbg.location(672,6);
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:672:6: (at= must_be_one[sar(\"choose\",\"every\")] )?
+            int alt34=2;
+            try { dbg.enterSubRule(34);
+            try { dbg.enterDecision(34);
 
-            int LA29_0 = input.LA(1);
+            int LA34_0 = input.LA(1);
 
-            if ( (LA29_0==VAR) ) {
-                alt29=1;
+            if ( (LA34_0==VAR) ) {
+                alt34=1;
             }
-            } finally {dbg.exitDecision(29);}
+            } finally {dbg.exitDecision(34);}
 
-            switch (alt29) {
+            switch (alt34) {
                 case 1 :
                     dbg.enterAlt(1);
 
                     // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:0:0: at= must_be_one[sar(\"choose\",\"every\")]
                     {
-                    dbg.location(676,6);
-                    pushFollow(FOLLOW_must_be_one_in_action_block1963);
+                    dbg.location(672,6);
+                    pushFollow(FOLLOW_must_be_one_in_action_block1956);
                     at=must_be_one(sar("choose","every"));
 
                     state._fsp--;
@@ -5011,79 +5006,79 @@ public class RuleSet2Parser extends DebugParser {
                     break;
 
             }
-            } finally {dbg.exitSubRule(29);}
+            } finally {dbg.exitSubRule(34);}
 
-            dbg.location(676,43);
+            dbg.location(672,43);
             if ( state.backtracking==0 ) {
               result.put("blocktype",(at!=null?input.toString(at.start,at.stop):null)); 
             }
-            dbg.location(677,3);
-            char_literal69=(Token)match(input,29,FOLLOW_29_in_action_block1973); if (state.failed) return retval;
+            dbg.location(673,3);
+            char_literal70=(Token)match(input,29,FOLLOW_29_in_action_block1966); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            char_literal69_tree = (Object)adaptor.create(char_literal69);
-            adaptor.addChild(root_0, char_literal69_tree);
+            char_literal70_tree = (Object)adaptor.create(char_literal70);
+            adaptor.addChild(root_0, char_literal70_tree);
             }
-            dbg.location(677,7);
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:677:7: (p= primrule ( ';' p= primrule )* )
+            dbg.location(673,7);
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:673:7: (p= primrule ( ';' p= primrule )* )
             dbg.enterAlt(1);
 
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:677:8: p= primrule ( ';' p= primrule )*
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:673:8: p= primrule ( ';' p= primrule )*
             {
-            dbg.location(677,9);
-            pushFollow(FOLLOW_primrule_in_action_block1978);
+            dbg.location(673,9);
+            pushFollow(FOLLOW_primrule_in_action_block1971);
             p=primrule();
 
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, p.getTree());
-            dbg.location(677,19);
+            dbg.location(673,19);
             if ( state.backtracking==0 ) {
               temp_list.add((p!=null?p.result:null));
             }
-            dbg.location(678,4);
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:678:4: ( ';' p= primrule )*
-            try { dbg.enterSubRule(30);
+            dbg.location(674,4);
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:674:4: ( ';' p= primrule )*
+            try { dbg.enterSubRule(35);
 
-            loop30:
+            loop35:
             do {
-                int alt30=2;
-                try { dbg.enterDecision(30);
+                int alt35=2;
+                try { dbg.enterDecision(35);
 
-                int LA30_0 = input.LA(1);
+                int LA35_0 = input.LA(1);
 
-                if ( (LA30_0==31) ) {
-                    int LA30_1 = input.LA(2);
+                if ( (LA35_0==31) ) {
+                    int LA35_1 = input.LA(2);
 
-                    if ( (LA30_1==VAR||LA30_1==117) ) {
-                        alt30=1;
+                    if ( (LA35_1==VAR||LA35_1==112) ) {
+                        alt35=1;
                     }
 
 
                 }
 
 
-                } finally {dbg.exitDecision(30);}
+                } finally {dbg.exitDecision(35);}
 
-                switch (alt30) {
+                switch (alt35) {
             	case 1 :
             	    dbg.enterAlt(1);
 
-            	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:678:5: ';' p= primrule
+            	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:674:5: ';' p= primrule
             	    {
-            	    dbg.location(678,5);
-            	    char_literal70=(Token)match(input,31,FOLLOW_31_in_action_block1988); if (state.failed) return retval;
+            	    dbg.location(674,5);
+            	    char_literal71=(Token)match(input,31,FOLLOW_31_in_action_block1981); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
-            	    char_literal70_tree = (Object)adaptor.create(char_literal70);
-            	    adaptor.addChild(root_0, char_literal70_tree);
+            	    char_literal71_tree = (Object)adaptor.create(char_literal71);
+            	    adaptor.addChild(root_0, char_literal71_tree);
             	    }
-            	    dbg.location(678,10);
-            	    pushFollow(FOLLOW_primrule_in_action_block1992);
+            	    dbg.location(674,10);
+            	    pushFollow(FOLLOW_primrule_in_action_block1985);
             	    p=primrule();
 
             	    state._fsp--;
             	    if (state.failed) return retval;
             	    if ( state.backtracking==0 ) adaptor.addChild(root_0, p.getTree());
-            	    dbg.location(678,19);
+            	    dbg.location(674,19);
             	    if ( state.backtracking==0 ) {
             	      temp_list.add((p!=null?p.result:null));
             	    }
@@ -5092,53 +5087,53 @@ public class RuleSet2Parser extends DebugParser {
             	    break;
 
             	default :
-            	    break loop30;
+            	    break loop35;
                 }
             } while (true);
-            } finally {dbg.exitSubRule(30);}
+            } finally {dbg.exitSubRule(35);}
 
 
             }
 
-            dbg.location(678,51);
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:678:51: ( ';' )?
-            int alt31=2;
-            try { dbg.enterSubRule(31);
-            try { dbg.enterDecision(31);
+            dbg.location(674,51);
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:674:51: ( ';' )?
+            int alt36=2;
+            try { dbg.enterSubRule(36);
+            try { dbg.enterDecision(36);
 
-            int LA31_0 = input.LA(1);
+            int LA36_0 = input.LA(1);
 
-            if ( (LA31_0==31) ) {
-                alt31=1;
+            if ( (LA36_0==31) ) {
+                alt36=1;
             }
-            } finally {dbg.exitDecision(31);}
+            } finally {dbg.exitDecision(36);}
 
-            switch (alt31) {
+            switch (alt36) {
                 case 1 :
                     dbg.enterAlt(1);
 
                     // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:0:0: ';'
                     {
-                    dbg.location(678,51);
-                    char_literal71=(Token)match(input,31,FOLLOW_31_in_action_block1999); if (state.failed) return retval;
+                    dbg.location(674,51);
+                    char_literal72=(Token)match(input,31,FOLLOW_31_in_action_block1992); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    char_literal71_tree = (Object)adaptor.create(char_literal71);
-                    adaptor.addChild(root_0, char_literal71_tree);
+                    char_literal72_tree = (Object)adaptor.create(char_literal72);
+                    adaptor.addChild(root_0, char_literal72_tree);
                     }
 
                     }
                     break;
 
             }
-            } finally {dbg.exitSubRule(31);}
+            } finally {dbg.exitSubRule(36);}
 
-            dbg.location(678,56);
-            char_literal72=(Token)match(input,30,FOLLOW_30_in_action_block2002); if (state.failed) return retval;
+            dbg.location(674,56);
+            char_literal73=(Token)match(input,30,FOLLOW_30_in_action_block1995); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            char_literal72_tree = (Object)adaptor.create(char_literal72);
-            adaptor.addChild(root_0, char_literal72_tree);
+            char_literal73_tree = (Object)adaptor.create(char_literal73);
+            adaptor.addChild(root_0, char_literal73_tree);
             }
-            dbg.location(678,60);
+            dbg.location(674,60);
             if ( state.backtracking==0 ) {
 
               		result.put("actions",temp_list);
@@ -5163,7 +5158,7 @@ public class RuleSet2Parser extends DebugParser {
         }
         finally {
         }
-        dbg.location(681, 2);
+        dbg.location(677, 2);
 
         }
         finally {
@@ -5183,7 +5178,7 @@ public class RuleSet2Parser extends DebugParser {
     };
 
     // $ANTLR start "primrule"
-    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:683:1: primrule returns [HashMap result] : (label= VAR '=>' )? ( (src= namespace )? name= VAR '(' (ex= expr ( ',' ex1= expr )* )? ( ',' )? ')' (m= modifier_clause )? | e= emit_block ) ;
+    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:679:1: primrule returns [HashMap result] : (label= VAR '=>' )? ( (src= namespace )? name= VAR '(' (ex= expr ( ',' ex1= expr )* )? ( ',' )? ')' (m= modifier_clause )? | e= emit_block ) ;
     public final RuleSet2Parser.primrule_return primrule() throws RecognitionException {
         RuleSet2Parser.primrule_return retval = new RuleSet2Parser.primrule_return();
         retval.start = input.LT(1);
@@ -5192,11 +5187,11 @@ public class RuleSet2Parser extends DebugParser {
 
         Token label=null;
         Token name=null;
-        Token string_literal73=null;
-        Token char_literal74=null;
+        Token string_literal74=null;
         Token char_literal75=null;
         Token char_literal76=null;
         Token char_literal77=null;
+        Token char_literal78=null;
         RuleSet2Parser.namespace_return src = null;
 
         RuleSet2Parser.expr_return ex = null;
@@ -5210,11 +5205,11 @@ public class RuleSet2Parser extends DebugParser {
 
         Object label_tree=null;
         Object name_tree=null;
-        Object string_literal73_tree=null;
-        Object char_literal74_tree=null;
+        Object string_literal74_tree=null;
         Object char_literal75_tree=null;
         Object char_literal76_tree=null;
         Object char_literal77_tree=null;
+        Object char_literal78_tree=null;
 
 
         	ArrayList temp_list = new ArrayList();
@@ -5222,113 +5217,113 @@ public class RuleSet2Parser extends DebugParser {
         try { dbg.enterRule(getGrammarFileName(), "primrule");
         if ( getRuleLevel()==0 ) {dbg.commence();}
         incRuleLevel();
-        dbg.location(683, 1);
+        dbg.location(679, 1);
 
         try {
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:687:2: ( (label= VAR '=>' )? ( (src= namespace )? name= VAR '(' (ex= expr ( ',' ex1= expr )* )? ( ',' )? ')' (m= modifier_clause )? | e= emit_block ) )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:683:2: ( (label= VAR '=>' )? ( (src= namespace )? name= VAR '(' (ex= expr ( ',' ex1= expr )* )? ( ',' )? ')' (m= modifier_clause )? | e= emit_block ) )
             dbg.enterAlt(1);
 
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:687:5: (label= VAR '=>' )? ( (src= namespace )? name= VAR '(' (ex= expr ( ',' ex1= expr )* )? ( ',' )? ')' (m= modifier_clause )? | e= emit_block )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:683:5: (label= VAR '=>' )? ( (src= namespace )? name= VAR '(' (ex= expr ( ',' ex1= expr )* )? ( ',' )? ')' (m= modifier_clause )? | e= emit_block )
             {
             root_0 = (Object)adaptor.nil();
 
-            dbg.location(687,5);
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:687:5: (label= VAR '=>' )?
-            int alt32=2;
-            try { dbg.enterSubRule(32);
-            try { dbg.enterDecision(32);
+            dbg.location(683,5);
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:683:5: (label= VAR '=>' )?
+            int alt37=2;
+            try { dbg.enterSubRule(37);
+            try { dbg.enterDecision(37);
 
-            int LA32_0 = input.LA(1);
+            int LA37_0 = input.LA(1);
 
-            if ( (LA32_0==VAR) ) {
-                int LA32_1 = input.LA(2);
+            if ( (LA37_0==VAR) ) {
+                int LA37_1 = input.LA(2);
 
-                if ( (LA32_1==49) ) {
-                    alt32=1;
+                if ( (LA37_1==46) ) {
+                    alt37=1;
                 }
             }
-            } finally {dbg.exitDecision(32);}
+            } finally {dbg.exitDecision(37);}
 
-            switch (alt32) {
+            switch (alt37) {
                 case 1 :
                     dbg.enterAlt(1);
 
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:687:6: label= VAR '=>'
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:683:6: label= VAR '=>'
                     {
-                    dbg.location(687,11);
-                    label=(Token)match(input,VAR,FOLLOW_VAR_in_primrule2029); if (state.failed) return retval;
+                    dbg.location(683,11);
+                    label=(Token)match(input,VAR,FOLLOW_VAR_in_primrule2022); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     label_tree = (Object)adaptor.create(label);
                     adaptor.addChild(root_0, label_tree);
                     }
-                    dbg.location(687,16);
-                    string_literal73=(Token)match(input,49,FOLLOW_49_in_primrule2031); if (state.failed) return retval;
+                    dbg.location(683,16);
+                    string_literal74=(Token)match(input,46,FOLLOW_46_in_primrule2024); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    string_literal73_tree = (Object)adaptor.create(string_literal73);
-                    adaptor.addChild(root_0, string_literal73_tree);
+                    string_literal74_tree = (Object)adaptor.create(string_literal74);
+                    adaptor.addChild(root_0, string_literal74_tree);
                     }
 
                     }
                     break;
 
             }
-            } finally {dbg.exitSubRule(32);}
+            } finally {dbg.exitSubRule(37);}
 
-            dbg.location(687,23);
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:687:23: ( (src= namespace )? name= VAR '(' (ex= expr ( ',' ex1= expr )* )? ( ',' )? ')' (m= modifier_clause )? | e= emit_block )
-            int alt38=2;
-            try { dbg.enterSubRule(38);
-            try { dbg.enterDecision(38);
+            dbg.location(683,23);
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:683:23: ( (src= namespace )? name= VAR '(' (ex= expr ( ',' ex1= expr )* )? ( ',' )? ')' (m= modifier_clause )? | e= emit_block )
+            int alt43=2;
+            try { dbg.enterSubRule(43);
+            try { dbg.enterDecision(43);
 
-            int LA38_0 = input.LA(1);
+            int LA43_0 = input.LA(1);
 
-            if ( (LA38_0==VAR) ) {
-                alt38=1;
+            if ( (LA43_0==VAR) ) {
+                alt43=1;
             }
-            else if ( (LA38_0==117) ) {
-                alt38=2;
+            else if ( (LA43_0==112) ) {
+                alt43=2;
             }
             else {
                 if (state.backtracking>0) {state.failed=true; return retval;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 38, 0, input);
+                    new NoViableAltException("", 43, 0, input);
 
                 dbg.recognitionException(nvae);
                 throw nvae;
             }
-            } finally {dbg.exitDecision(38);}
+            } finally {dbg.exitDecision(43);}
 
-            switch (alt38) {
+            switch (alt43) {
                 case 1 :
                     dbg.enterAlt(1);
 
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:688:4: (src= namespace )? name= VAR '(' (ex= expr ( ',' ex1= expr )* )? ( ',' )? ')' (m= modifier_clause )?
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:684:4: (src= namespace )? name= VAR '(' (ex= expr ( ',' ex1= expr )* )? ( ',' )? ')' (m= modifier_clause )?
                     {
-                    dbg.location(688,7);
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:688:7: (src= namespace )?
-                    int alt33=2;
-                    try { dbg.enterSubRule(33);
-                    try { dbg.enterDecision(33);
+                    dbg.location(684,7);
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:684:7: (src= namespace )?
+                    int alt38=2;
+                    try { dbg.enterSubRule(38);
+                    try { dbg.enterDecision(38);
 
-                    int LA33_0 = input.LA(1);
+                    int LA38_0 = input.LA(1);
 
-                    if ( (LA33_0==VAR) ) {
-                        int LA33_1 = input.LA(2);
+                    if ( (LA38_0==VAR) ) {
+                        int LA38_1 = input.LA(2);
 
-                        if ( (LA33_1==40) ) {
-                            alt33=1;
+                        if ( (LA38_1==39) ) {
+                            alt38=1;
                         }
                     }
-                    } finally {dbg.exitDecision(33);}
+                    } finally {dbg.exitDecision(38);}
 
-                    switch (alt33) {
+                    switch (alt38) {
                         case 1 :
                             dbg.enterAlt(1);
 
                             // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:0:0: src= namespace
                             {
-                            dbg.location(688,7);
-                            pushFollow(FOLLOW_namespace_in_primrule2042);
+                            dbg.location(684,7);
+                            pushFollow(FOLLOW_namespace_in_primrule2035);
                             src=namespace();
 
                             state._fsp--;
@@ -5339,94 +5334,94 @@ public class RuleSet2Parser extends DebugParser {
                             break;
 
                     }
-                    } finally {dbg.exitSubRule(33);}
+                    } finally {dbg.exitSubRule(38);}
 
-                    dbg.location(688,23);
-                    name=(Token)match(input,VAR,FOLLOW_VAR_in_primrule2047); if (state.failed) return retval;
+                    dbg.location(684,23);
+                    name=(Token)match(input,VAR,FOLLOW_VAR_in_primrule2040); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     name_tree = (Object)adaptor.create(name);
                     adaptor.addChild(root_0, name_tree);
                     }
-                    dbg.location(688,28);
-                    char_literal74=(Token)match(input,50,FOLLOW_50_in_primrule2049); if (state.failed) return retval;
+                    dbg.location(684,28);
+                    char_literal75=(Token)match(input,47,FOLLOW_47_in_primrule2042); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    char_literal74_tree = (Object)adaptor.create(char_literal74);
-                    adaptor.addChild(root_0, char_literal74_tree);
+                    char_literal75_tree = (Object)adaptor.create(char_literal75);
+                    adaptor.addChild(root_0, char_literal75_tree);
                     }
-                    dbg.location(688,32);
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:688:32: (ex= expr ( ',' ex1= expr )* )?
-                    int alt35=2;
-                    try { dbg.enterSubRule(35);
-                    try { dbg.enterDecision(35);
+                    dbg.location(684,32);
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:684:32: (ex= expr ( ',' ex1= expr )* )?
+                    int alt40=2;
+                    try { dbg.enterSubRule(40);
+                    try { dbg.enterDecision(40);
 
-                    int LA35_0 = input.LA(1);
+                    int LA40_0 = input.LA(1);
 
-                    if ( ((LA35_0>=VAR && LA35_0<=INT)||LA35_0==FLOAT||(LA35_0>=STRING && LA35_0<=REGEXP)||LA35_0==29||LA35_0==50||LA35_0==61||LA35_0==75||LA35_0==82||(LA35_0>=106 && LA35_0<=108)||(LA35_0>=110 && LA35_0<=113)) ) {
-                        alt35=1;
+                    if ( ((LA40_0>=VAR && LA40_0<=INT)||LA40_0==FLOAT||(LA40_0>=STRING && LA40_0<=REGEXP)||LA40_0==29||LA40_0==47||LA40_0==57||LA40_0==71||LA40_0==78||(LA40_0>=101 && LA40_0<=103)||(LA40_0>=105 && LA40_0<=108)) ) {
+                        alt40=1;
                     }
-                    } finally {dbg.exitDecision(35);}
+                    } finally {dbg.exitDecision(40);}
 
-                    switch (alt35) {
+                    switch (alt40) {
                         case 1 :
                             dbg.enterAlt(1);
 
-                            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:688:33: ex= expr ( ',' ex1= expr )*
+                            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:684:33: ex= expr ( ',' ex1= expr )*
                             {
-                            dbg.location(688,35);
-                            pushFollow(FOLLOW_expr_in_primrule2054);
+                            dbg.location(684,35);
+                            pushFollow(FOLLOW_expr_in_primrule2047);
                             ex=expr();
 
                             state._fsp--;
                             if (state.failed) return retval;
                             if ( state.backtracking==0 ) adaptor.addChild(root_0, ex.getTree());
-                            dbg.location(688,40);
+                            dbg.location(684,40);
                             if ( state.backtracking==0 ) {
                               temp_list.add((ex!=null?ex.result:null));
                             }
-                            dbg.location(688,70);
-                            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:688:70: ( ',' ex1= expr )*
-                            try { dbg.enterSubRule(34);
+                            dbg.location(684,70);
+                            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:684:70: ( ',' ex1= expr )*
+                            try { dbg.enterSubRule(39);
 
-                            loop34:
+                            loop39:
                             do {
-                                int alt34=2;
-                                try { dbg.enterDecision(34);
+                                int alt39=2;
+                                try { dbg.enterDecision(39);
 
-                                int LA34_0 = input.LA(1);
+                                int LA39_0 = input.LA(1);
 
-                                if ( (LA34_0==51) ) {
-                                    int LA34_1 = input.LA(2);
+                                if ( (LA39_0==48) ) {
+                                    int LA39_1 = input.LA(2);
 
-                                    if ( ((LA34_1>=VAR && LA34_1<=INT)||LA34_1==FLOAT||(LA34_1>=STRING && LA34_1<=REGEXP)||LA34_1==29||LA34_1==50||LA34_1==61||LA34_1==75||LA34_1==82||(LA34_1>=106 && LA34_1<=108)||(LA34_1>=110 && LA34_1<=113)) ) {
-                                        alt34=1;
+                                    if ( ((LA39_1>=VAR && LA39_1<=INT)||LA39_1==FLOAT||(LA39_1>=STRING && LA39_1<=REGEXP)||LA39_1==29||LA39_1==47||LA39_1==57||LA39_1==71||LA39_1==78||(LA39_1>=101 && LA39_1<=103)||(LA39_1>=105 && LA39_1<=108)) ) {
+                                        alt39=1;
                                     }
 
 
                                 }
 
 
-                                } finally {dbg.exitDecision(34);}
+                                } finally {dbg.exitDecision(39);}
 
-                                switch (alt34) {
+                                switch (alt39) {
                             	case 1 :
                             	    dbg.enterAlt(1);
 
-                            	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:688:71: ',' ex1= expr
+                            	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:684:71: ',' ex1= expr
                             	    {
-                            	    dbg.location(688,71);
-                            	    char_literal75=(Token)match(input,51,FOLLOW_51_in_primrule2059); if (state.failed) return retval;
+                            	    dbg.location(684,71);
+                            	    char_literal76=(Token)match(input,48,FOLLOW_48_in_primrule2052); if (state.failed) return retval;
                             	    if ( state.backtracking==0 ) {
-                            	    char_literal75_tree = (Object)adaptor.create(char_literal75);
-                            	    adaptor.addChild(root_0, char_literal75_tree);
+                            	    char_literal76_tree = (Object)adaptor.create(char_literal76);
+                            	    adaptor.addChild(root_0, char_literal76_tree);
                             	    }
-                            	    dbg.location(688,78);
-                            	    pushFollow(FOLLOW_expr_in_primrule2063);
+                            	    dbg.location(684,78);
+                            	    pushFollow(FOLLOW_expr_in_primrule2056);
                             	    ex1=expr();
 
                             	    state._fsp--;
                             	    if (state.failed) return retval;
                             	    if ( state.backtracking==0 ) adaptor.addChild(root_0, ex1.getTree());
-                            	    dbg.location(688,83);
+                            	    dbg.location(684,83);
                             	    if ( state.backtracking==0 ) {
                             	      temp_list.add((ex1!=null?ex1.result:null));
                             	    }
@@ -5435,77 +5430,77 @@ public class RuleSet2Parser extends DebugParser {
                             	    break;
 
                             	default :
-                            	    break loop34;
+                            	    break loop39;
                                 }
                             } while (true);
-                            } finally {dbg.exitSubRule(34);}
+                            } finally {dbg.exitSubRule(39);}
 
 
                             }
                             break;
 
                     }
-                    } finally {dbg.exitSubRule(35);}
+                    } finally {dbg.exitSubRule(40);}
 
-                    dbg.location(688,118);
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:688:118: ( ',' )?
-                    int alt36=2;
-                    try { dbg.enterSubRule(36);
-                    try { dbg.enterDecision(36);
+                    dbg.location(684,118);
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:684:118: ( ',' )?
+                    int alt41=2;
+                    try { dbg.enterSubRule(41);
+                    try { dbg.enterDecision(41);
 
-                    int LA36_0 = input.LA(1);
+                    int LA41_0 = input.LA(1);
 
-                    if ( (LA36_0==51) ) {
-                        alt36=1;
+                    if ( (LA41_0==48) ) {
+                        alt41=1;
                     }
-                    } finally {dbg.exitDecision(36);}
+                    } finally {dbg.exitDecision(41);}
 
-                    switch (alt36) {
+                    switch (alt41) {
                         case 1 :
                             dbg.enterAlt(1);
 
                             // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:0:0: ','
                             {
-                            dbg.location(688,118);
-                            char_literal76=(Token)match(input,51,FOLLOW_51_in_primrule2071); if (state.failed) return retval;
+                            dbg.location(684,118);
+                            char_literal77=(Token)match(input,48,FOLLOW_48_in_primrule2064); if (state.failed) return retval;
                             if ( state.backtracking==0 ) {
-                            char_literal76_tree = (Object)adaptor.create(char_literal76);
-                            adaptor.addChild(root_0, char_literal76_tree);
+                            char_literal77_tree = (Object)adaptor.create(char_literal77);
+                            adaptor.addChild(root_0, char_literal77_tree);
                             }
 
                             }
                             break;
 
                     }
-                    } finally {dbg.exitSubRule(36);}
+                    } finally {dbg.exitSubRule(41);}
 
-                    dbg.location(688,124);
-                    char_literal77=(Token)match(input,52,FOLLOW_52_in_primrule2075); if (state.failed) return retval;
+                    dbg.location(684,124);
+                    char_literal78=(Token)match(input,49,FOLLOW_49_in_primrule2068); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    char_literal77_tree = (Object)adaptor.create(char_literal77);
-                    adaptor.addChild(root_0, char_literal77_tree);
+                    char_literal78_tree = (Object)adaptor.create(char_literal78);
+                    adaptor.addChild(root_0, char_literal78_tree);
                     }
-                    dbg.location(688,129);
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:688:129: (m= modifier_clause )?
-                    int alt37=2;
-                    try { dbg.enterSubRule(37);
-                    try { dbg.enterDecision(37);
+                    dbg.location(684,129);
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:684:129: (m= modifier_clause )?
+                    int alt42=2;
+                    try { dbg.enterSubRule(42);
+                    try { dbg.enterDecision(42);
 
-                    int LA37_0 = input.LA(1);
+                    int LA42_0 = input.LA(1);
 
-                    if ( (LA37_0==44) ) {
-                        alt37=1;
+                    if ( (LA42_0==42) ) {
+                        alt42=1;
                     }
-                    } finally {dbg.exitDecision(37);}
+                    } finally {dbg.exitDecision(42);}
 
-                    switch (alt37) {
+                    switch (alt42) {
                         case 1 :
                             dbg.enterAlt(1);
 
                             // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:0:0: m= modifier_clause
                             {
-                            dbg.location(688,129);
-                            pushFollow(FOLLOW_modifier_clause_in_primrule2079);
+                            dbg.location(684,129);
+                            pushFollow(FOLLOW_modifier_clause_in_primrule2072);
                             m=modifier_clause();
 
                             state._fsp--;
@@ -5516,9 +5511,9 @@ public class RuleSet2Parser extends DebugParser {
                             break;
 
                     }
-                    } finally {dbg.exitSubRule(37);}
+                    } finally {dbg.exitSubRule(42);}
 
-                    dbg.location(688,147);
+                    dbg.location(684,147);
                     if ( state.backtracking==0 ) {
 
                       		 	
@@ -5543,16 +5538,16 @@ public class RuleSet2Parser extends DebugParser {
                 case 2 :
                     dbg.enterAlt(2);
 
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:704:4: e= emit_block
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:700:4: e= emit_block
                     {
-                    dbg.location(704,5);
-                    pushFollow(FOLLOW_emit_block_in_primrule2089);
+                    dbg.location(700,5);
+                    pushFollow(FOLLOW_emit_block_in_primrule2082);
                     e=emit_block();
 
                     state._fsp--;
                     if (state.failed) return retval;
                     if ( state.backtracking==0 ) adaptor.addChild(root_0, e.getTree());
-                    dbg.location(704,17);
+                    dbg.location(700,17);
                     if ( state.backtracking==0 ) {
                        
                       			HashMap tmp = new HashMap();
@@ -5565,7 +5560,7 @@ public class RuleSet2Parser extends DebugParser {
                     break;
 
             }
-            } finally {dbg.exitSubRule(38);}
+            } finally {dbg.exitSubRule(43);}
 
 
             }
@@ -5586,7 +5581,7 @@ public class RuleSet2Parser extends DebugParser {
         }
         finally {
         }
-        dbg.location(711, 2);
+        dbg.location(707, 2);
 
         }
         finally {
@@ -5606,22 +5601,22 @@ public class RuleSet2Parser extends DebugParser {
     };
 
     // $ANTLR start "modifier_clause"
-    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:714:1: modifier_clause returns [ArrayList result] : 'with' m= modifier ( 'and' m1= modifier )* ;
+    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:710:1: modifier_clause returns [ArrayList result] : 'with' m= modifier ( 'and' m1= modifier )* ;
     public final RuleSet2Parser.modifier_clause_return modifier_clause() throws RecognitionException {
         RuleSet2Parser.modifier_clause_return retval = new RuleSet2Parser.modifier_clause_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
 
-        Token string_literal78=null;
         Token string_literal79=null;
+        Token string_literal80=null;
         RuleSet2Parser.modifier_return m = null;
 
         RuleSet2Parser.modifier_return m1 = null;
 
 
-        Object string_literal78_tree=null;
         Object string_literal79_tree=null;
+        Object string_literal80_tree=null;
 
 
         	ArrayList temp_list = new ArrayList();
@@ -5629,71 +5624,71 @@ public class RuleSet2Parser extends DebugParser {
         try { dbg.enterRule(getGrammarFileName(), "modifier_clause");
         if ( getRuleLevel()==0 ) {dbg.commence();}
         incRuleLevel();
-        dbg.location(714, 1);
+        dbg.location(710, 1);
 
         try {
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:718:2: ( 'with' m= modifier ( 'and' m1= modifier )* )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:714:2: ( 'with' m= modifier ( 'and' m1= modifier )* )
             dbg.enterAlt(1);
 
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:719:2: 'with' m= modifier ( 'and' m1= modifier )*
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:715:2: 'with' m= modifier ( 'and' m1= modifier )*
             {
             root_0 = (Object)adaptor.nil();
 
-            dbg.location(719,2);
-            string_literal78=(Token)match(input,44,FOLLOW_44_in_modifier_clause2123); if (state.failed) return retval;
+            dbg.location(715,2);
+            string_literal79=(Token)match(input,42,FOLLOW_42_in_modifier_clause2116); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            string_literal78_tree = (Object)adaptor.create(string_literal78);
-            adaptor.addChild(root_0, string_literal78_tree);
+            string_literal79_tree = (Object)adaptor.create(string_literal79);
+            adaptor.addChild(root_0, string_literal79_tree);
             }
-            dbg.location(719,10);
-            pushFollow(FOLLOW_modifier_in_modifier_clause2127);
+            dbg.location(715,10);
+            pushFollow(FOLLOW_modifier_in_modifier_clause2120);
             m=modifier();
 
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, m.getTree());
-            dbg.location(719,20);
+            dbg.location(715,20);
             if ( state.backtracking==0 ) {
               temp_list.add((m!=null?m.result:null));
             }
-            dbg.location(719,48);
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:719:48: ( 'and' m1= modifier )*
-            try { dbg.enterSubRule(39);
+            dbg.location(715,48);
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:715:48: ( 'and' m1= modifier )*
+            try { dbg.enterSubRule(44);
 
-            loop39:
+            loop44:
             do {
-                int alt39=2;
-                try { dbg.enterDecision(39);
+                int alt44=2;
+                try { dbg.enterDecision(44);
 
-                int LA39_0 = input.LA(1);
+                int LA44_0 = input.LA(1);
 
-                if ( (LA39_0==53) ) {
-                    alt39=1;
+                if ( (LA44_0==50) ) {
+                    alt44=1;
                 }
 
 
-                } finally {dbg.exitDecision(39);}
+                } finally {dbg.exitDecision(44);}
 
-                switch (alt39) {
+                switch (alt44) {
             	case 1 :
             	    dbg.enterAlt(1);
 
-            	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:719:49: 'and' m1= modifier
+            	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:715:49: 'and' m1= modifier
             	    {
-            	    dbg.location(719,49);
-            	    string_literal79=(Token)match(input,53,FOLLOW_53_in_modifier_clause2132); if (state.failed) return retval;
+            	    dbg.location(715,49);
+            	    string_literal80=(Token)match(input,50,FOLLOW_50_in_modifier_clause2125); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
-            	    string_literal79_tree = (Object)adaptor.create(string_literal79);
-            	    adaptor.addChild(root_0, string_literal79_tree);
+            	    string_literal80_tree = (Object)adaptor.create(string_literal80);
+            	    adaptor.addChild(root_0, string_literal80_tree);
             	    }
-            	    dbg.location(719,57);
-            	    pushFollow(FOLLOW_modifier_in_modifier_clause2136);
+            	    dbg.location(715,57);
+            	    pushFollow(FOLLOW_modifier_in_modifier_clause2129);
             	    m1=modifier();
 
             	    state._fsp--;
             	    if (state.failed) return retval;
             	    if ( state.backtracking==0 ) adaptor.addChild(root_0, m1.getTree());
-            	    dbg.location(719,67);
+            	    dbg.location(715,67);
             	    if ( state.backtracking==0 ) {
             	      temp_list.add((m1!=null?m1.result:null));
             	    }
@@ -5702,12 +5697,12 @@ public class RuleSet2Parser extends DebugParser {
             	    break;
 
             	default :
-            	    break loop39;
+            	    break loop44;
                 }
             } while (true);
-            } finally {dbg.exitSubRule(39);}
+            } finally {dbg.exitSubRule(44);}
 
-            dbg.location(720,2);
+            dbg.location(716,2);
             if ( state.backtracking==0 ) {
 
               		retval.result = temp_list;
@@ -5732,7 +5727,7 @@ public class RuleSet2Parser extends DebugParser {
         }
         finally {
         }
-        dbg.location(723, 2);
+        dbg.location(719, 2);
 
         }
         finally {
@@ -5752,7 +5747,7 @@ public class RuleSet2Parser extends DebugParser {
     };
 
     // $ANTLR start "modifier"
-    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:725:1: modifier returns [HashMap result] : name= VAR '=' (e= expr | j= JS ) ;
+    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:721:1: modifier returns [HashMap result] : name= VAR '=' (e= expr | j= JS ) ;
     public final RuleSet2Parser.modifier_return modifier() throws RecognitionException {
         RuleSet2Parser.modifier_return retval = new RuleSet2Parser.modifier_return();
         retval.start = input.LT(1);
@@ -5761,71 +5756,71 @@ public class RuleSet2Parser extends DebugParser {
 
         Token name=null;
         Token j=null;
-        Token char_literal80=null;
+        Token char_literal81=null;
         RuleSet2Parser.expr_return e = null;
 
 
         Object name_tree=null;
         Object j_tree=null;
-        Object char_literal80_tree=null;
+        Object char_literal81_tree=null;
 
         try { dbg.enterRule(getGrammarFileName(), "modifier");
         if ( getRuleLevel()==0 ) {dbg.commence();}
         incRuleLevel();
-        dbg.location(725, 1);
+        dbg.location(721, 1);
 
         try {
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:726:2: (name= VAR '=' (e= expr | j= JS ) )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:722:2: (name= VAR '=' (e= expr | j= JS ) )
             dbg.enterAlt(1);
 
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:726:4: name= VAR '=' (e= expr | j= JS )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:722:4: name= VAR '=' (e= expr | j= JS )
             {
             root_0 = (Object)adaptor.nil();
 
-            dbg.location(726,8);
-            name=(Token)match(input,VAR,FOLLOW_VAR_in_modifier2161); if (state.failed) return retval;
+            dbg.location(722,8);
+            name=(Token)match(input,VAR,FOLLOW_VAR_in_modifier2154); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
             name_tree = (Object)adaptor.create(name);
             adaptor.addChild(root_0, name_tree);
             }
-            dbg.location(726,13);
-            char_literal80=(Token)match(input,38,FOLLOW_38_in_modifier2163); if (state.failed) return retval;
+            dbg.location(722,13);
+            char_literal81=(Token)match(input,38,FOLLOW_38_in_modifier2156); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            char_literal80_tree = (Object)adaptor.create(char_literal80);
-            adaptor.addChild(root_0, char_literal80_tree);
+            char_literal81_tree = (Object)adaptor.create(char_literal81);
+            adaptor.addChild(root_0, char_literal81_tree);
             }
-            dbg.location(726,17);
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:726:17: (e= expr | j= JS )
-            int alt40=2;
-            try { dbg.enterSubRule(40);
-            try { dbg.enterDecision(40);
+            dbg.location(722,17);
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:722:17: (e= expr | j= JS )
+            int alt45=2;
+            try { dbg.enterSubRule(45);
+            try { dbg.enterDecision(45);
 
-            int LA40_0 = input.LA(1);
+            int LA45_0 = input.LA(1);
 
-            if ( ((LA40_0>=VAR && LA40_0<=INT)||LA40_0==FLOAT||(LA40_0>=STRING && LA40_0<=REGEXP)||LA40_0==29||LA40_0==50||LA40_0==61||LA40_0==75||LA40_0==82||(LA40_0>=106 && LA40_0<=108)||(LA40_0>=110 && LA40_0<=113)) ) {
-                alt40=1;
+            if ( ((LA45_0>=VAR && LA45_0<=INT)||LA45_0==FLOAT||(LA45_0>=STRING && LA45_0<=REGEXP)||LA45_0==29||LA45_0==47||LA45_0==57||LA45_0==71||LA45_0==78||(LA45_0>=101 && LA45_0<=103)||(LA45_0>=105 && LA45_0<=108)) ) {
+                alt45=1;
             }
-            else if ( (LA40_0==JS) ) {
-                alt40=2;
+            else if ( (LA45_0==JS) ) {
+                alt45=2;
             }
             else {
                 if (state.backtracking>0) {state.failed=true; return retval;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 40, 0, input);
+                    new NoViableAltException("", 45, 0, input);
 
                 dbg.recognitionException(nvae);
                 throw nvae;
             }
-            } finally {dbg.exitDecision(40);}
+            } finally {dbg.exitDecision(45);}
 
-            switch (alt40) {
+            switch (alt45) {
                 case 1 :
                     dbg.enterAlt(1);
 
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:726:18: e= expr
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:722:18: e= expr
                     {
-                    dbg.location(726,19);
-                    pushFollow(FOLLOW_expr_in_modifier2168);
+                    dbg.location(722,19);
+                    pushFollow(FOLLOW_expr_in_modifier2161);
                     e=expr();
 
                     state._fsp--;
@@ -5837,10 +5832,10 @@ public class RuleSet2Parser extends DebugParser {
                 case 2 :
                     dbg.enterAlt(2);
 
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:726:27: j= JS
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:722:27: j= JS
                     {
-                    dbg.location(726,28);
-                    j=(Token)match(input,JS,FOLLOW_JS_in_modifier2174); if (state.failed) return retval;
+                    dbg.location(722,28);
+                    j=(Token)match(input,JS,FOLLOW_JS_in_modifier2167); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     j_tree = (Object)adaptor.create(j);
                     adaptor.addChild(root_0, j_tree);
@@ -5850,9 +5845,9 @@ public class RuleSet2Parser extends DebugParser {
                     break;
 
             }
-            } finally {dbg.exitSubRule(40);}
+            } finally {dbg.exitSubRule(45);}
 
-            dbg.location(726,33);
+            dbg.location(722,33);
             if ( state.backtracking==0 ) {
 
               		HashMap tmp2 = new HashMap();
@@ -5892,7 +5887,7 @@ public class RuleSet2Parser extends DebugParser {
         }
         finally {
         }
-        dbg.location(744, 2);
+        dbg.location(740, 2);
 
         }
         finally {
@@ -5912,7 +5907,7 @@ public class RuleSet2Parser extends DebugParser {
     };
 
     // $ANTLR start "using"
-    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:753:1: using returns [HashMap result] : 'using' p= ( STRING | REGEXP ) (s= setting )? ;
+    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:749:1: using returns [HashMap result] : 'using' p= ( STRING | REGEXP ) (s= setting )? ;
     public final RuleSet2Parser.using_return using() throws RecognitionException {
         RuleSet2Parser.using_return retval = new RuleSet2Parser.using_return();
         retval.start = input.LT(1);
@@ -5920,33 +5915,33 @@ public class RuleSet2Parser extends DebugParser {
         Object root_0 = null;
 
         Token p=null;
-        Token string_literal81=null;
+        Token string_literal82=null;
         RuleSet2Parser.setting_return s = null;
 
 
         Object p_tree=null;
-        Object string_literal81_tree=null;
+        Object string_literal82_tree=null;
 
         try { dbg.enterRule(getGrammarFileName(), "using");
         if ( getRuleLevel()==0 ) {dbg.commence();}
         incRuleLevel();
-        dbg.location(753, 1);
+        dbg.location(749, 1);
 
         try {
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:754:2: ( 'using' p= ( STRING | REGEXP ) (s= setting )? )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:750:2: ( 'using' p= ( STRING | REGEXP ) (s= setting )? )
             dbg.enterAlt(1);
 
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:754:4: 'using' p= ( STRING | REGEXP ) (s= setting )?
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:750:4: 'using' p= ( STRING | REGEXP ) (s= setting )?
             {
             root_0 = (Object)adaptor.nil();
 
-            dbg.location(754,4);
-            string_literal81=(Token)match(input,54,FOLLOW_54_in_using2199); if (state.failed) return retval;
+            dbg.location(750,4);
+            string_literal82=(Token)match(input,51,FOLLOW_51_in_using2192); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            string_literal81_tree = (Object)adaptor.create(string_literal81);
-            adaptor.addChild(root_0, string_literal81_tree);
+            string_literal82_tree = (Object)adaptor.create(string_literal82);
+            adaptor.addChild(root_0, string_literal82_tree);
             }
-            dbg.location(754,13);
+            dbg.location(750,13);
             p=(Token)input.LT(1);
             if ( (input.LA(1)>=STRING && input.LA(1)<=REGEXP) ) {
                 input.consume();
@@ -5960,27 +5955,27 @@ public class RuleSet2Parser extends DebugParser {
                 throw mse;
             }
 
-            dbg.location(754,31);
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:754:31: (s= setting )?
-            int alt41=2;
-            try { dbg.enterSubRule(41);
-            try { dbg.enterDecision(41);
+            dbg.location(750,31);
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:750:31: (s= setting )?
+            int alt46=2;
+            try { dbg.enterSubRule(46);
+            try { dbg.enterDecision(46);
 
-            int LA41_0 = input.LA(1);
+            int LA46_0 = input.LA(1);
 
-            if ( (LA41_0==55) ) {
-                alt41=1;
+            if ( (LA46_0==52) ) {
+                alt46=1;
             }
-            } finally {dbg.exitDecision(41);}
+            } finally {dbg.exitDecision(46);}
 
-            switch (alt41) {
+            switch (alt46) {
                 case 1 :
                     dbg.enterAlt(1);
 
                     // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:0:0: s= setting
                     {
-                    dbg.location(754,31);
-                    pushFollow(FOLLOW_setting_in_using2211);
+                    dbg.location(750,31);
+                    pushFollow(FOLLOW_setting_in_using2204);
                     s=setting();
 
                     state._fsp--;
@@ -5991,9 +5986,9 @@ public class RuleSet2Parser extends DebugParser {
                     break;
 
             }
-            } finally {dbg.exitSubRule(41);}
+            } finally {dbg.exitSubRule(46);}
 
-            dbg.location(754,41);
+            dbg.location(750,41);
             if ( state.backtracking==0 ) {
 
               			HashMap tmp = new HashMap();
@@ -6028,7 +6023,7 @@ public class RuleSet2Parser extends DebugParser {
         }
         finally {
         }
-        dbg.location(766, 4);
+        dbg.location(762, 4);
 
         }
         finally {
@@ -6048,7 +6043,7 @@ public class RuleSet2Parser extends DebugParser {
     };
 
     // $ANTLR start "setting"
-    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:768:1: setting returns [ArrayList result] : 'setting' '(' (v= VAR ( ',' v2= VAR )? )* ')' ;
+    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:764:1: setting returns [ArrayList result] : 'setting' '(' (v= VAR ( ',' v2= VAR )* )? ')' ;
     public final RuleSet2Parser.setting_return setting() throws RecognitionException {
         RuleSet2Parser.setting_return retval = new RuleSet2Parser.setting_return();
         retval.start = input.LT(1);
@@ -6057,17 +6052,17 @@ public class RuleSet2Parser extends DebugParser {
 
         Token v=null;
         Token v2=null;
-        Token string_literal82=null;
-        Token char_literal83=null;
+        Token string_literal83=null;
         Token char_literal84=null;
         Token char_literal85=null;
+        Token char_literal86=null;
 
         Object v_tree=null;
         Object v2_tree=null;
-        Object string_literal82_tree=null;
-        Object char_literal83_tree=null;
+        Object string_literal83_tree=null;
         Object char_literal84_tree=null;
         Object char_literal85_tree=null;
+        Object char_literal86_tree=null;
 
 
         	ArrayList sresult = new ArrayList();
@@ -6075,121 +6070,121 @@ public class RuleSet2Parser extends DebugParser {
         try { dbg.enterRule(getGrammarFileName(), "setting");
         if ( getRuleLevel()==0 ) {dbg.commence();}
         incRuleLevel();
-        dbg.location(768, 1);
+        dbg.location(764, 1);
 
         try {
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:772:2: ( 'setting' '(' (v= VAR ( ',' v2= VAR )? )* ')' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:768:2: ( 'setting' '(' (v= VAR ( ',' v2= VAR )* )? ')' )
             dbg.enterAlt(1);
 
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:772:4: 'setting' '(' (v= VAR ( ',' v2= VAR )? )* ')'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:768:4: 'setting' '(' (v= VAR ( ',' v2= VAR )* )? ')'
             {
             root_0 = (Object)adaptor.nil();
 
-            dbg.location(772,4);
-            string_literal82=(Token)match(input,55,FOLLOW_55_in_setting2232); if (state.failed) return retval;
+            dbg.location(768,4);
+            string_literal83=(Token)match(input,52,FOLLOW_52_in_setting2225); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            string_literal82_tree = (Object)adaptor.create(string_literal82);
-            adaptor.addChild(root_0, string_literal82_tree);
+            string_literal83_tree = (Object)adaptor.create(string_literal83);
+            adaptor.addChild(root_0, string_literal83_tree);
             }
-            dbg.location(772,14);
-            char_literal83=(Token)match(input,50,FOLLOW_50_in_setting2234); if (state.failed) return retval;
+            dbg.location(768,14);
+            char_literal84=(Token)match(input,47,FOLLOW_47_in_setting2227); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            char_literal83_tree = (Object)adaptor.create(char_literal83);
-            adaptor.addChild(root_0, char_literal83_tree);
+            char_literal84_tree = (Object)adaptor.create(char_literal84);
+            adaptor.addChild(root_0, char_literal84_tree);
             }
-            dbg.location(772,18);
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:772:18: (v= VAR ( ',' v2= VAR )? )*
-            try { dbg.enterSubRule(43);
+            dbg.location(768,18);
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:768:18: (v= VAR ( ',' v2= VAR )* )?
+            int alt48=2;
+            try { dbg.enterSubRule(48);
+            try { dbg.enterDecision(48);
 
-            loop43:
-            do {
-                int alt43=2;
-                try { dbg.enterDecision(43);
+            int LA48_0 = input.LA(1);
 
-                int LA43_0 = input.LA(1);
+            if ( (LA48_0==VAR) ) {
+                alt48=1;
+            }
+            } finally {dbg.exitDecision(48);}
 
-                if ( (LA43_0==VAR) ) {
-                    alt43=1;
-                }
+            switch (alt48) {
+                case 1 :
+                    dbg.enterAlt(1);
 
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:768:19: v= VAR ( ',' v2= VAR )*
+                    {
+                    dbg.location(768,20);
+                    v=(Token)match(input,VAR,FOLLOW_VAR_in_setting2232); if (state.failed) return retval;
+                    if ( state.backtracking==0 ) {
+                    v_tree = (Object)adaptor.create(v);
+                    adaptor.addChild(root_0, v_tree);
+                    }
+                    dbg.location(768,24);
+                    if ( state.backtracking==0 ) {
+                      sresult.add((v!=null?v.getText():null));
+                    }
+                    dbg.location(768,48);
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:768:48: ( ',' v2= VAR )*
+                    try { dbg.enterSubRule(47);
 
-                } finally {dbg.exitDecision(43);}
+                    loop47:
+                    do {
+                        int alt47=2;
+                        try { dbg.enterDecision(47);
 
-                switch (alt43) {
-            	case 1 :
-            	    dbg.enterAlt(1);
+                        int LA47_0 = input.LA(1);
 
-            	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:772:19: v= VAR ( ',' v2= VAR )?
-            	    {
-            	    dbg.location(772,20);
-            	    v=(Token)match(input,VAR,FOLLOW_VAR_in_setting2239); if (state.failed) return retval;
-            	    if ( state.backtracking==0 ) {
-            	    v_tree = (Object)adaptor.create(v);
-            	    adaptor.addChild(root_0, v_tree);
-            	    }
-            	    dbg.location(772,24);
-            	    if ( state.backtracking==0 ) {
-            	      sresult.add((v!=null?v.getText():null));
-            	    }
-            	    dbg.location(772,48);
-            	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:772:48: ( ',' v2= VAR )?
-            	    int alt42=2;
-            	    try { dbg.enterSubRule(42);
-            	    try { dbg.enterDecision(42);
-
-            	    int LA42_0 = input.LA(1);
-
-            	    if ( (LA42_0==51) ) {
-            	        alt42=1;
-            	    }
-            	    } finally {dbg.exitDecision(42);}
-
-            	    switch (alt42) {
-            	        case 1 :
-            	            dbg.enterAlt(1);
-
-            	            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:772:49: ',' v2= VAR
-            	            {
-            	            dbg.location(772,49);
-            	            char_literal84=(Token)match(input,51,FOLLOW_51_in_setting2243); if (state.failed) return retval;
-            	            if ( state.backtracking==0 ) {
-            	            char_literal84_tree = (Object)adaptor.create(char_literal84);
-            	            adaptor.addChild(root_0, char_literal84_tree);
-            	            }
-            	            dbg.location(772,55);
-            	            v2=(Token)match(input,VAR,FOLLOW_VAR_in_setting2247); if (state.failed) return retval;
-            	            if ( state.backtracking==0 ) {
-            	            v2_tree = (Object)adaptor.create(v2);
-            	            adaptor.addChild(root_0, v2_tree);
-            	            }
-            	            dbg.location(772,59);
-            	            if ( state.backtracking==0 ) {
-            	              sresult.add((v2!=null?v2.getText():null));
-            	            }
-
-            	            }
-            	            break;
-
-            	    }
-            	    } finally {dbg.exitSubRule(42);}
+                        if ( (LA47_0==48) ) {
+                            alt47=1;
+                        }
 
 
-            	    }
-            	    break;
+                        } finally {dbg.exitDecision(47);}
 
-            	default :
-            	    break loop43;
-                }
-            } while (true);
-            } finally {dbg.exitSubRule(43);}
+                        switch (alt47) {
+                    	case 1 :
+                    	    dbg.enterAlt(1);
 
-            dbg.location(772,89);
-            char_literal85=(Token)match(input,52,FOLLOW_52_in_setting2255); if (state.failed) return retval;
+                    	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:768:49: ',' v2= VAR
+                    	    {
+                    	    dbg.location(768,49);
+                    	    char_literal85=(Token)match(input,48,FOLLOW_48_in_setting2236); if (state.failed) return retval;
+                    	    if ( state.backtracking==0 ) {
+                    	    char_literal85_tree = (Object)adaptor.create(char_literal85);
+                    	    adaptor.addChild(root_0, char_literal85_tree);
+                    	    }
+                    	    dbg.location(768,55);
+                    	    v2=(Token)match(input,VAR,FOLLOW_VAR_in_setting2240); if (state.failed) return retval;
+                    	    if ( state.backtracking==0 ) {
+                    	    v2_tree = (Object)adaptor.create(v2);
+                    	    adaptor.addChild(root_0, v2_tree);
+                    	    }
+                    	    dbg.location(768,59);
+                    	    if ( state.backtracking==0 ) {
+                    	      sresult.add((v2!=null?v2.getText():null));
+                    	    }
+
+                    	    }
+                    	    break;
+
+                    	default :
+                    	    break loop47;
+                        }
+                    } while (true);
+                    } finally {dbg.exitSubRule(47);}
+
+
+                    }
+                    break;
+
+            }
+            } finally {dbg.exitSubRule(48);}
+
+            dbg.location(768,89);
+            char_literal86=(Token)match(input,49,FOLLOW_49_in_setting2248); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            char_literal85_tree = (Object)adaptor.create(char_literal85);
-            adaptor.addChild(root_0, char_literal85_tree);
+            char_literal86_tree = (Object)adaptor.create(char_literal86);
+            adaptor.addChild(root_0, char_literal86_tree);
             }
-            dbg.location(772,93);
+            dbg.location(768,93);
             if ( state.backtracking==0 ) {
 
               		retval.result = sresult;
@@ -6214,7 +6209,7 @@ public class RuleSet2Parser extends DebugParser {
         }
         finally {
         }
-        dbg.location(775, 2);
+        dbg.location(771, 2);
 
         }
         finally {
@@ -6234,28 +6229,28 @@ public class RuleSet2Parser extends DebugParser {
     };
 
     // $ANTLR start "pre_block"
-    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:778:1: pre_block returns [ArrayList result] : 'pre' '{' ( decl[tmp] ( ';' decl[tmp] )* )? ( ';' )? '}' ;
+    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:774:1: pre_block returns [ArrayList result] : 'pre' '{' ( decl[tmp] ( ';' decl[tmp] )* )? ( ';' )? '}' ;
     public final RuleSet2Parser.pre_block_return pre_block() throws RecognitionException {
         RuleSet2Parser.pre_block_return retval = new RuleSet2Parser.pre_block_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
 
-        Token string_literal86=null;
-        Token char_literal87=null;
-        Token char_literal89=null;
-        Token char_literal91=null;
+        Token string_literal87=null;
+        Token char_literal88=null;
+        Token char_literal90=null;
         Token char_literal92=null;
-        RuleSet2Parser.decl_return decl88 = null;
+        Token char_literal93=null;
+        RuleSet2Parser.decl_return decl89 = null;
 
-        RuleSet2Parser.decl_return decl90 = null;
+        RuleSet2Parser.decl_return decl91 = null;
 
 
-        Object string_literal86_tree=null;
-        Object char_literal87_tree=null;
-        Object char_literal89_tree=null;
-        Object char_literal91_tree=null;
+        Object string_literal87_tree=null;
+        Object char_literal88_tree=null;
+        Object char_literal90_tree=null;
         Object char_literal92_tree=null;
+        Object char_literal93_tree=null;
 
 
         	ArrayList tmp = new ArrayList();
@@ -6263,153 +6258,153 @@ public class RuleSet2Parser extends DebugParser {
         try { dbg.enterRule(getGrammarFileName(), "pre_block");
         if ( getRuleLevel()==0 ) {dbg.commence();}
         incRuleLevel();
-        dbg.location(778, 1);
+        dbg.location(774, 1);
 
         try {
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:781:3: ( 'pre' '{' ( decl[tmp] ( ';' decl[tmp] )* )? ( ';' )? '}' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:777:3: ( 'pre' '{' ( decl[tmp] ( ';' decl[tmp] )* )? ( ';' )? '}' )
             dbg.enterAlt(1);
 
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:782:3: 'pre' '{' ( decl[tmp] ( ';' decl[tmp] )* )? ( ';' )? '}'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:778:3: 'pre' '{' ( decl[tmp] ( ';' decl[tmp] )* )? ( ';' )? '}'
             {
             root_0 = (Object)adaptor.nil();
 
-            dbg.location(782,3);
-            string_literal86=(Token)match(input,56,FOLLOW_56_in_pre_block2280); if (state.failed) return retval;
+            dbg.location(778,3);
+            string_literal87=(Token)match(input,53,FOLLOW_53_in_pre_block2273); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            string_literal86_tree = (Object)adaptor.create(string_literal86);
-            adaptor.addChild(root_0, string_literal86_tree);
+            string_literal87_tree = (Object)adaptor.create(string_literal87);
+            adaptor.addChild(root_0, string_literal87_tree);
             }
-            dbg.location(782,9);
-            char_literal87=(Token)match(input,29,FOLLOW_29_in_pre_block2282); if (state.failed) return retval;
+            dbg.location(778,9);
+            char_literal88=(Token)match(input,29,FOLLOW_29_in_pre_block2275); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            char_literal87_tree = (Object)adaptor.create(char_literal87);
-            adaptor.addChild(root_0, char_literal87_tree);
+            char_literal88_tree = (Object)adaptor.create(char_literal88);
+            adaptor.addChild(root_0, char_literal88_tree);
             }
-            dbg.location(782,13);
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:782:13: ( decl[tmp] ( ';' decl[tmp] )* )?
-            int alt45=2;
-            try { dbg.enterSubRule(45);
-            try { dbg.enterDecision(45);
+            dbg.location(778,13);
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:778:13: ( decl[tmp] ( ';' decl[tmp] )* )?
+            int alt50=2;
+            try { dbg.enterSubRule(50);
+            try { dbg.enterDecision(50);
 
-            int LA45_0 = input.LA(1);
+            int LA50_0 = input.LA(1);
 
-            if ( (LA45_0==VAR) ) {
-                alt45=1;
+            if ( (LA50_0==VAR) ) {
+                alt50=1;
             }
-            } finally {dbg.exitDecision(45);}
+            } finally {dbg.exitDecision(50);}
 
-            switch (alt45) {
+            switch (alt50) {
                 case 1 :
                     dbg.enterAlt(1);
 
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:782:15: decl[tmp] ( ';' decl[tmp] )*
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:778:15: decl[tmp] ( ';' decl[tmp] )*
                     {
-                    dbg.location(782,15);
-                    pushFollow(FOLLOW_decl_in_pre_block2286);
-                    decl88=decl(tmp);
+                    dbg.location(778,15);
+                    pushFollow(FOLLOW_decl_in_pre_block2279);
+                    decl89=decl(tmp);
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, decl88.getTree());
-                    dbg.location(782,25);
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:782:25: ( ';' decl[tmp] )*
-                    try { dbg.enterSubRule(44);
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, decl89.getTree());
+                    dbg.location(778,25);
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:778:25: ( ';' decl[tmp] )*
+                    try { dbg.enterSubRule(49);
 
-                    loop44:
+                    loop49:
                     do {
-                        int alt44=2;
-                        try { dbg.enterDecision(44);
+                        int alt49=2;
+                        try { dbg.enterDecision(49);
 
-                        int LA44_0 = input.LA(1);
+                        int LA49_0 = input.LA(1);
 
-                        if ( (LA44_0==31) ) {
-                            int LA44_1 = input.LA(2);
+                        if ( (LA49_0==31) ) {
+                            int LA49_1 = input.LA(2);
 
-                            if ( (LA44_1==VAR) ) {
-                                alt44=1;
+                            if ( (LA49_1==VAR) ) {
+                                alt49=1;
                             }
 
 
                         }
 
 
-                        } finally {dbg.exitDecision(44);}
+                        } finally {dbg.exitDecision(49);}
 
-                        switch (alt44) {
+                        switch (alt49) {
                     	case 1 :
                     	    dbg.enterAlt(1);
 
-                    	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:782:26: ';' decl[tmp]
+                    	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:778:26: ';' decl[tmp]
                     	    {
-                    	    dbg.location(782,26);
-                    	    char_literal89=(Token)match(input,31,FOLLOW_31_in_pre_block2290); if (state.failed) return retval;
+                    	    dbg.location(778,26);
+                    	    char_literal90=(Token)match(input,31,FOLLOW_31_in_pre_block2283); if (state.failed) return retval;
                     	    if ( state.backtracking==0 ) {
-                    	    char_literal89_tree = (Object)adaptor.create(char_literal89);
-                    	    adaptor.addChild(root_0, char_literal89_tree);
+                    	    char_literal90_tree = (Object)adaptor.create(char_literal90);
+                    	    adaptor.addChild(root_0, char_literal90_tree);
                     	    }
-                    	    dbg.location(782,30);
-                    	    pushFollow(FOLLOW_decl_in_pre_block2292);
-                    	    decl90=decl(tmp);
+                    	    dbg.location(778,30);
+                    	    pushFollow(FOLLOW_decl_in_pre_block2285);
+                    	    decl91=decl(tmp);
 
                     	    state._fsp--;
                     	    if (state.failed) return retval;
-                    	    if ( state.backtracking==0 ) adaptor.addChild(root_0, decl90.getTree());
+                    	    if ( state.backtracking==0 ) adaptor.addChild(root_0, decl91.getTree());
 
                     	    }
                     	    break;
 
                     	default :
-                    	    break loop44;
+                    	    break loop49;
                         }
                     } while (true);
-                    } finally {dbg.exitSubRule(44);}
+                    } finally {dbg.exitSubRule(49);}
 
 
                     }
                     break;
 
             }
-            } finally {dbg.exitSubRule(45);}
+            } finally {dbg.exitSubRule(50);}
 
-            dbg.location(782,45);
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:782:45: ( ';' )?
-            int alt46=2;
-            try { dbg.enterSubRule(46);
-            try { dbg.enterDecision(46);
+            dbg.location(778,45);
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:778:45: ( ';' )?
+            int alt51=2;
+            try { dbg.enterSubRule(51);
+            try { dbg.enterDecision(51);
 
-            int LA46_0 = input.LA(1);
+            int LA51_0 = input.LA(1);
 
-            if ( (LA46_0==31) ) {
-                alt46=1;
+            if ( (LA51_0==31) ) {
+                alt51=1;
             }
-            } finally {dbg.exitDecision(46);}
+            } finally {dbg.exitDecision(51);}
 
-            switch (alt46) {
+            switch (alt51) {
                 case 1 :
                     dbg.enterAlt(1);
 
                     // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:0:0: ';'
                     {
-                    dbg.location(782,45);
-                    char_literal91=(Token)match(input,31,FOLLOW_31_in_pre_block2300); if (state.failed) return retval;
+                    dbg.location(778,45);
+                    char_literal92=(Token)match(input,31,FOLLOW_31_in_pre_block2293); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    char_literal91_tree = (Object)adaptor.create(char_literal91);
-                    adaptor.addChild(root_0, char_literal91_tree);
+                    char_literal92_tree = (Object)adaptor.create(char_literal92);
+                    adaptor.addChild(root_0, char_literal92_tree);
                     }
 
                     }
                     break;
 
             }
-            } finally {dbg.exitSubRule(46);}
+            } finally {dbg.exitSubRule(51);}
 
-            dbg.location(782,50);
-            char_literal92=(Token)match(input,30,FOLLOW_30_in_pre_block2303); if (state.failed) return retval;
+            dbg.location(778,50);
+            char_literal93=(Token)match(input,30,FOLLOW_30_in_pre_block2296); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            char_literal92_tree = (Object)adaptor.create(char_literal92);
-            adaptor.addChild(root_0, char_literal92_tree);
+            char_literal93_tree = (Object)adaptor.create(char_literal93);
+            adaptor.addChild(root_0, char_literal93_tree);
             }
-            dbg.location(782,54);
+            dbg.location(778,54);
             if ( state.backtracking==0 ) {
 
               	 	retval.result = tmp;
@@ -6434,7 +6429,7 @@ public class RuleSet2Parser extends DebugParser {
         }
         finally {
         }
-        dbg.location(786, 3);
+        dbg.location(782, 3);
 
         }
         finally {
@@ -6454,55 +6449,55 @@ public class RuleSet2Parser extends DebugParser {
     };
 
     // $ANTLR start "foreach"
-    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:789:1: foreach returns [ArrayList result] : 'foreach' e= expr s= setting ;
+    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:785:1: foreach returns [ArrayList result] : 'foreach' e= expr s= setting ;
     public final RuleSet2Parser.foreach_return foreach() throws RecognitionException {
         RuleSet2Parser.foreach_return retval = new RuleSet2Parser.foreach_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
 
-        Token string_literal93=null;
+        Token string_literal94=null;
         RuleSet2Parser.expr_return e = null;
 
         RuleSet2Parser.setting_return s = null;
 
 
-        Object string_literal93_tree=null;
+        Object string_literal94_tree=null;
 
         try { dbg.enterRule(getGrammarFileName(), "foreach");
         if ( getRuleLevel()==0 ) {dbg.commence();}
         incRuleLevel();
-        dbg.location(789, 1);
+        dbg.location(785, 1);
 
         try {
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:790:2: ( 'foreach' e= expr s= setting )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:786:2: ( 'foreach' e= expr s= setting )
             dbg.enterAlt(1);
 
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:791:2: 'foreach' e= expr s= setting
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:787:2: 'foreach' e= expr s= setting
             {
             root_0 = (Object)adaptor.nil();
 
-            dbg.location(791,2);
-            string_literal93=(Token)match(input,57,FOLLOW_57_in_foreach2336); if (state.failed) return retval;
+            dbg.location(787,2);
+            string_literal94=(Token)match(input,54,FOLLOW_54_in_foreach2329); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            string_literal93_tree = (Object)adaptor.create(string_literal93);
-            adaptor.addChild(root_0, string_literal93_tree);
+            string_literal94_tree = (Object)adaptor.create(string_literal94);
+            adaptor.addChild(root_0, string_literal94_tree);
             }
-            dbg.location(791,13);
-            pushFollow(FOLLOW_expr_in_foreach2340);
+            dbg.location(787,13);
+            pushFollow(FOLLOW_expr_in_foreach2333);
             e=expr();
 
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, e.getTree());
-            dbg.location(791,20);
-            pushFollow(FOLLOW_setting_in_foreach2344);
+            dbg.location(787,20);
+            pushFollow(FOLLOW_setting_in_foreach2337);
             s=setting();
 
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, s.getTree());
-            dbg.location(791,29);
+            dbg.location(787,29);
             if ( state.backtracking==0 ) {
 
               		retval.result = new ArrayList();
@@ -6531,7 +6526,7 @@ public class RuleSet2Parser extends DebugParser {
         }
         finally {
         }
-        dbg.location(798, 2);
+        dbg.location(794, 2);
 
         }
         finally {
@@ -6551,48 +6546,48 @@ public class RuleSet2Parser extends DebugParser {
     };
 
     // $ANTLR start "when"
-    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:801:1: when returns [HashMap result] : 'when' es= event_seq ;
+    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:797:1: when returns [HashMap result] : 'when' es= event_seq ;
     public final RuleSet2Parser.when_return when() throws RecognitionException {
         RuleSet2Parser.when_return retval = new RuleSet2Parser.when_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
 
-        Token string_literal94=null;
+        Token string_literal95=null;
         RuleSet2Parser.event_seq_return es = null;
 
 
-        Object string_literal94_tree=null;
+        Object string_literal95_tree=null;
 
 
 
         try { dbg.enterRule(getGrammarFileName(), "when");
         if ( getRuleLevel()==0 ) {dbg.commence();}
         incRuleLevel();
-        dbg.location(801, 1);
+        dbg.location(797, 1);
 
         try {
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:804:2: ( 'when' es= event_seq )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:800:2: ( 'when' es= event_seq )
             dbg.enterAlt(1);
 
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:805:2: 'when' es= event_seq
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:801:2: 'when' es= event_seq
             {
             root_0 = (Object)adaptor.nil();
 
-            dbg.location(805,2);
-            string_literal94=(Token)match(input,58,FOLLOW_58_in_when2379); if (state.failed) return retval;
+            dbg.location(801,2);
+            string_literal95=(Token)match(input,55,FOLLOW_55_in_when2372); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            string_literal94_tree = (Object)adaptor.create(string_literal94);
-            adaptor.addChild(root_0, string_literal94_tree);
+            string_literal95_tree = (Object)adaptor.create(string_literal95);
+            adaptor.addChild(root_0, string_literal95_tree);
             }
-            dbg.location(805,11);
-            pushFollow(FOLLOW_event_seq_in_when2383);
+            dbg.location(801,11);
+            pushFollow(FOLLOW_event_seq_in_when2376);
             es=event_seq();
 
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, es.getTree());
-            dbg.location(805,22);
+            dbg.location(801,22);
             if ( state.backtracking==0 ) {
 
               		HashMap tmp = new HashMap();
@@ -6620,7 +6615,7 @@ public class RuleSet2Parser extends DebugParser {
         }
         finally {
         }
-        dbg.location(811, 2);
+        dbg.location(807, 2);
 
         }
         finally {
@@ -6640,20 +6635,20 @@ public class RuleSet2Parser extends DebugParser {
     };
 
     // $ANTLR start "event_seq"
-    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:814:1: event_seq returns [HashMap result] : eor= event_or (tb= ( 'then' | 'before' ) eor2= event_or )* ;
+    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:810:1: event_seq returns [HashMap result] : eor= event_or (tb= must_be_one[sar(\"then\",\"before\")] eor2= event_or )* ;
     public final RuleSet2Parser.event_seq_return event_seq() throws RecognitionException {
         RuleSet2Parser.event_seq_return retval = new RuleSet2Parser.event_seq_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
 
-        Token tb=null;
         RuleSet2Parser.event_or_return eor = null;
+
+        RuleSet2Parser.must_be_one_return tb = null;
 
         RuleSet2Parser.event_or_return eor2 = null;
 
 
-        Object tb_tree=null;
 
 
         	ArrayList temp_list = new ArrayList();
@@ -6662,90 +6657,84 @@ public class RuleSet2Parser extends DebugParser {
         try { dbg.enterRule(getGrammarFileName(), "event_seq");
         if ( getRuleLevel()==0 ) {dbg.commence();}
         incRuleLevel();
-        dbg.location(814, 1);
+        dbg.location(810, 1);
 
         try {
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:819:2: (eor= event_or (tb= ( 'then' | 'before' ) eor2= event_or )* )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:815:2: (eor= event_or (tb= must_be_one[sar(\"then\",\"before\")] eor2= event_or )* )
             dbg.enterAlt(1);
 
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:820:3: eor= event_or (tb= ( 'then' | 'before' ) eor2= event_or )*
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:816:3: eor= event_or (tb= must_be_one[sar(\"then\",\"before\")] eor2= event_or )*
             {
             root_0 = (Object)adaptor.nil();
 
-            dbg.location(820,6);
-            pushFollow(FOLLOW_event_or_in_event_seq2410);
+            dbg.location(816,6);
+            pushFollow(FOLLOW_event_or_in_event_seq2403);
             eor=event_or();
 
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, eor.getTree());
-            dbg.location(820,15);
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:820:15: (tb= ( 'then' | 'before' ) eor2= event_or )*
-            try { dbg.enterSubRule(47);
+            dbg.location(816,16);
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:816:16: (tb= must_be_one[sar(\"then\",\"before\")] eor2= event_or )*
+            try { dbg.enterSubRule(52);
 
-            loop47:
+            loop52:
             do {
-                int alt47=2;
-                try { dbg.enterDecision(47);
+                int alt52=2;
+                try { dbg.enterDecision(52);
 
-                int LA47_0 = input.LA(1);
-
-                if ( (LA47_0==48||LA47_0==59) ) {
-                    alt47=1;
+                try {
+                    isCyclicDecision = true;
+                    alt52 = dfa52.predict(input);
                 }
+                catch (NoViableAltException nvae) {
+                    dbg.recognitionException(nvae);
+                    throw nvae;
+                }
+                } finally {dbg.exitDecision(52);}
 
-
-                } finally {dbg.exitDecision(47);}
-
-                switch (alt47) {
+                switch (alt52) {
             	case 1 :
             	    dbg.enterAlt(1);
 
-            	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:820:16: tb= ( 'then' | 'before' ) eor2= event_or
+            	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:816:17: tb= must_be_one[sar(\"then\",\"before\")] eor2= event_or
             	    {
-            	    dbg.location(820,18);
-            	    tb=(Token)input.LT(1);
-            	    if ( input.LA(1)==48||input.LA(1)==59 ) {
-            	        input.consume();
-            	        if ( state.backtracking==0 ) adaptor.addChild(root_0, (Object)adaptor.create(tb));
-            	        state.errorRecovery=false;state.failed=false;
-            	    }
-            	    else {
-            	        if (state.backtracking>0) {state.failed=true; return retval;}
-            	        MismatchedSetException mse = new MismatchedSetException(null,input);
-            	        dbg.recognitionException(mse);
-            	        throw mse;
-            	    }
+            	    dbg.location(816,19);
+            	    pushFollow(FOLLOW_must_be_one_in_event_seq2408);
+            	    tb=must_be_one(sar("then","before"));
 
-            	    dbg.location(820,41);
-            	    pushFollow(FOLLOW_event_or_in_event_seq2422);
+            	    state._fsp--;
+            	    if (state.failed) return retval;
+            	    if ( state.backtracking==0 ) adaptor.addChild(root_0, tb.getTree());
+            	    dbg.location(816,58);
+            	    pushFollow(FOLLOW_event_or_in_event_seq2413);
             	    eor2=event_or();
 
             	    state._fsp--;
             	    if (state.failed) return retval;
             	    if ( state.backtracking==0 ) adaptor.addChild(root_0, eor2.getTree());
-            	    dbg.location(820,51);
+            	    dbg.location(816,68);
             	    if ( state.backtracking==0 ) {
-            	       temp_list_2.add((tb!=null?tb.getText():null));temp_list.add(eor2);
+            	       temp_list_2.add((tb!=null?input.toString(tb.start,tb.stop):null));temp_list.add(eor2);
             	    }
 
             	    }
             	    break;
 
             	default :
-            	    break loop47;
+            	    break loop52;
                 }
             } while (true);
-            } finally {dbg.exitSubRule(47);}
+            } finally {dbg.exitSubRule(52);}
 
-            dbg.location(821,3);
+            dbg.location(817,3);
             if ( state.backtracking==0 ) {
 
               			if(temp_list.size() == 0)
               			{ 
-              				retval.result = eor.result;
+              				retval.result = eor.result; 
               			}
-              			else
+              			else 
               			{
               				HashMap the_result = new HashMap();
               				the_result.put("type","complex_event");
@@ -6799,7 +6788,7 @@ public class RuleSet2Parser extends DebugParser {
         }
         finally {
         }
-        dbg.location(861, 2);
+        dbg.location(857, 2);
 
         }
         finally {
@@ -6819,20 +6808,20 @@ public class RuleSet2Parser extends DebugParser {
     };
 
     // $ANTLR start "event_or"
-    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:865:1: event_or returns [HashMap result] : ea= event_and ( 'or' ea1= event_and )* ;
+    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:861:1: event_or returns [HashMap result] : ea= event_and ( 'or' ea1= event_and )* ;
     public final RuleSet2Parser.event_or_return event_or() throws RecognitionException {
         RuleSet2Parser.event_or_return retval = new RuleSet2Parser.event_or_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
 
-        Token string_literal95=null;
+        Token string_literal96=null;
         RuleSet2Parser.event_and_return ea = null;
 
         RuleSet2Parser.event_and_return ea1 = null;
 
 
-        Object string_literal95_tree=null;
+        Object string_literal96_tree=null;
 
 
         	ArrayList temp_list = new ArrayList();
@@ -6840,65 +6829,65 @@ public class RuleSet2Parser extends DebugParser {
         try { dbg.enterRule(getGrammarFileName(), "event_or");
         if ( getRuleLevel()==0 ) {dbg.commence();}
         incRuleLevel();
-        dbg.location(865, 1);
+        dbg.location(861, 1);
 
         try {
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:869:2: (ea= event_and ( 'or' ea1= event_and )* )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:865:2: (ea= event_and ( 'or' ea1= event_and )* )
             dbg.enterAlt(1);
 
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:870:3: ea= event_and ( 'or' ea1= event_and )*
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:866:3: ea= event_and ( 'or' ea1= event_and )*
             {
             root_0 = (Object)adaptor.nil();
 
-            dbg.location(870,5);
-            pushFollow(FOLLOW_event_and_in_event_or2464);
+            dbg.location(866,5);
+            pushFollow(FOLLOW_event_and_in_event_or2455);
             ea=event_and();
 
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, ea.getTree());
-            dbg.location(870,16);
+            dbg.location(866,16);
             if ( state.backtracking==0 ) {
               temp_list.add(ea);
             }
-            dbg.location(870,37);
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:870:37: ( 'or' ea1= event_and )*
-            try { dbg.enterSubRule(48);
+            dbg.location(866,37);
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:866:37: ( 'or' ea1= event_and )*
+            try { dbg.enterSubRule(53);
 
-            loop48:
+            loop53:
             do {
-                int alt48=2;
-                try { dbg.enterDecision(48);
+                int alt53=2;
+                try { dbg.enterDecision(53);
 
-                int LA48_0 = input.LA(1);
+                int LA53_0 = input.LA(1);
 
-                if ( (LA48_0==60) ) {
-                    alt48=1;
+                if ( (LA53_0==56) ) {
+                    alt53=1;
                 }
 
 
-                } finally {dbg.exitDecision(48);}
+                } finally {dbg.exitDecision(53);}
 
-                switch (alt48) {
+                switch (alt53) {
             	case 1 :
             	    dbg.enterAlt(1);
 
-            	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:870:38: 'or' ea1= event_and
+            	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:866:38: 'or' ea1= event_and
             	    {
-            	    dbg.location(870,38);
-            	    string_literal95=(Token)match(input,60,FOLLOW_60_in_event_or2469); if (state.failed) return retval;
+            	    dbg.location(866,38);
+            	    string_literal96=(Token)match(input,56,FOLLOW_56_in_event_or2460); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
-            	    string_literal95_tree = (Object)adaptor.create(string_literal95);
-            	    adaptor.addChild(root_0, string_literal95_tree);
+            	    string_literal96_tree = (Object)adaptor.create(string_literal96);
+            	    adaptor.addChild(root_0, string_literal96_tree);
             	    }
-            	    dbg.location(870,46);
-            	    pushFollow(FOLLOW_event_and_in_event_or2473);
+            	    dbg.location(866,46);
+            	    pushFollow(FOLLOW_event_and_in_event_or2464);
             	    ea1=event_and();
 
             	    state._fsp--;
             	    if (state.failed) return retval;
             	    if ( state.backtracking==0 ) adaptor.addChild(root_0, ea1.getTree());
-            	    dbg.location(870,57);
+            	    dbg.location(866,57);
             	    if ( state.backtracking==0 ) {
             	       temp_list.add(ea1);
             	    }
@@ -6907,12 +6896,12 @@ public class RuleSet2Parser extends DebugParser {
             	    break;
 
             	default :
-            	    break loop48;
+            	    break loop53;
                 }
             } while (true);
-            } finally {dbg.exitSubRule(48);}
+            } finally {dbg.exitSubRule(53);}
 
-            dbg.location(870,82);
+            dbg.location(866,82);
             if ( state.backtracking==0 ) {
 
               			if(temp_list.size() == 1)
@@ -6973,7 +6962,7 @@ public class RuleSet2Parser extends DebugParser {
         }
         finally {
         }
-        dbg.location(909, 2);
+        dbg.location(905, 2);
 
         }
         finally {
@@ -6993,20 +6982,20 @@ public class RuleSet2Parser extends DebugParser {
     };
 
     // $ANTLR start "event_and"
-    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:911:1: event_and returns [HashMap result] : e= event_btwn ( 'and' e1= event_btwn )* ;
+    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:907:1: event_and returns [HashMap result] : e= event_btwn ( 'and' e1= event_btwn )* ;
     public final RuleSet2Parser.event_and_return event_and() throws RecognitionException {
         RuleSet2Parser.event_and_return retval = new RuleSet2Parser.event_and_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
 
-        Token string_literal96=null;
+        Token string_literal97=null;
         RuleSet2Parser.event_btwn_return e = null;
 
         RuleSet2Parser.event_btwn_return e1 = null;
 
 
-        Object string_literal96_tree=null;
+        Object string_literal97_tree=null;
 
 
         	ArrayList temp_list = new ArrayList();
@@ -7014,65 +7003,65 @@ public class RuleSet2Parser extends DebugParser {
         try { dbg.enterRule(getGrammarFileName(), "event_and");
         if ( getRuleLevel()==0 ) {dbg.commence();}
         incRuleLevel();
-        dbg.location(911, 1);
+        dbg.location(907, 1);
 
         try {
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:915:2: (e= event_btwn ( 'and' e1= event_btwn )* )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:911:2: (e= event_btwn ( 'and' e1= event_btwn )* )
             dbg.enterAlt(1);
 
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:916:3: e= event_btwn ( 'and' e1= event_btwn )*
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:912:3: e= event_btwn ( 'and' e1= event_btwn )*
             {
             root_0 = (Object)adaptor.nil();
 
-            dbg.location(916,4);
-            pushFollow(FOLLOW_event_btwn_in_event_and2503);
+            dbg.location(912,4);
+            pushFollow(FOLLOW_event_btwn_in_event_and2494);
             e=event_btwn();
 
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, e.getTree());
-            dbg.location(916,16);
+            dbg.location(912,16);
             if ( state.backtracking==0 ) {
               temp_list.add(e);
             }
-            dbg.location(916,36);
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:916:36: ( 'and' e1= event_btwn )*
-            try { dbg.enterSubRule(49);
+            dbg.location(912,36);
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:912:36: ( 'and' e1= event_btwn )*
+            try { dbg.enterSubRule(54);
 
-            loop49:
+            loop54:
             do {
-                int alt49=2;
-                try { dbg.enterDecision(49);
+                int alt54=2;
+                try { dbg.enterDecision(54);
 
-                int LA49_0 = input.LA(1);
+                int LA54_0 = input.LA(1);
 
-                if ( (LA49_0==53) ) {
-                    alt49=1;
+                if ( (LA54_0==50) ) {
+                    alt54=1;
                 }
 
 
-                } finally {dbg.exitDecision(49);}
+                } finally {dbg.exitDecision(54);}
 
-                switch (alt49) {
+                switch (alt54) {
             	case 1 :
             	    dbg.enterAlt(1);
 
-            	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:916:37: 'and' e1= event_btwn
+            	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:912:37: 'and' e1= event_btwn
             	    {
-            	    dbg.location(916,37);
-            	    string_literal96=(Token)match(input,53,FOLLOW_53_in_event_and2508); if (state.failed) return retval;
+            	    dbg.location(912,37);
+            	    string_literal97=(Token)match(input,50,FOLLOW_50_in_event_and2499); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
-            	    string_literal96_tree = (Object)adaptor.create(string_literal96);
-            	    adaptor.addChild(root_0, string_literal96_tree);
+            	    string_literal97_tree = (Object)adaptor.create(string_literal97);
+            	    adaptor.addChild(root_0, string_literal97_tree);
             	    }
-            	    dbg.location(916,45);
-            	    pushFollow(FOLLOW_event_btwn_in_event_and2512);
+            	    dbg.location(912,45);
+            	    pushFollow(FOLLOW_event_btwn_in_event_and2503);
             	    e1=event_btwn();
 
             	    state._fsp--;
             	    if (state.failed) return retval;
             	    if ( state.backtracking==0 ) adaptor.addChild(root_0, e1.getTree());
-            	    dbg.location(916,57);
+            	    dbg.location(912,57);
             	    if ( state.backtracking==0 ) {
             	       temp_list.add(e1);
             	    }
@@ -7081,12 +7070,12 @@ public class RuleSet2Parser extends DebugParser {
             	    break;
 
             	default :
-            	    break loop49;
+            	    break loop54;
                 }
             } while (true);
-            } finally {dbg.exitSubRule(49);}
+            } finally {dbg.exitSubRule(54);}
 
-            dbg.location(916,82);
+            dbg.location(912,82);
             if ( state.backtracking==0 ) {
 
               			
@@ -7147,7 +7136,7 @@ public class RuleSet2Parser extends DebugParser {
         }
         finally {
         }
-        dbg.location(955, 2);
+        dbg.location(951, 2);
 
         }
         finally {
@@ -7167,7 +7156,7 @@ public class RuleSet2Parser extends DebugParser {
     };
 
     // $ANTLR start "event_btwn"
-    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:957:1: event_btwn returns [HashMap result] : ep= event_prim ( (not= 'not' )? 'between' '(' es1= event_seq ',' es2= event_seq ')' )? ;
+    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:953:1: event_btwn returns [HashMap result] : ep= event_prim ( (not= 'not' )? 'between' '(' es1= event_seq ',' es2= event_seq ')' )? ;
     public final RuleSet2Parser.event_btwn_return event_btwn() throws RecognitionException {
         RuleSet2Parser.event_btwn_return retval = new RuleSet2Parser.event_btwn_return();
         retval.start = input.LT(1);
@@ -7175,10 +7164,10 @@ public class RuleSet2Parser extends DebugParser {
         Object root_0 = null;
 
         Token not=null;
-        Token string_literal97=null;
-        Token char_literal98=null;
+        Token string_literal98=null;
         Token char_literal99=null;
         Token char_literal100=null;
+        Token char_literal101=null;
         RuleSet2Parser.event_prim_return ep = null;
 
         RuleSet2Parser.event_seq_return es1 = null;
@@ -7187,71 +7176,71 @@ public class RuleSet2Parser extends DebugParser {
 
 
         Object not_tree=null;
-        Object string_literal97_tree=null;
-        Object char_literal98_tree=null;
+        Object string_literal98_tree=null;
         Object char_literal99_tree=null;
         Object char_literal100_tree=null;
+        Object char_literal101_tree=null;
 
         try { dbg.enterRule(getGrammarFileName(), "event_btwn");
         if ( getRuleLevel()==0 ) {dbg.commence();}
         incRuleLevel();
-        dbg.location(957, 1);
+        dbg.location(953, 1);
 
         try {
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:958:2: (ep= event_prim ( (not= 'not' )? 'between' '(' es1= event_seq ',' es2= event_seq ')' )? )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:954:2: (ep= event_prim ( (not= 'not' )? 'between' '(' es1= event_seq ',' es2= event_seq ')' )? )
             dbg.enterAlt(1);
 
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:959:3: ep= event_prim ( (not= 'not' )? 'between' '(' es1= event_seq ',' es2= event_seq ')' )?
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:955:3: ep= event_prim ( (not= 'not' )? 'between' '(' es1= event_seq ',' es2= event_seq ')' )?
             {
             root_0 = (Object)adaptor.nil();
 
-            dbg.location(959,5);
-            pushFollow(FOLLOW_event_prim_in_event_btwn2538);
+            dbg.location(955,5);
+            pushFollow(FOLLOW_event_prim_in_event_btwn2529);
             ep=event_prim();
 
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, ep.getTree());
-            dbg.location(959,17);
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:959:17: ( (not= 'not' )? 'between' '(' es1= event_seq ',' es2= event_seq ')' )?
-            int alt51=2;
-            try { dbg.enterSubRule(51);
-            try { dbg.enterDecision(51);
+            dbg.location(955,17);
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:955:17: ( (not= 'not' )? 'between' '(' es1= event_seq ',' es2= event_seq ')' )?
+            int alt56=2;
+            try { dbg.enterSubRule(56);
+            try { dbg.enterDecision(56);
 
-            int LA51_0 = input.LA(1);
+            int LA56_0 = input.LA(1);
 
-            if ( ((LA51_0>=61 && LA51_0<=62)) ) {
-                alt51=1;
+            if ( ((LA56_0>=57 && LA56_0<=58)) ) {
+                alt56=1;
             }
-            } finally {dbg.exitDecision(51);}
+            } finally {dbg.exitDecision(56);}
 
-            switch (alt51) {
+            switch (alt56) {
                 case 1 :
                     dbg.enterAlt(1);
 
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:959:18: (not= 'not' )? 'between' '(' es1= event_seq ',' es2= event_seq ')'
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:955:18: (not= 'not' )? 'between' '(' es1= event_seq ',' es2= event_seq ')'
                     {
-                    dbg.location(959,18);
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:959:18: (not= 'not' )?
-                    int alt50=2;
-                    try { dbg.enterSubRule(50);
-                    try { dbg.enterDecision(50);
+                    dbg.location(955,18);
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:955:18: (not= 'not' )?
+                    int alt55=2;
+                    try { dbg.enterSubRule(55);
+                    try { dbg.enterDecision(55);
 
-                    int LA50_0 = input.LA(1);
+                    int LA55_0 = input.LA(1);
 
-                    if ( (LA50_0==61) ) {
-                        alt50=1;
+                    if ( (LA55_0==57) ) {
+                        alt55=1;
                     }
-                    } finally {dbg.exitDecision(50);}
+                    } finally {dbg.exitDecision(55);}
 
-                    switch (alt50) {
+                    switch (alt55) {
                         case 1 :
                             dbg.enterAlt(1);
 
-                            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:959:19: not= 'not'
+                            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:955:19: not= 'not'
                             {
-                            dbg.location(959,22);
-                            not=(Token)match(input,61,FOLLOW_61_in_event_btwn2544); if (state.failed) return retval;
+                            dbg.location(955,22);
+                            not=(Token)match(input,57,FOLLOW_57_in_event_btwn2535); if (state.failed) return retval;
                             if ( state.backtracking==0 ) {
                             not_tree = (Object)adaptor.create(not);
                             adaptor.addChild(root_0, not_tree);
@@ -7261,54 +7250,54 @@ public class RuleSet2Parser extends DebugParser {
                             break;
 
                     }
-                    } finally {dbg.exitSubRule(50);}
+                    } finally {dbg.exitSubRule(55);}
 
-                    dbg.location(959,32);
-                    string_literal97=(Token)match(input,62,FOLLOW_62_in_event_btwn2549); if (state.failed) return retval;
+                    dbg.location(955,32);
+                    string_literal98=(Token)match(input,58,FOLLOW_58_in_event_btwn2540); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    string_literal97_tree = (Object)adaptor.create(string_literal97);
-                    adaptor.addChild(root_0, string_literal97_tree);
+                    string_literal98_tree = (Object)adaptor.create(string_literal98);
+                    adaptor.addChild(root_0, string_literal98_tree);
                     }
-                    dbg.location(959,42);
-                    char_literal98=(Token)match(input,50,FOLLOW_50_in_event_btwn2551); if (state.failed) return retval;
+                    dbg.location(955,42);
+                    char_literal99=(Token)match(input,47,FOLLOW_47_in_event_btwn2542); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    char_literal98_tree = (Object)adaptor.create(char_literal98);
-                    adaptor.addChild(root_0, char_literal98_tree);
+                    char_literal99_tree = (Object)adaptor.create(char_literal99);
+                    adaptor.addChild(root_0, char_literal99_tree);
                     }
-                    dbg.location(959,49);
-                    pushFollow(FOLLOW_event_seq_in_event_btwn2555);
+                    dbg.location(955,49);
+                    pushFollow(FOLLOW_event_seq_in_event_btwn2546);
                     es1=event_seq();
 
                     state._fsp--;
                     if (state.failed) return retval;
                     if ( state.backtracking==0 ) adaptor.addChild(root_0, es1.getTree());
-                    dbg.location(959,60);
-                    char_literal99=(Token)match(input,51,FOLLOW_51_in_event_btwn2557); if (state.failed) return retval;
+                    dbg.location(955,60);
+                    char_literal100=(Token)match(input,48,FOLLOW_48_in_event_btwn2548); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    char_literal99_tree = (Object)adaptor.create(char_literal99);
-                    adaptor.addChild(root_0, char_literal99_tree);
+                    char_literal100_tree = (Object)adaptor.create(char_literal100);
+                    adaptor.addChild(root_0, char_literal100_tree);
                     }
-                    dbg.location(959,67);
-                    pushFollow(FOLLOW_event_seq_in_event_btwn2561);
+                    dbg.location(955,67);
+                    pushFollow(FOLLOW_event_seq_in_event_btwn2552);
                     es2=event_seq();
 
                     state._fsp--;
                     if (state.failed) return retval;
                     if ( state.backtracking==0 ) adaptor.addChild(root_0, es2.getTree());
-                    dbg.location(959,78);
-                    char_literal100=(Token)match(input,52,FOLLOW_52_in_event_btwn2563); if (state.failed) return retval;
+                    dbg.location(955,78);
+                    char_literal101=(Token)match(input,49,FOLLOW_49_in_event_btwn2554); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    char_literal100_tree = (Object)adaptor.create(char_literal100);
-                    adaptor.addChild(root_0, char_literal100_tree);
+                    char_literal101_tree = (Object)adaptor.create(char_literal101);
+                    adaptor.addChild(root_0, char_literal101_tree);
                     }
 
                     }
                     break;
 
             }
-            } finally {dbg.exitSubRule(51);}
+            } finally {dbg.exitSubRule(56);}
 
-            dbg.location(959,84);
+            dbg.location(955,84);
             if ( state.backtracking==0 ) {
 
               		
@@ -7352,7 +7341,7 @@ public class RuleSet2Parser extends DebugParser {
         }
         finally {
         }
-        dbg.location(981, 2);
+        dbg.location(977, 2);
 
         }
         finally {
@@ -7372,7 +7361,7 @@ public class RuleSet2Parser extends DebugParser {
     };
 
     // $ANTLR start "event_prim"
-    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:984:1: event_prim returns [HashMap result] : ( ( 'web' )? 'pageview' (spat= STRING | rpat= REGEXP ) (set= setting )? | ( 'web' )? opt= ( 'submit' | 'click' | 'dblclick' | 'change' | 'update' ) elem= STRING (on= on_expr )? (set= setting )? | dom= VAR oper= VAR (filter= event_filter )* (set= setting )? | '(' evt= event_seq ')' );
+    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:980:1: event_prim returns [HashMap result] : ( ( 'web' )? 'pageview' (spat= STRING | rpat= REGEXP ) (set= setting )? | ( 'web' )? opt= ( 'submit' | 'click' | 'dblclick' | 'change' | 'update' ) elem= STRING (on= on_expr )? (set= setting )? | dom= VAR oper= VAR (filter= event_filter )* (set= setting )? | '(' evt= event_seq ')' );
     public final RuleSet2Parser.event_prim_return event_prim() throws RecognitionException {
         RuleSet2Parser.event_prim_return retval = new RuleSet2Parser.event_prim_return();
         retval.start = input.LT(1);
@@ -7385,11 +7374,11 @@ public class RuleSet2Parser extends DebugParser {
         Token elem=null;
         Token dom=null;
         Token oper=null;
-        Token string_literal101=null;
         Token string_literal102=null;
         Token string_literal103=null;
-        Token char_literal104=null;
+        Token string_literal104=null;
         Token char_literal105=null;
+        Token char_literal106=null;
         RuleSet2Parser.setting_return set = null;
 
         RuleSet2Parser.on_expr_return on = null;
@@ -7405,11 +7394,11 @@ public class RuleSet2Parser extends DebugParser {
         Object elem_tree=null;
         Object dom_tree=null;
         Object oper_tree=null;
-        Object string_literal101_tree=null;
         Object string_literal102_tree=null;
         Object string_literal103_tree=null;
-        Object char_literal104_tree=null;
+        Object string_literal104_tree=null;
         Object char_literal105_tree=null;
+        Object char_literal106_tree=null;
 
 
         	ArrayList filters = new ArrayList();
@@ -7417,147 +7406,147 @@ public class RuleSet2Parser extends DebugParser {
         try { dbg.enterRule(getGrammarFileName(), "event_prim");
         if ( getRuleLevel()==0 ) {dbg.commence();}
         incRuleLevel();
-        dbg.location(984, 1);
+        dbg.location(980, 1);
 
         try {
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:988:2: ( ( 'web' )? 'pageview' (spat= STRING | rpat= REGEXP ) (set= setting )? | ( 'web' )? opt= ( 'submit' | 'click' | 'dblclick' | 'change' | 'update' ) elem= STRING (on= on_expr )? (set= setting )? | dom= VAR oper= VAR (filter= event_filter )* (set= setting )? | '(' evt= event_seq ')' )
-            int alt60=4;
-            try { dbg.enterDecision(60);
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:984:2: ( ( 'web' )? 'pageview' (spat= STRING | rpat= REGEXP ) (set= setting )? | ( 'web' )? opt= ( 'submit' | 'click' | 'dblclick' | 'change' | 'update' ) elem= STRING (on= on_expr )? (set= setting )? | dom= VAR oper= VAR (filter= event_filter )* (set= setting )? | '(' evt= event_seq ')' )
+            int alt65=4;
+            try { dbg.enterDecision(65);
 
             switch ( input.LA(1) ) {
-            case 63:
+            case 59:
                 {
-                int LA60_1 = input.LA(2);
+                int LA65_1 = input.LA(2);
 
-                if ( ((LA60_1>=36 && LA60_1<=37)||(LA60_1>=65 && LA60_1<=67)) ) {
-                    alt60=2;
+                if ( (LA65_1==60) ) {
+                    alt65=1;
                 }
-                else if ( (LA60_1==64) ) {
-                    alt60=1;
+                else if ( ((LA65_1>=36 && LA65_1<=37)||(LA65_1>=61 && LA65_1<=63)) ) {
+                    alt65=2;
                 }
                 else {
                     if (state.backtracking>0) {state.failed=true; return retval;}
                     NoViableAltException nvae =
-                        new NoViableAltException("", 60, 1, input);
+                        new NoViableAltException("", 65, 1, input);
 
                     dbg.recognitionException(nvae);
                     throw nvae;
                 }
                 }
                 break;
-            case 64:
+            case 60:
                 {
-                alt60=1;
+                alt65=1;
                 }
                 break;
             case 36:
             case 37:
-            case 65:
-            case 66:
-            case 67:
+            case 61:
+            case 62:
+            case 63:
                 {
-                alt60=2;
+                alt65=2;
                 }
                 break;
             case VAR:
                 {
-                alt60=3;
+                alt65=3;
                 }
                 break;
-            case 50:
+            case 47:
                 {
-                alt60=4;
+                alt65=4;
                 }
                 break;
             default:
                 if (state.backtracking>0) {state.failed=true; return retval;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 60, 0, input);
+                    new NoViableAltException("", 65, 0, input);
 
                 dbg.recognitionException(nvae);
                 throw nvae;
             }
 
-            } finally {dbg.exitDecision(60);}
+            } finally {dbg.exitDecision(65);}
 
-            switch (alt60) {
+            switch (alt65) {
                 case 1 :
                     dbg.enterAlt(1);
 
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:989:2: ( 'web' )? 'pageview' (spat= STRING | rpat= REGEXP ) (set= setting )?
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:985:2: ( 'web' )? 'pageview' (spat= STRING | rpat= REGEXP ) (set= setting )?
                     {
                     root_0 = (Object)adaptor.nil();
 
-                    dbg.location(989,2);
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:989:2: ( 'web' )?
-                    int alt52=2;
-                    try { dbg.enterSubRule(52);
-                    try { dbg.enterDecision(52);
+                    dbg.location(985,2);
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:985:2: ( 'web' )?
+                    int alt57=2;
+                    try { dbg.enterSubRule(57);
+                    try { dbg.enterDecision(57);
 
-                    int LA52_0 = input.LA(1);
+                    int LA57_0 = input.LA(1);
 
-                    if ( (LA52_0==63) ) {
-                        alt52=1;
+                    if ( (LA57_0==59) ) {
+                        alt57=1;
                     }
-                    } finally {dbg.exitDecision(52);}
+                    } finally {dbg.exitDecision(57);}
 
-                    switch (alt52) {
+                    switch (alt57) {
                         case 1 :
                             dbg.enterAlt(1);
 
                             // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:0:0: 'web'
                             {
-                            dbg.location(989,2);
-                            string_literal101=(Token)match(input,63,FOLLOW_63_in_event_prim2594); if (state.failed) return retval;
+                            dbg.location(985,2);
+                            string_literal102=(Token)match(input,59,FOLLOW_59_in_event_prim2585); if (state.failed) return retval;
                             if ( state.backtracking==0 ) {
-                            string_literal101_tree = (Object)adaptor.create(string_literal101);
-                            adaptor.addChild(root_0, string_literal101_tree);
+                            string_literal102_tree = (Object)adaptor.create(string_literal102);
+                            adaptor.addChild(root_0, string_literal102_tree);
                             }
 
                             }
                             break;
 
                     }
-                    } finally {dbg.exitSubRule(52);}
+                    } finally {dbg.exitSubRule(57);}
 
-                    dbg.location(989,9);
-                    string_literal102=(Token)match(input,64,FOLLOW_64_in_event_prim2597); if (state.failed) return retval;
+                    dbg.location(985,9);
+                    string_literal103=(Token)match(input,60,FOLLOW_60_in_event_prim2588); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    string_literal102_tree = (Object)adaptor.create(string_literal102);
-                    adaptor.addChild(root_0, string_literal102_tree);
+                    string_literal103_tree = (Object)adaptor.create(string_literal103);
+                    adaptor.addChild(root_0, string_literal103_tree);
                     }
-                    dbg.location(989,20);
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:989:20: (spat= STRING | rpat= REGEXP )
-                    int alt53=2;
-                    try { dbg.enterSubRule(53);
-                    try { dbg.enterDecision(53);
+                    dbg.location(985,20);
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:985:20: (spat= STRING | rpat= REGEXP )
+                    int alt58=2;
+                    try { dbg.enterSubRule(58);
+                    try { dbg.enterDecision(58);
 
-                    int LA53_0 = input.LA(1);
+                    int LA58_0 = input.LA(1);
 
-                    if ( (LA53_0==STRING) ) {
-                        alt53=1;
+                    if ( (LA58_0==STRING) ) {
+                        alt58=1;
                     }
-                    else if ( (LA53_0==REGEXP) ) {
-                        alt53=2;
+                    else if ( (LA58_0==REGEXP) ) {
+                        alt58=2;
                     }
                     else {
                         if (state.backtracking>0) {state.failed=true; return retval;}
                         NoViableAltException nvae =
-                            new NoViableAltException("", 53, 0, input);
+                            new NoViableAltException("", 58, 0, input);
 
                         dbg.recognitionException(nvae);
                         throw nvae;
                     }
-                    } finally {dbg.exitDecision(53);}
+                    } finally {dbg.exitDecision(58);}
 
-                    switch (alt53) {
+                    switch (alt58) {
                         case 1 :
                             dbg.enterAlt(1);
 
-                            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:989:21: spat= STRING
+                            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:985:21: spat= STRING
                             {
-                            dbg.location(989,25);
-                            spat=(Token)match(input,STRING,FOLLOW_STRING_in_event_prim2602); if (state.failed) return retval;
+                            dbg.location(985,25);
+                            spat=(Token)match(input,STRING,FOLLOW_STRING_in_event_prim2593); if (state.failed) return retval;
                             if ( state.backtracking==0 ) {
                             spat_tree = (Object)adaptor.create(spat);
                             adaptor.addChild(root_0, spat_tree);
@@ -7568,10 +7557,10 @@ public class RuleSet2Parser extends DebugParser {
                         case 2 :
                             dbg.enterAlt(2);
 
-                            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:989:33: rpat= REGEXP
+                            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:985:33: rpat= REGEXP
                             {
-                            dbg.location(989,37);
-                            rpat=(Token)match(input,REGEXP,FOLLOW_REGEXP_in_event_prim2606); if (state.failed) return retval;
+                            dbg.location(985,37);
+                            rpat=(Token)match(input,REGEXP,FOLLOW_REGEXP_in_event_prim2597); if (state.failed) return retval;
                             if ( state.backtracking==0 ) {
                             rpat_tree = (Object)adaptor.create(rpat);
                             adaptor.addChild(root_0, rpat_tree);
@@ -7581,29 +7570,29 @@ public class RuleSet2Parser extends DebugParser {
                             break;
 
                     }
-                    } finally {dbg.exitSubRule(53);}
+                    } finally {dbg.exitSubRule(58);}
 
-                    dbg.location(989,49);
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:989:49: (set= setting )?
-                    int alt54=2;
-                    try { dbg.enterSubRule(54);
-                    try { dbg.enterDecision(54);
+                    dbg.location(985,49);
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:985:49: (set= setting )?
+                    int alt59=2;
+                    try { dbg.enterSubRule(59);
+                    try { dbg.enterDecision(59);
 
-                    int LA54_0 = input.LA(1);
+                    int LA59_0 = input.LA(1);
 
-                    if ( (LA54_0==55) ) {
-                        alt54=1;
+                    if ( (LA59_0==52) ) {
+                        alt59=1;
                     }
-                    } finally {dbg.exitDecision(54);}
+                    } finally {dbg.exitDecision(59);}
 
-                    switch (alt54) {
+                    switch (alt59) {
                         case 1 :
                             dbg.enterAlt(1);
 
                             // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:0:0: set= setting
                             {
-                            dbg.location(989,49);
-                            pushFollow(FOLLOW_setting_in_event_prim2611);
+                            dbg.location(985,49);
+                            pushFollow(FOLLOW_setting_in_event_prim2602);
                             set=setting();
 
                             state._fsp--;
@@ -7614,9 +7603,9 @@ public class RuleSet2Parser extends DebugParser {
                             break;
 
                     }
-                    } finally {dbg.exitSubRule(54);}
+                    } finally {dbg.exitSubRule(59);}
 
-                    dbg.location(989,59);
+                    dbg.location(985,59);
                     if ( state.backtracking==0 ) {
 
                       		HashMap tmp = new HashMap();
@@ -7638,45 +7627,45 @@ public class RuleSet2Parser extends DebugParser {
                 case 2 :
                     dbg.enterAlt(2);
 
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1002:4: ( 'web' )? opt= ( 'submit' | 'click' | 'dblclick' | 'change' | 'update' ) elem= STRING (on= on_expr )? (set= setting )?
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:998:4: ( 'web' )? opt= ( 'submit' | 'click' | 'dblclick' | 'change' | 'update' ) elem= STRING (on= on_expr )? (set= setting )?
                     {
                     root_0 = (Object)adaptor.nil();
 
-                    dbg.location(1002,4);
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1002:4: ( 'web' )?
-                    int alt55=2;
-                    try { dbg.enterSubRule(55);
-                    try { dbg.enterDecision(55);
+                    dbg.location(998,4);
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:998:4: ( 'web' )?
+                    int alt60=2;
+                    try { dbg.enterSubRule(60);
+                    try { dbg.enterDecision(60);
 
-                    int LA55_0 = input.LA(1);
+                    int LA60_0 = input.LA(1);
 
-                    if ( (LA55_0==63) ) {
-                        alt55=1;
+                    if ( (LA60_0==59) ) {
+                        alt60=1;
                     }
-                    } finally {dbg.exitDecision(55);}
+                    } finally {dbg.exitDecision(60);}
 
-                    switch (alt55) {
+                    switch (alt60) {
                         case 1 :
                             dbg.enterAlt(1);
 
                             // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:0:0: 'web'
                             {
-                            dbg.location(1002,4);
-                            string_literal103=(Token)match(input,63,FOLLOW_63_in_event_prim2620); if (state.failed) return retval;
+                            dbg.location(998,4);
+                            string_literal104=(Token)match(input,59,FOLLOW_59_in_event_prim2611); if (state.failed) return retval;
                             if ( state.backtracking==0 ) {
-                            string_literal103_tree = (Object)adaptor.create(string_literal103);
-                            adaptor.addChild(root_0, string_literal103_tree);
+                            string_literal104_tree = (Object)adaptor.create(string_literal104);
+                            adaptor.addChild(root_0, string_literal104_tree);
                             }
 
                             }
                             break;
 
                     }
-                    } finally {dbg.exitSubRule(55);}
+                    } finally {dbg.exitSubRule(60);}
 
-                    dbg.location(1002,14);
+                    dbg.location(998,14);
                     opt=(Token)input.LT(1);
-                    if ( (input.LA(1)>=36 && input.LA(1)<=37)||(input.LA(1)>=65 && input.LA(1)<=67) ) {
+                    if ( (input.LA(1)>=36 && input.LA(1)<=37)||(input.LA(1)>=61 && input.LA(1)<=63) ) {
                         input.consume();
                         if ( state.backtracking==0 ) adaptor.addChild(root_0, (Object)adaptor.create(opt));
                         state.errorRecovery=false;state.failed=false;
@@ -7688,33 +7677,33 @@ public class RuleSet2Parser extends DebugParser {
                         throw mse;
                     }
 
-                    dbg.location(1002,67);
-                    elem=(Token)match(input,STRING,FOLLOW_STRING_in_event_prim2639); if (state.failed) return retval;
+                    dbg.location(998,67);
+                    elem=(Token)match(input,STRING,FOLLOW_STRING_in_event_prim2630); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     elem_tree = (Object)adaptor.create(elem);
                     adaptor.addChild(root_0, elem_tree);
                     }
-                    dbg.location(1002,77);
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1002:77: (on= on_expr )?
-                    int alt56=2;
-                    try { dbg.enterSubRule(56);
-                    try { dbg.enterDecision(56);
+                    dbg.location(998,77);
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:998:77: (on= on_expr )?
+                    int alt61=2;
+                    try { dbg.enterSubRule(61);
+                    try { dbg.enterDecision(61);
 
-                    int LA56_0 = input.LA(1);
+                    int LA61_0 = input.LA(1);
 
-                    if ( (LA56_0==68) ) {
-                        alt56=1;
+                    if ( (LA61_0==64) ) {
+                        alt61=1;
                     }
-                    } finally {dbg.exitDecision(56);}
+                    } finally {dbg.exitDecision(61);}
 
-                    switch (alt56) {
+                    switch (alt61) {
                         case 1 :
                             dbg.enterAlt(1);
 
                             // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:0:0: on= on_expr
                             {
-                            dbg.location(1002,77);
-                            pushFollow(FOLLOW_on_expr_in_event_prim2643);
+                            dbg.location(998,77);
+                            pushFollow(FOLLOW_on_expr_in_event_prim2634);
                             on=on_expr();
 
                             state._fsp--;
@@ -7725,29 +7714,29 @@ public class RuleSet2Parser extends DebugParser {
                             break;
 
                     }
-                    } finally {dbg.exitSubRule(56);}
+                    } finally {dbg.exitSubRule(61);}
 
-                    dbg.location(1002,91);
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1002:91: (set= setting )?
-                    int alt57=2;
-                    try { dbg.enterSubRule(57);
-                    try { dbg.enterDecision(57);
+                    dbg.location(998,91);
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:998:91: (set= setting )?
+                    int alt62=2;
+                    try { dbg.enterSubRule(62);
+                    try { dbg.enterDecision(62);
 
-                    int LA57_0 = input.LA(1);
+                    int LA62_0 = input.LA(1);
 
-                    if ( (LA57_0==55) ) {
-                        alt57=1;
+                    if ( (LA62_0==52) ) {
+                        alt62=1;
                     }
-                    } finally {dbg.exitDecision(57);}
+                    } finally {dbg.exitDecision(62);}
 
-                    switch (alt57) {
+                    switch (alt62) {
                         case 1 :
                             dbg.enterAlt(1);
 
                             // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:0:0: set= setting
                             {
-                            dbg.location(1002,91);
-                            pushFollow(FOLLOW_setting_in_event_prim2649);
+                            dbg.location(998,91);
+                            pushFollow(FOLLOW_setting_in_event_prim2640);
                             set=setting();
 
                             state._fsp--;
@@ -7758,9 +7747,9 @@ public class RuleSet2Parser extends DebugParser {
                             break;
 
                     }
-                    } finally {dbg.exitSubRule(57);}
+                    } finally {dbg.exitSubRule(62);}
 
-                    dbg.location(1002,101);
+                    dbg.location(998,101);
                     if ( state.backtracking==0 ) {
 
                       		HashMap tmp = new HashMap();
@@ -7782,60 +7771,60 @@ public class RuleSet2Parser extends DebugParser {
                 case 3 :
                     dbg.enterAlt(3);
 
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1015:4: dom= VAR oper= VAR (filter= event_filter )* (set= setting )?
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1011:4: dom= VAR oper= VAR (filter= event_filter )* (set= setting )?
                     {
                     root_0 = (Object)adaptor.nil();
 
-                    dbg.location(1015,7);
-                    dom=(Token)match(input,VAR,FOLLOW_VAR_in_event_prim2659); if (state.failed) return retval;
+                    dbg.location(1011,7);
+                    dom=(Token)match(input,VAR,FOLLOW_VAR_in_event_prim2650); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     dom_tree = (Object)adaptor.create(dom);
                     adaptor.addChild(root_0, dom_tree);
                     }
-                    dbg.location(1015,16);
-                    oper=(Token)match(input,VAR,FOLLOW_VAR_in_event_prim2663); if (state.failed) return retval;
+                    dbg.location(1011,16);
+                    oper=(Token)match(input,VAR,FOLLOW_VAR_in_event_prim2654); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     oper_tree = (Object)adaptor.create(oper);
                     adaptor.addChild(root_0, oper_tree);
                     }
-                    dbg.location(1015,21);
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1015:21: (filter= event_filter )*
-                    try { dbg.enterSubRule(58);
+                    dbg.location(1011,21);
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1011:21: (filter= event_filter )*
+                    try { dbg.enterSubRule(63);
 
-                    loop58:
+                    loop63:
                     do {
-                        int alt58=2;
-                        try { dbg.enterDecision(58);
+                        int alt63=2;
+                        try { dbg.enterDecision(63);
 
-                        int LA58_0 = input.LA(1);
+                        int LA63_0 = input.LA(1);
 
-                        if ( (LA58_0==VAR) ) {
-                            int LA58_2 = input.LA(2);
+                        if ( (LA63_0==VAR) ) {
+                            int LA63_2 = input.LA(2);
 
-                            if ( ((LA58_2>=STRING && LA58_2<=REGEXP)) ) {
-                                alt58=1;
+                            if ( ((LA63_2>=STRING && LA63_2<=REGEXP)) ) {
+                                alt63=1;
                             }
 
 
                         }
 
 
-                        } finally {dbg.exitDecision(58);}
+                        } finally {dbg.exitDecision(63);}
 
-                        switch (alt58) {
+                        switch (alt63) {
                     	case 1 :
                     	    dbg.enterAlt(1);
 
-                    	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1015:22: filter= event_filter
+                    	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1011:22: filter= event_filter
                     	    {
-                    	    dbg.location(1015,28);
-                    	    pushFollow(FOLLOW_event_filter_in_event_prim2668);
+                    	    dbg.location(1011,28);
+                    	    pushFollow(FOLLOW_event_filter_in_event_prim2659);
                     	    filter=event_filter();
 
                     	    state._fsp--;
                     	    if (state.failed) return retval;
                     	    if ( state.backtracking==0 ) adaptor.addChild(root_0, filter.getTree());
-                    	    dbg.location(1015,41);
+                    	    dbg.location(1011,41);
                     	    if ( state.backtracking==0 ) {
                     	      filters.add((filter!=null?filter.result:null));
                     	    }
@@ -7844,32 +7833,32 @@ public class RuleSet2Parser extends DebugParser {
                     	    break;
 
                     	default :
-                    	    break loop58;
+                    	    break loop63;
                         }
                     } while (true);
-                    } finally {dbg.exitSubRule(58);}
+                    } finally {dbg.exitSubRule(63);}
 
-                    dbg.location(1015,77);
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1015:77: (set= setting )?
-                    int alt59=2;
-                    try { dbg.enterSubRule(59);
-                    try { dbg.enterDecision(59);
+                    dbg.location(1011,77);
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1011:77: (set= setting )?
+                    int alt64=2;
+                    try { dbg.enterSubRule(64);
+                    try { dbg.enterDecision(64);
 
-                    int LA59_0 = input.LA(1);
+                    int LA64_0 = input.LA(1);
 
-                    if ( (LA59_0==55) ) {
-                        alt59=1;
+                    if ( (LA64_0==52) ) {
+                        alt64=1;
                     }
-                    } finally {dbg.exitDecision(59);}
+                    } finally {dbg.exitDecision(64);}
 
-                    switch (alt59) {
+                    switch (alt64) {
                         case 1 :
                             dbg.enterAlt(1);
 
                             // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:0:0: set= setting
                             {
-                            dbg.location(1015,77);
-                            pushFollow(FOLLOW_setting_in_event_prim2675);
+                            dbg.location(1011,77);
+                            pushFollow(FOLLOW_setting_in_event_prim2666);
                             set=setting();
 
                             state._fsp--;
@@ -7880,9 +7869,9 @@ public class RuleSet2Parser extends DebugParser {
                             break;
 
                     }
-                    } finally {dbg.exitSubRule(59);}
+                    } finally {dbg.exitSubRule(64);}
 
-                    dbg.location(1015,88);
+                    dbg.location(1011,88);
                     if ( state.backtracking==0 ) {
 
                       		HashMap tmp = new HashMap();
@@ -7903,30 +7892,30 @@ public class RuleSet2Parser extends DebugParser {
                 case 4 :
                     dbg.enterAlt(4);
 
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1027:4: '(' evt= event_seq ')'
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1023:4: '(' evt= event_seq ')'
                     {
                     root_0 = (Object)adaptor.nil();
 
-                    dbg.location(1027,4);
-                    char_literal104=(Token)match(input,50,FOLLOW_50_in_event_prim2685); if (state.failed) return retval;
+                    dbg.location(1023,4);
+                    char_literal105=(Token)match(input,47,FOLLOW_47_in_event_prim2676); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    char_literal104_tree = (Object)adaptor.create(char_literal104);
-                    adaptor.addChild(root_0, char_literal104_tree);
+                    char_literal105_tree = (Object)adaptor.create(char_literal105);
+                    adaptor.addChild(root_0, char_literal105_tree);
                     }
-                    dbg.location(1027,11);
-                    pushFollow(FOLLOW_event_seq_in_event_prim2689);
+                    dbg.location(1023,11);
+                    pushFollow(FOLLOW_event_seq_in_event_prim2680);
                     evt=event_seq();
 
                     state._fsp--;
                     if (state.failed) return retval;
                     if ( state.backtracking==0 ) adaptor.addChild(root_0, evt.getTree());
-                    dbg.location(1027,22);
-                    char_literal105=(Token)match(input,52,FOLLOW_52_in_event_prim2691); if (state.failed) return retval;
+                    dbg.location(1023,22);
+                    char_literal106=(Token)match(input,49,FOLLOW_49_in_event_prim2682); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    char_literal105_tree = (Object)adaptor.create(char_literal105);
-                    adaptor.addChild(root_0, char_literal105_tree);
+                    char_literal106_tree = (Object)adaptor.create(char_literal106);
+                    adaptor.addChild(root_0, char_literal106_tree);
                     }
-                    dbg.location(1027,26);
+                    dbg.location(1023,26);
                     if ( state.backtracking==0 ) {
 
                       		retval.result =(evt!=null?evt.result:null);
@@ -7953,7 +7942,7 @@ public class RuleSet2Parser extends DebugParser {
         }
         finally {
         }
-        dbg.location(1030, 2);
+        dbg.location(1026, 2);
 
         }
         finally {
@@ -7973,7 +7962,7 @@ public class RuleSet2Parser extends DebugParser {
     };
 
     // $ANTLR start "event_filter"
-    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1033:1: event_filter returns [ArrayList result] : typ= VAR (sfilt= STRING | rfilt= REGEXP ) ;
+    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1029:1: event_filter returns [ArrayList result] : typ= VAR (sfilt= STRING | rfilt= REGEXP ) ;
     public final RuleSet2Parser.event_filter_return event_filter() throws RecognitionException {
         RuleSet2Parser.event_filter_return retval = new RuleSet2Parser.event_filter_return();
         retval.start = input.LT(1);
@@ -7991,54 +7980,54 @@ public class RuleSet2Parser extends DebugParser {
         try { dbg.enterRule(getGrammarFileName(), "event_filter");
         if ( getRuleLevel()==0 ) {dbg.commence();}
         incRuleLevel();
-        dbg.location(1033, 1);
+        dbg.location(1029, 1);
 
         try {
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1034:2: (typ= VAR (sfilt= STRING | rfilt= REGEXP ) )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1030:2: (typ= VAR (sfilt= STRING | rfilt= REGEXP ) )
             dbg.enterAlt(1);
 
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1034:4: typ= VAR (sfilt= STRING | rfilt= REGEXP )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1030:4: typ= VAR (sfilt= STRING | rfilt= REGEXP )
             {
             root_0 = (Object)adaptor.nil();
 
-            dbg.location(1034,7);
-            typ=(Token)match(input,VAR,FOLLOW_VAR_in_event_filter2712); if (state.failed) return retval;
+            dbg.location(1030,7);
+            typ=(Token)match(input,VAR,FOLLOW_VAR_in_event_filter2703); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
             typ_tree = (Object)adaptor.create(typ);
             adaptor.addChild(root_0, typ_tree);
             }
-            dbg.location(1034,12);
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1034:12: (sfilt= STRING | rfilt= REGEXP )
-            int alt61=2;
-            try { dbg.enterSubRule(61);
-            try { dbg.enterDecision(61);
+            dbg.location(1030,12);
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1030:12: (sfilt= STRING | rfilt= REGEXP )
+            int alt66=2;
+            try { dbg.enterSubRule(66);
+            try { dbg.enterDecision(66);
 
-            int LA61_0 = input.LA(1);
+            int LA66_0 = input.LA(1);
 
-            if ( (LA61_0==STRING) ) {
-                alt61=1;
+            if ( (LA66_0==STRING) ) {
+                alt66=1;
             }
-            else if ( (LA61_0==REGEXP) ) {
-                alt61=2;
+            else if ( (LA66_0==REGEXP) ) {
+                alt66=2;
             }
             else {
                 if (state.backtracking>0) {state.failed=true; return retval;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 61, 0, input);
+                    new NoViableAltException("", 66, 0, input);
 
                 dbg.recognitionException(nvae);
                 throw nvae;
             }
-            } finally {dbg.exitDecision(61);}
+            } finally {dbg.exitDecision(66);}
 
-            switch (alt61) {
+            switch (alt66) {
                 case 1 :
                     dbg.enterAlt(1);
 
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1034:13: sfilt= STRING
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1030:13: sfilt= STRING
                     {
-                    dbg.location(1034,18);
-                    sfilt=(Token)match(input,STRING,FOLLOW_STRING_in_event_filter2717); if (state.failed) return retval;
+                    dbg.location(1030,18);
+                    sfilt=(Token)match(input,STRING,FOLLOW_STRING_in_event_filter2708); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     sfilt_tree = (Object)adaptor.create(sfilt);
                     adaptor.addChild(root_0, sfilt_tree);
@@ -8049,10 +8038,10 @@ public class RuleSet2Parser extends DebugParser {
                 case 2 :
                     dbg.enterAlt(2);
 
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1034:28: rfilt= REGEXP
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1030:28: rfilt= REGEXP
                     {
-                    dbg.location(1034,33);
-                    rfilt=(Token)match(input,REGEXP,FOLLOW_REGEXP_in_event_filter2723); if (state.failed) return retval;
+                    dbg.location(1030,33);
+                    rfilt=(Token)match(input,REGEXP,FOLLOW_REGEXP_in_event_filter2714); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     rfilt_tree = (Object)adaptor.create(rfilt);
                     adaptor.addChild(root_0, rfilt_tree);
@@ -8062,9 +8051,9 @@ public class RuleSet2Parser extends DebugParser {
                     break;
 
             }
-            } finally {dbg.exitSubRule(61);}
+            } finally {dbg.exitSubRule(66);}
 
-            dbg.location(1034,42);
+            dbg.location(1030,42);
             if ( state.backtracking==0 ) {
 
               		HashMap tmp = new HashMap();
@@ -8097,7 +8086,7 @@ public class RuleSet2Parser extends DebugParser {
         }
         finally {
         }
-        dbg.location(1045, 2);
+        dbg.location(1041, 2);
 
         }
         finally {
@@ -8117,7 +8106,7 @@ public class RuleSet2Parser extends DebugParser {
     };
 
     // $ANTLR start "on_expr"
-    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1047:1: on_expr returns [String result] : 'on' (s= STRING | r= REGEXP ) ;
+    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1043:1: on_expr returns [String result] : 'on' (s= STRING | r= REGEXP ) ;
     public final RuleSet2Parser.on_expr_return on_expr() throws RecognitionException {
         RuleSet2Parser.on_expr_return retval = new RuleSet2Parser.on_expr_return();
         retval.start = input.LT(1);
@@ -8126,68 +8115,68 @@ public class RuleSet2Parser extends DebugParser {
 
         Token s=null;
         Token r=null;
-        Token string_literal106=null;
+        Token string_literal107=null;
 
         Object s_tree=null;
         Object r_tree=null;
-        Object string_literal106_tree=null;
+        Object string_literal107_tree=null;
 
         try { dbg.enterRule(getGrammarFileName(), "on_expr");
         if ( getRuleLevel()==0 ) {dbg.commence();}
         incRuleLevel();
-        dbg.location(1047, 1);
+        dbg.location(1043, 1);
 
         try {
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1047:32: ( 'on' (s= STRING | r= REGEXP ) )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1043:32: ( 'on' (s= STRING | r= REGEXP ) )
             dbg.enterAlt(1);
 
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1047:34: 'on' (s= STRING | r= REGEXP )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1043:34: 'on' (s= STRING | r= REGEXP )
             {
             root_0 = (Object)adaptor.nil();
 
-            dbg.location(1047,34);
-            string_literal106=(Token)match(input,68,FOLLOW_68_in_on_expr2742); if (state.failed) return retval;
+            dbg.location(1043,34);
+            string_literal107=(Token)match(input,64,FOLLOW_64_in_on_expr2733); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            string_literal106_tree = (Object)adaptor.create(string_literal106);
-            adaptor.addChild(root_0, string_literal106_tree);
+            string_literal107_tree = (Object)adaptor.create(string_literal107);
+            adaptor.addChild(root_0, string_literal107_tree);
             }
-            dbg.location(1048,2);
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1048:2: (s= STRING | r= REGEXP )
-            int alt62=2;
-            try { dbg.enterSubRule(62);
-            try { dbg.enterDecision(62);
+            dbg.location(1044,2);
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1044:2: (s= STRING | r= REGEXP )
+            int alt67=2;
+            try { dbg.enterSubRule(67);
+            try { dbg.enterDecision(67);
 
-            int LA62_0 = input.LA(1);
+            int LA67_0 = input.LA(1);
 
-            if ( (LA62_0==STRING) ) {
-                alt62=1;
+            if ( (LA67_0==STRING) ) {
+                alt67=1;
             }
-            else if ( (LA62_0==REGEXP) ) {
-                alt62=2;
+            else if ( (LA67_0==REGEXP) ) {
+                alt67=2;
             }
             else {
                 if (state.backtracking>0) {state.failed=true; return retval;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 62, 0, input);
+                    new NoViableAltException("", 67, 0, input);
 
                 dbg.recognitionException(nvae);
                 throw nvae;
             }
-            } finally {dbg.exitDecision(62);}
+            } finally {dbg.exitDecision(67);}
 
-            switch (alt62) {
+            switch (alt67) {
                 case 1 :
                     dbg.enterAlt(1);
 
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1048:5: s= STRING
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1044:5: s= STRING
                     {
-                    dbg.location(1048,6);
-                    s=(Token)match(input,STRING,FOLLOW_STRING_in_on_expr2751); if (state.failed) return retval;
+                    dbg.location(1044,6);
+                    s=(Token)match(input,STRING,FOLLOW_STRING_in_on_expr2742); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     s_tree = (Object)adaptor.create(s);
                     adaptor.addChild(root_0, s_tree);
                     }
-                    dbg.location(1048,14);
+                    dbg.location(1044,14);
                     if ( state.backtracking==0 ) {
                       retval.result = strip_string((s!=null?s.getText():null));
                     }
@@ -8197,15 +8186,15 @@ public class RuleSet2Parser extends DebugParser {
                 case 2 :
                     dbg.enterAlt(2);
 
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1049:5: r= REGEXP
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1045:5: r= REGEXP
                     {
-                    dbg.location(1049,6);
-                    r=(Token)match(input,REGEXP,FOLLOW_REGEXP_in_on_expr2762); if (state.failed) return retval;
+                    dbg.location(1045,6);
+                    r=(Token)match(input,REGEXP,FOLLOW_REGEXP_in_on_expr2753); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     r_tree = (Object)adaptor.create(r);
                     adaptor.addChild(root_0, r_tree);
                     }
-                    dbg.location(1049,14);
+                    dbg.location(1045,14);
                     if ( state.backtracking==0 ) {
                       retval.result = strip_string((r!=null?r.getText():null));
                     }
@@ -8214,7 +8203,7 @@ public class RuleSet2Parser extends DebugParser {
                     break;
 
             }
-            } finally {dbg.exitSubRule(62);}
+            } finally {dbg.exitSubRule(67);}
 
 
             }
@@ -8235,7 +8224,7 @@ public class RuleSet2Parser extends DebugParser {
         }
         finally {
         }
-        dbg.location(1051, 2);
+        dbg.location(1047, 2);
 
         }
         finally {
@@ -8254,7 +8243,7 @@ public class RuleSet2Parser extends DebugParser {
     };
 
     // $ANTLR start "global_block"
-    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1099:1: global_block : 'global' '{' (emt= emit_block | dst= must_be_one[sar(\"dataset\",\"datasource\")] name= VAR ( ':' dtype= ( 'JSON' | 'XML' | 'RSS' | 'HTML' ) )? '<-' src= STRING (cas= cachable )? | css_emit | decl[global_block_array] | ';' )+ '}' ;
+    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1095:1: global_block : 'global' '{' (emt= emit_block | dst= must_be_one[sar(\"dataset\",\"datasource\")] name= VAR ( ':' dtype= ( 'JSON' | 'XML' | 'RSS' | 'HTML' ) )? '<-' src= STRING (cas= cachable )? | css_emit | decl[global_block_array] | ';' )* '}' ;
     public final RuleSet2Parser.global_block_return global_block() throws RecognitionException {
         RuleSet2Parser.global_block_return retval = new RuleSet2Parser.global_block_return();
         retval.start = input.LT(1);
@@ -8264,32 +8253,32 @@ public class RuleSet2Parser extends DebugParser {
         Token name=null;
         Token dtype=null;
         Token src=null;
-        Token string_literal107=null;
-        Token char_literal108=null;
+        Token string_literal108=null;
         Token char_literal109=null;
-        Token string_literal110=null;
-        Token char_literal113=null;
+        Token char_literal110=null;
+        Token string_literal111=null;
         Token char_literal114=null;
+        Token char_literal115=null;
         RuleSet2Parser.emit_block_return emt = null;
 
         RuleSet2Parser.must_be_one_return dst = null;
 
         RuleSet2Parser.cachable_return cas = null;
 
-        RuleSet2Parser.css_emit_return css_emit111 = null;
+        RuleSet2Parser.css_emit_return css_emit112 = null;
 
-        RuleSet2Parser.decl_return decl112 = null;
+        RuleSet2Parser.decl_return decl113 = null;
 
 
         Object name_tree=null;
         Object dtype_tree=null;
         Object src_tree=null;
-        Object string_literal107_tree=null;
-        Object char_literal108_tree=null;
+        Object string_literal108_tree=null;
         Object char_literal109_tree=null;
-        Object string_literal110_tree=null;
-        Object char_literal113_tree=null;
+        Object char_literal110_tree=null;
+        Object string_literal111_tree=null;
         Object char_literal114_tree=null;
+        Object char_literal115_tree=null;
 
 
         	 ArrayList global_block_array = (ArrayList)rule_json.get("global");
@@ -8298,87 +8287,86 @@ public class RuleSet2Parser extends DebugParser {
         try { dbg.enterRule(getGrammarFileName(), "global_block");
         if ( getRuleLevel()==0 ) {dbg.commence();}
         incRuleLevel();
-        dbg.location(1099, 1);
+        dbg.location(1095, 1);
 
         try {
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1106:2: ( 'global' '{' (emt= emit_block | dst= must_be_one[sar(\"dataset\",\"datasource\")] name= VAR ( ':' dtype= ( 'JSON' | 'XML' | 'RSS' | 'HTML' ) )? '<-' src= STRING (cas= cachable )? | css_emit | decl[global_block_array] | ';' )+ '}' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1102:2: ( 'global' '{' (emt= emit_block | dst= must_be_one[sar(\"dataset\",\"datasource\")] name= VAR ( ':' dtype= ( 'JSON' | 'XML' | 'RSS' | 'HTML' ) )? '<-' src= STRING (cas= cachable )? | css_emit | decl[global_block_array] | ';' )* '}' )
             dbg.enterAlt(1);
 
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1106:4: 'global' '{' (emt= emit_block | dst= must_be_one[sar(\"dataset\",\"datasource\")] name= VAR ( ':' dtype= ( 'JSON' | 'XML' | 'RSS' | 'HTML' ) )? '<-' src= STRING (cas= cachable )? | css_emit | decl[global_block_array] | ';' )+ '}'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1102:4: 'global' '{' (emt= emit_block | dst= must_be_one[sar(\"dataset\",\"datasource\")] name= VAR ( ':' dtype= ( 'JSON' | 'XML' | 'RSS' | 'HTML' ) )? '<-' src= STRING (cas= cachable )? | css_emit | decl[global_block_array] | ';' )* '}'
             {
             root_0 = (Object)adaptor.nil();
 
-            dbg.location(1106,4);
-            string_literal107=(Token)match(input,69,FOLLOW_69_in_global_block2847); if (state.failed) return retval;
+            dbg.location(1102,4);
+            string_literal108=(Token)match(input,65,FOLLOW_65_in_global_block2838); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            string_literal107_tree = (Object)adaptor.create(string_literal107);
-            adaptor.addChild(root_0, string_literal107_tree);
+            string_literal108_tree = (Object)adaptor.create(string_literal108);
+            adaptor.addChild(root_0, string_literal108_tree);
             }
-            dbg.location(1106,13);
-            char_literal108=(Token)match(input,29,FOLLOW_29_in_global_block2849); if (state.failed) return retval;
+            dbg.location(1102,13);
+            char_literal109=(Token)match(input,29,FOLLOW_29_in_global_block2840); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            char_literal108_tree = (Object)adaptor.create(char_literal108);
-            adaptor.addChild(root_0, char_literal108_tree);
+            char_literal109_tree = (Object)adaptor.create(char_literal109);
+            adaptor.addChild(root_0, char_literal109_tree);
             }
-            dbg.location(1107,2);
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1107:2: (emt= emit_block | dst= must_be_one[sar(\"dataset\",\"datasource\")] name= VAR ( ':' dtype= ( 'JSON' | 'XML' | 'RSS' | 'HTML' ) )? '<-' src= STRING (cas= cachable )? | css_emit | decl[global_block_array] | ';' )+
-            int cnt65=0;
-            try { dbg.enterSubRule(65);
+            dbg.location(1103,2);
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1103:2: (emt= emit_block | dst= must_be_one[sar(\"dataset\",\"datasource\")] name= VAR ( ':' dtype= ( 'JSON' | 'XML' | 'RSS' | 'HTML' ) )? '<-' src= STRING (cas= cachable )? | css_emit | decl[global_block_array] | ';' )*
+            try { dbg.enterSubRule(70);
 
-            loop65:
+            loop70:
             do {
-                int alt65=6;
-                try { dbg.enterDecision(65);
+                int alt70=6;
+                try { dbg.enterDecision(70);
 
                 switch ( input.LA(1) ) {
-                case 117:
+                case 112:
                     {
-                    alt65=1;
+                    alt70=1;
                     }
                     break;
                 case VAR:
                     {
-                    int LA65_3 = input.LA(2);
+                    int LA70_3 = input.LA(2);
 
-                    if ( (LA65_3==38) ) {
-                        alt65=4;
+                    if ( (LA70_3==38) ) {
+                        alt70=4;
                     }
-                    else if ( (LA65_3==VAR) ) {
-                        alt65=2;
+                    else if ( (LA70_3==VAR) ) {
+                        alt70=2;
                     }
 
 
                     }
                     break;
-                case 115:
+                case 110:
                     {
-                    alt65=3;
+                    alt70=3;
                     }
                     break;
                 case 31:
                     {
-                    alt65=5;
+                    alt70=5;
                     }
                     break;
 
                 }
 
-                } finally {dbg.exitDecision(65);}
+                } finally {dbg.exitDecision(70);}
 
-                switch (alt65) {
+                switch (alt70) {
             	case 1 :
             	    dbg.enterAlt(1);
 
-            	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1107:4: emt= emit_block
+            	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1103:4: emt= emit_block
             	    {
-            	    dbg.location(1107,7);
-            	    pushFollow(FOLLOW_emit_block_in_global_block2857);
+            	    dbg.location(1103,7);
+            	    pushFollow(FOLLOW_emit_block_in_global_block2848);
             	    emt=emit_block();
 
             	    state._fsp--;
             	    if (state.failed) return retval;
             	    if ( state.backtracking==0 ) adaptor.addChild(root_0, emt.getTree());
-            	    dbg.location(1107,19);
+            	    dbg.location(1103,19);
             	    if ( state.backtracking==0 ) {
 
             	      		HashMap tmp = new HashMap(); 
@@ -8392,49 +8380,49 @@ public class RuleSet2Parser extends DebugParser {
             	case 2 :
             	    dbg.enterAlt(2);
 
-            	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1112:4: dst= must_be_one[sar(\"dataset\",\"datasource\")] name= VAR ( ':' dtype= ( 'JSON' | 'XML' | 'RSS' | 'HTML' ) )? '<-' src= STRING (cas= cachable )?
+            	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1108:4: dst= must_be_one[sar(\"dataset\",\"datasource\")] name= VAR ( ':' dtype= ( 'JSON' | 'XML' | 'RSS' | 'HTML' ) )? '<-' src= STRING (cas= cachable )?
             	    {
-            	    dbg.location(1112,7);
-            	    pushFollow(FOLLOW_must_be_one_in_global_block2867);
+            	    dbg.location(1108,7);
+            	    pushFollow(FOLLOW_must_be_one_in_global_block2858);
             	    dst=must_be_one(sar("dataset","datasource"));
 
             	    state._fsp--;
             	    if (state.failed) return retval;
             	    if ( state.backtracking==0 ) adaptor.addChild(root_0, dst.getTree());
-            	    dbg.location(1112,53);
-            	    name=(Token)match(input,VAR,FOLLOW_VAR_in_global_block2872); if (state.failed) return retval;
+            	    dbg.location(1108,53);
+            	    name=(Token)match(input,VAR,FOLLOW_VAR_in_global_block2863); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
             	    name_tree = (Object)adaptor.create(name);
             	    adaptor.addChild(root_0, name_tree);
             	    }
-            	    dbg.location(1112,58);
-            	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1112:58: ( ':' dtype= ( 'JSON' | 'XML' | 'RSS' | 'HTML' ) )?
-            	    int alt63=2;
-            	    try { dbg.enterSubRule(63);
-            	    try { dbg.enterDecision(63);
+            	    dbg.location(1108,58);
+            	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1108:58: ( ':' dtype= ( 'JSON' | 'XML' | 'RSS' | 'HTML' ) )?
+            	    int alt68=2;
+            	    try { dbg.enterSubRule(68);
+            	    try { dbg.enterDecision(68);
 
-            	    int LA63_0 = input.LA(1);
+            	    int LA68_0 = input.LA(1);
 
-            	    if ( (LA63_0==40) ) {
-            	        alt63=1;
+            	    if ( (LA68_0==39) ) {
+            	        alt68=1;
             	    }
-            	    } finally {dbg.exitDecision(63);}
+            	    } finally {dbg.exitDecision(68);}
 
-            	    switch (alt63) {
+            	    switch (alt68) {
             	        case 1 :
             	            dbg.enterAlt(1);
 
-            	            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1112:59: ':' dtype= ( 'JSON' | 'XML' | 'RSS' | 'HTML' )
+            	            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1108:59: ':' dtype= ( 'JSON' | 'XML' | 'RSS' | 'HTML' )
             	            {
-            	            dbg.location(1112,59);
-            	            char_literal109=(Token)match(input,40,FOLLOW_40_in_global_block2875); if (state.failed) return retval;
+            	            dbg.location(1108,59);
+            	            char_literal110=(Token)match(input,39,FOLLOW_39_in_global_block2866); if (state.failed) return retval;
             	            if ( state.backtracking==0 ) {
-            	            char_literal109_tree = (Object)adaptor.create(char_literal109);
-            	            adaptor.addChild(root_0, char_literal109_tree);
+            	            char_literal110_tree = (Object)adaptor.create(char_literal110);
+            	            adaptor.addChild(root_0, char_literal110_tree);
             	            }
-            	            dbg.location(1112,68);
+            	            dbg.location(1108,68);
             	            dtype=(Token)input.LT(1);
-            	            if ( (input.LA(1)>=70 && input.LA(1)<=73) ) {
+            	            if ( (input.LA(1)>=66 && input.LA(1)<=69) ) {
             	                input.consume();
             	                if ( state.backtracking==0 ) adaptor.addChild(root_0, (Object)adaptor.create(dtype));
             	                state.errorRecovery=false;state.failed=false;
@@ -8451,47 +8439,47 @@ public class RuleSet2Parser extends DebugParser {
             	            break;
 
             	    }
-            	    } finally {dbg.exitSubRule(63);}
+            	    } finally {dbg.exitSubRule(68);}
 
-            	    dbg.location(1112,99);
-            	    string_literal110=(Token)match(input,74,FOLLOW_74_in_global_block2891); if (state.failed) return retval;
+            	    dbg.location(1108,99);
+            	    string_literal111=(Token)match(input,70,FOLLOW_70_in_global_block2882); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
-            	    string_literal110_tree = (Object)adaptor.create(string_literal110);
-            	    adaptor.addChild(root_0, string_literal110_tree);
+            	    string_literal111_tree = (Object)adaptor.create(string_literal111);
+            	    adaptor.addChild(root_0, string_literal111_tree);
             	    }
-            	    dbg.location(1112,107);
-            	    src=(Token)match(input,STRING,FOLLOW_STRING_in_global_block2895); if (state.failed) return retval;
+            	    dbg.location(1108,107);
+            	    src=(Token)match(input,STRING,FOLLOW_STRING_in_global_block2886); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
             	    src_tree = (Object)adaptor.create(src);
             	    adaptor.addChild(root_0, src_tree);
             	    }
-            	    dbg.location(1112,115);
-            	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1112:115: (cas= cachable )?
-            	    int alt64=2;
-            	    try { dbg.enterSubRule(64);
-            	    try { dbg.enterDecision(64);
+            	    dbg.location(1108,115);
+            	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1108:115: (cas= cachable )?
+            	    int alt69=2;
+            	    try { dbg.enterSubRule(69);
+            	    try { dbg.enterDecision(69);
 
-            	    int LA64_0 = input.LA(1);
+            	    int LA69_0 = input.LA(1);
 
-            	    if ( (LA64_0==116) ) {
-            	        alt64=1;
+            	    if ( (LA69_0==111) ) {
+            	        alt69=1;
             	    }
-            	    } finally {dbg.exitDecision(64);}
+            	    } finally {dbg.exitDecision(69);}
 
-            	    switch (alt64) {
+            	    switch (alt69) {
             	        case 1 :
             	            dbg.enterAlt(1);
 
-            	            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1112:116: cas= cachable
+            	            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1108:116: cas= cachable
             	            {
-            	            dbg.location(1112,119);
-            	            pushFollow(FOLLOW_cachable_in_global_block2900);
+            	            dbg.location(1108,119);
+            	            pushFollow(FOLLOW_cachable_in_global_block2891);
             	            cas=cachable();
 
             	            state._fsp--;
             	            if (state.failed) return retval;
             	            if ( state.backtracking==0 ) adaptor.addChild(root_0, cas.getTree());
-            	            dbg.location(1112,129);
+            	            dbg.location(1108,129);
             	            if ( state.backtracking==0 ) {
             	              found_cache =true; 
             	            }
@@ -8500,9 +8488,9 @@ public class RuleSet2Parser extends DebugParser {
             	            break;
 
             	    }
-            	    } finally {dbg.exitSubRule(64);}
+            	    } finally {dbg.exitSubRule(69);}
 
-            	    dbg.location(1112,154);
+            	    dbg.location(1108,154);
             	    if ( state.backtracking==0 ) {
 
             	      	
@@ -8545,16 +8533,16 @@ public class RuleSet2Parser extends DebugParser {
             	case 3 :
             	    dbg.enterAlt(3);
 
-            	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1146:4: css_emit
+            	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1142:4: css_emit
             	    {
-            	    dbg.location(1146,4);
-            	    pushFollow(FOLLOW_css_emit_in_global_block2913);
-            	    css_emit111=css_emit();
+            	    dbg.location(1142,4);
+            	    pushFollow(FOLLOW_css_emit_in_global_block2904);
+            	    css_emit112=css_emit();
 
             	    state._fsp--;
             	    if (state.failed) return retval;
-            	    if ( state.backtracking==0 ) adaptor.addChild(root_0, css_emit111.getTree());
-            	    dbg.location(1146,13);
+            	    if ( state.backtracking==0 ) adaptor.addChild(root_0, css_emit112.getTree());
+            	    dbg.location(1142,13);
             	    if ( state.backtracking==0 ) {
 
             	      		HashMap tmp = new HashMap(); 
@@ -8569,51 +8557,44 @@ public class RuleSet2Parser extends DebugParser {
             	case 4 :
             	    dbg.enterAlt(4);
 
-            	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1152:4: decl[global_block_array]
+            	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1148:4: decl[global_block_array]
             	    {
-            	    dbg.location(1152,4);
-            	    pushFollow(FOLLOW_decl_in_global_block2921);
-            	    decl112=decl(global_block_array);
+            	    dbg.location(1148,4);
+            	    pushFollow(FOLLOW_decl_in_global_block2912);
+            	    decl113=decl(global_block_array);
 
             	    state._fsp--;
             	    if (state.failed) return retval;
-            	    if ( state.backtracking==0 ) adaptor.addChild(root_0, decl112.getTree());
+            	    if ( state.backtracking==0 ) adaptor.addChild(root_0, decl113.getTree());
 
             	    }
             	    break;
             	case 5 :
             	    dbg.enterAlt(5);
 
-            	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1153:4: ';'
+            	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1149:4: ';'
             	    {
-            	    dbg.location(1153,4);
-            	    char_literal113=(Token)match(input,31,FOLLOW_31_in_global_block2927); if (state.failed) return retval;
+            	    dbg.location(1149,4);
+            	    char_literal114=(Token)match(input,31,FOLLOW_31_in_global_block2918); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
-            	    char_literal113_tree = (Object)adaptor.create(char_literal113);
-            	    adaptor.addChild(root_0, char_literal113_tree);
+            	    char_literal114_tree = (Object)adaptor.create(char_literal114);
+            	    adaptor.addChild(root_0, char_literal114_tree);
             	    }
 
             	    }
             	    break;
 
             	default :
-            	    if ( cnt65 >= 1 ) break loop65;
-            	    if (state.backtracking>0) {state.failed=true; return retval;}
-                        EarlyExitException eee =
-                            new EarlyExitException(65, input);
-                        dbg.recognitionException(eee);
-
-                        throw eee;
+            	    break loop70;
                 }
-                cnt65++;
             } while (true);
-            } finally {dbg.exitSubRule(65);}
+            } finally {dbg.exitSubRule(70);}
 
-            dbg.location(1153,11);
-            char_literal114=(Token)match(input,30,FOLLOW_30_in_global_block2932); if (state.failed) return retval;
+            dbg.location(1149,11);
+            char_literal115=(Token)match(input,30,FOLLOW_30_in_global_block2923); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            char_literal114_tree = (Object)adaptor.create(char_literal114);
-            adaptor.addChild(root_0, char_literal114_tree);
+            char_literal115_tree = (Object)adaptor.create(char_literal115);
+            adaptor.addChild(root_0, char_literal115_tree);
             }
 
             }
@@ -8638,7 +8619,7 @@ public class RuleSet2Parser extends DebugParser {
         }
         finally {
         }
-        dbg.location(1154, 2);
+        dbg.location(1150, 2);
 
         }
         finally {
@@ -8657,7 +8638,7 @@ public class RuleSet2Parser extends DebugParser {
     };
 
     // $ANTLR start "decl"
-    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1160:1: decl[ArrayList block_array] : (var= VAR '=' val= HTML | var= VAR '=' val= JS | var= VAR '=' e= expr );
+    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1156:1: decl[ArrayList block_array] : (var= VAR '=' val= HTML | var= VAR '=' val= JS | var= VAR '=' e= expr );
     public final RuleSet2Parser.decl_return decl(ArrayList  block_array) throws RecognitionException {
         RuleSet2Parser.decl_return retval = new RuleSet2Parser.decl_return();
         retval.start = input.LT(1);
@@ -8666,45 +8647,45 @@ public class RuleSet2Parser extends DebugParser {
 
         Token var=null;
         Token val=null;
-        Token char_literal115=null;
         Token char_literal116=null;
         Token char_literal117=null;
+        Token char_literal118=null;
         RuleSet2Parser.expr_return e = null;
 
 
         Object var_tree=null;
         Object val_tree=null;
-        Object char_literal115_tree=null;
         Object char_literal116_tree=null;
         Object char_literal117_tree=null;
+        Object char_literal118_tree=null;
 
 
 
         try { dbg.enterRule(getGrammarFileName(), "decl");
         if ( getRuleLevel()==0 ) {dbg.commence();}
         incRuleLevel();
-        dbg.location(1160, 1);
+        dbg.location(1156, 1);
 
         try {
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1163:2: (var= VAR '=' val= HTML | var= VAR '=' val= JS | var= VAR '=' e= expr )
-            int alt66=3;
-            try { dbg.enterDecision(66);
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1159:2: (var= VAR '=' val= HTML | var= VAR '=' val= JS | var= VAR '=' e= expr )
+            int alt71=3;
+            try { dbg.enterDecision(71);
 
-            int LA66_0 = input.LA(1);
+            int LA71_0 = input.LA(1);
 
-            if ( (LA66_0==VAR) ) {
-                int LA66_1 = input.LA(2);
+            if ( (LA71_0==VAR) ) {
+                int LA71_1 = input.LA(2);
 
-                if ( (LA66_1==38) ) {
+                if ( (LA71_1==38) ) {
                     switch ( input.LA(3) ) {
                     case HTML:
                         {
-                        alt66=1;
+                        alt71=1;
                         }
                         break;
                     case JS:
                         {
-                        alt66=2;
+                        alt71=2;
                         }
                         break;
                     case VAR:
@@ -8713,25 +8694,25 @@ public class RuleSet2Parser extends DebugParser {
                     case STRING:
                     case REGEXP:
                     case 29:
-                    case 50:
-                    case 61:
-                    case 75:
-                    case 82:
+                    case 47:
+                    case 57:
+                    case 71:
+                    case 78:
+                    case 101:
+                    case 102:
+                    case 103:
+                    case 105:
                     case 106:
                     case 107:
                     case 108:
-                    case 110:
-                    case 111:
-                    case 112:
-                    case 113:
                         {
-                        alt66=3;
+                        alt71=3;
                         }
                         break;
                     default:
                         if (state.backtracking>0) {state.failed=true; return retval;}
                         NoViableAltException nvae =
-                            new NoViableAltException("", 66, 2, input);
+                            new NoViableAltException("", 71, 2, input);
 
                         dbg.recognitionException(nvae);
                         throw nvae;
@@ -8741,7 +8722,7 @@ public class RuleSet2Parser extends DebugParser {
                 else {
                     if (state.backtracking>0) {state.failed=true; return retval;}
                     NoViableAltException nvae =
-                        new NoViableAltException("", 66, 1, input);
+                        new NoViableAltException("", 71, 1, input);
 
                     dbg.recognitionException(nvae);
                     throw nvae;
@@ -8750,40 +8731,40 @@ public class RuleSet2Parser extends DebugParser {
             else {
                 if (state.backtracking>0) {state.failed=true; return retval;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 66, 0, input);
+                    new NoViableAltException("", 71, 0, input);
 
                 dbg.recognitionException(nvae);
                 throw nvae;
             }
-            } finally {dbg.exitDecision(66);}
+            } finally {dbg.exitDecision(71);}
 
-            switch (alt66) {
+            switch (alt71) {
                 case 1 :
                     dbg.enterAlt(1);
 
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1164:2: var= VAR '=' val= HTML
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1160:2: var= VAR '=' val= HTML
                     {
                     root_0 = (Object)adaptor.nil();
 
-                    dbg.location(1164,5);
-                    var=(Token)match(input,VAR,FOLLOW_VAR_in_decl2959); if (state.failed) return retval;
+                    dbg.location(1160,5);
+                    var=(Token)match(input,VAR,FOLLOW_VAR_in_decl2950); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     var_tree = (Object)adaptor.create(var);
                     adaptor.addChild(root_0, var_tree);
                     }
-                    dbg.location(1164,10);
-                    char_literal115=(Token)match(input,38,FOLLOW_38_in_decl2961); if (state.failed) return retval;
+                    dbg.location(1160,10);
+                    char_literal116=(Token)match(input,38,FOLLOW_38_in_decl2952); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    char_literal115_tree = (Object)adaptor.create(char_literal115);
-                    adaptor.addChild(root_0, char_literal115_tree);
+                    char_literal116_tree = (Object)adaptor.create(char_literal116);
+                    adaptor.addChild(root_0, char_literal116_tree);
                     }
-                    dbg.location(1164,17);
-                    val=(Token)match(input,HTML,FOLLOW_HTML_in_decl2965); if (state.failed) return retval;
+                    dbg.location(1160,17);
+                    val=(Token)match(input,HTML,FOLLOW_HTML_in_decl2956); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     val_tree = (Object)adaptor.create(val);
                     adaptor.addChild(root_0, val_tree);
                     }
-                    dbg.location(1164,23);
+                    dbg.location(1160,23);
                     if ( state.backtracking==0 ) {
                        
                       		HashMap tmp = new HashMap(); 
@@ -8799,29 +8780,29 @@ public class RuleSet2Parser extends DebugParser {
                 case 2 :
                     dbg.enterAlt(2);
 
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1171:4: var= VAR '=' val= JS
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1167:4: var= VAR '=' val= JS
                     {
                     root_0 = (Object)adaptor.nil();
 
-                    dbg.location(1171,7);
-                    var=(Token)match(input,VAR,FOLLOW_VAR_in_decl2975); if (state.failed) return retval;
+                    dbg.location(1167,7);
+                    var=(Token)match(input,VAR,FOLLOW_VAR_in_decl2966); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     var_tree = (Object)adaptor.create(var);
                     adaptor.addChild(root_0, var_tree);
                     }
-                    dbg.location(1171,12);
-                    char_literal116=(Token)match(input,38,FOLLOW_38_in_decl2977); if (state.failed) return retval;
+                    dbg.location(1167,12);
+                    char_literal117=(Token)match(input,38,FOLLOW_38_in_decl2968); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    char_literal116_tree = (Object)adaptor.create(char_literal116);
-                    adaptor.addChild(root_0, char_literal116_tree);
+                    char_literal117_tree = (Object)adaptor.create(char_literal117);
+                    adaptor.addChild(root_0, char_literal117_tree);
                     }
-                    dbg.location(1171,19);
-                    val=(Token)match(input,JS,FOLLOW_JS_in_decl2981); if (state.failed) return retval;
+                    dbg.location(1167,19);
+                    val=(Token)match(input,JS,FOLLOW_JS_in_decl2972); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     val_tree = (Object)adaptor.create(val);
                     adaptor.addChild(root_0, val_tree);
                     }
-                    dbg.location(1171,23);
+                    dbg.location(1167,23);
                     if ( state.backtracking==0 ) {
                        
                       		HashMap tmp = new HashMap(); 
@@ -8837,30 +8818,30 @@ public class RuleSet2Parser extends DebugParser {
                 case 3 :
                     dbg.enterAlt(3);
 
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1178:4: var= VAR '=' e= expr
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1174:4: var= VAR '=' e= expr
                     {
                     root_0 = (Object)adaptor.nil();
 
-                    dbg.location(1178,7);
-                    var=(Token)match(input,VAR,FOLLOW_VAR_in_decl2991); if (state.failed) return retval;
+                    dbg.location(1174,7);
+                    var=(Token)match(input,VAR,FOLLOW_VAR_in_decl2982); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     var_tree = (Object)adaptor.create(var);
                     adaptor.addChild(root_0, var_tree);
                     }
-                    dbg.location(1178,12);
-                    char_literal117=(Token)match(input,38,FOLLOW_38_in_decl2993); if (state.failed) return retval;
+                    dbg.location(1174,12);
+                    char_literal118=(Token)match(input,38,FOLLOW_38_in_decl2984); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    char_literal117_tree = (Object)adaptor.create(char_literal117);
-                    adaptor.addChild(root_0, char_literal117_tree);
+                    char_literal118_tree = (Object)adaptor.create(char_literal118);
+                    adaptor.addChild(root_0, char_literal118_tree);
                     }
-                    dbg.location(1178,17);
-                    pushFollow(FOLLOW_expr_in_decl2997);
+                    dbg.location(1174,17);
+                    pushFollow(FOLLOW_expr_in_decl2988);
                     e=expr();
 
                     state._fsp--;
                     if (state.failed) return retval;
                     if ( state.backtracking==0 ) adaptor.addChild(root_0, e.getTree());
-                    dbg.location(1178,23);
+                    dbg.location(1174,23);
                     if ( state.backtracking==0 ) {
                        
                       		HashMap tmp = new HashMap(); 
@@ -8891,7 +8872,7 @@ public class RuleSet2Parser extends DebugParser {
         }
         finally {
         }
-        dbg.location(1185, 2);
+        dbg.location(1181, 2);
 
         }
         finally {
@@ -8911,7 +8892,7 @@ public class RuleSet2Parser extends DebugParser {
     };
 
     // $ANTLR start "expr"
-    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1190:1: expr returns [Object result] : (fd= function_def | c= conditional_expression );
+    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1186:1: expr returns [Object result] : (fd= function_def | c= conditional_expression );
     public final RuleSet2Parser.expr_return expr() throws RecognitionException {
         RuleSet2Parser.expr_return retval = new RuleSet2Parser.expr_return();
         retval.start = input.LT(1);
@@ -8930,47 +8911,47 @@ public class RuleSet2Parser extends DebugParser {
         try { dbg.enterRule(getGrammarFileName(), "expr");
         if ( getRuleLevel()==0 ) {dbg.commence();}
         incRuleLevel();
-        dbg.location(1190, 1);
+        dbg.location(1186, 1);
 
         try {
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1194:2: (fd= function_def | c= conditional_expression )
-            int alt67=2;
-            try { dbg.enterDecision(67);
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1190:2: (fd= function_def | c= conditional_expression )
+            int alt72=2;
+            try { dbg.enterDecision(72);
 
-            int LA67_0 = input.LA(1);
+            int LA72_0 = input.LA(1);
 
-            if ( (LA67_0==75) ) {
-                alt67=1;
+            if ( (LA72_0==71) ) {
+                alt72=1;
             }
-            else if ( ((LA67_0>=VAR && LA67_0<=INT)||LA67_0==FLOAT||(LA67_0>=STRING && LA67_0<=REGEXP)||LA67_0==29||LA67_0==50||LA67_0==61||LA67_0==82||(LA67_0>=106 && LA67_0<=108)||(LA67_0>=110 && LA67_0<=113)) ) {
-                alt67=2;
+            else if ( ((LA72_0>=VAR && LA72_0<=INT)||LA72_0==FLOAT||(LA72_0>=STRING && LA72_0<=REGEXP)||LA72_0==29||LA72_0==47||LA72_0==57||LA72_0==78||(LA72_0>=101 && LA72_0<=103)||(LA72_0>=105 && LA72_0<=108)) ) {
+                alt72=2;
             }
             else {
                 if (state.backtracking>0) {state.failed=true; return retval;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 67, 0, input);
+                    new NoViableAltException("", 72, 0, input);
 
                 dbg.recognitionException(nvae);
                 throw nvae;
             }
-            } finally {dbg.exitDecision(67);}
+            } finally {dbg.exitDecision(72);}
 
-            switch (alt67) {
+            switch (alt72) {
                 case 1 :
                     dbg.enterAlt(1);
 
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1194:4: fd= function_def
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1190:4: fd= function_def
                     {
                     root_0 = (Object)adaptor.nil();
 
-                    dbg.location(1194,6);
-                    pushFollow(FOLLOW_function_def_in_expr3024);
+                    dbg.location(1190,6);
+                    pushFollow(FOLLOW_function_def_in_expr3015);
                     fd=function_def();
 
                     state._fsp--;
                     if (state.failed) return retval;
                     if ( state.backtracking==0 ) adaptor.addChild(root_0, fd.getTree());
-                    dbg.location(1194,20);
+                    dbg.location(1190,20);
                     if ( state.backtracking==0 ) {
 
                       		retval.result = (fd!=null?fd.result:null);
@@ -8982,18 +8963,18 @@ public class RuleSet2Parser extends DebugParser {
                 case 2 :
                     dbg.enterAlt(2);
 
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1197:4: c= conditional_expression
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1193:4: c= conditional_expression
                     {
                     root_0 = (Object)adaptor.nil();
 
-                    dbg.location(1197,5);
-                    pushFollow(FOLLOW_conditional_expression_in_expr3033);
+                    dbg.location(1193,5);
+                    pushFollow(FOLLOW_conditional_expression_in_expr3024);
                     c=conditional_expression();
 
                     state._fsp--;
                     if (state.failed) return retval;
                     if ( state.backtracking==0 ) adaptor.addChild(root_0, c.getTree());
-                    dbg.location(1197,29);
+                    dbg.location(1193,29);
                     if ( state.backtracking==0 ) {
 
                       		retval.result = (c!=null?c.result:null);
@@ -9020,7 +9001,7 @@ public class RuleSet2Parser extends DebugParser {
         }
         finally {
         }
-        dbg.location(1200, 2);
+        dbg.location(1196, 2);
 
         }
         finally {
@@ -9040,35 +9021,35 @@ public class RuleSet2Parser extends DebugParser {
     };
 
     // $ANTLR start "function_def"
-    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1202:1: function_def returns [Object result] : 'function' '(' (args+= VAR )? ( ',' args+= VAR )* ')' '{' (decs+= decl[block_array] )? ( ';' decs+= decl[block_array] )* ( ';' )? e1= expr '}' ;
+    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1198:1: function_def returns [Object result] : 'function' '(' (args+= VAR )? ( ',' args+= VAR )* ')' '{' (decs+= decl[block_array] )? ( ';' decs+= decl[block_array] )* ( ';' )? e1= expr '}' ;
     public final RuleSet2Parser.function_def_return function_def() throws RecognitionException {
         RuleSet2Parser.function_def_return retval = new RuleSet2Parser.function_def_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
 
-        Token string_literal118=null;
-        Token char_literal119=null;
+        Token string_literal119=null;
         Token char_literal120=null;
         Token char_literal121=null;
         Token char_literal122=null;
         Token char_literal123=null;
         Token char_literal124=null;
         Token char_literal125=null;
+        Token char_literal126=null;
         Token args=null;
         List list_args=null;
         List list_decs=null;
         RuleSet2Parser.expr_return e1 = null;
 
         RuleReturnScope decs = null;
-        Object string_literal118_tree=null;
-        Object char_literal119_tree=null;
+        Object string_literal119_tree=null;
         Object char_literal120_tree=null;
         Object char_literal121_tree=null;
         Object char_literal122_tree=null;
         Object char_literal123_tree=null;
         Object char_literal124_tree=null;
         Object char_literal125_tree=null;
+        Object char_literal126_tree=null;
         Object args_tree=null;
 
 
@@ -9077,49 +9058,49 @@ public class RuleSet2Parser extends DebugParser {
         try { dbg.enterRule(getGrammarFileName(), "function_def");
         if ( getRuleLevel()==0 ) {dbg.commence();}
         incRuleLevel();
-        dbg.location(1202, 1);
+        dbg.location(1198, 1);
 
         try {
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1206:2: ( 'function' '(' (args+= VAR )? ( ',' args+= VAR )* ')' '{' (decs+= decl[block_array] )? ( ';' decs+= decl[block_array] )* ( ';' )? e1= expr '}' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1202:2: ( 'function' '(' (args+= VAR )? ( ',' args+= VAR )* ')' '{' (decs+= decl[block_array] )? ( ';' decs+= decl[block_array] )* ( ';' )? e1= expr '}' )
             dbg.enterAlt(1);
 
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1206:4: 'function' '(' (args+= VAR )? ( ',' args+= VAR )* ')' '{' (decs+= decl[block_array] )? ( ';' decs+= decl[block_array] )* ( ';' )? e1= expr '}'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1202:4: 'function' '(' (args+= VAR )? ( ',' args+= VAR )* ')' '{' (decs+= decl[block_array] )? ( ';' decs+= decl[block_array] )* ( ';' )? e1= expr '}'
             {
             root_0 = (Object)adaptor.nil();
 
-            dbg.location(1206,4);
-            string_literal118=(Token)match(input,75,FOLLOW_75_in_function_def3056); if (state.failed) return retval;
+            dbg.location(1202,4);
+            string_literal119=(Token)match(input,71,FOLLOW_71_in_function_def3047); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            string_literal118_tree = (Object)adaptor.create(string_literal118);
-            adaptor.addChild(root_0, string_literal118_tree);
+            string_literal119_tree = (Object)adaptor.create(string_literal119);
+            adaptor.addChild(root_0, string_literal119_tree);
             }
-            dbg.location(1206,15);
-            char_literal119=(Token)match(input,50,FOLLOW_50_in_function_def3058); if (state.failed) return retval;
+            dbg.location(1202,15);
+            char_literal120=(Token)match(input,47,FOLLOW_47_in_function_def3049); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            char_literal119_tree = (Object)adaptor.create(char_literal119);
-            adaptor.addChild(root_0, char_literal119_tree);
+            char_literal120_tree = (Object)adaptor.create(char_literal120);
+            adaptor.addChild(root_0, char_literal120_tree);
             }
-            dbg.location(1206,23);
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1206:23: (args+= VAR )?
-            int alt68=2;
-            try { dbg.enterSubRule(68);
-            try { dbg.enterDecision(68);
+            dbg.location(1202,23);
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1202:23: (args+= VAR )?
+            int alt73=2;
+            try { dbg.enterSubRule(73);
+            try { dbg.enterDecision(73);
 
-            int LA68_0 = input.LA(1);
+            int LA73_0 = input.LA(1);
 
-            if ( (LA68_0==VAR) ) {
-                alt68=1;
+            if ( (LA73_0==VAR) ) {
+                alt73=1;
             }
-            } finally {dbg.exitDecision(68);}
+            } finally {dbg.exitDecision(73);}
 
-            switch (alt68) {
+            switch (alt73) {
                 case 1 :
                     dbg.enterAlt(1);
 
                     // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:0:0: args+= VAR
                     {
-                    dbg.location(1206,23);
-                    args=(Token)match(input,VAR,FOLLOW_VAR_in_function_def3062); if (state.failed) return retval;
+                    dbg.location(1202,23);
+                    args=(Token)match(input,VAR,FOLLOW_VAR_in_function_def3053); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     args_tree = (Object)adaptor.create(args);
                     adaptor.addChild(root_0, args_tree);
@@ -9132,40 +9113,40 @@ public class RuleSet2Parser extends DebugParser {
                     break;
 
             }
-            } finally {dbg.exitSubRule(68);}
+            } finally {dbg.exitSubRule(73);}
 
-            dbg.location(1206,30);
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1206:30: ( ',' args+= VAR )*
-            try { dbg.enterSubRule(69);
+            dbg.location(1202,30);
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1202:30: ( ',' args+= VAR )*
+            try { dbg.enterSubRule(74);
 
-            loop69:
+            loop74:
             do {
-                int alt69=2;
-                try { dbg.enterDecision(69);
+                int alt74=2;
+                try { dbg.enterDecision(74);
 
-                int LA69_0 = input.LA(1);
+                int LA74_0 = input.LA(1);
 
-                if ( (LA69_0==51) ) {
-                    alt69=1;
+                if ( (LA74_0==48) ) {
+                    alt74=1;
                 }
 
 
-                } finally {dbg.exitDecision(69);}
+                } finally {dbg.exitDecision(74);}
 
-                switch (alt69) {
+                switch (alt74) {
             	case 1 :
             	    dbg.enterAlt(1);
 
-            	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1206:31: ',' args+= VAR
+            	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1202:31: ',' args+= VAR
             	    {
-            	    dbg.location(1206,31);
-            	    char_literal120=(Token)match(input,51,FOLLOW_51_in_function_def3066); if (state.failed) return retval;
+            	    dbg.location(1202,31);
+            	    char_literal121=(Token)match(input,48,FOLLOW_48_in_function_def3057); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
-            	    char_literal120_tree = (Object)adaptor.create(char_literal120);
-            	    adaptor.addChild(root_0, char_literal120_tree);
+            	    char_literal121_tree = (Object)adaptor.create(char_literal121);
+            	    adaptor.addChild(root_0, char_literal121_tree);
             	    }
-            	    dbg.location(1206,39);
-            	    args=(Token)match(input,VAR,FOLLOW_VAR_in_function_def3070); if (state.failed) return retval;
+            	    dbg.location(1202,39);
+            	    args=(Token)match(input,VAR,FOLLOW_VAR_in_function_def3061); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
             	    args_tree = (Object)adaptor.create(args);
             	    adaptor.addChild(root_0, args_tree);
@@ -9178,48 +9159,48 @@ public class RuleSet2Parser extends DebugParser {
             	    break;
 
             	default :
-            	    break loop69;
+            	    break loop74;
                 }
             } while (true);
-            } finally {dbg.exitSubRule(69);}
+            } finally {dbg.exitSubRule(74);}
 
-            dbg.location(1206,48);
-            char_literal121=(Token)match(input,52,FOLLOW_52_in_function_def3075); if (state.failed) return retval;
-            if ( state.backtracking==0 ) {
-            char_literal121_tree = (Object)adaptor.create(char_literal121);
-            adaptor.addChild(root_0, char_literal121_tree);
-            }
-            dbg.location(1206,52);
-            char_literal122=(Token)match(input,29,FOLLOW_29_in_function_def3077); if (state.failed) return retval;
+            dbg.location(1202,48);
+            char_literal122=(Token)match(input,49,FOLLOW_49_in_function_def3066); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
             char_literal122_tree = (Object)adaptor.create(char_literal122);
             adaptor.addChild(root_0, char_literal122_tree);
             }
-            dbg.location(1206,60);
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1206:60: (decs+= decl[block_array] )?
-            int alt70=2;
-            try { dbg.enterSubRule(70);
-            try { dbg.enterDecision(70);
+            dbg.location(1202,52);
+            char_literal123=(Token)match(input,29,FOLLOW_29_in_function_def3068); if (state.failed) return retval;
+            if ( state.backtracking==0 ) {
+            char_literal123_tree = (Object)adaptor.create(char_literal123);
+            adaptor.addChild(root_0, char_literal123_tree);
+            }
+            dbg.location(1202,60);
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1202:60: (decs+= decl[block_array] )?
+            int alt75=2;
+            try { dbg.enterSubRule(75);
+            try { dbg.enterDecision(75);
 
-            int LA70_0 = input.LA(1);
+            int LA75_0 = input.LA(1);
 
-            if ( (LA70_0==VAR) ) {
-                int LA70_1 = input.LA(2);
+            if ( (LA75_0==VAR) ) {
+                int LA75_1 = input.LA(2);
 
-                if ( (LA70_1==38) ) {
-                    alt70=1;
+                if ( (LA75_1==38) ) {
+                    alt75=1;
                 }
             }
-            } finally {dbg.exitDecision(70);}
+            } finally {dbg.exitDecision(75);}
 
-            switch (alt70) {
+            switch (alt75) {
                 case 1 :
                     dbg.enterAlt(1);
 
                     // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:0:0: decs+= decl[block_array]
                     {
-                    dbg.location(1206,60);
-                    pushFollow(FOLLOW_decl_in_function_def3081);
+                    dbg.location(1202,60);
+                    pushFollow(FOLLOW_decl_in_function_def3072);
                     decs=decl(block_array);
 
                     state._fsp--;
@@ -9233,27 +9214,27 @@ public class RuleSet2Parser extends DebugParser {
                     break;
 
             }
-            } finally {dbg.exitSubRule(70);}
+            } finally {dbg.exitSubRule(75);}
 
-            dbg.location(1206,81);
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1206:81: ( ';' decs+= decl[block_array] )*
-            try { dbg.enterSubRule(71);
+            dbg.location(1202,81);
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1202:81: ( ';' decs+= decl[block_array] )*
+            try { dbg.enterSubRule(76);
 
-            loop71:
+            loop76:
             do {
-                int alt71=2;
-                try { dbg.enterDecision(71);
+                int alt76=2;
+                try { dbg.enterDecision(76);
 
-                int LA71_0 = input.LA(1);
+                int LA76_0 = input.LA(1);
 
-                if ( (LA71_0==31) ) {
-                    int LA71_1 = input.LA(2);
+                if ( (LA76_0==31) ) {
+                    int LA76_1 = input.LA(2);
 
-                    if ( (LA71_1==VAR) ) {
-                        int LA71_3 = input.LA(3);
+                    if ( (LA76_1==VAR) ) {
+                        int LA76_3 = input.LA(3);
 
-                        if ( (LA71_3==38) ) {
-                            alt71=1;
+                        if ( (LA76_3==38) ) {
+                            alt76=1;
                         }
 
 
@@ -9263,22 +9244,22 @@ public class RuleSet2Parser extends DebugParser {
                 }
 
 
-                } finally {dbg.exitDecision(71);}
+                } finally {dbg.exitDecision(76);}
 
-                switch (alt71) {
+                switch (alt76) {
             	case 1 :
             	    dbg.enterAlt(1);
 
-            	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1206:82: ';' decs+= decl[block_array]
+            	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1202:82: ';' decs+= decl[block_array]
             	    {
-            	    dbg.location(1206,82);
-            	    char_literal123=(Token)match(input,31,FOLLOW_31_in_function_def3086); if (state.failed) return retval;
+            	    dbg.location(1202,82);
+            	    char_literal124=(Token)match(input,31,FOLLOW_31_in_function_def3077); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
-            	    char_literal123_tree = (Object)adaptor.create(char_literal123);
-            	    adaptor.addChild(root_0, char_literal123_tree);
+            	    char_literal124_tree = (Object)adaptor.create(char_literal124);
+            	    adaptor.addChild(root_0, char_literal124_tree);
             	    }
-            	    dbg.location(1206,90);
-            	    pushFollow(FOLLOW_decl_in_function_def3090);
+            	    dbg.location(1202,90);
+            	    pushFollow(FOLLOW_decl_in_function_def3081);
             	    decs=decl(block_array);
 
             	    state._fsp--;
@@ -9292,57 +9273,57 @@ public class RuleSet2Parser extends DebugParser {
             	    break;
 
             	default :
-            	    break loop71;
+            	    break loop76;
                 }
             } while (true);
-            } finally {dbg.exitSubRule(71);}
+            } finally {dbg.exitSubRule(76);}
 
-            dbg.location(1206,112);
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1206:112: ( ';' )?
-            int alt72=2;
-            try { dbg.enterSubRule(72);
-            try { dbg.enterDecision(72);
+            dbg.location(1202,112);
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1202:112: ( ';' )?
+            int alt77=2;
+            try { dbg.enterSubRule(77);
+            try { dbg.enterDecision(77);
 
-            int LA72_0 = input.LA(1);
+            int LA77_0 = input.LA(1);
 
-            if ( (LA72_0==31) ) {
-                alt72=1;
+            if ( (LA77_0==31) ) {
+                alt77=1;
             }
-            } finally {dbg.exitDecision(72);}
+            } finally {dbg.exitDecision(77);}
 
-            switch (alt72) {
+            switch (alt77) {
                 case 1 :
                     dbg.enterAlt(1);
 
                     // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:0:0: ';'
                     {
-                    dbg.location(1206,112);
-                    char_literal124=(Token)match(input,31,FOLLOW_31_in_function_def3095); if (state.failed) return retval;
+                    dbg.location(1202,112);
+                    char_literal125=(Token)match(input,31,FOLLOW_31_in_function_def3086); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    char_literal124_tree = (Object)adaptor.create(char_literal124);
-                    adaptor.addChild(root_0, char_literal124_tree);
+                    char_literal125_tree = (Object)adaptor.create(char_literal125);
+                    adaptor.addChild(root_0, char_literal125_tree);
                     }
 
                     }
                     break;
 
             }
-            } finally {dbg.exitSubRule(72);}
+            } finally {dbg.exitSubRule(77);}
 
-            dbg.location(1206,119);
-            pushFollow(FOLLOW_expr_in_function_def3100);
+            dbg.location(1202,119);
+            pushFollow(FOLLOW_expr_in_function_def3091);
             e1=expr();
 
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, e1.getTree());
-            dbg.location(1206,125);
-            char_literal125=(Token)match(input,30,FOLLOW_30_in_function_def3102); if (state.failed) return retval;
+            dbg.location(1202,125);
+            char_literal126=(Token)match(input,30,FOLLOW_30_in_function_def3093); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            char_literal125_tree = (Object)adaptor.create(char_literal125);
-            adaptor.addChild(root_0, char_literal125_tree);
+            char_literal126_tree = (Object)adaptor.create(char_literal126);
+            adaptor.addChild(root_0, char_literal126_tree);
             }
-            dbg.location(1206,129);
+            dbg.location(1202,129);
             if ( state.backtracking==0 ) {
 
               		HashMap tmp = new HashMap();
@@ -9383,7 +9364,7 @@ public class RuleSet2Parser extends DebugParser {
         }
         finally {
         }
-        dbg.location(1225, 2);
+        dbg.location(1221, 2);
 
         }
         finally {
@@ -9403,98 +9384,98 @@ public class RuleSet2Parser extends DebugParser {
     };
 
     // $ANTLR start "conditional_expression"
-    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1228:1: conditional_expression returns [Object result] : d= disjunction ( '=>' expr '|' expr )? ;
+    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1224:1: conditional_expression returns [Object result] : d= disjunction ( '=>' expr '|' expr )? ;
     public final RuleSet2Parser.conditional_expression_return conditional_expression() throws RecognitionException {
         RuleSet2Parser.conditional_expression_return retval = new RuleSet2Parser.conditional_expression_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
 
-        Token string_literal126=null;
-        Token char_literal128=null;
+        Token string_literal127=null;
+        Token char_literal129=null;
         RuleSet2Parser.disjunction_return d = null;
 
-        RuleSet2Parser.expr_return expr127 = null;
+        RuleSet2Parser.expr_return expr128 = null;
 
-        RuleSet2Parser.expr_return expr129 = null;
+        RuleSet2Parser.expr_return expr130 = null;
 
 
-        Object string_literal126_tree=null;
-        Object char_literal128_tree=null;
+        Object string_literal127_tree=null;
+        Object char_literal129_tree=null;
 
         try { dbg.enterRule(getGrammarFileName(), "conditional_expression");
         if ( getRuleLevel()==0 ) {dbg.commence();}
         incRuleLevel();
-        dbg.location(1228, 1);
+        dbg.location(1224, 1);
 
         try {
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1229:2: (d= disjunction ( '=>' expr '|' expr )? )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1225:2: (d= disjunction ( '=>' expr '|' expr )? )
             dbg.enterAlt(1);
 
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1229:5: d= disjunction ( '=>' expr '|' expr )?
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1225:5: d= disjunction ( '=>' expr '|' expr )?
             {
             root_0 = (Object)adaptor.nil();
 
-            dbg.location(1229,6);
-            pushFollow(FOLLOW_disjunction_in_conditional_expression3124);
+            dbg.location(1225,6);
+            pushFollow(FOLLOW_disjunction_in_conditional_expression3115);
             d=disjunction();
 
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, d.getTree());
-            dbg.location(1229,19);
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1229:19: ( '=>' expr '|' expr )?
-            int alt73=2;
-            try { dbg.enterSubRule(73);
-            try { dbg.enterDecision(73);
+            dbg.location(1225,19);
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1225:19: ( '=>' expr '|' expr )?
+            int alt78=2;
+            try { dbg.enterSubRule(78);
+            try { dbg.enterDecision(78);
 
-            int LA73_0 = input.LA(1);
+            int LA78_0 = input.LA(1);
 
-            if ( (LA73_0==49) ) {
-                alt73=1;
+            if ( (LA78_0==46) ) {
+                alt78=1;
             }
-            } finally {dbg.exitDecision(73);}
+            } finally {dbg.exitDecision(78);}
 
-            switch (alt73) {
+            switch (alt78) {
                 case 1 :
                     dbg.enterAlt(1);
 
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1229:20: '=>' expr '|' expr
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1225:20: '=>' expr '|' expr
                     {
-                    dbg.location(1229,20);
-                    string_literal126=(Token)match(input,49,FOLLOW_49_in_conditional_expression3127); if (state.failed) return retval;
+                    dbg.location(1225,20);
+                    string_literal127=(Token)match(input,46,FOLLOW_46_in_conditional_expression3118); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    string_literal126_tree = (Object)adaptor.create(string_literal126);
-                    adaptor.addChild(root_0, string_literal126_tree);
+                    string_literal127_tree = (Object)adaptor.create(string_literal127);
+                    adaptor.addChild(root_0, string_literal127_tree);
                     }
-                    dbg.location(1229,25);
-                    pushFollow(FOLLOW_expr_in_conditional_expression3129);
-                    expr127=expr();
+                    dbg.location(1225,25);
+                    pushFollow(FOLLOW_expr_in_conditional_expression3120);
+                    expr128=expr();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, expr127.getTree());
-                    dbg.location(1229,30);
-                    char_literal128=(Token)match(input,76,FOLLOW_76_in_conditional_expression3131); if (state.failed) return retval;
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, expr128.getTree());
+                    dbg.location(1225,30);
+                    char_literal129=(Token)match(input,72,FOLLOW_72_in_conditional_expression3122); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    char_literal128_tree = (Object)adaptor.create(char_literal128);
-                    adaptor.addChild(root_0, char_literal128_tree);
+                    char_literal129_tree = (Object)adaptor.create(char_literal129);
+                    adaptor.addChild(root_0, char_literal129_tree);
                     }
-                    dbg.location(1229,34);
-                    pushFollow(FOLLOW_expr_in_conditional_expression3133);
-                    expr129=expr();
+                    dbg.location(1225,34);
+                    pushFollow(FOLLOW_expr_in_conditional_expression3124);
+                    expr130=expr();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, expr129.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, expr130.getTree());
 
                     }
                     break;
 
             }
-            } finally {dbg.exitSubRule(73);}
+            } finally {dbg.exitSubRule(78);}
 
-            dbg.location(1230,5);
+            dbg.location(1226,5);
             if ( state.backtracking==0 ) {
                retval.result = (d!=null?d.result:null); 
             }
@@ -9517,7 +9498,7 @@ public class RuleSet2Parser extends DebugParser {
         }
         finally {
         }
-        dbg.location(1231, 2);
+        dbg.location(1227, 2);
 
         }
         finally {
@@ -9537,7 +9518,7 @@ public class RuleSet2Parser extends DebugParser {
     };
 
     // $ANTLR start "disjunction"
-    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1234:1: disjunction returns [Object result] : me1= conjunction (op= '||' me2= conjunction )* ;
+    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1230:1: disjunction returns [Object result] : me1= conjunction (op= '||' me2= conjunction )* ;
     public final RuleSet2Parser.disjunction_return disjunction() throws RecognitionException {
         RuleSet2Parser.disjunction_return retval = new RuleSet2Parser.disjunction_return();
         retval.start = input.LT(1);
@@ -9559,61 +9540,61 @@ public class RuleSet2Parser extends DebugParser {
         try { dbg.enterRule(getGrammarFileName(), "disjunction");
         if ( getRuleLevel()==0 ) {dbg.commence();}
         incRuleLevel();
-        dbg.location(1234, 1);
+        dbg.location(1230, 1);
 
         try {
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1239:2: (me1= conjunction (op= '||' me2= conjunction )* )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1235:2: (me1= conjunction (op= '||' me2= conjunction )* )
             dbg.enterAlt(1);
 
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1239:4: me1= conjunction (op= '||' me2= conjunction )*
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1235:4: me1= conjunction (op= '||' me2= conjunction )*
             {
             root_0 = (Object)adaptor.nil();
 
-            dbg.location(1239,7);
-            pushFollow(FOLLOW_conjunction_in_disjunction3165);
+            dbg.location(1235,7);
+            pushFollow(FOLLOW_conjunction_in_disjunction3156);
             me1=conjunction();
 
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, me1.getTree());
-            dbg.location(1239,20);
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1239:20: (op= '||' me2= conjunction )*
-            try { dbg.enterSubRule(74);
+            dbg.location(1235,20);
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1235:20: (op= '||' me2= conjunction )*
+            try { dbg.enterSubRule(79);
 
-            loop74:
+            loop79:
             do {
-                int alt74=2;
-                try { dbg.enterDecision(74);
+                int alt79=2;
+                try { dbg.enterDecision(79);
 
-                int LA74_0 = input.LA(1);
+                int LA79_0 = input.LA(1);
 
-                if ( (LA74_0==77) ) {
-                    alt74=1;
+                if ( (LA79_0==73) ) {
+                    alt79=1;
                 }
 
 
-                } finally {dbg.exitDecision(74);}
+                } finally {dbg.exitDecision(79);}
 
-                switch (alt74) {
+                switch (alt79) {
             	case 1 :
             	    dbg.enterAlt(1);
 
-            	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1239:21: op= '||' me2= conjunction
+            	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1235:21: op= '||' me2= conjunction
             	    {
-            	    dbg.location(1239,23);
-            	    op=(Token)match(input,77,FOLLOW_77_in_disjunction3170); if (state.failed) return retval;
+            	    dbg.location(1235,23);
+            	    op=(Token)match(input,73,FOLLOW_73_in_disjunction3161); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
             	    op_tree = (Object)adaptor.create(op);
             	    adaptor.addChild(root_0, op_tree);
             	    }
-            	    dbg.location(1239,32);
-            	    pushFollow(FOLLOW_conjunction_in_disjunction3174);
+            	    dbg.location(1235,32);
+            	    pushFollow(FOLLOW_conjunction_in_disjunction3165);
             	    me2=conjunction();
 
             	    state._fsp--;
             	    if (state.failed) return retval;
             	    if ( state.backtracking==0 ) adaptor.addChild(root_0, me2.getTree());
-            	    dbg.location(1239,44);
+            	    dbg.location(1235,44);
             	    if ( state.backtracking==0 ) {
 
             	      		found_op = true;
@@ -9632,12 +9613,12 @@ public class RuleSet2Parser extends DebugParser {
             	    break;
 
             	default :
-            	    break loop74;
+            	    break loop79;
                 }
             } while (true);
-            } finally {dbg.exitSubRule(74);}
+            } finally {dbg.exitSubRule(79);}
 
-            dbg.location(1249,6);
+            dbg.location(1245,6);
             if ( state.backtracking==0 ) {
 
               		if(found_op)
@@ -9665,7 +9646,7 @@ public class RuleSet2Parser extends DebugParser {
         }
         finally {
         }
-        dbg.location(1255, 2);
+        dbg.location(1251, 2);
 
         }
         finally {
@@ -9685,7 +9666,7 @@ public class RuleSet2Parser extends DebugParser {
     };
 
     // $ANTLR start "conjunction"
-    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1257:1: conjunction returns [Object result] : me1= equality_expr (op= '&&' me2= equality_expr )* ;
+    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1253:1: conjunction returns [Object result] : me1= equality_expr (op= '&&' me2= equality_expr )* ;
     public final RuleSet2Parser.conjunction_return conjunction() throws RecognitionException {
         RuleSet2Parser.conjunction_return retval = new RuleSet2Parser.conjunction_return();
         retval.start = input.LT(1);
@@ -9707,61 +9688,61 @@ public class RuleSet2Parser extends DebugParser {
         try { dbg.enterRule(getGrammarFileName(), "conjunction");
         if ( getRuleLevel()==0 ) {dbg.commence();}
         incRuleLevel();
-        dbg.location(1257, 1);
+        dbg.location(1253, 1);
 
         try {
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1262:2: (me1= equality_expr (op= '&&' me2= equality_expr )* )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1258:2: (me1= equality_expr (op= '&&' me2= equality_expr )* )
             dbg.enterAlt(1);
 
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1262:4: me1= equality_expr (op= '&&' me2= equality_expr )*
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1258:4: me1= equality_expr (op= '&&' me2= equality_expr )*
             {
             root_0 = (Object)adaptor.nil();
 
-            dbg.location(1262,7);
-            pushFollow(FOLLOW_equality_expr_in_conjunction3204);
+            dbg.location(1258,7);
+            pushFollow(FOLLOW_equality_expr_in_conjunction3195);
             me1=equality_expr();
 
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, me1.getTree());
-            dbg.location(1262,22);
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1262:22: (op= '&&' me2= equality_expr )*
-            try { dbg.enterSubRule(75);
+            dbg.location(1258,22);
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1258:22: (op= '&&' me2= equality_expr )*
+            try { dbg.enterSubRule(80);
 
-            loop75:
+            loop80:
             do {
-                int alt75=2;
-                try { dbg.enterDecision(75);
+                int alt80=2;
+                try { dbg.enterDecision(80);
 
-                int LA75_0 = input.LA(1);
+                int LA80_0 = input.LA(1);
 
-                if ( (LA75_0==78) ) {
-                    alt75=1;
+                if ( (LA80_0==74) ) {
+                    alt80=1;
                 }
 
 
-                } finally {dbg.exitDecision(75);}
+                } finally {dbg.exitDecision(80);}
 
-                switch (alt75) {
+                switch (alt80) {
             	case 1 :
             	    dbg.enterAlt(1);
 
-            	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1262:23: op= '&&' me2= equality_expr
+            	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1258:23: op= '&&' me2= equality_expr
             	    {
-            	    dbg.location(1262,25);
-            	    op=(Token)match(input,78,FOLLOW_78_in_conjunction3209); if (state.failed) return retval;
+            	    dbg.location(1258,25);
+            	    op=(Token)match(input,74,FOLLOW_74_in_conjunction3200); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
             	    op_tree = (Object)adaptor.create(op);
             	    adaptor.addChild(root_0, op_tree);
             	    }
-            	    dbg.location(1262,34);
-            	    pushFollow(FOLLOW_equality_expr_in_conjunction3213);
+            	    dbg.location(1258,34);
+            	    pushFollow(FOLLOW_equality_expr_in_conjunction3204);
             	    me2=equality_expr();
 
             	    state._fsp--;
             	    if (state.failed) return retval;
             	    if ( state.backtracking==0 ) adaptor.addChild(root_0, me2.getTree());
-            	    dbg.location(1262,49);
+            	    dbg.location(1258,49);
             	    if ( state.backtracking==0 ) {
 
             	      		found_op = true;
@@ -9780,12 +9761,12 @@ public class RuleSet2Parser extends DebugParser {
             	    break;
 
             	default :
-            	    break loop75;
+            	    break loop80;
                 }
             } while (true);
-            } finally {dbg.exitSubRule(75);}
+            } finally {dbg.exitSubRule(80);}
 
-            dbg.location(1272,7);
+            dbg.location(1268,7);
             if ( state.backtracking==0 ) {
                
               		if(found_op)
@@ -9813,7 +9794,7 @@ public class RuleSet2Parser extends DebugParser {
         }
         finally {
         }
-        dbg.location(1278, 2);
+        dbg.location(1274, 2);
 
         }
         finally {
@@ -9833,7 +9814,7 @@ public class RuleSet2Parser extends DebugParser {
     };
 
     // $ANTLR start "equality_expr"
-    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1280:1: equality_expr returns [Object result] : me1= add_expr (op= predop me2= add_expr )* ;
+    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1276:1: equality_expr returns [Object result] : me1= add_expr (op= predop me2= add_expr )* ;
     public final RuleSet2Parser.equality_expr_return equality_expr() throws RecognitionException {
         RuleSet2Parser.equality_expr_return retval = new RuleSet2Parser.equality_expr_return();
         retval.start = input.LT(1);
@@ -9855,62 +9836,62 @@ public class RuleSet2Parser extends DebugParser {
         try { dbg.enterRule(getGrammarFileName(), "equality_expr");
         if ( getRuleLevel()==0 ) {dbg.commence();}
         incRuleLevel();
-        dbg.location(1280, 1);
+        dbg.location(1276, 1);
 
         try {
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1285:2: (me1= add_expr (op= predop me2= add_expr )* )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1281:2: (me1= add_expr (op= predop me2= add_expr )* )
             dbg.enterAlt(1);
 
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1285:4: me1= add_expr (op= predop me2= add_expr )*
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1281:4: me1= add_expr (op= predop me2= add_expr )*
             {
             root_0 = (Object)adaptor.nil();
 
-            dbg.location(1285,7);
-            pushFollow(FOLLOW_add_expr_in_equality_expr3244);
+            dbg.location(1281,7);
+            pushFollow(FOLLOW_add_expr_in_equality_expr3235);
             me1=add_expr();
 
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, me1.getTree());
-            dbg.location(1285,17);
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1285:17: (op= predop me2= add_expr )*
-            try { dbg.enterSubRule(76);
+            dbg.location(1281,17);
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1281:17: (op= predop me2= add_expr )*
+            try { dbg.enterSubRule(81);
 
-            loop76:
+            loop81:
             do {
-                int alt76=2;
-                try { dbg.enterDecision(76);
+                int alt81=2;
+                try { dbg.enterDecision(81);
 
-                int LA76_0 = input.LA(1);
+                int LA81_0 = input.LA(1);
 
-                if ( ((LA76_0>=18 && LA76_0<=26)) ) {
-                    alt76=1;
+                if ( ((LA81_0>=18 && LA81_0<=26)) ) {
+                    alt81=1;
                 }
 
 
-                } finally {dbg.exitDecision(76);}
+                } finally {dbg.exitDecision(81);}
 
-                switch (alt76) {
+                switch (alt81) {
             	case 1 :
             	    dbg.enterAlt(1);
 
-            	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1285:18: op= predop me2= add_expr
+            	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1281:18: op= predop me2= add_expr
             	    {
-            	    dbg.location(1285,20);
-            	    pushFollow(FOLLOW_predop_in_equality_expr3249);
+            	    dbg.location(1281,20);
+            	    pushFollow(FOLLOW_predop_in_equality_expr3240);
             	    op=predop();
 
             	    state._fsp--;
             	    if (state.failed) return retval;
             	    if ( state.backtracking==0 ) adaptor.addChild(root_0, op.getTree());
-            	    dbg.location(1285,31);
-            	    pushFollow(FOLLOW_add_expr_in_equality_expr3253);
+            	    dbg.location(1281,31);
+            	    pushFollow(FOLLOW_add_expr_in_equality_expr3244);
             	    me2=add_expr();
 
             	    state._fsp--;
             	    if (state.failed) return retval;
             	    if ( state.backtracking==0 ) adaptor.addChild(root_0, me2.getTree());
-            	    dbg.location(1285,41);
+            	    dbg.location(1281,41);
             	    if ( state.backtracking==0 ) {
 
             	      		found_op = true;
@@ -9928,12 +9909,12 @@ public class RuleSet2Parser extends DebugParser {
             	    break;
 
             	default :
-            	    break loop76;
+            	    break loop81;
                 }
             } while (true);
-            } finally {dbg.exitSubRule(76);}
+            } finally {dbg.exitSubRule(81);}
 
-            dbg.location(1294,6);
+            dbg.location(1290,6);
             if ( state.backtracking==0 ) {
                
               		if(found_op)
@@ -9961,7 +9942,7 @@ public class RuleSet2Parser extends DebugParser {
         }
         finally {
         }
-        dbg.location(1300, 2);
+        dbg.location(1296, 2);
 
         }
         finally {
@@ -9981,7 +9962,7 @@ public class RuleSet2Parser extends DebugParser {
     };
 
     // $ANTLR start "add_expr"
-    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1303:1: add_expr returns [Object result] : me1= mult_expr (op= add_op me2= mult_expr )* ;
+    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1299:1: add_expr returns [Object result] : me1= mult_expr (op= add_op me2= mult_expr )* ;
     public final RuleSet2Parser.add_expr_return add_expr() throws RecognitionException {
         RuleSet2Parser.add_expr_return retval = new RuleSet2Parser.add_expr_return();
         retval.start = input.LT(1);
@@ -10003,62 +9984,62 @@ public class RuleSet2Parser extends DebugParser {
         try { dbg.enterRule(getGrammarFileName(), "add_expr");
         if ( getRuleLevel()==0 ) {dbg.commence();}
         incRuleLevel();
-        dbg.location(1303, 1);
+        dbg.location(1299, 1);
 
         try {
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1308:2: (me1= mult_expr (op= add_op me2= mult_expr )* )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1304:2: (me1= mult_expr (op= add_op me2= mult_expr )* )
             dbg.enterAlt(1);
 
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1308:4: me1= mult_expr (op= add_op me2= mult_expr )*
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1304:4: me1= mult_expr (op= add_op me2= mult_expr )*
             {
             root_0 = (Object)adaptor.nil();
 
-            dbg.location(1308,7);
-            pushFollow(FOLLOW_mult_expr_in_add_expr3287);
+            dbg.location(1304,7);
+            pushFollow(FOLLOW_mult_expr_in_add_expr3278);
             me1=mult_expr();
 
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, me1.getTree());
-            dbg.location(1308,18);
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1308:18: (op= add_op me2= mult_expr )*
-            try { dbg.enterSubRule(77);
+            dbg.location(1304,18);
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1304:18: (op= add_op me2= mult_expr )*
+            try { dbg.enterSubRule(82);
 
-            loop77:
+            loop82:
             do {
-                int alt77=2;
-                try { dbg.enterDecision(77);
+                int alt82=2;
+                try { dbg.enterDecision(82);
 
-                int LA77_0 = input.LA(1);
+                int LA82_0 = input.LA(1);
 
-                if ( ((LA77_0>=27 && LA77_0<=28)) ) {
-                    alt77=1;
+                if ( ((LA82_0>=27 && LA82_0<=28)) ) {
+                    alt82=1;
                 }
 
 
-                } finally {dbg.exitDecision(77);}
+                } finally {dbg.exitDecision(82);}
 
-                switch (alt77) {
+                switch (alt82) {
             	case 1 :
             	    dbg.enterAlt(1);
 
-            	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1308:19: op= add_op me2= mult_expr
+            	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1304:19: op= add_op me2= mult_expr
             	    {
-            	    dbg.location(1308,21);
-            	    pushFollow(FOLLOW_add_op_in_add_expr3292);
+            	    dbg.location(1304,21);
+            	    pushFollow(FOLLOW_add_op_in_add_expr3283);
             	    op=add_op();
 
             	    state._fsp--;
             	    if (state.failed) return retval;
             	    if ( state.backtracking==0 ) adaptor.addChild(root_0, op.getTree());
-            	    dbg.location(1308,32);
-            	    pushFollow(FOLLOW_mult_expr_in_add_expr3296);
+            	    dbg.location(1304,32);
+            	    pushFollow(FOLLOW_mult_expr_in_add_expr3287);
             	    me2=mult_expr();
 
             	    state._fsp--;
             	    if (state.failed) return retval;
             	    if ( state.backtracking==0 ) adaptor.addChild(root_0, me2.getTree());
-            	    dbg.location(1308,44);
+            	    dbg.location(1304,44);
             	    if ( state.backtracking==0 ) {
 
             	      		found_op = true;
@@ -10076,12 +10057,12 @@ public class RuleSet2Parser extends DebugParser {
             	    break;
 
             	default :
-            	    break loop77;
+            	    break loop82;
                 }
             } while (true);
-            } finally {dbg.exitSubRule(77);}
+            } finally {dbg.exitSubRule(82);}
 
-            dbg.location(1318,6);
+            dbg.location(1314,6);
             if ( state.backtracking==0 ) {
                
               		if(found_op)
@@ -10109,7 +10090,7 @@ public class RuleSet2Parser extends DebugParser {
         }
         finally {
         }
-        dbg.location(1324, 2);
+        dbg.location(1320, 2);
 
         }
         finally {
@@ -10128,35 +10109,35 @@ public class RuleSet2Parser extends DebugParser {
     };
 
     // $ANTLR start "mult_op"
-    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1327:1: mult_op : ( '*' | '/' | '%' );
+    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1323:1: mult_op : ( '*' | '/' | '%' );
     public final RuleSet2Parser.mult_op_return mult_op() throws RecognitionException {
         RuleSet2Parser.mult_op_return retval = new RuleSet2Parser.mult_op_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
 
-        Token set130=null;
+        Token set131=null;
 
-        Object set130_tree=null;
+        Object set131_tree=null;
 
         try { dbg.enterRule(getGrammarFileName(), "mult_op");
         if ( getRuleLevel()==0 ) {dbg.commence();}
         incRuleLevel();
-        dbg.location(1327, 1);
+        dbg.location(1323, 1);
 
         try {
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1327:8: ( '*' | '/' | '%' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1323:8: ( '*' | '/' | '%' )
             dbg.enterAlt(1);
 
             // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:
             {
             root_0 = (Object)adaptor.nil();
 
-            dbg.location(1327,8);
-            set130=(Token)input.LT(1);
-            if ( (input.LA(1)>=79 && input.LA(1)<=81) ) {
+            dbg.location(1323,8);
+            set131=(Token)input.LT(1);
+            if ( (input.LA(1)>=75 && input.LA(1)<=77) ) {
                 input.consume();
-                if ( state.backtracking==0 ) adaptor.addChild(root_0, (Object)adaptor.create(set130));
+                if ( state.backtracking==0 ) adaptor.addChild(root_0, (Object)adaptor.create(set131));
                 state.errorRecovery=false;state.failed=false;
             }
             else {
@@ -10185,7 +10166,7 @@ public class RuleSet2Parser extends DebugParser {
         }
         finally {
         }
-        dbg.location(1327, 21);
+        dbg.location(1323, 21);
 
         }
         finally {
@@ -10205,7 +10186,7 @@ public class RuleSet2Parser extends DebugParser {
     };
 
     // $ANTLR start "mult_expr"
-    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1329:1: mult_expr returns [Object result] : me1= unary_expr (op= mult_op me2= unary_expr )* ;
+    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1325:1: mult_expr returns [Object result] : me1= unary_expr (op= mult_op me2= unary_expr )* ;
     public final RuleSet2Parser.mult_expr_return mult_expr() throws RecognitionException {
         RuleSet2Parser.mult_expr_return retval = new RuleSet2Parser.mult_expr_return();
         retval.start = input.LT(1);
@@ -10227,62 +10208,62 @@ public class RuleSet2Parser extends DebugParser {
         try { dbg.enterRule(getGrammarFileName(), "mult_expr");
         if ( getRuleLevel()==0 ) {dbg.commence();}
         incRuleLevel();
-        dbg.location(1329, 1);
+        dbg.location(1325, 1);
 
         try {
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1334:2: (me1= unary_expr (op= mult_op me2= unary_expr )* )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1330:2: (me1= unary_expr (op= mult_op me2= unary_expr )* )
             dbg.enterAlt(1);
 
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1334:4: me1= unary_expr (op= mult_op me2= unary_expr )*
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1330:4: me1= unary_expr (op= mult_op me2= unary_expr )*
             {
             root_0 = (Object)adaptor.nil();
 
-            dbg.location(1334,7);
-            pushFollow(FOLLOW_unary_expr_in_mult_expr3344);
+            dbg.location(1330,7);
+            pushFollow(FOLLOW_unary_expr_in_mult_expr3335);
             me1=unary_expr();
 
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, me1.getTree());
-            dbg.location(1334,19);
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1334:19: (op= mult_op me2= unary_expr )*
-            try { dbg.enterSubRule(78);
+            dbg.location(1330,19);
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1330:19: (op= mult_op me2= unary_expr )*
+            try { dbg.enterSubRule(83);
 
-            loop78:
+            loop83:
             do {
-                int alt78=2;
-                try { dbg.enterDecision(78);
+                int alt83=2;
+                try { dbg.enterDecision(83);
 
-                int LA78_0 = input.LA(1);
+                int LA83_0 = input.LA(1);
 
-                if ( ((LA78_0>=79 && LA78_0<=81)) ) {
-                    alt78=1;
+                if ( ((LA83_0>=75 && LA83_0<=77)) ) {
+                    alt83=1;
                 }
 
 
-                } finally {dbg.exitDecision(78);}
+                } finally {dbg.exitDecision(83);}
 
-                switch (alt78) {
+                switch (alt83) {
             	case 1 :
             	    dbg.enterAlt(1);
 
-            	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1334:20: op= mult_op me2= unary_expr
+            	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1330:20: op= mult_op me2= unary_expr
             	    {
-            	    dbg.location(1334,22);
-            	    pushFollow(FOLLOW_mult_op_in_mult_expr3349);
+            	    dbg.location(1330,22);
+            	    pushFollow(FOLLOW_mult_op_in_mult_expr3340);
             	    op=mult_op();
 
             	    state._fsp--;
             	    if (state.failed) return retval;
             	    if ( state.backtracking==0 ) adaptor.addChild(root_0, op.getTree());
-            	    dbg.location(1334,34);
-            	    pushFollow(FOLLOW_unary_expr_in_mult_expr3353);
+            	    dbg.location(1330,34);
+            	    pushFollow(FOLLOW_unary_expr_in_mult_expr3344);
             	    me2=unary_expr();
 
             	    state._fsp--;
             	    if (state.failed) return retval;
             	    if ( state.backtracking==0 ) adaptor.addChild(root_0, me2.getTree());
-            	    dbg.location(1335,2);
+            	    dbg.location(1331,2);
             	    if ( state.backtracking==0 ) {
             	      	
             	      		found_op = true;
@@ -10303,12 +10284,12 @@ public class RuleSet2Parser extends DebugParser {
             	    break;
 
             	default :
-            	    break loop78;
+            	    break loop83;
                 }
             } while (true);
-            } finally {dbg.exitSubRule(78);}
+            } finally {dbg.exitSubRule(83);}
 
-            dbg.location(1347,7);
+            dbg.location(1343,7);
             if ( state.backtracking==0 ) {
                
               		if(found_op)
@@ -10338,7 +10319,7 @@ public class RuleSet2Parser extends DebugParser {
         }
         finally {
         }
-        dbg.location(1355, 2);
+        dbg.location(1351, 2);
 
         }
         finally {
@@ -10358,7 +10339,7 @@ public class RuleSet2Parser extends DebugParser {
     };
 
     // $ANTLR start "unary_expr"
-    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1358:1: unary_expr returns [Object result] options {backtrack=true; } : ( 'not' unary_expr | 'seen' rx= STRING must_be[\"in\"] vd= var_domain ':' v= VAR (t= timeframe )? | 'seen' rx_1= STRING op= ( 'before' | 'after' ) rx_2= STRING must_be[\"in\"] vd= var_domain ':' v= VAR | vd= var_domain ':' v= VAR pop= predop e= expr t= timeframe | vd= var_domain ':' v= VAR t= timeframe | oe= operator_expr );
+    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1354:1: unary_expr returns [Object result] options {backtrack=true; } : ( 'not' unary_expr | 'seen' rx= STRING must_be[\"in\"] vd= var_domain ':' v= VAR (t= timeframe )? | 'seen' rx_1= STRING op= must_be_one[sar(\"before\",\"after\")] rx_2= STRING must_be[\"in\"] vd= var_domain ':' v= VAR | vd= var_domain ':' v= VAR pop= predop e= expr t= timeframe | vd= var_domain ':' v= VAR t= timeframe | oe= operator_expr );
     public final RuleSet2Parser.unary_expr_return unary_expr() throws RecognitionException {
         RuleSet2Parser.unary_expr_return retval = new RuleSet2Parser.unary_expr_return();
         retval.start = input.LT(1);
@@ -10368,18 +10349,19 @@ public class RuleSet2Parser extends DebugParser {
         Token rx=null;
         Token v=null;
         Token rx_1=null;
-        Token op=null;
         Token rx_2=null;
-        Token string_literal131=null;
-        Token string_literal133=null;
-        Token char_literal135=null;
-        Token string_literal136=null;
-        Token char_literal138=null;
+        Token string_literal132=null;
+        Token string_literal134=null;
+        Token char_literal136=null;
+        Token string_literal137=null;
         Token char_literal139=null;
         Token char_literal140=null;
+        Token char_literal141=null;
         RuleSet2Parser.var_domain_return vd = null;
 
         RuleSet2Parser.timeframe_return t = null;
+
+        RuleSet2Parser.must_be_one_return op = null;
 
         RuleSet2Parser.predop_return pop = null;
 
@@ -10387,25 +10369,24 @@ public class RuleSet2Parser extends DebugParser {
 
         RuleSet2Parser.operator_expr_return oe = null;
 
-        RuleSet2Parser.unary_expr_return unary_expr132 = null;
+        RuleSet2Parser.unary_expr_return unary_expr133 = null;
 
-        RuleSet2Parser.must_be_return must_be134 = null;
+        RuleSet2Parser.must_be_return must_be135 = null;
 
-        RuleSet2Parser.must_be_return must_be137 = null;
+        RuleSet2Parser.must_be_return must_be138 = null;
 
 
         Object rx_tree=null;
         Object v_tree=null;
         Object rx_1_tree=null;
-        Object op_tree=null;
         Object rx_2_tree=null;
-        Object string_literal131_tree=null;
-        Object string_literal133_tree=null;
-        Object char_literal135_tree=null;
-        Object string_literal136_tree=null;
-        Object char_literal138_tree=null;
+        Object string_literal132_tree=null;
+        Object string_literal134_tree=null;
+        Object char_literal136_tree=null;
+        Object string_literal137_tree=null;
         Object char_literal139_tree=null;
         Object char_literal140_tree=null;
+        Object char_literal141_tree=null;
 
 
 
@@ -10413,116 +10394,116 @@ public class RuleSet2Parser extends DebugParser {
         try { dbg.enterRule(getGrammarFileName(), "unary_expr");
         if ( getRuleLevel()==0 ) {dbg.commence();}
         incRuleLevel();
-        dbg.location(1358, 1);
+        dbg.location(1354, 1);
 
         try {
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1362:2: ( 'not' unary_expr | 'seen' rx= STRING must_be[\"in\"] vd= var_domain ':' v= VAR (t= timeframe )? | 'seen' rx_1= STRING op= ( 'before' | 'after' ) rx_2= STRING must_be[\"in\"] vd= var_domain ':' v= VAR | vd= var_domain ':' v= VAR pop= predop e= expr t= timeframe | vd= var_domain ':' v= VAR t= timeframe | oe= operator_expr )
-            int alt80=6;
-            try { dbg.enterDecision(80);
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1358:2: ( 'not' unary_expr | 'seen' rx= STRING must_be[\"in\"] vd= var_domain ':' v= VAR (t= timeframe )? | 'seen' rx_1= STRING op= must_be_one[sar(\"before\",\"after\")] rx_2= STRING must_be[\"in\"] vd= var_domain ':' v= VAR | vd= var_domain ':' v= VAR pop= predop e= expr t= timeframe | vd= var_domain ':' v= VAR t= timeframe | oe= operator_expr )
+            int alt85=6;
+            try { dbg.enterDecision(85);
 
             try {
                 isCyclicDecision = true;
-                alt80 = dfa80.predict(input);
+                alt85 = dfa85.predict(input);
             }
             catch (NoViableAltException nvae) {
                 dbg.recognitionException(nvae);
                 throw nvae;
             }
-            } finally {dbg.exitDecision(80);}
+            } finally {dbg.exitDecision(85);}
 
-            switch (alt80) {
+            switch (alt85) {
                 case 1 :
                     dbg.enterAlt(1);
 
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1362:4: 'not' unary_expr
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1358:4: 'not' unary_expr
                     {
                     root_0 = (Object)adaptor.nil();
 
-                    dbg.location(1362,4);
-                    string_literal131=(Token)match(input,61,FOLLOW_61_in_unary_expr3393); if (state.failed) return retval;
+                    dbg.location(1358,4);
+                    string_literal132=(Token)match(input,57,FOLLOW_57_in_unary_expr3384); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    string_literal131_tree = (Object)adaptor.create(string_literal131);
-                    adaptor.addChild(root_0, string_literal131_tree);
+                    string_literal132_tree = (Object)adaptor.create(string_literal132);
+                    adaptor.addChild(root_0, string_literal132_tree);
                     }
-                    dbg.location(1362,10);
-                    pushFollow(FOLLOW_unary_expr_in_unary_expr3395);
-                    unary_expr132=unary_expr();
+                    dbg.location(1358,10);
+                    pushFollow(FOLLOW_unary_expr_in_unary_expr3386);
+                    unary_expr133=unary_expr();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, unary_expr132.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, unary_expr133.getTree());
 
                     }
                     break;
                 case 2 :
                     dbg.enterAlt(2);
 
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1363:4: 'seen' rx= STRING must_be[\"in\"] vd= var_domain ':' v= VAR (t= timeframe )?
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1359:4: 'seen' rx= STRING must_be[\"in\"] vd= var_domain ':' v= VAR (t= timeframe )?
                     {
                     root_0 = (Object)adaptor.nil();
 
-                    dbg.location(1363,4);
-                    string_literal133=(Token)match(input,82,FOLLOW_82_in_unary_expr3402); if (state.failed) return retval;
+                    dbg.location(1359,4);
+                    string_literal134=(Token)match(input,78,FOLLOW_78_in_unary_expr3393); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    string_literal133_tree = (Object)adaptor.create(string_literal133);
-                    adaptor.addChild(root_0, string_literal133_tree);
+                    string_literal134_tree = (Object)adaptor.create(string_literal134);
+                    adaptor.addChild(root_0, string_literal134_tree);
                     }
-                    dbg.location(1363,13);
-                    rx=(Token)match(input,STRING,FOLLOW_STRING_in_unary_expr3406); if (state.failed) return retval;
+                    dbg.location(1359,13);
+                    rx=(Token)match(input,STRING,FOLLOW_STRING_in_unary_expr3397); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     rx_tree = (Object)adaptor.create(rx);
                     adaptor.addChild(root_0, rx_tree);
                     }
-                    dbg.location(1363,21);
-                    pushFollow(FOLLOW_must_be_in_unary_expr3408);
-                    must_be134=must_be("in");
+                    dbg.location(1359,21);
+                    pushFollow(FOLLOW_must_be_in_unary_expr3399);
+                    must_be135=must_be("in");
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, must_be134.getTree());
-                    dbg.location(1363,37);
-                    pushFollow(FOLLOW_var_domain_in_unary_expr3413);
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, must_be135.getTree());
+                    dbg.location(1359,37);
+                    pushFollow(FOLLOW_var_domain_in_unary_expr3404);
                     vd=var_domain();
 
                     state._fsp--;
                     if (state.failed) return retval;
                     if ( state.backtracking==0 ) adaptor.addChild(root_0, vd.getTree());
-                    dbg.location(1363,49);
-                    char_literal135=(Token)match(input,40,FOLLOW_40_in_unary_expr3415); if (state.failed) return retval;
+                    dbg.location(1359,49);
+                    char_literal136=(Token)match(input,39,FOLLOW_39_in_unary_expr3406); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    char_literal135_tree = (Object)adaptor.create(char_literal135);
-                    adaptor.addChild(root_0, char_literal135_tree);
+                    char_literal136_tree = (Object)adaptor.create(char_literal136);
+                    adaptor.addChild(root_0, char_literal136_tree);
                     }
-                    dbg.location(1363,54);
-                    v=(Token)match(input,VAR,FOLLOW_VAR_in_unary_expr3419); if (state.failed) return retval;
+                    dbg.location(1359,54);
+                    v=(Token)match(input,VAR,FOLLOW_VAR_in_unary_expr3410); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     v_tree = (Object)adaptor.create(v);
                     adaptor.addChild(root_0, v_tree);
                     }
-                    dbg.location(1363,60);
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1363:60: (t= timeframe )?
-                    int alt79=2;
-                    try { dbg.enterSubRule(79);
-                    try { dbg.enterDecision(79);
+                    dbg.location(1359,60);
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1359:60: (t= timeframe )?
+                    int alt84=2;
+                    try { dbg.enterSubRule(84);
+                    try { dbg.enterDecision(84);
 
                     try {
                         isCyclicDecision = true;
-                        alt79 = dfa79.predict(input);
+                        alt84 = dfa84.predict(input);
                     }
                     catch (NoViableAltException nvae) {
                         dbg.recognitionException(nvae);
                         throw nvae;
                     }
-                    } finally {dbg.exitDecision(79);}
+                    } finally {dbg.exitDecision(84);}
 
-                    switch (alt79) {
+                    switch (alt84) {
                         case 1 :
                             dbg.enterAlt(1);
 
                             // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:0:0: t= timeframe
                             {
-                            dbg.location(1363,60);
-                            pushFollow(FOLLOW_timeframe_in_unary_expr3423);
+                            dbg.location(1359,60);
+                            pushFollow(FOLLOW_timeframe_in_unary_expr3414);
                             t=timeframe();
 
                             state._fsp--;
@@ -10533,9 +10514,9 @@ public class RuleSet2Parser extends DebugParser {
                             break;
 
                     }
-                    } finally {dbg.exitSubRule(79);}
+                    } finally {dbg.exitSubRule(84);}
 
-                    dbg.location(1363,72);
+                    dbg.location(1359,72);
                     if ( state.backtracking==0 ) {
 
                             	      	HashMap tmp = new HashMap();
@@ -10555,69 +10536,62 @@ public class RuleSet2Parser extends DebugParser {
                 case 3 :
                     dbg.enterAlt(3);
 
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1374:4: 'seen' rx_1= STRING op= ( 'before' | 'after' ) rx_2= STRING must_be[\"in\"] vd= var_domain ':' v= VAR
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1370:4: 'seen' rx_1= STRING op= must_be_one[sar(\"before\",\"after\")] rx_2= STRING must_be[\"in\"] vd= var_domain ':' v= VAR
                     {
                     root_0 = (Object)adaptor.nil();
 
-                    dbg.location(1374,4);
-                    string_literal136=(Token)match(input,82,FOLLOW_82_in_unary_expr3431); if (state.failed) return retval;
+                    dbg.location(1370,4);
+                    string_literal137=(Token)match(input,78,FOLLOW_78_in_unary_expr3422); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    string_literal136_tree = (Object)adaptor.create(string_literal136);
-                    adaptor.addChild(root_0, string_literal136_tree);
+                    string_literal137_tree = (Object)adaptor.create(string_literal137);
+                    adaptor.addChild(root_0, string_literal137_tree);
                     }
-                    dbg.location(1374,15);
-                    rx_1=(Token)match(input,STRING,FOLLOW_STRING_in_unary_expr3435); if (state.failed) return retval;
+                    dbg.location(1370,15);
+                    rx_1=(Token)match(input,STRING,FOLLOW_STRING_in_unary_expr3426); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     rx_1_tree = (Object)adaptor.create(rx_1);
                     adaptor.addChild(root_0, rx_1_tree);
                     }
-                    dbg.location(1374,25);
-                    op=(Token)input.LT(1);
-                    if ( input.LA(1)==59||input.LA(1)==83 ) {
-                        input.consume();
-                        if ( state.backtracking==0 ) adaptor.addChild(root_0, (Object)adaptor.create(op));
-                        state.errorRecovery=false;state.failed=false;
-                    }
-                    else {
-                        if (state.backtracking>0) {state.failed=true; return retval;}
-                        MismatchedSetException mse = new MismatchedSetException(null,input);
-                        dbg.recognitionException(mse);
-                        throw mse;
-                    }
+                    dbg.location(1370,25);
+                    pushFollow(FOLLOW_must_be_one_in_unary_expr3430);
+                    op=must_be_one(sar("before","after"));
 
-                    dbg.location(1374,51);
-                    rx_2=(Token)match(input,STRING,FOLLOW_STRING_in_unary_expr3449); if (state.failed) return retval;
+                    state._fsp--;
+                    if (state.failed) return retval;
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, op.getTree());
+                    dbg.location(1370,65);
+                    rx_2=(Token)match(input,STRING,FOLLOW_STRING_in_unary_expr3435); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     rx_2_tree = (Object)adaptor.create(rx_2);
                     adaptor.addChild(root_0, rx_2_tree);
                     }
-                    dbg.location(1374,60);
-                    pushFollow(FOLLOW_must_be_in_unary_expr3452);
-                    must_be137=must_be("in");
+                    dbg.location(1370,74);
+                    pushFollow(FOLLOW_must_be_in_unary_expr3438);
+                    must_be138=must_be("in");
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, must_be137.getTree());
-                    dbg.location(1374,76);
-                    pushFollow(FOLLOW_var_domain_in_unary_expr3457);
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, must_be138.getTree());
+                    dbg.location(1370,90);
+                    pushFollow(FOLLOW_var_domain_in_unary_expr3443);
                     vd=var_domain();
 
                     state._fsp--;
                     if (state.failed) return retval;
                     if ( state.backtracking==0 ) adaptor.addChild(root_0, vd.getTree());
-                    dbg.location(1374,88);
-                    char_literal138=(Token)match(input,40,FOLLOW_40_in_unary_expr3459); if (state.failed) return retval;
+                    dbg.location(1370,102);
+                    char_literal139=(Token)match(input,39,FOLLOW_39_in_unary_expr3445); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    char_literal138_tree = (Object)adaptor.create(char_literal138);
-                    adaptor.addChild(root_0, char_literal138_tree);
+                    char_literal139_tree = (Object)adaptor.create(char_literal139);
+                    adaptor.addChild(root_0, char_literal139_tree);
                     }
-                    dbg.location(1374,93);
-                    v=(Token)match(input,VAR,FOLLOW_VAR_in_unary_expr3463); if (state.failed) return retval;
+                    dbg.location(1370,107);
+                    v=(Token)match(input,VAR,FOLLOW_VAR_in_unary_expr3449); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     v_tree = (Object)adaptor.create(v);
                     adaptor.addChild(root_0, v_tree);
                     }
-                    dbg.location(1374,98);
+                    dbg.location(1370,112);
                     if ( state.backtracking==0 ) {
 
                             	      	HashMap tmp = new HashMap();
@@ -10626,7 +10600,7 @@ public class RuleSet2Parser extends DebugParser {
                       	      	tmp.put("regexp_1",strip_string((rx_1!=null?rx_1.getText():null)));
                       	      	tmp.put("regexp_2",strip_string((rx_2!=null?rx_2.getText():null)));	      	
                       	      	tmp.put("var",(v!=null?v.getText():null));
-                      	      	tmp.put("op",(op!=null?op.getText():null));
+                      	      	tmp.put("op",(op!=null?input.toString(op.start,op.stop):null));
                       	      	retval.result = tmp;		
                       	
                     }
@@ -10636,51 +10610,51 @@ public class RuleSet2Parser extends DebugParser {
                 case 4 :
                     dbg.enterAlt(4);
 
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1384:4: vd= var_domain ':' v= VAR pop= predop e= expr t= timeframe
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1380:4: vd= var_domain ':' v= VAR pop= predop e= expr t= timeframe
                     {
                     root_0 = (Object)adaptor.nil();
 
-                    dbg.location(1384,6);
-                    pushFollow(FOLLOW_var_domain_in_unary_expr3472);
+                    dbg.location(1380,6);
+                    pushFollow(FOLLOW_var_domain_in_unary_expr3458);
                     vd=var_domain();
 
                     state._fsp--;
                     if (state.failed) return retval;
                     if ( state.backtracking==0 ) adaptor.addChild(root_0, vd.getTree());
-                    dbg.location(1384,18);
-                    char_literal139=(Token)match(input,40,FOLLOW_40_in_unary_expr3474); if (state.failed) return retval;
+                    dbg.location(1380,18);
+                    char_literal140=(Token)match(input,39,FOLLOW_39_in_unary_expr3460); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    char_literal139_tree = (Object)adaptor.create(char_literal139);
-                    adaptor.addChild(root_0, char_literal139_tree);
+                    char_literal140_tree = (Object)adaptor.create(char_literal140);
+                    adaptor.addChild(root_0, char_literal140_tree);
                     }
-                    dbg.location(1384,23);
-                    v=(Token)match(input,VAR,FOLLOW_VAR_in_unary_expr3478); if (state.failed) return retval;
+                    dbg.location(1380,23);
+                    v=(Token)match(input,VAR,FOLLOW_VAR_in_unary_expr3464); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     v_tree = (Object)adaptor.create(v);
                     adaptor.addChild(root_0, v_tree);
                     }
-                    dbg.location(1384,31);
-                    pushFollow(FOLLOW_predop_in_unary_expr3482);
+                    dbg.location(1380,31);
+                    pushFollow(FOLLOW_predop_in_unary_expr3468);
                     pop=predop();
 
                     state._fsp--;
                     if (state.failed) return retval;
                     if ( state.backtracking==0 ) adaptor.addChild(root_0, pop.getTree());
-                    dbg.location(1384,40);
-                    pushFollow(FOLLOW_expr_in_unary_expr3486);
+                    dbg.location(1380,40);
+                    pushFollow(FOLLOW_expr_in_unary_expr3472);
                     e=expr();
 
                     state._fsp--;
                     if (state.failed) return retval;
                     if ( state.backtracking==0 ) adaptor.addChild(root_0, e.getTree());
-                    dbg.location(1384,47);
-                    pushFollow(FOLLOW_timeframe_in_unary_expr3490);
+                    dbg.location(1380,47);
+                    pushFollow(FOLLOW_timeframe_in_unary_expr3476);
                     t=timeframe();
 
                     state._fsp--;
                     if (state.failed) return retval;
                     if ( state.backtracking==0 ) adaptor.addChild(root_0, t.getTree());
-                    dbg.location(1384,59);
+                    dbg.location(1380,59);
                     if ( state.backtracking==0 ) {
 
                             	      	HashMap tmp = new HashMap();
@@ -10701,37 +10675,37 @@ public class RuleSet2Parser extends DebugParser {
                 case 5 :
                     dbg.enterAlt(5);
 
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1396:4: vd= var_domain ':' v= VAR t= timeframe
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1392:4: vd= var_domain ':' v= VAR t= timeframe
                     {
                     root_0 = (Object)adaptor.nil();
 
-                    dbg.location(1396,6);
-                    pushFollow(FOLLOW_var_domain_in_unary_expr3500);
+                    dbg.location(1392,6);
+                    pushFollow(FOLLOW_var_domain_in_unary_expr3486);
                     vd=var_domain();
 
                     state._fsp--;
                     if (state.failed) return retval;
                     if ( state.backtracking==0 ) adaptor.addChild(root_0, vd.getTree());
-                    dbg.location(1396,18);
-                    char_literal140=(Token)match(input,40,FOLLOW_40_in_unary_expr3502); if (state.failed) return retval;
+                    dbg.location(1392,18);
+                    char_literal141=(Token)match(input,39,FOLLOW_39_in_unary_expr3488); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    char_literal140_tree = (Object)adaptor.create(char_literal140);
-                    adaptor.addChild(root_0, char_literal140_tree);
+                    char_literal141_tree = (Object)adaptor.create(char_literal141);
+                    adaptor.addChild(root_0, char_literal141_tree);
                     }
-                    dbg.location(1396,23);
-                    v=(Token)match(input,VAR,FOLLOW_VAR_in_unary_expr3506); if (state.failed) return retval;
+                    dbg.location(1392,23);
+                    v=(Token)match(input,VAR,FOLLOW_VAR_in_unary_expr3492); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     v_tree = (Object)adaptor.create(v);
                     adaptor.addChild(root_0, v_tree);
                     }
-                    dbg.location(1396,29);
-                    pushFollow(FOLLOW_timeframe_in_unary_expr3510);
+                    dbg.location(1392,29);
+                    pushFollow(FOLLOW_timeframe_in_unary_expr3496);
                     t=timeframe();
 
                     state._fsp--;
                     if (state.failed) return retval;
                     if ( state.backtracking==0 ) adaptor.addChild(root_0, t.getTree());
-                    dbg.location(1396,40);
+                    dbg.location(1392,40);
                     if ( state.backtracking==0 ) {
 
                             	      	HashMap tmp = new HashMap();
@@ -10751,18 +10725,18 @@ public class RuleSet2Parser extends DebugParser {
                 case 6 :
                     dbg.enterAlt(6);
 
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1407:4: oe= operator_expr
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1403:4: oe= operator_expr
                     {
                     root_0 = (Object)adaptor.nil();
 
-                    dbg.location(1407,6);
-                    pushFollow(FOLLOW_operator_expr_in_unary_expr3519);
+                    dbg.location(1403,6);
+                    pushFollow(FOLLOW_operator_expr_in_unary_expr3505);
                     oe=operator_expr();
 
                     state._fsp--;
                     if (state.failed) return retval;
                     if ( state.backtracking==0 ) adaptor.addChild(root_0, oe.getTree());
-                    dbg.location(1407,21);
+                    dbg.location(1403,21);
                     if ( state.backtracking==0 ) {
                        
                       		retval.result = (oe!=null?oe.result:null); 
@@ -10789,7 +10763,7 @@ public class RuleSet2Parser extends DebugParser {
         }
         finally {
         }
-        dbg.location(1410, 2);
+        dbg.location(1406, 2);
 
         }
         finally {
@@ -10809,7 +10783,7 @@ public class RuleSet2Parser extends DebugParser {
     };
 
     // $ANTLR start "operator_expr"
-    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1413:1: operator_expr returns [Object result] : f= factor (o= operator )* ;
+    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1409:1: operator_expr returns [Object result] : f= factor (o= operator )* ;
     public final RuleSet2Parser.operator_expr_return operator_expr() throws RecognitionException {
         RuleSet2Parser.operator_expr_return retval = new RuleSet2Parser.operator_expr_return();
         retval.start = input.LT(1);
@@ -10828,55 +10802,55 @@ public class RuleSet2Parser extends DebugParser {
         try { dbg.enterRule(getGrammarFileName(), "operator_expr");
         if ( getRuleLevel()==0 ) {dbg.commence();}
         incRuleLevel();
-        dbg.location(1413, 1);
+        dbg.location(1409, 1);
 
         try {
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1418:2: (f= factor (o= operator )* )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1414:2: (f= factor (o= operator )* )
             dbg.enterAlt(1);
 
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1418:4: f= factor (o= operator )*
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1414:4: f= factor (o= operator )*
             {
             root_0 = (Object)adaptor.nil();
 
-            dbg.location(1418,5);
-            pushFollow(FOLLOW_factor_in_operator_expr3548);
+            dbg.location(1414,5);
+            pushFollow(FOLLOW_factor_in_operator_expr3534);
             f=factor();
 
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, f.getTree());
-            dbg.location(1418,14);
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1418:14: (o= operator )*
-            try { dbg.enterSubRule(81);
+            dbg.location(1414,14);
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1414:14: (o= operator )*
+            try { dbg.enterSubRule(86);
 
-            loop81:
+            loop86:
             do {
-                int alt81=2;
-                try { dbg.enterDecision(81);
+                int alt86=2;
+                try { dbg.enterDecision(86);
 
-                int LA81_0 = input.LA(1);
+                int LA86_0 = input.LA(1);
 
-                if ( ((LA81_0>=84 && LA81_0<=105)) ) {
-                    alt81=1;
+                if ( ((LA86_0>=79 && LA86_0<=100)) ) {
+                    alt86=1;
                 }
 
 
-                } finally {dbg.exitDecision(81);}
+                } finally {dbg.exitDecision(86);}
 
-                switch (alt81) {
+                switch (alt86) {
             	case 1 :
             	    dbg.enterAlt(1);
 
-            	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1418:15: o= operator
+            	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1414:15: o= operator
             	    {
-            	    dbg.location(1418,16);
-            	    pushFollow(FOLLOW_operator_in_operator_expr3554);
+            	    dbg.location(1414,16);
+            	    pushFollow(FOLLOW_operator_in_operator_expr3540);
             	    o=operator();
 
             	    state._fsp--;
             	    if (state.failed) return retval;
             	    if ( state.backtracking==0 ) adaptor.addChild(root_0, o.getTree());
-            	    dbg.location(1418,26);
+            	    dbg.location(1414,26);
             	    if ( state.backtracking==0 ) {
             	       operators.add(o); 
             	    }
@@ -10885,12 +10859,12 @@ public class RuleSet2Parser extends DebugParser {
             	    break;
 
             	default :
-            	    break loop81;
+            	    break loop86;
                 }
             } while (true);
-            } finally {dbg.exitSubRule(81);}
+            } finally {dbg.exitSubRule(86);}
 
-            dbg.location(1418,50);
+            dbg.location(1414,50);
             if ( state.backtracking==0 ) {
 
               		if(operators.size() > 0)
@@ -10948,7 +10922,7 @@ public class RuleSet2Parser extends DebugParser {
         }
         finally {
         }
-        dbg.location(1454, 2);
+        dbg.location(1450, 2);
 
         }
         finally {
@@ -10969,7 +10943,7 @@ public class RuleSet2Parser extends DebugParser {
     };
 
     // $ANTLR start "operator"
-    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1456:10: fragment operator returns [String oper,ArrayList exprs] : o= ( '.pick' | '.match' | '.length' | '.replace' | '.as' | '.head' | '.tail' | '.sort' | '.filter' | '.map' | '.uc' | '.lc' | '.split' | '.join' | '.query' | '.has' | '.union' | '.difference' | '.intersection' | '.unique' | '.once' | '.duplicates' ) '(' (e= expr ( ',' e1= expr )* )? ')' ;
+    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1452:10: fragment operator returns [String oper,ArrayList exprs] : o= ( '.pick' | '.match' | '.length' | '.replace' | '.as' | '.head' | '.tail' | '.sort' | '.filter' | '.map' | '.uc' | '.lc' | '.split' | '.join' | '.query' | '.has' | '.union' | '.difference' | '.intersection' | '.unique' | '.once' | '.duplicates' ) '(' (e= expr ( ',' e1= expr )* )? ')' ;
     public final RuleSet2Parser.operator_return operator() throws RecognitionException {
         RuleSet2Parser.operator_return retval = new RuleSet2Parser.operator_return();
         retval.start = input.LT(1);
@@ -10977,18 +10951,18 @@ public class RuleSet2Parser extends DebugParser {
         Object root_0 = null;
 
         Token o=null;
-        Token char_literal141=null;
         Token char_literal142=null;
         Token char_literal143=null;
+        Token char_literal144=null;
         RuleSet2Parser.expr_return e = null;
 
         RuleSet2Parser.expr_return e1 = null;
 
 
         Object o_tree=null;
-        Object char_literal141_tree=null;
         Object char_literal142_tree=null;
         Object char_literal143_tree=null;
+        Object char_literal144_tree=null;
 
         	
         	ArrayList rexprs = new ArrayList();
@@ -10996,19 +10970,19 @@ public class RuleSet2Parser extends DebugParser {
         try { dbg.enterRule(getGrammarFileName(), "operator");
         if ( getRuleLevel()==0 ) {dbg.commence();}
         incRuleLevel();
-        dbg.location(1456, 10);
+        dbg.location(1452, 10);
 
         try {
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1461:2: (o= ( '.pick' | '.match' | '.length' | '.replace' | '.as' | '.head' | '.tail' | '.sort' | '.filter' | '.map' | '.uc' | '.lc' | '.split' | '.join' | '.query' | '.has' | '.union' | '.difference' | '.intersection' | '.unique' | '.once' | '.duplicates' ) '(' (e= expr ( ',' e1= expr )* )? ')' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1457:2: (o= ( '.pick' | '.match' | '.length' | '.replace' | '.as' | '.head' | '.tail' | '.sort' | '.filter' | '.map' | '.uc' | '.lc' | '.split' | '.join' | '.query' | '.has' | '.union' | '.difference' | '.intersection' | '.unique' | '.once' | '.duplicates' ) '(' (e= expr ( ',' e1= expr )* )? ')' )
             dbg.enterAlt(1);
 
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1461:4: o= ( '.pick' | '.match' | '.length' | '.replace' | '.as' | '.head' | '.tail' | '.sort' | '.filter' | '.map' | '.uc' | '.lc' | '.split' | '.join' | '.query' | '.has' | '.union' | '.difference' | '.intersection' | '.unique' | '.once' | '.duplicates' ) '(' (e= expr ( ',' e1= expr )* )? ')'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1457:4: o= ( '.pick' | '.match' | '.length' | '.replace' | '.as' | '.head' | '.tail' | '.sort' | '.filter' | '.map' | '.uc' | '.lc' | '.split' | '.join' | '.query' | '.has' | '.union' | '.difference' | '.intersection' | '.unique' | '.once' | '.duplicates' ) '(' (e= expr ( ',' e1= expr )* )? ')'
             {
             root_0 = (Object)adaptor.nil();
 
-            dbg.location(1461,5);
+            dbg.location(1457,5);
             o=(Token)input.LT(1);
-            if ( (input.LA(1)>=84 && input.LA(1)<=105) ) {
+            if ( (input.LA(1)>=79 && input.LA(1)<=100) ) {
                 input.consume();
                 if ( state.backtracking==0 ) adaptor.addChild(root_0, (Object)adaptor.create(o));
                 state.errorRecovery=false;state.failed=false;
@@ -11020,80 +10994,80 @@ public class RuleSet2Parser extends DebugParser {
                 throw mse;
             }
 
-            dbg.location(1464,25);
-            char_literal141=(Token)match(input,50,FOLLOW_50_in_operator3671); if (state.failed) return retval;
+            dbg.location(1460,25);
+            char_literal142=(Token)match(input,47,FOLLOW_47_in_operator3657); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            char_literal141_tree = (Object)adaptor.create(char_literal141);
-            adaptor.addChild(root_0, char_literal141_tree);
+            char_literal142_tree = (Object)adaptor.create(char_literal142);
+            adaptor.addChild(root_0, char_literal142_tree);
             }
-            dbg.location(1464,29);
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1464:29: (e= expr ( ',' e1= expr )* )?
-            int alt83=2;
-            try { dbg.enterSubRule(83);
-            try { dbg.enterDecision(83);
+            dbg.location(1460,29);
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1460:29: (e= expr ( ',' e1= expr )* )?
+            int alt88=2;
+            try { dbg.enterSubRule(88);
+            try { dbg.enterDecision(88);
 
-            int LA83_0 = input.LA(1);
+            int LA88_0 = input.LA(1);
 
-            if ( ((LA83_0>=VAR && LA83_0<=INT)||LA83_0==FLOAT||(LA83_0>=STRING && LA83_0<=REGEXP)||LA83_0==29||LA83_0==50||LA83_0==61||LA83_0==75||LA83_0==82||(LA83_0>=106 && LA83_0<=108)||(LA83_0>=110 && LA83_0<=113)) ) {
-                alt83=1;
+            if ( ((LA88_0>=VAR && LA88_0<=INT)||LA88_0==FLOAT||(LA88_0>=STRING && LA88_0<=REGEXP)||LA88_0==29||LA88_0==47||LA88_0==57||LA88_0==71||LA88_0==78||(LA88_0>=101 && LA88_0<=103)||(LA88_0>=105 && LA88_0<=108)) ) {
+                alt88=1;
             }
-            } finally {dbg.exitDecision(83);}
+            } finally {dbg.exitDecision(88);}
 
-            switch (alt83) {
+            switch (alt88) {
                 case 1 :
                     dbg.enterAlt(1);
 
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1464:30: e= expr ( ',' e1= expr )*
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1460:30: e= expr ( ',' e1= expr )*
                     {
-                    dbg.location(1464,31);
-                    pushFollow(FOLLOW_expr_in_operator3676);
+                    dbg.location(1460,31);
+                    pushFollow(FOLLOW_expr_in_operator3662);
                     e=expr();
 
                     state._fsp--;
                     if (state.failed) return retval;
                     if ( state.backtracking==0 ) adaptor.addChild(root_0, e.getTree());
-                    dbg.location(1464,37);
+                    dbg.location(1460,37);
                     if ( state.backtracking==0 ) {
                       rexprs.add(e.result); 
                     }
-                    dbg.location(1464,62);
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1464:62: ( ',' e1= expr )*
-                    try { dbg.enterSubRule(82);
+                    dbg.location(1460,62);
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1460:62: ( ',' e1= expr )*
+                    try { dbg.enterSubRule(87);
 
-                    loop82:
+                    loop87:
                     do {
-                        int alt82=2;
-                        try { dbg.enterDecision(82);
+                        int alt87=2;
+                        try { dbg.enterDecision(87);
 
-                        int LA82_0 = input.LA(1);
+                        int LA87_0 = input.LA(1);
 
-                        if ( (LA82_0==51) ) {
-                            alt82=1;
+                        if ( (LA87_0==48) ) {
+                            alt87=1;
                         }
 
 
-                        } finally {dbg.exitDecision(82);}
+                        } finally {dbg.exitDecision(87);}
 
-                        switch (alt82) {
+                        switch (alt87) {
                     	case 1 :
                     	    dbg.enterAlt(1);
 
-                    	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1464:63: ',' e1= expr
+                    	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1460:63: ',' e1= expr
                     	    {
-                    	    dbg.location(1464,63);
-                    	    char_literal142=(Token)match(input,51,FOLLOW_51_in_operator3681); if (state.failed) return retval;
+                    	    dbg.location(1460,63);
+                    	    char_literal143=(Token)match(input,48,FOLLOW_48_in_operator3667); if (state.failed) return retval;
                     	    if ( state.backtracking==0 ) {
-                    	    char_literal142_tree = (Object)adaptor.create(char_literal142);
-                    	    adaptor.addChild(root_0, char_literal142_tree);
+                    	    char_literal143_tree = (Object)adaptor.create(char_literal143);
+                    	    adaptor.addChild(root_0, char_literal143_tree);
                     	    }
-                    	    dbg.location(1464,69);
-                    	    pushFollow(FOLLOW_expr_in_operator3685);
+                    	    dbg.location(1460,69);
+                    	    pushFollow(FOLLOW_expr_in_operator3671);
                     	    e1=expr();
 
                     	    state._fsp--;
                     	    if (state.failed) return retval;
                     	    if ( state.backtracking==0 ) adaptor.addChild(root_0, e1.getTree());
-                    	    dbg.location(1464,75);
+                    	    dbg.location(1460,75);
                     	    if ( state.backtracking==0 ) {
                     	      rexprs.add(e1.result); 
                     	    }
@@ -11102,25 +11076,25 @@ public class RuleSet2Parser extends DebugParser {
                     	    break;
 
                     	default :
-                    	    break loop82;
+                    	    break loop87;
                         }
                     } while (true);
-                    } finally {dbg.exitSubRule(82);}
+                    } finally {dbg.exitSubRule(87);}
 
 
                     }
                     break;
 
             }
-            } finally {dbg.exitSubRule(83);}
+            } finally {dbg.exitSubRule(88);}
 
-            dbg.location(1464,106);
-            char_literal143=(Token)match(input,52,FOLLOW_52_in_operator3694); if (state.failed) return retval;
+            dbg.location(1460,106);
+            char_literal144=(Token)match(input,49,FOLLOW_49_in_operator3680); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            char_literal143_tree = (Object)adaptor.create(char_literal143);
-            adaptor.addChild(root_0, char_literal143_tree);
+            char_literal144_tree = (Object)adaptor.create(char_literal144);
+            adaptor.addChild(root_0, char_literal144_tree);
             }
-            dbg.location(1464,110);
+            dbg.location(1460,110);
             if ( state.backtracking==0 ) {
 
                     		// Remove .
@@ -11147,7 +11121,7 @@ public class RuleSet2Parser extends DebugParser {
         }
         finally {
         }
-        dbg.location(1469, 2);
+        dbg.location(1465, 2);
 
         }
         finally {
@@ -11167,7 +11141,7 @@ public class RuleSet2Parser extends DebugParser {
     };
 
     // $ANTLR start "factor"
-    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1473:1: factor returns [Object result] options {backtrack=true; } : (v= INT | v= STRING | v= FLOAT | v= ( 'true' | 'false' ) | vr= REGEXP | v= VAR '[' e= expr ']' | d= var_domain ':' v= VAR | 'current' d= var_domain ':' v= VAR | 'history' e= expr d= var_domain ':' v= VAR | n= namespace p= VAR '(' (e= expr ( ',' )? )* ')' | v= VAR '(' (e= expr ( ',' )? )* ')' | '[' e= expr ( ',' e2= expr )* ']' | '{' h1= hash_line ( ',' h2= hash_line )* '}' | v= VAR | '(' e= expr ')' );
+    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1469:1: factor returns [Object result] options {backtrack=true; } : (v= INT | v= STRING | v= FLOAT | v= ( 'true' | 'false' ) | vr= REGEXP | v= VAR '[' e= expr ']' | d= var_domain ':' v= VAR | 'current' d= var_domain ':' v= VAR | 'history' e= expr d= var_domain ':' v= VAR | n= namespace p= VAR '(' (e= expr ( ',' )? )* ')' | v= VAR '(' (e= expr ( ',' )? )* ')' | '[' e= expr ( ',' e2= expr )* ']' | '{' h1= hash_line ( ',' h2= hash_line )* '}' | v= VAR | '(' e= expr ')' );
     public final RuleSet2Parser.factor_return factor() throws RecognitionException {
         RuleSet2Parser.factor_return retval = new RuleSet2Parser.factor_return();
         retval.start = input.LT(1);
@@ -11177,13 +11151,12 @@ public class RuleSet2Parser extends DebugParser {
         Token v=null;
         Token vr=null;
         Token p=null;
-        Token char_literal144=null;
         Token char_literal145=null;
         Token char_literal146=null;
-        Token string_literal147=null;
-        Token char_literal148=null;
-        Token string_literal149=null;
-        Token char_literal150=null;
+        Token char_literal147=null;
+        Token string_literal148=null;
+        Token char_literal149=null;
+        Token string_literal150=null;
         Token char_literal151=null;
         Token char_literal152=null;
         Token char_literal153=null;
@@ -11198,6 +11171,7 @@ public class RuleSet2Parser extends DebugParser {
         Token char_literal162=null;
         Token char_literal163=null;
         Token char_literal164=null;
+        Token char_literal165=null;
         RuleSet2Parser.expr_return e = null;
 
         RuleSet2Parser.var_domain_return d = null;
@@ -11214,13 +11188,12 @@ public class RuleSet2Parser extends DebugParser {
         Object v_tree=null;
         Object vr_tree=null;
         Object p_tree=null;
-        Object char_literal144_tree=null;
         Object char_literal145_tree=null;
         Object char_literal146_tree=null;
-        Object string_literal147_tree=null;
-        Object char_literal148_tree=null;
-        Object string_literal149_tree=null;
-        Object char_literal150_tree=null;
+        Object char_literal147_tree=null;
+        Object string_literal148_tree=null;
+        Object char_literal149_tree=null;
+        Object string_literal150_tree=null;
         Object char_literal151_tree=null;
         Object char_literal152_tree=null;
         Object char_literal153_tree=null;
@@ -11235,6 +11208,7 @@ public class RuleSet2Parser extends DebugParser {
         Object char_literal162_tree=null;
         Object char_literal163_tree=null;
         Object char_literal164_tree=null;
+        Object char_literal165_tree=null;
 
 
               ArrayList exprs2 = new ArrayList();
@@ -11243,38 +11217,38 @@ public class RuleSet2Parser extends DebugParser {
         try { dbg.enterRule(getGrammarFileName(), "factor");
         if ( getRuleLevel()==0 ) {dbg.commence();}
         incRuleLevel();
-        dbg.location(1473, 1);
+        dbg.location(1469, 1);
 
         try {
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1478:2: (v= INT | v= STRING | v= FLOAT | v= ( 'true' | 'false' ) | vr= REGEXP | v= VAR '[' e= expr ']' | d= var_domain ':' v= VAR | 'current' d= var_domain ':' v= VAR | 'history' e= expr d= var_domain ':' v= VAR | n= namespace p= VAR '(' (e= expr ( ',' )? )* ')' | v= VAR '(' (e= expr ( ',' )? )* ')' | '[' e= expr ( ',' e2= expr )* ']' | '{' h1= hash_line ( ',' h2= hash_line )* '}' | v= VAR | '(' e= expr ')' )
-            int alt90=15;
-            try { dbg.enterDecision(90);
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1474:2: (v= INT | v= STRING | v= FLOAT | v= ( 'true' | 'false' ) | vr= REGEXP | v= VAR '[' e= expr ']' | d= var_domain ':' v= VAR | 'current' d= var_domain ':' v= VAR | 'history' e= expr d= var_domain ':' v= VAR | n= namespace p= VAR '(' (e= expr ( ',' )? )* ')' | v= VAR '(' (e= expr ( ',' )? )* ')' | '[' e= expr ( ',' e2= expr )* ']' | '{' h1= hash_line ( ',' h2= hash_line )* '}' | v= VAR | '(' e= expr ')' )
+            int alt95=15;
+            try { dbg.enterDecision(95);
 
             try {
                 isCyclicDecision = true;
-                alt90 = dfa90.predict(input);
+                alt95 = dfa95.predict(input);
             }
             catch (NoViableAltException nvae) {
                 dbg.recognitionException(nvae);
                 throw nvae;
             }
-            } finally {dbg.exitDecision(90);}
+            } finally {dbg.exitDecision(95);}
 
-            switch (alt90) {
+            switch (alt95) {
                 case 1 :
                     dbg.enterAlt(1);
 
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1478:4: v= INT
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1474:4: v= INT
                     {
                     root_0 = (Object)adaptor.nil();
 
-                    dbg.location(1478,5);
-                    v=(Token)match(input,INT,FOLLOW_INT_in_factor3732); if (state.failed) return retval;
+                    dbg.location(1474,5);
+                    v=(Token)match(input,INT,FOLLOW_INT_in_factor3719); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     v_tree = (Object)adaptor.create(v);
                     adaptor.addChild(root_0, v_tree);
                     }
-                    dbg.location(1478,10);
+                    dbg.location(1474,10);
                     if ( state.backtracking==0 ) {
                        
                       		HashMap tmp = new HashMap();
@@ -11289,17 +11263,17 @@ public class RuleSet2Parser extends DebugParser {
                 case 2 :
                     dbg.enterAlt(2);
 
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1484:9: v= STRING
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1480:9: v= STRING
                     {
                     root_0 = (Object)adaptor.nil();
 
-                    dbg.location(1484,10);
-                    v=(Token)match(input,STRING,FOLLOW_STRING_in_factor3747); if (state.failed) return retval;
+                    dbg.location(1480,10);
+                    v=(Token)match(input,STRING,FOLLOW_STRING_in_factor3734); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     v_tree = (Object)adaptor.create(v);
                     adaptor.addChild(root_0, v_tree);
                     }
-                    dbg.location(1484,20);
+                    dbg.location(1480,20);
                     if ( state.backtracking==0 ) {
                        
                             		HashMap tmp = new HashMap();
@@ -11314,17 +11288,17 @@ public class RuleSet2Parser extends DebugParser {
                 case 3 :
                     dbg.enterAlt(3);
 
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1490:9: v= FLOAT
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1486:9: v= FLOAT
                     {
                     root_0 = (Object)adaptor.nil();
 
-                    dbg.location(1490,10);
-                    v=(Token)match(input,FLOAT,FOLLOW_FLOAT_in_factor3767); if (state.failed) return retval;
+                    dbg.location(1486,10);
+                    v=(Token)match(input,FLOAT,FOLLOW_FLOAT_in_factor3754); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     v_tree = (Object)adaptor.create(v);
                     adaptor.addChild(root_0, v_tree);
                     }
-                    dbg.location(1490,19);
+                    dbg.location(1486,19);
                     if ( state.backtracking==0 ) {
                        
                             		HashMap tmp = new HashMap();
@@ -11339,13 +11313,13 @@ public class RuleSet2Parser extends DebugParser {
                 case 4 :
                     dbg.enterAlt(4);
 
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1496:9: v= ( 'true' | 'false' )
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1492:9: v= ( 'true' | 'false' )
                     {
                     root_0 = (Object)adaptor.nil();
 
-                    dbg.location(1496,10);
+                    dbg.location(1492,10);
                     v=(Token)input.LT(1);
-                    if ( (input.LA(1)>=106 && input.LA(1)<=107) ) {
+                    if ( (input.LA(1)>=101 && input.LA(1)<=102) ) {
                         input.consume();
                         if ( state.backtracking==0 ) adaptor.addChild(root_0, (Object)adaptor.create(v));
                         state.errorRecovery=false;state.failed=false;
@@ -11357,7 +11331,7 @@ public class RuleSet2Parser extends DebugParser {
                         throw mse;
                     }
 
-                    dbg.location(1496,31);
+                    dbg.location(1492,31);
                     if ( state.backtracking==0 ) {
                        
                             		HashMap tmp = new HashMap();
@@ -11372,17 +11346,17 @@ public class RuleSet2Parser extends DebugParser {
                 case 5 :
                     dbg.enterAlt(5);
 
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1502:9: vr= REGEXP
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1498:9: vr= REGEXP
                     {
                     root_0 = (Object)adaptor.nil();
 
-                    dbg.location(1502,11);
-                    vr=(Token)match(input,REGEXP,FOLLOW_REGEXP_in_factor3807); if (state.failed) return retval;
+                    dbg.location(1498,11);
+                    vr=(Token)match(input,REGEXP,FOLLOW_REGEXP_in_factor3794); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     vr_tree = (Object)adaptor.create(vr);
                     adaptor.addChild(root_0, vr_tree);
                     }
-                    dbg.location(1502,19);
+                    dbg.location(1498,19);
                     if ( state.backtracking==0 ) {
 
                             		HashMap tmp = new HashMap();
@@ -11397,36 +11371,36 @@ public class RuleSet2Parser extends DebugParser {
                 case 6 :
                     dbg.enterAlt(6);
 
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1508:9: v= VAR '[' e= expr ']'
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1504:9: v= VAR '[' e= expr ']'
                     {
                     root_0 = (Object)adaptor.nil();
 
-                    dbg.location(1508,10);
-                    v=(Token)match(input,VAR,FOLLOW_VAR_in_factor3821); if (state.failed) return retval;
+                    dbg.location(1504,10);
+                    v=(Token)match(input,VAR,FOLLOW_VAR_in_factor3808); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     v_tree = (Object)adaptor.create(v);
                     adaptor.addChild(root_0, v_tree);
                     }
-                    dbg.location(1508,15);
-                    char_literal144=(Token)match(input,108,FOLLOW_108_in_factor3823); if (state.failed) return retval;
+                    dbg.location(1504,15);
+                    char_literal145=(Token)match(input,103,FOLLOW_103_in_factor3810); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    char_literal144_tree = (Object)adaptor.create(char_literal144);
-                    adaptor.addChild(root_0, char_literal144_tree);
+                    char_literal145_tree = (Object)adaptor.create(char_literal145);
+                    adaptor.addChild(root_0, char_literal145_tree);
                     }
-                    dbg.location(1508,20);
-                    pushFollow(FOLLOW_expr_in_factor3827);
+                    dbg.location(1504,20);
+                    pushFollow(FOLLOW_expr_in_factor3814);
                     e=expr();
 
                     state._fsp--;
                     if (state.failed) return retval;
                     if ( state.backtracking==0 ) adaptor.addChild(root_0, e.getTree());
-                    dbg.location(1508,26);
-                    char_literal145=(Token)match(input,109,FOLLOW_109_in_factor3829); if (state.failed) return retval;
+                    dbg.location(1504,26);
+                    char_literal146=(Token)match(input,104,FOLLOW_104_in_factor3816); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    char_literal145_tree = (Object)adaptor.create(char_literal145);
-                    adaptor.addChild(root_0, char_literal145_tree);
+                    char_literal146_tree = (Object)adaptor.create(char_literal146);
+                    adaptor.addChild(root_0, char_literal146_tree);
                     }
-                    dbg.location(1508,31);
+                    dbg.location(1504,31);
                     if ( state.backtracking==0 ) {
                        
                             		HashMap tmp = new HashMap();
@@ -11449,30 +11423,30 @@ public class RuleSet2Parser extends DebugParser {
                 case 7 :
                     dbg.enterAlt(7);
 
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1522:9: d= var_domain ':' v= VAR
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1518:9: d= var_domain ':' v= VAR
                     {
                     root_0 = (Object)adaptor.nil();
 
-                    dbg.location(1522,10);
-                    pushFollow(FOLLOW_var_domain_in_factor3844);
+                    dbg.location(1518,10);
+                    pushFollow(FOLLOW_var_domain_in_factor3831);
                     d=var_domain();
 
                     state._fsp--;
                     if (state.failed) return retval;
                     if ( state.backtracking==0 ) adaptor.addChild(root_0, d.getTree());
-                    dbg.location(1522,22);
-                    char_literal146=(Token)match(input,40,FOLLOW_40_in_factor3846); if (state.failed) return retval;
+                    dbg.location(1518,22);
+                    char_literal147=(Token)match(input,39,FOLLOW_39_in_factor3833); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    char_literal146_tree = (Object)adaptor.create(char_literal146);
-                    adaptor.addChild(root_0, char_literal146_tree);
+                    char_literal147_tree = (Object)adaptor.create(char_literal147);
+                    adaptor.addChild(root_0, char_literal147_tree);
                     }
-                    dbg.location(1522,27);
-                    v=(Token)match(input,VAR,FOLLOW_VAR_in_factor3850); if (state.failed) return retval;
+                    dbg.location(1518,27);
+                    v=(Token)match(input,VAR,FOLLOW_VAR_in_factor3837); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     v_tree = (Object)adaptor.create(v);
                     adaptor.addChild(root_0, v_tree);
                     }
-                    dbg.location(1522,32);
+                    dbg.location(1518,32);
                     if ( state.backtracking==0 ) {
 
                       	      	HashMap tmp = new HashMap();
@@ -11488,36 +11462,36 @@ public class RuleSet2Parser extends DebugParser {
                 case 8 :
                     dbg.enterAlt(8);
 
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1529:9: 'current' d= var_domain ':' v= VAR
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1525:9: 'current' d= var_domain ':' v= VAR
                     {
                     root_0 = (Object)adaptor.nil();
 
-                    dbg.location(1529,9);
-                    string_literal147=(Token)match(input,110,FOLLOW_110_in_factor3862); if (state.failed) return retval;
+                    dbg.location(1525,9);
+                    string_literal148=(Token)match(input,105,FOLLOW_105_in_factor3849); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    string_literal147_tree = (Object)adaptor.create(string_literal147);
-                    adaptor.addChild(root_0, string_literal147_tree);
+                    string_literal148_tree = (Object)adaptor.create(string_literal148);
+                    adaptor.addChild(root_0, string_literal148_tree);
                     }
-                    dbg.location(1529,20);
-                    pushFollow(FOLLOW_var_domain_in_factor3866);
+                    dbg.location(1525,20);
+                    pushFollow(FOLLOW_var_domain_in_factor3853);
                     d=var_domain();
 
                     state._fsp--;
                     if (state.failed) return retval;
                     if ( state.backtracking==0 ) adaptor.addChild(root_0, d.getTree());
-                    dbg.location(1529,32);
-                    char_literal148=(Token)match(input,40,FOLLOW_40_in_factor3868); if (state.failed) return retval;
+                    dbg.location(1525,32);
+                    char_literal149=(Token)match(input,39,FOLLOW_39_in_factor3855); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    char_literal148_tree = (Object)adaptor.create(char_literal148);
-                    adaptor.addChild(root_0, char_literal148_tree);
+                    char_literal149_tree = (Object)adaptor.create(char_literal149);
+                    adaptor.addChild(root_0, char_literal149_tree);
                     }
-                    dbg.location(1529,37);
-                    v=(Token)match(input,VAR,FOLLOW_VAR_in_factor3872); if (state.failed) return retval;
+                    dbg.location(1525,37);
+                    v=(Token)match(input,VAR,FOLLOW_VAR_in_factor3859); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     v_tree = (Object)adaptor.create(v);
                     adaptor.addChild(root_0, v_tree);
                     }
-                    dbg.location(1529,42);
+                    dbg.location(1525,42);
                     if ( state.backtracking==0 ) {
 
                             	      	HashMap tmp = new HashMap();
@@ -11533,43 +11507,43 @@ public class RuleSet2Parser extends DebugParser {
                 case 9 :
                     dbg.enterAlt(9);
 
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1536:9: 'history' e= expr d= var_domain ':' v= VAR
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1532:9: 'history' e= expr d= var_domain ':' v= VAR
                     {
                     root_0 = (Object)adaptor.nil();
 
-                    dbg.location(1536,9);
-                    string_literal149=(Token)match(input,111,FOLLOW_111_in_factor3885); if (state.failed) return retval;
+                    dbg.location(1532,9);
+                    string_literal150=(Token)match(input,106,FOLLOW_106_in_factor3872); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    string_literal149_tree = (Object)adaptor.create(string_literal149);
-                    adaptor.addChild(root_0, string_literal149_tree);
+                    string_literal150_tree = (Object)adaptor.create(string_literal150);
+                    adaptor.addChild(root_0, string_literal150_tree);
                     }
-                    dbg.location(1536,20);
-                    pushFollow(FOLLOW_expr_in_factor3889);
+                    dbg.location(1532,20);
+                    pushFollow(FOLLOW_expr_in_factor3876);
                     e=expr();
 
                     state._fsp--;
                     if (state.failed) return retval;
                     if ( state.backtracking==0 ) adaptor.addChild(root_0, e.getTree());
-                    dbg.location(1536,27);
-                    pushFollow(FOLLOW_var_domain_in_factor3893);
+                    dbg.location(1532,27);
+                    pushFollow(FOLLOW_var_domain_in_factor3880);
                     d=var_domain();
 
                     state._fsp--;
                     if (state.failed) return retval;
                     if ( state.backtracking==0 ) adaptor.addChild(root_0, d.getTree());
-                    dbg.location(1536,39);
-                    char_literal150=(Token)match(input,40,FOLLOW_40_in_factor3895); if (state.failed) return retval;
+                    dbg.location(1532,39);
+                    char_literal151=(Token)match(input,39,FOLLOW_39_in_factor3882); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    char_literal150_tree = (Object)adaptor.create(char_literal150);
-                    adaptor.addChild(root_0, char_literal150_tree);
+                    char_literal151_tree = (Object)adaptor.create(char_literal151);
+                    adaptor.addChild(root_0, char_literal151_tree);
                     }
-                    dbg.location(1536,44);
-                    v=(Token)match(input,VAR,FOLLOW_VAR_in_factor3899); if (state.failed) return retval;
+                    dbg.location(1532,44);
+                    v=(Token)match(input,VAR,FOLLOW_VAR_in_factor3886); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     v_tree = (Object)adaptor.create(v);
                     adaptor.addChild(root_0, v_tree);
                     }
-                    dbg.location(1536,49);
+                    dbg.location(1532,49);
                     if ( state.backtracking==0 ) {
 
                             	      	HashMap tmp = new HashMap();
@@ -11588,115 +11562,115 @@ public class RuleSet2Parser extends DebugParser {
                 case 10 :
                     dbg.enterAlt(10);
 
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1546:9: n= namespace p= VAR '(' (e= expr ( ',' )? )* ')'
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1542:9: n= namespace p= VAR '(' (e= expr ( ',' )? )* ')'
                     {
                     root_0 = (Object)adaptor.nil();
 
-                    dbg.location(1546,10);
-                    pushFollow(FOLLOW_namespace_in_factor3913);
+                    dbg.location(1542,10);
+                    pushFollow(FOLLOW_namespace_in_factor3900);
                     n=namespace();
 
                     state._fsp--;
                     if (state.failed) return retval;
                     if ( state.backtracking==0 ) adaptor.addChild(root_0, n.getTree());
-                    dbg.location(1546,22);
-                    p=(Token)match(input,VAR,FOLLOW_VAR_in_factor3917); if (state.failed) return retval;
+                    dbg.location(1542,22);
+                    p=(Token)match(input,VAR,FOLLOW_VAR_in_factor3904); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     p_tree = (Object)adaptor.create(p);
                     adaptor.addChild(root_0, p_tree);
                     }
-                    dbg.location(1546,27);
-                    char_literal151=(Token)match(input,50,FOLLOW_50_in_factor3919); if (state.failed) return retval;
+                    dbg.location(1542,27);
+                    char_literal152=(Token)match(input,47,FOLLOW_47_in_factor3906); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    char_literal151_tree = (Object)adaptor.create(char_literal151);
-                    adaptor.addChild(root_0, char_literal151_tree);
+                    char_literal152_tree = (Object)adaptor.create(char_literal152);
+                    adaptor.addChild(root_0, char_literal152_tree);
                     }
-                    dbg.location(1546,31);
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1546:31: (e= expr ( ',' )? )*
-                    try { dbg.enterSubRule(85);
+                    dbg.location(1542,31);
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1542:31: (e= expr ( ',' )? )*
+                    try { dbg.enterSubRule(90);
 
-                    loop85:
+                    loop90:
                     do {
-                        int alt85=2;
-                        try { dbg.enterDecision(85);
+                        int alt90=2;
+                        try { dbg.enterDecision(90);
 
-                        int LA85_0 = input.LA(1);
+                        int LA90_0 = input.LA(1);
 
-                        if ( ((LA85_0>=VAR && LA85_0<=INT)||LA85_0==FLOAT||(LA85_0>=STRING && LA85_0<=REGEXP)||LA85_0==29||LA85_0==50||LA85_0==61||LA85_0==75||LA85_0==82||(LA85_0>=106 && LA85_0<=108)||(LA85_0>=110 && LA85_0<=113)) ) {
-                            alt85=1;
+                        if ( ((LA90_0>=VAR && LA90_0<=INT)||LA90_0==FLOAT||(LA90_0>=STRING && LA90_0<=REGEXP)||LA90_0==29||LA90_0==47||LA90_0==57||LA90_0==71||LA90_0==78||(LA90_0>=101 && LA90_0<=103)||(LA90_0>=105 && LA90_0<=108)) ) {
+                            alt90=1;
                         }
 
 
-                        } finally {dbg.exitDecision(85);}
+                        } finally {dbg.exitDecision(90);}
 
-                        switch (alt85) {
+                        switch (alt90) {
                     	case 1 :
                     	    dbg.enterAlt(1);
 
-                    	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1546:32: e= expr ( ',' )?
+                    	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1542:32: e= expr ( ',' )?
                     	    {
-                    	    dbg.location(1546,33);
-                    	    pushFollow(FOLLOW_expr_in_factor3924);
+                    	    dbg.location(1542,33);
+                    	    pushFollow(FOLLOW_expr_in_factor3911);
                     	    e=expr();
 
                     	    state._fsp--;
                     	    if (state.failed) return retval;
                     	    if ( state.backtracking==0 ) adaptor.addChild(root_0, e.getTree());
-                    	    dbg.location(1546,39);
+                    	    dbg.location(1542,39);
                     	    if ( state.backtracking==0 ) {
 
                     	                  exprs2.add((e!=null?e.result:null));
                     	            	
                     	    }
-                    	    dbg.location(1549,8);
-                    	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1549:8: ( ',' )?
-                    	    int alt84=2;
-                    	    try { dbg.enterSubRule(84);
-                    	    try { dbg.enterDecision(84);
+                    	    dbg.location(1545,8);
+                    	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1545:8: ( ',' )?
+                    	    int alt89=2;
+                    	    try { dbg.enterSubRule(89);
+                    	    try { dbg.enterDecision(89);
 
-                    	    int LA84_0 = input.LA(1);
+                    	    int LA89_0 = input.LA(1);
 
-                    	    if ( (LA84_0==51) ) {
-                    	        alt84=1;
+                    	    if ( (LA89_0==48) ) {
+                    	        alt89=1;
                     	    }
-                    	    } finally {dbg.exitDecision(84);}
+                    	    } finally {dbg.exitDecision(89);}
 
-                    	    switch (alt84) {
+                    	    switch (alt89) {
                     	        case 1 :
                     	            dbg.enterAlt(1);
 
                     	            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:0:0: ','
                     	            {
-                    	            dbg.location(1549,8);
-                    	            char_literal152=(Token)match(input,51,FOLLOW_51_in_factor3935); if (state.failed) return retval;
+                    	            dbg.location(1545,8);
+                    	            char_literal153=(Token)match(input,48,FOLLOW_48_in_factor3922); if (state.failed) return retval;
                     	            if ( state.backtracking==0 ) {
-                    	            char_literal152_tree = (Object)adaptor.create(char_literal152);
-                    	            adaptor.addChild(root_0, char_literal152_tree);
+                    	            char_literal153_tree = (Object)adaptor.create(char_literal153);
+                    	            adaptor.addChild(root_0, char_literal153_tree);
                     	            }
 
                     	            }
                     	            break;
 
                     	    }
-                    	    } finally {dbg.exitSubRule(84);}
+                    	    } finally {dbg.exitSubRule(89);}
 
 
                     	    }
                     	    break;
 
                     	default :
-                    	    break loop85;
+                    	    break loop90;
                         }
                     } while (true);
-                    } finally {dbg.exitSubRule(85);}
+                    } finally {dbg.exitSubRule(90);}
 
-                    dbg.location(1549,15);
-                    char_literal153=(Token)match(input,52,FOLLOW_52_in_factor3940); if (state.failed) return retval;
+                    dbg.location(1545,15);
+                    char_literal154=(Token)match(input,49,FOLLOW_49_in_factor3927); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    char_literal153_tree = (Object)adaptor.create(char_literal153);
-                    adaptor.addChild(root_0, char_literal153_tree);
+                    char_literal154_tree = (Object)adaptor.create(char_literal154);
+                    adaptor.addChild(root_0, char_literal154_tree);
                     }
-                    dbg.location(1549,20);
+                    dbg.location(1545,20);
                     if ( state.backtracking==0 ) {
 
                       	      	HashMap tmp = new HashMap();
@@ -11712,108 +11686,108 @@ public class RuleSet2Parser extends DebugParser {
                 case 11 :
                     dbg.enterAlt(11);
 
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1556:9: v= VAR '(' (e= expr ( ',' )? )* ')'
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1552:9: v= VAR '(' (e= expr ( ',' )? )* ')'
                     {
                     root_0 = (Object)adaptor.nil();
 
-                    dbg.location(1556,10);
-                    v=(Token)match(input,VAR,FOLLOW_VAR_in_factor3955); if (state.failed) return retval;
+                    dbg.location(1552,10);
+                    v=(Token)match(input,VAR,FOLLOW_VAR_in_factor3942); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     v_tree = (Object)adaptor.create(v);
                     adaptor.addChild(root_0, v_tree);
                     }
-                    dbg.location(1556,15);
-                    char_literal154=(Token)match(input,50,FOLLOW_50_in_factor3957); if (state.failed) return retval;
+                    dbg.location(1552,15);
+                    char_literal155=(Token)match(input,47,FOLLOW_47_in_factor3944); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    char_literal154_tree = (Object)adaptor.create(char_literal154);
-                    adaptor.addChild(root_0, char_literal154_tree);
+                    char_literal155_tree = (Object)adaptor.create(char_literal155);
+                    adaptor.addChild(root_0, char_literal155_tree);
                     }
-                    dbg.location(1556,19);
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1556:19: (e= expr ( ',' )? )*
-                    try { dbg.enterSubRule(87);
+                    dbg.location(1552,19);
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1552:19: (e= expr ( ',' )? )*
+                    try { dbg.enterSubRule(92);
 
-                    loop87:
+                    loop92:
                     do {
-                        int alt87=2;
-                        try { dbg.enterDecision(87);
+                        int alt92=2;
+                        try { dbg.enterDecision(92);
 
-                        int LA87_0 = input.LA(1);
+                        int LA92_0 = input.LA(1);
 
-                        if ( ((LA87_0>=VAR && LA87_0<=INT)||LA87_0==FLOAT||(LA87_0>=STRING && LA87_0<=REGEXP)||LA87_0==29||LA87_0==50||LA87_0==61||LA87_0==75||LA87_0==82||(LA87_0>=106 && LA87_0<=108)||(LA87_0>=110 && LA87_0<=113)) ) {
-                            alt87=1;
+                        if ( ((LA92_0>=VAR && LA92_0<=INT)||LA92_0==FLOAT||(LA92_0>=STRING && LA92_0<=REGEXP)||LA92_0==29||LA92_0==47||LA92_0==57||LA92_0==71||LA92_0==78||(LA92_0>=101 && LA92_0<=103)||(LA92_0>=105 && LA92_0<=108)) ) {
+                            alt92=1;
                         }
 
 
-                        } finally {dbg.exitDecision(87);}
+                        } finally {dbg.exitDecision(92);}
 
-                        switch (alt87) {
+                        switch (alt92) {
                     	case 1 :
                     	    dbg.enterAlt(1);
 
-                    	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1556:20: e= expr ( ',' )?
+                    	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1552:20: e= expr ( ',' )?
                     	    {
-                    	    dbg.location(1556,21);
-                    	    pushFollow(FOLLOW_expr_in_factor3962);
+                    	    dbg.location(1552,21);
+                    	    pushFollow(FOLLOW_expr_in_factor3949);
                     	    e=expr();
 
                     	    state._fsp--;
                     	    if (state.failed) return retval;
                     	    if ( state.backtracking==0 ) adaptor.addChild(root_0, e.getTree());
-                    	    dbg.location(1556,26);
+                    	    dbg.location(1552,26);
                     	    if ( state.backtracking==0 ) {
 
                     	                  exprs2.add((e!=null?e.result:null));
                     	            	
                     	    }
-                    	    dbg.location(1559,2);
-                    	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1559:2: ( ',' )?
-                    	    int alt86=2;
-                    	    try { dbg.enterSubRule(86);
-                    	    try { dbg.enterDecision(86);
+                    	    dbg.location(1555,2);
+                    	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1555:2: ( ',' )?
+                    	    int alt91=2;
+                    	    try { dbg.enterSubRule(91);
+                    	    try { dbg.enterDecision(91);
 
-                    	    int LA86_0 = input.LA(1);
+                    	    int LA91_0 = input.LA(1);
 
-                    	    if ( (LA86_0==51) ) {
-                    	        alt86=1;
+                    	    if ( (LA91_0==48) ) {
+                    	        alt91=1;
                     	    }
-                    	    } finally {dbg.exitDecision(86);}
+                    	    } finally {dbg.exitDecision(91);}
 
-                    	    switch (alt86) {
+                    	    switch (alt91) {
                     	        case 1 :
                     	            dbg.enterAlt(1);
 
                     	            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:0:0: ','
                     	            {
-                    	            dbg.location(1559,2);
-                    	            char_literal155=(Token)match(input,51,FOLLOW_51_in_factor3966); if (state.failed) return retval;
+                    	            dbg.location(1555,2);
+                    	            char_literal156=(Token)match(input,48,FOLLOW_48_in_factor3953); if (state.failed) return retval;
                     	            if ( state.backtracking==0 ) {
-                    	            char_literal155_tree = (Object)adaptor.create(char_literal155);
-                    	            adaptor.addChild(root_0, char_literal155_tree);
+                    	            char_literal156_tree = (Object)adaptor.create(char_literal156);
+                    	            adaptor.addChild(root_0, char_literal156_tree);
                     	            }
 
                     	            }
                     	            break;
 
                     	    }
-                    	    } finally {dbg.exitSubRule(86);}
+                    	    } finally {dbg.exitSubRule(91);}
 
 
                     	    }
                     	    break;
 
                     	default :
-                    	    break loop87;
+                    	    break loop92;
                         }
                     } while (true);
-                    } finally {dbg.exitSubRule(87);}
+                    } finally {dbg.exitSubRule(92);}
 
-                    dbg.location(1559,9);
-                    char_literal156=(Token)match(input,52,FOLLOW_52_in_factor3971); if (state.failed) return retval;
+                    dbg.location(1555,9);
+                    char_literal157=(Token)match(input,49,FOLLOW_49_in_factor3958); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    char_literal156_tree = (Object)adaptor.create(char_literal156);
-                    adaptor.addChild(root_0, char_literal156_tree);
+                    char_literal157_tree = (Object)adaptor.create(char_literal157);
+                    adaptor.addChild(root_0, char_literal157_tree);
                     }
-                    dbg.location(1559,13);
+                    dbg.location(1555,13);
                     if ( state.backtracking==0 ) {
 
                       	      	HashMap tmp = new HashMap();
@@ -11833,67 +11807,67 @@ public class RuleSet2Parser extends DebugParser {
                 case 12 :
                     dbg.enterAlt(12);
 
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1570:9: '[' e= expr ( ',' e2= expr )* ']'
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1566:9: '[' e= expr ( ',' e2= expr )* ']'
                     {
                     root_0 = (Object)adaptor.nil();
 
-                    dbg.location(1570,9);
-                    char_literal157=(Token)match(input,108,FOLLOW_108_in_factor3983); if (state.failed) return retval;
+                    dbg.location(1566,9);
+                    char_literal158=(Token)match(input,103,FOLLOW_103_in_factor3970); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    char_literal157_tree = (Object)adaptor.create(char_literal157);
-                    adaptor.addChild(root_0, char_literal157_tree);
+                    char_literal158_tree = (Object)adaptor.create(char_literal158);
+                    adaptor.addChild(root_0, char_literal158_tree);
                     }
-                    dbg.location(1570,14);
-                    pushFollow(FOLLOW_expr_in_factor3987);
+                    dbg.location(1566,14);
+                    pushFollow(FOLLOW_expr_in_factor3974);
                     e=expr();
 
                     state._fsp--;
                     if (state.failed) return retval;
                     if ( state.backtracking==0 ) adaptor.addChild(root_0, e.getTree());
-                    dbg.location(1570,20);
+                    dbg.location(1566,20);
                     if ( state.backtracking==0 ) {
 
                             			exprs2.add((e!=null?e.result:null));
                             		 
                     }
-                    dbg.location(1572,12);
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1572:12: ( ',' e2= expr )*
-                    try { dbg.enterSubRule(88);
+                    dbg.location(1568,12);
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1568:12: ( ',' e2= expr )*
+                    try { dbg.enterSubRule(93);
 
-                    loop88:
+                    loop93:
                     do {
-                        int alt88=2;
-                        try { dbg.enterDecision(88);
+                        int alt93=2;
+                        try { dbg.enterDecision(93);
 
-                        int LA88_0 = input.LA(1);
+                        int LA93_0 = input.LA(1);
 
-                        if ( (LA88_0==51) ) {
-                            alt88=1;
+                        if ( (LA93_0==48) ) {
+                            alt93=1;
                         }
 
 
-                        } finally {dbg.exitDecision(88);}
+                        } finally {dbg.exitDecision(93);}
 
-                        switch (alt88) {
+                        switch (alt93) {
                     	case 1 :
                     	    dbg.enterAlt(1);
 
-                    	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1572:13: ',' e2= expr
+                    	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1568:13: ',' e2= expr
                     	    {
-                    	    dbg.location(1572,13);
-                    	    char_literal158=(Token)match(input,51,FOLLOW_51_in_factor3992); if (state.failed) return retval;
+                    	    dbg.location(1568,13);
+                    	    char_literal159=(Token)match(input,48,FOLLOW_48_in_factor3979); if (state.failed) return retval;
                     	    if ( state.backtracking==0 ) {
-                    	    char_literal158_tree = (Object)adaptor.create(char_literal158);
-                    	    adaptor.addChild(root_0, char_literal158_tree);
+                    	    char_literal159_tree = (Object)adaptor.create(char_literal159);
+                    	    adaptor.addChild(root_0, char_literal159_tree);
                     	    }
-                    	    dbg.location(1572,19);
-                    	    pushFollow(FOLLOW_expr_in_factor3996);
+                    	    dbg.location(1568,19);
+                    	    pushFollow(FOLLOW_expr_in_factor3983);
                     	    e2=expr();
 
                     	    state._fsp--;
                     	    if (state.failed) return retval;
                     	    if ( state.backtracking==0 ) adaptor.addChild(root_0, e2.getTree());
-                    	    dbg.location(1572,24);
+                    	    dbg.location(1568,24);
                     	    if ( state.backtracking==0 ) {
 
                     	            			exprs2.add((e2!=null?e2.result:null));
@@ -11904,18 +11878,18 @@ public class RuleSet2Parser extends DebugParser {
                     	    break;
 
                     	default :
-                    	    break loop88;
+                    	    break loop93;
                         }
                     } while (true);
-                    } finally {dbg.exitSubRule(88);}
+                    } finally {dbg.exitSubRule(93);}
 
-                    dbg.location(1574,14);
-                    char_literal159=(Token)match(input,109,FOLLOW_109_in_factor4001); if (state.failed) return retval;
+                    dbg.location(1570,14);
+                    char_literal160=(Token)match(input,104,FOLLOW_104_in_factor3988); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    char_literal159_tree = (Object)adaptor.create(char_literal159);
-                    adaptor.addChild(root_0, char_literal159_tree);
+                    char_literal160_tree = (Object)adaptor.create(char_literal160);
+                    adaptor.addChild(root_0, char_literal160_tree);
                     }
-                    dbg.location(1574,18);
+                    dbg.location(1570,18);
                     if ( state.backtracking==0 ) {
 
                             			HashMap tmp = new HashMap();
@@ -11931,67 +11905,67 @@ public class RuleSet2Parser extends DebugParser {
                 case 13 :
                     dbg.enterAlt(13);
 
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1581:9: '{' h1= hash_line ( ',' h2= hash_line )* '}'
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1577:9: '{' h1= hash_line ( ',' h2= hash_line )* '}'
                     {
                     root_0 = (Object)adaptor.nil();
 
-                    dbg.location(1581,9);
-                    char_literal160=(Token)match(input,29,FOLLOW_29_in_factor4013); if (state.failed) return retval;
+                    dbg.location(1577,9);
+                    char_literal161=(Token)match(input,29,FOLLOW_29_in_factor4000); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    char_literal160_tree = (Object)adaptor.create(char_literal160);
-                    adaptor.addChild(root_0, char_literal160_tree);
+                    char_literal161_tree = (Object)adaptor.create(char_literal161);
+                    adaptor.addChild(root_0, char_literal161_tree);
                     }
-                    dbg.location(1581,15);
-                    pushFollow(FOLLOW_hash_line_in_factor4017);
+                    dbg.location(1577,15);
+                    pushFollow(FOLLOW_hash_line_in_factor4004);
                     h1=hash_line();
 
                     state._fsp--;
                     if (state.failed) return retval;
                     if ( state.backtracking==0 ) adaptor.addChild(root_0, h1.getTree());
-                    dbg.location(1581,26);
+                    dbg.location(1577,26);
                     if ( state.backtracking==0 ) {
 
                             			exprs2.add((h1!=null?h1.result:null));
                             		 
                     }
-                    dbg.location(1583,12);
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1583:12: ( ',' h2= hash_line )*
-                    try { dbg.enterSubRule(89);
+                    dbg.location(1579,12);
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1579:12: ( ',' h2= hash_line )*
+                    try { dbg.enterSubRule(94);
 
-                    loop89:
+                    loop94:
                     do {
-                        int alt89=2;
-                        try { dbg.enterDecision(89);
+                        int alt94=2;
+                        try { dbg.enterDecision(94);
 
-                        int LA89_0 = input.LA(1);
+                        int LA94_0 = input.LA(1);
 
-                        if ( (LA89_0==51) ) {
-                            alt89=1;
+                        if ( (LA94_0==48) ) {
+                            alt94=1;
                         }
 
 
-                        } finally {dbg.exitDecision(89);}
+                        } finally {dbg.exitDecision(94);}
 
-                        switch (alt89) {
+                        switch (alt94) {
                     	case 1 :
                     	    dbg.enterAlt(1);
 
-                    	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1583:13: ',' h2= hash_line
+                    	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1579:13: ',' h2= hash_line
                     	    {
-                    	    dbg.location(1583,13);
-                    	    char_literal161=(Token)match(input,51,FOLLOW_51_in_factor4022); if (state.failed) return retval;
+                    	    dbg.location(1579,13);
+                    	    char_literal162=(Token)match(input,48,FOLLOW_48_in_factor4009); if (state.failed) return retval;
                     	    if ( state.backtracking==0 ) {
-                    	    char_literal161_tree = (Object)adaptor.create(char_literal161);
-                    	    adaptor.addChild(root_0, char_literal161_tree);
+                    	    char_literal162_tree = (Object)adaptor.create(char_literal162);
+                    	    adaptor.addChild(root_0, char_literal162_tree);
                     	    }
-                    	    dbg.location(1583,19);
-                    	    pushFollow(FOLLOW_hash_line_in_factor4026);
+                    	    dbg.location(1579,19);
+                    	    pushFollow(FOLLOW_hash_line_in_factor4013);
                     	    h2=hash_line();
 
                     	    state._fsp--;
                     	    if (state.failed) return retval;
                     	    if ( state.backtracking==0 ) adaptor.addChild(root_0, h2.getTree());
-                    	    dbg.location(1583,30);
+                    	    dbg.location(1579,30);
                     	    if ( state.backtracking==0 ) {
 
                     	            			exprs2.add((h2!=null?h2.result:null));
@@ -12002,18 +11976,18 @@ public class RuleSet2Parser extends DebugParser {
                     	    break;
 
                     	default :
-                    	    break loop89;
+                    	    break loop94;
                         }
                     } while (true);
-                    } finally {dbg.exitSubRule(89);}
+                    } finally {dbg.exitSubRule(94);}
 
-                    dbg.location(1585,14);
-                    char_literal162=(Token)match(input,30,FOLLOW_30_in_factor4032); if (state.failed) return retval;
+                    dbg.location(1581,14);
+                    char_literal163=(Token)match(input,30,FOLLOW_30_in_factor4019); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    char_literal162_tree = (Object)adaptor.create(char_literal162);
-                    adaptor.addChild(root_0, char_literal162_tree);
+                    char_literal163_tree = (Object)adaptor.create(char_literal163);
+                    adaptor.addChild(root_0, char_literal163_tree);
                     }
-                    dbg.location(1585,18);
+                    dbg.location(1581,18);
                     if ( state.backtracking==0 ) {
 
                             			HashMap tmp = new HashMap();
@@ -12029,17 +12003,17 @@ public class RuleSet2Parser extends DebugParser {
                 case 14 :
                     dbg.enterAlt(14);
 
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1592:9: v= VAR
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1588:9: v= VAR
                     {
                     root_0 = (Object)adaptor.nil();
 
-                    dbg.location(1592,10);
-                    v=(Token)match(input,VAR,FOLLOW_VAR_in_factor4046); if (state.failed) return retval;
+                    dbg.location(1588,10);
+                    v=(Token)match(input,VAR,FOLLOW_VAR_in_factor4033); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     v_tree = (Object)adaptor.create(v);
                     adaptor.addChild(root_0, v_tree);
                     }
-                    dbg.location(1592,16);
+                    dbg.location(1588,16);
                     if ( state.backtracking==0 ) {
                        
                             		HashMap tmp = new HashMap();
@@ -12054,30 +12028,30 @@ public class RuleSet2Parser extends DebugParser {
                 case 15 :
                     dbg.enterAlt(15);
 
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1598:9: '(' e= expr ')'
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1594:9: '(' e= expr ')'
                     {
                     root_0 = (Object)adaptor.nil();
 
-                    dbg.location(1598,9);
-                    char_literal163=(Token)match(input,50,FOLLOW_50_in_factor4059); if (state.failed) return retval;
+                    dbg.location(1594,9);
+                    char_literal164=(Token)match(input,47,FOLLOW_47_in_factor4046); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    char_literal163_tree = (Object)adaptor.create(char_literal163);
-                    adaptor.addChild(root_0, char_literal163_tree);
+                    char_literal164_tree = (Object)adaptor.create(char_literal164);
+                    adaptor.addChild(root_0, char_literal164_tree);
                     }
-                    dbg.location(1598,14);
-                    pushFollow(FOLLOW_expr_in_factor4063);
+                    dbg.location(1594,14);
+                    pushFollow(FOLLOW_expr_in_factor4050);
                     e=expr();
 
                     state._fsp--;
                     if (state.failed) return retval;
                     if ( state.backtracking==0 ) adaptor.addChild(root_0, e.getTree());
-                    dbg.location(1598,20);
-                    char_literal164=(Token)match(input,52,FOLLOW_52_in_factor4065); if (state.failed) return retval;
+                    dbg.location(1594,20);
+                    char_literal165=(Token)match(input,49,FOLLOW_49_in_factor4052); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    char_literal164_tree = (Object)adaptor.create(char_literal164);
-                    adaptor.addChild(root_0, char_literal164_tree);
+                    char_literal165_tree = (Object)adaptor.create(char_literal165);
+                    adaptor.addChild(root_0, char_literal165_tree);
                     }
-                    dbg.location(1598,24);
+                    dbg.location(1594,24);
                     if ( state.backtracking==0 ) {
                        
                             		retval.result =(e!=null?e.result:null); 
@@ -12104,7 +12078,7 @@ public class RuleSet2Parser extends DebugParser {
         }
         finally {
         }
-        dbg.location(1601, 2);
+        dbg.location(1597, 2);
 
         }
         finally {
@@ -12123,35 +12097,35 @@ public class RuleSet2Parser extends DebugParser {
     };
 
     // $ANTLR start "var_domain"
-    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1602:10: fragment var_domain : ( 'ent' | 'app' );
+    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1598:10: fragment var_domain : ( 'ent' | 'app' );
     public final RuleSet2Parser.var_domain_return var_domain() throws RecognitionException {
         RuleSet2Parser.var_domain_return retval = new RuleSet2Parser.var_domain_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
 
-        Token set165=null;
+        Token set166=null;
 
-        Object set165_tree=null;
+        Object set166_tree=null;
 
         try { dbg.enterRule(getGrammarFileName(), "var_domain");
         if ( getRuleLevel()==0 ) {dbg.commence();}
         incRuleLevel();
-        dbg.location(1602, 10);
+        dbg.location(1598, 10);
 
         try {
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1602:20: ( 'ent' | 'app' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1598:20: ( 'ent' | 'app' )
             dbg.enterAlt(1);
 
             // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:
             {
             root_0 = (Object)adaptor.nil();
 
-            dbg.location(1602,20);
-            set165=(Token)input.LT(1);
-            if ( (input.LA(1)>=112 && input.LA(1)<=113) ) {
+            dbg.location(1598,20);
+            set166=(Token)input.LT(1);
+            if ( (input.LA(1)>=107 && input.LA(1)<=108) ) {
                 input.consume();
-                if ( state.backtracking==0 ) adaptor.addChild(root_0, (Object)adaptor.create(set165));
+                if ( state.backtracking==0 ) adaptor.addChild(root_0, (Object)adaptor.create(set166));
                 state.errorRecovery=false;state.failed=false;
             }
             else {
@@ -12180,7 +12154,7 @@ public class RuleSet2Parser extends DebugParser {
         }
         finally {
         }
-        dbg.location(1602, 35);
+        dbg.location(1598, 35);
 
         }
         finally {
@@ -12200,7 +12174,7 @@ public class RuleSet2Parser extends DebugParser {
     };
 
     // $ANTLR start "namespace"
-    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1607:10: fragment namespace returns [String result] : v= VAR ':' ;
+    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1603:10: fragment namespace returns [String result] : v= VAR ':' ;
     public final RuleSet2Parser.namespace_return namespace() throws RecognitionException {
         RuleSet2Parser.namespace_return retval = new RuleSet2Parser.namespace_return();
         retval.start = input.LT(1);
@@ -12208,37 +12182,37 @@ public class RuleSet2Parser extends DebugParser {
         Object root_0 = null;
 
         Token v=null;
-        Token char_literal166=null;
+        Token char_literal167=null;
 
         Object v_tree=null;
-        Object char_literal166_tree=null;
+        Object char_literal167_tree=null;
 
         try { dbg.enterRule(getGrammarFileName(), "namespace");
         if ( getRuleLevel()==0 ) {dbg.commence();}
         incRuleLevel();
-        dbg.location(1607, 10);
+        dbg.location(1603, 10);
 
         try {
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1608:2: (v= VAR ':' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1604:2: (v= VAR ':' )
             dbg.enterAlt(1);
 
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1608:4: v= VAR ':'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1604:4: v= VAR ':'
             {
             root_0 = (Object)adaptor.nil();
 
-            dbg.location(1608,5);
-            v=(Token)match(input,VAR,FOLLOW_VAR_in_namespace4108); if (state.failed) return retval;
+            dbg.location(1604,5);
+            v=(Token)match(input,VAR,FOLLOW_VAR_in_namespace4095); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
             v_tree = (Object)adaptor.create(v);
             adaptor.addChild(root_0, v_tree);
             }
-            dbg.location(1608,10);
-            char_literal166=(Token)match(input,40,FOLLOW_40_in_namespace4110); if (state.failed) return retval;
+            dbg.location(1604,10);
+            char_literal167=(Token)match(input,39,FOLLOW_39_in_namespace4097); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            char_literal166_tree = (Object)adaptor.create(char_literal166);
-            adaptor.addChild(root_0, char_literal166_tree);
+            char_literal167_tree = (Object)adaptor.create(char_literal167);
+            adaptor.addChild(root_0, char_literal167_tree);
             }
-            dbg.location(1609,2);
+            dbg.location(1605,2);
             if ( state.backtracking==0 ) {
 
               		retval.result = (v!=null?v.getText():null);
@@ -12263,7 +12237,7 @@ public class RuleSet2Parser extends DebugParser {
         }
         finally {
         }
-        dbg.location(1612, 2);
+        dbg.location(1608, 2);
 
         }
         finally {
@@ -12284,55 +12258,55 @@ public class RuleSet2Parser extends DebugParser {
     };
 
     // $ANTLR start "timeframe"
-    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1615:1: timeframe returns [Object result,String time] : 'within' e= expr p= period ;
+    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1611:1: timeframe returns [Object result,String time] : 'within' e= expr p= period ;
     public final RuleSet2Parser.timeframe_return timeframe() throws RecognitionException {
         RuleSet2Parser.timeframe_return retval = new RuleSet2Parser.timeframe_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
 
-        Token string_literal167=null;
+        Token string_literal168=null;
         RuleSet2Parser.expr_return e = null;
 
         RuleSet2Parser.period_return p = null;
 
 
-        Object string_literal167_tree=null;
+        Object string_literal168_tree=null;
 
         try { dbg.enterRule(getGrammarFileName(), "timeframe");
         if ( getRuleLevel()==0 ) {dbg.commence();}
         incRuleLevel();
-        dbg.location(1615, 1);
+        dbg.location(1611, 1);
 
         try {
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1616:2: ( 'within' e= expr p= period )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1612:2: ( 'within' e= expr p= period )
             dbg.enterAlt(1);
 
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1616:5: 'within' e= expr p= period
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1612:5: 'within' e= expr p= period
             {
             root_0 = (Object)adaptor.nil();
 
-            dbg.location(1616,5);
-            string_literal167=(Token)match(input,114,FOLLOW_114_in_timeframe4132); if (state.failed) return retval;
+            dbg.location(1612,5);
+            string_literal168=(Token)match(input,109,FOLLOW_109_in_timeframe4119); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            string_literal167_tree = (Object)adaptor.create(string_literal167);
-            adaptor.addChild(root_0, string_literal167_tree);
+            string_literal168_tree = (Object)adaptor.create(string_literal168);
+            adaptor.addChild(root_0, string_literal168_tree);
             }
-            dbg.location(1616,15);
-            pushFollow(FOLLOW_expr_in_timeframe4136);
+            dbg.location(1612,15);
+            pushFollow(FOLLOW_expr_in_timeframe4123);
             e=expr();
 
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, e.getTree());
-            dbg.location(1616,22);
-            pushFollow(FOLLOW_period_in_timeframe4140);
+            dbg.location(1612,22);
+            pushFollow(FOLLOW_period_in_timeframe4127);
             p=period();
 
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, p.getTree());
-            dbg.location(1616,30);
+            dbg.location(1612,30);
             if ( state.backtracking==0 ) {
 
               		retval.result = (e!=null?e.result:null);
@@ -12358,7 +12332,7 @@ public class RuleSet2Parser extends DebugParser {
         }
         finally {
         }
-        dbg.location(1621, 2);
+        dbg.location(1617, 2);
 
         }
         finally {
@@ -12378,7 +12352,7 @@ public class RuleSet2Parser extends DebugParser {
     };
 
     // $ANTLR start "hash_line"
-    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1623:1: hash_line returns [HashMap result] : s= STRING ':' e= expr ;
+    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1619:1: hash_line returns [HashMap result] : s= STRING ':' e= expr ;
     public final RuleSet2Parser.hash_line_return hash_line() throws RecognitionException {
         RuleSet2Parser.hash_line_return retval = new RuleSet2Parser.hash_line_return();
         retval.start = input.LT(1);
@@ -12386,46 +12360,46 @@ public class RuleSet2Parser extends DebugParser {
         Object root_0 = null;
 
         Token s=null;
-        Token char_literal168=null;
+        Token char_literal169=null;
         RuleSet2Parser.expr_return e = null;
 
 
         Object s_tree=null;
-        Object char_literal168_tree=null;
+        Object char_literal169_tree=null;
 
         try { dbg.enterRule(getGrammarFileName(), "hash_line");
         if ( getRuleLevel()==0 ) {dbg.commence();}
         incRuleLevel();
-        dbg.location(1623, 1);
+        dbg.location(1619, 1);
 
         try {
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1624:2: (s= STRING ':' e= expr )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1620:2: (s= STRING ':' e= expr )
             dbg.enterAlt(1);
 
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1624:4: s= STRING ':' e= expr
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1620:4: s= STRING ':' e= expr
             {
             root_0 = (Object)adaptor.nil();
 
-            dbg.location(1624,5);
-            s=(Token)match(input,STRING,FOLLOW_STRING_in_hash_line4164); if (state.failed) return retval;
+            dbg.location(1620,5);
+            s=(Token)match(input,STRING,FOLLOW_STRING_in_hash_line4151); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
             s_tree = (Object)adaptor.create(s);
             adaptor.addChild(root_0, s_tree);
             }
-            dbg.location(1624,13);
-            char_literal168=(Token)match(input,40,FOLLOW_40_in_hash_line4166); if (state.failed) return retval;
+            dbg.location(1620,13);
+            char_literal169=(Token)match(input,39,FOLLOW_39_in_hash_line4153); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            char_literal168_tree = (Object)adaptor.create(char_literal168);
-            adaptor.addChild(root_0, char_literal168_tree);
+            char_literal169_tree = (Object)adaptor.create(char_literal169);
+            adaptor.addChild(root_0, char_literal169_tree);
             }
-            dbg.location(1624,18);
-            pushFollow(FOLLOW_expr_in_hash_line4170);
+            dbg.location(1620,18);
+            pushFollow(FOLLOW_expr_in_hash_line4157);
             e=expr();
 
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, e.getTree());
-            dbg.location(1624,25);
+            dbg.location(1620,25);
             if ( state.backtracking==0 ) {
 
               		HashMap tmp = new HashMap();
@@ -12454,7 +12428,7 @@ public class RuleSet2Parser extends DebugParser {
         }
         finally {
         }
-        dbg.location(1631, 2);
+        dbg.location(1627, 2);
 
         }
         finally {
@@ -12474,7 +12448,7 @@ public class RuleSet2Parser extends DebugParser {
     };
 
     // $ANTLR start "css_emit"
-    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1633:1: css_emit returns [String emit_value] : 'css' (h= HTML | h= STRING ) ;
+    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1629:1: css_emit returns [String emit_value] : 'css' (h= HTML | h= STRING ) ;
     public final RuleSet2Parser.css_emit_return css_emit() throws RecognitionException {
         RuleSet2Parser.css_emit_return retval = new RuleSet2Parser.css_emit_return();
         retval.start = input.LT(1);
@@ -12482,67 +12456,67 @@ public class RuleSet2Parser extends DebugParser {
         Object root_0 = null;
 
         Token h=null;
-        Token string_literal169=null;
+        Token string_literal170=null;
 
         Object h_tree=null;
-        Object string_literal169_tree=null;
+        Object string_literal170_tree=null;
 
         try { dbg.enterRule(getGrammarFileName(), "css_emit");
         if ( getRuleLevel()==0 ) {dbg.commence();}
         incRuleLevel();
-        dbg.location(1633, 1);
+        dbg.location(1629, 1);
 
         try {
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1634:2: ( 'css' (h= HTML | h= STRING ) )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1630:2: ( 'css' (h= HTML | h= STRING ) )
             dbg.enterAlt(1);
 
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1634:4: 'css' (h= HTML | h= STRING )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1630:4: 'css' (h= HTML | h= STRING )
             {
             root_0 = (Object)adaptor.nil();
 
-            dbg.location(1634,4);
-            string_literal169=(Token)match(input,115,FOLLOW_115_in_css_emit4188); if (state.failed) return retval;
+            dbg.location(1630,4);
+            string_literal170=(Token)match(input,110,FOLLOW_110_in_css_emit4175); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            string_literal169_tree = (Object)adaptor.create(string_literal169);
-            adaptor.addChild(root_0, string_literal169_tree);
+            string_literal170_tree = (Object)adaptor.create(string_literal170);
+            adaptor.addChild(root_0, string_literal170_tree);
             }
-            dbg.location(1634,10);
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1634:10: (h= HTML | h= STRING )
-            int alt91=2;
-            try { dbg.enterSubRule(91);
-            try { dbg.enterDecision(91);
+            dbg.location(1630,10);
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1630:10: (h= HTML | h= STRING )
+            int alt96=2;
+            try { dbg.enterSubRule(96);
+            try { dbg.enterDecision(96);
 
-            int LA91_0 = input.LA(1);
+            int LA96_0 = input.LA(1);
 
-            if ( (LA91_0==HTML) ) {
-                alt91=1;
+            if ( (LA96_0==HTML) ) {
+                alt96=1;
             }
-            else if ( (LA91_0==STRING) ) {
-                alt91=2;
+            else if ( (LA96_0==STRING) ) {
+                alt96=2;
             }
             else {
                 if (state.backtracking>0) {state.failed=true; return retval;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 91, 0, input);
+                    new NoViableAltException("", 96, 0, input);
 
                 dbg.recognitionException(nvae);
                 throw nvae;
             }
-            } finally {dbg.exitDecision(91);}
+            } finally {dbg.exitDecision(96);}
 
-            switch (alt91) {
+            switch (alt96) {
                 case 1 :
                     dbg.enterAlt(1);
 
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1634:12: h= HTML
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1630:12: h= HTML
                     {
-                    dbg.location(1634,13);
-                    h=(Token)match(input,HTML,FOLLOW_HTML_in_css_emit4194); if (state.failed) return retval;
+                    dbg.location(1630,13);
+                    h=(Token)match(input,HTML,FOLLOW_HTML_in_css_emit4181); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     h_tree = (Object)adaptor.create(h);
                     adaptor.addChild(root_0, h_tree);
                     }
-                    dbg.location(1634,19);
+                    dbg.location(1630,19);
                     if ( state.backtracking==0 ) {
                       retval.emit_value = strip_wrappers("<<",">>",(h!=null?h.getText():null));
                     }
@@ -12552,15 +12526,15 @@ public class RuleSet2Parser extends DebugParser {
                 case 2 :
                     dbg.enterAlt(2);
 
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1635:3: h= STRING
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1631:3: h= STRING
                     {
-                    dbg.location(1635,4);
-                    h=(Token)match(input,STRING,FOLLOW_STRING_in_css_emit4202); if (state.failed) return retval;
+                    dbg.location(1631,4);
+                    h=(Token)match(input,STRING,FOLLOW_STRING_in_css_emit4189); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     h_tree = (Object)adaptor.create(h);
                     adaptor.addChild(root_0, h_tree);
                     }
-                    dbg.location(1635,12);
+                    dbg.location(1631,12);
                     if ( state.backtracking==0 ) {
                       retval.emit_value = strip_string((h!=null?h.getText():null));
                     }
@@ -12569,7 +12543,7 @@ public class RuleSet2Parser extends DebugParser {
                     break;
 
             }
-            } finally {dbg.exitSubRule(91);}
+            } finally {dbg.exitSubRule(96);}
 
 
             }
@@ -12590,7 +12564,7 @@ public class RuleSet2Parser extends DebugParser {
         }
         finally {
         }
-        dbg.location(1637, 2);
+        dbg.location(1633, 2);
 
         }
         finally {
@@ -12609,37 +12583,37 @@ public class RuleSet2Parser extends DebugParser {
     };
 
     // $ANTLR start "period"
-    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1639:10: fragment period : must_be_one[sar( \"years\", \"months\", \"weeks\", \"days\", \"hours\", \"minutes\", \"seconds\", \"year\", \"month\", \"week\", \"day\", \"hour\", \"minute\", \"second\")] ;
+    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1635:10: fragment period : must_be_one[sar( \"years\", \"months\", \"weeks\", \"days\", \"hours\", \"minutes\", \"seconds\", \"year\", \"month\", \"week\", \"day\", \"hour\", \"minute\", \"second\")] ;
     public final RuleSet2Parser.period_return period() throws RecognitionException {
         RuleSet2Parser.period_return retval = new RuleSet2Parser.period_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
 
-        RuleSet2Parser.must_be_one_return must_be_one170 = null;
+        RuleSet2Parser.must_be_one_return must_be_one171 = null;
 
 
 
         try { dbg.enterRule(getGrammarFileName(), "period");
         if ( getRuleLevel()==0 ) {dbg.commence();}
         incRuleLevel();
-        dbg.location(1639, 10);
+        dbg.location(1635, 10);
 
         try {
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1640:2: ( must_be_one[sar( \"years\", \"months\", \"weeks\", \"days\", \"hours\", \"minutes\", \"seconds\", \"year\", \"month\", \"week\", \"day\", \"hour\", \"minute\", \"second\")] )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1636:2: ( must_be_one[sar( \"years\", \"months\", \"weeks\", \"days\", \"hours\", \"minutes\", \"seconds\", \"year\", \"month\", \"week\", \"day\", \"hour\", \"minute\", \"second\")] )
             dbg.enterAlt(1);
 
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1641:3: must_be_one[sar( \"years\", \"months\", \"weeks\", \"days\", \"hours\", \"minutes\", \"seconds\", \"year\", \"month\", \"week\", \"day\", \"hour\", \"minute\", \"second\")]
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1637:3: must_be_one[sar( \"years\", \"months\", \"weeks\", \"days\", \"hours\", \"minutes\", \"seconds\", \"year\", \"month\", \"week\", \"day\", \"hour\", \"minute\", \"second\")]
             {
             root_0 = (Object)adaptor.nil();
 
-            dbg.location(1641,3);
-            pushFollow(FOLLOW_must_be_one_in_period4225);
-            must_be_one170=must_be_one(sar( "years", "months", "weeks", "days", "hours", "minutes", "seconds", "year", "month", "week", "day", "hour", "minute", "second"));
+            dbg.location(1637,3);
+            pushFollow(FOLLOW_must_be_one_in_period4212);
+            must_be_one171=must_be_one(sar( "years", "months", "weeks", "days", "hours", "minutes", "seconds", "year", "month", "week", "day", "hour", "minute", "second"));
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) adaptor.addChild(root_0, must_be_one170.getTree());
+            if ( state.backtracking==0 ) adaptor.addChild(root_0, must_be_one171.getTree());
 
             }
 
@@ -12659,7 +12633,7 @@ public class RuleSet2Parser extends DebugParser {
         }
         finally {
         }
-        dbg.location(1642, 2);
+        dbg.location(1638, 2);
 
         }
         finally {
@@ -12679,7 +12653,7 @@ public class RuleSet2Parser extends DebugParser {
     };
 
     // $ANTLR start "cachable"
-    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1661:1: cachable returns [Object what] : ca= 'cachable' ( 'for' tm= INT per= period )? ;
+    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1657:1: cachable returns [Object what] : ca= 'cachable' ( 'for' tm= INT per= period )? ;
     public final RuleSet2Parser.cachable_return cachable() throws RecognitionException {
         RuleSet2Parser.cachable_return retval = new RuleSet2Parser.cachable_return();
         retval.start = input.LT(1);
@@ -12688,13 +12662,13 @@ public class RuleSet2Parser extends DebugParser {
 
         Token ca=null;
         Token tm=null;
-        Token string_literal171=null;
+        Token string_literal172=null;
         RuleSet2Parser.period_return per = null;
 
 
         Object ca_tree=null;
         Object tm_tree=null;
-        Object string_literal171_tree=null;
+        Object string_literal172_tree=null;
 
 
         	retval.what = null;
@@ -12702,55 +12676,55 @@ public class RuleSet2Parser extends DebugParser {
         try { dbg.enterRule(getGrammarFileName(), "cachable");
         if ( getRuleLevel()==0 ) {dbg.commence();}
         incRuleLevel();
-        dbg.location(1661, 1);
+        dbg.location(1657, 1);
 
         try {
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1665:2: (ca= 'cachable' ( 'for' tm= INT per= period )? )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1661:2: (ca= 'cachable' ( 'for' tm= INT per= period )? )
             dbg.enterAlt(1);
 
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1666:3: ca= 'cachable' ( 'for' tm= INT per= period )?
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1662:3: ca= 'cachable' ( 'for' tm= INT per= period )?
             {
             root_0 = (Object)adaptor.nil();
 
-            dbg.location(1666,5);
-            ca=(Token)match(input,116,FOLLOW_116_in_cachable4259); if (state.failed) return retval;
+            dbg.location(1662,5);
+            ca=(Token)match(input,111,FOLLOW_111_in_cachable4246); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
             ca_tree = (Object)adaptor.create(ca);
             adaptor.addChild(root_0, ca_tree);
             }
-            dbg.location(1666,17);
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1666:17: ( 'for' tm= INT per= period )?
-            int alt92=2;
-            try { dbg.enterSubRule(92);
-            try { dbg.enterDecision(92);
+            dbg.location(1662,17);
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1662:17: ( 'for' tm= INT per= period )?
+            int alt97=2;
+            try { dbg.enterSubRule(97);
+            try { dbg.enterDecision(97);
 
-            int LA92_0 = input.LA(1);
+            int LA97_0 = input.LA(1);
 
-            if ( (LA92_0==47) ) {
-                alt92=1;
+            if ( (LA97_0==45) ) {
+                alt97=1;
             }
-            } finally {dbg.exitDecision(92);}
+            } finally {dbg.exitDecision(97);}
 
-            switch (alt92) {
+            switch (alt97) {
                 case 1 :
                     dbg.enterAlt(1);
 
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1666:18: 'for' tm= INT per= period
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1662:18: 'for' tm= INT per= period
                     {
-                    dbg.location(1666,18);
-                    string_literal171=(Token)match(input,47,FOLLOW_47_in_cachable4262); if (state.failed) return retval;
+                    dbg.location(1662,18);
+                    string_literal172=(Token)match(input,45,FOLLOW_45_in_cachable4249); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    string_literal171_tree = (Object)adaptor.create(string_literal171);
-                    adaptor.addChild(root_0, string_literal171_tree);
+                    string_literal172_tree = (Object)adaptor.create(string_literal172);
+                    adaptor.addChild(root_0, string_literal172_tree);
                     }
-                    dbg.location(1666,26);
-                    tm=(Token)match(input,INT,FOLLOW_INT_in_cachable4266); if (state.failed) return retval;
+                    dbg.location(1662,26);
+                    tm=(Token)match(input,INT,FOLLOW_INT_in_cachable4253); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     tm_tree = (Object)adaptor.create(tm);
                     adaptor.addChild(root_0, tm_tree);
                     }
-                    dbg.location(1666,34);
-                    pushFollow(FOLLOW_period_in_cachable4270);
+                    dbg.location(1662,34);
+                    pushFollow(FOLLOW_period_in_cachable4257);
                     per=period();
 
                     state._fsp--;
@@ -12761,9 +12735,9 @@ public class RuleSet2Parser extends DebugParser {
                     break;
 
             }
-            } finally {dbg.exitSubRule(92);}
+            } finally {dbg.exitSubRule(97);}
 
-            dbg.location(1666,44);
+            dbg.location(1662,44);
             if ( state.backtracking==0 ) {
 
                			if((tm!=null?tm.getText():null) != null)
@@ -12801,7 +12775,7 @@ public class RuleSet2Parser extends DebugParser {
         }
         finally {
         }
-        dbg.location(1682, 2);
+        dbg.location(1678, 2);
 
         }
         finally {
@@ -12821,7 +12795,7 @@ public class RuleSet2Parser extends DebugParser {
     };
 
     // $ANTLR start "emit_block"
-    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1686:1: emit_block returns [String emit_value] : 'emit' (h= HTML | h= STRING | h= JS ) ;
+    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1682:1: emit_block returns [String emit_value] : 'emit' (h= HTML | h= STRING | h= JS ) ;
     public final RuleSet2Parser.emit_block_return emit_block() throws RecognitionException {
         RuleSet2Parser.emit_block_return retval = new RuleSet2Parser.emit_block_return();
         retval.start = input.LT(1);
@@ -12829,76 +12803,76 @@ public class RuleSet2Parser extends DebugParser {
         Object root_0 = null;
 
         Token h=null;
-        Token string_literal172=null;
+        Token string_literal173=null;
 
         Object h_tree=null;
-        Object string_literal172_tree=null;
+        Object string_literal173_tree=null;
 
         try { dbg.enterRule(getGrammarFileName(), "emit_block");
         if ( getRuleLevel()==0 ) {dbg.commence();}
         incRuleLevel();
-        dbg.location(1686, 1);
+        dbg.location(1682, 1);
 
         try {
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1687:2: ( 'emit' (h= HTML | h= STRING | h= JS ) )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1683:2: ( 'emit' (h= HTML | h= STRING | h= JS ) )
             dbg.enterAlt(1);
 
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1687:4: 'emit' (h= HTML | h= STRING | h= JS )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1683:4: 'emit' (h= HTML | h= STRING | h= JS )
             {
             root_0 = (Object)adaptor.nil();
 
-            dbg.location(1687,4);
-            string_literal172=(Token)match(input,117,FOLLOW_117_in_emit_block4294); if (state.failed) return retval;
+            dbg.location(1683,4);
+            string_literal173=(Token)match(input,112,FOLLOW_112_in_emit_block4281); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            string_literal172_tree = (Object)adaptor.create(string_literal172);
-            adaptor.addChild(root_0, string_literal172_tree);
+            string_literal173_tree = (Object)adaptor.create(string_literal173);
+            adaptor.addChild(root_0, string_literal173_tree);
             }
-            dbg.location(1687,11);
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1687:11: (h= HTML | h= STRING | h= JS )
-            int alt93=3;
-            try { dbg.enterSubRule(93);
-            try { dbg.enterDecision(93);
+            dbg.location(1683,11);
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1683:11: (h= HTML | h= STRING | h= JS )
+            int alt98=3;
+            try { dbg.enterSubRule(98);
+            try { dbg.enterDecision(98);
 
             switch ( input.LA(1) ) {
             case HTML:
                 {
-                alt93=1;
+                alt98=1;
                 }
                 break;
             case STRING:
                 {
-                alt93=2;
+                alt98=2;
                 }
                 break;
             case JS:
                 {
-                alt93=3;
+                alt98=3;
                 }
                 break;
             default:
                 if (state.backtracking>0) {state.failed=true; return retval;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 93, 0, input);
+                    new NoViableAltException("", 98, 0, input);
 
                 dbg.recognitionException(nvae);
                 throw nvae;
             }
 
-            } finally {dbg.exitDecision(93);}
+            } finally {dbg.exitDecision(98);}
 
-            switch (alt93) {
+            switch (alt98) {
                 case 1 :
                     dbg.enterAlt(1);
 
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1687:13: h= HTML
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1683:13: h= HTML
                     {
-                    dbg.location(1687,14);
-                    h=(Token)match(input,HTML,FOLLOW_HTML_in_emit_block4300); if (state.failed) return retval;
+                    dbg.location(1683,14);
+                    h=(Token)match(input,HTML,FOLLOW_HTML_in_emit_block4287); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     h_tree = (Object)adaptor.create(h);
                     adaptor.addChild(root_0, h_tree);
                     }
-                    dbg.location(1687,20);
+                    dbg.location(1683,20);
                     if ( state.backtracking==0 ) {
                       retval.emit_value = strip_wrappers("<<",">>",(h!=null?h.getText():null));
                     }
@@ -12908,15 +12882,15 @@ public class RuleSet2Parser extends DebugParser {
                 case 2 :
                     dbg.enterAlt(2);
 
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1688:3: h= STRING
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1684:3: h= STRING
                     {
-                    dbg.location(1688,4);
-                    h=(Token)match(input,STRING,FOLLOW_STRING_in_emit_block4308); if (state.failed) return retval;
+                    dbg.location(1684,4);
+                    h=(Token)match(input,STRING,FOLLOW_STRING_in_emit_block4295); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     h_tree = (Object)adaptor.create(h);
                     adaptor.addChild(root_0, h_tree);
                     }
-                    dbg.location(1688,12);
+                    dbg.location(1684,12);
                     if ( state.backtracking==0 ) {
                       retval.emit_value = strip_string((h!=null?h.getText():null));
                     }
@@ -12926,15 +12900,15 @@ public class RuleSet2Parser extends DebugParser {
                 case 3 :
                     dbg.enterAlt(3);
 
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1689:3: h= JS
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1685:3: h= JS
                     {
-                    dbg.location(1689,4);
-                    h=(Token)match(input,JS,FOLLOW_JS_in_emit_block4316); if (state.failed) return retval;
+                    dbg.location(1685,4);
+                    h=(Token)match(input,JS,FOLLOW_JS_in_emit_block4303); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     h_tree = (Object)adaptor.create(h);
                     adaptor.addChild(root_0, h_tree);
                     }
-                    dbg.location(1689,8);
+                    dbg.location(1685,8);
                     if ( state.backtracking==0 ) {
                       retval.emit_value = strip_wrappers("<|","|>",(h!=null?h.getText():null));
                     }
@@ -12943,7 +12917,7 @@ public class RuleSet2Parser extends DebugParser {
                     break;
 
             }
-            } finally {dbg.exitSubRule(93);}
+            } finally {dbg.exitSubRule(98);}
 
 
             }
@@ -12964,7 +12938,7 @@ public class RuleSet2Parser extends DebugParser {
         }
         finally {
         }
-        dbg.location(1691, 2);
+        dbg.location(1687, 2);
 
         }
         finally {
@@ -12983,7 +12957,7 @@ public class RuleSet2Parser extends DebugParser {
     };
 
     // $ANTLR start "meta_block"
-    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1693:1: meta_block : 'meta' '{' (name= must_be_one[sar(\"description\",\"name\",\"author\")] (html_desc= HTML | string_desc= STRING ) | 'key' what= must_be_one[sar(\"errorstack\",\"googleanalytics\",\"twitter\",\"amazon\",\"kpds\",\"google\")] (key_value= STRING | '{' ( name_value_pair[key_values] ( ',' name_value_pair[key_values] )* ) '}' )+ | 'authz' 'require' 'user' | 'logging' onoff= ( 'on' | 'off' ) | 'use' ( (rtype= ( 'css' | 'javascript' ) must_be[\"resource\"] (url= STRING | nicename= VAR ) ) | ( 'module' modname= VAR ( 'alias' alias= VAR )? ) ) )* '}' ;
+    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1689:1: meta_block : 'meta' '{' (name= must_be_one[sar(\"description\",\"name\",\"author\")] (html_desc= HTML | string_desc= STRING ) | 'key' what= must_be_one[sar(\"errorstack\",\"googleanalytics\",\"twitter\",\"amazon\",\"kpds\",\"google\")] (key_value= STRING | '{' ( name_value_pair[key_values] ( ',' name_value_pair[key_values] )* ) '}' )+ | 'authz' 'require' 'user' | 'logging' onoff= ( 'on' | 'off' ) | 'use' ( (rtype= ( 'css' | 'javascript' ) must_be[\"resource\"] (url= STRING | nicename= VAR ) ) | ( 'module' modname= VAR ( 'alias' alias= VAR )? ) ) )* '}' ;
     public final RuleSet2Parser.meta_block_return meta_block() throws RecognitionException {
         RuleSet2Parser.meta_block_return retval = new RuleSet2Parser.meta_block_return();
         retval.start = input.LT(1);
@@ -12999,29 +12973,29 @@ public class RuleSet2Parser extends DebugParser {
         Token nicename=null;
         Token modname=null;
         Token alias=null;
-        Token string_literal173=null;
-        Token char_literal174=null;
-        Token string_literal175=null;
-        Token char_literal176=null;
-        Token char_literal178=null;
-        Token char_literal180=null;
-        Token string_literal181=null;
+        Token string_literal174=null;
+        Token char_literal175=null;
+        Token string_literal176=null;
+        Token char_literal177=null;
+        Token char_literal179=null;
+        Token char_literal181=null;
         Token string_literal182=null;
         Token string_literal183=null;
         Token string_literal184=null;
         Token string_literal185=null;
-        Token string_literal187=null;
+        Token string_literal186=null;
         Token string_literal188=null;
-        Token char_literal189=null;
+        Token string_literal189=null;
+        Token char_literal190=null;
         RuleSet2Parser.must_be_one_return name = null;
 
         RuleSet2Parser.must_be_one_return what = null;
 
-        RuleSet2Parser.name_value_pair_return name_value_pair177 = null;
+        RuleSet2Parser.name_value_pair_return name_value_pair178 = null;
 
-        RuleSet2Parser.name_value_pair_return name_value_pair179 = null;
+        RuleSet2Parser.name_value_pair_return name_value_pair180 = null;
 
-        RuleSet2Parser.must_be_return must_be186 = null;
+        RuleSet2Parser.must_be_return must_be187 = null;
 
 
         Object html_desc_tree=null;
@@ -13033,20 +13007,20 @@ public class RuleSet2Parser extends DebugParser {
         Object nicename_tree=null;
         Object modname_tree=null;
         Object alias_tree=null;
-        Object string_literal173_tree=null;
-        Object char_literal174_tree=null;
-        Object string_literal175_tree=null;
-        Object char_literal176_tree=null;
-        Object char_literal178_tree=null;
-        Object char_literal180_tree=null;
-        Object string_literal181_tree=null;
+        Object string_literal174_tree=null;
+        Object char_literal175_tree=null;
+        Object string_literal176_tree=null;
+        Object char_literal177_tree=null;
+        Object char_literal179_tree=null;
+        Object char_literal181_tree=null;
         Object string_literal182_tree=null;
         Object string_literal183_tree=null;
         Object string_literal184_tree=null;
         Object string_literal185_tree=null;
-        Object string_literal187_tree=null;
+        Object string_literal186_tree=null;
         Object string_literal188_tree=null;
-        Object char_literal189_tree=null;
+        Object string_literal189_tree=null;
+        Object char_literal190_tree=null;
 
 
         	 HashMap meta_block_hash = (HashMap)rule_json.get("meta");
@@ -13057,405 +13031,93 @@ public class RuleSet2Parser extends DebugParser {
         try { dbg.enterRule(getGrammarFileName(), "meta_block");
         if ( getRuleLevel()==0 ) {dbg.commence();}
         incRuleLevel();
-        dbg.location(1693, 1);
+        dbg.location(1689, 1);
 
         try {
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1710:2: ( 'meta' '{' (name= must_be_one[sar(\"description\",\"name\",\"author\")] (html_desc= HTML | string_desc= STRING ) | 'key' what= must_be_one[sar(\"errorstack\",\"googleanalytics\",\"twitter\",\"amazon\",\"kpds\",\"google\")] (key_value= STRING | '{' ( name_value_pair[key_values] ( ',' name_value_pair[key_values] )* ) '}' )+ | 'authz' 'require' 'user' | 'logging' onoff= ( 'on' | 'off' ) | 'use' ( (rtype= ( 'css' | 'javascript' ) must_be[\"resource\"] (url= STRING | nicename= VAR ) ) | ( 'module' modname= VAR ( 'alias' alias= VAR )? ) ) )* '}' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1706:2: ( 'meta' '{' (name= must_be_one[sar(\"description\",\"name\",\"author\")] (html_desc= HTML | string_desc= STRING ) | 'key' what= must_be_one[sar(\"errorstack\",\"googleanalytics\",\"twitter\",\"amazon\",\"kpds\",\"google\")] (key_value= STRING | '{' ( name_value_pair[key_values] ( ',' name_value_pair[key_values] )* ) '}' )+ | 'authz' 'require' 'user' | 'logging' onoff= ( 'on' | 'off' ) | 'use' ( (rtype= ( 'css' | 'javascript' ) must_be[\"resource\"] (url= STRING | nicename= VAR ) ) | ( 'module' modname= VAR ( 'alias' alias= VAR )? ) ) )* '}' )
             dbg.enterAlt(1);
 
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1710:4: 'meta' '{' (name= must_be_one[sar(\"description\",\"name\",\"author\")] (html_desc= HTML | string_desc= STRING ) | 'key' what= must_be_one[sar(\"errorstack\",\"googleanalytics\",\"twitter\",\"amazon\",\"kpds\",\"google\")] (key_value= STRING | '{' ( name_value_pair[key_values] ( ',' name_value_pair[key_values] )* ) '}' )+ | 'authz' 'require' 'user' | 'logging' onoff= ( 'on' | 'off' ) | 'use' ( (rtype= ( 'css' | 'javascript' ) must_be[\"resource\"] (url= STRING | nicename= VAR ) ) | ( 'module' modname= VAR ( 'alias' alias= VAR )? ) ) )* '}'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1706:4: 'meta' '{' (name= must_be_one[sar(\"description\",\"name\",\"author\")] (html_desc= HTML | string_desc= STRING ) | 'key' what= must_be_one[sar(\"errorstack\",\"googleanalytics\",\"twitter\",\"amazon\",\"kpds\",\"google\")] (key_value= STRING | '{' ( name_value_pair[key_values] ( ',' name_value_pair[key_values] )* ) '}' )+ | 'authz' 'require' 'user' | 'logging' onoff= ( 'on' | 'off' ) | 'use' ( (rtype= ( 'css' | 'javascript' ) must_be[\"resource\"] (url= STRING | nicename= VAR ) ) | ( 'module' modname= VAR ( 'alias' alias= VAR )? ) ) )* '}'
             {
             root_0 = (Object)adaptor.nil();
 
-            dbg.location(1710,4);
-            string_literal173=(Token)match(input,118,FOLLOW_118_in_meta_block4348); if (state.failed) return retval;
+            dbg.location(1706,4);
+            string_literal174=(Token)match(input,113,FOLLOW_113_in_meta_block4335); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            string_literal173_tree = (Object)adaptor.create(string_literal173);
-            adaptor.addChild(root_0, string_literal173_tree);
+            string_literal174_tree = (Object)adaptor.create(string_literal174);
+            adaptor.addChild(root_0, string_literal174_tree);
             }
-            dbg.location(1710,11);
-            char_literal174=(Token)match(input,29,FOLLOW_29_in_meta_block4350); if (state.failed) return retval;
+            dbg.location(1706,11);
+            char_literal175=(Token)match(input,29,FOLLOW_29_in_meta_block4337); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            char_literal174_tree = (Object)adaptor.create(char_literal174);
-            adaptor.addChild(root_0, char_literal174_tree);
+            char_literal175_tree = (Object)adaptor.create(char_literal175);
+            adaptor.addChild(root_0, char_literal175_tree);
             }
-            dbg.location(1711,2);
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1711:2: (name= must_be_one[sar(\"description\",\"name\",\"author\")] (html_desc= HTML | string_desc= STRING ) | 'key' what= must_be_one[sar(\"errorstack\",\"googleanalytics\",\"twitter\",\"amazon\",\"kpds\",\"google\")] (key_value= STRING | '{' ( name_value_pair[key_values] ( ',' name_value_pair[key_values] )* ) '}' )+ | 'authz' 'require' 'user' | 'logging' onoff= ( 'on' | 'off' ) | 'use' ( (rtype= ( 'css' | 'javascript' ) must_be[\"resource\"] (url= STRING | nicename= VAR ) ) | ( 'module' modname= VAR ( 'alias' alias= VAR )? ) ) )*
-            try { dbg.enterSubRule(100);
+            dbg.location(1707,2);
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1707:2: (name= must_be_one[sar(\"description\",\"name\",\"author\")] (html_desc= HTML | string_desc= STRING ) | 'key' what= must_be_one[sar(\"errorstack\",\"googleanalytics\",\"twitter\",\"amazon\",\"kpds\",\"google\")] (key_value= STRING | '{' ( name_value_pair[key_values] ( ',' name_value_pair[key_values] )* ) '}' )+ | 'authz' 'require' 'user' | 'logging' onoff= ( 'on' | 'off' ) | 'use' ( (rtype= ( 'css' | 'javascript' ) must_be[\"resource\"] (url= STRING | nicename= VAR ) ) | ( 'module' modname= VAR ( 'alias' alias= VAR )? ) ) )*
+            try { dbg.enterSubRule(105);
 
-            loop100:
+            loop105:
             do {
-                int alt100=6;
-                try { dbg.enterDecision(100);
+                int alt105=6;
+                try { dbg.enterDecision(105);
 
                 switch ( input.LA(1) ) {
                 case VAR:
                     {
-                    alt100=1;
+                    alt105=1;
                     }
                     break;
-                case 119:
+                case 114:
                     {
-                    alt100=2;
+                    alt105=2;
+                    }
+                    break;
+                case 115:
+                    {
+                    alt105=3;
+                    }
+                    break;
+                case 118:
+                    {
+                    alt105=4;
                     }
                     break;
                 case 120:
                     {
-                    alt100=3;
-                    }
-                    break;
-                case 123:
-                    {
-                    alt100=4;
-                    }
-                    break;
-                case 125:
-                    {
-                    alt100=5;
+                    alt105=5;
                     }
                     break;
 
                 }
 
-                } finally {dbg.exitDecision(100);}
+                } finally {dbg.exitDecision(105);}
 
-                switch (alt100) {
+                switch (alt105) {
             	case 1 :
             	    dbg.enterAlt(1);
 
-            	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1711:5: name= must_be_one[sar(\"description\",\"name\",\"author\")] (html_desc= HTML | string_desc= STRING )
+            	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1707:5: name= must_be_one[sar(\"description\",\"name\",\"author\")] (html_desc= HTML | string_desc= STRING )
             	    {
-            	    dbg.location(1711,9);
-            	    pushFollow(FOLLOW_must_be_one_in_meta_block4359);
+            	    dbg.location(1707,9);
+            	    pushFollow(FOLLOW_must_be_one_in_meta_block4346);
             	    name=must_be_one(sar("description","name","author"));
 
             	    state._fsp--;
             	    if (state.failed) return retval;
             	    if ( state.backtracking==0 ) adaptor.addChild(root_0, name.getTree());
-            	    dbg.location(1711,58);
-            	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1711:58: (html_desc= HTML | string_desc= STRING )
-            	    int alt94=2;
-            	    try { dbg.enterSubRule(94);
-            	    try { dbg.enterDecision(94);
-
-            	    int LA94_0 = input.LA(1);
-
-            	    if ( (LA94_0==HTML) ) {
-            	        alt94=1;
-            	    }
-            	    else if ( (LA94_0==STRING) ) {
-            	        alt94=2;
-            	    }
-            	    else {
-            	        if (state.backtracking>0) {state.failed=true; return retval;}
-            	        NoViableAltException nvae =
-            	            new NoViableAltException("", 94, 0, input);
-
-            	        dbg.recognitionException(nvae);
-            	        throw nvae;
-            	    }
-            	    } finally {dbg.exitDecision(94);}
-
-            	    switch (alt94) {
-            	        case 1 :
-            	            dbg.enterAlt(1);
-
-            	            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1711:59: html_desc= HTML
-            	            {
-            	            dbg.location(1711,68);
-            	            html_desc=(Token)match(input,HTML,FOLLOW_HTML_in_meta_block4365); if (state.failed) return retval;
-            	            if ( state.backtracking==0 ) {
-            	            html_desc_tree = (Object)adaptor.create(html_desc);
-            	            adaptor.addChild(root_0, html_desc_tree);
-            	            }
-
-            	            }
-            	            break;
-            	        case 2 :
-            	            dbg.enterAlt(2);
-
-            	            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1711:74: string_desc= STRING
-            	            {
-            	            dbg.location(1711,85);
-            	            string_desc=(Token)match(input,STRING,FOLLOW_STRING_in_meta_block4369); if (state.failed) return retval;
-            	            if ( state.backtracking==0 ) {
-            	            string_desc_tree = (Object)adaptor.create(string_desc);
-            	            adaptor.addChild(root_0, string_desc_tree);
-            	            }
-
-            	            }
-            	            break;
-
-            	    }
-            	    } finally {dbg.exitSubRule(94);}
-
-            	    dbg.location(1712,3);
-            	    if ( state.backtracking==0 ) {
-            	       
-            	      			if((string_desc!=null?string_desc.getText():null) != null)
-            	      				meta_block_hash.put((name!=null?input.toString(name.start,name.stop):null),strip_string((string_desc!=null?string_desc.getText():null))); 
-            	      			else
-            	      				meta_block_hash.put((name!=null?input.toString(name.start,name.stop):null),strip_wrappers("<<",">>",(html_desc!=null?html_desc.getText():null))); 
-            	      	
-            	      		
-            	    }
-
-            	    }
-            	    break;
-            	case 2 :
-            	    dbg.enterAlt(2);
-
-            	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1719:5: 'key' what= must_be_one[sar(\"errorstack\",\"googleanalytics\",\"twitter\",\"amazon\",\"kpds\",\"google\")] (key_value= STRING | '{' ( name_value_pair[key_values] ( ',' name_value_pair[key_values] )* ) '}' )+
-            	    {
-            	    dbg.location(1719,5);
-            	    string_literal175=(Token)match(input,119,FOLLOW_119_in_meta_block4383); if (state.failed) return retval;
-            	    if ( state.backtracking==0 ) {
-            	    string_literal175_tree = (Object)adaptor.create(string_literal175);
-            	    adaptor.addChild(root_0, string_literal175_tree);
-            	    }
-            	    dbg.location(1719,15);
-            	    pushFollow(FOLLOW_must_be_one_in_meta_block4387);
-            	    what=must_be_one(sar("errorstack","googleanalytics","twitter","amazon","kpds","google"));
-
-            	    state._fsp--;
-            	    if (state.failed) return retval;
-            	    if ( state.backtracking==0 ) adaptor.addChild(root_0, what.getTree());
-            	    dbg.location(1719,100);
-            	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1719:100: (key_value= STRING | '{' ( name_value_pair[key_values] ( ',' name_value_pair[key_values] )* ) '}' )+
-            	    int cnt96=0;
-            	    try { dbg.enterSubRule(96);
-
-            	    loop96:
-            	    do {
-            	        int alt96=3;
-            	        try { dbg.enterDecision(96);
-
-            	        int LA96_0 = input.LA(1);
-
-            	        if ( (LA96_0==STRING) ) {
-            	            alt96=1;
-            	        }
-            	        else if ( (LA96_0==29) ) {
-            	            alt96=2;
-            	        }
-
-
-            	        } finally {dbg.exitDecision(96);}
-
-            	        switch (alt96) {
-            	    	case 1 :
-            	    	    dbg.enterAlt(1);
-
-            	    	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1719:101: key_value= STRING
-            	    	    {
-            	    	    dbg.location(1719,110);
-            	    	    key_value=(Token)match(input,STRING,FOLLOW_STRING_in_meta_block4393); if (state.failed) return retval;
-            	    	    if ( state.backtracking==0 ) {
-            	    	    key_value_tree = (Object)adaptor.create(key_value);
-            	    	    adaptor.addChild(root_0, key_value_tree);
-            	    	    }
-
-            	    	    }
-            	    	    break;
-            	    	case 2 :
-            	    	    dbg.enterAlt(2);
-
-            	    	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1719:120: '{' ( name_value_pair[key_values] ( ',' name_value_pair[key_values] )* ) '}'
-            	    	    {
-            	    	    dbg.location(1719,120);
-            	    	    char_literal176=(Token)match(input,29,FOLLOW_29_in_meta_block4397); if (state.failed) return retval;
-            	    	    if ( state.backtracking==0 ) {
-            	    	    char_literal176_tree = (Object)adaptor.create(char_literal176);
-            	    	    adaptor.addChild(root_0, char_literal176_tree);
-            	    	    }
-            	    	    dbg.location(1719,124);
-            	    	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1719:124: ( name_value_pair[key_values] ( ',' name_value_pair[key_values] )* )
-            	    	    dbg.enterAlt(1);
-
-            	    	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1719:125: name_value_pair[key_values] ( ',' name_value_pair[key_values] )*
-            	    	    {
-            	    	    dbg.location(1719,125);
-            	    	    pushFollow(FOLLOW_name_value_pair_in_meta_block4400);
-            	    	    name_value_pair177=name_value_pair(key_values);
-
-            	    	    state._fsp--;
-            	    	    if (state.failed) return retval;
-            	    	    if ( state.backtracking==0 ) adaptor.addChild(root_0, name_value_pair177.getTree());
-            	    	    dbg.location(1719,153);
-            	    	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1719:153: ( ',' name_value_pair[key_values] )*
-            	    	    try { dbg.enterSubRule(95);
-
-            	    	    loop95:
-            	    	    do {
-            	    	        int alt95=2;
-            	    	        try { dbg.enterDecision(95);
-
-            	    	        int LA95_0 = input.LA(1);
-
-            	    	        if ( (LA95_0==51) ) {
-            	    	            alt95=1;
-            	    	        }
-
-
-            	    	        } finally {dbg.exitDecision(95);}
-
-            	    	        switch (alt95) {
-            	    	    	case 1 :
-            	    	    	    dbg.enterAlt(1);
-
-            	    	    	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1719:154: ',' name_value_pair[key_values]
-            	    	    	    {
-            	    	    	    dbg.location(1719,154);
-            	    	    	    char_literal178=(Token)match(input,51,FOLLOW_51_in_meta_block4404); if (state.failed) return retval;
-            	    	    	    if ( state.backtracking==0 ) {
-            	    	    	    char_literal178_tree = (Object)adaptor.create(char_literal178);
-            	    	    	    adaptor.addChild(root_0, char_literal178_tree);
-            	    	    	    }
-            	    	    	    dbg.location(1719,158);
-            	    	    	    pushFollow(FOLLOW_name_value_pair_in_meta_block4406);
-            	    	    	    name_value_pair179=name_value_pair(key_values);
-
-            	    	    	    state._fsp--;
-            	    	    	    if (state.failed) return retval;
-            	    	    	    if ( state.backtracking==0 ) adaptor.addChild(root_0, name_value_pair179.getTree());
-
-            	    	    	    }
-            	    	    	    break;
-
-            	    	    	default :
-            	    	    	    break loop95;
-            	    	        }
-            	    	    } while (true);
-            	    	    } finally {dbg.exitSubRule(95);}
-
-
-            	    	    }
-
-            	    	    dbg.location(1719,189);
-            	    	    char_literal180=(Token)match(input,30,FOLLOW_30_in_meta_block4412); if (state.failed) return retval;
-            	    	    if ( state.backtracking==0 ) {
-            	    	    char_literal180_tree = (Object)adaptor.create(char_literal180);
-            	    	    adaptor.addChild(root_0, char_literal180_tree);
-            	    	    }
-
-            	    	    }
-            	    	    break;
-
-            	    	default :
-            	    	    if ( cnt96 >= 1 ) break loop96;
-            	    	    if (state.backtracking>0) {state.failed=true; return retval;}
-            	                EarlyExitException eee =
-            	                    new EarlyExitException(96, input);
-            	                dbg.recognitionException(eee);
-
-            	                throw eee;
-            	        }
-            	        cnt96++;
-            	    } while (true);
-            	    } finally {dbg.exitSubRule(96);}
-
-            	    dbg.location(1719,197);
-            	    if ( state.backtracking==0 ) {
-            	       
-            	      		if(!key_values.isEmpty()) 
-            	      			keys_map.put((what!=null?input.toString(what.start,what.stop):null),key_values); 
-            	      		else 
-            	      			keys_map.put((what!=null?input.toString(what.start,what.stop):null),strip_string((key_value!=null?key_value.getText():null))); 
-            	      	
-            	    }
-
-            	    }
-            	    break;
-            	case 3 :
-            	    dbg.enterAlt(3);
-
-            	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1725:4: 'authz' 'require' 'user'
-            	    {
-            	    dbg.location(1725,4);
-            	    string_literal181=(Token)match(input,120,FOLLOW_120_in_meta_block4424); if (state.failed) return retval;
-            	    if ( state.backtracking==0 ) {
-            	    string_literal181_tree = (Object)adaptor.create(string_literal181);
-            	    adaptor.addChild(root_0, string_literal181_tree);
-            	    }
-            	    dbg.location(1725,12);
-            	    string_literal182=(Token)match(input,121,FOLLOW_121_in_meta_block4426); if (state.failed) return retval;
-            	    if ( state.backtracking==0 ) {
-            	    string_literal182_tree = (Object)adaptor.create(string_literal182);
-            	    adaptor.addChild(root_0, string_literal182_tree);
-            	    }
-            	    dbg.location(1725,22);
-            	    string_literal183=(Token)match(input,122,FOLLOW_122_in_meta_block4428); if (state.failed) return retval;
-            	    if ( state.backtracking==0 ) {
-            	    string_literal183_tree = (Object)adaptor.create(string_literal183);
-            	    adaptor.addChild(root_0, string_literal183_tree);
-            	    }
-            	    dbg.location(1725,29);
-            	    if ( state.backtracking==0 ) {
-            	        
-            	      		HashMap tmp = new HashMap(); 
-            	      		tmp.put("level","user");
-            	      		tmp.put("type","required");
-            	      		meta_block_hash.put("authz",tmp);
-            	      	   
-            	    }
-
-            	    }
-            	    break;
-            	case 4 :
-            	    dbg.enterAlt(4);
-
-            	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1731:4: 'logging' onoff= ( 'on' | 'off' )
-            	    {
-            	    dbg.location(1731,4);
-            	    string_literal184=(Token)match(input,123,FOLLOW_123_in_meta_block4436); if (state.failed) return retval;
-            	    if ( state.backtracking==0 ) {
-            	    string_literal184_tree = (Object)adaptor.create(string_literal184);
-            	    adaptor.addChild(root_0, string_literal184_tree);
-            	    }
-            	    dbg.location(1731,19);
-            	    onoff=(Token)input.LT(1);
-            	    if ( input.LA(1)==68||input.LA(1)==124 ) {
-            	        input.consume();
-            	        if ( state.backtracking==0 ) adaptor.addChild(root_0, (Object)adaptor.create(onoff));
-            	        state.errorRecovery=false;state.failed=false;
-            	    }
-            	    else {
-            	        if (state.backtracking>0) {state.failed=true; return retval;}
-            	        MismatchedSetException mse = new MismatchedSetException(null,input);
-            	        dbg.recognitionException(mse);
-            	        throw mse;
-            	    }
-
-            	    dbg.location(1731,33);
-            	    if ( state.backtracking==0 ) {
-            	        meta_block_hash.put("logging",(onoff!=null?onoff.getText():null)); 
-            	    }
-
-            	    }
-            	    break;
-            	case 5 :
-            	    dbg.enterAlt(5);
-
-            	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1732:4: 'use' ( (rtype= ( 'css' | 'javascript' ) must_be[\"resource\"] (url= STRING | nicename= VAR ) ) | ( 'module' modname= VAR ( 'alias' alias= VAR )? ) )
-            	    {
-            	    dbg.location(1732,4);
-            	    string_literal185=(Token)match(input,125,FOLLOW_125_in_meta_block4451); if (state.failed) return retval;
-            	    if ( state.backtracking==0 ) {
-            	    string_literal185_tree = (Object)adaptor.create(string_literal185);
-            	    adaptor.addChild(root_0, string_literal185_tree);
-            	    }
-            	    dbg.location(1732,10);
-            	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1732:10: ( (rtype= ( 'css' | 'javascript' ) must_be[\"resource\"] (url= STRING | nicename= VAR ) ) | ( 'module' modname= VAR ( 'alias' alias= VAR )? ) )
+            	    dbg.location(1707,58);
+            	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1707:58: (html_desc= HTML | string_desc= STRING )
             	    int alt99=2;
             	    try { dbg.enterSubRule(99);
             	    try { dbg.enterDecision(99);
 
             	    int LA99_0 = input.LA(1);
 
-            	    if ( (LA99_0==115||LA99_0==126) ) {
+            	    if ( (LA99_0==HTML) ) {
             	        alt99=1;
             	    }
-            	    else if ( (LA99_0==127) ) {
+            	    else if ( (LA99_0==STRING) ) {
             	        alt99=2;
             	    }
             	    else {
@@ -13472,17 +13134,329 @@ public class RuleSet2Parser extends DebugParser {
             	        case 1 :
             	            dbg.enterAlt(1);
 
-            	            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1732:12: (rtype= ( 'css' | 'javascript' ) must_be[\"resource\"] (url= STRING | nicename= VAR ) )
+            	            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1707:59: html_desc= HTML
             	            {
-            	            dbg.location(1732,12);
-            	            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1732:12: (rtype= ( 'css' | 'javascript' ) must_be[\"resource\"] (url= STRING | nicename= VAR ) )
+            	            dbg.location(1707,68);
+            	            html_desc=(Token)match(input,HTML,FOLLOW_HTML_in_meta_block4352); if (state.failed) return retval;
+            	            if ( state.backtracking==0 ) {
+            	            html_desc_tree = (Object)adaptor.create(html_desc);
+            	            adaptor.addChild(root_0, html_desc_tree);
+            	            }
+
+            	            }
+            	            break;
+            	        case 2 :
+            	            dbg.enterAlt(2);
+
+            	            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1707:74: string_desc= STRING
+            	            {
+            	            dbg.location(1707,85);
+            	            string_desc=(Token)match(input,STRING,FOLLOW_STRING_in_meta_block4356); if (state.failed) return retval;
+            	            if ( state.backtracking==0 ) {
+            	            string_desc_tree = (Object)adaptor.create(string_desc);
+            	            adaptor.addChild(root_0, string_desc_tree);
+            	            }
+
+            	            }
+            	            break;
+
+            	    }
+            	    } finally {dbg.exitSubRule(99);}
+
+            	    dbg.location(1708,3);
+            	    if ( state.backtracking==0 ) {
+            	       
+            	      			if((string_desc!=null?string_desc.getText():null) != null)
+            	      				meta_block_hash.put((name!=null?input.toString(name.start,name.stop):null),strip_string((string_desc!=null?string_desc.getText():null))); 
+            	      			else
+            	      				meta_block_hash.put((name!=null?input.toString(name.start,name.stop):null),strip_wrappers("<<",">>",(html_desc!=null?html_desc.getText():null))); 
+            	      	
+            	      		
+            	    }
+
+            	    }
+            	    break;
+            	case 2 :
+            	    dbg.enterAlt(2);
+
+            	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1715:5: 'key' what= must_be_one[sar(\"errorstack\",\"googleanalytics\",\"twitter\",\"amazon\",\"kpds\",\"google\")] (key_value= STRING | '{' ( name_value_pair[key_values] ( ',' name_value_pair[key_values] )* ) '}' )+
+            	    {
+            	    dbg.location(1715,5);
+            	    string_literal176=(Token)match(input,114,FOLLOW_114_in_meta_block4370); if (state.failed) return retval;
+            	    if ( state.backtracking==0 ) {
+            	    string_literal176_tree = (Object)adaptor.create(string_literal176);
+            	    adaptor.addChild(root_0, string_literal176_tree);
+            	    }
+            	    dbg.location(1715,15);
+            	    pushFollow(FOLLOW_must_be_one_in_meta_block4374);
+            	    what=must_be_one(sar("errorstack","googleanalytics","twitter","amazon","kpds","google"));
+
+            	    state._fsp--;
+            	    if (state.failed) return retval;
+            	    if ( state.backtracking==0 ) adaptor.addChild(root_0, what.getTree());
+            	    dbg.location(1715,100);
+            	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1715:100: (key_value= STRING | '{' ( name_value_pair[key_values] ( ',' name_value_pair[key_values] )* ) '}' )+
+            	    int cnt101=0;
+            	    try { dbg.enterSubRule(101);
+
+            	    loop101:
+            	    do {
+            	        int alt101=3;
+            	        try { dbg.enterDecision(101);
+
+            	        int LA101_0 = input.LA(1);
+
+            	        if ( (LA101_0==STRING) ) {
+            	            alt101=1;
+            	        }
+            	        else if ( (LA101_0==29) ) {
+            	            alt101=2;
+            	        }
+
+
+            	        } finally {dbg.exitDecision(101);}
+
+            	        switch (alt101) {
+            	    	case 1 :
+            	    	    dbg.enterAlt(1);
+
+            	    	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1715:101: key_value= STRING
+            	    	    {
+            	    	    dbg.location(1715,110);
+            	    	    key_value=(Token)match(input,STRING,FOLLOW_STRING_in_meta_block4380); if (state.failed) return retval;
+            	    	    if ( state.backtracking==0 ) {
+            	    	    key_value_tree = (Object)adaptor.create(key_value);
+            	    	    adaptor.addChild(root_0, key_value_tree);
+            	    	    }
+
+            	    	    }
+            	    	    break;
+            	    	case 2 :
+            	    	    dbg.enterAlt(2);
+
+            	    	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1715:120: '{' ( name_value_pair[key_values] ( ',' name_value_pair[key_values] )* ) '}'
+            	    	    {
+            	    	    dbg.location(1715,120);
+            	    	    char_literal177=(Token)match(input,29,FOLLOW_29_in_meta_block4384); if (state.failed) return retval;
+            	    	    if ( state.backtracking==0 ) {
+            	    	    char_literal177_tree = (Object)adaptor.create(char_literal177);
+            	    	    adaptor.addChild(root_0, char_literal177_tree);
+            	    	    }
+            	    	    dbg.location(1715,124);
+            	    	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1715:124: ( name_value_pair[key_values] ( ',' name_value_pair[key_values] )* )
+            	    	    dbg.enterAlt(1);
+
+            	    	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1715:125: name_value_pair[key_values] ( ',' name_value_pair[key_values] )*
+            	    	    {
+            	    	    dbg.location(1715,125);
+            	    	    pushFollow(FOLLOW_name_value_pair_in_meta_block4387);
+            	    	    name_value_pair178=name_value_pair(key_values);
+
+            	    	    state._fsp--;
+            	    	    if (state.failed) return retval;
+            	    	    if ( state.backtracking==0 ) adaptor.addChild(root_0, name_value_pair178.getTree());
+            	    	    dbg.location(1715,153);
+            	    	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1715:153: ( ',' name_value_pair[key_values] )*
+            	    	    try { dbg.enterSubRule(100);
+
+            	    	    loop100:
+            	    	    do {
+            	    	        int alt100=2;
+            	    	        try { dbg.enterDecision(100);
+
+            	    	        int LA100_0 = input.LA(1);
+
+            	    	        if ( (LA100_0==48) ) {
+            	    	            alt100=1;
+            	    	        }
+
+
+            	    	        } finally {dbg.exitDecision(100);}
+
+            	    	        switch (alt100) {
+            	    	    	case 1 :
+            	    	    	    dbg.enterAlt(1);
+
+            	    	    	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1715:154: ',' name_value_pair[key_values]
+            	    	    	    {
+            	    	    	    dbg.location(1715,154);
+            	    	    	    char_literal179=(Token)match(input,48,FOLLOW_48_in_meta_block4391); if (state.failed) return retval;
+            	    	    	    if ( state.backtracking==0 ) {
+            	    	    	    char_literal179_tree = (Object)adaptor.create(char_literal179);
+            	    	    	    adaptor.addChild(root_0, char_literal179_tree);
+            	    	    	    }
+            	    	    	    dbg.location(1715,158);
+            	    	    	    pushFollow(FOLLOW_name_value_pair_in_meta_block4393);
+            	    	    	    name_value_pair180=name_value_pair(key_values);
+
+            	    	    	    state._fsp--;
+            	    	    	    if (state.failed) return retval;
+            	    	    	    if ( state.backtracking==0 ) adaptor.addChild(root_0, name_value_pair180.getTree());
+
+            	    	    	    }
+            	    	    	    break;
+
+            	    	    	default :
+            	    	    	    break loop100;
+            	    	        }
+            	    	    } while (true);
+            	    	    } finally {dbg.exitSubRule(100);}
+
+
+            	    	    }
+
+            	    	    dbg.location(1715,189);
+            	    	    char_literal181=(Token)match(input,30,FOLLOW_30_in_meta_block4399); if (state.failed) return retval;
+            	    	    if ( state.backtracking==0 ) {
+            	    	    char_literal181_tree = (Object)adaptor.create(char_literal181);
+            	    	    adaptor.addChild(root_0, char_literal181_tree);
+            	    	    }
+
+            	    	    }
+            	    	    break;
+
+            	    	default :
+            	    	    if ( cnt101 >= 1 ) break loop101;
+            	    	    if (state.backtracking>0) {state.failed=true; return retval;}
+            	                EarlyExitException eee =
+            	                    new EarlyExitException(101, input);
+            	                dbg.recognitionException(eee);
+
+            	                throw eee;
+            	        }
+            	        cnt101++;
+            	    } while (true);
+            	    } finally {dbg.exitSubRule(101);}
+
+            	    dbg.location(1715,197);
+            	    if ( state.backtracking==0 ) {
+            	       
+            	      		if(!key_values.isEmpty()) 
+            	      			keys_map.put((what!=null?input.toString(what.start,what.stop):null),key_values); 
+            	      		else 
+            	      			keys_map.put((what!=null?input.toString(what.start,what.stop):null),strip_string((key_value!=null?key_value.getText():null))); 
+            	      	
+            	    }
+
+            	    }
+            	    break;
+            	case 3 :
+            	    dbg.enterAlt(3);
+
+            	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1721:4: 'authz' 'require' 'user'
+            	    {
+            	    dbg.location(1721,4);
+            	    string_literal182=(Token)match(input,115,FOLLOW_115_in_meta_block4411); if (state.failed) return retval;
+            	    if ( state.backtracking==0 ) {
+            	    string_literal182_tree = (Object)adaptor.create(string_literal182);
+            	    adaptor.addChild(root_0, string_literal182_tree);
+            	    }
+            	    dbg.location(1721,12);
+            	    string_literal183=(Token)match(input,116,FOLLOW_116_in_meta_block4413); if (state.failed) return retval;
+            	    if ( state.backtracking==0 ) {
+            	    string_literal183_tree = (Object)adaptor.create(string_literal183);
+            	    adaptor.addChild(root_0, string_literal183_tree);
+            	    }
+            	    dbg.location(1721,22);
+            	    string_literal184=(Token)match(input,117,FOLLOW_117_in_meta_block4415); if (state.failed) return retval;
+            	    if ( state.backtracking==0 ) {
+            	    string_literal184_tree = (Object)adaptor.create(string_literal184);
+            	    adaptor.addChild(root_0, string_literal184_tree);
+            	    }
+            	    dbg.location(1721,29);
+            	    if ( state.backtracking==0 ) {
+            	        
+            	      		HashMap tmp = new HashMap(); 
+            	      		tmp.put("level","user");
+            	      		tmp.put("type","required");
+            	      		meta_block_hash.put("authz",tmp);
+            	      	   
+            	    }
+
+            	    }
+            	    break;
+            	case 4 :
+            	    dbg.enterAlt(4);
+
+            	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1727:4: 'logging' onoff= ( 'on' | 'off' )
+            	    {
+            	    dbg.location(1727,4);
+            	    string_literal185=(Token)match(input,118,FOLLOW_118_in_meta_block4423); if (state.failed) return retval;
+            	    if ( state.backtracking==0 ) {
+            	    string_literal185_tree = (Object)adaptor.create(string_literal185);
+            	    adaptor.addChild(root_0, string_literal185_tree);
+            	    }
+            	    dbg.location(1727,19);
+            	    onoff=(Token)input.LT(1);
+            	    if ( input.LA(1)==64||input.LA(1)==119 ) {
+            	        input.consume();
+            	        if ( state.backtracking==0 ) adaptor.addChild(root_0, (Object)adaptor.create(onoff));
+            	        state.errorRecovery=false;state.failed=false;
+            	    }
+            	    else {
+            	        if (state.backtracking>0) {state.failed=true; return retval;}
+            	        MismatchedSetException mse = new MismatchedSetException(null,input);
+            	        dbg.recognitionException(mse);
+            	        throw mse;
+            	    }
+
+            	    dbg.location(1727,33);
+            	    if ( state.backtracking==0 ) {
+            	        meta_block_hash.put("logging",(onoff!=null?onoff.getText():null)); 
+            	    }
+
+            	    }
+            	    break;
+            	case 5 :
+            	    dbg.enterAlt(5);
+
+            	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1728:4: 'use' ( (rtype= ( 'css' | 'javascript' ) must_be[\"resource\"] (url= STRING | nicename= VAR ) ) | ( 'module' modname= VAR ( 'alias' alias= VAR )? ) )
+            	    {
+            	    dbg.location(1728,4);
+            	    string_literal186=(Token)match(input,120,FOLLOW_120_in_meta_block4438); if (state.failed) return retval;
+            	    if ( state.backtracking==0 ) {
+            	    string_literal186_tree = (Object)adaptor.create(string_literal186);
+            	    adaptor.addChild(root_0, string_literal186_tree);
+            	    }
+            	    dbg.location(1728,10);
+            	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1728:10: ( (rtype= ( 'css' | 'javascript' ) must_be[\"resource\"] (url= STRING | nicename= VAR ) ) | ( 'module' modname= VAR ( 'alias' alias= VAR )? ) )
+            	    int alt104=2;
+            	    try { dbg.enterSubRule(104);
+            	    try { dbg.enterDecision(104);
+
+            	    int LA104_0 = input.LA(1);
+
+            	    if ( (LA104_0==110||LA104_0==121) ) {
+            	        alt104=1;
+            	    }
+            	    else if ( (LA104_0==122) ) {
+            	        alt104=2;
+            	    }
+            	    else {
+            	        if (state.backtracking>0) {state.failed=true; return retval;}
+            	        NoViableAltException nvae =
+            	            new NoViableAltException("", 104, 0, input);
+
+            	        dbg.recognitionException(nvae);
+            	        throw nvae;
+            	    }
+            	    } finally {dbg.exitDecision(104);}
+
+            	    switch (alt104) {
+            	        case 1 :
             	            dbg.enterAlt(1);
 
-            	            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1732:13: rtype= ( 'css' | 'javascript' ) must_be[\"resource\"] (url= STRING | nicename= VAR )
+            	            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1728:12: (rtype= ( 'css' | 'javascript' ) must_be[\"resource\"] (url= STRING | nicename= VAR ) )
             	            {
-            	            dbg.location(1732,18);
+            	            dbg.location(1728,12);
+            	            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1728:12: (rtype= ( 'css' | 'javascript' ) must_be[\"resource\"] (url= STRING | nicename= VAR ) )
+            	            dbg.enterAlt(1);
+
+            	            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1728:13: rtype= ( 'css' | 'javascript' ) must_be[\"resource\"] (url= STRING | nicename= VAR )
+            	            {
+            	            dbg.location(1728,18);
             	            rtype=(Token)input.LT(1);
-            	            if ( input.LA(1)==115||input.LA(1)==126 ) {
+            	            if ( input.LA(1)==110||input.LA(1)==121 ) {
             	                input.consume();
             	                if ( state.backtracking==0 ) adaptor.addChild(root_0, (Object)adaptor.create(rtype));
             	                state.errorRecovery=false;state.failed=false;
@@ -13494,45 +13468,45 @@ public class RuleSet2Parser extends DebugParser {
             	                throw mse;
             	            }
 
-            	            dbg.location(1732,40);
-            	            pushFollow(FOLLOW_must_be_in_meta_block4464);
-            	            must_be186=must_be("resource");
+            	            dbg.location(1728,40);
+            	            pushFollow(FOLLOW_must_be_in_meta_block4451);
+            	            must_be187=must_be("resource");
 
             	            state._fsp--;
             	            if (state.failed) return retval;
-            	            if ( state.backtracking==0 ) adaptor.addChild(root_0, must_be186.getTree());
-            	            dbg.location(1732,60);
-            	            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1732:60: (url= STRING | nicename= VAR )
-            	            int alt97=2;
-            	            try { dbg.enterSubRule(97);
-            	            try { dbg.enterDecision(97);
+            	            if ( state.backtracking==0 ) adaptor.addChild(root_0, must_be187.getTree());
+            	            dbg.location(1728,60);
+            	            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1728:60: (url= STRING | nicename= VAR )
+            	            int alt102=2;
+            	            try { dbg.enterSubRule(102);
+            	            try { dbg.enterDecision(102);
 
-            	            int LA97_0 = input.LA(1);
+            	            int LA102_0 = input.LA(1);
 
-            	            if ( (LA97_0==STRING) ) {
-            	                alt97=1;
+            	            if ( (LA102_0==STRING) ) {
+            	                alt102=1;
             	            }
-            	            else if ( (LA97_0==VAR) ) {
-            	                alt97=2;
+            	            else if ( (LA102_0==VAR) ) {
+            	                alt102=2;
             	            }
             	            else {
             	                if (state.backtracking>0) {state.failed=true; return retval;}
             	                NoViableAltException nvae =
-            	                    new NoViableAltException("", 97, 0, input);
+            	                    new NoViableAltException("", 102, 0, input);
 
             	                dbg.recognitionException(nvae);
             	                throw nvae;
             	            }
-            	            } finally {dbg.exitDecision(97);}
+            	            } finally {dbg.exitDecision(102);}
 
-            	            switch (alt97) {
+            	            switch (alt102) {
             	                case 1 :
             	                    dbg.enterAlt(1);
 
-            	                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1732:61: url= STRING
+            	                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1728:61: url= STRING
             	                    {
-            	                    dbg.location(1732,64);
-            	                    url=(Token)match(input,STRING,FOLLOW_STRING_in_meta_block4470); if (state.failed) return retval;
+            	                    dbg.location(1728,64);
+            	                    url=(Token)match(input,STRING,FOLLOW_STRING_in_meta_block4457); if (state.failed) return retval;
             	                    if ( state.backtracking==0 ) {
             	                    url_tree = (Object)adaptor.create(url);
             	                    adaptor.addChild(root_0, url_tree);
@@ -13543,10 +13517,10 @@ public class RuleSet2Parser extends DebugParser {
             	                case 2 :
             	                    dbg.enterAlt(2);
 
-            	                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1732:74: nicename= VAR
+            	                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1728:74: nicename= VAR
             	                    {
-            	                    dbg.location(1732,82);
-            	                    nicename=(Token)match(input,VAR,FOLLOW_VAR_in_meta_block4476); if (state.failed) return retval;
+            	                    dbg.location(1728,82);
+            	                    nicename=(Token)match(input,VAR,FOLLOW_VAR_in_meta_block4463); if (state.failed) return retval;
             	                    if ( state.backtracking==0 ) {
             	                    nicename_tree = (Object)adaptor.create(nicename);
             	                    adaptor.addChild(root_0, nicename_tree);
@@ -13556,9 +13530,9 @@ public class RuleSet2Parser extends DebugParser {
             	                    break;
 
             	            }
-            	            } finally {dbg.exitSubRule(97);}
+            	            } finally {dbg.exitSubRule(102);}
 
-            	            dbg.location(1732,91);
+            	            dbg.location(1728,91);
             	            if ( state.backtracking==0 ) {
 
             	              		HashMap tmp = new HashMap();  
@@ -13589,53 +13563,53 @@ public class RuleSet2Parser extends DebugParser {
             	        case 2 :
             	            dbg.enterAlt(2);
 
-            	            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1751:6: ( 'module' modname= VAR ( 'alias' alias= VAR )? )
+            	            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1747:6: ( 'module' modname= VAR ( 'alias' alias= VAR )? )
             	            {
-            	            dbg.location(1751,6);
-            	            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1751:6: ( 'module' modname= VAR ( 'alias' alias= VAR )? )
+            	            dbg.location(1747,6);
+            	            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1747:6: ( 'module' modname= VAR ( 'alias' alias= VAR )? )
             	            dbg.enterAlt(1);
 
-            	            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1751:7: 'module' modname= VAR ( 'alias' alias= VAR )?
+            	            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1747:7: 'module' modname= VAR ( 'alias' alias= VAR )?
             	            {
-            	            dbg.location(1751,7);
-            	            string_literal187=(Token)match(input,127,FOLLOW_127_in_meta_block4491); if (state.failed) return retval;
+            	            dbg.location(1747,7);
+            	            string_literal188=(Token)match(input,122,FOLLOW_122_in_meta_block4478); if (state.failed) return retval;
             	            if ( state.backtracking==0 ) {
-            	            string_literal187_tree = (Object)adaptor.create(string_literal187);
-            	            adaptor.addChild(root_0, string_literal187_tree);
+            	            string_literal188_tree = (Object)adaptor.create(string_literal188);
+            	            adaptor.addChild(root_0, string_literal188_tree);
             	            }
-            	            dbg.location(1751,24);
-            	            modname=(Token)match(input,VAR,FOLLOW_VAR_in_meta_block4496); if (state.failed) return retval;
+            	            dbg.location(1747,24);
+            	            modname=(Token)match(input,VAR,FOLLOW_VAR_in_meta_block4483); if (state.failed) return retval;
             	            if ( state.backtracking==0 ) {
             	            modname_tree = (Object)adaptor.create(modname);
             	            adaptor.addChild(root_0, modname_tree);
             	            }
-            	            dbg.location(1751,29);
-            	            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1751:29: ( 'alias' alias= VAR )?
-            	            int alt98=2;
-            	            try { dbg.enterSubRule(98);
-            	            try { dbg.enterDecision(98);
+            	            dbg.location(1747,29);
+            	            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1747:29: ( 'alias' alias= VAR )?
+            	            int alt103=2;
+            	            try { dbg.enterSubRule(103);
+            	            try { dbg.enterDecision(103);
 
-            	            int LA98_0 = input.LA(1);
+            	            int LA103_0 = input.LA(1);
 
-            	            if ( (LA98_0==128) ) {
-            	                alt98=1;
+            	            if ( (LA103_0==123) ) {
+            	                alt103=1;
             	            }
-            	            } finally {dbg.exitDecision(98);}
+            	            } finally {dbg.exitDecision(103);}
 
-            	            switch (alt98) {
+            	            switch (alt103) {
             	                case 1 :
             	                    dbg.enterAlt(1);
 
-            	                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1751:30: 'alias' alias= VAR
+            	                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1747:30: 'alias' alias= VAR
             	                    {
-            	                    dbg.location(1751,30);
-            	                    string_literal188=(Token)match(input,128,FOLLOW_128_in_meta_block4499); if (state.failed) return retval;
+            	                    dbg.location(1747,30);
+            	                    string_literal189=(Token)match(input,123,FOLLOW_123_in_meta_block4486); if (state.failed) return retval;
             	                    if ( state.backtracking==0 ) {
-            	                    string_literal188_tree = (Object)adaptor.create(string_literal188);
-            	                    adaptor.addChild(root_0, string_literal188_tree);
+            	                    string_literal189_tree = (Object)adaptor.create(string_literal189);
+            	                    adaptor.addChild(root_0, string_literal189_tree);
             	                    }
-            	                    dbg.location(1751,43);
-            	                    alias=(Token)match(input,VAR,FOLLOW_VAR_in_meta_block4503); if (state.failed) return retval;
+            	                    dbg.location(1747,43);
+            	                    alias=(Token)match(input,VAR,FOLLOW_VAR_in_meta_block4490); if (state.failed) return retval;
             	                    if ( state.backtracking==0 ) {
             	                    alias_tree = (Object)adaptor.create(alias);
             	                    adaptor.addChild(root_0, alias_tree);
@@ -13645,12 +13619,12 @@ public class RuleSet2Parser extends DebugParser {
             	                    break;
 
             	            }
-            	            } finally {dbg.exitSubRule(98);}
+            	            } finally {dbg.exitSubRule(103);}
 
 
             	            }
 
-            	            dbg.location(1751,51);
+            	            dbg.location(1747,51);
             	            if ( state.backtracking==0 ) {
 
             	              		HashMap tmp = new HashMap(); 
@@ -13667,23 +13641,23 @@ public class RuleSet2Parser extends DebugParser {
             	            break;
 
             	    }
-            	    } finally {dbg.exitSubRule(99);}
+            	    } finally {dbg.exitSubRule(104);}
 
 
             	    }
             	    break;
 
             	default :
-            	    break loop100;
+            	    break loop105;
                 }
             } while (true);
-            } finally {dbg.exitSubRule(100);}
+            } finally {dbg.exitSubRule(105);}
 
-            dbg.location(1761,3);
-            char_literal189=(Token)match(input,30,FOLLOW_30_in_meta_block4518); if (state.failed) return retval;
+            dbg.location(1757,3);
+            char_literal190=(Token)match(input,30,FOLLOW_30_in_meta_block4505); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            char_literal189_tree = (Object)adaptor.create(char_literal189);
-            adaptor.addChild(root_0, char_literal189_tree);
+            char_literal190_tree = (Object)adaptor.create(char_literal190);
+            adaptor.addChild(root_0, char_literal190_tree);
             }
 
             }
@@ -13716,7 +13690,7 @@ public class RuleSet2Parser extends DebugParser {
         }
         finally {
         }
-        dbg.location(1763, 2);
+        dbg.location(1759, 2);
 
         }
         finally {
@@ -13735,7 +13709,7 @@ public class RuleSet2Parser extends DebugParser {
     };
 
     // $ANTLR start "dispatch_block"
-    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1766:1: dispatch_block : must_be[\"dispatch\"] '{' ( must_be[\"domain\"] domain= STRING ( '->' rsid= STRING )? )* '}' ;
+    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1762:1: dispatch_block : must_be[\"dispatch\"] '{' ( must_be[\"domain\"] domain= STRING ( '->' rsid= STRING )? )* '}' ;
     public final RuleSet2Parser.dispatch_block_return dispatch_block() throws RecognitionException {
         RuleSet2Parser.dispatch_block_return retval = new RuleSet2Parser.dispatch_block_return();
         retval.start = input.LT(1);
@@ -13744,19 +13718,19 @@ public class RuleSet2Parser extends DebugParser {
 
         Token domain=null;
         Token rsid=null;
-        Token char_literal191=null;
-        Token string_literal193=null;
-        Token char_literal194=null;
-        RuleSet2Parser.must_be_return must_be190 = null;
+        Token char_literal192=null;
+        Token string_literal194=null;
+        Token char_literal195=null;
+        RuleSet2Parser.must_be_return must_be191 = null;
 
-        RuleSet2Parser.must_be_return must_be192 = null;
+        RuleSet2Parser.must_be_return must_be193 = null;
 
 
         Object domain_tree=null;
         Object rsid_tree=null;
-        Object char_literal191_tree=null;
-        Object string_literal193_tree=null;
-        Object char_literal194_tree=null;
+        Object char_literal192_tree=null;
+        Object string_literal194_tree=null;
+        Object char_literal195_tree=null;
 
 
         	 ArrayList dispatch_block_array = (ArrayList)rule_json.get("dispatch");
@@ -13764,93 +13738,93 @@ public class RuleSet2Parser extends DebugParser {
         try { dbg.enterRule(getGrammarFileName(), "dispatch_block");
         if ( getRuleLevel()==0 ) {dbg.commence();}
         incRuleLevel();
-        dbg.location(1766, 1);
+        dbg.location(1762, 1);
 
         try {
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1772:2: ( must_be[\"dispatch\"] '{' ( must_be[\"domain\"] domain= STRING ( '->' rsid= STRING )? )* '}' )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1768:2: ( must_be[\"dispatch\"] '{' ( must_be[\"domain\"] domain= STRING ( '->' rsid= STRING )? )* '}' )
             dbg.enterAlt(1);
 
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1772:4: must_be[\"dispatch\"] '{' ( must_be[\"domain\"] domain= STRING ( '->' rsid= STRING )? )* '}'
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1768:4: must_be[\"dispatch\"] '{' ( must_be[\"domain\"] domain= STRING ( '->' rsid= STRING )? )* '}'
             {
             root_0 = (Object)adaptor.nil();
 
-            dbg.location(1772,4);
-            pushFollow(FOLLOW_must_be_in_dispatch_block4549);
-            must_be190=must_be("dispatch");
+            dbg.location(1768,4);
+            pushFollow(FOLLOW_must_be_in_dispatch_block4536);
+            must_be191=must_be("dispatch");
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) adaptor.addChild(root_0, must_be190.getTree());
-            dbg.location(1772,25);
-            char_literal191=(Token)match(input,29,FOLLOW_29_in_dispatch_block4553); if (state.failed) return retval;
+            if ( state.backtracking==0 ) adaptor.addChild(root_0, must_be191.getTree());
+            dbg.location(1768,25);
+            char_literal192=(Token)match(input,29,FOLLOW_29_in_dispatch_block4540); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            char_literal191_tree = (Object)adaptor.create(char_literal191);
-            adaptor.addChild(root_0, char_literal191_tree);
+            char_literal192_tree = (Object)adaptor.create(char_literal192);
+            adaptor.addChild(root_0, char_literal192_tree);
             }
-            dbg.location(1772,29);
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1772:29: ( must_be[\"domain\"] domain= STRING ( '->' rsid= STRING )? )*
-            try { dbg.enterSubRule(102);
+            dbg.location(1768,29);
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1768:29: ( must_be[\"domain\"] domain= STRING ( '->' rsid= STRING )? )*
+            try { dbg.enterSubRule(107);
 
-            loop102:
+            loop107:
             do {
-                int alt102=2;
-                try { dbg.enterDecision(102);
+                int alt107=2;
+                try { dbg.enterDecision(107);
 
-                int LA102_0 = input.LA(1);
+                int LA107_0 = input.LA(1);
 
-                if ( (LA102_0==VAR) ) {
-                    alt102=1;
+                if ( (LA107_0==VAR) ) {
+                    alt107=1;
                 }
 
 
-                } finally {dbg.exitDecision(102);}
+                } finally {dbg.exitDecision(107);}
 
-                switch (alt102) {
+                switch (alt107) {
             	case 1 :
             	    dbg.enterAlt(1);
 
-            	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1772:30: must_be[\"domain\"] domain= STRING ( '->' rsid= STRING )?
+            	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1768:30: must_be[\"domain\"] domain= STRING ( '->' rsid= STRING )?
             	    {
-            	    dbg.location(1772,30);
-            	    pushFollow(FOLLOW_must_be_in_dispatch_block4556);
-            	    must_be192=must_be("domain");
+            	    dbg.location(1768,30);
+            	    pushFollow(FOLLOW_must_be_in_dispatch_block4543);
+            	    must_be193=must_be("domain");
 
             	    state._fsp--;
             	    if (state.failed) return retval;
-            	    if ( state.backtracking==0 ) adaptor.addChild(root_0, must_be192.getTree());
-            	    dbg.location(1772,54);
-            	    domain=(Token)match(input,STRING,FOLLOW_STRING_in_dispatch_block4561); if (state.failed) return retval;
+            	    if ( state.backtracking==0 ) adaptor.addChild(root_0, must_be193.getTree());
+            	    dbg.location(1768,54);
+            	    domain=(Token)match(input,STRING,FOLLOW_STRING_in_dispatch_block4548); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
             	    domain_tree = (Object)adaptor.create(domain);
             	    adaptor.addChild(root_0, domain_tree);
             	    }
-            	    dbg.location(1772,62);
-            	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1772:62: ( '->' rsid= STRING )?
-            	    int alt101=2;
-            	    try { dbg.enterSubRule(101);
-            	    try { dbg.enterDecision(101);
+            	    dbg.location(1768,62);
+            	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1768:62: ( '->' rsid= STRING )?
+            	    int alt106=2;
+            	    try { dbg.enterSubRule(106);
+            	    try { dbg.enterDecision(106);
 
-            	    int LA101_0 = input.LA(1);
+            	    int LA106_0 = input.LA(1);
 
-            	    if ( (LA101_0==129) ) {
-            	        alt101=1;
+            	    if ( (LA106_0==124) ) {
+            	        alt106=1;
             	    }
-            	    } finally {dbg.exitDecision(101);}
+            	    } finally {dbg.exitDecision(106);}
 
-            	    switch (alt101) {
+            	    switch (alt106) {
             	        case 1 :
             	            dbg.enterAlt(1);
 
-            	            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1772:63: '->' rsid= STRING
+            	            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1768:63: '->' rsid= STRING
             	            {
-            	            dbg.location(1772,63);
-            	            string_literal193=(Token)match(input,129,FOLLOW_129_in_dispatch_block4564); if (state.failed) return retval;
+            	            dbg.location(1768,63);
+            	            string_literal194=(Token)match(input,124,FOLLOW_124_in_dispatch_block4551); if (state.failed) return retval;
             	            if ( state.backtracking==0 ) {
-            	            string_literal193_tree = (Object)adaptor.create(string_literal193);
-            	            adaptor.addChild(root_0, string_literal193_tree);
+            	            string_literal194_tree = (Object)adaptor.create(string_literal194);
+            	            adaptor.addChild(root_0, string_literal194_tree);
             	            }
-            	            dbg.location(1772,72);
-            	            rsid=(Token)match(input,STRING,FOLLOW_STRING_in_dispatch_block4568); if (state.failed) return retval;
+            	            dbg.location(1768,72);
+            	            rsid=(Token)match(input,STRING,FOLLOW_STRING_in_dispatch_block4555); if (state.failed) return retval;
             	            if ( state.backtracking==0 ) {
             	            rsid_tree = (Object)adaptor.create(rsid);
             	            adaptor.addChild(root_0, rsid_tree);
@@ -13860,9 +13834,9 @@ public class RuleSet2Parser extends DebugParser {
             	            break;
 
             	    }
-            	    } finally {dbg.exitSubRule(101);}
+            	    } finally {dbg.exitSubRule(106);}
 
-            	    dbg.location(1772,82);
+            	    dbg.location(1768,82);
             	    if ( state.backtracking==0 ) {
 
             	      		HashMap tmp = new HashMap();
@@ -13879,16 +13853,16 @@ public class RuleSet2Parser extends DebugParser {
             	    break;
 
             	default :
-            	    break loop102;
+            	    break loop107;
                 }
             } while (true);
-            } finally {dbg.exitSubRule(102);}
+            } finally {dbg.exitSubRule(107);}
 
-            dbg.location(1781,2);
-            char_literal194=(Token)match(input,30,FOLLOW_30_in_dispatch_block4578); if (state.failed) return retval;
+            dbg.location(1777,2);
+            char_literal195=(Token)match(input,30,FOLLOW_30_in_dispatch_block4565); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            char_literal194_tree = (Object)adaptor.create(char_literal194);
-            adaptor.addChild(root_0, char_literal194_tree);
+            char_literal195_tree = (Object)adaptor.create(char_literal195);
+            adaptor.addChild(root_0, char_literal195_tree);
             }
 
             }
@@ -13913,7 +13887,7 @@ public class RuleSet2Parser extends DebugParser {
         }
         finally {
         }
-        dbg.location(1782, 2);
+        dbg.location(1778, 2);
 
         }
         finally {
@@ -13932,7 +13906,7 @@ public class RuleSet2Parser extends DebugParser {
     };
 
     // $ANTLR start "name_value_pair"
-    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1786:1: name_value_pair[HashMap key_values] : k= STRING ':' (v= INT | v= FLOAT | v= STRING ) ;
+    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1782:1: name_value_pair[HashMap key_values] : k= STRING ':' (v= INT | v= FLOAT | v= STRING ) ;
     public final RuleSet2Parser.name_value_pair_return name_value_pair(HashMap key_values) throws RecognitionException {
         RuleSet2Parser.name_value_pair_return retval = new RuleSet2Parser.name_value_pair_return();
         retval.start = input.LT(1);
@@ -13941,11 +13915,11 @@ public class RuleSet2Parser extends DebugParser {
 
         Token k=null;
         Token v=null;
-        Token char_literal195=null;
+        Token char_literal196=null;
 
         Object k_tree=null;
         Object v_tree=null;
-        Object char_literal195_tree=null;
+        Object char_literal196_tree=null;
 
 
         	Object value = null;
@@ -13953,74 +13927,74 @@ public class RuleSet2Parser extends DebugParser {
         try { dbg.enterRule(getGrammarFileName(), "name_value_pair");
         if ( getRuleLevel()==0 ) {dbg.commence();}
         incRuleLevel();
-        dbg.location(1786, 1);
+        dbg.location(1782, 1);
 
         try {
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1790:2: (k= STRING ':' (v= INT | v= FLOAT | v= STRING ) )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1786:2: (k= STRING ':' (v= INT | v= FLOAT | v= STRING ) )
             dbg.enterAlt(1);
 
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1790:4: k= STRING ':' (v= INT | v= FLOAT | v= STRING )
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1786:4: k= STRING ':' (v= INT | v= FLOAT | v= STRING )
             {
             root_0 = (Object)adaptor.nil();
 
-            dbg.location(1790,5);
-            k=(Token)match(input,STRING,FOLLOW_STRING_in_name_value_pair4601); if (state.failed) return retval;
+            dbg.location(1786,5);
+            k=(Token)match(input,STRING,FOLLOW_STRING_in_name_value_pair4588); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
             k_tree = (Object)adaptor.create(k);
             adaptor.addChild(root_0, k_tree);
             }
-            dbg.location(1790,13);
-            char_literal195=(Token)match(input,40,FOLLOW_40_in_name_value_pair4603); if (state.failed) return retval;
+            dbg.location(1786,13);
+            char_literal196=(Token)match(input,39,FOLLOW_39_in_name_value_pair4590); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            char_literal195_tree = (Object)adaptor.create(char_literal195);
-            adaptor.addChild(root_0, char_literal195_tree);
+            char_literal196_tree = (Object)adaptor.create(char_literal196);
+            adaptor.addChild(root_0, char_literal196_tree);
             }
-            dbg.location(1790,17);
-            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1790:17: (v= INT | v= FLOAT | v= STRING )
-            int alt103=3;
-            try { dbg.enterSubRule(103);
-            try { dbg.enterDecision(103);
+            dbg.location(1786,17);
+            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1786:17: (v= INT | v= FLOAT | v= STRING )
+            int alt108=3;
+            try { dbg.enterSubRule(108);
+            try { dbg.enterDecision(108);
 
             switch ( input.LA(1) ) {
             case INT:
                 {
-                alt103=1;
+                alt108=1;
                 }
                 break;
             case FLOAT:
                 {
-                alt103=2;
+                alt108=2;
                 }
                 break;
             case STRING:
                 {
-                alt103=3;
+                alt108=3;
                 }
                 break;
             default:
                 if (state.backtracking>0) {state.failed=true; return retval;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 103, 0, input);
+                    new NoViableAltException("", 108, 0, input);
 
                 dbg.recognitionException(nvae);
                 throw nvae;
             }
 
-            } finally {dbg.exitDecision(103);}
+            } finally {dbg.exitDecision(108);}
 
-            switch (alt103) {
+            switch (alt108) {
                 case 1 :
                     dbg.enterAlt(1);
 
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1791:3: v= INT
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1787:3: v= INT
                     {
-                    dbg.location(1791,4);
-                    v=(Token)match(input,INT,FOLLOW_INT_in_name_value_pair4611); if (state.failed) return retval;
+                    dbg.location(1787,4);
+                    v=(Token)match(input,INT,FOLLOW_INT_in_name_value_pair4598); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     v_tree = (Object)adaptor.create(v);
                     adaptor.addChild(root_0, v_tree);
                     }
-                    dbg.location(1791,9);
+                    dbg.location(1787,9);
                     if ( state.backtracking==0 ) {
                       value =(v!=null?v.getText():null);
                     }
@@ -14030,15 +14004,15 @@ public class RuleSet2Parser extends DebugParser {
                 case 2 :
                     dbg.enterAlt(2);
 
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1792:5: v= FLOAT
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1788:5: v= FLOAT
                     {
-                    dbg.location(1792,6);
-                    v=(Token)match(input,FLOAT,FOLLOW_FLOAT_in_name_value_pair4622); if (state.failed) return retval;
+                    dbg.location(1788,6);
+                    v=(Token)match(input,FLOAT,FOLLOW_FLOAT_in_name_value_pair4609); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     v_tree = (Object)adaptor.create(v);
                     adaptor.addChild(root_0, v_tree);
                     }
-                    dbg.location(1792,13);
+                    dbg.location(1788,13);
                     if ( state.backtracking==0 ) {
                       value = (v!=null?v.getText():null);
                     }
@@ -14048,15 +14022,15 @@ public class RuleSet2Parser extends DebugParser {
                 case 3 :
                     dbg.enterAlt(3);
 
-                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1793:5: v= STRING
+                    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1789:5: v= STRING
                     {
-                    dbg.location(1793,6);
-                    v=(Token)match(input,STRING,FOLLOW_STRING_in_name_value_pair4633); if (state.failed) return retval;
+                    dbg.location(1789,6);
+                    v=(Token)match(input,STRING,FOLLOW_STRING_in_name_value_pair4620); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     v_tree = (Object)adaptor.create(v);
                     adaptor.addChild(root_0, v_tree);
                     }
-                    dbg.location(1793,14);
+                    dbg.location(1789,14);
                     if ( state.backtracking==0 ) {
                       value = strip_string((v!=null?v.getText():null));
                     }
@@ -14065,9 +14039,9 @@ public class RuleSet2Parser extends DebugParser {
                     break;
 
             }
-            } finally {dbg.exitSubRule(103);}
+            } finally {dbg.exitSubRule(108);}
 
-            dbg.location(1794,3);
+            dbg.location(1790,3);
             if ( state.backtracking==0 ) {
               key_values.put(strip_string((k!=null?k.getText():null)),value);
             }
@@ -14090,7 +14064,7 @@ public class RuleSet2Parser extends DebugParser {
         }
         finally {
         }
-        dbg.location(1795, 2);
+        dbg.location(1791, 2);
 
         }
         finally {
@@ -14105,16 +14079,30 @@ public class RuleSet2Parser extends DebugParser {
 
     // $ANTLR start synpred19_RuleSet2
     public final void synpred19_RuleSet2_fragment() throws RecognitionException {   
+        // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:328:131: ( ';' )
+        dbg.enterAlt(1);
+
+        // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:328:131: ';'
+        {
+        dbg.location(328,131);
+        match(input,31,FOLLOW_31_in_synpred19_RuleSet21034); if (state.failed) return ;
+
+        }
+    }
+    // $ANTLR end synpred19_RuleSet2
+
+    // $ANTLR start synpred20_RuleSet2
+    public final void synpred20_RuleSet2_fragment() throws RecognitionException {   
         RuleSet2Parser.emit_block_return eb = null;
 
 
-        // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:328:133: (eb= emit_block )
+        // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:328:138: (eb= emit_block )
         dbg.enterAlt(1);
 
-        // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:328:133: eb= emit_block
+        // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:328:138: eb= emit_block
         {
-        dbg.location(328,133);
-        pushFollow(FOLLOW_emit_block_in_synpred19_RuleSet21022);
+        dbg.location(328,138);
+        pushFollow(FOLLOW_emit_block_in_synpred20_RuleSet21039);
         eb=emit_block();
 
         state._fsp--;
@@ -14122,20 +14110,140 @@ public class RuleSet2Parser extends DebugParser {
 
         }
     }
-    // $ANTLR end synpred19_RuleSet2
+    // $ANTLR end synpred20_RuleSet2
 
-    // $ANTLR start synpred119_RuleSet2
-    public final void synpred119_RuleSet2_fragment() throws RecognitionException {   
+    // $ANTLR start synpred23_RuleSet2
+    public final void synpred23_RuleSet2_fragment() throws RecognitionException {   
+        // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:328:195: ( ';' )
+        dbg.enterAlt(1);
+
+        // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:328:195: ';'
+        {
+        dbg.location(328,195);
+        match(input,31,FOLLOW_31_in_synpred23_RuleSet21055); if (state.failed) return ;
+
+        }
+    }
+    // $ANTLR end synpred23_RuleSet2
+
+    // $ANTLR start synpred31_RuleSet2
+    public final void synpred31_RuleSet2_fragment() throws RecognitionException {   
+        RuleSet2Parser.persistent_expr_return pe = null;
+
+
+        // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:407:6: (pe= persistent_expr )
+        dbg.enterAlt(1);
+
+        // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:407:6: pe= persistent_expr
+        {
+        dbg.location(407,8);
+        pushFollow(FOLLOW_persistent_expr_in_synpred31_RuleSet21207);
+        pe=persistent_expr();
+
+        state._fsp--;
+        if (state.failed) return ;
+
+        }
+    }
+    // $ANTLR end synpred31_RuleSet2
+
+    // $ANTLR start synpred33_RuleSet2
+    public final void synpred33_RuleSet2_fragment() throws RecognitionException {   
+        RuleSet2Parser.log_statement_return l = null;
+
+
+        // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:409:4: (l= log_statement )
+        dbg.enterAlt(1);
+
+        // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:409:4: l= log_statement
+        {
+        dbg.location(409,5);
+        pushFollow(FOLLOW_log_statement_in_synpred33_RuleSet21224);
+        l=log_statement();
+
+        state._fsp--;
+        if (state.failed) return ;
+
+        }
+    }
+    // $ANTLR end synpred33_RuleSet2
+
+    // $ANTLR start synpred51_RuleSet2
+    public final void synpred51_RuleSet2_fragment() throws RecognitionException {   
+        // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:640:62: ( ';' )
+        dbg.enterAlt(1);
+
+        // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:640:62: ';'
+        {
+        dbg.location(640,62);
+        match(input,31,FOLLOW_31_in_synpred51_RuleSet21868); if (state.failed) return ;
+
+        }
+    }
+    // $ANTLR end synpred51_RuleSet2
+
+    // $ANTLR start synpred52_RuleSet2
+    public final void synpred52_RuleSet2_fragment() throws RecognitionException {   
+        RuleSet2Parser.expr_return e = null;
+
+
+        // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:645:10: (e= expr )
+        dbg.enterAlt(1);
+
+        // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:645:10: e= expr
+        {
+        dbg.location(645,10);
+        pushFollow(FOLLOW_expr_in_synpred52_RuleSet21889);
+        e=expr();
+
+        state._fsp--;
+        if (state.failed) return ;
+
+        }
+    }
+    // $ANTLR end synpred52_RuleSet2
+
+    // $ANTLR start synpred73_RuleSet2
+    public final void synpred73_RuleSet2_fragment() throws RecognitionException {   
+        RuleSet2Parser.must_be_one_return tb = null;
+
+        RuleSet2Parser.event_or_return eor2 = null;
+
+
+        // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:816:17: (tb= must_be_one[sar(\"then\",\"before\")] eor2= event_or )
+        dbg.enterAlt(1);
+
+        // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:816:17: tb= must_be_one[sar(\"then\",\"before\")] eor2= event_or
+        {
+        dbg.location(816,19);
+        pushFollow(FOLLOW_must_be_one_in_synpred73_RuleSet22408);
+        tb=must_be_one(sar("then","before"));
+
+        state._fsp--;
+        if (state.failed) return ;
+        dbg.location(816,58);
+        pushFollow(FOLLOW_event_or_in_synpred73_RuleSet22413);
+        eor2=event_or();
+
+        state._fsp--;
+        if (state.failed) return ;
+
+        }
+    }
+    // $ANTLR end synpred73_RuleSet2
+
+    // $ANTLR start synpred122_RuleSet2
+    public final void synpred122_RuleSet2_fragment() throws RecognitionException {   
         RuleSet2Parser.timeframe_return t = null;
 
 
-        // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1363:60: (t= timeframe )
+        // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1359:60: (t= timeframe )
         dbg.enterAlt(1);
 
-        // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1363:60: t= timeframe
+        // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1359:60: t= timeframe
         {
-        dbg.location(1363,60);
-        pushFollow(FOLLOW_timeframe_in_synpred119_RuleSet23423);
+        dbg.location(1359,60);
+        pushFollow(FOLLOW_timeframe_in_synpred122_RuleSet23414);
         t=timeframe();
 
         state._fsp--;
@@ -14143,10 +14251,10 @@ public class RuleSet2Parser extends DebugParser {
 
         }
     }
-    // $ANTLR end synpred119_RuleSet2
+    // $ANTLR end synpred122_RuleSet2
 
-    // $ANTLR start synpred120_RuleSet2
-    public final void synpred120_RuleSet2_fragment() throws RecognitionException {   
+    // $ANTLR start synpred123_RuleSet2
+    public final void synpred123_RuleSet2_fragment() throws RecognitionException {   
         Token rx=null;
         Token v=null;
         RuleSet2Parser.var_domain_return vd = null;
@@ -14154,52 +14262,52 @@ public class RuleSet2Parser extends DebugParser {
         RuleSet2Parser.timeframe_return t = null;
 
 
-        // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1363:4: ( 'seen' rx= STRING must_be[\"in\"] vd= var_domain ':' v= VAR (t= timeframe )? )
+        // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1359:4: ( 'seen' rx= STRING must_be[\"in\"] vd= var_domain ':' v= VAR (t= timeframe )? )
         dbg.enterAlt(1);
 
-        // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1363:4: 'seen' rx= STRING must_be[\"in\"] vd= var_domain ':' v= VAR (t= timeframe )?
+        // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1359:4: 'seen' rx= STRING must_be[\"in\"] vd= var_domain ':' v= VAR (t= timeframe )?
         {
-        dbg.location(1363,4);
-        match(input,82,FOLLOW_82_in_synpred120_RuleSet23402); if (state.failed) return ;
-        dbg.location(1363,13);
-        rx=(Token)match(input,STRING,FOLLOW_STRING_in_synpred120_RuleSet23406); if (state.failed) return ;
-        dbg.location(1363,21);
-        pushFollow(FOLLOW_must_be_in_synpred120_RuleSet23408);
+        dbg.location(1359,4);
+        match(input,78,FOLLOW_78_in_synpred123_RuleSet23393); if (state.failed) return ;
+        dbg.location(1359,13);
+        rx=(Token)match(input,STRING,FOLLOW_STRING_in_synpred123_RuleSet23397); if (state.failed) return ;
+        dbg.location(1359,21);
+        pushFollow(FOLLOW_must_be_in_synpred123_RuleSet23399);
         must_be("in");
 
         state._fsp--;
         if (state.failed) return ;
-        dbg.location(1363,37);
-        pushFollow(FOLLOW_var_domain_in_synpred120_RuleSet23413);
+        dbg.location(1359,37);
+        pushFollow(FOLLOW_var_domain_in_synpred123_RuleSet23404);
         vd=var_domain();
 
         state._fsp--;
         if (state.failed) return ;
-        dbg.location(1363,49);
-        match(input,40,FOLLOW_40_in_synpred120_RuleSet23415); if (state.failed) return ;
-        dbg.location(1363,54);
-        v=(Token)match(input,VAR,FOLLOW_VAR_in_synpred120_RuleSet23419); if (state.failed) return ;
-        dbg.location(1363,60);
-        // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1363:60: (t= timeframe )?
-        int alt124=2;
-        try { dbg.enterSubRule(124);
-        try { dbg.enterDecision(124);
+        dbg.location(1359,49);
+        match(input,39,FOLLOW_39_in_synpred123_RuleSet23406); if (state.failed) return ;
+        dbg.location(1359,54);
+        v=(Token)match(input,VAR,FOLLOW_VAR_in_synpred123_RuleSet23410); if (state.failed) return ;
+        dbg.location(1359,60);
+        // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1359:60: (t= timeframe )?
+        int alt129=2;
+        try { dbg.enterSubRule(129);
+        try { dbg.enterDecision(129);
 
-        int LA124_0 = input.LA(1);
+        int LA129_0 = input.LA(1);
 
-        if ( (LA124_0==114) ) {
-            alt124=1;
+        if ( (LA129_0==109) ) {
+            alt129=1;
         }
-        } finally {dbg.exitDecision(124);}
+        } finally {dbg.exitDecision(129);}
 
-        switch (alt124) {
+        switch (alt129) {
             case 1 :
                 dbg.enterAlt(1);
 
                 // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:0:0: t= timeframe
                 {
-                dbg.location(1363,60);
-                pushFollow(FOLLOW_timeframe_in_synpred120_RuleSet23423);
+                dbg.location(1359,60);
+                pushFollow(FOLLOW_timeframe_in_synpred123_RuleSet23414);
                 t=timeframe();
 
                 state._fsp--;
@@ -14209,69 +14317,63 @@ public class RuleSet2Parser extends DebugParser {
                 break;
 
         }
-        } finally {dbg.exitSubRule(124);}
+        } finally {dbg.exitSubRule(129);}
 
 
         }
     }
-    // $ANTLR end synpred120_RuleSet2
+    // $ANTLR end synpred123_RuleSet2
 
-    // $ANTLR start synpred122_RuleSet2
-    public final void synpred122_RuleSet2_fragment() throws RecognitionException {   
+    // $ANTLR start synpred124_RuleSet2
+    public final void synpred124_RuleSet2_fragment() throws RecognitionException {   
         Token rx_1=null;
-        Token op=null;
         Token rx_2=null;
         Token v=null;
+        RuleSet2Parser.must_be_one_return op = null;
+
         RuleSet2Parser.var_domain_return vd = null;
 
 
-        // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1374:4: ( 'seen' rx_1= STRING op= ( 'before' | 'after' ) rx_2= STRING must_be[\"in\"] vd= var_domain ':' v= VAR )
+        // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1370:4: ( 'seen' rx_1= STRING op= must_be_one[sar(\"before\",\"after\")] rx_2= STRING must_be[\"in\"] vd= var_domain ':' v= VAR )
         dbg.enterAlt(1);
 
-        // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1374:4: 'seen' rx_1= STRING op= ( 'before' | 'after' ) rx_2= STRING must_be[\"in\"] vd= var_domain ':' v= VAR
+        // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1370:4: 'seen' rx_1= STRING op= must_be_one[sar(\"before\",\"after\")] rx_2= STRING must_be[\"in\"] vd= var_domain ':' v= VAR
         {
-        dbg.location(1374,4);
-        match(input,82,FOLLOW_82_in_synpred122_RuleSet23431); if (state.failed) return ;
-        dbg.location(1374,15);
-        rx_1=(Token)match(input,STRING,FOLLOW_STRING_in_synpred122_RuleSet23435); if (state.failed) return ;
-        dbg.location(1374,25);
-        op=(Token)input.LT(1);
-        if ( input.LA(1)==59||input.LA(1)==83 ) {
-            input.consume();
-            state.errorRecovery=false;state.failed=false;
-        }
-        else {
-            if (state.backtracking>0) {state.failed=true; return ;}
-            MismatchedSetException mse = new MismatchedSetException(null,input);
-            dbg.recognitionException(mse);
-            throw mse;
-        }
+        dbg.location(1370,4);
+        match(input,78,FOLLOW_78_in_synpred124_RuleSet23422); if (state.failed) return ;
+        dbg.location(1370,15);
+        rx_1=(Token)match(input,STRING,FOLLOW_STRING_in_synpred124_RuleSet23426); if (state.failed) return ;
+        dbg.location(1370,25);
+        pushFollow(FOLLOW_must_be_one_in_synpred124_RuleSet23430);
+        op=must_be_one(sar("before","after"));
 
-        dbg.location(1374,51);
-        rx_2=(Token)match(input,STRING,FOLLOW_STRING_in_synpred122_RuleSet23449); if (state.failed) return ;
-        dbg.location(1374,60);
-        pushFollow(FOLLOW_must_be_in_synpred122_RuleSet23452);
+        state._fsp--;
+        if (state.failed) return ;
+        dbg.location(1370,65);
+        rx_2=(Token)match(input,STRING,FOLLOW_STRING_in_synpred124_RuleSet23435); if (state.failed) return ;
+        dbg.location(1370,74);
+        pushFollow(FOLLOW_must_be_in_synpred124_RuleSet23438);
         must_be("in");
 
         state._fsp--;
         if (state.failed) return ;
-        dbg.location(1374,76);
-        pushFollow(FOLLOW_var_domain_in_synpred122_RuleSet23457);
+        dbg.location(1370,90);
+        pushFollow(FOLLOW_var_domain_in_synpred124_RuleSet23443);
         vd=var_domain();
 
         state._fsp--;
         if (state.failed) return ;
-        dbg.location(1374,88);
-        match(input,40,FOLLOW_40_in_synpred122_RuleSet23459); if (state.failed) return ;
-        dbg.location(1374,93);
-        v=(Token)match(input,VAR,FOLLOW_VAR_in_synpred122_RuleSet23463); if (state.failed) return ;
+        dbg.location(1370,102);
+        match(input,39,FOLLOW_39_in_synpred124_RuleSet23445); if (state.failed) return ;
+        dbg.location(1370,107);
+        v=(Token)match(input,VAR,FOLLOW_VAR_in_synpred124_RuleSet23449); if (state.failed) return ;
 
         }
     }
-    // $ANTLR end synpred122_RuleSet2
+    // $ANTLR end synpred124_RuleSet2
 
-    // $ANTLR start synpred123_RuleSet2
-    public final void synpred123_RuleSet2_fragment() throws RecognitionException {   
+    // $ANTLR start synpred125_RuleSet2
+    public final void synpred125_RuleSet2_fragment() throws RecognitionException {   
         Token v=null;
         RuleSet2Parser.var_domain_return vd = null;
 
@@ -14282,35 +14384,35 @@ public class RuleSet2Parser extends DebugParser {
         RuleSet2Parser.timeframe_return t = null;
 
 
-        // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1384:4: (vd= var_domain ':' v= VAR pop= predop e= expr t= timeframe )
+        // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1380:4: (vd= var_domain ':' v= VAR pop= predop e= expr t= timeframe )
         dbg.enterAlt(1);
 
-        // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1384:4: vd= var_domain ':' v= VAR pop= predop e= expr t= timeframe
+        // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1380:4: vd= var_domain ':' v= VAR pop= predop e= expr t= timeframe
         {
-        dbg.location(1384,6);
-        pushFollow(FOLLOW_var_domain_in_synpred123_RuleSet23472);
+        dbg.location(1380,6);
+        pushFollow(FOLLOW_var_domain_in_synpred125_RuleSet23458);
         vd=var_domain();
 
         state._fsp--;
         if (state.failed) return ;
-        dbg.location(1384,18);
-        match(input,40,FOLLOW_40_in_synpred123_RuleSet23474); if (state.failed) return ;
-        dbg.location(1384,23);
-        v=(Token)match(input,VAR,FOLLOW_VAR_in_synpred123_RuleSet23478); if (state.failed) return ;
-        dbg.location(1384,31);
-        pushFollow(FOLLOW_predop_in_synpred123_RuleSet23482);
+        dbg.location(1380,18);
+        match(input,39,FOLLOW_39_in_synpred125_RuleSet23460); if (state.failed) return ;
+        dbg.location(1380,23);
+        v=(Token)match(input,VAR,FOLLOW_VAR_in_synpred125_RuleSet23464); if (state.failed) return ;
+        dbg.location(1380,31);
+        pushFollow(FOLLOW_predop_in_synpred125_RuleSet23468);
         pop=predop();
 
         state._fsp--;
         if (state.failed) return ;
-        dbg.location(1384,40);
-        pushFollow(FOLLOW_expr_in_synpred123_RuleSet23486);
+        dbg.location(1380,40);
+        pushFollow(FOLLOW_expr_in_synpred125_RuleSet23472);
         e=expr();
 
         state._fsp--;
         if (state.failed) return ;
-        dbg.location(1384,47);
-        pushFollow(FOLLOW_timeframe_in_synpred123_RuleSet23490);
+        dbg.location(1380,47);
+        pushFollow(FOLLOW_timeframe_in_synpred125_RuleSet23476);
         t=timeframe();
 
         state._fsp--;
@@ -14318,33 +14420,33 @@ public class RuleSet2Parser extends DebugParser {
 
         }
     }
-    // $ANTLR end synpred123_RuleSet2
+    // $ANTLR end synpred125_RuleSet2
 
-    // $ANTLR start synpred124_RuleSet2
-    public final void synpred124_RuleSet2_fragment() throws RecognitionException {   
+    // $ANTLR start synpred126_RuleSet2
+    public final void synpred126_RuleSet2_fragment() throws RecognitionException {   
         Token v=null;
         RuleSet2Parser.var_domain_return vd = null;
 
         RuleSet2Parser.timeframe_return t = null;
 
 
-        // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1396:4: (vd= var_domain ':' v= VAR t= timeframe )
+        // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1392:4: (vd= var_domain ':' v= VAR t= timeframe )
         dbg.enterAlt(1);
 
-        // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1396:4: vd= var_domain ':' v= VAR t= timeframe
+        // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1392:4: vd= var_domain ':' v= VAR t= timeframe
         {
-        dbg.location(1396,6);
-        pushFollow(FOLLOW_var_domain_in_synpred124_RuleSet23500);
+        dbg.location(1392,6);
+        pushFollow(FOLLOW_var_domain_in_synpred126_RuleSet23486);
         vd=var_domain();
 
         state._fsp--;
         if (state.failed) return ;
-        dbg.location(1396,18);
-        match(input,40,FOLLOW_40_in_synpred124_RuleSet23502); if (state.failed) return ;
-        dbg.location(1396,23);
-        v=(Token)match(input,VAR,FOLLOW_VAR_in_synpred124_RuleSet23506); if (state.failed) return ;
-        dbg.location(1396,29);
-        pushFollow(FOLLOW_timeframe_in_synpred124_RuleSet23510);
+        dbg.location(1392,18);
+        match(input,39,FOLLOW_39_in_synpred126_RuleSet23488); if (state.failed) return ;
+        dbg.location(1392,23);
+        v=(Token)match(input,VAR,FOLLOW_VAR_in_synpred126_RuleSet23492); if (state.failed) return ;
+        dbg.location(1392,29);
+        pushFollow(FOLLOW_timeframe_in_synpred126_RuleSet23496);
         t=timeframe();
 
         state._fsp--;
@@ -14352,248 +14454,248 @@ public class RuleSet2Parser extends DebugParser {
 
         }
     }
-    // $ANTLR end synpred124_RuleSet2
+    // $ANTLR end synpred126_RuleSet2
 
-    // $ANTLR start synpred155_RuleSet2
-    public final void synpred155_RuleSet2_fragment() throws RecognitionException {   
+    // $ANTLR start synpred157_RuleSet2
+    public final void synpred157_RuleSet2_fragment() throws RecognitionException {   
         Token v=null;
         RuleSet2Parser.expr_return e = null;
 
 
-        // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1508:9: (v= VAR '[' e= expr ']' )
+        // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1504:9: (v= VAR '[' e= expr ']' )
         dbg.enterAlt(1);
 
-        // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1508:9: v= VAR '[' e= expr ']'
+        // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1504:9: v= VAR '[' e= expr ']'
         {
-        dbg.location(1508,10);
-        v=(Token)match(input,VAR,FOLLOW_VAR_in_synpred155_RuleSet23821); if (state.failed) return ;
-        dbg.location(1508,15);
-        match(input,108,FOLLOW_108_in_synpred155_RuleSet23823); if (state.failed) return ;
-        dbg.location(1508,20);
-        pushFollow(FOLLOW_expr_in_synpred155_RuleSet23827);
+        dbg.location(1504,10);
+        v=(Token)match(input,VAR,FOLLOW_VAR_in_synpred157_RuleSet23808); if (state.failed) return ;
+        dbg.location(1504,15);
+        match(input,103,FOLLOW_103_in_synpred157_RuleSet23810); if (state.failed) return ;
+        dbg.location(1504,20);
+        pushFollow(FOLLOW_expr_in_synpred157_RuleSet23814);
         e=expr();
 
         state._fsp--;
         if (state.failed) return ;
-        dbg.location(1508,26);
-        match(input,109,FOLLOW_109_in_synpred155_RuleSet23829); if (state.failed) return ;
+        dbg.location(1504,26);
+        match(input,104,FOLLOW_104_in_synpred157_RuleSet23816); if (state.failed) return ;
 
         }
     }
-    // $ANTLR end synpred155_RuleSet2
+    // $ANTLR end synpred157_RuleSet2
 
-    // $ANTLR start synpred161_RuleSet2
-    public final void synpred161_RuleSet2_fragment() throws RecognitionException {   
+    // $ANTLR start synpred163_RuleSet2
+    public final void synpred163_RuleSet2_fragment() throws RecognitionException {   
         Token p=null;
         RuleSet2Parser.namespace_return n = null;
 
         RuleSet2Parser.expr_return e = null;
 
 
-        // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1546:9: (n= namespace p= VAR '(' (e= expr ( ',' )? )* ')' )
+        // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1542:9: (n= namespace p= VAR '(' (e= expr ( ',' )? )* ')' )
         dbg.enterAlt(1);
 
-        // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1546:9: n= namespace p= VAR '(' (e= expr ( ',' )? )* ')'
+        // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1542:9: n= namespace p= VAR '(' (e= expr ( ',' )? )* ')'
         {
-        dbg.location(1546,10);
-        pushFollow(FOLLOW_namespace_in_synpred161_RuleSet23913);
+        dbg.location(1542,10);
+        pushFollow(FOLLOW_namespace_in_synpred163_RuleSet23900);
         n=namespace();
 
         state._fsp--;
         if (state.failed) return ;
-        dbg.location(1546,22);
-        p=(Token)match(input,VAR,FOLLOW_VAR_in_synpred161_RuleSet23917); if (state.failed) return ;
-        dbg.location(1546,27);
-        match(input,50,FOLLOW_50_in_synpred161_RuleSet23919); if (state.failed) return ;
-        dbg.location(1546,31);
-        // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1546:31: (e= expr ( ',' )? )*
-        try { dbg.enterSubRule(128);
+        dbg.location(1542,22);
+        p=(Token)match(input,VAR,FOLLOW_VAR_in_synpred163_RuleSet23904); if (state.failed) return ;
+        dbg.location(1542,27);
+        match(input,47,FOLLOW_47_in_synpred163_RuleSet23906); if (state.failed) return ;
+        dbg.location(1542,31);
+        // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1542:31: (e= expr ( ',' )? )*
+        try { dbg.enterSubRule(133);
 
-        loop128:
+        loop133:
         do {
-            int alt128=2;
-            try { dbg.enterDecision(128);
+            int alt133=2;
+            try { dbg.enterDecision(133);
 
-            int LA128_0 = input.LA(1);
+            int LA133_0 = input.LA(1);
 
-            if ( ((LA128_0>=VAR && LA128_0<=INT)||LA128_0==FLOAT||(LA128_0>=STRING && LA128_0<=REGEXP)||LA128_0==29||LA128_0==50||LA128_0==61||LA128_0==75||LA128_0==82||(LA128_0>=106 && LA128_0<=108)||(LA128_0>=110 && LA128_0<=113)) ) {
-                alt128=1;
+            if ( ((LA133_0>=VAR && LA133_0<=INT)||LA133_0==FLOAT||(LA133_0>=STRING && LA133_0<=REGEXP)||LA133_0==29||LA133_0==47||LA133_0==57||LA133_0==71||LA133_0==78||(LA133_0>=101 && LA133_0<=103)||(LA133_0>=105 && LA133_0<=108)) ) {
+                alt133=1;
             }
 
 
-            } finally {dbg.exitDecision(128);}
+            } finally {dbg.exitDecision(133);}
 
-            switch (alt128) {
+            switch (alt133) {
         	case 1 :
         	    dbg.enterAlt(1);
 
-        	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1546:32: e= expr ( ',' )?
+        	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1542:32: e= expr ( ',' )?
         	    {
-        	    dbg.location(1546,33);
-        	    pushFollow(FOLLOW_expr_in_synpred161_RuleSet23924);
+        	    dbg.location(1542,33);
+        	    pushFollow(FOLLOW_expr_in_synpred163_RuleSet23911);
         	    e=expr();
 
         	    state._fsp--;
         	    if (state.failed) return ;
-        	    dbg.location(1549,8);
-        	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1549:8: ( ',' )?
-        	    int alt127=2;
-        	    try { dbg.enterSubRule(127);
-        	    try { dbg.enterDecision(127);
+        	    dbg.location(1545,8);
+        	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1545:8: ( ',' )?
+        	    int alt132=2;
+        	    try { dbg.enterSubRule(132);
+        	    try { dbg.enterDecision(132);
 
-        	    int LA127_0 = input.LA(1);
+        	    int LA132_0 = input.LA(1);
 
-        	    if ( (LA127_0==51) ) {
-        	        alt127=1;
+        	    if ( (LA132_0==48) ) {
+        	        alt132=1;
         	    }
-        	    } finally {dbg.exitDecision(127);}
+        	    } finally {dbg.exitDecision(132);}
 
-        	    switch (alt127) {
+        	    switch (alt132) {
         	        case 1 :
         	            dbg.enterAlt(1);
 
         	            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:0:0: ','
         	            {
-        	            dbg.location(1549,8);
-        	            match(input,51,FOLLOW_51_in_synpred161_RuleSet23935); if (state.failed) return ;
+        	            dbg.location(1545,8);
+        	            match(input,48,FOLLOW_48_in_synpred163_RuleSet23922); if (state.failed) return ;
 
         	            }
         	            break;
 
         	    }
-        	    } finally {dbg.exitSubRule(127);}
+        	    } finally {dbg.exitSubRule(132);}
 
 
         	    }
         	    break;
 
         	default :
-        	    break loop128;
+        	    break loop133;
             }
         } while (true);
-        } finally {dbg.exitSubRule(128);}
+        } finally {dbg.exitSubRule(133);}
 
-        dbg.location(1549,15);
-        match(input,52,FOLLOW_52_in_synpred161_RuleSet23940); if (state.failed) return ;
+        dbg.location(1545,15);
+        match(input,49,FOLLOW_49_in_synpred163_RuleSet23927); if (state.failed) return ;
 
         }
     }
-    // $ANTLR end synpred161_RuleSet2
+    // $ANTLR end synpred163_RuleSet2
 
-    // $ANTLR start synpred164_RuleSet2
-    public final void synpred164_RuleSet2_fragment() throws RecognitionException {   
+    // $ANTLR start synpred166_RuleSet2
+    public final void synpred166_RuleSet2_fragment() throws RecognitionException {   
         Token v=null;
         RuleSet2Parser.expr_return e = null;
 
 
-        // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1556:9: (v= VAR '(' (e= expr ( ',' )? )* ')' )
+        // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1552:9: (v= VAR '(' (e= expr ( ',' )? )* ')' )
         dbg.enterAlt(1);
 
-        // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1556:9: v= VAR '(' (e= expr ( ',' )? )* ')'
+        // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1552:9: v= VAR '(' (e= expr ( ',' )? )* ')'
         {
-        dbg.location(1556,10);
-        v=(Token)match(input,VAR,FOLLOW_VAR_in_synpred164_RuleSet23955); if (state.failed) return ;
-        dbg.location(1556,15);
-        match(input,50,FOLLOW_50_in_synpred164_RuleSet23957); if (state.failed) return ;
-        dbg.location(1556,19);
-        // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1556:19: (e= expr ( ',' )? )*
-        try { dbg.enterSubRule(131);
+        dbg.location(1552,10);
+        v=(Token)match(input,VAR,FOLLOW_VAR_in_synpred166_RuleSet23942); if (state.failed) return ;
+        dbg.location(1552,15);
+        match(input,47,FOLLOW_47_in_synpred166_RuleSet23944); if (state.failed) return ;
+        dbg.location(1552,19);
+        // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1552:19: (e= expr ( ',' )? )*
+        try { dbg.enterSubRule(136);
 
-        loop131:
+        loop136:
         do {
-            int alt131=2;
-            try { dbg.enterDecision(131);
+            int alt136=2;
+            try { dbg.enterDecision(136);
 
-            int LA131_0 = input.LA(1);
+            int LA136_0 = input.LA(1);
 
-            if ( ((LA131_0>=VAR && LA131_0<=INT)||LA131_0==FLOAT||(LA131_0>=STRING && LA131_0<=REGEXP)||LA131_0==29||LA131_0==50||LA131_0==61||LA131_0==75||LA131_0==82||(LA131_0>=106 && LA131_0<=108)||(LA131_0>=110 && LA131_0<=113)) ) {
-                alt131=1;
+            if ( ((LA136_0>=VAR && LA136_0<=INT)||LA136_0==FLOAT||(LA136_0>=STRING && LA136_0<=REGEXP)||LA136_0==29||LA136_0==47||LA136_0==57||LA136_0==71||LA136_0==78||(LA136_0>=101 && LA136_0<=103)||(LA136_0>=105 && LA136_0<=108)) ) {
+                alt136=1;
             }
 
 
-            } finally {dbg.exitDecision(131);}
+            } finally {dbg.exitDecision(136);}
 
-            switch (alt131) {
+            switch (alt136) {
         	case 1 :
         	    dbg.enterAlt(1);
 
-        	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1556:20: e= expr ( ',' )?
+        	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1552:20: e= expr ( ',' )?
         	    {
-        	    dbg.location(1556,21);
-        	    pushFollow(FOLLOW_expr_in_synpred164_RuleSet23962);
+        	    dbg.location(1552,21);
+        	    pushFollow(FOLLOW_expr_in_synpred166_RuleSet23949);
         	    e=expr();
 
         	    state._fsp--;
         	    if (state.failed) return ;
-        	    dbg.location(1559,2);
-        	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1559:2: ( ',' )?
-        	    int alt130=2;
-        	    try { dbg.enterSubRule(130);
-        	    try { dbg.enterDecision(130);
+        	    dbg.location(1555,2);
+        	    // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1555:2: ( ',' )?
+        	    int alt135=2;
+        	    try { dbg.enterSubRule(135);
+        	    try { dbg.enterDecision(135);
 
-        	    int LA130_0 = input.LA(1);
+        	    int LA135_0 = input.LA(1);
 
-        	    if ( (LA130_0==51) ) {
-        	        alt130=1;
+        	    if ( (LA135_0==48) ) {
+        	        alt135=1;
         	    }
-        	    } finally {dbg.exitDecision(130);}
+        	    } finally {dbg.exitDecision(135);}
 
-        	    switch (alt130) {
+        	    switch (alt135) {
         	        case 1 :
         	            dbg.enterAlt(1);
 
         	            // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:0:0: ','
         	            {
-        	            dbg.location(1559,2);
-        	            match(input,51,FOLLOW_51_in_synpred164_RuleSet23966); if (state.failed) return ;
+        	            dbg.location(1555,2);
+        	            match(input,48,FOLLOW_48_in_synpred166_RuleSet23953); if (state.failed) return ;
 
         	            }
         	            break;
 
         	    }
-        	    } finally {dbg.exitSubRule(130);}
+        	    } finally {dbg.exitSubRule(135);}
 
 
         	    }
         	    break;
 
         	default :
-        	    break loop131;
+        	    break loop136;
             }
         } while (true);
-        } finally {dbg.exitSubRule(131);}
+        } finally {dbg.exitSubRule(136);}
 
-        dbg.location(1559,9);
-        match(input,52,FOLLOW_52_in_synpred164_RuleSet23971); if (state.failed) return ;
+        dbg.location(1555,9);
+        match(input,49,FOLLOW_49_in_synpred166_RuleSet23958); if (state.failed) return ;
 
         }
     }
-    // $ANTLR end synpred164_RuleSet2
+    // $ANTLR end synpred166_RuleSet2
 
-    // $ANTLR start synpred169_RuleSet2
-    public final void synpred169_RuleSet2_fragment() throws RecognitionException {   
+    // $ANTLR start synpred171_RuleSet2
+    public final void synpred171_RuleSet2_fragment() throws RecognitionException {   
         Token v=null;
 
-        // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1592:9: (v= VAR )
+        // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1588:9: (v= VAR )
         dbg.enterAlt(1);
 
-        // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1592:9: v= VAR
+        // /Users/ciddennis/Development/sandboxes/cid/parser/RuleSet2.g:1588:9: v= VAR
         {
-        dbg.location(1592,10);
-        v=(Token)match(input,VAR,FOLLOW_VAR_in_synpred169_RuleSet24046); if (state.failed) return ;
+        dbg.location(1588,10);
+        v=(Token)match(input,VAR,FOLLOW_VAR_in_synpred171_RuleSet24033); if (state.failed) return ;
 
         }
     }
-    // $ANTLR end synpred169_RuleSet2
+    // $ANTLR end synpred171_RuleSet2
 
     // Delegated rules
 
-    public final boolean synpred122_RuleSet2() {
+    public final boolean synpred51_RuleSet2() {
         state.backtracking++;
         dbg.beginBacktrack(state.backtracking);
         int start = input.mark();
         try {
-            synpred122_RuleSet2_fragment(); // can never throw exception
+            synpred51_RuleSet2_fragment(); // can never throw exception
         } catch (RecognitionException re) {
             System.err.println("impossible: "+re);
         }
@@ -14604,12 +14706,12 @@ public class RuleSet2Parser extends DebugParser {
         state.failed=false;
         return success;
     }
-    public final boolean synpred169_RuleSet2() {
+    public final boolean synpred157_RuleSet2() {
         state.backtracking++;
         dbg.beginBacktrack(state.backtracking);
         int start = input.mark();
         try {
-            synpred169_RuleSet2_fragment(); // can never throw exception
+            synpred157_RuleSet2_fragment(); // can never throw exception
         } catch (RecognitionException re) {
             System.err.println("impossible: "+re);
         }
@@ -14620,12 +14722,12 @@ public class RuleSet2Parser extends DebugParser {
         state.failed=false;
         return success;
     }
-    public final boolean synpred119_RuleSet2() {
+    public final boolean synpred73_RuleSet2() {
         state.backtracking++;
         dbg.beginBacktrack(state.backtracking);
         int start = input.mark();
         try {
-            synpred119_RuleSet2_fragment(); // can never throw exception
+            synpred73_RuleSet2_fragment(); // can never throw exception
         } catch (RecognitionException re) {
             System.err.println("impossible: "+re);
         }
@@ -14636,12 +14738,12 @@ public class RuleSet2Parser extends DebugParser {
         state.failed=false;
         return success;
     }
-    public final boolean synpred19_RuleSet2() {
+    public final boolean synpred125_RuleSet2() {
         state.backtracking++;
         dbg.beginBacktrack(state.backtracking);
         int start = input.mark();
         try {
-            synpred19_RuleSet2_fragment(); // can never throw exception
+            synpred125_RuleSet2_fragment(); // can never throw exception
         } catch (RecognitionException re) {
             System.err.println("impossible: "+re);
         }
@@ -14652,60 +14754,12 @@ public class RuleSet2Parser extends DebugParser {
         state.failed=false;
         return success;
     }
-    public final boolean synpred155_RuleSet2() {
+    public final boolean synpred23_RuleSet2() {
         state.backtracking++;
         dbg.beginBacktrack(state.backtracking);
         int start = input.mark();
         try {
-            synpred155_RuleSet2_fragment(); // can never throw exception
-        } catch (RecognitionException re) {
-            System.err.println("impossible: "+re);
-        }
-        boolean success = !state.failed;
-        input.rewind(start);
-        dbg.endBacktrack(state.backtracking, success);
-        state.backtracking--;
-        state.failed=false;
-        return success;
-    }
-    public final boolean synpred124_RuleSet2() {
-        state.backtracking++;
-        dbg.beginBacktrack(state.backtracking);
-        int start = input.mark();
-        try {
-            synpred124_RuleSet2_fragment(); // can never throw exception
-        } catch (RecognitionException re) {
-            System.err.println("impossible: "+re);
-        }
-        boolean success = !state.failed;
-        input.rewind(start);
-        dbg.endBacktrack(state.backtracking, success);
-        state.backtracking--;
-        state.failed=false;
-        return success;
-    }
-    public final boolean synpred120_RuleSet2() {
-        state.backtracking++;
-        dbg.beginBacktrack(state.backtracking);
-        int start = input.mark();
-        try {
-            synpred120_RuleSet2_fragment(); // can never throw exception
-        } catch (RecognitionException re) {
-            System.err.println("impossible: "+re);
-        }
-        boolean success = !state.failed;
-        input.rewind(start);
-        dbg.endBacktrack(state.backtracking, success);
-        state.backtracking--;
-        state.failed=false;
-        return success;
-    }
-    public final boolean synpred164_RuleSet2() {
-        state.backtracking++;
-        dbg.beginBacktrack(state.backtracking);
-        int start = input.mark();
-        try {
-            synpred164_RuleSet2_fragment(); // can never throw exception
+            synpred23_RuleSet2_fragment(); // can never throw exception
         } catch (RecognitionException re) {
             System.err.println("impossible: "+re);
         }
@@ -14732,12 +14786,172 @@ public class RuleSet2Parser extends DebugParser {
         state.failed=false;
         return success;
     }
-    public final boolean synpred161_RuleSet2() {
+    public final boolean synpred163_RuleSet2() {
         state.backtracking++;
         dbg.beginBacktrack(state.backtracking);
         int start = input.mark();
         try {
-            synpred161_RuleSet2_fragment(); // can never throw exception
+            synpred163_RuleSet2_fragment(); // can never throw exception
+        } catch (RecognitionException re) {
+            System.err.println("impossible: "+re);
+        }
+        boolean success = !state.failed;
+        input.rewind(start);
+        dbg.endBacktrack(state.backtracking, success);
+        state.backtracking--;
+        state.failed=false;
+        return success;
+    }
+    public final boolean synpred122_RuleSet2() {
+        state.backtracking++;
+        dbg.beginBacktrack(state.backtracking);
+        int start = input.mark();
+        try {
+            synpred122_RuleSet2_fragment(); // can never throw exception
+        } catch (RecognitionException re) {
+            System.err.println("impossible: "+re);
+        }
+        boolean success = !state.failed;
+        input.rewind(start);
+        dbg.endBacktrack(state.backtracking, success);
+        state.backtracking--;
+        state.failed=false;
+        return success;
+    }
+    public final boolean synpred166_RuleSet2() {
+        state.backtracking++;
+        dbg.beginBacktrack(state.backtracking);
+        int start = input.mark();
+        try {
+            synpred166_RuleSet2_fragment(); // can never throw exception
+        } catch (RecognitionException re) {
+            System.err.println("impossible: "+re);
+        }
+        boolean success = !state.failed;
+        input.rewind(start);
+        dbg.endBacktrack(state.backtracking, success);
+        state.backtracking--;
+        state.failed=false;
+        return success;
+    }
+    public final boolean synpred33_RuleSet2() {
+        state.backtracking++;
+        dbg.beginBacktrack(state.backtracking);
+        int start = input.mark();
+        try {
+            synpred33_RuleSet2_fragment(); // can never throw exception
+        } catch (RecognitionException re) {
+            System.err.println("impossible: "+re);
+        }
+        boolean success = !state.failed;
+        input.rewind(start);
+        dbg.endBacktrack(state.backtracking, success);
+        state.backtracking--;
+        state.failed=false;
+        return success;
+    }
+    public final boolean synpred52_RuleSet2() {
+        state.backtracking++;
+        dbg.beginBacktrack(state.backtracking);
+        int start = input.mark();
+        try {
+            synpred52_RuleSet2_fragment(); // can never throw exception
+        } catch (RecognitionException re) {
+            System.err.println("impossible: "+re);
+        }
+        boolean success = !state.failed;
+        input.rewind(start);
+        dbg.endBacktrack(state.backtracking, success);
+        state.backtracking--;
+        state.failed=false;
+        return success;
+    }
+    public final boolean synpred19_RuleSet2() {
+        state.backtracking++;
+        dbg.beginBacktrack(state.backtracking);
+        int start = input.mark();
+        try {
+            synpred19_RuleSet2_fragment(); // can never throw exception
+        } catch (RecognitionException re) {
+            System.err.println("impossible: "+re);
+        }
+        boolean success = !state.failed;
+        input.rewind(start);
+        dbg.endBacktrack(state.backtracking, success);
+        state.backtracking--;
+        state.failed=false;
+        return success;
+    }
+    public final boolean synpred126_RuleSet2() {
+        state.backtracking++;
+        dbg.beginBacktrack(state.backtracking);
+        int start = input.mark();
+        try {
+            synpred126_RuleSet2_fragment(); // can never throw exception
+        } catch (RecognitionException re) {
+            System.err.println("impossible: "+re);
+        }
+        boolean success = !state.failed;
+        input.rewind(start);
+        dbg.endBacktrack(state.backtracking, success);
+        state.backtracking--;
+        state.failed=false;
+        return success;
+    }
+    public final boolean synpred171_RuleSet2() {
+        state.backtracking++;
+        dbg.beginBacktrack(state.backtracking);
+        int start = input.mark();
+        try {
+            synpred171_RuleSet2_fragment(); // can never throw exception
+        } catch (RecognitionException re) {
+            System.err.println("impossible: "+re);
+        }
+        boolean success = !state.failed;
+        input.rewind(start);
+        dbg.endBacktrack(state.backtracking, success);
+        state.backtracking--;
+        state.failed=false;
+        return success;
+    }
+    public final boolean synpred124_RuleSet2() {
+        state.backtracking++;
+        dbg.beginBacktrack(state.backtracking);
+        int start = input.mark();
+        try {
+            synpred124_RuleSet2_fragment(); // can never throw exception
+        } catch (RecognitionException re) {
+            System.err.println("impossible: "+re);
+        }
+        boolean success = !state.failed;
+        input.rewind(start);
+        dbg.endBacktrack(state.backtracking, success);
+        state.backtracking--;
+        state.failed=false;
+        return success;
+    }
+    public final boolean synpred20_RuleSet2() {
+        state.backtracking++;
+        dbg.beginBacktrack(state.backtracking);
+        int start = input.mark();
+        try {
+            synpred20_RuleSet2_fragment(); // can never throw exception
+        } catch (RecognitionException re) {
+            System.err.println("impossible: "+re);
+        }
+        boolean success = !state.failed;
+        input.rewind(start);
+        dbg.endBacktrack(state.backtracking, success);
+        state.backtracking--;
+        state.failed=false;
+        return success;
+    }
+    public final boolean synpred31_RuleSet2() {
+        state.backtracking++;
+        dbg.beginBacktrack(state.backtracking);
+        int start = input.mark();
+        try {
+            synpred31_RuleSet2_fragment(); // can never throw exception
         } catch (RecognitionException re) {
             System.err.println("impossible: "+re);
         }
@@ -14750,24 +14964,205 @@ public class RuleSet2Parser extends DebugParser {
     }
 
 
-    protected DFA80 dfa80 = new DFA80(this);
-    protected DFA79 dfa79 = new DFA79(this);
-    protected DFA90 dfa90 = new DFA90(this);
-    static final String DFA80_eotS =
+    protected DFA17 dfa17 = new DFA17(this);
+    protected DFA52 dfa52 = new DFA52(this);
+    protected DFA85 dfa85 = new DFA85(this);
+    protected DFA84 dfa84 = new DFA84(this);
+    protected DFA95 dfa95 = new DFA95(this);
+    static final String DFA17_eotS =
+        "\12\uffff";
+    static final String DFA17_eofS =
+        "\1\uffff\1\3\2\uffff\1\6\5\uffff";
+    static final String DFA17_minS =
+        "\2\4\2\uffff\1\4\1\47\2\uffff\1\4\1\0";
+    static final String DFA17_maxS =
+        "\2\154\2\uffff\1\147\1\47\2\uffff\1\4\1\0";
+    static final String DFA17_acceptS =
+        "\2\uffff\1\1\1\4\2\uffff\1\3\1\2\2\uffff";
+    static final String DFA17_specialS =
+        "\11\uffff\1\0}>";
+    static final String[] DFA17_transitionS = {
+            "\1\1\43\uffff\2\2\101\uffff\2\2",
+            "\1\4\1\6\1\uffff\1\6\3\uffff\2\6\20\uffff\1\6\3\3\16\uffff"+
+            "\1\6\11\uffff\1\6\15\uffff\1\6\6\uffff\1\6\26\uffff\3\6\1\uffff"+
+            "\2\6\2\5",
+            "",
+            "",
+            "\1\7\15\uffff\13\6\1\uffff\3\6\6\uffff\1\6\6\uffff\2\6\31\uffff"+
+            "\5\6\1\uffff\26\6\2\uffff\1\6",
+            "\1\10",
+            "",
+            "",
+            "\1\11",
+            "\1\uffff"
+    };
+
+    static final short[] DFA17_eot = DFA.unpackEncodedString(DFA17_eotS);
+    static final short[] DFA17_eof = DFA.unpackEncodedString(DFA17_eofS);
+    static final char[] DFA17_min = DFA.unpackEncodedStringToUnsignedChars(DFA17_minS);
+    static final char[] DFA17_max = DFA.unpackEncodedStringToUnsignedChars(DFA17_maxS);
+    static final short[] DFA17_accept = DFA.unpackEncodedString(DFA17_acceptS);
+    static final short[] DFA17_special = DFA.unpackEncodedString(DFA17_specialS);
+    static final short[][] DFA17_transition;
+
+    static {
+        int numStates = DFA17_transitionS.length;
+        DFA17_transition = new short[numStates][];
+        for (int i=0; i<numStates; i++) {
+            DFA17_transition[i] = DFA.unpackEncodedString(DFA17_transitionS[i]);
+        }
+    }
+
+    class DFA17 extends DFA {
+
+        public DFA17(BaseRecognizer recognizer) {
+            this.recognizer = recognizer;
+            this.decisionNumber = 17;
+            this.eot = DFA17_eot;
+            this.eof = DFA17_eof;
+            this.min = DFA17_min;
+            this.max = DFA17_max;
+            this.accept = DFA17_accept;
+            this.special = DFA17_special;
+            this.transition = DFA17_transition;
+        }
+        public String getDescription() {
+            return "407:5: (pe= persistent_expr | rs= raise_statement | l= log_statement | las= must_be[\"last\"] )";
+        }
+        public void error(NoViableAltException nvae) {
+            dbg.recognitionException(nvae);
+        }
+        public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
+            TokenStream input = (TokenStream)_input;
+        	int _s = s;
+            switch ( s ) {
+                    case 0 : 
+                        int LA17_9 = input.LA(1);
+
+                         
+                        int index17_9 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred31_RuleSet2()) ) {s = 2;}
+
+                        else if ( (synpred33_RuleSet2()) ) {s = 6;}
+
+                         
+                        input.seek(index17_9);
+                        if ( s>=0 ) return s;
+                        break;
+            }
+            if (state.backtracking>0) {state.failed=true; return -1;}
+            NoViableAltException nvae =
+                new NoViableAltException(getDescription(), 17, _s, input);
+            error(nvae);
+            throw nvae;
+        }
+    }
+    static final String DFA52_eotS =
+        "\13\uffff";
+    static final String DFA52_eofS =
+        "\13\uffff";
+    static final String DFA52_minS =
+        "\1\4\5\uffff\1\0\4\uffff";
+    static final String DFA52_maxS =
+        "\1\160\5\uffff\1\0\4\uffff";
+    static final String DFA52_acceptS =
+        "\1\uffff\1\2\10\uffff\1\1";
+    static final String DFA52_specialS =
+        "\6\uffff\1\0\4\uffff}>";
+    static final String[] DFA52_transitionS = {
+            "\1\6\30\uffff\1\1\1\uffff\2\1\17\uffff\2\1\3\uffff\2\1\71\uffff"+
+            "\1\1",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "\1\uffff",
+            "",
+            "",
+            "",
+            ""
+    };
+
+    static final short[] DFA52_eot = DFA.unpackEncodedString(DFA52_eotS);
+    static final short[] DFA52_eof = DFA.unpackEncodedString(DFA52_eofS);
+    static final char[] DFA52_min = DFA.unpackEncodedStringToUnsignedChars(DFA52_minS);
+    static final char[] DFA52_max = DFA.unpackEncodedStringToUnsignedChars(DFA52_maxS);
+    static final short[] DFA52_accept = DFA.unpackEncodedString(DFA52_acceptS);
+    static final short[] DFA52_special = DFA.unpackEncodedString(DFA52_specialS);
+    static final short[][] DFA52_transition;
+
+    static {
+        int numStates = DFA52_transitionS.length;
+        DFA52_transition = new short[numStates][];
+        for (int i=0; i<numStates; i++) {
+            DFA52_transition[i] = DFA.unpackEncodedString(DFA52_transitionS[i]);
+        }
+    }
+
+    class DFA52 extends DFA {
+
+        public DFA52(BaseRecognizer recognizer) {
+            this.recognizer = recognizer;
+            this.decisionNumber = 52;
+            this.eot = DFA52_eot;
+            this.eof = DFA52_eof;
+            this.min = DFA52_min;
+            this.max = DFA52_max;
+            this.accept = DFA52_accept;
+            this.special = DFA52_special;
+            this.transition = DFA52_transition;
+        }
+        public String getDescription() {
+            return "()* loopback of 816:16: (tb= must_be_one[sar(\"then\",\"before\")] eor2= event_or )*";
+        }
+        public void error(NoViableAltException nvae) {
+            dbg.recognitionException(nvae);
+        }
+        public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
+            TokenStream input = (TokenStream)_input;
+        	int _s = s;
+            switch ( s ) {
+                    case 0 : 
+                        int LA52_6 = input.LA(1);
+
+                         
+                        int index52_6 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred73_RuleSet2()) ) {s = 10;}
+
+                        else if ( (true) ) {s = 1;}
+
+                         
+                        input.seek(index52_6);
+                        if ( s>=0 ) return s;
+                        break;
+            }
+            if (state.backtracking>0) {state.failed=true; return -1;}
+            NoViableAltException nvae =
+                new NoViableAltException(getDescription(), 52, _s, input);
+            error(nvae);
+            throw nvae;
+        }
+    }
+    static final String DFA85_eotS =
         "\23\uffff";
-    static final String DFA80_eofS =
+    static final String DFA85_eofS =
         "\23\uffff";
-    static final String DFA80_minS =
+    static final String DFA85_minS =
         "\1\4\1\uffff\2\0\17\uffff";
-    static final String DFA80_maxS =
-        "\1\161\1\uffff\2\0\17\uffff";
-    static final String DFA80_acceptS =
+    static final String DFA85_maxS =
+        "\1\154\1\uffff\2\0\17\uffff";
+    static final String DFA85_acceptS =
         "\1\uffff\1\1\2\uffff\1\6\12\uffff\1\2\1\3\1\4\1\5";
-    static final String DFA80_specialS =
+    static final String DFA85_specialS =
         "\2\uffff\1\0\1\1\17\uffff}>";
-    static final String[] DFA80_transitionS = {
-            "\2\4\1\uffff\1\4\3\uffff\2\4\20\uffff\1\4\24\uffff\1\4\12\uffff"+
-            "\1\1\24\uffff\1\2\27\uffff\3\4\1\uffff\2\4\2\3",
+    static final String[] DFA85_transitionS = {
+            "\2\4\1\uffff\1\4\3\uffff\2\4\20\uffff\1\4\21\uffff\1\4\11\uffff"+
+            "\1\1\24\uffff\1\2\26\uffff\3\4\1\uffff\2\4\2\3",
             "",
             "\1\uffff",
             "\1\uffff",
@@ -14788,37 +15183,37 @@ public class RuleSet2Parser extends DebugParser {
             ""
     };
 
-    static final short[] DFA80_eot = DFA.unpackEncodedString(DFA80_eotS);
-    static final short[] DFA80_eof = DFA.unpackEncodedString(DFA80_eofS);
-    static final char[] DFA80_min = DFA.unpackEncodedStringToUnsignedChars(DFA80_minS);
-    static final char[] DFA80_max = DFA.unpackEncodedStringToUnsignedChars(DFA80_maxS);
-    static final short[] DFA80_accept = DFA.unpackEncodedString(DFA80_acceptS);
-    static final short[] DFA80_special = DFA.unpackEncodedString(DFA80_specialS);
-    static final short[][] DFA80_transition;
+    static final short[] DFA85_eot = DFA.unpackEncodedString(DFA85_eotS);
+    static final short[] DFA85_eof = DFA.unpackEncodedString(DFA85_eofS);
+    static final char[] DFA85_min = DFA.unpackEncodedStringToUnsignedChars(DFA85_minS);
+    static final char[] DFA85_max = DFA.unpackEncodedStringToUnsignedChars(DFA85_maxS);
+    static final short[] DFA85_accept = DFA.unpackEncodedString(DFA85_acceptS);
+    static final short[] DFA85_special = DFA.unpackEncodedString(DFA85_specialS);
+    static final short[][] DFA85_transition;
 
     static {
-        int numStates = DFA80_transitionS.length;
-        DFA80_transition = new short[numStates][];
+        int numStates = DFA85_transitionS.length;
+        DFA85_transition = new short[numStates][];
         for (int i=0; i<numStates; i++) {
-            DFA80_transition[i] = DFA.unpackEncodedString(DFA80_transitionS[i]);
+            DFA85_transition[i] = DFA.unpackEncodedString(DFA85_transitionS[i]);
         }
     }
 
-    class DFA80 extends DFA {
+    class DFA85 extends DFA {
 
-        public DFA80(BaseRecognizer recognizer) {
+        public DFA85(BaseRecognizer recognizer) {
             this.recognizer = recognizer;
-            this.decisionNumber = 80;
-            this.eot = DFA80_eot;
-            this.eof = DFA80_eof;
-            this.min = DFA80_min;
-            this.max = DFA80_max;
-            this.accept = DFA80_accept;
-            this.special = DFA80_special;
-            this.transition = DFA80_transition;
+            this.decisionNumber = 85;
+            this.eot = DFA85_eot;
+            this.eof = DFA85_eof;
+            this.min = DFA85_min;
+            this.max = DFA85_max;
+            this.accept = DFA85_accept;
+            this.special = DFA85_special;
+            this.transition = DFA85_transition;
         }
         public String getDescription() {
-            return "1358:1: unary_expr returns [Object result] options {backtrack=true; } : ( 'not' unary_expr | 'seen' rx= STRING must_be[\"in\"] vd= var_domain ':' v= VAR (t= timeframe )? | 'seen' rx_1= STRING op= ( 'before' | 'after' ) rx_2= STRING must_be[\"in\"] vd= var_domain ':' v= VAR | vd= var_domain ':' v= VAR pop= predop e= expr t= timeframe | vd= var_domain ':' v= VAR t= timeframe | oe= operator_expr );";
+            return "1354:1: unary_expr returns [Object result] options {backtrack=true; } : ( 'not' unary_expr | 'seen' rx= STRING must_be[\"in\"] vd= var_domain ':' v= VAR (t= timeframe )? | 'seen' rx_1= STRING op= must_be_one[sar(\"before\",\"after\")] rx_2= STRING must_be[\"in\"] vd= var_domain ':' v= VAR | vd= var_domain ':' v= VAR pop= predop e= expr t= timeframe | vd= var_domain ':' v= VAR t= timeframe | oe= operator_expr );";
         }
         public void error(NoViableAltException nvae) {
             dbg.recognitionException(nvae);
@@ -14828,60 +15223,60 @@ public class RuleSet2Parser extends DebugParser {
         	int _s = s;
             switch ( s ) {
                     case 0 : 
-                        int LA80_2 = input.LA(1);
+                        int LA85_2 = input.LA(1);
 
                          
-                        int index80_2 = input.index();
+                        int index85_2 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred120_RuleSet2()) ) {s = 15;}
+                        if ( (synpred123_RuleSet2()) ) {s = 15;}
 
-                        else if ( (synpred122_RuleSet2()) ) {s = 16;}
+                        else if ( (synpred124_RuleSet2()) ) {s = 16;}
 
                          
-                        input.seek(index80_2);
+                        input.seek(index85_2);
                         if ( s>=0 ) return s;
                         break;
                     case 1 : 
-                        int LA80_3 = input.LA(1);
+                        int LA85_3 = input.LA(1);
 
                          
-                        int index80_3 = input.index();
+                        int index85_3 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred123_RuleSet2()) ) {s = 17;}
+                        if ( (synpred125_RuleSet2()) ) {s = 17;}
 
-                        else if ( (synpred124_RuleSet2()) ) {s = 18;}
+                        else if ( (synpred126_RuleSet2()) ) {s = 18;}
 
                         else if ( (true) ) {s = 4;}
 
                          
-                        input.seek(index80_3);
+                        input.seek(index85_3);
                         if ( s>=0 ) return s;
                         break;
             }
             if (state.backtracking>0) {state.failed=true; return -1;}
             NoViableAltException nvae =
-                new NoViableAltException(getDescription(), 80, _s, input);
+                new NoViableAltException(getDescription(), 85, _s, input);
             error(nvae);
             throw nvae;
         }
     }
-    static final String DFA79_eotS =
-        "\46\uffff";
-    static final String DFA79_eofS =
-        "\1\2\45\uffff";
-    static final String DFA79_minS =
-        "\1\4\1\0\44\uffff";
-    static final String DFA79_maxS =
-        "\1\165\1\0\44\uffff";
-    static final String DFA79_acceptS =
-        "\2\uffff\1\2\42\uffff\1\1";
-    static final String DFA79_specialS =
-        "\1\uffff\1\0\44\uffff}>";
-    static final String[] DFA79_transitionS = {
-            "\2\2\1\uffff\1\2\3\uffff\2\2\5\uffff\20\2\16\uffff\6\2\1\uffff"+
-            "\1\2\5\uffff\1\2\15\uffff\10\2\27\uffff\10\2\1\1\1\2\1\uffff"+
+    static final String DFA84_eotS =
+        "\45\uffff";
+    static final String DFA84_eofS =
+        "\1\2\44\uffff";
+    static final String DFA84_minS =
+        "\1\4\1\0\43\uffff";
+    static final String DFA84_maxS =
+        "\1\160\1\0\43\uffff";
+    static final String DFA84_acceptS =
+        "\2\uffff\1\2\41\uffff\1\1";
+    static final String DFA84_specialS =
+        "\1\uffff\1\0\43\uffff}>";
+    static final String[] DFA84_transitionS = {
+            "\2\2\1\uffff\1\2\3\uffff\2\2\5\uffff\20\2\14\uffff\5\2\1\uffff"+
+            "\1\2\4\uffff\1\2\15\uffff\10\2\26\uffff\10\2\1\1\1\2\1\uffff"+
             "\1\2",
             "\1\uffff",
             "",
@@ -14918,41 +15313,40 @@ public class RuleSet2Parser extends DebugParser {
             "",
             "",
             "",
-            "",
             ""
     };
 
-    static final short[] DFA79_eot = DFA.unpackEncodedString(DFA79_eotS);
-    static final short[] DFA79_eof = DFA.unpackEncodedString(DFA79_eofS);
-    static final char[] DFA79_min = DFA.unpackEncodedStringToUnsignedChars(DFA79_minS);
-    static final char[] DFA79_max = DFA.unpackEncodedStringToUnsignedChars(DFA79_maxS);
-    static final short[] DFA79_accept = DFA.unpackEncodedString(DFA79_acceptS);
-    static final short[] DFA79_special = DFA.unpackEncodedString(DFA79_specialS);
-    static final short[][] DFA79_transition;
+    static final short[] DFA84_eot = DFA.unpackEncodedString(DFA84_eotS);
+    static final short[] DFA84_eof = DFA.unpackEncodedString(DFA84_eofS);
+    static final char[] DFA84_min = DFA.unpackEncodedStringToUnsignedChars(DFA84_minS);
+    static final char[] DFA84_max = DFA.unpackEncodedStringToUnsignedChars(DFA84_maxS);
+    static final short[] DFA84_accept = DFA.unpackEncodedString(DFA84_acceptS);
+    static final short[] DFA84_special = DFA.unpackEncodedString(DFA84_specialS);
+    static final short[][] DFA84_transition;
 
     static {
-        int numStates = DFA79_transitionS.length;
-        DFA79_transition = new short[numStates][];
+        int numStates = DFA84_transitionS.length;
+        DFA84_transition = new short[numStates][];
         for (int i=0; i<numStates; i++) {
-            DFA79_transition[i] = DFA.unpackEncodedString(DFA79_transitionS[i]);
+            DFA84_transition[i] = DFA.unpackEncodedString(DFA84_transitionS[i]);
         }
     }
 
-    class DFA79 extends DFA {
+    class DFA84 extends DFA {
 
-        public DFA79(BaseRecognizer recognizer) {
+        public DFA84(BaseRecognizer recognizer) {
             this.recognizer = recognizer;
-            this.decisionNumber = 79;
-            this.eot = DFA79_eot;
-            this.eof = DFA79_eof;
-            this.min = DFA79_min;
-            this.max = DFA79_max;
-            this.accept = DFA79_accept;
-            this.special = DFA79_special;
-            this.transition = DFA79_transition;
+            this.decisionNumber = 84;
+            this.eot = DFA84_eot;
+            this.eof = DFA84_eof;
+            this.min = DFA84_min;
+            this.max = DFA84_max;
+            this.accept = DFA84_accept;
+            this.special = DFA84_special;
+            this.transition = DFA84_transition;
         }
         public String getDescription() {
-            return "1363:60: (t= timeframe )?";
+            return "1359:60: (t= timeframe )?";
         }
         public void error(NoViableAltException nvae) {
             dbg.recognitionException(nvae);
@@ -14962,44 +15356,44 @@ public class RuleSet2Parser extends DebugParser {
         	int _s = s;
             switch ( s ) {
                     case 0 : 
-                        int LA79_1 = input.LA(1);
+                        int LA84_1 = input.LA(1);
 
                          
-                        int index79_1 = input.index();
+                        int index84_1 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred119_RuleSet2()) ) {s = 37;}
+                        if ( (synpred122_RuleSet2()) ) {s = 36;}
 
                         else if ( (true) ) {s = 2;}
 
                          
-                        input.seek(index79_1);
+                        input.seek(index84_1);
                         if ( s>=0 ) return s;
                         break;
             }
             if (state.backtracking>0) {state.failed=true; return -1;}
             NoViableAltException nvae =
-                new NoViableAltException(getDescription(), 79, _s, input);
+                new NoViableAltException(getDescription(), 84, _s, input);
             error(nvae);
             throw nvae;
         }
     }
-    static final String DFA90_eotS =
+    static final String DFA95_eotS =
         "\21\uffff";
-    static final String DFA90_eofS =
+    static final String DFA95_eofS =
         "\21\uffff";
-    static final String DFA90_minS =
+    static final String DFA95_minS =
         "\1\4\5\uffff\1\0\12\uffff";
-    static final String DFA90_maxS =
-        "\1\161\5\uffff\1\0\12\uffff";
-    static final String DFA90_acceptS =
+    static final String DFA95_maxS =
+        "\1\154\5\uffff\1\0\12\uffff";
+    static final String DFA95_acceptS =
         "\1\uffff\1\1\1\2\1\3\1\4\1\5\1\uffff\1\7\1\10\1\11\1\14\1\15\1\17"+
         "\1\6\1\12\1\13\1\16";
-    static final String DFA90_specialS =
+    static final String DFA95_specialS =
         "\6\uffff\1\0\12\uffff}>";
-    static final String[] DFA90_transitionS = {
-            "\1\6\1\1\1\uffff\1\3\3\uffff\1\2\1\5\20\uffff\1\13\24\uffff"+
-            "\1\14\67\uffff\2\4\1\12\1\uffff\1\10\1\11\2\7",
+    static final String[] DFA95_transitionS = {
+            "\1\6\1\1\1\uffff\1\3\3\uffff\1\2\1\5\20\uffff\1\13\21\uffff"+
+            "\1\14\65\uffff\2\4\1\12\1\uffff\1\10\1\11\2\7",
             "",
             "",
             "",
@@ -15018,37 +15412,37 @@ public class RuleSet2Parser extends DebugParser {
             ""
     };
 
-    static final short[] DFA90_eot = DFA.unpackEncodedString(DFA90_eotS);
-    static final short[] DFA90_eof = DFA.unpackEncodedString(DFA90_eofS);
-    static final char[] DFA90_min = DFA.unpackEncodedStringToUnsignedChars(DFA90_minS);
-    static final char[] DFA90_max = DFA.unpackEncodedStringToUnsignedChars(DFA90_maxS);
-    static final short[] DFA90_accept = DFA.unpackEncodedString(DFA90_acceptS);
-    static final short[] DFA90_special = DFA.unpackEncodedString(DFA90_specialS);
-    static final short[][] DFA90_transition;
+    static final short[] DFA95_eot = DFA.unpackEncodedString(DFA95_eotS);
+    static final short[] DFA95_eof = DFA.unpackEncodedString(DFA95_eofS);
+    static final char[] DFA95_min = DFA.unpackEncodedStringToUnsignedChars(DFA95_minS);
+    static final char[] DFA95_max = DFA.unpackEncodedStringToUnsignedChars(DFA95_maxS);
+    static final short[] DFA95_accept = DFA.unpackEncodedString(DFA95_acceptS);
+    static final short[] DFA95_special = DFA.unpackEncodedString(DFA95_specialS);
+    static final short[][] DFA95_transition;
 
     static {
-        int numStates = DFA90_transitionS.length;
-        DFA90_transition = new short[numStates][];
+        int numStates = DFA95_transitionS.length;
+        DFA95_transition = new short[numStates][];
         for (int i=0; i<numStates; i++) {
-            DFA90_transition[i] = DFA.unpackEncodedString(DFA90_transitionS[i]);
+            DFA95_transition[i] = DFA.unpackEncodedString(DFA95_transitionS[i]);
         }
     }
 
-    class DFA90 extends DFA {
+    class DFA95 extends DFA {
 
-        public DFA90(BaseRecognizer recognizer) {
+        public DFA95(BaseRecognizer recognizer) {
             this.recognizer = recognizer;
-            this.decisionNumber = 90;
-            this.eot = DFA90_eot;
-            this.eof = DFA90_eof;
-            this.min = DFA90_min;
-            this.max = DFA90_max;
-            this.accept = DFA90_accept;
-            this.special = DFA90_special;
-            this.transition = DFA90_transition;
+            this.decisionNumber = 95;
+            this.eot = DFA95_eot;
+            this.eof = DFA95_eof;
+            this.min = DFA95_min;
+            this.max = DFA95_max;
+            this.accept = DFA95_accept;
+            this.special = DFA95_special;
+            this.transition = DFA95_transition;
         }
         public String getDescription() {
-            return "1473:1: factor returns [Object result] options {backtrack=true; } : (v= INT | v= STRING | v= FLOAT | v= ( 'true' | 'false' ) | vr= REGEXP | v= VAR '[' e= expr ']' | d= var_domain ':' v= VAR | 'current' d= var_domain ':' v= VAR | 'history' e= expr d= var_domain ':' v= VAR | n= namespace p= VAR '(' (e= expr ( ',' )? )* ')' | v= VAR '(' (e= expr ( ',' )? )* ')' | '[' e= expr ( ',' e2= expr )* ']' | '{' h1= hash_line ( ',' h2= hash_line )* '}' | v= VAR | '(' e= expr ')' );";
+            return "1469:1: factor returns [Object result] options {backtrack=true; } : (v= INT | v= STRING | v= FLOAT | v= ( 'true' | 'false' ) | vr= REGEXP | v= VAR '[' e= expr ']' | d= var_domain ':' v= VAR | 'current' d= var_domain ':' v= VAR | 'history' e= expr d= var_domain ':' v= VAR | n= namespace p= VAR '(' (e= expr ( ',' )? )* ')' | v= VAR '(' (e= expr ( ',' )? )* ')' | '[' e= expr ( ',' e2= expr )* ']' | '{' h1= hash_line ( ',' h2= hash_line )* '}' | v= VAR | '(' e= expr ')' );";
         }
         public void error(NoViableAltException nvae) {
             dbg.recognitionException(nvae);
@@ -15058,28 +15452,28 @@ public class RuleSet2Parser extends DebugParser {
         	int _s = s;
             switch ( s ) {
                     case 0 : 
-                        int LA90_6 = input.LA(1);
+                        int LA95_6 = input.LA(1);
 
                          
-                        int index90_6 = input.index();
+                        int index95_6 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred155_RuleSet2()) ) {s = 13;}
+                        if ( (synpred157_RuleSet2()) ) {s = 13;}
 
-                        else if ( (synpred161_RuleSet2()) ) {s = 14;}
+                        else if ( (synpred163_RuleSet2()) ) {s = 14;}
 
-                        else if ( (synpred164_RuleSet2()) ) {s = 15;}
+                        else if ( (synpred166_RuleSet2()) ) {s = 15;}
 
-                        else if ( (synpred169_RuleSet2()) ) {s = 16;}
+                        else if ( (synpred171_RuleSet2()) ) {s = 16;}
 
                          
-                        input.seek(index90_6);
+                        input.seek(index95_6);
                         if ( s>=0 ) return s;
                         break;
             }
             if (state.backtracking>0) {state.failed=true; return -1;}
             NoViableAltException nvae =
-                new NoViableAltException(getDescription(), 90, _s, input);
+                new NoViableAltException(getDescription(), 95, _s, input);
             error(nvae);
             throw nvae;
         }
@@ -15088,467 +15482,474 @@ public class RuleSet2Parser extends DebugParser {
 
     public static final BitSet FOLLOW_set_in_predop0 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_set_in_add_op0 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_must_be_in_ruleset806 = new BitSet(new long[]{0x0000000000000030L});
-    public static final BitSet FOLLOW_rulesetname_in_ruleset812 = new BitSet(new long[]{0x0000000020000000L});
-    public static final BitSet FOLLOW_29_in_ruleset819 = new BitSet(new long[]{0x0000000040000010L,0x0040000000000020L});
-    public static final BitSet FOLLOW_meta_block_in_ruleset826 = new BitSet(new long[]{0x0000000040000010L,0x0040000000000020L});
-    public static final BitSet FOLLOW_dispatch_block_in_ruleset830 = new BitSet(new long[]{0x0000000040000010L,0x0040000000000020L});
-    public static final BitSet FOLLOW_global_block_in_ruleset834 = new BitSet(new long[]{0x0000000040000010L,0x0040000000000020L});
-    public static final BitSet FOLLOW_rule_in_ruleset838 = new BitSet(new long[]{0x0000000040000010L,0x0040000000000020L});
-    public static final BitSet FOLLOW_30_in_ruleset844 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_ruleset848 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_VAR_in_must_be871 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_VAR_in_must_be_one896 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_must_be_in_ruleset818 = new BitSet(new long[]{0x0000000000000030L});
+    public static final BitSet FOLLOW_rulesetname_in_ruleset824 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_29_in_ruleset831 = new BitSet(new long[]{0x0000000040000010L,0x0002000000000002L});
+    public static final BitSet FOLLOW_meta_block_in_ruleset838 = new BitSet(new long[]{0x0000000040000010L,0x0002000000000002L});
+    public static final BitSet FOLLOW_dispatch_block_in_ruleset842 = new BitSet(new long[]{0x0000000040000010L,0x0002000000000002L});
+    public static final BitSet FOLLOW_global_block_in_ruleset846 = new BitSet(new long[]{0x0000000040000010L,0x0002000000000002L});
+    public static final BitSet FOLLOW_rule_in_ruleset850 = new BitSet(new long[]{0x0000000040000010L,0x0002000000000002L});
+    public static final BitSet FOLLOW_30_in_ruleset856 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_ruleset860 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_VAR_in_must_be883 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_VAR_in_must_be_one908 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_set_in_rulesetname0 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_set_in_rule_name0 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_must_be_in_rule955 = new BitSet(new long[]{0x0000000000000030L});
-    public static final BitSet FOLLOW_rule_name_in_rule962 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_must_be_in_rule969 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_must_be_one_in_rule978 = new BitSet(new long[]{0x0000000020000000L});
-    public static final BitSet FOLLOW_29_in_rule983 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_VAR_in_rule993 = new BitSet(new long[]{0x0440000000000000L});
-    public static final BitSet FOLLOW_using_in_rule1000 = new BitSet(new long[]{0x0300000120000010L,0x0020000000000000L});
-    public static final BitSet FOLLOW_when_in_rule1004 = new BitSet(new long[]{0x0300000120000010L,0x0020000000000000L});
-    public static final BitSet FOLLOW_foreach_in_rule1010 = new BitSet(new long[]{0x0300000120000010L,0x0020000000000000L});
-    public static final BitSet FOLLOW_pre_block_in_rule1017 = new BitSet(new long[]{0x0300000120000010L,0x0020000000000000L});
-    public static final BitSet FOLLOW_emit_block_in_rule1022 = new BitSet(new long[]{0x0300000120000010L,0x0020000000000000L});
-    public static final BitSet FOLLOW_action_in_rule1026 = new BitSet(new long[]{0x0000000240000010L});
-    public static final BitSet FOLLOW_callbacks_in_rule1032 = new BitSet(new long[]{0x0000000040000010L});
-    public static final BitSet FOLLOW_post_block_in_rule1037 = new BitSet(new long[]{0x0000000040000000L});
-    public static final BitSet FOLLOW_30_in_rule1042 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_must_be_one_in_post_block1073 = new BitSet(new long[]{0x0000000020000000L});
-    public static final BitSet FOLLOW_29_in_post_block1076 = new BitSet(new long[]{0x00000E8000000010L,0x0003000000000000L});
-    public static final BitSet FOLLOW_post_statement_in_post_block1083 = new BitSet(new long[]{0x0000000080000000L});
-    public static final BitSet FOLLOW_31_in_post_block1088 = new BitSet(new long[]{0x00000E8000000010L,0x0003000000000000L});
-    public static final BitSet FOLLOW_post_statement_in_post_block1092 = new BitSet(new long[]{0x0000000080000000L});
-    public static final BitSet FOLLOW_31_in_post_block1100 = new BitSet(new long[]{0x0000000040000000L});
-    public static final BitSet FOLLOW_30_in_post_block1102 = new BitSet(new long[]{0x0000000000000012L});
-    public static final BitSet FOLLOW_post_alternate_in_post_block1109 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_must_be_in_post_alternate1135 = new BitSet(new long[]{0x0000000020000000L});
-    public static final BitSet FOLLOW_29_in_post_alternate1138 = new BitSet(new long[]{0x00000E80C0000010L,0x0003000000000000L});
-    public static final BitSet FOLLOW_post_statement_in_post_alternate1143 = new BitSet(new long[]{0x00000000C0000000L});
-    public static final BitSet FOLLOW_31_in_post_alternate1148 = new BitSet(new long[]{0x00000E8000000010L,0x0003000000000000L});
-    public static final BitSet FOLLOW_post_statement_in_post_alternate1152 = new BitSet(new long[]{0x00000000C0000000L});
-    public static final BitSet FOLLOW_31_in_post_alternate1160 = new BitSet(new long[]{0x0000000040000000L});
-    public static final BitSet FOLLOW_30_in_post_alternate1163 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_persistent_expr_in_post_statement1181 = new BitSet(new long[]{0x0000000100000002L});
-    public static final BitSet FOLLOW_raise_statement_in_post_statement1191 = new BitSet(new long[]{0x0000000100000002L});
-    public static final BitSet FOLLOW_log_statement_in_post_statement1198 = new BitSet(new long[]{0x0000000100000002L});
-    public static final BitSet FOLLOW_must_be_in_post_statement1208 = new BitSet(new long[]{0x0000000100000002L});
-    public static final BitSet FOLLOW_32_in_post_statement1214 = new BitSet(new long[]{0x20040000200018B0L,0x0003DC0000040800L});
-    public static final BitSet FOLLOW_expr_in_post_statement1218 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_must_be_in_raise_statement1243 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_must_be_in_raise_statement1246 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_must_be_in_raise_statement1249 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_VAR_in_raise_statement1255 = new BitSet(new long[]{0x0000900000000002L});
-    public static final BitSet FOLLOW_for_clause_in_raise_statement1259 = new BitSet(new long[]{0x0000100000000002L});
-    public static final BitSet FOLLOW_modifier_clause_in_raise_statement1264 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_must_be_in_log_statement1284 = new BitSet(new long[]{0x20040000200018B0L,0x0003DC0000040800L});
-    public static final BitSet FOLLOW_expr_in_log_statement1290 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_33_in_callbacks1310 = new BitSet(new long[]{0x0000000020000000L});
-    public static final BitSet FOLLOW_29_in_callbacks1312 = new BitSet(new long[]{0x0000000C40000000L});
-    public static final BitSet FOLLOW_success_in_callbacks1316 = new BitSet(new long[]{0x0000000840000000L});
-    public static final BitSet FOLLOW_failure_in_callbacks1321 = new BitSet(new long[]{0x0000000040000000L});
-    public static final BitSet FOLLOW_30_in_callbacks1324 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_34_in_success1347 = new BitSet(new long[]{0x0000000020000000L});
-    public static final BitSet FOLLOW_29_in_success1349 = new BitSet(new long[]{0x0000003000000000L});
-    public static final BitSet FOLLOW_click_in_success1353 = new BitSet(new long[]{0x00000000C0000000L});
-    public static final BitSet FOLLOW_31_in_success1359 = new BitSet(new long[]{0x0000003000000000L});
-    public static final BitSet FOLLOW_click_in_success1363 = new BitSet(new long[]{0x00000000C0000000L});
-    public static final BitSet FOLLOW_31_in_success1370 = new BitSet(new long[]{0x0000000040000000L});
-    public static final BitSet FOLLOW_30_in_success1374 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_35_in_failure1400 = new BitSet(new long[]{0x0000000020000000L});
-    public static final BitSet FOLLOW_29_in_failure1402 = new BitSet(new long[]{0x0000003000000000L});
-    public static final BitSet FOLLOW_click_in_failure1406 = new BitSet(new long[]{0x00000000C0000000L});
-    public static final BitSet FOLLOW_31_in_failure1412 = new BitSet(new long[]{0x0000003000000000L});
-    public static final BitSet FOLLOW_click_in_failure1416 = new BitSet(new long[]{0x00000000C0000000L});
-    public static final BitSet FOLLOW_31_in_failure1424 = new BitSet(new long[]{0x0000000040000000L});
-    public static final BitSet FOLLOW_30_in_failure1428 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_set_in_click1446 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_VAR_in_click1456 = new BitSet(new long[]{0x0000004000000000L});
-    public static final BitSet FOLLOW_38_in_click1458 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_STRING_in_click1462 = new BitSet(new long[]{0x0000000000000012L});
-    public static final BitSet FOLLOW_click_link_in_click1466 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_must_be_in_click_link1486 = new BitSet(new long[]{0x00000E8000000000L,0x0003000000000000L});
-    public static final BitSet FOLLOW_persistent_expr_in_click_link1491 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_persistent_clear_in_persistent_expr1513 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_persistent_set_in_persistent_expr1523 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_persistent_iterate_in_persistent_expr1533 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_trail_forget_in_persistent_expr1546 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_trail_mark_in_persistent_expr1559 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_39_in_persistent_clear1582 = new BitSet(new long[]{0x0000000000000000L,0x0003000000000000L});
-    public static final BitSet FOLLOW_var_domain_in_persistent_clear1587 = new BitSet(new long[]{0x0000010000000000L});
-    public static final BitSet FOLLOW_40_in_persistent_clear1589 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_VAR_in_persistent_clear1593 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_41_in_persistent_set1611 = new BitSet(new long[]{0x0000000000000000L,0x0003000000000000L});
-    public static final BitSet FOLLOW_var_domain_in_persistent_set1616 = new BitSet(new long[]{0x0000010000000000L});
-    public static final BitSet FOLLOW_40_in_persistent_set1618 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_VAR_in_persistent_set1622 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_var_domain_in_persistent_iterate1642 = new BitSet(new long[]{0x0000010000000000L});
-    public static final BitSet FOLLOW_40_in_persistent_iterate1644 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_VAR_in_persistent_iterate1648 = new BitSet(new long[]{0x0000600000000000L});
-    public static final BitSet FOLLOW_counter_op_in_persistent_iterate1652 = new BitSet(new long[]{0x20040000200018B0L,0x0003DC0000040800L});
-    public static final BitSet FOLLOW_expr_in_persistent_iterate1656 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_counter_start_in_persistent_iterate1660 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_42_in_trail_forget1678 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_STRING_in_trail_forget1683 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_must_be_in_trail_forget1685 = new BitSet(new long[]{0x0000000000000000L,0x0003000000000000L});
-    public static final BitSet FOLLOW_var_domain_in_trail_forget1691 = new BitSet(new long[]{0x0000010000000000L});
-    public static final BitSet FOLLOW_40_in_trail_forget1693 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_VAR_in_trail_forget1697 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_43_in_trail_mark1716 = new BitSet(new long[]{0x0000000000000000L,0x0003000000000000L});
-    public static final BitSet FOLLOW_var_domain_in_trail_mark1720 = new BitSet(new long[]{0x0000010000000000L});
-    public static final BitSet FOLLOW_40_in_trail_mark1722 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_VAR_in_trail_mark1726 = new BitSet(new long[]{0x0000100000000002L});
-    public static final BitSet FOLLOW_trail_with_in_trail_mark1730 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_44_in_trail_with1749 = new BitSet(new long[]{0x20040000200018B0L,0x0003DC0000040800L});
-    public static final BitSet FOLLOW_expr_in_trail_with1753 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_must_be_in_rule967 = new BitSet(new long[]{0x0000000000000030L});
+    public static final BitSet FOLLOW_rule_name_in_rule975 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_must_be_in_rule982 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_must_be_one_in_rule992 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_29_in_rule997 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_VAR_in_rule1007 = new BitSet(new long[]{0x0088000000000000L});
+    public static final BitSet FOLLOW_using_in_rule1014 = new BitSet(new long[]{0x00600001A0000010L,0x0001000000000000L});
+    public static final BitSet FOLLOW_when_in_rule1018 = new BitSet(new long[]{0x00600001A0000010L,0x0001000000000000L});
+    public static final BitSet FOLLOW_foreach_in_rule1024 = new BitSet(new long[]{0x00600001A0000010L,0x0001000000000000L});
+    public static final BitSet FOLLOW_pre_block_in_rule1031 = new BitSet(new long[]{0x00600001A0000010L,0x0001000000000000L});
+    public static final BitSet FOLLOW_31_in_rule1034 = new BitSet(new long[]{0x00600001A0000010L,0x0001000000000000L});
+    public static final BitSet FOLLOW_emit_block_in_rule1039 = new BitSet(new long[]{0x00600001A0000010L,0x0001000000000000L});
+    public static final BitSet FOLLOW_31_in_rule1042 = new BitSet(new long[]{0x00600001A0000010L,0x0001000000000000L});
+    public static final BitSet FOLLOW_action_in_rule1046 = new BitSet(new long[]{0x00000002C0000010L});
+    public static final BitSet FOLLOW_callbacks_in_rule1052 = new BitSet(new long[]{0x00000000C0000010L});
+    public static final BitSet FOLLOW_31_in_rule1055 = new BitSet(new long[]{0x00000000C0000010L});
+    public static final BitSet FOLLOW_post_block_in_rule1060 = new BitSet(new long[]{0x00000000C0000000L});
+    public static final BitSet FOLLOW_31_in_rule1063 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_30_in_rule1068 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_must_be_one_in_post_block1099 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_29_in_post_block1102 = new BitSet(new long[]{0x0000030000000010L,0x0000180000000000L});
+    public static final BitSet FOLLOW_post_statement_in_post_block1109 = new BitSet(new long[]{0x0000000080000000L});
+    public static final BitSet FOLLOW_31_in_post_block1114 = new BitSet(new long[]{0x0000030000000010L,0x0000180000000000L});
+    public static final BitSet FOLLOW_post_statement_in_post_block1118 = new BitSet(new long[]{0x0000000080000000L});
+    public static final BitSet FOLLOW_31_in_post_block1126 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_30_in_post_block1128 = new BitSet(new long[]{0x0000000000000012L});
+    public static final BitSet FOLLOW_post_alternate_in_post_block1135 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_must_be_in_post_alternate1161 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_29_in_post_alternate1164 = new BitSet(new long[]{0x00000300C0000010L,0x0000180000000000L});
+    public static final BitSet FOLLOW_post_statement_in_post_alternate1169 = new BitSet(new long[]{0x00000000C0000000L});
+    public static final BitSet FOLLOW_31_in_post_alternate1174 = new BitSet(new long[]{0x0000030000000010L,0x0000180000000000L});
+    public static final BitSet FOLLOW_post_statement_in_post_alternate1178 = new BitSet(new long[]{0x00000000C0000000L});
+    public static final BitSet FOLLOW_31_in_post_alternate1186 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_30_in_post_alternate1189 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_persistent_expr_in_post_statement1207 = new BitSet(new long[]{0x0000000100000002L});
+    public static final BitSet FOLLOW_raise_statement_in_post_statement1217 = new BitSet(new long[]{0x0000000100000002L});
+    public static final BitSet FOLLOW_log_statement_in_post_statement1224 = new BitSet(new long[]{0x0000000100000002L});
+    public static final BitSet FOLLOW_must_be_in_post_statement1234 = new BitSet(new long[]{0x0000000100000002L});
+    public static final BitSet FOLLOW_32_in_post_statement1240 = new BitSet(new long[]{0x02008000200018B0L,0x00001EE000004080L});
+    public static final BitSet FOLLOW_expr_in_post_statement1244 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_must_be_in_raise_statement1269 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_must_be_in_raise_statement1272 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_must_be_in_raise_statement1275 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_VAR_in_raise_statement1281 = new BitSet(new long[]{0x0000240000000002L});
+    public static final BitSet FOLLOW_for_clause_in_raise_statement1285 = new BitSet(new long[]{0x0000040000000002L});
+    public static final BitSet FOLLOW_modifier_clause_in_raise_statement1290 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_must_be_in_log_statement1310 = new BitSet(new long[]{0x02008000200018B0L,0x00001EE000004080L});
+    public static final BitSet FOLLOW_expr_in_log_statement1316 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_33_in_callbacks1336 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_29_in_callbacks1338 = new BitSet(new long[]{0x0000000C40000000L});
+    public static final BitSet FOLLOW_success_in_callbacks1342 = new BitSet(new long[]{0x0000000840000000L});
+    public static final BitSet FOLLOW_failure_in_callbacks1347 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_30_in_callbacks1350 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_34_in_success1373 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_29_in_success1375 = new BitSet(new long[]{0x0000003000000000L});
+    public static final BitSet FOLLOW_click_in_success1379 = new BitSet(new long[]{0x00000000C0000000L});
+    public static final BitSet FOLLOW_31_in_success1385 = new BitSet(new long[]{0x0000003000000000L});
+    public static final BitSet FOLLOW_click_in_success1389 = new BitSet(new long[]{0x00000000C0000000L});
+    public static final BitSet FOLLOW_31_in_success1396 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_30_in_success1400 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_35_in_failure1426 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_29_in_failure1428 = new BitSet(new long[]{0x0000003000000000L});
+    public static final BitSet FOLLOW_click_in_failure1432 = new BitSet(new long[]{0x00000000C0000000L});
+    public static final BitSet FOLLOW_31_in_failure1438 = new BitSet(new long[]{0x0000003000000000L});
+    public static final BitSet FOLLOW_click_in_failure1442 = new BitSet(new long[]{0x00000000C0000000L});
+    public static final BitSet FOLLOW_31_in_failure1450 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_30_in_failure1454 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_set_in_click1472 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_VAR_in_click1482 = new BitSet(new long[]{0x0000004000000000L});
+    public static final BitSet FOLLOW_38_in_click1484 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_STRING_in_click1488 = new BitSet(new long[]{0x0000000000000012L});
+    public static final BitSet FOLLOW_click_link_in_click1492 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_must_be_in_click_link1512 = new BitSet(new long[]{0x0000030000000010L,0x0000180000000000L});
+    public static final BitSet FOLLOW_persistent_expr_in_click_link1517 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_persistent_clear_set_in_persistent_expr1539 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_persistent_iterate_in_persistent_expr1549 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_trail_forget_in_persistent_expr1562 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_trail_mark_in_persistent_expr1575 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_must_be_one_in_persistent_clear_set1600 = new BitSet(new long[]{0x0000000000000000L,0x0000180000000000L});
+    public static final BitSet FOLLOW_var_domain_in_persistent_clear_set1606 = new BitSet(new long[]{0x0000008000000000L});
+    public static final BitSet FOLLOW_39_in_persistent_clear_set1608 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_VAR_in_persistent_clear_set1612 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_var_domain_in_persistent_iterate1633 = new BitSet(new long[]{0x0000008000000000L});
+    public static final BitSet FOLLOW_39_in_persistent_iterate1635 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_VAR_in_persistent_iterate1639 = new BitSet(new long[]{0x0000180000000000L});
+    public static final BitSet FOLLOW_counter_op_in_persistent_iterate1643 = new BitSet(new long[]{0x02008000200018B0L,0x00001EE000004080L});
+    public static final BitSet FOLLOW_expr_in_persistent_iterate1647 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_counter_start_in_persistent_iterate1651 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_40_in_trail_forget1669 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_STRING_in_trail_forget1674 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_must_be_in_trail_forget1676 = new BitSet(new long[]{0x0000000000000000L,0x0000180000000000L});
+    public static final BitSet FOLLOW_var_domain_in_trail_forget1682 = new BitSet(new long[]{0x0000008000000000L});
+    public static final BitSet FOLLOW_39_in_trail_forget1684 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_VAR_in_trail_forget1688 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_41_in_trail_mark1707 = new BitSet(new long[]{0x0000000000000000L,0x0000180000000000L});
+    public static final BitSet FOLLOW_var_domain_in_trail_mark1711 = new BitSet(new long[]{0x0000008000000000L});
+    public static final BitSet FOLLOW_39_in_trail_mark1713 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_VAR_in_trail_mark1717 = new BitSet(new long[]{0x0000040000000002L});
+    public static final BitSet FOLLOW_trail_with_in_trail_mark1721 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_42_in_trail_with1740 = new BitSet(new long[]{0x02008000200018B0L,0x00001EE000004080L});
+    public static final BitSet FOLLOW_expr_in_trail_with1744 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_set_in_counter_op0 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_must_be_in_counter_start1803 = new BitSet(new long[]{0x20040000200018B0L,0x0003DC0000040800L});
-    public static final BitSet FOLLOW_expr_in_counter_start1808 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_47_in_for_clause1829 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_VAR_in_for_clause1834 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_conditional_action_in_action1868 = new BitSet(new long[]{0x0000000080000002L});
-    public static final BitSet FOLLOW_unconditional_action_in_action1873 = new BitSet(new long[]{0x0000000080000002L});
-    public static final BitSet FOLLOW_31_in_action1877 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_32_in_conditional_action1894 = new BitSet(new long[]{0x20040000200018B0L,0x0003DC0000040800L});
-    public static final BitSet FOLLOW_expr_in_conditional_action1898 = new BitSet(new long[]{0x0001000000000000L});
-    public static final BitSet FOLLOW_48_in_conditional_action1900 = new BitSet(new long[]{0x0300000120000010L,0x0020000000000000L});
-    public static final BitSet FOLLOW_unconditional_action_in_conditional_action1902 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_primrule_in_unconditional_action1927 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_action_block_in_unconditional_action1937 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_must_be_one_in_action_block1963 = new BitSet(new long[]{0x0000000020000000L});
-    public static final BitSet FOLLOW_29_in_action_block1973 = new BitSet(new long[]{0x0000000000000010L,0x0020000000000000L});
-    public static final BitSet FOLLOW_primrule_in_action_block1978 = new BitSet(new long[]{0x00000000C0000000L});
-    public static final BitSet FOLLOW_31_in_action_block1988 = new BitSet(new long[]{0x0000000000000010L,0x0020000000000000L});
-    public static final BitSet FOLLOW_primrule_in_action_block1992 = new BitSet(new long[]{0x00000000C0000000L});
-    public static final BitSet FOLLOW_31_in_action_block1999 = new BitSet(new long[]{0x0000000040000000L});
-    public static final BitSet FOLLOW_30_in_action_block2002 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_VAR_in_primrule2029 = new BitSet(new long[]{0x0002000000000000L});
-    public static final BitSet FOLLOW_49_in_primrule2031 = new BitSet(new long[]{0x0000000000000010L,0x0020000000000000L});
-    public static final BitSet FOLLOW_namespace_in_primrule2042 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_VAR_in_primrule2047 = new BitSet(new long[]{0x0004000000000000L});
-    public static final BitSet FOLLOW_50_in_primrule2049 = new BitSet(new long[]{0x201C0000200018B0L,0x0003DC0000040800L});
-    public static final BitSet FOLLOW_expr_in_primrule2054 = new BitSet(new long[]{0x0018000000000000L});
-    public static final BitSet FOLLOW_51_in_primrule2059 = new BitSet(new long[]{0x20040000200018B0L,0x0003DC0000040800L});
-    public static final BitSet FOLLOW_expr_in_primrule2063 = new BitSet(new long[]{0x0018000000000000L});
-    public static final BitSet FOLLOW_51_in_primrule2071 = new BitSet(new long[]{0x0010000000000000L});
-    public static final BitSet FOLLOW_52_in_primrule2075 = new BitSet(new long[]{0x0000100000000002L});
-    public static final BitSet FOLLOW_modifier_clause_in_primrule2079 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_emit_block_in_primrule2089 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_44_in_modifier_clause2123 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_modifier_in_modifier_clause2127 = new BitSet(new long[]{0x0020000000000002L});
-    public static final BitSet FOLLOW_53_in_modifier_clause2132 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_modifier_in_modifier_clause2136 = new BitSet(new long[]{0x0020000000000002L});
-    public static final BitSet FOLLOW_VAR_in_modifier2161 = new BitSet(new long[]{0x0000004000000000L});
-    public static final BitSet FOLLOW_38_in_modifier2163 = new BitSet(new long[]{0x20040000200058B0L,0x0003DC0000040800L});
-    public static final BitSet FOLLOW_expr_in_modifier2168 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_JS_in_modifier2174 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_54_in_using2199 = new BitSet(new long[]{0x0000000000001800L});
-    public static final BitSet FOLLOW_set_in_using2203 = new BitSet(new long[]{0x0080000000000002L});
-    public static final BitSet FOLLOW_setting_in_using2211 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_55_in_setting2232 = new BitSet(new long[]{0x0004000000000000L});
-    public static final BitSet FOLLOW_50_in_setting2234 = new BitSet(new long[]{0x0010000000000010L});
-    public static final BitSet FOLLOW_VAR_in_setting2239 = new BitSet(new long[]{0x0018000000000010L});
-    public static final BitSet FOLLOW_51_in_setting2243 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_VAR_in_setting2247 = new BitSet(new long[]{0x0010000000000010L});
-    public static final BitSet FOLLOW_52_in_setting2255 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_56_in_pre_block2280 = new BitSet(new long[]{0x0000000020000000L});
-    public static final BitSet FOLLOW_29_in_pre_block2282 = new BitSet(new long[]{0x00000000C0000010L});
-    public static final BitSet FOLLOW_decl_in_pre_block2286 = new BitSet(new long[]{0x00000000C0000000L});
-    public static final BitSet FOLLOW_31_in_pre_block2290 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_decl_in_pre_block2292 = new BitSet(new long[]{0x00000000C0000000L});
-    public static final BitSet FOLLOW_31_in_pre_block2300 = new BitSet(new long[]{0x0000000040000000L});
-    public static final BitSet FOLLOW_30_in_pre_block2303 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_57_in_foreach2336 = new BitSet(new long[]{0x20040000200018B0L,0x0003DC0000040800L});
-    public static final BitSet FOLLOW_expr_in_foreach2340 = new BitSet(new long[]{0x0080000000000000L});
-    public static final BitSet FOLLOW_setting_in_foreach2344 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_58_in_when2379 = new BitSet(new long[]{0x8004003000000010L,0x000000000000000FL});
-    public static final BitSet FOLLOW_event_seq_in_when2383 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_event_or_in_event_seq2410 = new BitSet(new long[]{0x0801000000000002L});
-    public static final BitSet FOLLOW_set_in_event_seq2414 = new BitSet(new long[]{0x8004003000000010L,0x000000000000000FL});
-    public static final BitSet FOLLOW_event_or_in_event_seq2422 = new BitSet(new long[]{0x0801000000000002L});
-    public static final BitSet FOLLOW_event_and_in_event_or2464 = new BitSet(new long[]{0x1000000000000002L});
-    public static final BitSet FOLLOW_60_in_event_or2469 = new BitSet(new long[]{0x8004003000000010L,0x000000000000000FL});
-    public static final BitSet FOLLOW_event_and_in_event_or2473 = new BitSet(new long[]{0x1000000000000002L});
-    public static final BitSet FOLLOW_event_btwn_in_event_and2503 = new BitSet(new long[]{0x0020000000000002L});
-    public static final BitSet FOLLOW_53_in_event_and2508 = new BitSet(new long[]{0x8004003000000010L,0x000000000000000FL});
-    public static final BitSet FOLLOW_event_btwn_in_event_and2512 = new BitSet(new long[]{0x0020000000000002L});
-    public static final BitSet FOLLOW_event_prim_in_event_btwn2538 = new BitSet(new long[]{0x6000000000000002L});
-    public static final BitSet FOLLOW_61_in_event_btwn2544 = new BitSet(new long[]{0x4000000000000000L});
-    public static final BitSet FOLLOW_62_in_event_btwn2549 = new BitSet(new long[]{0x0004000000000000L});
-    public static final BitSet FOLLOW_50_in_event_btwn2551 = new BitSet(new long[]{0x8004003000000010L,0x000000000000000FL});
-    public static final BitSet FOLLOW_event_seq_in_event_btwn2555 = new BitSet(new long[]{0x0008000000000000L});
-    public static final BitSet FOLLOW_51_in_event_btwn2557 = new BitSet(new long[]{0x8004003000000010L,0x000000000000000FL});
-    public static final BitSet FOLLOW_event_seq_in_event_btwn2561 = new BitSet(new long[]{0x0010000000000000L});
-    public static final BitSet FOLLOW_52_in_event_btwn2563 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_63_in_event_prim2594 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
-    public static final BitSet FOLLOW_64_in_event_prim2597 = new BitSet(new long[]{0x0000000000001800L});
-    public static final BitSet FOLLOW_STRING_in_event_prim2602 = new BitSet(new long[]{0x0080000000000002L});
-    public static final BitSet FOLLOW_REGEXP_in_event_prim2606 = new BitSet(new long[]{0x0080000000000002L});
-    public static final BitSet FOLLOW_setting_in_event_prim2611 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_63_in_event_prim2620 = new BitSet(new long[]{0x0000003000000000L,0x000000000000000EL});
-    public static final BitSet FOLLOW_set_in_event_prim2625 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_STRING_in_event_prim2639 = new BitSet(new long[]{0x0080000000000002L,0x0000000000000010L});
-    public static final BitSet FOLLOW_on_expr_in_event_prim2643 = new BitSet(new long[]{0x0080000000000002L});
-    public static final BitSet FOLLOW_setting_in_event_prim2649 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_VAR_in_event_prim2659 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_VAR_in_event_prim2663 = new BitSet(new long[]{0x0080000000000012L});
-    public static final BitSet FOLLOW_event_filter_in_event_prim2668 = new BitSet(new long[]{0x0080000000000012L});
-    public static final BitSet FOLLOW_setting_in_event_prim2675 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_50_in_event_prim2685 = new BitSet(new long[]{0x8004003000000010L,0x000000000000000FL});
-    public static final BitSet FOLLOW_event_seq_in_event_prim2689 = new BitSet(new long[]{0x0010000000000000L});
-    public static final BitSet FOLLOW_52_in_event_prim2691 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_VAR_in_event_filter2712 = new BitSet(new long[]{0x0000000000001800L});
-    public static final BitSet FOLLOW_STRING_in_event_filter2717 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_REGEXP_in_event_filter2723 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_68_in_on_expr2742 = new BitSet(new long[]{0x0000000000001800L});
-    public static final BitSet FOLLOW_STRING_in_on_expr2751 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_REGEXP_in_on_expr2762 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_69_in_global_block2847 = new BitSet(new long[]{0x0000000020000000L});
-    public static final BitSet FOLLOW_29_in_global_block2849 = new BitSet(new long[]{0x0000000080000010L,0x0028000000000000L});
-    public static final BitSet FOLLOW_emit_block_in_global_block2857 = new BitSet(new long[]{0x00000000C0000010L,0x0028000000000000L});
-    public static final BitSet FOLLOW_must_be_one_in_global_block2867 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_VAR_in_global_block2872 = new BitSet(new long[]{0x0000010000000000L,0x0000000000000400L});
-    public static final BitSet FOLLOW_40_in_global_block2875 = new BitSet(new long[]{0x0000000000000000L,0x00000000000003C0L});
-    public static final BitSet FOLLOW_set_in_global_block2879 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000400L});
-    public static final BitSet FOLLOW_74_in_global_block2891 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_STRING_in_global_block2895 = new BitSet(new long[]{0x00000000C0000010L,0x0038000000000000L});
-    public static final BitSet FOLLOW_cachable_in_global_block2900 = new BitSet(new long[]{0x00000000C0000010L,0x0028000000000000L});
-    public static final BitSet FOLLOW_css_emit_in_global_block2913 = new BitSet(new long[]{0x00000000C0000010L,0x0028000000000000L});
-    public static final BitSet FOLLOW_decl_in_global_block2921 = new BitSet(new long[]{0x00000000C0000010L,0x0028000000000000L});
-    public static final BitSet FOLLOW_31_in_global_block2927 = new BitSet(new long[]{0x00000000C0000010L,0x0028000000000000L});
-    public static final BitSet FOLLOW_30_in_global_block2932 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_VAR_in_decl2959 = new BitSet(new long[]{0x0000004000000000L});
-    public static final BitSet FOLLOW_38_in_decl2961 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_HTML_in_decl2965 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_VAR_in_decl2975 = new BitSet(new long[]{0x0000004000000000L});
-    public static final BitSet FOLLOW_38_in_decl2977 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_JS_in_decl2981 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_VAR_in_decl2991 = new BitSet(new long[]{0x0000004000000000L});
-    public static final BitSet FOLLOW_38_in_decl2993 = new BitSet(new long[]{0x20040000200018B0L,0x0003DC0000040800L});
-    public static final BitSet FOLLOW_expr_in_decl2997 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_function_def_in_expr3024 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_conditional_expression_in_expr3033 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_75_in_function_def3056 = new BitSet(new long[]{0x0004000000000000L});
-    public static final BitSet FOLLOW_50_in_function_def3058 = new BitSet(new long[]{0x0018000000000010L});
-    public static final BitSet FOLLOW_VAR_in_function_def3062 = new BitSet(new long[]{0x0018000000000000L});
-    public static final BitSet FOLLOW_51_in_function_def3066 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_VAR_in_function_def3070 = new BitSet(new long[]{0x0018000000000000L});
-    public static final BitSet FOLLOW_52_in_function_def3075 = new BitSet(new long[]{0x0000000020000000L});
-    public static final BitSet FOLLOW_29_in_function_def3077 = new BitSet(new long[]{0x20040000A00018B0L,0x0003DC0000040800L});
-    public static final BitSet FOLLOW_decl_in_function_def3081 = new BitSet(new long[]{0x20040000A00018B0L,0x0003DC0000040800L});
-    public static final BitSet FOLLOW_31_in_function_def3086 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_decl_in_function_def3090 = new BitSet(new long[]{0x20040000A00018B0L,0x0003DC0000040800L});
-    public static final BitSet FOLLOW_31_in_function_def3095 = new BitSet(new long[]{0x20040000200018B0L,0x0003DC0000040800L});
-    public static final BitSet FOLLOW_expr_in_function_def3100 = new BitSet(new long[]{0x0000000040000000L});
-    public static final BitSet FOLLOW_30_in_function_def3102 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_disjunction_in_conditional_expression3124 = new BitSet(new long[]{0x0002000000000002L});
-    public static final BitSet FOLLOW_49_in_conditional_expression3127 = new BitSet(new long[]{0x20040000200018B0L,0x0003DC0000040800L});
-    public static final BitSet FOLLOW_expr_in_conditional_expression3129 = new BitSet(new long[]{0x0000000000000000L,0x0000000000001000L});
-    public static final BitSet FOLLOW_76_in_conditional_expression3131 = new BitSet(new long[]{0x20040000200018B0L,0x0003DC0000040800L});
-    public static final BitSet FOLLOW_expr_in_conditional_expression3133 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_conjunction_in_disjunction3165 = new BitSet(new long[]{0x0000000000000002L,0x0000000000002000L});
-    public static final BitSet FOLLOW_77_in_disjunction3170 = new BitSet(new long[]{0x20040000200018B0L,0x0003DC0000040800L});
-    public static final BitSet FOLLOW_conjunction_in_disjunction3174 = new BitSet(new long[]{0x0000000000000002L,0x0000000000002000L});
-    public static final BitSet FOLLOW_equality_expr_in_conjunction3204 = new BitSet(new long[]{0x0000000000000002L,0x0000000000004000L});
-    public static final BitSet FOLLOW_78_in_conjunction3209 = new BitSet(new long[]{0x20040000200018B0L,0x0003DC0000040800L});
-    public static final BitSet FOLLOW_equality_expr_in_conjunction3213 = new BitSet(new long[]{0x0000000000000002L,0x0000000000004000L});
+    public static final BitSet FOLLOW_must_be_in_counter_start1794 = new BitSet(new long[]{0x02008000200018B0L,0x00001EE000004080L});
+    public static final BitSet FOLLOW_expr_in_counter_start1799 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_45_in_for_clause1820 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_VAR_in_for_clause1825 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_conditional_action_in_action1859 = new BitSet(new long[]{0x0000000080000002L});
+    public static final BitSet FOLLOW_unconditional_action_in_action1864 = new BitSet(new long[]{0x0000000080000002L});
+    public static final BitSet FOLLOW_31_in_action1868 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_32_in_conditional_action1885 = new BitSet(new long[]{0x02008000200018B0L,0x00001EE000004080L});
+    public static final BitSet FOLLOW_expr_in_conditional_action1889 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_must_be_in_conditional_action1892 = new BitSet(new long[]{0x00600001A0000010L,0x0001000000000000L});
+    public static final BitSet FOLLOW_unconditional_action_in_conditional_action1895 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_primrule_in_unconditional_action1920 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_action_block_in_unconditional_action1930 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_must_be_one_in_action_block1956 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_29_in_action_block1966 = new BitSet(new long[]{0x0000000000000010L,0x0001000000000000L});
+    public static final BitSet FOLLOW_primrule_in_action_block1971 = new BitSet(new long[]{0x00000000C0000000L});
+    public static final BitSet FOLLOW_31_in_action_block1981 = new BitSet(new long[]{0x0000000000000010L,0x0001000000000000L});
+    public static final BitSet FOLLOW_primrule_in_action_block1985 = new BitSet(new long[]{0x00000000C0000000L});
+    public static final BitSet FOLLOW_31_in_action_block1992 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_30_in_action_block1995 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_VAR_in_primrule2022 = new BitSet(new long[]{0x0000400000000000L});
+    public static final BitSet FOLLOW_46_in_primrule2024 = new BitSet(new long[]{0x0000000000000010L,0x0001000000000000L});
+    public static final BitSet FOLLOW_namespace_in_primrule2035 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_VAR_in_primrule2040 = new BitSet(new long[]{0x0000800000000000L});
+    public static final BitSet FOLLOW_47_in_primrule2042 = new BitSet(new long[]{0x02038000200018B0L,0x00001EE000004080L});
+    public static final BitSet FOLLOW_expr_in_primrule2047 = new BitSet(new long[]{0x0003000000000000L});
+    public static final BitSet FOLLOW_48_in_primrule2052 = new BitSet(new long[]{0x02008000200018B0L,0x00001EE000004080L});
+    public static final BitSet FOLLOW_expr_in_primrule2056 = new BitSet(new long[]{0x0003000000000000L});
+    public static final BitSet FOLLOW_48_in_primrule2064 = new BitSet(new long[]{0x0002000000000000L});
+    public static final BitSet FOLLOW_49_in_primrule2068 = new BitSet(new long[]{0x0000040000000002L});
+    public static final BitSet FOLLOW_modifier_clause_in_primrule2072 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_emit_block_in_primrule2082 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_42_in_modifier_clause2116 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_modifier_in_modifier_clause2120 = new BitSet(new long[]{0x0004000000000002L});
+    public static final BitSet FOLLOW_50_in_modifier_clause2125 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_modifier_in_modifier_clause2129 = new BitSet(new long[]{0x0004000000000002L});
+    public static final BitSet FOLLOW_VAR_in_modifier2154 = new BitSet(new long[]{0x0000004000000000L});
+    public static final BitSet FOLLOW_38_in_modifier2156 = new BitSet(new long[]{0x02008000200058B0L,0x00001EE000004080L});
+    public static final BitSet FOLLOW_expr_in_modifier2161 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_JS_in_modifier2167 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_51_in_using2192 = new BitSet(new long[]{0x0000000000001800L});
+    public static final BitSet FOLLOW_set_in_using2196 = new BitSet(new long[]{0x0010000000000002L});
+    public static final BitSet FOLLOW_setting_in_using2204 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_52_in_setting2225 = new BitSet(new long[]{0x0000800000000000L});
+    public static final BitSet FOLLOW_47_in_setting2227 = new BitSet(new long[]{0x0002000000000010L});
+    public static final BitSet FOLLOW_VAR_in_setting2232 = new BitSet(new long[]{0x0003000000000000L});
+    public static final BitSet FOLLOW_48_in_setting2236 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_VAR_in_setting2240 = new BitSet(new long[]{0x0003000000000000L});
+    public static final BitSet FOLLOW_49_in_setting2248 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_53_in_pre_block2273 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_29_in_pre_block2275 = new BitSet(new long[]{0x00000000C0000010L});
+    public static final BitSet FOLLOW_decl_in_pre_block2279 = new BitSet(new long[]{0x00000000C0000000L});
+    public static final BitSet FOLLOW_31_in_pre_block2283 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_decl_in_pre_block2285 = new BitSet(new long[]{0x00000000C0000000L});
+    public static final BitSet FOLLOW_31_in_pre_block2293 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_30_in_pre_block2296 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_54_in_foreach2329 = new BitSet(new long[]{0x02008000200018B0L,0x00001EE000004080L});
+    public static final BitSet FOLLOW_expr_in_foreach2333 = new BitSet(new long[]{0x0010000000000000L});
+    public static final BitSet FOLLOW_setting_in_foreach2337 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_55_in_when2372 = new BitSet(new long[]{0xF800803000000010L});
+    public static final BitSet FOLLOW_event_seq_in_when2376 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_event_or_in_event_seq2403 = new BitSet(new long[]{0x0000000000000012L});
+    public static final BitSet FOLLOW_must_be_one_in_event_seq2408 = new BitSet(new long[]{0xF800803000000010L});
+    public static final BitSet FOLLOW_event_or_in_event_seq2413 = new BitSet(new long[]{0x0000000000000012L});
+    public static final BitSet FOLLOW_event_and_in_event_or2455 = new BitSet(new long[]{0x0100000000000002L});
+    public static final BitSet FOLLOW_56_in_event_or2460 = new BitSet(new long[]{0xF800803000000010L});
+    public static final BitSet FOLLOW_event_and_in_event_or2464 = new BitSet(new long[]{0x0100000000000002L});
+    public static final BitSet FOLLOW_event_btwn_in_event_and2494 = new BitSet(new long[]{0x0004000000000002L});
+    public static final BitSet FOLLOW_50_in_event_and2499 = new BitSet(new long[]{0xF800803000000010L});
+    public static final BitSet FOLLOW_event_btwn_in_event_and2503 = new BitSet(new long[]{0x0004000000000002L});
+    public static final BitSet FOLLOW_event_prim_in_event_btwn2529 = new BitSet(new long[]{0x0600000000000002L});
+    public static final BitSet FOLLOW_57_in_event_btwn2535 = new BitSet(new long[]{0x0400000000000000L});
+    public static final BitSet FOLLOW_58_in_event_btwn2540 = new BitSet(new long[]{0x0000800000000000L});
+    public static final BitSet FOLLOW_47_in_event_btwn2542 = new BitSet(new long[]{0xF800803000000010L});
+    public static final BitSet FOLLOW_event_seq_in_event_btwn2546 = new BitSet(new long[]{0x0001000000000000L});
+    public static final BitSet FOLLOW_48_in_event_btwn2548 = new BitSet(new long[]{0xF800803000000010L});
+    public static final BitSet FOLLOW_event_seq_in_event_btwn2552 = new BitSet(new long[]{0x0002000000000000L});
+    public static final BitSet FOLLOW_49_in_event_btwn2554 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_59_in_event_prim2585 = new BitSet(new long[]{0x1000000000000000L});
+    public static final BitSet FOLLOW_60_in_event_prim2588 = new BitSet(new long[]{0x0000000000001800L});
+    public static final BitSet FOLLOW_STRING_in_event_prim2593 = new BitSet(new long[]{0x0010000000000002L});
+    public static final BitSet FOLLOW_REGEXP_in_event_prim2597 = new BitSet(new long[]{0x0010000000000002L});
+    public static final BitSet FOLLOW_setting_in_event_prim2602 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_59_in_event_prim2611 = new BitSet(new long[]{0xE000003000000000L});
+    public static final BitSet FOLLOW_set_in_event_prim2616 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_STRING_in_event_prim2630 = new BitSet(new long[]{0x0010000000000002L,0x0000000000000001L});
+    public static final BitSet FOLLOW_on_expr_in_event_prim2634 = new BitSet(new long[]{0x0010000000000002L});
+    public static final BitSet FOLLOW_setting_in_event_prim2640 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_VAR_in_event_prim2650 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_VAR_in_event_prim2654 = new BitSet(new long[]{0x0010000000000012L});
+    public static final BitSet FOLLOW_event_filter_in_event_prim2659 = new BitSet(new long[]{0x0010000000000012L});
+    public static final BitSet FOLLOW_setting_in_event_prim2666 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_47_in_event_prim2676 = new BitSet(new long[]{0xF800803000000010L});
+    public static final BitSet FOLLOW_event_seq_in_event_prim2680 = new BitSet(new long[]{0x0002000000000000L});
+    public static final BitSet FOLLOW_49_in_event_prim2682 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_VAR_in_event_filter2703 = new BitSet(new long[]{0x0000000000001800L});
+    public static final BitSet FOLLOW_STRING_in_event_filter2708 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_REGEXP_in_event_filter2714 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_64_in_on_expr2733 = new BitSet(new long[]{0x0000000000001800L});
+    public static final BitSet FOLLOW_STRING_in_on_expr2742 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_REGEXP_in_on_expr2753 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_65_in_global_block2838 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_29_in_global_block2840 = new BitSet(new long[]{0x00000000C0000010L,0x0001400000000000L});
+    public static final BitSet FOLLOW_emit_block_in_global_block2848 = new BitSet(new long[]{0x00000000C0000010L,0x0001400000000000L});
+    public static final BitSet FOLLOW_must_be_one_in_global_block2858 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_VAR_in_global_block2863 = new BitSet(new long[]{0x0000008000000000L,0x0000000000000040L});
+    public static final BitSet FOLLOW_39_in_global_block2866 = new BitSet(new long[]{0x0000000000000000L,0x000000000000003CL});
+    public static final BitSet FOLLOW_set_in_global_block2870 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000040L});
+    public static final BitSet FOLLOW_70_in_global_block2882 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_STRING_in_global_block2886 = new BitSet(new long[]{0x00000000C0000010L,0x0001C00000000000L});
+    public static final BitSet FOLLOW_cachable_in_global_block2891 = new BitSet(new long[]{0x00000000C0000010L,0x0001400000000000L});
+    public static final BitSet FOLLOW_css_emit_in_global_block2904 = new BitSet(new long[]{0x00000000C0000010L,0x0001400000000000L});
+    public static final BitSet FOLLOW_decl_in_global_block2912 = new BitSet(new long[]{0x00000000C0000010L,0x0001400000000000L});
+    public static final BitSet FOLLOW_31_in_global_block2918 = new BitSet(new long[]{0x00000000C0000010L,0x0001400000000000L});
+    public static final BitSet FOLLOW_30_in_global_block2923 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_VAR_in_decl2950 = new BitSet(new long[]{0x0000004000000000L});
+    public static final BitSet FOLLOW_38_in_decl2952 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_HTML_in_decl2956 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_VAR_in_decl2966 = new BitSet(new long[]{0x0000004000000000L});
+    public static final BitSet FOLLOW_38_in_decl2968 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_JS_in_decl2972 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_VAR_in_decl2982 = new BitSet(new long[]{0x0000004000000000L});
+    public static final BitSet FOLLOW_38_in_decl2984 = new BitSet(new long[]{0x02008000200018B0L,0x00001EE000004080L});
+    public static final BitSet FOLLOW_expr_in_decl2988 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_function_def_in_expr3015 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_conditional_expression_in_expr3024 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_71_in_function_def3047 = new BitSet(new long[]{0x0000800000000000L});
+    public static final BitSet FOLLOW_47_in_function_def3049 = new BitSet(new long[]{0x0003000000000010L});
+    public static final BitSet FOLLOW_VAR_in_function_def3053 = new BitSet(new long[]{0x0003000000000000L});
+    public static final BitSet FOLLOW_48_in_function_def3057 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_VAR_in_function_def3061 = new BitSet(new long[]{0x0003000000000000L});
+    public static final BitSet FOLLOW_49_in_function_def3066 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_29_in_function_def3068 = new BitSet(new long[]{0x02008000A00018B0L,0x00001EE000004080L});
+    public static final BitSet FOLLOW_decl_in_function_def3072 = new BitSet(new long[]{0x02008000A00018B0L,0x00001EE000004080L});
+    public static final BitSet FOLLOW_31_in_function_def3077 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_decl_in_function_def3081 = new BitSet(new long[]{0x02008000A00018B0L,0x00001EE000004080L});
+    public static final BitSet FOLLOW_31_in_function_def3086 = new BitSet(new long[]{0x02008000200018B0L,0x00001EE000004080L});
+    public static final BitSet FOLLOW_expr_in_function_def3091 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_30_in_function_def3093 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_disjunction_in_conditional_expression3115 = new BitSet(new long[]{0x0000400000000002L});
+    public static final BitSet FOLLOW_46_in_conditional_expression3118 = new BitSet(new long[]{0x02008000200018B0L,0x00001EE000004080L});
+    public static final BitSet FOLLOW_expr_in_conditional_expression3120 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000100L});
+    public static final BitSet FOLLOW_72_in_conditional_expression3122 = new BitSet(new long[]{0x02008000200018B0L,0x00001EE000004080L});
+    public static final BitSet FOLLOW_expr_in_conditional_expression3124 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_conjunction_in_disjunction3156 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000200L});
+    public static final BitSet FOLLOW_73_in_disjunction3161 = new BitSet(new long[]{0x02008000200018B0L,0x00001EE000004080L});
+    public static final BitSet FOLLOW_conjunction_in_disjunction3165 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000200L});
+    public static final BitSet FOLLOW_equality_expr_in_conjunction3195 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000400L});
+    public static final BitSet FOLLOW_74_in_conjunction3200 = new BitSet(new long[]{0x02008000200018B0L,0x00001EE000004080L});
+    public static final BitSet FOLLOW_equality_expr_in_conjunction3204 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000400L});
+    public static final BitSet FOLLOW_add_expr_in_equality_expr3235 = new BitSet(new long[]{0x0000000007FC0002L});
+    public static final BitSet FOLLOW_predop_in_equality_expr3240 = new BitSet(new long[]{0x02008000200018B0L,0x00001EE000004080L});
     public static final BitSet FOLLOW_add_expr_in_equality_expr3244 = new BitSet(new long[]{0x0000000007FC0002L});
-    public static final BitSet FOLLOW_predop_in_equality_expr3249 = new BitSet(new long[]{0x20040000200018B0L,0x0003DC0000040800L});
-    public static final BitSet FOLLOW_add_expr_in_equality_expr3253 = new BitSet(new long[]{0x0000000007FC0002L});
+    public static final BitSet FOLLOW_mult_expr_in_add_expr3278 = new BitSet(new long[]{0x0000000018000002L});
+    public static final BitSet FOLLOW_add_op_in_add_expr3283 = new BitSet(new long[]{0x02008000200018B0L,0x00001EE000004080L});
     public static final BitSet FOLLOW_mult_expr_in_add_expr3287 = new BitSet(new long[]{0x0000000018000002L});
-    public static final BitSet FOLLOW_add_op_in_add_expr3292 = new BitSet(new long[]{0x20040000200018B0L,0x0003DC0000040800L});
-    public static final BitSet FOLLOW_mult_expr_in_add_expr3296 = new BitSet(new long[]{0x0000000018000002L});
     public static final BitSet FOLLOW_set_in_mult_op0 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_unary_expr_in_mult_expr3344 = new BitSet(new long[]{0x0000000000000002L,0x0000000000038000L});
-    public static final BitSet FOLLOW_mult_op_in_mult_expr3349 = new BitSet(new long[]{0x20040000200018B0L,0x0003DC0000040800L});
-    public static final BitSet FOLLOW_unary_expr_in_mult_expr3353 = new BitSet(new long[]{0x0000000000000002L,0x0000000000038000L});
-    public static final BitSet FOLLOW_61_in_unary_expr3393 = new BitSet(new long[]{0x20040000200018B0L,0x0003DC0000040800L});
-    public static final BitSet FOLLOW_unary_expr_in_unary_expr3395 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_82_in_unary_expr3402 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_STRING_in_unary_expr3406 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_must_be_in_unary_expr3408 = new BitSet(new long[]{0x0000000000000000L,0x0003000000000000L});
-    public static final BitSet FOLLOW_var_domain_in_unary_expr3413 = new BitSet(new long[]{0x0000010000000000L});
-    public static final BitSet FOLLOW_40_in_unary_expr3415 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_VAR_in_unary_expr3419 = new BitSet(new long[]{0x0000000000000002L,0x0004000000000000L});
-    public static final BitSet FOLLOW_timeframe_in_unary_expr3423 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_82_in_unary_expr3431 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_STRING_in_unary_expr3435 = new BitSet(new long[]{0x0800000000000000L,0x0000000000080000L});
-    public static final BitSet FOLLOW_set_in_unary_expr3439 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_STRING_in_unary_expr3449 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_must_be_in_unary_expr3452 = new BitSet(new long[]{0x0000000000000000L,0x0003000000000000L});
-    public static final BitSet FOLLOW_var_domain_in_unary_expr3457 = new BitSet(new long[]{0x0000010000000000L});
-    public static final BitSet FOLLOW_40_in_unary_expr3459 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_VAR_in_unary_expr3463 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_var_domain_in_unary_expr3472 = new BitSet(new long[]{0x0000010000000000L});
-    public static final BitSet FOLLOW_40_in_unary_expr3474 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_VAR_in_unary_expr3478 = new BitSet(new long[]{0x0000000007FC0000L});
-    public static final BitSet FOLLOW_predop_in_unary_expr3482 = new BitSet(new long[]{0x20040000200018B0L,0x0003DC0000040800L});
-    public static final BitSet FOLLOW_expr_in_unary_expr3486 = new BitSet(new long[]{0x0000000000000000L,0x0004000000000000L});
-    public static final BitSet FOLLOW_timeframe_in_unary_expr3490 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_var_domain_in_unary_expr3500 = new BitSet(new long[]{0x0000010000000000L});
-    public static final BitSet FOLLOW_40_in_unary_expr3502 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_VAR_in_unary_expr3506 = new BitSet(new long[]{0x0000000000000000L,0x0004000000000000L});
-    public static final BitSet FOLLOW_timeframe_in_unary_expr3510 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_operator_expr_in_unary_expr3519 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_factor_in_operator_expr3548 = new BitSet(new long[]{0x0000000000000002L,0x000003FFFFF00000L});
-    public static final BitSet FOLLOW_operator_in_operator_expr3554 = new BitSet(new long[]{0x0000000000000002L,0x000003FFFFF00000L});
-    public static final BitSet FOLLOW_set_in_operator3584 = new BitSet(new long[]{0x0004000000000000L});
-    public static final BitSet FOLLOW_50_in_operator3671 = new BitSet(new long[]{0x20140000200018B0L,0x0003DC0000040800L});
-    public static final BitSet FOLLOW_expr_in_operator3676 = new BitSet(new long[]{0x0018000000000000L});
-    public static final BitSet FOLLOW_51_in_operator3681 = new BitSet(new long[]{0x20040000200018B0L,0x0003DC0000040800L});
-    public static final BitSet FOLLOW_expr_in_operator3685 = new BitSet(new long[]{0x0018000000000000L});
-    public static final BitSet FOLLOW_52_in_operator3694 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_INT_in_factor3732 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_STRING_in_factor3747 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_FLOAT_in_factor3767 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_set_in_factor3787 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_REGEXP_in_factor3807 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_VAR_in_factor3821 = new BitSet(new long[]{0x0000000000000000L,0x0000100000000000L});
-    public static final BitSet FOLLOW_108_in_factor3823 = new BitSet(new long[]{0x20040000200018B0L,0x0003DC0000040800L});
-    public static final BitSet FOLLOW_expr_in_factor3827 = new BitSet(new long[]{0x0000000000000000L,0x0000200000000000L});
-    public static final BitSet FOLLOW_109_in_factor3829 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_var_domain_in_factor3844 = new BitSet(new long[]{0x0000010000000000L});
-    public static final BitSet FOLLOW_40_in_factor3846 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_VAR_in_factor3850 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_110_in_factor3862 = new BitSet(new long[]{0x0000000000000000L,0x0003000000000000L});
-    public static final BitSet FOLLOW_var_domain_in_factor3866 = new BitSet(new long[]{0x0000010000000000L});
-    public static final BitSet FOLLOW_40_in_factor3868 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_VAR_in_factor3872 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_111_in_factor3885 = new BitSet(new long[]{0x20040000200018B0L,0x0003DC0000040800L});
-    public static final BitSet FOLLOW_expr_in_factor3889 = new BitSet(new long[]{0x0000000000000000L,0x0003000000000000L});
-    public static final BitSet FOLLOW_var_domain_in_factor3893 = new BitSet(new long[]{0x0000010000000000L});
-    public static final BitSet FOLLOW_40_in_factor3895 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_VAR_in_factor3899 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_namespace_in_factor3913 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_VAR_in_factor3917 = new BitSet(new long[]{0x0004000000000000L});
-    public static final BitSet FOLLOW_50_in_factor3919 = new BitSet(new long[]{0x20140000200018B0L,0x0003DC0000040800L});
-    public static final BitSet FOLLOW_expr_in_factor3924 = new BitSet(new long[]{0x201C0000200018B0L,0x0003DC0000040800L});
-    public static final BitSet FOLLOW_51_in_factor3935 = new BitSet(new long[]{0x20140000200018B0L,0x0003DC0000040800L});
-    public static final BitSet FOLLOW_52_in_factor3940 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_VAR_in_factor3955 = new BitSet(new long[]{0x0004000000000000L});
-    public static final BitSet FOLLOW_50_in_factor3957 = new BitSet(new long[]{0x20140000200018B0L,0x0003DC0000040800L});
-    public static final BitSet FOLLOW_expr_in_factor3962 = new BitSet(new long[]{0x201C0000200018B0L,0x0003DC0000040800L});
-    public static final BitSet FOLLOW_51_in_factor3966 = new BitSet(new long[]{0x20140000200018B0L,0x0003DC0000040800L});
-    public static final BitSet FOLLOW_52_in_factor3971 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_108_in_factor3983 = new BitSet(new long[]{0x20040000200018B0L,0x0003DC0000040800L});
-    public static final BitSet FOLLOW_expr_in_factor3987 = new BitSet(new long[]{0x0008000000000000L,0x0000200000000000L});
-    public static final BitSet FOLLOW_51_in_factor3992 = new BitSet(new long[]{0x20040000200018B0L,0x0003DC0000040800L});
-    public static final BitSet FOLLOW_expr_in_factor3996 = new BitSet(new long[]{0x0008000000000000L,0x0000200000000000L});
-    public static final BitSet FOLLOW_109_in_factor4001 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_29_in_factor4013 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_hash_line_in_factor4017 = new BitSet(new long[]{0x0008000040000000L});
-    public static final BitSet FOLLOW_51_in_factor4022 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_hash_line_in_factor4026 = new BitSet(new long[]{0x0008000040000000L});
-    public static final BitSet FOLLOW_30_in_factor4032 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_VAR_in_factor4046 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_50_in_factor4059 = new BitSet(new long[]{0x20040000200018B0L,0x0003DC0000040800L});
-    public static final BitSet FOLLOW_expr_in_factor4063 = new BitSet(new long[]{0x0010000000000000L});
-    public static final BitSet FOLLOW_52_in_factor4065 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_unary_expr_in_mult_expr3335 = new BitSet(new long[]{0x0000000000000002L,0x0000000000003800L});
+    public static final BitSet FOLLOW_mult_op_in_mult_expr3340 = new BitSet(new long[]{0x02008000200018B0L,0x00001EE000004080L});
+    public static final BitSet FOLLOW_unary_expr_in_mult_expr3344 = new BitSet(new long[]{0x0000000000000002L,0x0000000000003800L});
+    public static final BitSet FOLLOW_57_in_unary_expr3384 = new BitSet(new long[]{0x02008000200018B0L,0x00001EE000004080L});
+    public static final BitSet FOLLOW_unary_expr_in_unary_expr3386 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_78_in_unary_expr3393 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_STRING_in_unary_expr3397 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_must_be_in_unary_expr3399 = new BitSet(new long[]{0x0000000000000000L,0x0000180000000000L});
+    public static final BitSet FOLLOW_var_domain_in_unary_expr3404 = new BitSet(new long[]{0x0000008000000000L});
+    public static final BitSet FOLLOW_39_in_unary_expr3406 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_VAR_in_unary_expr3410 = new BitSet(new long[]{0x0000000000000002L,0x0000200000000000L});
+    public static final BitSet FOLLOW_timeframe_in_unary_expr3414 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_78_in_unary_expr3422 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_STRING_in_unary_expr3426 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_must_be_one_in_unary_expr3430 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_STRING_in_unary_expr3435 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_must_be_in_unary_expr3438 = new BitSet(new long[]{0x0000000000000000L,0x0000180000000000L});
+    public static final BitSet FOLLOW_var_domain_in_unary_expr3443 = new BitSet(new long[]{0x0000008000000000L});
+    public static final BitSet FOLLOW_39_in_unary_expr3445 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_VAR_in_unary_expr3449 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_var_domain_in_unary_expr3458 = new BitSet(new long[]{0x0000008000000000L});
+    public static final BitSet FOLLOW_39_in_unary_expr3460 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_VAR_in_unary_expr3464 = new BitSet(new long[]{0x0000000007FC0000L});
+    public static final BitSet FOLLOW_predop_in_unary_expr3468 = new BitSet(new long[]{0x02008000200018B0L,0x00001EE000004080L});
+    public static final BitSet FOLLOW_expr_in_unary_expr3472 = new BitSet(new long[]{0x0000000000000000L,0x0000200000000000L});
+    public static final BitSet FOLLOW_timeframe_in_unary_expr3476 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_var_domain_in_unary_expr3486 = new BitSet(new long[]{0x0000008000000000L});
+    public static final BitSet FOLLOW_39_in_unary_expr3488 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_VAR_in_unary_expr3492 = new BitSet(new long[]{0x0000000000000000L,0x0000200000000000L});
+    public static final BitSet FOLLOW_timeframe_in_unary_expr3496 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_operator_expr_in_unary_expr3505 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_factor_in_operator_expr3534 = new BitSet(new long[]{0x0000000000000002L,0x0000001FFFFF8000L});
+    public static final BitSet FOLLOW_operator_in_operator_expr3540 = new BitSet(new long[]{0x0000000000000002L,0x0000001FFFFF8000L});
+    public static final BitSet FOLLOW_set_in_operator3570 = new BitSet(new long[]{0x0000800000000000L});
+    public static final BitSet FOLLOW_47_in_operator3657 = new BitSet(new long[]{0x02028000200018B0L,0x00001EE000004080L});
+    public static final BitSet FOLLOW_expr_in_operator3662 = new BitSet(new long[]{0x0003000000000000L});
+    public static final BitSet FOLLOW_48_in_operator3667 = new BitSet(new long[]{0x02008000200018B0L,0x00001EE000004080L});
+    public static final BitSet FOLLOW_expr_in_operator3671 = new BitSet(new long[]{0x0003000000000000L});
+    public static final BitSet FOLLOW_49_in_operator3680 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_INT_in_factor3719 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_STRING_in_factor3734 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_FLOAT_in_factor3754 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_set_in_factor3774 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_REGEXP_in_factor3794 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_VAR_in_factor3808 = new BitSet(new long[]{0x0000000000000000L,0x0000008000000000L});
+    public static final BitSet FOLLOW_103_in_factor3810 = new BitSet(new long[]{0x02008000200018B0L,0x00001EE000004080L});
+    public static final BitSet FOLLOW_expr_in_factor3814 = new BitSet(new long[]{0x0000000000000000L,0x0000010000000000L});
+    public static final BitSet FOLLOW_104_in_factor3816 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_var_domain_in_factor3831 = new BitSet(new long[]{0x0000008000000000L});
+    public static final BitSet FOLLOW_39_in_factor3833 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_VAR_in_factor3837 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_105_in_factor3849 = new BitSet(new long[]{0x0000000000000000L,0x0000180000000000L});
+    public static final BitSet FOLLOW_var_domain_in_factor3853 = new BitSet(new long[]{0x0000008000000000L});
+    public static final BitSet FOLLOW_39_in_factor3855 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_VAR_in_factor3859 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_106_in_factor3872 = new BitSet(new long[]{0x02008000200018B0L,0x00001EE000004080L});
+    public static final BitSet FOLLOW_expr_in_factor3876 = new BitSet(new long[]{0x0000000000000000L,0x0000180000000000L});
+    public static final BitSet FOLLOW_var_domain_in_factor3880 = new BitSet(new long[]{0x0000008000000000L});
+    public static final BitSet FOLLOW_39_in_factor3882 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_VAR_in_factor3886 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_namespace_in_factor3900 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_VAR_in_factor3904 = new BitSet(new long[]{0x0000800000000000L});
+    public static final BitSet FOLLOW_47_in_factor3906 = new BitSet(new long[]{0x02028000200018B0L,0x00001EE000004080L});
+    public static final BitSet FOLLOW_expr_in_factor3911 = new BitSet(new long[]{0x02038000200018B0L,0x00001EE000004080L});
+    public static final BitSet FOLLOW_48_in_factor3922 = new BitSet(new long[]{0x02028000200018B0L,0x00001EE000004080L});
+    public static final BitSet FOLLOW_49_in_factor3927 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_VAR_in_factor3942 = new BitSet(new long[]{0x0000800000000000L});
+    public static final BitSet FOLLOW_47_in_factor3944 = new BitSet(new long[]{0x02028000200018B0L,0x00001EE000004080L});
+    public static final BitSet FOLLOW_expr_in_factor3949 = new BitSet(new long[]{0x02038000200018B0L,0x00001EE000004080L});
+    public static final BitSet FOLLOW_48_in_factor3953 = new BitSet(new long[]{0x02028000200018B0L,0x00001EE000004080L});
+    public static final BitSet FOLLOW_49_in_factor3958 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_103_in_factor3970 = new BitSet(new long[]{0x02008000200018B0L,0x00001EE000004080L});
+    public static final BitSet FOLLOW_expr_in_factor3974 = new BitSet(new long[]{0x0001000000000000L,0x0000010000000000L});
+    public static final BitSet FOLLOW_48_in_factor3979 = new BitSet(new long[]{0x02008000200018B0L,0x00001EE000004080L});
+    public static final BitSet FOLLOW_expr_in_factor3983 = new BitSet(new long[]{0x0001000000000000L,0x0000010000000000L});
+    public static final BitSet FOLLOW_104_in_factor3988 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_29_in_factor4000 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_hash_line_in_factor4004 = new BitSet(new long[]{0x0001000040000000L});
+    public static final BitSet FOLLOW_48_in_factor4009 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_hash_line_in_factor4013 = new BitSet(new long[]{0x0001000040000000L});
+    public static final BitSet FOLLOW_30_in_factor4019 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_VAR_in_factor4033 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_47_in_factor4046 = new BitSet(new long[]{0x02008000200018B0L,0x00001EE000004080L});
+    public static final BitSet FOLLOW_expr_in_factor4050 = new BitSet(new long[]{0x0002000000000000L});
+    public static final BitSet FOLLOW_49_in_factor4052 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_set_in_var_domain0 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_VAR_in_namespace4108 = new BitSet(new long[]{0x0000010000000000L});
-    public static final BitSet FOLLOW_40_in_namespace4110 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_114_in_timeframe4132 = new BitSet(new long[]{0x20040000200018B0L,0x0003DC0000040800L});
-    public static final BitSet FOLLOW_expr_in_timeframe4136 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_period_in_timeframe4140 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_STRING_in_hash_line4164 = new BitSet(new long[]{0x0000010000000000L});
-    public static final BitSet FOLLOW_40_in_hash_line4166 = new BitSet(new long[]{0x20040000200018B0L,0x0003DC0000040800L});
-    public static final BitSet FOLLOW_expr_in_hash_line4170 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_115_in_css_emit4188 = new BitSet(new long[]{0x0000000000002800L});
-    public static final BitSet FOLLOW_HTML_in_css_emit4194 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_STRING_in_css_emit4202 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_must_be_one_in_period4225 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_116_in_cachable4259 = new BitSet(new long[]{0x0000800000000002L});
-    public static final BitSet FOLLOW_47_in_cachable4262 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_INT_in_cachable4266 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_period_in_cachable4270 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_117_in_emit_block4294 = new BitSet(new long[]{0x0000000000006800L});
-    public static final BitSet FOLLOW_HTML_in_emit_block4300 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_STRING_in_emit_block4308 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_JS_in_emit_block4316 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_118_in_meta_block4348 = new BitSet(new long[]{0x0000000020000000L});
-    public static final BitSet FOLLOW_29_in_meta_block4350 = new BitSet(new long[]{0x0000000040000010L,0x2980000000000000L});
-    public static final BitSet FOLLOW_must_be_one_in_meta_block4359 = new BitSet(new long[]{0x0000000000002800L});
-    public static final BitSet FOLLOW_HTML_in_meta_block4365 = new BitSet(new long[]{0x0000000040000010L,0x2980000000000000L});
-    public static final BitSet FOLLOW_STRING_in_meta_block4369 = new BitSet(new long[]{0x0000000040000010L,0x2980000000000000L});
-    public static final BitSet FOLLOW_119_in_meta_block4383 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_must_be_one_in_meta_block4387 = new BitSet(new long[]{0x0000000020000800L});
-    public static final BitSet FOLLOW_STRING_in_meta_block4393 = new BitSet(new long[]{0x0000000060000810L,0x2980000000000000L});
-    public static final BitSet FOLLOW_29_in_meta_block4397 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_name_value_pair_in_meta_block4400 = new BitSet(new long[]{0x0008000040000000L});
-    public static final BitSet FOLLOW_51_in_meta_block4404 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_name_value_pair_in_meta_block4406 = new BitSet(new long[]{0x0008000040000000L});
-    public static final BitSet FOLLOW_30_in_meta_block4412 = new BitSet(new long[]{0x0000000060000810L,0x2980000000000000L});
-    public static final BitSet FOLLOW_120_in_meta_block4424 = new BitSet(new long[]{0x0000000000000000L,0x0200000000000000L});
-    public static final BitSet FOLLOW_121_in_meta_block4426 = new BitSet(new long[]{0x0000000000000000L,0x0400000000000000L});
-    public static final BitSet FOLLOW_122_in_meta_block4428 = new BitSet(new long[]{0x0000000040000010L,0x2980000000000000L});
-    public static final BitSet FOLLOW_123_in_meta_block4436 = new BitSet(new long[]{0x0000000000000000L,0x1000000000000010L});
-    public static final BitSet FOLLOW_set_in_meta_block4440 = new BitSet(new long[]{0x0000000040000010L,0x2980000000000000L});
-    public static final BitSet FOLLOW_125_in_meta_block4451 = new BitSet(new long[]{0x0000000000000000L,0xC008000000000000L});
-    public static final BitSet FOLLOW_set_in_meta_block4458 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_must_be_in_meta_block4464 = new BitSet(new long[]{0x0000000000000810L});
-    public static final BitSet FOLLOW_STRING_in_meta_block4470 = new BitSet(new long[]{0x0000000040000010L,0x2980000000000000L});
-    public static final BitSet FOLLOW_VAR_in_meta_block4476 = new BitSet(new long[]{0x0000000040000010L,0x2980000000000000L});
-    public static final BitSet FOLLOW_127_in_meta_block4491 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_VAR_in_meta_block4496 = new BitSet(new long[]{0x0000000040000010L,0x2980000000000000L,0x0000000000000001L});
-    public static final BitSet FOLLOW_128_in_meta_block4499 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_VAR_in_meta_block4503 = new BitSet(new long[]{0x0000000040000010L,0x2980000000000000L});
-    public static final BitSet FOLLOW_30_in_meta_block4518 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_must_be_in_dispatch_block4549 = new BitSet(new long[]{0x0000000020000000L});
-    public static final BitSet FOLLOW_29_in_dispatch_block4553 = new BitSet(new long[]{0x0000000040000010L});
-    public static final BitSet FOLLOW_must_be_in_dispatch_block4556 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_STRING_in_dispatch_block4561 = new BitSet(new long[]{0x0000000040000010L,0x0000000000000000L,0x0000000000000002L});
-    public static final BitSet FOLLOW_129_in_dispatch_block4564 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_STRING_in_dispatch_block4568 = new BitSet(new long[]{0x0000000040000010L});
-    public static final BitSet FOLLOW_30_in_dispatch_block4578 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_STRING_in_name_value_pair4601 = new BitSet(new long[]{0x0000010000000000L});
-    public static final BitSet FOLLOW_40_in_name_value_pair4603 = new BitSet(new long[]{0x00000000000008A0L});
-    public static final BitSet FOLLOW_INT_in_name_value_pair4611 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_FLOAT_in_name_value_pair4622 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_STRING_in_name_value_pair4633 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_emit_block_in_synpred19_RuleSet21022 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_timeframe_in_synpred119_RuleSet23423 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_82_in_synpred120_RuleSet23402 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_STRING_in_synpred120_RuleSet23406 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_must_be_in_synpred120_RuleSet23408 = new BitSet(new long[]{0x0000000000000000L,0x0003000000000000L});
-    public static final BitSet FOLLOW_var_domain_in_synpred120_RuleSet23413 = new BitSet(new long[]{0x0000010000000000L});
-    public static final BitSet FOLLOW_40_in_synpred120_RuleSet23415 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_VAR_in_synpred120_RuleSet23419 = new BitSet(new long[]{0x0000000000000002L,0x0004000000000000L});
-    public static final BitSet FOLLOW_timeframe_in_synpred120_RuleSet23423 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_82_in_synpred122_RuleSet23431 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_STRING_in_synpred122_RuleSet23435 = new BitSet(new long[]{0x0800000000000000L,0x0000000000080000L});
-    public static final BitSet FOLLOW_set_in_synpred122_RuleSet23439 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_STRING_in_synpred122_RuleSet23449 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_must_be_in_synpred122_RuleSet23452 = new BitSet(new long[]{0x0000000000000000L,0x0003000000000000L});
-    public static final BitSet FOLLOW_var_domain_in_synpred122_RuleSet23457 = new BitSet(new long[]{0x0000010000000000L});
-    public static final BitSet FOLLOW_40_in_synpred122_RuleSet23459 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_VAR_in_synpred122_RuleSet23463 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_var_domain_in_synpred123_RuleSet23472 = new BitSet(new long[]{0x0000010000000000L});
-    public static final BitSet FOLLOW_40_in_synpred123_RuleSet23474 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_VAR_in_synpred123_RuleSet23478 = new BitSet(new long[]{0x0000000007FC0000L});
-    public static final BitSet FOLLOW_predop_in_synpred123_RuleSet23482 = new BitSet(new long[]{0x20040000200018B0L,0x0003DC0000040800L});
-    public static final BitSet FOLLOW_expr_in_synpred123_RuleSet23486 = new BitSet(new long[]{0x0000000000000000L,0x0004000000000000L});
-    public static final BitSet FOLLOW_timeframe_in_synpred123_RuleSet23490 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_var_domain_in_synpred124_RuleSet23500 = new BitSet(new long[]{0x0000010000000000L});
-    public static final BitSet FOLLOW_40_in_synpred124_RuleSet23502 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_VAR_in_synpred124_RuleSet23506 = new BitSet(new long[]{0x0000000000000000L,0x0004000000000000L});
-    public static final BitSet FOLLOW_timeframe_in_synpred124_RuleSet23510 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_VAR_in_synpred155_RuleSet23821 = new BitSet(new long[]{0x0000000000000000L,0x0000100000000000L});
-    public static final BitSet FOLLOW_108_in_synpred155_RuleSet23823 = new BitSet(new long[]{0x20040000200018B0L,0x0003DC0000040800L});
-    public static final BitSet FOLLOW_expr_in_synpred155_RuleSet23827 = new BitSet(new long[]{0x0000000000000000L,0x0000200000000000L});
-    public static final BitSet FOLLOW_109_in_synpred155_RuleSet23829 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_namespace_in_synpred161_RuleSet23913 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_VAR_in_synpred161_RuleSet23917 = new BitSet(new long[]{0x0004000000000000L});
-    public static final BitSet FOLLOW_50_in_synpred161_RuleSet23919 = new BitSet(new long[]{0x20140000200018B0L,0x0003DC0000040800L});
-    public static final BitSet FOLLOW_expr_in_synpred161_RuleSet23924 = new BitSet(new long[]{0x201C0000200018B0L,0x0003DC0000040800L});
-    public static final BitSet FOLLOW_51_in_synpred161_RuleSet23935 = new BitSet(new long[]{0x20140000200018B0L,0x0003DC0000040800L});
-    public static final BitSet FOLLOW_52_in_synpred161_RuleSet23940 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_VAR_in_synpred164_RuleSet23955 = new BitSet(new long[]{0x0004000000000000L});
-    public static final BitSet FOLLOW_50_in_synpred164_RuleSet23957 = new BitSet(new long[]{0x20140000200018B0L,0x0003DC0000040800L});
-    public static final BitSet FOLLOW_expr_in_synpred164_RuleSet23962 = new BitSet(new long[]{0x201C0000200018B0L,0x0003DC0000040800L});
-    public static final BitSet FOLLOW_51_in_synpred164_RuleSet23966 = new BitSet(new long[]{0x20140000200018B0L,0x0003DC0000040800L});
-    public static final BitSet FOLLOW_52_in_synpred164_RuleSet23971 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_VAR_in_synpred169_RuleSet24046 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_VAR_in_namespace4095 = new BitSet(new long[]{0x0000008000000000L});
+    public static final BitSet FOLLOW_39_in_namespace4097 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_109_in_timeframe4119 = new BitSet(new long[]{0x02008000200018B0L,0x00001EE000004080L});
+    public static final BitSet FOLLOW_expr_in_timeframe4123 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_period_in_timeframe4127 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_STRING_in_hash_line4151 = new BitSet(new long[]{0x0000008000000000L});
+    public static final BitSet FOLLOW_39_in_hash_line4153 = new BitSet(new long[]{0x02008000200018B0L,0x00001EE000004080L});
+    public static final BitSet FOLLOW_expr_in_hash_line4157 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_110_in_css_emit4175 = new BitSet(new long[]{0x0000000000002800L});
+    public static final BitSet FOLLOW_HTML_in_css_emit4181 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_STRING_in_css_emit4189 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_must_be_one_in_period4212 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_111_in_cachable4246 = new BitSet(new long[]{0x0000200000000002L});
+    public static final BitSet FOLLOW_45_in_cachable4249 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_INT_in_cachable4253 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_period_in_cachable4257 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_112_in_emit_block4281 = new BitSet(new long[]{0x0000000000006800L});
+    public static final BitSet FOLLOW_HTML_in_emit_block4287 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_STRING_in_emit_block4295 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_JS_in_emit_block4303 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_113_in_meta_block4335 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_29_in_meta_block4337 = new BitSet(new long[]{0x0000000040000010L,0x014C000000000000L});
+    public static final BitSet FOLLOW_must_be_one_in_meta_block4346 = new BitSet(new long[]{0x0000000000002800L});
+    public static final BitSet FOLLOW_HTML_in_meta_block4352 = new BitSet(new long[]{0x0000000040000010L,0x014C000000000000L});
+    public static final BitSet FOLLOW_STRING_in_meta_block4356 = new BitSet(new long[]{0x0000000040000010L,0x014C000000000000L});
+    public static final BitSet FOLLOW_114_in_meta_block4370 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_must_be_one_in_meta_block4374 = new BitSet(new long[]{0x0000000020000800L});
+    public static final BitSet FOLLOW_STRING_in_meta_block4380 = new BitSet(new long[]{0x0000000060000810L,0x014C000000000000L});
+    public static final BitSet FOLLOW_29_in_meta_block4384 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_name_value_pair_in_meta_block4387 = new BitSet(new long[]{0x0001000040000000L});
+    public static final BitSet FOLLOW_48_in_meta_block4391 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_name_value_pair_in_meta_block4393 = new BitSet(new long[]{0x0001000040000000L});
+    public static final BitSet FOLLOW_30_in_meta_block4399 = new BitSet(new long[]{0x0000000060000810L,0x014C000000000000L});
+    public static final BitSet FOLLOW_115_in_meta_block4411 = new BitSet(new long[]{0x0000000000000000L,0x0010000000000000L});
+    public static final BitSet FOLLOW_116_in_meta_block4413 = new BitSet(new long[]{0x0000000000000000L,0x0020000000000000L});
+    public static final BitSet FOLLOW_117_in_meta_block4415 = new BitSet(new long[]{0x0000000040000010L,0x014C000000000000L});
+    public static final BitSet FOLLOW_118_in_meta_block4423 = new BitSet(new long[]{0x0000000000000000L,0x0080000000000001L});
+    public static final BitSet FOLLOW_set_in_meta_block4427 = new BitSet(new long[]{0x0000000040000010L,0x014C000000000000L});
+    public static final BitSet FOLLOW_120_in_meta_block4438 = new BitSet(new long[]{0x0000000000000000L,0x0600400000000000L});
+    public static final BitSet FOLLOW_set_in_meta_block4445 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_must_be_in_meta_block4451 = new BitSet(new long[]{0x0000000000000810L});
+    public static final BitSet FOLLOW_STRING_in_meta_block4457 = new BitSet(new long[]{0x0000000040000010L,0x014C000000000000L});
+    public static final BitSet FOLLOW_VAR_in_meta_block4463 = new BitSet(new long[]{0x0000000040000010L,0x014C000000000000L});
+    public static final BitSet FOLLOW_122_in_meta_block4478 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_VAR_in_meta_block4483 = new BitSet(new long[]{0x0000000040000010L,0x094C000000000000L});
+    public static final BitSet FOLLOW_123_in_meta_block4486 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_VAR_in_meta_block4490 = new BitSet(new long[]{0x0000000040000010L,0x014C000000000000L});
+    public static final BitSet FOLLOW_30_in_meta_block4505 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_must_be_in_dispatch_block4536 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_29_in_dispatch_block4540 = new BitSet(new long[]{0x0000000040000010L});
+    public static final BitSet FOLLOW_must_be_in_dispatch_block4543 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_STRING_in_dispatch_block4548 = new BitSet(new long[]{0x0000000040000010L,0x1000000000000000L});
+    public static final BitSet FOLLOW_124_in_dispatch_block4551 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_STRING_in_dispatch_block4555 = new BitSet(new long[]{0x0000000040000010L});
+    public static final BitSet FOLLOW_30_in_dispatch_block4565 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_STRING_in_name_value_pair4588 = new BitSet(new long[]{0x0000008000000000L});
+    public static final BitSet FOLLOW_39_in_name_value_pair4590 = new BitSet(new long[]{0x00000000000008A0L});
+    public static final BitSet FOLLOW_INT_in_name_value_pair4598 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_FLOAT_in_name_value_pair4609 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_STRING_in_name_value_pair4620 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_31_in_synpred19_RuleSet21034 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_emit_block_in_synpred20_RuleSet21039 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_31_in_synpred23_RuleSet21055 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_persistent_expr_in_synpred31_RuleSet21207 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_log_statement_in_synpred33_RuleSet21224 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_31_in_synpred51_RuleSet21868 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_expr_in_synpred52_RuleSet21889 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_must_be_one_in_synpred73_RuleSet22408 = new BitSet(new long[]{0xF800803000000010L});
+    public static final BitSet FOLLOW_event_or_in_synpred73_RuleSet22413 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_timeframe_in_synpred122_RuleSet23414 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_78_in_synpred123_RuleSet23393 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_STRING_in_synpred123_RuleSet23397 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_must_be_in_synpred123_RuleSet23399 = new BitSet(new long[]{0x0000000000000000L,0x0000180000000000L});
+    public static final BitSet FOLLOW_var_domain_in_synpred123_RuleSet23404 = new BitSet(new long[]{0x0000008000000000L});
+    public static final BitSet FOLLOW_39_in_synpred123_RuleSet23406 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_VAR_in_synpred123_RuleSet23410 = new BitSet(new long[]{0x0000000000000002L,0x0000200000000000L});
+    public static final BitSet FOLLOW_timeframe_in_synpred123_RuleSet23414 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_78_in_synpred124_RuleSet23422 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_STRING_in_synpred124_RuleSet23426 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_must_be_one_in_synpred124_RuleSet23430 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_STRING_in_synpred124_RuleSet23435 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_must_be_in_synpred124_RuleSet23438 = new BitSet(new long[]{0x0000000000000000L,0x0000180000000000L});
+    public static final BitSet FOLLOW_var_domain_in_synpred124_RuleSet23443 = new BitSet(new long[]{0x0000008000000000L});
+    public static final BitSet FOLLOW_39_in_synpred124_RuleSet23445 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_VAR_in_synpred124_RuleSet23449 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_var_domain_in_synpred125_RuleSet23458 = new BitSet(new long[]{0x0000008000000000L});
+    public static final BitSet FOLLOW_39_in_synpred125_RuleSet23460 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_VAR_in_synpred125_RuleSet23464 = new BitSet(new long[]{0x0000000007FC0000L});
+    public static final BitSet FOLLOW_predop_in_synpred125_RuleSet23468 = new BitSet(new long[]{0x02008000200018B0L,0x00001EE000004080L});
+    public static final BitSet FOLLOW_expr_in_synpred125_RuleSet23472 = new BitSet(new long[]{0x0000000000000000L,0x0000200000000000L});
+    public static final BitSet FOLLOW_timeframe_in_synpred125_RuleSet23476 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_var_domain_in_synpred126_RuleSet23486 = new BitSet(new long[]{0x0000008000000000L});
+    public static final BitSet FOLLOW_39_in_synpred126_RuleSet23488 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_VAR_in_synpred126_RuleSet23492 = new BitSet(new long[]{0x0000000000000000L,0x0000200000000000L});
+    public static final BitSet FOLLOW_timeframe_in_synpred126_RuleSet23496 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_VAR_in_synpred157_RuleSet23808 = new BitSet(new long[]{0x0000000000000000L,0x0000008000000000L});
+    public static final BitSet FOLLOW_103_in_synpred157_RuleSet23810 = new BitSet(new long[]{0x02008000200018B0L,0x00001EE000004080L});
+    public static final BitSet FOLLOW_expr_in_synpred157_RuleSet23814 = new BitSet(new long[]{0x0000000000000000L,0x0000010000000000L});
+    public static final BitSet FOLLOW_104_in_synpred157_RuleSet23816 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_namespace_in_synpred163_RuleSet23900 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_VAR_in_synpred163_RuleSet23904 = new BitSet(new long[]{0x0000800000000000L});
+    public static final BitSet FOLLOW_47_in_synpred163_RuleSet23906 = new BitSet(new long[]{0x02028000200018B0L,0x00001EE000004080L});
+    public static final BitSet FOLLOW_expr_in_synpred163_RuleSet23911 = new BitSet(new long[]{0x02038000200018B0L,0x00001EE000004080L});
+    public static final BitSet FOLLOW_48_in_synpred163_RuleSet23922 = new BitSet(new long[]{0x02028000200018B0L,0x00001EE000004080L});
+    public static final BitSet FOLLOW_49_in_synpred163_RuleSet23927 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_VAR_in_synpred166_RuleSet23942 = new BitSet(new long[]{0x0000800000000000L});
+    public static final BitSet FOLLOW_47_in_synpred166_RuleSet23944 = new BitSet(new long[]{0x02028000200018B0L,0x00001EE000004080L});
+    public static final BitSet FOLLOW_expr_in_synpred166_RuleSet23949 = new BitSet(new long[]{0x02038000200018B0L,0x00001EE000004080L});
+    public static final BitSet FOLLOW_48_in_synpred166_RuleSet23953 = new BitSet(new long[]{0x02028000200018B0L,0x00001EE000004080L});
+    public static final BitSet FOLLOW_49_in_synpred166_RuleSet23958 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_VAR_in_synpred171_RuleSet24033 = new BitSet(new long[]{0x0000000000000002L});
 
 }
