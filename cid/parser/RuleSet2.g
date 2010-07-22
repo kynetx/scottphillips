@@ -30,7 +30,7 @@ options {
 	public boolean checkname = true;
 	
 	public class InvalidToken extends RecognitionException 
-	{	
+	{	 
 		String aMessage = "";
 		public InvalidToken(String inMessage, org.antlr.runtime.IntStream intstream)
 		{		
@@ -172,7 +172,7 @@ options {
 	}
 }
 
-
+ 
 		
 predop: '<=' | '>=' | '<' | '>' | '==' | '!=' | 'eq' | 'neq' | 'like';		
 	
@@ -208,14 +208,15 @@ WS  :   ( ' '
     ;
 
 STRING
-    :  '"' ( ESC_SEQ | ~('\\'|'"') )* '"'
+    :  '"' ( ESC_SEQ | ~('\\'|'"') | '\\/' )* '"' 
     ;
 
 REGEXP 
 	:
-	'/'  ( ESC_SEQ | ~('\\'|'/') )*  '/' ('i'|'g'|'m')? 
-	| '#'  ( options {greedy=false;} : . )* '#' 
+	'/'  ( ESC_SEQ  | ~('\\' | '/') | '\\/' )*  '/' ('i'|'g'|'m')* 
+	|'#'  ( ESC_SEQ | ~('\\'|'#') )*  '#' ('i'|'g'|'m')* 
 	;
+//	| '#'  ( options {greedy=false;} : . )* '#' 
 
 //fragment REGEXP 
 //	:
@@ -240,7 +241,7 @@ HEX_DIGIT : ('0'..'9'|'a'..'f'|'A'..'F') ;
 
 fragment
 ESC_SEQ
-    :   '\\' ('b'|'d'|'t'|'n'|'f'|'r'|'\"'|'\''|'\\')
+    :   '\\' ('b'|'d'|'t'|'n'|'f'|'r'|'\"'|'\''|'\\'|'?')
     |   UNICODE_ESC
     |   OCTAL_ESC
     ;
@@ -319,7 +320,7 @@ rule
 	 ArrayList fors = new ArrayList();
 }
 	: 	must_be["rule"]
-		name=rule_name  
+		name=rule_name   
 		must_be["is"]
  
 		ait=must_be_one[sar("active","inactive","test")]
@@ -684,14 +685,14 @@ primrule returns[HashMap result]
 	ArrayList temp_list = new ArrayList();
 }
 	:  (label=VAR '=>')? (
-		 src=namespace? name=VAR '(' (ex=expr{temp_list.add($ex.result);}  (',' ex1=expr{temp_list.add($ex1.result);})* )?  ')' m=modifier_clause? {
+		 src=namespace? name=VAR '(' (ex=expr{temp_list.add($ex.result);}  (',' ex1=expr{temp_list.add($ex1.result);})* )? ','?  ')' m=modifier_clause? {
 		 	
 		 	HashMap tmp = new HashMap();
 		 	tmp.put("source",$src.result);
 		 	tmp.put("name",$name.text);
 		 	tmp.put("args",temp_list);
 		 	
-		 	if($label.text != null)
+		 	if($label.text != null) 
 			 	tmp.put("label",$label.text);
 			 	
 		 	tmp.put("modifiers",$m.result);
@@ -750,7 +751,7 @@ modifier returns[HashMap result]
 
 
 using returns[HashMap result]	
-	:	'using' p=STRING s=setting? {
+	:	'using' p=(STRING|REGEXP) s=setting? {
 			HashMap tmp = new HashMap();
 			tmp.put("op","pageview");
 			HashMap evt_expr = new HashMap();
@@ -1125,9 +1126,9 @@ global_block
 			{
 				tmp.put("cachable",$cas.what);
 			}
-			else if($cas.what instanceof Integer)
+			else if($cas.what instanceof Long)
 			{
-				tmp.put("cachable",((Integer)$cas.what).intValue());
+				tmp.put("cachable",((Long)$cas.what).longValue());
 			}
 			else
 			{
@@ -1477,7 +1478,7 @@ factor returns[Object result] options { backtrack = true; }
 	: v=INT { 
 		HashMap tmp = new HashMap();
 		tmp.put("type","num");
-		tmp.put("val",Integer.parseInt($v.text));
+		tmp.put("val",Long.getLong($v.text));
 		$result = tmp;
 	}
       | v= STRING  { 
@@ -1498,6 +1499,12 @@ factor returns[Object result] options { backtrack = true; }
 		tmp.put("val",$v.text);
 		$result = tmp;
 	}
+      | vr=REGEXP {
+      		HashMap tmp = new HashMap();
+		tmp.put("type","regx");
+		tmp.put("val",strip_string($vr.text));
+		$result = tmp;
+      }
       | v=VAR '[' e=expr ']'  { 
       		HashMap tmp = new HashMap();
 		HashMap val = new HashMap();
@@ -1665,11 +1672,11 @@ cachable returns[Object what]
 	 		}
 	 		else if($ca.text != null)
 	 		{
-	 			$what = new Integer(1);
+	 			$what = new Long(1);
 	 		}
 	 		else
 	 		{
-	 			$what = new Integer(0);
+	 			$what = new Long(0);
 	 		}
  		}
 	;	
