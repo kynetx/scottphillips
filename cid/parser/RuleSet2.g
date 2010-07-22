@@ -213,7 +213,7 @@ STRING
 
 REGEXP 
 	:
-	'/'  ( ESC_SEQ  | ~('\\' | '/') | '\\/' )*  '/' ('i'|'g'|'m')* 
+	'/'  ( ESC_SEQ  | ~('\\' | '/') | '\\/'  )*  '/' ('i'|'g'|'m')* 
 	|'#'  ( ESC_SEQ | ~('\\'|'#') )*  '#' ('i'|'g'|'m')* 
 	;
 //	| '#'  ( options {greedy=false;} : . )* '#' 
@@ -340,7 +340,7 @@ rule
 			{ 
 				HashMap condt = new HashMap();
 				condt.put("val","true");
-				condt.put("type","bool");
+				condt.put("type","bool"); 
 				current_rule.put("cond",condt);
 			}
 			current_rule.put("blocktype",actions_result.get("blocktype"));
@@ -1495,12 +1495,6 @@ factor returns[Object result] options { backtrack = true; }
 		tmp.put("val",$v.text);
 		$result = tmp;
 	}
-      | vr=REGEXP {
-      		HashMap tmp = new HashMap();
-		tmp.put("type","regx");
-		tmp.put("val",strip_string($vr.text));
-		$result = tmp;
-      }
       | v=VAR '[' e=expr ']'  { 
       		HashMap tmp = new HashMap();
 		HashMap val = new HashMap();
@@ -1574,11 +1568,11 @@ factor returns[Object result] options { backtrack = true; }
       		 
 	      	$result = tmp;
       }
-      | '{' h1=hash_line {
+      | '{' (h1=hash_line {
       			exprs2.add($h1.result);
       		 } (',' h2=hash_line {
       			exprs2.add($h2.result);
-      		 })* '}' {
+      		 })* )? '}' {
       			HashMap tmp = new HashMap();
       			tmp.put("val",exprs2);	
       			tmp.put("type","hashraw");
@@ -1586,14 +1580,21 @@ factor returns[Object result] options { backtrack = true; }
 	      	$result = tmp;
 	}
       | v=VAR  { 
-      		HashMap tmp = new HashMap();
+      		HashMap tmp = new HashMap(); 
 		tmp.put("type","var");
 		tmp.put("val",$v.text);
 		$result = tmp;
-}
+	}
       | '(' e=expr ')' { 
       		$result=$e.result; 
       	}     
+      | vr=REGEXP {
+      		HashMap tmp = new HashMap();
+		tmp.put("type","regx");
+		tmp.put("val",strip_string($vr.text));
+		$result = tmp;
+      }
+
 	;	
 fragment var_domain: 'ent' | 'app';	
 	
@@ -1718,7 +1719,7 @@ meta_block
 		else 
 			keys_map.put($what.text,strip_string($key_value.text)); 
 	}	
-	| 'authz' 'require' 'user' {  
+	| 'authz' 'require' must_be["user"] {  
 		HashMap tmp = new HashMap(); 
 		tmp.put("level","user");
 		tmp.put("type","required");
