@@ -332,7 +332,7 @@ rule
 			cond.put("type","bool"); 
 		 	
 			if(actions_result.get("cond") != null)
-			{
+		 	{
 				current_rule.put("cond",actions_result.get("cond"));
 			}
 		 	else
@@ -406,7 +406,8 @@ post_statement returns[HashMap result]
 	: ((pe=persistent_expr 
   	| rs=raise_statement
 	| l=log_statement   
-	| ('if' ie=expr)?) {
+	| las=must_be["last"])
+	('if' ie=expr)?) {
 		if($pe.text != null)
 		 	$result = $pe.result ;
 		 	
@@ -429,7 +430,6 @@ post_statement returns[HashMap result]
 			$result.put("test",$ie.result);
 		} 	
 	}
-	| las=must_be["last"])
 	
   	;
 
@@ -981,6 +981,9 @@ event_btwn returns[HashMap result]
 	 	
  	
 event_prim returns[HashMap result]
+@init {
+	ArrayList filters = new ArrayList();
+}
 	:	
 	'web'? 'pageview' (spat=STRING|rpat=REGEXP) set=setting? {
 		HashMap tmp = new HashMap();
@@ -999,7 +1002,7 @@ event_prim returns[HashMap result]
 		HashMap tmp = new HashMap();
 		tmp.put("domain","web");
 		tmp.put("element",strip_string($elem.text));
-		tmp.put("type","prim_event");
+		tmp.put("type","prim_event"); 
 		if($set.text != null)
 			tmp.put("vars",$set.result);
 		tmp.put("op",$opt.text);
@@ -1008,14 +1011,15 @@ event_prim returns[HashMap result]
 		$result = tmp;			
 	
 	}
-	| dom=VAR oper=VAR filter=event_filter set=setting?  {
+	| dom=VAR oper=VAR (filter=event_filter{filters.add($filter.result);})* set=setting?  {
 		HashMap tmp = new HashMap();
 		tmp.put("domain",$dom.text);
 		tmp.put("type","prim_event");
 		if($set.text != null)
 			tmp.put("vars",$set.result);
 		tmp.put("op",$oper.text);
-		tmp.put("filters",$filter.result);
+		if(filters.size() != 0)
+			tmp.put("filters",filters);
 		$result = tmp;			
 	
 	} 
@@ -1104,7 +1108,7 @@ global_block
 		tmp.put("emit",$emt.emit_value);
 		global_block_array.add(tmp);
 	} 
-	| dst=('dataset' |'datasource') name=VAR (':' dtype=('JSON'|'XML'|'RSS'|'HTML'))? '<-' src=STRING (cas=cachable {found_cache =true; })?  {
+	| dst=must_be_one[sar("dataset","datasource")] name=VAR (':' dtype=('JSON'|'XML'|'RSS'|'HTML'))? '<-' src=STRING (cas=cachable {found_cache =true; })?  {
 	
 		HashMap tmp = new HashMap(); 
 		tmp.put("type",$dst.text);	
@@ -1201,14 +1205,17 @@ function_def returns[Object result]
 	: 'function' '(' args+=VAR? (',' args+=VAR )* ')' '{' decs+=decl[block_array]? (';' decs+=decl[block_array])* ';'? e1=expr '}' {
 		HashMap tmp = new HashMap();
 		ArrayList nargs = new ArrayList();
-		for(int i = 0;i< $args.size();i++)
+		if($args != null)
 		{
-			nargs.add(((Token)$args.get(i)).getText());
+			for(int i = 0;i< $args.size();i++)
+			{
+				nargs.add(((Token)$args.get(i)).getText());
+			}
 		}
 		tmp.put("vars",nargs);
 		tmp.put("type","function");
 		if(block_array.size() != 0)
-			tmp.put("decls",block_array);
+			tmp.put("decls",block_array); 
 		if($e1.text != null)
 			tmp.put("expr",$e1.result);	
 				
@@ -1453,7 +1460,7 @@ fragment operator returns[String oper,ArrayList exprs]
 	: o=('.pick'|'.match'|'.length'|'.replace'|'.as'|'.head'|'.tail'|'.sort'
       	|'.filter'|'.map'|'.uc'|'.lc' |'.split' | '.join' | '.query'
       	| '.has' | '.union' | '.difference' | '.intersection' | '.unique' | '.once'
-      	| '.duplicates') '(' e=expr {rexprs.add(e.result); } (',' e1=expr {rexprs.add(e1.result); } )* ')'	{
+      	| '.duplicates') '(' (e=expr {rexprs.add(e.result); } (',' e1=expr {rexprs.add(e1.result); } )*)? ')'	{
       		// Remove .
       		$oper = $o.text.substring(1,$o.text.length());
       		$exprs = rexprs;
