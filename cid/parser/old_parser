@@ -1,0 +1,1 @@
+/mnt/hgfs/Development/krl_engine/bin/krl-parser.pl -f /mnt/hgfs/Development/krl_engine/t/data/$1 -j > /mnt/hgfs/Development/sandboxes/cid/parser/oldout/$1.json

@@ -1,0 +1,277 @@
+Processing: action0.krl
+Processing: action1.krl
+Processing: action2.krl
+Processing: action3.krl
+Processing: action4.krl
+Processing: action5.krl
+Processing: action6.krl
+Processing: action7.krl
+Processing: base.yml
+diffj.rb:8:in `initialize': No such file or directory - oldout/base.yml.json (Errno::ENOENT)
+	from diffj.rb:8:in `open'
+	from diffj.rb:8
+Processing: callbacks0.krl
+Processing: callbacks1.krl
+Processing: callbacks2.krl
+Processing: callbacks3.krl
+Processing: callbacks4.krl
+Processing: casey0.krl
+Processing: choose0.krl
+Processing: choose1.krl
+Processing: choose2.krl
+Processing: comment0.krl
+Processing: cond0.krl
+Processing: cond1.krl
+Processing: condexpr0.krl
+E-LRCM rules(1)=>pre(1)=>rhs(0)=>else()=> L[Hash] R[NilClass]LV[val2typenum] RV[]
+E-RVNM rules(1)=>pre(1)=>rhs(0)=>type()=> R[app] L[condexpr]
+E-LRCM rules(1)=>pre(1)=>rhs(0)=>then()=> L[Hash] R[NilClass]LV[val1typenum] RV[]
+E-LRCM rules(1)=>pre(1)=>rhs(0)=>test()=> L[Hash] R[NilClass]LV[argstypeappfunction_exprvalcloudytypevar] RV[]
+Processing: condexpr1.krl
+E-LRCM rules(1)=>pre(1)=>rhs(0)=>else()=> L[Hash] R[NilClass]LV[val2typenum] RV[]
+E-RVNM rules(1)=>pre(1)=>rhs(0)=>type()=> R[pred] L[condexpr]
+E-LRCM rules(1)=>pre(1)=>rhs(0)=>then()=> L[Hash] R[NilClass]LV[val1typenum] RV[]
+E-LRCM rules(1)=>pre(1)=>rhs(0)=>test()=> L[Hash] R[NilClass]LV[argsargstypeappfunction_exprvalcloudytypevarargstypeappfunction_exprvalsunnytypevarop||typepred] RV[]
+Processing: condexpr2.krl
+E-LRCM rules(1)=>pre(1)=>rhs(0)=>else()=> L[Hash] R[NilClass]LV[argsval2typenumval4typenumop+typeprim] RV[]
+E-RVNM rules(1)=>pre(1)=>rhs(0)=>type()=> R[app] L[condexpr]
+E-LRCM rules(1)=>pre(1)=>rhs(0)=>then()=> L[Hash] R[NilClass]LV[argsval1typenumval3typenumop+typeprim] RV[]
+E-LRCM rules(1)=>pre(1)=>rhs(0)=>test()=> L[Hash] R[NilClass]LV[argstypeappfunction_exprvalcloudytypevar] RV[]
+Processing: condexpr3.krl
+E-LRCM rules(1)=>pre(1)=>rhs(0)=>else()=> L[Hash] R[NilClass]LV[valfizztypestr] RV[]
+E-RVNM rules(1)=>pre(1)=>rhs(0)=>type()=> R[pred] L[condexpr]
+E-LRCM rules(1)=>pre(1)=>rhs(0)=>then()=> L[Hash] R[NilClass]LV[argsvalfootypestrnamepickargsval$..footypestrobjvalxtypevartypeoperatorop+typeprim] RV[]
+E-LRCM rules(1)=>pre(1)=>rhs(0)=>test()=> L[Hash] R[NilClass]LV[argsargstypeappfunction_exprvalcloudytypevarargstypeappfunction_exprvalsunnytypevarop||typepred] RV[]
+Processing: condexpr4.krl
+E-LRCM rules(1)=>pre(1)=>rhs(0)=>else()=> L[Hash] R[NilClass]LV[elseval3typenumtypecondexprthenval2typenumtestargstypeappfunction_exprvalsunnytypevar] RV[]
+E-RVNM rules(1)=>pre(1)=>rhs(0)=>type()=> R[app] L[condexpr]
+E-LRCM rules(1)=>pre(1)=>rhs(0)=>then()=> L[Hash] R[NilClass]LV[val1typenum] RV[]
+E-LRCM rules(1)=>pre(1)=>rhs(0)=>test()=> L[Hash] R[NilClass]LV[argstypeappfunction_exprvalcloudytypevar] RV[]
+Processing: counter0.krl
+Processing: counter1.krl
+Processing: counter2.krl
+Processing: counter3.krl
+Processing: counter4.krl
+Processing: css0.krl
+Processing: css1.krl
+Processing: css2.krl
+Processing: datasets0.krl
+Processing: datasets1.krl
+Processing: debug0.krl
+Processing: debug1.krl
+Processing: development.yml
+/Library/Ruby/Gems/1.8/gems/json_pure-1.2.3/lib/json/common.rb:128:in `initialize': A JSON text must at least contain two octets! (JSON::ParserError)
+	from /Library/Ruby/Gems/1.8/gems/json_pure-1.2.3/lib/json/common.rb:128:in `new'
+	from /Library/Ruby/Gems/1.8/gems/json_pure-1.2.3/lib/json/common.rb:128:in `parse'
+	from diffj.rb:16
+Processing: dispatch0.krl
+Processing: dispatch1.krl
+Processing: emit0.krl
+Processing: emit1.krl
+Processing: emit2.krl
+Processing: emit3.krl
+E-LRCM rules(1)=>actions(1)=>label()=> L[String] R[NilClass]LV[foo] RV[]
+Processing: emit4.krl
+E-LRCM rules(1)=>actions(2)=>label()=> L[String] R[NilClass]LV[fuzz] RV[]
+Processing: events0.krl
+Processing: events1.krl
+Processing: events10.krl
+Processing: events11.krl
+Processing: events2.krl
+Processing: events3.krl
+Processing: events4.krl
+Processing: events5.krl
+Processing: events6.krl
+Processing: events7.krl
+Processing: events8.krl
+Processing: events9.krl
+E-LRCM rules(1)=>pagetype(0)=>foreach(1)=> L[Hash] R[NilClass]LV[exprvalval0typenumval1typenumval2typenumtypearrayvarx] RV[]
+Processing: exprs0.krl
+E-RVNM rules(1)=>pre(6)=>rhs(0)=>val()=> R[f|g+/] L[/f|g+/i]
+E-RVNM rules(1)=>pre(6)=>rhs(0)=>type()=> R[regx] L[regexp]
+E-RVNM rules(1)=>pre(29)=>rhs(0)=>type()=> R[persistent] L[trail_history]
+E-LRCM rules(1)=>pre(29)=>rhs(0)=>offset()=> L[Hash] R[NilClass]LV[val0typenum] RV[]
+E-LRCM rules(1)=>pre(35)=>rhs(0)=>expr()=> L[Hash] R[NilClass]LV[valtruetypebool] RV[]
+E-RVNM rules(1)=>pre(36)=>rhs(0)=>expr(0)=>val()=> R[f|goo+] L[/f|goo+/]
+E-RVNM rules(1)=>pre(36)=>rhs(0)=>expr(0)=>type()=> R[regx] L[regexp]
+E-LRCM rules(1)=>pre(41)=>rhs()=> L[Hash] R[NilClass]LV[argsvaltruetypeboolopnegationtypepred] RV[]
+E-LRCM rules(1)=>pre(42)=>rhs(0)=>args(1)=> L[Hash] R[NilClass]LV[argsvaltruetypeboolopnegationtypepred] RV[]
+E-LRCM rules(1)=>pre(43)=>rhs()=> L[Hash] R[NilClass]LV[argsargsvaltruetypeboolvalfalsetypeboolop==typeineqopnegationtypepred] RV[]
+E-LRCM rules(1)=>pre(44)=>rhs(0)=>args(1)=>args(1)=> L[Hash] R[NilClass]LV[argsvalxtypevaropnegationtypepred] RV[]
+E-LRCM rules(1)=>pre(44)=>rhs(0)=>args(1)=>args(2)=> L[Hash] R[NilClass]LV[argsvalytypevaropnegationtypepred] RV[]
+E-LRCM rules(1)=>pre(44)=>rhs(0)=>args(2)=> L[Hash] R[NilClass]LV[argsargsvalxtypevarvalytypevarop&&typepredopnegationtypepred] RV[]
+Processing: flag0.krl
+Processing: flag1.krl
+E-LRCM rules(1)=>cond(0)=>expr()=> L[Hash] R[NilClass]LV[valtruetypebool] RV[]
+Processing: foreach0.krl
+E-LRCM rules(1)=>pagetype(0)=>foreach()=> L[Array] R[NilClass]LV[exprvalval0typenumval1typenumval2typenumtypearrayvarx] RV[]
+Processing: foreach1.krl
+E-LRCM rules(1)=>pagetype(0)=>foreach()=> L[Array] R[NilClass]LV[exprvalval0typenumval1typenumval2typenumtypearrayvarxexprvalvalatypestrvalbtypestrvalctypestrtypearrayvary] RV[]
+Processing: foreach2.krl
+E-LRCM rules(1)=>pagetype(0)=>foreach()=> L[Array] R[NilClass]LV[exprvallhsarhsval1typenumlhsbrhsval2typenumlhscrhsval3typenumtypehashrawvarkv] RV[]
+Processing: function0.krl
+Processing: function1.krl
+Processing: function2.krl
+Processing: function3.krl
+Processing: function4.krl
+Processing: global0.krl
+Processing: global1.krl
+Processing: global2.krl
+Processing: global3.krl
+Processing: global4.krl
+Processing: global5.krl
+Processing: global6.krl
+Processing: global7.krl
+Processing: hash0.krl
+Processing: hash1.krl
+Processing: hash2.krl
+Processing: here_doc0.krl
+Processing: here_doc1.krl
+Processing: ineq0.krl
+Processing: ineq1.krl
+Processing: ineq2.krl
+Processing: ineq3.krl
+Processing: ineq4.krl
+Processing: ineq5.krl
+Processing: kns_config.yml
+/Library/Ruby/Gems/1.8/gems/json_pure-1.2.3/lib/json/common.rb:128:in `initialize': A JSON text must at least contain two octets! (JSON::ParserError)
+	from /Library/Ruby/Gems/1.8/gems/json_pure-1.2.3/lib/json/common.rb:128:in `new'
+	from /Library/Ruby/Gems/1.8/gems/json_pure-1.2.3/lib/json/common.rb:128:in `parse'
+	from diffj.rb:16
+Processing: library.krl
+Processing: log0.krl
+Processing: log1.krl
+Processing: log2.krl
+Processing: mail0.krl
+Processing: mail1.krl
+E-LRCM rules(1)=>pagetype(0)=>event_expr(0)=>filters(1)=> L[Hash] R[Array]LV[patternvisa.com$typefrom] RV[patternvisa.com$typefrom]
+Processing: mail2.krl
+E-LRCM rules(1)=>pagetype(0)=>event_expr(0)=>filters(1)=> L[Hash] R[Array]LV[patternvisa.com$typefrom] RV[patternvisa.com$typefrom]
+E-LRCM rules(1)=>pagetype(0)=>event_expr(0)=>filters(2)=> L[Hash] R[Array]LV[patternHellotypesubject] RV[patternHellotypesubject]
+Processing: meta0.krl
+Processing: meta1.krl
+Processing: meta10.krl
+Processing: meta11.krl
+Processing: meta12.krl
+Processing: meta13.krl
+E-LRCM meta(0)=>use(1)=>type()=> L[String] R[NilClass]LV[resource] RV[]
+E-LRCM meta(0)=>use(2)=>type()=> L[String] R[NilClass]LV[resource] RV[]
+Processing: meta2.krl
+Processing: meta3.krl
+Processing: meta4.krl
+Processing: meta5.krl
+Processing: meta6.krl
+Processing: meta7.krl
+Processing: meta8.krl
+Processing: meta9.krl
+E-RVNM meta(0)=>authz(0)=>type()=> R[required] L[require]
+Processing: modifiers0.krl
+Processing: operator0.krl
+E-LRCM rules(1)=>pre(1)=>rhs(0)=>obj(0)=>obj()=> L[Hash] R[NilClass]LV[valjsontypevar] RV[]
+Processing: pagevar0.krl
+Processing: pagevar1.krl
+Processing: pagevar2.krl
+Processing: pick0.krl
+Processing: pick1.krl
+Processing: pick2.krl
+Processing: post0.krl
+Processing: post1.krl
+Processing: post2.krl
+Processing: post3.krl
+Processing: pre0.krl
+Processing: pre1.krl
+Processing: pre2.krl
+Processing: pre3.krl
+Processing: pre4.krl
+Processing: pre5.krl
+Processing: pre6.krl
+Processing: pre7.krl
+Processing: predicate0.krl
+Processing: predicate1.krl
+Processing: predicate2.krl
+E-LRCM rules(1)=>cond(0)=>args()=> L[Array] R[NilClass]LV[argspredicatenighttimetypequalifiedsourcetime] RV[]
+E-LRCM rules(1)=>cond(0)=>op()=> L[String] R[NilClass]LV[negation] RV[]
+E-RVNM rules(1)=>cond(0)=>type()=> R[bool] L[pred]
+Processing: predicate3.krl
+Processing: predicate4.krl
+Processing: predicate5.krl
+Processing: predicate6.krl
+E-LRCM rules(1)=>cond(0)=>args()=> L[Array] R[NilClass]LV[argsargsargspredicatetomorrow_windytypequalifiedsourceweatherargspredicatenighttimetypequalifiedsourcetimeop||typepredargspredicatetoday_windytypequalifiedsourceweatherop&&typepred] RV[]
+E-LRCM rules(1)=>cond(0)=>op()=> L[String] R[NilClass]LV[negation] RV[]
+E-RVNM rules(1)=>cond(0)=>type()=> R[bool] L[pred]
+Processing: predicate7.krl
+E-LRCM rules(1)=>cond(0)=>args()=> L[Array] R[NilClass]LV[argsargspredicatenighttimetypequalifiedsourcetimeargspredicatetoday_windytypequalifiedsourceweatherop||typepred] RV[]
+E-LRCM rules(1)=>cond(0)=>op()=> L[String] R[NilClass]LV[negation] RV[]
+E-RVNM rules(1)=>cond(0)=>type()=> R[bool] L[pred]
+Processing: predicate8.krl
+Processing: predicate9.krl
+Processing: primrule0.krl
+Processing: primrule1.krl
+Processing: production.yml
+/Library/Ruby/Gems/1.8/gems/json_pure-1.2.3/lib/json/common.rb:128:in `initialize': A JSON text must at least contain two octets! (JSON::ParserError)
+	from /Library/Ruby/Gems/1.8/gems/json_pure-1.2.3/lib/json/common.rb:128:in `new'
+	from /Library/Ruby/Gems/1.8/gems/json_pure-1.2.3/lib/json/common.rb:128:in `parse'
+	from diffj.rb:16
+Processing: qa.yml
+/Library/Ruby/Gems/1.8/gems/json_pure-1.2.3/lib/json/common.rb:128:in `initialize': A JSON text must at least contain two octets! (JSON::ParserError)
+	from /Library/Ruby/Gems/1.8/gems/json_pure-1.2.3/lib/json/common.rb:128:in `new'
+	from /Library/Ruby/Gems/1.8/gems/json_pure-1.2.3/lib/json/common.rb:128:in `parse'
+	from diffj.rb:16
+Processing: raise0.krl
+Processing: raise1.krl
+Processing: raise2.krl
+Processing: raise3.krl
+Processing: raise4.krl
+Processing: regexp0.krl
+E-RVNM rules(1)=>pre(2)=>rhs(0)=>args(1)=>val()=> R[string] L[/string/]
+E-RVNM rules(1)=>pre(2)=>rhs(0)=>args(1)=>type()=> R[regx] L[regexp]
+Processing: regexp1.krl
+E-RVNM rules(1)=>pre(2)=>rhs(0)=>args(1)=>val()=> R[str\/ing] L[/str\/ing/]
+E-RVNM rules(1)=>pre(2)=>rhs(0)=>args(1)=>type()=> R[regx] L[regexp]
+Processing: regexp2.krl
+E-RVNM rules(1)=>pre(2)=>rhs(0)=>args(1)=>val()=> R[string/] L[/string/i]
+E-RVNM rules(1)=>pre(2)=>rhs(0)=>args(1)=>type()=> R[regx] L[regexp]
+Processing: regexp3.krl
+E-RVNM rules(1)=>pre(2)=>rhs(0)=>args(1)=>val()=> R[string/] L[/string/g]
+E-RVNM rules(1)=>pre(2)=>rhs(0)=>args(1)=>type()=> R[regx] L[regexp]
+Processing: regexp4.krl
+E-RVNM rules(1)=>pre(2)=>rhs(0)=>args(1)=>val()=> R[string/g] L[/string/gi]
+E-RVNM rules(1)=>pre(2)=>rhs(0)=>args(1)=>type()=> R[regx] L[regexp]
+Processing: regexp5.krl
+E-RVNM rules(1)=>pre(2)=>rhs(0)=>args(1)=>val()=> R[string/i] L[/string/ig]
+E-RVNM rules(1)=>pre(2)=>rhs(0)=>args(1)=>type()=> R[regx] L[regexp]
+Processing: regexp6.krl
+E-RVNM rules(1)=>pre(2)=>rhs(0)=>args(1)=>val()=> R[http://www.google.com] L[#http://www.google.com#]
+E-RVNM rules(1)=>pre(2)=>rhs(0)=>args(1)=>type()=> R[regx] L[regexp]
+Processing: regexp7.krl
+E-RVNM rules(1)=>pre(2)=>rhs(0)=>args(1)=>val()=> R[http:\/\/www.google.com] L[/http:\/\/www.google.com/]
+E-RVNM rules(1)=>pre(2)=>rhs(0)=>args(1)=>type()=> R[regx] L[regexp]
+Processing: ruleset0.krl
+Processing: ruleset1.krl
+Processing: ruleset2.krl
+Processing: select0.krl
+Processing: select1.krl
+Processing: select2.krl
+Processing: simple0.krl
+Processing: simple1.krl
+Processing: simple2.krl
+Processing: stringtest0.krl
+Processing: stringtest1.krl
+Processing: stringtest2.krl
+Processing: stringtest3.krl
+Processing: submit0.krl
+Processing: submit1.krl
+Processing: submit2.krl
+Processing: submit3.krl
+Processing: trail0.krl
+E-RVNM rules(1)=>pre(1)=>rhs(0)=>type()=> R[persistent] L[trail_history]
+E-LRCM rules(1)=>pre(1)=>rhs(0)=>offset()=> L[Hash] R[NilClass]LV[val0typenum] RV[]
+Processing: trail1.krl
+E-RVNM rules(1)=>pre(1)=>rhs(0)=>type()=> R[persistent] L[trail_history]
+E-LRCM rules(1)=>pre(1)=>rhs(0)=>offset()=> L[Hash] R[NilClass]LV[val0typenum] RV[]
+Processing: trail2.krl
+E-RVNM rules(1)=>pre(1)=>rhs(0)=>type()=> R[persistent] L[trail_history]
+E-LRCM rules(1)=>pre(1)=>rhs(0)=>offset()=> L[Hash] R[NilClass]LV[val0typenum] RV[]
+Processing: trail3.krl
+E-RVNM rules(1)=>pre(1)=>rhs(0)=>type()=> R[persistent] L[trail_history]
+E-LRCM rules(1)=>pre(1)=>rhs(0)=>offset()=> L[Hash] R[NilClass]LV[val0typenum] RV[]

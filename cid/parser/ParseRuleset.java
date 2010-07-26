@@ -24,14 +24,15 @@ public class ParseRuleset
 			for(int i =0;i< files.length;i++)
 			{	
 				File thefile = files[i];
+				long start = System.currentTimeMillis();
 				if(thefile.length() == 0 || thefile.length() == 31 ||  thefile.length() == 162)
 				{
 					notparsed = notparsed + 1;
+					System.out.println("Skipping: " + thefile + " in " + (System.currentTimeMillis() - start) + "ms." );
 //					System.out.println("Skipping " + thefile);
 					continue;
 				}
 				parsed = parsed + 1;
-				long start = System.currentTimeMillis();
 				try
 				{
 					ANTLRFileStream input = new ANTLRFileStream(thefile.getCanonicalPath() );
@@ -40,15 +41,17 @@ public class ParseRuleset
 					com.kynetx.RuleSet2Parser parser = new com.kynetx.RuleSet2Parser(tokens);
 					parser.ruleset();			
 					JSONObject js = new JSONObject(parser.rule_json);
-					System.out.println("Parsed: " + thefile + " in " + (System.currentTimeMillis() - start) + "ms." );
+//					System.out.println("Parsed: " + thefile + " in " + (System.currentTimeMillis() - start) + "ms." );
+					System.out.println(js.toString(3));
 				}
 				catch(Exception e)
 				{
+					System.out.println("Error: " + thefile + " in " + (System.currentTimeMillis() - start) + "ms." );
 					System.out.println("Error "  + thefile +  " " + e.getMessage());
 				}
 			}
-			System.out.println("Not Parsed " + notparsed);
-			System.out.println("Parsed " + parsed);
-//			System.out.println(js.toString(3));
+//			System.out.println("Not Parsed " + notparsed);
+//			System.out.println("Parsed " + parsed);
+			
 		}
 }

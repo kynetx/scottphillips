@@ -1,0 +1,2 @@
+echo Processing: $1
+ruby diffj.rb  oldout/$1.json newout/$1.json

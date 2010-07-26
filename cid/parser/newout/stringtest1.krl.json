@@ -1,0 +1,49 @@
+{
+   "dispatch": [],
+   "global": [],
+   "meta": {},
+   "rules": [{
+      "actions": [{"action": {
+         "args": [{
+            "type": "str",
+            "val": "You're coming from Blackfoot!"
+         }],
+         "modifiers": null,
+         "name": "alert",
+         "source": null
+      }}],
+      "blocktype": "every",
+      "callbacks": null,
+      "cond": {
+         "args": [
+            {
+               "args": [{
+                  "type": "str",
+                  "val": "zip"
+               }],
+               "predicate": "var",
+               "source": "page",
+               "type": "qualified"
+            },
+            {
+               "type": "str",
+               "val": "83221"
+            }
+         ],
+         "op": "eq",
+         "type": "ineq"
+      },
+      "emit": null,
+      "foreach": [],
+      "name": "test0",
+      "pagetype": {"event_expr": {
+         "legacy": 1,
+         "op": "pageview",
+         "pattern": "/test/",
+         "type": "prim_event",
+         "vars": []
+      }},
+      "state": "active"
+   }],
+   "ruleset_name": "10"
+}

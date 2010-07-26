@@ -1,0 +1,62 @@
+{
+   "dispatch": [],
+   "global": [],
+   "meta": {},
+   "rules": [{
+      "actions": [{"action": {
+         "args": [
+            {
+               "type": "str",
+               "val": "test"
+            },
+            {
+               "args": [
+                  {
+                     "type": "str",
+                     "val": "test"
+                  },
+                  {
+                     "type": "var",
+                     "val": "foo"
+                  }
+               ],
+               "op": "+",
+               "type": "prim"
+            }
+         ],
+         "modifiers": null,
+         "name": "replace",
+         "source": null
+      }}],
+      "blocktype": "every",
+      "callbacks": null,
+      "cond": {
+         "type": "bool",
+         "val": "true"
+      },
+      "emit": null,
+      "foreach": [],
+      "name": "test0",
+      "pagetype": {"event_expr": {
+         "legacy": 1,
+         "op": "pageview",
+         "pattern": "/test/",
+         "type": "prim_event",
+         "vars": []
+      }},
+      "pre": [{
+         "lhs": "foo",
+         "rhs": {
+            "expr": {
+               "type": "var",
+               "val": "x"
+            },
+            "type": "function",
+            "vars": []
+         },
+         "type": "expr"
+      }],
+      "state": "active"
+   }],
+   "ruleset_name": "10"
+}

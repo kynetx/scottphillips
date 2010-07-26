@@ -1,0 +1,35 @@
+{
+   "dispatch": [],
+   "global": [],
+   "meta": {},
+   "rules": [{
+      "actions": [{"action": {
+         "args": [{
+            "type": "str",
+            "val": "This is a message"
+         }],
+         "modifiers": null,
+         "name": "authorize",
+         "source": "twitter"
+      }}],
+      "blocktype": "every",
+      "callbacks": null,
+      "cond": {
+         "type": "bool",
+         "val": "true"
+      },
+      "emit": null,
+      "foreach": [],
+      "name": "test0",
+      "pagetype": {"event_expr": {
+         "legacy": 1,
+         "op": "pageview",
+         "pattern": "/test/",
+         "type": "prim_event",
+         "vars": []
+      }},
+      "pre": [],
+      "state": "active"
+   }],
+   "ruleset_name": "10"
+}

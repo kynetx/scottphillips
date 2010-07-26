@@ -1,0 +1,120 @@
+{
+   "dispatch": [],
+   "global": [],
+   "meta": {},
+   "rules": [{
+      "actions": [{"action": {
+         "args": [
+            {
+               "type": "str",
+               "val": "absolute"
+            },
+            {
+               "type": "str",
+               "val": "top: 10px"
+            },
+            {
+               "type": "str",
+               "val": "right: 10px"
+            },
+            {
+               "type": "str",
+               "val": "url"
+            }
+         ],
+         "modifiers": [
+            {
+               "name": "delay",
+               "value": {
+                  "type": "num",
+                  "val": 0
+               }
+            },
+            {
+               "name": "draggable",
+               "value": {
+                  "type": "bool",
+                  "val": "true"
+               }
+            },
+            {
+               "name": "scrollable",
+               "value": {
+                  "type": "bool",
+                  "val": "true"
+               }
+            },
+            {
+               "name": "effect",
+               "value": {
+                  "type": "str",
+                  "val": "appear"
+               }
+            }
+         ],
+         "name": "float",
+         "source": null
+      }}],
+      "blocktype": "every",
+      "callbacks": null,
+      "cond": {
+         "args": [
+            {
+               "args": [],
+               "function_expr": {
+                  "type": "var",
+                  "val": "nighttime"
+               },
+               "type": "app"
+            },
+            {
+               "args": [{
+                  "type": "str",
+                  "val": "UT"
+               }],
+               "function_expr": {
+                  "type": "var",
+                  "val": "outside_state"
+               },
+               "type": "app"
+            }
+         ],
+         "op": "&&",
+         "type": "pred"
+      },
+      "emit": null,
+      "foreach": [],
+      "name": "test0",
+      "pagetype": {"event_expr": {
+         "legacy": 1,
+         "op": "pageview",
+         "pattern": "/test/",
+         "type": "prim_event",
+         "vars": []
+      }},
+      "pre": [
+         {
+            "lhs": "tc",
+            "rhs": {
+               "args": [],
+               "predicate": "tomorrow_cond_code",
+               "source": "weather",
+               "type": "qualified"
+            },
+            "type": "expr"
+         },
+         {
+            "lhs": "city",
+            "rhs": {
+               "args": [],
+               "predicate": "city",
+               "source": "geoip",
+               "type": "qualified"
+            },
+            "type": "expr"
+         }
+      ],
+      "state": "active"
+   }],
+   "ruleset_name": "10"
+}

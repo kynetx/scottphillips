@@ -1,0 +1,78 @@
+{
+   "dispatch": [],
+   "global": [],
+   "meta": {},
+   "rules": [{
+      "actions": [{"action": {
+         "args": [{
+            "type": "str",
+            "val": "You win the prize!  You've seen "
+         }],
+         "modifiers": null,
+         "name": "alert",
+         "source": null
+      }}],
+      "blocktype": "every",
+      "callbacks": null,
+      "cond": {
+         "args": [
+            {
+               "domain": "ent",
+               "name": "archive_pages",
+               "type": "persistent"
+            },
+            {
+               "type": "num",
+               "val": 2
+            }
+         ],
+         "op": ">",
+         "type": "ineq"
+      },
+      "emit": null,
+      "foreach": [],
+      "name": "frequent_archive_visitor",
+      "pagetype": {"event_expr": {
+         "legacy": 1,
+         "op": "pageview",
+         "pattern": "/archives/\\d+/\\d+/",
+         "type": "prim_event",
+         "vars": []
+      }},
+      "post": {
+         "alt": [{
+            "action": "iterator",
+            "domain": "ent",
+            "from": {
+               "type": "num",
+               "val": 0
+            },
+            "name": "archive_pages",
+            "op": "-=",
+            "type": "persistent",
+            "value": {
+               "type": "num",
+               "val": 1
+            }
+         }],
+         "cons": [{
+            "action": "clear",
+            "domain": "ent",
+            "name": "archive_pages",
+            "type": "persistent"
+         }],
+         "type": "fired"
+      },
+      "pre": [{
+         "lhs": "c",
+         "rhs": {
+            "domain": "ent",
+            "name": "archive_pages",
+            "type": "persistent"
+         },
+         "type": "expr"
+      }],
+      "state": "active"
+   }],
+   "ruleset_name": "10"
+}

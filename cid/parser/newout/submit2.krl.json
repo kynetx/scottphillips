@@ -1,0 +1,47 @@
+{
+   "dispatch": [],
+   "global": [],
+   "meta": {},
+   "rules": [{
+      "actions": [{"action": {
+         "args": [],
+         "modifiers": null,
+         "name": "noop",
+         "source": null
+      }}],
+      "blocktype": "every",
+      "callbacks": null,
+      "cond": {
+         "type": "bool",
+         "val": "true"
+      },
+      "emit": null,
+      "foreach": [],
+      "name": "test0",
+      "pagetype": {
+         "event_expr": {
+            "args": [
+               {
+                  "domain": "web",
+                  "op": "pageview",
+                  "pattern": "/(\\d+)/",
+                  "type": "prim_event",
+                  "vars": ["x"]
+               },
+               {
+                  "domain": "web",
+                  "element": "#formid",
+                  "op": "submit",
+                  "type": "prim_event",
+                  "vars": ["myform"]
+               }
+            ],
+            "op": "then",
+            "type": "complex_event"
+         },
+         "foreach": []
+      },
+      "state": "active"
+   }],
+   "ruleset_name": "10"
+}

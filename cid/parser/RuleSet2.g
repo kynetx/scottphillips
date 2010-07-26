@@ -96,7 +96,7 @@ options {
 	 */
 	public String strip_wrappers(String start, String end, String value)
 	{
-		return value.substring(start.length(),value.length() - end.length()).trim();	
+		return value.substring(start.length(),value.length() - end.length());	
 	}
 
 	public String[] sar(String ... values)
@@ -184,10 +184,12 @@ VAR  :	('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*
 
 
 INT :	'-'? '0'..'9'+
-    ;
+    ; 
 
 FLOAT
     :   '-'? ('0'..'9')+ '.' ('0'..'9')* EXPONENT?
+    |   '-'? '.' ('0'..'9')* EXPONENT?
+
     ;
     
 //NUM 	
@@ -203,7 +205,7 @@ COMMENT
 WS  :   ( ' '
         | '\t'
         | '\r'
-        | '\n'
+        | '\n' 
         ) {$channel=HIDDEN;}
     ;
 
@@ -254,7 +256,7 @@ OCTAL_ESC
     |   '\\' ('0'..'7')
     ;
 
-fragment
+fragment 
 UNICODE_ESC
     :   '\\' 'u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT
     ;
@@ -319,8 +321,8 @@ rule
 	 HashMap actions_result = new HashMap();
 	 ArrayList fors = new ArrayList();
 }
-	: 	must_be["rule"] 
-		name=rule_name   
+	: 	must_be["rule"]
+		name=rule_name    
 		must_be["is"] 
  
 		ait=must_be_one[sar("active","inactive","test")]
@@ -331,7 +333,7 @@ rule
 			HashMap cond = new HashMap();
 			cond.put("val","true");
 			cond.put("type","bool");  
-		 	
+		 	 
 			if(actions_result.get("cond") != null)
 		 	{
 				current_rule.put("cond",actions_result.get("cond"));
@@ -343,7 +345,7 @@ rule
 				condt.put("type","bool"); 
 				current_rule.put("cond",condt);
 			}
-			current_rule.put("blocktype",actions_result.get("blocktype"));
+			current_rule.put("blocktype",(actions_result.get("blocktype") != null ? actions_result.get("blocktype") : "every"));
 			
 			current_rule.put("actions",actions_result.get("actions"));
 			if($postb.text != null)
@@ -379,7 +381,7 @@ post_block returns[HashMap result]
 }
 	: 
 	typ=must_be_one[sar("fired","always","notfired")] '{' 
-		p1=post_statement { temp_list.add($p1.result);} (';' p2=post_statement { temp_list.add($p2.result);} )*  ';' '}' 
+		p1=post_statement { temp_list.add($p1.result);} (';' p2=post_statement { temp_list.add($p2.result);} )*  ';'? '}' 
 		alt=post_alternate? {
 		HashMap tmp = new HashMap();
 //		tmp.put("alt",$alt.result);
@@ -397,7 +399,7 @@ post_block returns[HashMap result]
 post_alternate returns[ArrayList result]
 @init {
 	ArrayList temp_array = new ArrayList();
-}
+} 
 	: 
 		must_be["else"] '{' (p=post_statement {temp_array.add($p.result);} (';' p1=post_statement{temp_array.add($p1.result);})* )? ';'? '}' {
 		$result = temp_array;
@@ -499,7 +501,7 @@ failure  returns[ArrayList result]
 	;
 
 click returns[HashMap result]	: 
-	corc=('click' | 'change') attr=VAR '=' val=STRING cl=click_link? {
+	corc=must_be_one[sar("click","change")] attr=VAR '=' val=STRING cl=click_link? {
 		HashMap tmp = new HashMap();
 		tmp.put("type",$corc.text);
 		tmp.put("value",strip_string($val.text));
@@ -687,6 +689,7 @@ primrule returns[HashMap result]
 		 	tmp.put("source",$src.result);
 		 	tmp.put("name",$name.text);
 		 	tmp.put("args",temp_list);
+		 
 		 	
 		 	if($label.text != null) 
 			 	tmp.put("label",$label.text);
@@ -694,6 +697,8 @@ primrule returns[HashMap result]
 		 	tmp.put("modifiers",$m.result);
 		 	HashMap tmp2 = new HashMap();
 			tmp2.put("action",tmp);
+			if($label.text != null)
+				tmp2.put("label",$label.text);
 			$result = tmp2;
 		 	
 		 }
@@ -749,11 +754,12 @@ modifier returns[HashMap result]
 using returns[HashMap result]	
 	:	'using' p=(STRING|REGEXP) s=setting? {
 			HashMap tmp = new HashMap();
-			tmp.put("op","pageview");
 			HashMap evt_expr = new HashMap();
 			evt_expr.put("pattern",strip_string($p.text));
-			evt_expr.put("lagacy",1);
+			evt_expr.put("legacy",1);
 			evt_expr.put("type","prim_event");
+			evt_expr.put("op","pageview");
+			
 			if($s.text != null)
 				evt_expr.put("vars",$s.result);	
 			
@@ -995,7 +1001,7 @@ event_prim returns[HashMap result]
 		tmp.put("op","pageview");
 		$result = tmp;			
 	} 
-	| 'web'? opt=('submit'|'click'|'dblclick'|'change'|'update') elem=STRING on=on_expr?  set=setting? {
+	| 'web'? opt=must_be_one[sar("submit","click","dblclick","change","update")] elem=STRING on=on_expr?  set=setting? {
 		HashMap tmp = new HashMap();
 		tmp.put("domain","web");
 		tmp.put("element",strip_string($elem.text));
@@ -1139,9 +1145,9 @@ global_block
 		global_block_array.add(tmp);			
 		found_cache =false;
 	}	
-	| css_emit {
+	| cemt=css_emit {
 		HashMap tmp = new HashMap(); 
-		tmp.put("content",$emt.emit_value);
+		tmp.put("content",$cemt.emit_value);
 		tmp.put("type","css");
 		global_block_array.add(tmp);
 	} 
@@ -1222,8 +1228,21 @@ function_def returns[Object result]
 
 	
 conditional_expression returns[Object result]
-	:  d=disjunction ('=>' expr '|' expr)?
-	   { $result = $d.result; }
+@init {
+	ArrayList tmp_list = new ArrayList();
+}
+	:  d=disjunction ('=>' e1=expr '|' e2=expr)? 
+	   { 
+	   	if($e1.text == null)
+	   	{
+		   	$result = $d.result; 
+		}
+		else
+		{
+			
+		}
+		   
+	   }
 	;	
 	
 
@@ -1259,11 +1278,11 @@ conjunction returns[Object result]
 		found_op = true;
 		if(result.isEmpty())
 		{
-			 add_to_expression(result,"prim",$op.text,$me1.result);
-			 add_to_expression(result,"prim",$op.text,$me2.result);
+			 add_to_expression(result,"pred",$op.text,$me1.result);
+			 add_to_expression(result,"pred",$op.text,$me2.result);
 		}
 		else
-			 add_to_expression(result,"prim",$op.text,$me2.result);
+			 add_to_expression(result,"pred",$op.text,$me2.result);
 
 	})*  { 
 		if(found_op)
@@ -1282,11 +1301,11 @@ equality_expr returns[Object result]
 		found_op = true;
 		if(result.isEmpty())
 		{
-			 add_to_expression(result,"prim",$op.text,$me1.result);
-			 add_to_expression(result,"prim",$op.text,$me2.result);
+			 add_to_expression(result,"ineq",$op.text,$me1.result);
+			 add_to_expression(result,"ineq",$op.text,$me2.result);
 		}
 		else
-			 add_to_expression(result,"prim",$op.text,$me2.result);
+			 add_to_expression(result,"ineq",$op.text,$me2.result);
 	})* { 
 		if(found_op)
 			$result = build_exp_result(result); 
@@ -1471,37 +1490,37 @@ factor returns[Object result] options { backtrack = true; }
       ArrayList exprs2 = new ArrayList();
 
 } 
-	: v=INT { 
+	: iv=INT { 
 		HashMap tmp = new HashMap();
 		tmp.put("type","num");
-		tmp.put("val",Long.getLong($v.text));
+		tmp.put("val",Long.parseLong($iv.text));
 		$result = tmp;
 	}
-      | v= STRING  { 
+      | sv= STRING  { 
       		HashMap tmp = new HashMap();
 		tmp.put("type","str");
-		tmp.put("val",strip_string($v.text));
+		tmp.put("val",strip_string($sv.text));
 		$result = tmp;
 	}    
-      | v= FLOAT  { 
+      | fv= FLOAT  { 
       		HashMap tmp = new HashMap();
 		tmp.put("type","num");
-		tmp.put("val",Float.parseFloat($v.text));
+		tmp.put("val",Float.parseFloat($fv.text));
 		$result = tmp;
 	}    
-      | v= ('true'| 'false')  { 
+      | bv= ('true'| 'false')  { 
       		HashMap tmp = new HashMap();
 		tmp.put("type","bool");
-		tmp.put("val",$v.text);
+		tmp.put("val",$bv.text);
 		$result = tmp;
 	}
-      | v=VAR '[' e=expr ']'  { 
+      | bv=VAR '[' e=expr ']'  { 
       		HashMap tmp = new HashMap();
 		HashMap val = new HashMap();
 
 		HashMap index = new HashMap();
 		index.putAll((HashMap)$e.result);
-		val.put("var_expr",$v.text);
+		val.put("var_expr",$bv.text);
 
 		val.put("index",index);
 		tmp.put("type","array_ref");
@@ -1509,10 +1528,10 @@ factor returns[Object result] options { backtrack = true; }
 		tmp.put("val",val);
 		$result = tmp;
       }
-      | d=var_domain ':' v=VAR {
+      | d=var_domain ':' vv=VAR {
 	      	HashMap tmp = new HashMap();
 	      	tmp.put("domain",$d.text);
-	      	tmp.put("name",$v.text);
+	      	tmp.put("name",$vv.text);
 	      	tmp.put("type","persistent");
 	      	$result = tmp;
       }
@@ -1538,8 +1557,9 @@ factor returns[Object result] options { backtrack = true; }
       	}
       	','?)* ')'  {
 	      	HashMap tmp = new HashMap();
+	      	tmp.put("type","qualified");
 	      	tmp.put("predicate",$p.text);
-	      	tmp.put("source",$n.text);
+	      	tmp.put("source",$n.text.substring(0,$n.text.length() - 1));
 	      	tmp.put("args",exprs2);
 	      	$result = tmp;
       }
@@ -1557,18 +1577,18 @@ factor returns[Object result] options { backtrack = true; }
 	      	$result = tmp;
       
       }
-      | '[' e=expr {
+      | '[' (e=expr {
       			exprs2.add($e.result);
       		 } (',' e2=expr{
       			exprs2.add($e2.result);
-      		 })* ']' {
+      		 })* )? ']' {
       			HashMap tmp = new HashMap();
       			tmp.put("val",exprs2);	
       			tmp.put("type","array");
       		 
 	      	$result = tmp;
       }
-      | '{' (h1=hash_line {
+      | '{' (h1=hash_line { 
       			exprs2.add($h1.result);
       		 } (',' h2=hash_line {
       			exprs2.add($h2.result);
@@ -1581,7 +1601,7 @@ factor returns[Object result] options { backtrack = true; }
 	}
       | v=VAR  { 
       		HashMap tmp = new HashMap(); 
-		tmp.put("type","var");
+		tmp.put("type","var"); 
 		tmp.put("val",$v.text);
 		$result = tmp;
 	}
@@ -1596,8 +1616,9 @@ factor returns[Object result] options { backtrack = true; }
       }
 
 	;	
-fragment var_domain: 'ent' | 'app';	
+//fragment var_domain: must_be_one[sar("ent","app")];	
 	
+fragment var_domain: 'ent' | 'app';	
 
 
 
@@ -1711,9 +1732,11 @@ meta_block
 				meta_block_hash.put($name.text,strip_string($string_desc.text)); 
 			else
 				meta_block_hash.put($name.text,strip_wrappers("<<",">>",$html_desc.text)); 
+			$html_desc = null;
+			$string_desc = null;
 	
 		} 
-	 | 'key' what=must_be_one[sar("errorstack","googleanalytics","twitter","amazon","kpds","google")] (key_value=STRING | '{' (name_value_pair[key_values] (',' name_value_pair[key_values])*) '}') +  { 
+	 | 'key' what=must_be_one[sar("errorstack","googleanalytics","facebook","twitter","amazon","kpds","google")] (key_value=STRING | '{' (name_value_pair[key_values] (',' name_value_pair[key_values])*) '}') +  { 
 		if(!key_values.isEmpty()) 
 			keys_map.put($what.text,key_values); 
 		else 

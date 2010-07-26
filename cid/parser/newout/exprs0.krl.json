@@ -1,0 +1,881 @@
+{
+   "dispatch": [],
+   "global": [],
+   "meta": {},
+   "rules": [{
+      "actions": [{"action": {
+         "args": [{
+            "type": "str",
+            "val": "Hello"
+         }],
+         "modifiers": null,
+         "name": "alert",
+         "source": null
+      }}],
+      "blocktype": "every",
+      "callbacks": null,
+      "cond": {
+         "type": "bool",
+         "val": "true"
+      },
+      "emit": null,
+      "foreach": [],
+      "name": "test0",
+      "pagetype": {"event_expr": {
+         "legacy": 1,
+         "op": "pageview",
+         "pattern": "/test/",
+         "type": "prim_event",
+         "vars": []
+      }},
+      "pre": [
+         {
+            "lhs": "x",
+            "rhs": {
+               "type": "num",
+               "val": 5
+            },
+            "type": "expr"
+         },
+         {
+            "lhs": "x",
+            "rhs": {
+               "type": "num",
+               "val": -5
+            },
+            "type": "expr"
+         },
+         {
+            "lhs": "x",
+            "rhs": {
+               "type": "str",
+               "val": "test"
+            },
+            "type": "expr"
+         },
+         {
+            "lhs": "x",
+            "rhs": {
+               "type": "bool",
+               "val": "true"
+            },
+            "type": "expr"
+         },
+         {
+            "lhs": "x",
+            "rhs": {
+               "type": "bool",
+               "val": "false"
+            },
+            "type": "expr"
+         },
+         {
+            "lhs": "x",
+            "rhs": {
+               "type": "regx",
+               "val": "f|g+/"
+            },
+            "type": "expr"
+         },
+         {
+            "lhs": "x",
+            "rhs": {
+               "args": [{
+                  "type": "num",
+                  "val": 5
+               }],
+               "function_expr": {
+                  "type": "var",
+                  "val": "foo"
+               },
+               "type": "app"
+            },
+            "type": "expr"
+         },
+         {
+            "lhs": "x",
+            "rhs": {
+               "args": [
+                  {
+                     "type": "num",
+                     "val": 5
+                  },
+                  {
+                     "type": "str",
+                     "val": "hello"
+                  }
+               ],
+               "function_expr": {
+                  "type": "var",
+                  "val": "foo"
+               },
+               "type": "app"
+            },
+            "type": "expr"
+         },
+         {
+            "lhs": "x",
+            "rhs": {
+               "args": [
+                  {
+                     "type": "num",
+                     "val": 4
+                  },
+                  {
+                     "type": "num",
+                     "val": 5
+                  }
+               ],
+               "op": "+",
+               "type": "prim"
+            },
+            "type": "expr"
+         },
+         {
+            "lhs": "x",
+            "rhs": {
+               "args": [
+                  {
+                     "args": [
+                        {
+                           "type": "num",
+                           "val": 4
+                        },
+                        {
+                           "type": "num",
+                           "val": 5
+                        }
+                     ],
+                     "op": "+",
+                     "type": "prim"
+                  },
+                  {
+                     "type": "num",
+                     "val": 6
+                  }
+               ],
+               "op": "*",
+               "type": "prim"
+            },
+            "type": "expr"
+         },
+         {
+            "lhs": "x",
+            "rhs": {
+               "args": [
+                  {
+                     "type": "num",
+                     "val": 4
+                  },
+                  {
+                     "args": [
+                        {
+                           "type": "num",
+                           "val": 5
+                        },
+                        {
+                           "type": "num",
+                           "val": 6
+                        }
+                     ],
+                     "op": "*",
+                     "type": "prim"
+                  }
+               ],
+               "op": "+",
+               "type": "prim"
+            },
+            "type": "expr"
+         },
+         {
+            "lhs": "x",
+            "rhs": {
+               "args": [
+                  {
+                     "type": "var",
+                     "val": "x"
+                  },
+                  {
+                     "type": "var",
+                     "val": "y"
+                  }
+               ],
+               "op": "||",
+               "type": "pred"
+            },
+            "type": "expr"
+         },
+         {
+            "lhs": "x",
+            "rhs": {
+               "args": [
+                  {
+                     "type": "var",
+                     "val": "xyz"
+                  },
+                  {
+                     "type": "var",
+                     "val": "zyx"
+                  }
+               ],
+               "op": "&&",
+               "type": "pred"
+            },
+            "type": "expr"
+         },
+         {
+            "lhs": "x",
+            "rhs": {
+               "args": [
+                  {
+                     "args": [
+                        {
+                           "type": "var",
+                           "val": "pdq"
+                        },
+                        {
+                           "type": "var",
+                           "val": "xyz"
+                        }
+                     ],
+                     "op": "||",
+                     "type": "pred"
+                  },
+                  {
+                     "type": "var",
+                     "val": "zyx"
+                  }
+               ],
+               "op": "&&",
+               "type": "pred"
+            },
+            "type": "expr"
+         },
+         {
+            "lhs": "x",
+            "rhs": {
+               "args": [
+                  {
+                     "type": "var",
+                     "val": "pdq"
+                  },
+                  {
+                     "args": [
+                        {
+                           "type": "var",
+                           "val": "xyy"
+                        },
+                        {
+                           "type": "var",
+                           "val": "zyx"
+                        }
+                     ],
+                     "op": "&&",
+                     "type": "pred"
+                  }
+               ],
+               "op": "||",
+               "type": "pred"
+            },
+            "type": "expr"
+         },
+         {
+            "lhs": "x",
+            "rhs": {
+               "args": [
+                  {
+                     "type": "var",
+                     "val": "x"
+                  },
+                  {
+                     "type": "num",
+                     "val": 0
+                  }
+               ],
+               "op": "==",
+               "type": "ineq"
+            },
+            "type": "expr"
+         },
+         {
+            "lhs": "x",
+            "rhs": {
+               "args": [
+                  {
+                     "type": "var",
+                     "val": "x"
+                  },
+                  {
+                     "type": "num",
+                     "val": 0
+                  }
+               ],
+               "op": "!=",
+               "type": "ineq"
+            },
+            "type": "expr"
+         },
+         {
+            "lhs": "x",
+            "rhs": {
+               "args": [
+                  {
+                     "type": "var",
+                     "val": "x"
+                  },
+                  {
+                     "type": "num",
+                     "val": 0
+                  }
+               ],
+               "op": ">=",
+               "type": "ineq"
+            },
+            "type": "expr"
+         },
+         {
+            "lhs": "x",
+            "rhs": {
+               "args": [
+                  {
+                     "type": "var",
+                     "val": "x"
+                  },
+                  {
+                     "type": "num",
+                     "val": 0
+                  }
+               ],
+               "op": "<=",
+               "type": "ineq"
+            },
+            "type": "expr"
+         },
+         {
+            "lhs": "x",
+            "rhs": {
+               "args": [
+                  {
+                     "type": "var",
+                     "val": "x"
+                  },
+                  {
+                     "type": "str",
+                     "val": "hello"
+                  }
+               ],
+               "op": "eq",
+               "type": "ineq"
+            },
+            "type": "expr"
+         },
+         {
+            "lhs": "x",
+            "rhs": {
+               "args": [
+                  {
+                     "type": "var",
+                     "val": "x"
+                  },
+                  {
+                     "type": "str",
+                     "val": "hello"
+                  }
+               ],
+               "op": "neq",
+               "type": "ineq"
+            },
+            "type": "expr"
+         },
+         {
+            "lhs": "x",
+            "rhs": {
+               "args": [
+                  {
+                     "args": [
+                        {
+                           "type": "var",
+                           "val": "x"
+                        },
+                        {
+                           "type": "num",
+                           "val": 5
+                        }
+                     ],
+                     "op": "<",
+                     "type": "ineq"
+                  },
+                  {
+                     "args": [
+                        {
+                           "type": "var",
+                           "val": "y"
+                        },
+                        {
+                           "type": "num",
+                           "val": 3
+                        }
+                     ],
+                     "op": ">",
+                     "type": "ineq"
+                  }
+               ],
+               "op": "||",
+               "type": "pred"
+            },
+            "type": "expr"
+         },
+         {
+            "lhs": "x",
+            "rhs": {
+               "args": [
+                  {
+                     "type": "var",
+                     "val": "x"
+                  },
+                  {
+                     "type": "var",
+                     "val": "y"
+                  },
+                  {
+                     "type": "var",
+                     "val": "z"
+                  }
+               ],
+               "predicate": "bar",
+               "source": "foo",
+               "type": "qualified"
+            },
+            "type": "expr"
+         },
+         {
+            "lhs": "x",
+            "rhs": {
+               "type": "array",
+               "val": [
+                  {
+                     "type": "num",
+                     "val": 3
+                  },
+                  {
+                     "type": "num",
+                     "val": 4
+                  },
+                  {
+                     "type": "num",
+                     "val": 5
+                  }
+               ]
+            },
+            "type": "expr"
+         },
+         {
+            "lhs": "x",
+            "rhs": {
+               "type": "hashraw",
+               "val": [
+                  {
+                     "lhs": "x",
+                     "rhs": {
+                        "type": "num",
+                        "val": 3
+                     }
+                  },
+                  {
+                     "lhs": "y",
+                     "rhs": {
+                        "type": "str",
+                        "val": "hello"
+                     }
+                  }
+               ]
+            },
+            "type": "expr"
+         },
+         {
+            "lhs": "x",
+            "rhs": {
+               "type": "hashraw",
+               "val": [
+                  {
+                     "lhs": "x",
+                     "rhs": {
+                        "type": "array",
+                        "val": [
+                           {
+                              "type": "num",
+                              "val": 3
+                           },
+                           {
+                              "type": "num",
+                              "val": 4
+                           },
+                           {
+                              "type": "num",
+                              "val": 5
+                           }
+                        ]
+                     }
+                  },
+                  {
+                     "lhs": "y",
+                     "rhs": {
+                        "type": "hashraw",
+                        "val": [
+                           {
+                              "lhs": "x",
+                              "rhs": {
+                                 "type": "str",
+                                 "val": "hello"
+                              }
+                           },
+                           {
+                              "lhs": "y",
+                              "rhs": {
+                                 "type": "str",
+                                 "val": "world"
+                              }
+                           }
+                        ]
+                     }
+                  }
+               ]
+            },
+            "type": "expr"
+         },
+         {
+            "lhs": "x",
+            "rhs": {
+               "domain": "ent",
+               "name": "vv",
+               "type": "persistent"
+            },
+            "type": "expr"
+         },
+         {
+            "lhs": "x",
+            "rhs": {
+               "domain": "app",
+               "name": "vv",
+               "type": "persistent"
+            },
+            "type": "expr"
+         },
+         {
+            "lhs": "x",
+            "rhs": {
+               "domain": "ent",
+               "name": "vv",
+               "type": "persistent"
+            },
+            "type": "expr"
+         },
+         {
+            "lhs": "x",
+            "rhs": {
+               "domain": "ent",
+               "name": "vv",
+               "offset": {
+                  "type": "var",
+                  "val": "ex"
+               },
+               "type": "trail_history"
+            },
+            "type": "expr"
+         },
+         {
+            "lhs": "x",
+            "rhs": {
+               "domain": "ent",
+               "name": "vv",
+               "offset": {
+                  "args": [
+                     {
+                        "type": "num",
+                        "val": 3
+                     },
+                     {
+                        "type": "num",
+                        "val": 4
+                     }
+                  ],
+                  "op": "+",
+                  "type": "prim"
+               },
+               "type": "trail_history"
+            },
+            "type": "expr"
+         },
+         {
+            "lhs": "x",
+            "rhs": {
+               "domain": "ent",
+               "name": "vv",
+               "offset": {
+                  "args": [
+                     {
+                        "args": [
+                           {
+                              "type": "num",
+                              "val": 3
+                           },
+                           {
+                              "type": "num",
+                              "val": 4
+                           }
+                        ],
+                        "op": "+",
+                        "type": "prim"
+                     },
+                     {
+                        "type": "num",
+                        "val": 6
+                     }
+                  ],
+                  "op": "*",
+                  "type": "prim"
+               },
+               "type": "trail_history"
+            },
+            "type": "expr"
+         },
+         {
+            "lhs": "x",
+            "rhs": {
+               "type": "hashraw",
+               "val": [
+                  {
+                     "lhs": "x",
+                     "rhs": {
+                        "args": [{
+                           "type": "num",
+                           "val": 5
+                        }],
+                        "predicate": "x",
+                        "source": "f",
+                        "type": "qualified"
+                     }
+                  },
+                  {
+                     "lhs": "f",
+                     "rhs": {
+                        "expr": {
+                           "type": "var",
+                           "val": "x"
+                        },
+                        "type": "function",
+                        "vars": ["x"]
+                     }
+                  }
+               ]
+            },
+            "type": "expr"
+         },
+         {
+            "lhs": "x",
+            "rhs": {
+               "args": [
+                  {
+                     "args": [
+                        {
+                           "args": [{
+                              "type": "var",
+                              "val": "y"
+                           }],
+                           "function_expr": {
+                              "type": "var",
+                              "val": "weather"
+                           },
+                           "type": "app"
+                        },
+                        {
+                           "args": [],
+                           "predicate": "authorized",
+                           "source": "twitter",
+                           "type": "qualified"
+                        }
+                     ],
+                     "op": "||",
+                     "type": "pred"
+                  },
+                  {
+                     "type": "bool",
+                     "val": "false"
+                  }
+               ],
+               "op": "&&",
+               "type": "pred"
+            },
+            "type": "expr"
+         },
+         {
+            "lhs": "x",
+            "rhs": {
+               "domain": "ent",
+               "ineq": "==",
+               "timeframe": "days",
+               "type": "persistent_ineq",
+               "var": "bar",
+               "within": {
+                  "type": "num",
+                  "val": 3
+               }
+            },
+            "type": "expr"
+         },
+         {
+            "lhs": "x",
+            "rhs": {
+               "domain": "ent",
+               "expr": {
+                  "type": "regx",
+                  "val": "f|goo+"
+               },
+               "ineq": "like",
+               "timeframe": "days",
+               "type": "persistent_ineq",
+               "var": "bar",
+               "within": {
+                  "type": "num",
+                  "val": 3
+               }
+            },
+            "type": "expr"
+         },
+         {
+            "lhs": "x",
+            "rhs": {
+               "domain": "ent",
+               "regexp": "hello",
+               "type": "seen_timeframe",
+               "var": "foo",
+               "within": null
+            },
+            "type": "expr"
+         },
+         {
+            "lhs": "x",
+            "rhs": {
+               "domain": "ent",
+               "regexp": "hello",
+               "timeframe": "weeks",
+               "type": "seen_timeframe",
+               "var": "foo",
+               "within": {
+                  "type": "num",
+                  "val": 4
+               }
+            },
+            "type": "expr"
+         },
+         {
+            "lhs": "x",
+            "rhs": {
+               "domain": "ent",
+               "op": "before",
+               "regexp_1": "hello",
+               "regexp_2": "world",
+               "type": "seen_compare",
+               "var": "bar"
+            },
+            "type": "expr"
+         },
+         {
+            "lhs": "x",
+            "rhs": {
+               "domain": "ent",
+               "op": "after",
+               "regexp_1": "hello",
+               "regexp_2": "world",
+               "type": "seen_compare",
+               "var": "bar"
+            },
+            "type": "expr"
+         },
+         {
+            "lhs": "x",
+            "rhs": null,
+            "type": "expr"
+         },
+         {
+            "lhs": "x",
+            "rhs": {
+               "args": [
+                  null,
+                  {
+                     "type": "bool",
+                     "val": "false"
+                  }
+               ],
+               "op": "==",
+               "type": "ineq"
+            },
+            "type": "expr"
+         },
+         {
+            "lhs": "x",
+            "rhs": null,
+            "type": "expr"
+         },
+         {
+            "lhs": "x",
+            "rhs": {
+               "args": [
+                  {
+                     "args": [
+                        null,
+                        null
+                     ],
+                     "op": "||",
+                     "type": "pred"
+                  },
+                  null
+               ],
+               "op": "==",
+               "type": "ineq"
+            },
+            "type": "expr"
+         },
+         {
+            "lhs": "x",
+            "rhs": {
+               "type": "array_ref",
+               "val": {
+                  "index": {
+                     "type": "num",
+                     "val": 5
+                  },
+                  "var_expr": "a"
+               }
+            },
+            "type": "expr"
+         },
+         {
+            "lhs": "x",
+            "rhs": {
+               "type": "array_ref",
+               "val": {
+                  "index": {
+                     "args": [
+                        {
+                           "type": "var",
+                           "val": "x"
+                        },
+                        {
+                           "type": "num",
+                           "val": 6
+                        }
+                     ],
+                     "op": "+",
+                     "type": "prim"
+                  },
+                  "var_expr": "vari"
+               }
+            },
+            "type": "expr"
+         }
+      ],
+      "state": "active"
+   }],
+   "ruleset_name": "10"
+}

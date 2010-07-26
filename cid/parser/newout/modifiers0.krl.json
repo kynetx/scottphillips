@@ -1,0 +1,78 @@
+{
+   "dispatch": [],
+   "global": [],
+   "meta": {},
+   "rules": [{
+      "actions": [{"action": {
+         "args": [
+            {
+               "type": "str",
+               "val": "absolute"
+            },
+            {
+               "type": "str",
+               "val": "top: 10px"
+            },
+            {
+               "type": "str",
+               "val": "left: 10px"
+            },
+            {
+               "type": "str",
+               "val": "http://127.0.0.1/test.html"
+            }
+         ],
+         "modifiers": [
+            {
+               "name": "delay",
+               "value": {
+                  "type": "num",
+                  "val": 0
+               }
+            },
+            {
+               "name": "draggable",
+               "value": {
+                  "type": "bool",
+                  "val": "false"
+               }
+            },
+            {
+               "name": "scrollable",
+               "value": {
+                  "type": "bool",
+                  "val": "false"
+               }
+            },
+            {
+               "name": "effect",
+               "value": {
+                  "type": "str",
+                  "val": "appear"
+               }
+            }
+         ],
+         "name": "float",
+         "source": null
+      }}],
+      "blocktype": "every",
+      "callbacks": null,
+      "cond": {
+         "type": "bool",
+         "val": "true"
+      },
+      "emit": null,
+      "foreach": [],
+      "name": "float2",
+      "pagetype": {"event_expr": {
+         "legacy": 1,
+         "op": "pageview",
+         "pattern": "/identity-policy/",
+         "type": "prim_event",
+         "vars": []
+      }},
+      "pre": [],
+      "state": "inactive"
+   }],
+   "ruleset_name": "10"
+}

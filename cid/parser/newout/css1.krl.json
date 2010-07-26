@@ -1,0 +1,71 @@
+{
+   "dispatch": [],
+   "global": [
+      {
+         "content": "\nbody {\n  background-color: #ffffff;\n}\n\nh1,h2,h3,hr {\n  color:black; \n}\n\na:link    {color:black}\na:visited {color:black}\na:active  {color:mediumblue}\na:hover   {color:mediumblue}\n\n",
+         "type": "css"
+      },
+      {
+         "cachable": {
+            "period": "minutes",
+            "value": "20"
+         },
+         "datatype": "JSON",
+         "name": "foo_data",
+         "source": "http://www.foo.com/data.json",
+         "type": "dataset"
+      }
+   ],
+   "meta": {},
+   "rules": [{
+      "actions": [{"action": {
+         "args": [{
+            "type": "str",
+            "val": "hello"
+         }],
+         "modifiers": null,
+         "name": "alert",
+         "source": null
+      }}],
+      "blocktype": "every",
+      "callbacks": null,
+      "cond": {
+         "type": "bool",
+         "val": "true"
+      },
+      "emit": null,
+      "foreach": [],
+      "name": "test0",
+      "pagetype": {"event_expr": {
+         "legacy": 1,
+         "op": "pageview",
+         "pattern": "/test/",
+         "type": "prim_event",
+         "vars": []
+      }},
+      "pre": [
+         {
+            "lhs": "tc",
+            "rhs": {
+               "args": [],
+               "predicate": "tomorrow_cond_code",
+               "source": "weather",
+               "type": "qualified"
+            },
+            "type": "expr"
+         },
+         {
+            "lhs": "city",
+            "rhs": {
+               "args": [],
+               "predicate": "city",
+               "source": "geoip",
+               "type": "qualified"
+            },
+            "type": "expr"
+         }
+      ],
+      "state": "active"
+   }],
+   "ruleset_name": "10"
+}

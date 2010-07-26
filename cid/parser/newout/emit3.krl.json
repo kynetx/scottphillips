@@ -1,0 +1,37 @@
+{
+   "dispatch": [],
+   "global": [],
+   "meta": {},
+   "rules": [{
+      "actions": [{"emit": "\npagename = pagename.replace(/-/, ' ');\n "}],
+      "blocktype": "every",
+      "callbacks": null,
+      "cond": {
+         "args": [
+            {
+               "type": "var",
+               "val": "x"
+            },
+            {
+               "type": "num",
+               "val": 5
+            }
+         ],
+         "op": "==",
+         "type": "ineq"
+      },
+      "emit": null,
+      "foreach": [],
+      "name": "test0",
+      "pagetype": {"event_expr": {
+         "legacy": 1,
+         "op": "pageview",
+         "pattern": "/test/(.*).html",
+         "type": "prim_event",
+         "vars": ["pagename"]
+      }},
+      "pre": [],
+      "state": "active"
+   }],
+   "ruleset_name": "10"
+}
