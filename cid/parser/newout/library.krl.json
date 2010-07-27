@@ -1,0 +1,142 @@
+{
+   "dispatch": [],
+   "global": [{
+      "cachable": 0,
+      "datatype": "JSON",
+      "name": "library_search",
+      "source": "http://test.azigo.com:9083/solr/select/?wt=json",
+      "type": "datasource"
+   }],
+   "meta": {},
+   "rules": [{
+      "actions": [{"action": {
+         "args": [
+            {
+               "type": "str",
+               "val": "top-right"
+            },
+            {
+               "type": "str",
+               "val": "#222"
+            },
+            {
+               "type": "str",
+               "val": "#FFF"
+            },
+            {
+               "type": "str",
+               "val": "Minuteman Library"
+            },
+            {
+               "type": "bool",
+               "val": "true"
+            },
+            {
+               "type": "var",
+               "val": "msg"
+            }
+         ],
+         "modifiers": null,
+         "name": "notify",
+         "source": null
+      }}],
+      "blocktype": "every",
+      "callbacks": null,
+      "cond": {
+         "args": [
+            {
+               "args": [{
+                  "type": "str",
+                  "val": "$..numFound"
+               }],
+               "name": "pick",
+               "obj": {
+                  "type": "var",
+                  "val": "book_data"
+               },
+               "type": "operator"
+            },
+            {
+               "type": "num",
+               "val": 0
+            }
+         ],
+         "op": ">",
+         "type": "ineq"
+      },
+      "emit": null,
+      "foreach": [],
+      "name": "book_notfication",
+      "pagetype": {"event_expr": {
+         "legacy": 1,
+         "op": "pageview",
+         "pattern": "www.amazon.com/gp/product/(\\d+)/",
+         "type": "prim_event",
+         "vars": ["isbn"]
+      }},
+      "pre": [
+         {
+            "lhs": "book_data",
+            "rhs": {
+               "args": [{
+                  "args": [
+                     {
+                        "type": "str",
+                        "val": "q="
+                     },
+                     {
+                        "type": "var",
+                        "val": "isbn"
+                     }
+                  ],
+                  "op": "+",
+                  "type": "prim"
+               }],
+               "predicate": "library_search",
+               "source": "datasource",
+               "type": "qualified"
+            },
+            "type": "expr"
+         },
+         {
+            "lhs": "url",
+            "rhs": {
+               "args": [{
+                  "type": "str",
+                  "val": "$..docs[0].url"
+               }],
+               "name": "pick",
+               "obj": {
+                  "type": "var",
+                  "val": "book_data"
+               },
+               "type": "operator"
+            },
+            "type": "expr"
+         },
+         {
+            "lhs": "title",
+            "rhs": {
+               "args": [{
+                  "type": "str",
+                  "val": "$..docs[0].title"
+               }],
+               "name": "pick",
+               "obj": {
+                  "type": "var",
+                  "val": "book_data"
+               },
+               "type": "operator"
+            },
+            "type": "expr"
+         },
+         {
+            "lhs": "msg",
+            "rhs": "\nThis book's available at your local library. Click here to see:'\n<a href=\"#{url}\">#{title}<\/a>\n",
+            "type": "here_doc"
+         }
+      ],
+      "state": "active"
+   }],
+   "ruleset_name": "library"
+}

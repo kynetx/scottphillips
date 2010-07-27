@@ -1,0 +1,39 @@
+{
+   "dispatch": [],
+   "global": [],
+   "meta": {},
+   "rules": [{
+      "actions": [{"action": {
+         "args": [],
+         "modifiers": null,
+         "name": "noop",
+         "source": null
+      }}],
+      "blocktype": "every",
+      "callbacks": null,
+      "cond": {
+         "type": "bool",
+         "val": "true"
+      },
+      "emit": null,
+      "foreach": [],
+      "name": "frequent_archive_visitor",
+      "pagetype": {"event_expr": {
+         "legacy": 1,
+         "op": "pageview",
+         "pattern": "/archives/(\\d+)/\\d+/",
+         "type": "prim_event",
+         "vars": ["year"]
+      }},
+      "post": {
+         "cons": [{
+            "domain": "explicit",
+            "event": "foo",
+            "type": "raise"
+         }],
+         "type": "fired"
+      },
+      "state": "active"
+   }],
+   "ruleset_name": "10"
+}

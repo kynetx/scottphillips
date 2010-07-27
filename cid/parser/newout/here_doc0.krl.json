@@ -1,0 +1,72 @@
+{
+   "dispatch": [],
+   "global": [],
+   "meta": {},
+   "rules": [{
+      "actions": [{"action": {
+         "args": [
+            {
+               "type": "str",
+               "val": "kobj_test"
+            },
+            {
+               "args": [
+                  {
+                     "type": "var",
+                     "val": "city_announcement"
+                  },
+                  {
+                     "type": "var",
+                     "val": "second_thing"
+                  }
+               ],
+               "op": "+",
+               "type": "prim"
+            }
+         ],
+         "modifiers": null,
+         "name": "replace",
+         "source": null
+      }}],
+      "blocktype": "every",
+      "callbacks": null,
+      "cond": {
+         "type": "bool",
+         "val": "true"
+      },
+      "emit": null,
+      "foreach": [],
+      "name": "here_doc0",
+      "pagetype": {"event_expr": {
+         "legacy": 1,
+         "op": "pageview",
+         "pattern": "/identity-policy/",
+         "type": "prim_event",
+         "vars": []
+      }},
+      "pre": [
+         {
+            "lhs": "city",
+            "rhs": {
+               "args": [],
+               "predicate": "city",
+               "source": "geoip",
+               "type": "qualified"
+            },
+            "type": "expr"
+         },
+         {
+            "lhs": "city_announcement",
+            "rhs": " \n<div id=\"kynetx_foo\">\n<p class=\"announcement\">This is some text!!! It's cool.  \nYou are in #{city}!<\/p>\n<\/div> \n      ",
+            "type": "here_doc"
+         },
+         {
+            "lhs": "second_thing",
+            "rhs": "\n<div id=\"second\">\n<p>This is the second div If you want to say something is much\ngreater, use &gt;&gt;<\/p>\n<\/div>\n      ",
+            "type": "here_doc"
+         }
+      ],
+      "state": "active"
+   }],
+   "ruleset_name": "10"
+}

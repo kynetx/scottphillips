@@ -1,0 +1,796 @@
+{
+   "dispatch": [],
+   "global": [],
+   "meta": {},
+   "rules": [
+      {
+         "actions": [
+            {"action": {
+               "args": [{
+                  "type": "var",
+                  "val": "ebates_selector"
+               }],
+               "modifiers": [
+                  {
+                     "name": "name",
+                     "value": {
+                        "type": "str",
+                        "val": "remindme"
+                     }
+                  },
+                  {
+                     "name": "head_image",
+                     "value": {
+                        "type": "str",
+                        "val": "http://www.azigo.com/sales-demo/remindme_bar40_l.png"
+                     }
+                  },
+                  {
+                     "name": "tail_image",
+                     "value": {
+                        "args": [
+                           {
+                              "type": "var",
+                              "val": "url_prefix"
+                           },
+                           {
+                              "type": "str",
+                              "val": "remindme_bar40_r.png"
+                           }
+                        ],
+                        "op": "+",
+                        "type": "prim"
+                     }
+                  },
+                  {
+                     "name": "height",
+                     "value": {
+                        "type": "str",
+                        "val": "40px"
+                     }
+                  },
+                  {
+                     "name": "left_margin",
+                     "value": {
+                        "type": "str",
+                        "val": "46px"
+                     }
+                  }
+               ],
+               "name": "annotate_search_results",
+               "source": null
+            }},
+            {"emit": "  "}
+         ],
+         "blocktype": "every",
+         "callbacks": {"success": [{
+            "attribute": "class",
+            "trigger": null,
+            "type": "click",
+            "value": "KOBJ_ebates"
+         }]},
+         "cond": {
+            "args": [
+               {
+                  "args": [{
+                     "type": "str",
+                     "val": "datasets"
+                  }],
+                  "predicate": "param",
+                  "source": "page",
+                  "type": "qualified"
+               },
+               {
+                  "type": "str",
+                  "val": "(^|,)ebates(,|$)"
+               }
+            ],
+            "op": "like",
+            "type": "ineq"
+         },
+         "emit": null,
+         "foreach": [],
+         "name": "ebates",
+         "pagetype": {"event_expr": {
+            "legacy": 1,
+            "op": "pageview",
+            "pattern": "^http://www.google.com|^http://search.yahoo.com|^http://www.bing.com",
+            "type": "prim_event",
+            "vars": []
+         }},
+         "pre": [{
+            "lhs": "url_prefix",
+            "rhs": {
+               "type": "str",
+               "val": "http://frag.kobj.net/clients/1024/images/"
+            },
+            "type": "expr"
+         }],
+         "state": "active"
+      },
+      {
+         "actions": [
+            {"action": {
+               "args": [
+                  {
+                     "type": "str",
+                     "val": "absolute"
+                  },
+                  {
+                     "type": "str",
+                     "val": "top: 50px"
+                  },
+                  {
+                     "type": "str",
+                     "val": "right: 50px"
+                  },
+                  {
+                     "type": "var",
+                     "val": "upgradeReminder"
+                  }
+               ],
+               "modifiers": null,
+               "name": "float_html",
+               "source": null
+            }},
+            {"action": {
+               "args": [
+                  {
+                     "type": "str",
+                     "val": ".dismiss"
+                  },
+                  {
+                     "type": "str",
+                     "val": "click"
+                  }
+               ],
+               "modifiers": null,
+               "name": "watch",
+               "source": null
+            }}
+         ],
+         "blocktype": "every",
+         "callbacks": null,
+         "cond": {
+            "args": [
+               {
+                  "args": [
+                     {
+                        "args": [{
+                           "type": "str",
+                           "val": "datasets"
+                        }],
+                        "predicate": "param",
+                        "source": "page",
+                        "type": "qualified"
+                     },
+                     {
+                        "type": "str",
+                        "val": "(^|,)sadv(,|$)"
+                     }
+                  ],
+                  "op": "like",
+                  "type": "ineq"
+               },
+               {
+                  "domain": "ent",
+                  "expr": {
+                     "type": "num",
+                     "val": 0
+                  },
+                  "ineq": "==",
+                  "timeframe": "hours",
+                  "type": "persistent_ineq",
+                  "var": "dismissed",
+                  "within": {
+                     "type": "num",
+                     "val": 24
+                  }
+               }
+            ],
+            "op": "&&",
+            "type": "pred"
+         },
+         "emit": "  ",
+         "foreach": [],
+         "name": "sadv",
+         "pagetype": {"event_expr": {
+            "legacy": 1,
+            "op": "pageview",
+            "pattern": "^http://www.google.com|^http://search.yahoo.com|^http://www.bing.com",
+            "type": "prim_event",
+            "vars": []
+         }},
+         "pre": [
+            {
+               "lhs": "dismissed",
+               "rhs": {
+                  "domain": "ent",
+                  "name": "dismissed",
+                  "type": "persistent"
+               },
+               "type": "expr"
+            },
+            {
+               "lhs": "upgradeReminder",
+               "rhs": " \n            <div id=\"kobj_upgrade_notice\" style=\"background-color: #000000; padding: 1pt; -moz-border-radius: 5px; -webkit-border-radius: 5px; border: solid 2px black;\">\n              <img src='http://frag.kobj.net/clients/azigo_citi_demo/images/azigo_logo_black_34.png'>\n               <div  style=\"padding: 3pt;\n                            -moz-border-radius: 5px;\n                            -webkit-border-radius: 5px;\n                            background-color: #FFFFFF;\n                            width: 225px;\n                            text-align: center;\n                            color: black;\">\n                  <p class=\"content\">A new version of Student Advantage card is available. To continue getting reminders for Student Advantage, please download the new card from <a target='_blank' style=\"color:#710100; text-decoration:underline;\" href='http://www.azigo.com/landing/sadv-upgrade.html'>here<\/a>.<\/p>\n                  <div class=\"dismiss\">Remind me tomorrow!<\/div>\n              <\/div>\n            <\/div>\n          ",
+               "type": "here_doc"
+            }
+         ],
+         "state": "active"
+      },
+      {
+         "actions": [{"action": {
+            "args": [
+               {
+                  "type": "str",
+                  "val": "#kobj_upgrade_notice"
+               },
+               {
+                  "type": "str",
+                  "val": "style"
+               },
+               {
+                  "type": "str",
+                  "val": "display: none;"
+               }
+            ],
+            "modifiers": null,
+            "name": "set_element_attr",
+            "source": null
+         }}],
+         "blocktype": "every",
+         "callbacks": null,
+         "cond": {
+            "type": "bool",
+            "val": "true"
+         },
+         "emit": null,
+         "foreach": [],
+         "name": "mark_as_read_and_dismiss_content",
+         "pagetype": {
+            "event_expr": {
+               "domain": "web",
+               "element": ".dismiss",
+               "op": "click",
+               "type": "prim_event"
+            },
+            "foreach": []
+         },
+         "post": {
+            "cons": [{
+               "action": "iterator",
+               "domain": "ent",
+               "from": {
+                  "type": "num",
+                  "val": 1
+               },
+               "name": "dismissed",
+               "op": "+=",
+               "type": "persistent",
+               "value": {
+                  "type": "num",
+                  "val": 1
+               }
+            }],
+            "type": "fired"
+         },
+         "state": "active"
+      },
+      {
+         "actions": [
+            {"action": {
+               "args": [{
+                  "type": "var",
+                  "val": "remindMeSelector"
+               }],
+               "modifiers": [
+                  {
+                     "name": "remote",
+                     "value": {
+                        "type": "str",
+                        "val": "https://service.azigo.com/remindmeac-test/fetch?callback=?&jsonData=true&source=aaaw"
+                     }
+                  },
+                  {
+                     "name": "outer_div_css",
+                     "value": {
+                        "type": "hashraw",
+                        "val": [
+                           {
+                              "lhs": "float",
+                              "rhs": {
+                                 "type": "str",
+                                 "val": "none"
+                              }
+                           },
+                           {
+                              "lhs": "margin-left",
+                              "rhs": {
+                                 "type": "str",
+                                 "val": "0px"
+                              }
+                           },
+                           {
+                              "lhs": "padding-right",
+                              "rhs": {
+                                 "type": "str",
+                                 "val": "0px"
+                              }
+                           }
+                        ]
+                     }
+                  },
+                  {
+                     "name": "inner_div_css",
+                     "value": {
+                        "type": "hashraw",
+                        "val": [
+                           {
+                              "lhs": "margin-left",
+                              "rhs": {
+                                 "type": "str",
+                                 "val": "0px"
+                              }
+                           },
+                           {
+                              "lhs": "padding-right",
+                              "rhs": {
+                                 "type": "str",
+                                 "val": "0px"
+                              }
+                           },
+                           {
+                              "lhs": "padding-top",
+                              "rhs": {
+                                 "type": "str",
+                                 "val": "5px"
+                              }
+                           }
+                        ]
+                     }
+                  },
+                  {
+                     "name": "li_css",
+                     "value": {
+                        "type": "hashraw",
+                        "val": [
+                           {
+                              "lhs": "padding-left",
+                              "rhs": {
+                                 "type": "str",
+                                 "val": "0px"
+                              }
+                           },
+                           {
+                              "lhs": "white-space",
+                              "rhs": {
+                                 "type": "str",
+                                 "val": "normal"
+                              }
+                           }
+                        ]
+                     }
+                  },
+                  {
+                     "name": "placement",
+                     "value": {
+                        "type": "str",
+                        "val": "after"
+                     }
+                  },
+                  {
+                     "name": "domains",
+                     "value": {
+                        "type": "hashraw",
+                        "val": [{
+                           "lhs": "www.bing.com",
+                           "rhs": {
+                              "type": "hashraw",
+                              "val": [{
+                                 "lhs": "modify",
+                                 "rhs": {
+                                    "type": "str",
+                                    "val": ".sa_cc"
+                                 }
+                              }]
+                           }
+                        }]
+                     }
+                  }
+               ],
+               "name": "annotate_search_results",
+               "source": null
+            }},
+            {"action": {
+               "args": [{
+                  "type": "var",
+                  "val": "remindMeSelector"
+               }],
+               "modifiers": [
+                  {
+                     "name": "remote",
+                     "value": {
+                        "type": "str",
+                        "val": "https://service.azigo.com/remindmeac-test/fetch?callback=?&jsonData=true&source=aaaw"
+                     }
+                  },
+                  {
+                     "name": "placement",
+                     "value": {
+                        "type": "str",
+                        "val": "after"
+                     }
+                  },
+                  {
+                     "name": "domains",
+                     "value": {
+                        "type": "hashraw",
+                        "val": [{
+                           "lhs": "www.bing.com",
+                           "rhs": {
+                              "type": "hashraw",
+                              "val": [{
+                                 "lhs": "modify",
+                                 "rhs": {
+                                    "type": "str",
+                                    "val": ".sc_ol1"
+                                 }
+                              }]
+                           }
+                        }]
+                     }
+                  }
+               ],
+               "name": "annotate_local_search_results",
+               "source": null
+            }}
+         ],
+         "blocktype": "every",
+         "callbacks": {"success": [{
+            "attribute": "class",
+            "trigger": null,
+            "type": "click",
+            "value": "flyout-reminder-button"
+         }]},
+         "cond": {
+            "args": [
+               {
+                  "args": [{
+                     "type": "str",
+                     "val": "datasets"
+                  }],
+                  "predicate": "param",
+                  "source": "page",
+                  "type": "qualified"
+               },
+               {
+                  "type": "str",
+                  "val": "(^|,)aaawa(,|$)"
+               }
+            ],
+            "op": "like",
+            "type": "ineq"
+         },
+         "emit": "\n        ",
+         "foreach": [],
+         "name": "aaa_newui_goolge",
+         "pagetype": {"event_expr": {
+            "legacy": 1,
+            "op": "pageview",
+            "pattern": "^http://www.google.com|^http://www.bing.com",
+            "type": "prim_event",
+            "vars": []
+         }},
+         "pre": [],
+         "state": "active"
+      },
+      {
+         "actions": [
+            {"action": {
+               "args": [{
+                  "type": "var",
+                  "val": "remindMeSelector"
+               }],
+               "modifiers": [
+                  {
+                     "name": "remote",
+                     "value": {
+                        "type": "str",
+                        "val": "https://service.azigo.com/remindmeac-test/fetch?callback=?&jsonData=true&source=aaaw"
+                     }
+                  },
+                  {
+                     "name": "outer_div_css",
+                     "value": {
+                        "type": "hashraw",
+                        "val": [
+                           {
+                              "lhs": "float",
+                              "rhs": {
+                                 "type": "str",
+                                 "val": "none"
+                              }
+                           },
+                           {
+                              "lhs": "height",
+                              "rhs": {
+                                 "type": "str",
+                                 "val": "40px"
+                              }
+                           },
+                           {
+                              "lhs": "margin-left",
+                              "rhs": {
+                                 "type": "str",
+                                 "val": "0px"
+                              }
+                           },
+                           {
+                              "lhs": "margin-top",
+                              "rhs": {
+                                 "type": "str",
+                                 "val": "-10px"
+                              }
+                           },
+                           {
+                              "lhs": "padding-right",
+                              "rhs": {
+                                 "type": "str",
+                                 "val": "0px"
+                              }
+                           }
+                        ]
+                     }
+                  },
+                  {
+                     "name": "inner_div_css",
+                     "value": {
+                        "type": "hashraw",
+                        "val": [
+                           {
+                              "lhs": "margin-left",
+                              "rhs": {
+                                 "type": "str",
+                                 "val": "0px"
+                              }
+                           },
+                           {
+                              "lhs": "padding-right",
+                              "rhs": {
+                                 "type": "str",
+                                 "val": "0px"
+                              }
+                           }
+                        ]
+                     }
+                  },
+                  {
+                     "name": "li_css",
+                     "value": {
+                        "type": "hashraw",
+                        "val": [
+                           {
+                              "lhs": "padding-left",
+                              "rhs": {
+                                 "type": "str",
+                                 "val": "0px"
+                              }
+                           },
+                           {
+                              "lhs": "white-space",
+                              "rhs": {
+                                 "type": "str",
+                                 "val": "normal"
+                              }
+                           }
+                        ]
+                     }
+                  },
+                  {
+                     "name": "placement",
+                     "value": {
+                        "type": "str",
+                        "val": "after"
+                     }
+                  },
+                  {
+                     "name": "domains",
+                     "value": {
+                        "type": "hashraw",
+                        "val": [{
+                           "lhs": "search.yahoo.com",
+                           "rhs": {
+                              "type": "hashraw",
+                              "val": [
+                                 {
+                                    "lhs": "selector",
+                                    "rhs": {
+                                       "type": "str",
+                                       "val": "#web > ol > li"
+                                    }
+                                 },
+                                 {
+                                    "lhs": "modify",
+                                    "rhs": {
+                                       "type": "str",
+                                       "val": "div.res"
+                                    }
+                                 }
+                              ]
+                           }
+                        }]
+                     }
+                  }
+               ],
+               "name": "annotate_search_results",
+               "source": null
+            }},
+            {"action": {
+               "args": [{
+                  "type": "var",
+                  "val": "remindMeSelector"
+               }],
+               "modifiers": [
+                  {
+                     "name": "remote",
+                     "value": {
+                        "type": "str",
+                        "val": "https://service.azigo.com/remindmeac-test/fetch?callback=?&jsonData=true&source=aaaw"
+                     }
+                  },
+                  {
+                     "name": "placement",
+                     "value": {
+                        "type": "str",
+                        "val": "after"
+                     }
+                  },
+                  {
+                     "name": "domains",
+                     "value": {
+                        "type": "hashraw",
+                        "val": [{
+                           "lhs": "search.yahoo.com",
+                           "rhs": {
+                              "type": "hashraw",
+                              "val": [{
+                                 "lhs": "modify",
+                                 "rhs": {
+                                    "type": "str",
+                                    "val": ".qlmr"
+                                 }
+                              }]
+                           }
+                        }]
+                     }
+                  }
+               ],
+               "name": "annotate_local_search_results",
+               "source": null
+            }}
+         ],
+         "blocktype": "every",
+         "callbacks": {"success": [{
+            "attribute": "class",
+            "trigger": null,
+            "type": "click",
+            "value": "flyout-reminder-button"
+         }]},
+         "cond": {
+            "args": [
+               {
+                  "args": [{
+                     "type": "str",
+                     "val": "datasets"
+                  }],
+                  "predicate": "param",
+                  "source": "page",
+                  "type": "qualified"
+               },
+               {
+                  "type": "str",
+                  "val": "(^|,)aaawa(,|$)"
+               }
+            ],
+            "op": "like",
+            "type": "ineq"
+         },
+         "emit": "\n        ",
+         "foreach": [],
+         "name": "aaa_newui_yahoo",
+         "pagetype": {"event_expr": {
+            "legacy": 1,
+            "op": "pageview",
+            "pattern": "^http://search.yahoo.com",
+            "type": "prim_event",
+            "vars": []
+         }},
+         "pre": [],
+         "state": "active"
+      },
+      {
+         "actions": [{"emit": "\nKOBJ.spotlight('aaaw');                       "}],
+         "blocktype": "every",
+         "callbacks": {"success": [{
+            "attribute": "class",
+            "trigger": null,
+            "type": "click",
+            "value": "flyout-reminder-button"
+         }]},
+         "cond": {
+            "args": [
+               {
+                  "args": [{
+                     "type": "str",
+                     "val": "datasets"
+                  }],
+                  "predicate": "param",
+                  "source": "page",
+                  "type": "qualified"
+               },
+               {
+                  "type": "str",
+                  "val": "(^|,)aaawa(,|$)"
+               }
+            ],
+            "op": "like",
+            "type": "ineq"
+         },
+         "emit": null,
+         "foreach": [],
+         "name": "aaa_newui_spotlight",
+         "pagetype": {"event_expr": {
+            "legacy": 1,
+            "op": "pageview",
+            "pattern": "^http://search.yahoo.com|^http://www.bing.com",
+            "type": "prim_event",
+            "vars": []
+         }},
+         "pre": [],
+         "state": "active"
+      },
+      {
+         "actions": [{"emit": "\nKOBJ.spotlight('aaaw');         KOBJ.watchDOM(\"#rso\",function() {  \t\t\t$K('#spotlight-main-flyout').remove();  \t\t\tKOBJ.spotlight('aaaw');  \t\t }  \t );                    "}],
+         "blocktype": "every",
+         "callbacks": {"success": [{
+            "attribute": "class",
+            "trigger": null,
+            "type": "click",
+            "value": "flyout-reminder-button"
+         }]},
+         "cond": {
+            "args": [
+               {
+                  "args": [{
+                     "type": "str",
+                     "val": "datasets"
+                  }],
+                  "predicate": "param",
+                  "source": "page",
+                  "type": "qualified"
+               },
+               {
+                  "type": "str",
+                  "val": "(^|,)aaawa(,|$)"
+               }
+            ],
+            "op": "like",
+            "type": "ineq"
+         },
+         "emit": null,
+         "foreach": [],
+         "name": "aaa_newui_spotlight_google",
+         "pagetype": {"event_expr": {
+            "legacy": 1,
+            "op": "pageview",
+            "pattern": "^http://www.google.com",
+            "type": "prim_event",
+            "vars": []
+         }},
+         "pre": [],
+         "state": "active"
+      }
+   ],
+   "ruleset_name": "1024"
+}

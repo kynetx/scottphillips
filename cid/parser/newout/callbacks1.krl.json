@@ -1,0 +1,74 @@
+{
+   "dispatch": [],
+   "global": [],
+   "meta": {},
+   "rules": [{
+      "actions": [{"action": {
+         "args": [
+            {
+               "type": "str",
+               "val": "kobj_test"
+            },
+            {
+               "type": "str",
+               "val": "/kynetx/newsletter_invite.inc"
+            }
+         ],
+         "modifiers": null,
+         "name": "replace",
+         "source": null
+      }}],
+      "blocktype": "every",
+      "callbacks": {"failure": [{
+         "attribute": "id",
+         "trigger": null,
+         "type": "click",
+         "value": "close_rss"
+      }]},
+      "cond": {
+         "args": [{
+            "type": "num",
+            "val": 10
+         }],
+         "function_expr": {
+            "type": "var",
+            "val": "djia_down_more_than"
+         },
+         "type": "app"
+      },
+      "emit": null,
+      "foreach": [],
+      "name": "accept_offer",
+      "pagetype": {"event_expr": {
+         "legacy": 1,
+         "op": "pageview",
+         "pattern": "/identity-policy/",
+         "type": "prim_event",
+         "vars": []
+      }},
+      "pre": [
+         {
+            "lhs": "tc",
+            "rhs": {
+               "args": [],
+               "predicate": "tomorrow_cond_code",
+               "source": "weather",
+               "type": "qualified"
+            },
+            "type": "expr"
+         },
+         {
+            "lhs": "city",
+            "rhs": {
+               "args": [],
+               "predicate": "city",
+               "source": "geoip",
+               "type": "qualified"
+            },
+            "type": "expr"
+         }
+      ],
+      "state": "active"
+   }],
+   "ruleset_name": "10"
+}

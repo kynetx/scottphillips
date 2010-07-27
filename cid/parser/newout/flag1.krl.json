@@ -1,0 +1,65 @@
+{
+   "dispatch": [],
+   "global": [],
+   "meta": {},
+   "rules": [{
+      "actions": [{"action": {
+         "args": [{
+            "type": "str",
+            "val": "You win the prize!"
+         }],
+         "modifiers": null,
+         "name": "alert",
+         "source": null
+      }}],
+      "blocktype": "every",
+      "callbacks": null,
+      "cond": {
+         "domain": "ent",
+         "ineq": "==",
+         "timeframe": "days",
+         "type": "persistent_ineq",
+         "var": "been_here",
+         "within": {
+            "type": "num",
+            "val": 4
+         }
+      },
+      "emit": null,
+      "foreach": [],
+      "name": "frequent_archive_visitor",
+      "pagetype": {"event_expr": {
+         "legacy": 1,
+         "op": "pageview",
+         "pattern": "/archives/\\d+/\\d+/",
+         "type": "prim_event",
+         "vars": []
+      }},
+      "post": {
+         "alt": [{
+            "action": "set",
+            "domain": "ent",
+            "name": "been_here",
+            "type": "persistent"
+         }],
+         "cons": [{
+            "action": "clear",
+            "domain": "ent",
+            "name": "been_here",
+            "type": "persistent"
+         }],
+         "type": "fired"
+      },
+      "pre": [{
+         "lhs": "c",
+         "rhs": {
+            "domain": "ent",
+            "name": "been_here",
+            "type": "persistent"
+         },
+         "type": "expr"
+      }],
+      "state": "active"
+   }],
+   "ruleset_name": "10"
+}

@@ -1,0 +1,41 @@
+{ "dispatch" : [  ],
+  "dispatch_start_col" : null,
+  "dispatch_start_line" : null,
+  "global" : [  ],
+  "global_start_col" : null,
+  "global_start_line" : null,
+  "meta" : {  },
+  "meta_start_col" : null,
+  "meta_start_line" : null,
+  "rules" : [ { "actions" : [ { "action" : { "args" : [ { "type" : "str",
+                        "val" : "This is a message"
+                      } ],
+                  "modifiers" : null,
+                  "name" : "authorize",
+                  "source" : "twitter"
+                },
+              "label" : "a_label"
+            } ],
+        "blocktype" : "every",
+        "callbacks" : null,
+        "cond" : { "type" : "bool",
+            "val" : "true"
+          },
+        "emit" : null,
+        "name" : "test0",
+        "pagetype" : { "event_expr" : { "legacy" : 1,
+                "op" : "pageview",
+                "pattern" : "/test/",
+                "type" : "prim_event",
+                "vars" : [  ]
+              },
+            "foreach" : [  ]
+          },
+        "post" : null,
+        "pre" : [  ],
+        "start_col" : 5,
+        "start_line" : 3,
+        "state" : "active"
+      } ],
+  "ruleset_name" : "10"
+}

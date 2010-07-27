@@ -1,0 +1,81 @@
+{
+   "dispatch": [],
+   "global": [],
+   "meta": {},
+   "rules": [{
+      "actions": [{"action": {
+         "args": [{
+            "args": [
+               {
+                  "type": "str",
+                  "val": "You're visitor number "
+               },
+               {
+                  "args": [
+                     {
+                        "type": "var",
+                        "val": "c"
+                     },
+                     {
+                        "type": "str",
+                        "val": " to the archives!"
+                     }
+                  ],
+                  "op": "+",
+                  "type": "prim"
+               }
+            ],
+            "op": "+",
+            "type": "prim"
+         }],
+         "modifiers": null,
+         "name": "alert",
+         "source": null
+      }}],
+      "blocktype": "every",
+      "callbacks": null,
+      "cond": {
+         "type": "bool",
+         "val": "true"
+      },
+      "emit": null,
+      "foreach": [],
+      "name": "frequent_archive_visitor",
+      "pagetype": {"event_expr": {
+         "legacy": 1,
+         "op": "pageview",
+         "pattern": "/archives/\\d+/\\d+/",
+         "type": "prim_event",
+         "vars": []
+      }},
+      "post": {
+         "cons": [{
+            "action": "iterator",
+            "domain": "app",
+            "from": {
+               "type": "num",
+               "val": 0
+            },
+            "name": "page_counter",
+            "op": "+=",
+            "type": "persistent",
+            "value": {
+               "type": "num",
+               "val": 1
+            }
+         }],
+         "type": "fired"
+      },
+      "pre": [{
+         "lhs": "c",
+         "rhs": {
+            "domain": "app",
+            "name": "page_counter",
+            "type": "persistent"
+         },
+         "type": "expr"
+      }],
+      "state": "active"
+   }],
+   "ruleset_name": "10"
+}

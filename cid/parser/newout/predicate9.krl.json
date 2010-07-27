@@ -1,0 +1,72 @@
+{
+   "dispatch": [],
+   "global": [],
+   "meta": {},
+   "rules": [{
+      "actions": [{"action": {
+         "args": [{
+            "type": "str",
+            "val": "A big spender from Idaho!"
+         }],
+         "modifiers": null,
+         "name": "alert",
+         "source": null
+      }}],
+      "blocktype": "every",
+      "callbacks": null,
+      "cond": {
+         "args": [
+            {
+               "args": [
+                  {
+                     "args": [{
+                        "type": "str",
+                        "val": "total"
+                     }],
+                     "predicate": "var",
+                     "source": "page",
+                     "type": "qualified"
+                  },
+                  {
+                     "type": "num",
+                     "val": 99.99
+                  }
+               ],
+               "op": ">",
+               "type": "ineq"
+            },
+            {
+               "args": [
+                  {
+                     "args": [],
+                     "predicate": "zip",
+                     "source": "location",
+                     "type": "qualified"
+                  },
+                  {
+                     "type": "str",
+                     "val": "83*"
+                  }
+               ],
+               "op": "like",
+               "type": "ineq"
+            }
+         ],
+         "op": "&&",
+         "type": "pred"
+      },
+      "emit": null,
+      "foreach": [],
+      "name": "test0",
+      "pagetype": {"event_expr": {
+         "legacy": 1,
+         "op": "pageview",
+         "pattern": "/test/",
+         "type": "prim_event",
+         "vars": []
+      }},
+      "pre": [],
+      "state": "active"
+   }],
+   "ruleset_name": "10"
+}

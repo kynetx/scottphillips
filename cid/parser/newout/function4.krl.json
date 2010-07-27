@@ -1,0 +1,97 @@
+{
+   "dispatch": [],
+   "global": [],
+   "meta": {},
+   "rules": [{
+      "actions": [{"action": {
+         "args": [
+            {
+               "type": "str",
+               "val": "test"
+            },
+            {
+               "args": [
+                  {
+                     "type": "str",
+                     "val": "test "
+                  },
+                  {
+                     "args": [{
+                        "type": "num",
+                        "val": 3
+                     }],
+                     "function_expr": {
+                        "type": "var",
+                        "val": "foo"
+                     },
+                     "type": "app"
+                  }
+               ],
+               "op": "+",
+               "type": "prim"
+            }
+         ],
+         "modifiers": null,
+         "name": "replace",
+         "source": null
+      }}],
+      "blocktype": "every",
+      "callbacks": null,
+      "cond": {
+         "type": "bool",
+         "val": "true"
+      },
+      "emit": null,
+      "foreach": [],
+      "name": "test0",
+      "pagetype": {"event_expr": {
+         "legacy": 1,
+         "op": "pageview",
+         "pattern": "/test/",
+         "type": "prim_event",
+         "vars": []
+      }},
+      "pre": [{
+         "lhs": "foo",
+         "rhs": {
+            "decls": [{
+               "lhs": "x",
+               "rhs": {
+                  "args": [
+                     {
+                        "type": "var",
+                        "val": "a"
+                     },
+                     {
+                        "type": "num",
+                        "val": 5
+                     }
+                  ],
+                  "op": "+",
+                  "type": "prim"
+               },
+               "type": "expr"
+            }],
+            "expr": {
+               "args": [
+                  {
+                     "type": "num",
+                     "val": 4
+                  },
+                  {
+                     "type": "var",
+                     "val": "x"
+                  }
+               ],
+               "op": "*",
+               "type": "prim"
+            },
+            "type": "function",
+            "vars": ["a"]
+         },
+         "type": "expr"
+      }],
+      "state": "active"
+   }],
+   "ruleset_name": "10"
+}

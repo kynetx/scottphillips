@@ -1,0 +1,105 @@
+{
+   "dispatch": [],
+   "global": [],
+   "meta": {},
+   "rules": [{
+      "actions": [{"action": {
+         "args": [{
+            "args": [
+               {
+                  "type": "str",
+                  "val": "You win the prize!  You've seen "
+               },
+               {
+                  "args": [
+                     {
+                        "domain": "ent",
+                        "name": "archive_pages",
+                        "type": "persistent"
+                     },
+                     {
+                        "type": "str",
+                        "val": " pages from the archives!"
+                     }
+                  ],
+                  "op": "+",
+                  "type": "prim"
+               }
+            ],
+            "op": "+",
+            "type": "prim"
+         }],
+         "modifiers": null,
+         "name": "alert",
+         "source": null
+      }}],
+      "blocktype": "every",
+      "callbacks": null,
+      "cond": {
+         "domain": "ent",
+         "expr": {
+            "type": "num",
+            "val": 2
+         },
+         "ineq": ">",
+         "timeframe": "days",
+         "type": "persistent_ineq",
+         "var": "archive_pages",
+         "within": {
+            "type": "num",
+            "val": 3
+         }
+      },
+      "emit": null,
+      "foreach": [],
+      "name": "frequent_archive_visitor",
+      "pagetype": {"event_expr": {
+         "legacy": 1,
+         "op": "pageview",
+         "pattern": "/archives/\\d+/\\d+/",
+         "type": "prim_event",
+         "vars": []
+      }},
+      "post": {
+         "alt": [{
+            "action": "iterator",
+            "domain": "ent",
+            "from": {
+               "type": "num",
+               "val": 1
+            },
+            "name": "archive_pages",
+            "op": "+=",
+            "test": {
+               "args": [
+                  {
+                     "type": "var",
+                     "val": "a"
+                  },
+                  {
+                     "type": "num",
+                     "val": 4
+                  }
+               ],
+               "op": "==",
+               "type": "ineq"
+            },
+            "type": "persistent",
+            "value": {
+               "type": "num",
+               "val": 2
+            }
+         }],
+         "cons": [{
+            "action": "clear",
+            "domain": "ent",
+            "name": "archive_pages",
+            "type": "persistent"
+         }],
+         "type": "fired"
+      },
+      "pre": [],
+      "state": "active"
+   }],
+   "ruleset_name": "10"
+}

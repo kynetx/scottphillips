@@ -1,0 +1,35 @@
+{
+   "dispatch": [],
+   "global": [],
+   "meta": {},
+   "rules": [{
+      "actions": [{"action": {
+         "args": [],
+         "modifiers": null,
+         "name": "noop",
+         "source": null
+      }}],
+      "blocktype": "every",
+      "callbacks": null,
+      "cond": {
+         "type": "bool",
+         "val": "true"
+      },
+      "emit": null,
+      "foreach": [],
+      "name": "test0",
+      "pagetype": {
+         "event_expr": {
+            "domain": "web",
+            "element": "#formid",
+            "on": "/archives/2006",
+            "op": "submit",
+            "type": "prim_event",
+            "vars": ["my_form"]
+         },
+         "foreach": []
+      },
+      "state": "active"
+   }],
+   "ruleset_name": "10"
+}

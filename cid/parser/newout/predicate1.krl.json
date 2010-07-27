@@ -1,0 +1,49 @@
+{
+   "dispatch": [],
+   "global": [],
+   "meta": {},
+   "rules": [{
+      "actions": [{"action": {
+         "args": [{
+            "type": "str",
+            "val": "You're coming from Idaho!"
+         }],
+         "modifiers": null,
+         "name": "alert",
+         "source": null
+      }}],
+      "blocktype": "every",
+      "callbacks": null,
+      "cond": {
+         "args": [
+            {
+               "args": [],
+               "predicate": "nighttime",
+               "source": "time",
+               "type": "qualified"
+            },
+            {
+               "args": [],
+               "predicate": "today_windy",
+               "source": "weather",
+               "type": "qualified"
+            }
+         ],
+         "op": "||",
+         "type": "pred"
+      },
+      "emit": null,
+      "foreach": [],
+      "name": "test0",
+      "pagetype": {"event_expr": {
+         "legacy": 1,
+         "op": "pageview",
+         "pattern": "/test/",
+         "type": "prim_event",
+         "vars": []
+      }},
+      "pre": [],
+      "state": "active"
+   }],
+   "ruleset_name": "10"
+}
