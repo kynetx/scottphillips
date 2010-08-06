@@ -1,0 +1,1634 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<soapenv:Body>
+		<ns1:getResultsResponse xmlns:ns1="http://DefaultNamespace" soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+			<getResultsReturn xmlns:ns2="http://xml.apache.org/xml-soap" xsi:type="ns2:Map">
+				<item xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+					<key xsi:type="soapenc:string">STATUS</key>
+					<value xsi:type="soapenc:string">YES</value>
+				</item>
+				<item>
+					<key xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xsi:type="soapenc:string">SEARCHID</key>
+					<value xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xsi:type="soapenc:decimal">98478743</value>
+				</item>
+				<item>
+					<key xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xsi:type="soapenc:string">CLIENTCODE</key>
+					<value xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xsi:type="soapenc:string">KPDS Search</value>
+				</item>
+				<item>
+					<key xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xsi:type="soapenc:string">RESPONSETYPE</key>
+					<value xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xsi:type="soapenc:string">getResults</value>
+				</item>
+				<item>
+					<key xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xsi:type="soapenc:string">TOTALMATCHES</key>
+					<value xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xsi:type="soapenc:double">3.0</value>
+				</item>
+				<item>
+					<key xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xsi:type="soapenc:string">ROWSRETURNED</key>
+					<value xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xsi:type="soapenc:int">3</value>
+				</item>
+				<item>
+					<key xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xsi:type="soapenc:string">RESULTS</key>
+					<value xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" soapenc:arrayType="xsd:anyType[3]" xsi:type="soapenc:Array">
+						<value xsi:type="ns2:Map">
+							<item>
+								<key xsi:type="soapenc:string">OFFENDER</key>
+								<value xsi:type="ns2:Map">
+									<item>
+										<key xsi:type="soapenc:string">RECORD</key>
+										<value xsi:type="ns2:Map">
+											<item>
+												<key xsi:type="soapenc:string">STATE</key>
+												<value xsi:type="soapenc:string">  </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">SSN</key>
+												<value xsi:type="soapenc:string">         </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">GENDER_CODE</key>
+												<value xsi:type="soapenc:string">               </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">RELEASE_INFORMATION</key>
+												<value xsi:type="soapenc:string">                                                                                                    </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">INSTITUTION_ZIP</key>
+												<value xsi:type="soapenc:string">         </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">RELEASED_TO_NAME</key>
+												<value xsi:type="soapenc:string">                                                                                                                   </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">NEXT_KIN_TYPE_CODE</key>
+												<value xsi:type="soapenc:string">               </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">NEXT_KIN_CITY</key>
+												<value xsi:type="soapenc:string">                                                  </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">LAST_INSTITUTION_STATE</key>
+												<value xsi:type="soapenc:string">  </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">ADDRESS_2</key>
+												<value xsi:type="soapenc:string">                                                                                </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">REBUTTAL</key>
+												<value xsi:type="soapenc:string">  </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">OFFENDER_ID</key>
+												<value xsi:type="soapenc:string">UT_AOCACX355922               </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">INSTITUTION_DETAILS</key>
+												<value xsi:type="soapenc:string">SALT LAKE CITY DISTRICT                                                                             </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">NEXT_KIN_ADDRESS</key>
+												<value xsi:type="soapenc:string">                                                                                </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">OFFENDER_STATUS_CODE</key>
+												<value xsi:type="soapenc:string">               </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">DOB_ONLY</key>
+												<value xsi:type="soapenc:string">19750524  </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">RELEASED_TO_ZIP</key>
+												<value xsi:type="soapenc:string">         </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">STATE_CODE</key>
+												<value xsi:type="soapenc:string">UT</value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">OFFENSES</key>
+												<value soapenc:arrayType="xsd:anyType[1]" xsi:type="soapenc:Array">
+													<value xsi:type="ns2:Map">
+														<item>
+															<key xsi:type="soapenc:string">OFFENSE</key>
+															<value xsi:type="ns2:Map">
+																<item>
+																	<key xsi:type="soapenc:string">OFFENSE</key>
+																	<value xsi:type="soapenc:string">SPEEDING                                                                        </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">OFFENSE_TYPE</key>
+																	<value xsi:type="soapenc:string">                                                                                </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">COURT_CLERK_PHONE</key>
+																	<value xsi:type="soapenc:string">                    </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">OFFENSE_DATE</key>
+																	<value xsi:type="soapenc:string">          </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">REBUTTAL</key>
+																	<value xsi:type="soapenc:string">  </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">STATE_CONVICTED</key>
+																	<value xsi:type="soapenc:string">                    </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">CASE_TYPE</key>
+																	<value xsi:type="soapenc:string">TRAFFIC CITATION                                                                </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">OFFENDER_ID</key>
+																	<value xsi:type="soapenc:string">UT_AOCACX355922               </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">CITATION_NUMBER</key>
+																	<value xsi:type="soapenc:string">                    </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">SUB_OFFENSE_PREFIX</key>
+																	<value xsi:type="soapenc:string">                    </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">DATE_FILED</key>
+																	<value xsi:type="soapenc:string">19981006</value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">OFFENSE_CITY</key>
+																	<value xsi:type="soapenc:string">                                                  </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">VERDICT_FINDING</key>
+																	<value xsi:type="soapenc:string">BAIL FORFEITURE                         </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">CASE_CATEGORY</key>
+																	<value xsi:type="soapenc:string">CRIMINAL                                          </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">DISPOSITION</key>
+																	<value xsi:type="soapenc:string">                                                                                                                                </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">COURT_NAME</key>
+																	<value xsi:type="soapenc:string">                                                                                </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">OFFENSE_ID</key>
+																	<value xsi:type="soapenc:string">UT_AOCACX355922_1             </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">STATE_CODE</key>
+																	<value xsi:type="soapenc:string">UT</value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">SUB_OFFENSE_CLASS</key>
+																	<value xsi:type="soapenc:string">          </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">OFFENSE_CODE</key>
+																	<value xsi:type="soapenc:string">12.36.020           </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">OFFENSE_CLASS</key>
+																	<value xsi:type="soapenc:string">N         </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">DISPOSITION_DATE</key>
+																	<value xsi:type="soapenc:string">19981023  </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">OFFENSE_STATE</key>
+																	<value xsi:type="soapenc:string">                                        </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">SUB_OFFENSE</key>
+																	<value xsi:type="soapenc:string">                                                                                </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">SOURCE_ID</key>
+																	<value xsi:type="soapenc:string">UT_AOC    </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">OFFENSE_COUNTY</key>
+																	<value xsi:type="soapenc:string">                                                  </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">COURT_CODE</key>
+																	<value xsi:type="soapenc:string">                    </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">OFFENSE_PREFIX</key>
+																	<value xsi:type="soapenc:string">                    </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">SUB_OFFENSE_TYPE</key>
+																	<value xsi:type="soapenc:string">                                                                                </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">COURT_CASE_NUMBER</key>
+																	<value xsi:type="soapenc:string">985936101           </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">CASE_YEAR</key>
+																	<value xsi:type="soapenc:string">    </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">NEW_PLEA</key>
+																	<value xsi:type="soapenc:string">                                        </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">ORIGINAL_PLEA_DATE</key>
+																	<value xsi:type="soapenc:string">          </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">PLEA_WITHDRAWN_DATE</key>
+																	<value xsi:type="soapenc:string">          </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">VERDICT_CONVICTION_DATE</key>
+																	<value xsi:type="soapenc:string">          </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">ORIGINAL_PLEA</key>
+																	<value xsi:type="soapenc:string">                                        </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">CASE_CATEGORY_CODE</key>
+																	<value xsi:type="soapenc:string">                    </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">SUB_OFFENSE_CODE</key>
+																	<value xsi:type="soapenc:string">                    </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">NCIC_CODE</key>
+																	<value xsi:type="soapenc:string">                    </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">ARREST_DATE</key>
+																	<value xsi:type="soapenc:string">          </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">COUNTY_CONVICTED</key>
+																	<value xsi:type="soapenc:string">                                                  </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">ARRESTING_AGENCY</key>
+																	<value xsi:type="soapenc:string">                                                  </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">ARRAIGNMENT_DATE</key>
+																	<value xsi:type="soapenc:string">          </value>
+																</item>
+															</value>
+														</item>
+													</value>
+												</value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">ETHNICITY</key>
+												<value xsi:type="soapenc:string">                              </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">BIRTH_STATE</key>
+												<value xsi:type="soapenc:string">  </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">NEXT_KIN_ZIP</key>
+												<value xsi:type="soapenc:string">         </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">LAST_INSTITUTION</key>
+												<value xsi:type="soapenc:string">                                                                                                    </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">SKIN_COLOR</key>
+												<value xsi:type="soapenc:string">          </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">SOURCE_ID</key>
+												<value xsi:type="soapenc:string">UT_AOC    </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">MILITARY_SERVICE</key>
+												<value xsi:type="soapenc:string">          </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">ALIASES</key>
+												<value soapenc:arrayType="xsd:anyType[0]" xsi:type="soapenc:Array"/>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">LAST_INSTITUTION_ZIP</key>
+												<value xsi:type="soapenc:string">         </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">INSTITUTION_NAME</key>
+												<value xsi:type="soapenc:string">                                                                                                    </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">OTHER_DOB_USED_ONLY</key>
+												<value xsi:type="soapenc:string">          </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">WEIGHT</key>
+												<value xsi:type="soapenc:string">          </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">DRIVER_LICENSE_STATE_ISSUE</key>
+												<value xsi:type="soapenc:string">  </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">LAST_NAME</key>
+												<value xsi:type="soapenc:string">KILLPACK                                </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">MIDDLE_NAME</key>
+												<value xsi:type="soapenc:string">                              </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">LAST_INSTITUTION_CODE</key>
+												<value xsi:type="soapenc:string">               </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">DRIVER_LICENSE_NUMBER</key>
+												<value xsi:type="soapenc:string">                    </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">CITY</key>
+												<value xsi:type="soapenc:string">                                                  </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">RELEASED_TO_ADDRESS</key>
+												<value xsi:type="soapenc:string">                                                                                </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">PHOTONAME</key>
+												<value xsi:type="soapenc:string">                                                  </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">ADDRESS_1</key>
+												<value xsi:type="soapenc:string">                                                                                </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">LAST_INSTITUTION_CITY</key>
+												<value xsi:type="soapenc:string">                                                  </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">INSTITUTION_PHONE</key>
+												<value xsi:type="soapenc:string">                    </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">OTHER_DOB_USED</key>
+												<value xsi:type="soapenc:string">          </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">CITIZENSHIP</key>
+												<value xsi:type="soapenc:string">                                                  </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">NEXT_KIN_PHONE</key>
+												<value xsi:type="soapenc:string">                    </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">NEXT_KIN_TYPE</key>
+												<value xsi:type="soapenc:string">                                                                      </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">MILITARY_BRANCH</key>
+												<value xsi:type="soapenc:string">                         </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">INSTITUTION_STATE</key>
+												<value xsi:type="soapenc:string">  </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">RACE_CODE</key>
+												<value xsi:type="soapenc:string">               </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">PHONE</key>
+												<value xsi:type="soapenc:string">                    </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">MILITARY_DISCHARGE_DATE</key>
+												<value xsi:type="soapenc:string">          </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">SENTENCES</key>
+												<value soapenc:arrayType="xsd:anyType[0]" xsi:type="soapenc:Array"/>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">INMATE_NUMBER</key>
+												<value xsi:type="soapenc:string">                    </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">DC_NUMBER</key>
+												<value xsi:type="soapenc:string">355922              </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">BIRTH_COUNTY</key>
+												<value xsi:type="soapenc:string">                                                            </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">BIRTH_COUNTRY</key>
+												<value xsi:type="soapenc:string">                                                  </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">NEXT_KIN_NAME</key>
+												<value xsi:type="soapenc:string">                                                                                                                   </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">ADDRESS_3</key>
+												<value xsi:type="soapenc:string">                                                                                </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">SOURCE</key>
+												<value xsi:type="soapenc:string">Utah Administrator of the Courts</value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">ZIP</key>
+												<value xsi:type="soapenc:string">         </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">RACE</key>
+												<value xsi:type="soapenc:string">                              </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">EYE_COLOR</key>
+												<value xsi:type="soapenc:string">          </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">INSTITUTION_CODE</key>
+												<value xsi:type="soapenc:string">1868           </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">LAST_INSTITUTION_ADDRESS</key>
+												<value xsi:type="soapenc:string">                                                                                </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">MILITARY_DISCHARGE</key>
+												<value xsi:type="soapenc:string">                                                  </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">HAIR_COLOR</key>
+												<value xsi:type="soapenc:string">          </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">RELEASED_TO_CITY</key>
+												<value xsi:type="soapenc:string">                                                  </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">NEXT_KIN_STATE</key>
+												<value xsi:type="soapenc:string">  </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">RELEASED_TO_STATE</key>
+												<value xsi:type="soapenc:string">  </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">FBI_NUMBER</key>
+												<value xsi:type="soapenc:string">                    </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">INSTITUTION_ADDRESS</key>
+												<value xsi:type="soapenc:string">                                                                                </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">FILE_DATA_DATE</key>
+												<value xsi:type="soapenc:string">20100501  </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">FIRST_NAME</key>
+												<value xsi:type="soapenc:string">SHELDON                                 </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">HEIGHT</key>
+												<value xsi:type="soapenc:string">          </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">GENDER</key>
+												<value xsi:type="soapenc:string">          </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">INSTITUTION_CITY</key>
+												<value xsi:type="soapenc:string">                                                  </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">SUFFIX</key>
+												<value xsi:type="soapenc:string">          </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">NAME</key>
+												<value xsi:type="soapenc:string">KILLPACK, SHELDON                                                                                                  </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">ETHNICITY_CODE</key>
+												<value xsi:type="soapenc:string">               </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">PHYSICAL_BUILD</key>
+												<value xsi:type="soapenc:string">                    </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">STATE_ID_NUMBER</key>
+												<value xsi:type="soapenc:string">                    </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">OFFENDER_STATUS</key>
+												<value xsi:type="soapenc:string">                                                                                                    </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">DOB</key>
+												<value xsi:type="soapenc:string">19750524  </value>
+											</item>
+										</value>
+									</item>
+									<item>
+										<key xsi:type="soapenc:string">RECORDTYPE</key>
+										<value xsi:type="soapenc:string">Criminal</value>
+									</item>
+									<item>
+										<key xsi:type="soapenc:string">ARECORDTYPE</key>
+										<value xsi:type="soapenc:string">Criminal</value>
+									</item>
+								</value>
+							</item>
+						</value>
+						<value xsi:type="ns2:Map">
+							<item>
+								<key xsi:type="soapenc:string">OFFENDER</key>
+								<value xsi:type="ns2:Map">
+									<item>
+										<key xsi:type="soapenc:string">RECORD</key>
+										<value xsi:type="ns2:Map">
+											<item>
+												<key xsi:type="soapenc:string">STATE</key>
+												<value xsi:type="soapenc:string">  </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">SSN</key>
+												<value xsi:type="soapenc:string">         </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">GENDER_CODE</key>
+												<value xsi:type="soapenc:string">               </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">RELEASE_INFORMATION</key>
+												<value xsi:type="soapenc:string">                                                                                                    </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">INSTITUTION_ZIP</key>
+												<value xsi:type="soapenc:string">         </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">RELEASED_TO_NAME</key>
+												<value xsi:type="soapenc:string">                                                                                                                   </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">NEXT_KIN_TYPE_CODE</key>
+												<value xsi:type="soapenc:string">               </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">NEXT_KIN_CITY</key>
+												<value xsi:type="soapenc:string">                                                  </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">LAST_INSTITUTION_STATE</key>
+												<value xsi:type="soapenc:string">  </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">ADDRESS_2</key>
+												<value xsi:type="soapenc:string">                                                                                </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">REBUTTAL</key>
+												<value xsi:type="soapenc:string">  </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">OFFENDER_ID</key>
+												<value xsi:type="soapenc:string">UT_AOCACX355923               </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">INSTITUTION_DETAILS</key>
+												<value xsi:type="soapenc:string">LAYTON DISTRICT                                                                                     </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">NEXT_KIN_ADDRESS</key>
+												<value xsi:type="soapenc:string">                                                                                </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">OFFENDER_STATUS_CODE</key>
+												<value xsi:type="soapenc:string">               </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">DOB_ONLY</key>
+												<value xsi:type="soapenc:string">19680524  </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">RELEASED_TO_ZIP</key>
+												<value xsi:type="soapenc:string">         </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">STATE_CODE</key>
+												<value xsi:type="soapenc:string">UT</value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">OFFENSES</key>
+												<value soapenc:arrayType="xsd:anyType[1]" xsi:type="soapenc:Array">
+													<value xsi:type="ns2:Map">
+														<item>
+															<key xsi:type="soapenc:string">OFFENSE</key>
+															<value xsi:type="ns2:Map">
+																<item>
+																	<key xsi:type="soapenc:string">OFFENSE</key>
+																	<value xsi:type="soapenc:string">RED LIGHT VIOLATION                                                             </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">OFFENSE_TYPE</key>
+																	<value xsi:type="soapenc:string">MISDEMEANOR                                                                     </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">COURT_CLERK_PHONE</key>
+																	<value xsi:type="soapenc:string">                    </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">OFFENSE_DATE</key>
+																	<value xsi:type="soapenc:string">          </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">REBUTTAL</key>
+																	<value xsi:type="soapenc:string">  </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">STATE_CONVICTED</key>
+																	<value xsi:type="soapenc:string">                    </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">CASE_TYPE</key>
+																	<value xsi:type="soapenc:string">TRAFFIC CITATION                                                                </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">OFFENDER_ID</key>
+																	<value xsi:type="soapenc:string">UT_AOCACX355923               </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">CITATION_NUMBER</key>
+																	<value xsi:type="soapenc:string">                    </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">SUB_OFFENSE_PREFIX</key>
+																	<value xsi:type="soapenc:string">                    </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">DATE_FILED</key>
+																	<value xsi:type="soapenc:string">19981201</value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">OFFENSE_CITY</key>
+																	<value xsi:type="soapenc:string">                                                  </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">VERDICT_FINDING</key>
+																	<value xsi:type="soapenc:string">BAIL FORFEITURE                         </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">CASE_CATEGORY</key>
+																	<value xsi:type="soapenc:string">CRIMINAL                                          </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">DISPOSITION</key>
+																	<value xsi:type="soapenc:string">                                                                                                                                </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">COURT_NAME</key>
+																	<value xsi:type="soapenc:string">                                                                                </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">OFFENSE_ID</key>
+																	<value xsi:type="soapenc:string">UT_AOCACX355923_1             </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">STATE_CODE</key>
+																	<value xsi:type="soapenc:string">UT</value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">SUB_OFFENSE_CLASS</key>
+																	<value xsi:type="soapenc:string">          </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">OFFENSE_CODE</key>
+																	<value xsi:type="soapenc:string">41-6-24             </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">OFFENSE_CLASS</key>
+																	<value xsi:type="soapenc:string">C         </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">DISPOSITION_DATE</key>
+																	<value xsi:type="soapenc:string">19981201  </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">OFFENSE_STATE</key>
+																	<value xsi:type="soapenc:string">                                        </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">SUB_OFFENSE</key>
+																	<value xsi:type="soapenc:string">                                                                                </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">SOURCE_ID</key>
+																	<value xsi:type="soapenc:string">UT_AOC    </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">OFFENSE_COUNTY</key>
+																	<value xsi:type="soapenc:string">                                                  </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">COURT_CODE</key>
+																	<value xsi:type="soapenc:string">                    </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">OFFENSE_PREFIX</key>
+																	<value xsi:type="soapenc:string">                    </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">SUB_OFFENSE_TYPE</key>
+																	<value xsi:type="soapenc:string">                                                                                </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">COURT_CASE_NUMBER</key>
+																	<value xsi:type="soapenc:string">985604936           </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">CASE_YEAR</key>
+																	<value xsi:type="soapenc:string">    </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">NEW_PLEA</key>
+																	<value xsi:type="soapenc:string">                                        </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">ORIGINAL_PLEA_DATE</key>
+																	<value xsi:type="soapenc:string">          </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">PLEA_WITHDRAWN_DATE</key>
+																	<value xsi:type="soapenc:string">          </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">VERDICT_CONVICTION_DATE</key>
+																	<value xsi:type="soapenc:string">          </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">ORIGINAL_PLEA</key>
+																	<value xsi:type="soapenc:string">                                        </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">CASE_CATEGORY_CODE</key>
+																	<value xsi:type="soapenc:string">                    </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">SUB_OFFENSE_CODE</key>
+																	<value xsi:type="soapenc:string">                    </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">NCIC_CODE</key>
+																	<value xsi:type="soapenc:string">                    </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">ARREST_DATE</key>
+																	<value xsi:type="soapenc:string">          </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">COUNTY_CONVICTED</key>
+																	<value xsi:type="soapenc:string">                                                  </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">ARRESTING_AGENCY</key>
+																	<value xsi:type="soapenc:string">                                                  </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">ARRAIGNMENT_DATE</key>
+																	<value xsi:type="soapenc:string">          </value>
+																</item>
+															</value>
+														</item>
+													</value>
+												</value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">ETHNICITY</key>
+												<value xsi:type="soapenc:string">                              </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">BIRTH_STATE</key>
+												<value xsi:type="soapenc:string">  </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">NEXT_KIN_ZIP</key>
+												<value xsi:type="soapenc:string">         </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">LAST_INSTITUTION</key>
+												<value xsi:type="soapenc:string">                                                                                                    </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">SKIN_COLOR</key>
+												<value xsi:type="soapenc:string">          </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">SOURCE_ID</key>
+												<value xsi:type="soapenc:string">UT_AOC    </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">MILITARY_SERVICE</key>
+												<value xsi:type="soapenc:string">          </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">ALIASES</key>
+												<value soapenc:arrayType="xsd:anyType[0]" xsi:type="soapenc:Array"/>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">LAST_INSTITUTION_ZIP</key>
+												<value xsi:type="soapenc:string">         </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">INSTITUTION_NAME</key>
+												<value xsi:type="soapenc:string">                                                                                                    </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">OTHER_DOB_USED_ONLY</key>
+												<value xsi:type="soapenc:string">          </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">WEIGHT</key>
+												<value xsi:type="soapenc:string">          </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">DRIVER_LICENSE_STATE_ISSUE</key>
+												<value xsi:type="soapenc:string">  </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">LAST_NAME</key>
+												<value xsi:type="soapenc:string">KILLPACK                                </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">MIDDLE_NAME</key>
+												<value xsi:type="soapenc:string">L                             </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">LAST_INSTITUTION_CODE</key>
+												<value xsi:type="soapenc:string">               </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">DRIVER_LICENSE_NUMBER</key>
+												<value xsi:type="soapenc:string">                    </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">CITY</key>
+												<value xsi:type="soapenc:string">                                                  </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">RELEASED_TO_ADDRESS</key>
+												<value xsi:type="soapenc:string">                                                                                </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">PHOTONAME</key>
+												<value xsi:type="soapenc:string">                                                  </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">ADDRESS_1</key>
+												<value xsi:type="soapenc:string">                                                                                </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">LAST_INSTITUTION_CITY</key>
+												<value xsi:type="soapenc:string">                                                  </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">INSTITUTION_PHONE</key>
+												<value xsi:type="soapenc:string">                    </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">OTHER_DOB_USED</key>
+												<value xsi:type="soapenc:string">          </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">CITIZENSHIP</key>
+												<value xsi:type="soapenc:string">                                                  </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">NEXT_KIN_PHONE</key>
+												<value xsi:type="soapenc:string">                    </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">NEXT_KIN_TYPE</key>
+												<value xsi:type="soapenc:string">                                                                      </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">MILITARY_BRANCH</key>
+												<value xsi:type="soapenc:string">                         </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">INSTITUTION_STATE</key>
+												<value xsi:type="soapenc:string">  </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">RACE_CODE</key>
+												<value xsi:type="soapenc:string">               </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">PHONE</key>
+												<value xsi:type="soapenc:string">                    </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">MILITARY_DISCHARGE_DATE</key>
+												<value xsi:type="soapenc:string">          </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">SENTENCES</key>
+												<value soapenc:arrayType="xsd:anyType[0]" xsi:type="soapenc:Array"/>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">INMATE_NUMBER</key>
+												<value xsi:type="soapenc:string">                    </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">DC_NUMBER</key>
+												<value xsi:type="soapenc:string">355923              </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">BIRTH_COUNTY</key>
+												<value xsi:type="soapenc:string">                                                            </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">BIRTH_COUNTRY</key>
+												<value xsi:type="soapenc:string">                                                  </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">NEXT_KIN_NAME</key>
+												<value xsi:type="soapenc:string">                                                                                                                   </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">ADDRESS_3</key>
+												<value xsi:type="soapenc:string">                                                                                </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">SOURCE</key>
+												<value xsi:type="soapenc:string">Utah Administrator of the Courts</value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">ZIP</key>
+												<value xsi:type="soapenc:string">         </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">RACE</key>
+												<value xsi:type="soapenc:string">                              </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">EYE_COLOR</key>
+												<value xsi:type="soapenc:string">          </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">INSTITUTION_CODE</key>
+												<value xsi:type="soapenc:string">0615           </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">LAST_INSTITUTION_ADDRESS</key>
+												<value xsi:type="soapenc:string">                                                                                </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">MILITARY_DISCHARGE</key>
+												<value xsi:type="soapenc:string">                                                  </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">HAIR_COLOR</key>
+												<value xsi:type="soapenc:string">          </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">RELEASED_TO_CITY</key>
+												<value xsi:type="soapenc:string">                                                  </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">NEXT_KIN_STATE</key>
+												<value xsi:type="soapenc:string">  </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">RELEASED_TO_STATE</key>
+												<value xsi:type="soapenc:string">  </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">FBI_NUMBER</key>
+												<value xsi:type="soapenc:string">                    </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">INSTITUTION_ADDRESS</key>
+												<value xsi:type="soapenc:string">                                                                                </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">FILE_DATA_DATE</key>
+												<value xsi:type="soapenc:string">20100501  </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">FIRST_NAME</key>
+												<value xsi:type="soapenc:string">SHELDON                                 </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">HEIGHT</key>
+												<value xsi:type="soapenc:string">          </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">GENDER</key>
+												<value xsi:type="soapenc:string">          </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">INSTITUTION_CITY</key>
+												<value xsi:type="soapenc:string">                                                  </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">SUFFIX</key>
+												<value xsi:type="soapenc:string">          </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">NAME</key>
+												<value xsi:type="soapenc:string">KILLPACK, SHELDON L                                                                                                </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">ETHNICITY_CODE</key>
+												<value xsi:type="soapenc:string">               </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">PHYSICAL_BUILD</key>
+												<value xsi:type="soapenc:string">                    </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">STATE_ID_NUMBER</key>
+												<value xsi:type="soapenc:string">                    </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">OFFENDER_STATUS</key>
+												<value xsi:type="soapenc:string">                                                                                                    </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">DOB</key>
+												<value xsi:type="soapenc:string">19680524  </value>
+											</item>
+										</value>
+									</item>
+									<item>
+										<key xsi:type="soapenc:string">RECORDTYPE</key>
+										<value xsi:type="soapenc:string">Criminal</value>
+									</item>
+									<item>
+										<key xsi:type="soapenc:string">ARECORDTYPE</key>
+										<value xsi:type="soapenc:string">Criminal</value>
+									</item>
+								</value>
+							</item>
+						</value>
+						<value xsi:type="ns2:Map">
+							<item>
+								<key xsi:type="soapenc:string">OFFENDER</key>
+								<value xsi:type="ns2:Map">
+									<item>
+										<key xsi:type="soapenc:string">RECORD</key>
+										<value xsi:type="ns2:Map">
+											<item>
+												<key xsi:type="soapenc:string">STATE</key>
+												<value xsi:type="soapenc:string">  </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">SSN</key>
+												<value xsi:type="soapenc:string">         </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">GENDER_CODE</key>
+												<value xsi:type="soapenc:string">               </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">RELEASE_INFORMATION</key>
+												<value xsi:type="soapenc:string">                                                                                                    </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">INSTITUTION_ZIP</key>
+												<value xsi:type="soapenc:string">         </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">RELEASED_TO_NAME</key>
+												<value xsi:type="soapenc:string">                                                                                                                   </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">NEXT_KIN_TYPE_CODE</key>
+												<value xsi:type="soapenc:string">               </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">NEXT_KIN_CITY</key>
+												<value xsi:type="soapenc:string">                                                  </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">LAST_INSTITUTION_STATE</key>
+												<value xsi:type="soapenc:string">  </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">ADDRESS_2</key>
+												<value xsi:type="soapenc:string">                                                                                </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">REBUTTAL</key>
+												<value xsi:type="soapenc:string">  </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">OFFENDER_ID</key>
+												<value xsi:type="soapenc:string">UT_AOCACXA152656              </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">INSTITUTION_DETAILS</key>
+												<value xsi:type="soapenc:string">LAYTON DISTRICT                                                                                     </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">NEXT_KIN_ADDRESS</key>
+												<value xsi:type="soapenc:string">                                                                                </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">OFFENDER_STATUS_CODE</key>
+												<value xsi:type="soapenc:string">               </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">DOB_ONLY</key>
+												<value xsi:type="soapenc:string">          </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">RELEASED_TO_ZIP</key>
+												<value xsi:type="soapenc:string">         </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">STATE_CODE</key>
+												<value xsi:type="soapenc:string">UT</value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">OFFENSES</key>
+												<value soapenc:arrayType="xsd:anyType[1]" xsi:type="soapenc:Array">
+													<value xsi:type="ns2:Map">
+														<item>
+															<key xsi:type="soapenc:string">OFFENSE</key>
+															<value xsi:type="ns2:Map">
+																<item>
+																	<key xsi:type="soapenc:string">OFFENSE</key>
+																	<value xsi:type="soapenc:string">SPEEDING                                                                        </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">OFFENSE_TYPE</key>
+																	<value xsi:type="soapenc:string">MISDEMEANOR                                                                     </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">COURT_CLERK_PHONE</key>
+																	<value xsi:type="soapenc:string">                    </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">OFFENSE_DATE</key>
+																	<value xsi:type="soapenc:string">          </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">REBUTTAL</key>
+																	<value xsi:type="soapenc:string">  </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">STATE_CONVICTED</key>
+																	<value xsi:type="soapenc:string">                    </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">CASE_TYPE</key>
+																	<value xsi:type="soapenc:string">TRAFFIC CITATION                                                                </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">OFFENDER_ID</key>
+																	<value xsi:type="soapenc:string">UT_AOCACXA152656              </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">CITATION_NUMBER</key>
+																	<value xsi:type="soapenc:string">                    </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">SUB_OFFENSE_PREFIX</key>
+																	<value xsi:type="soapenc:string">                    </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">DATE_FILED</key>
+																	<value xsi:type="soapenc:string">20080416</value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">OFFENSE_CITY</key>
+																	<value xsi:type="soapenc:string">                                                  </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">VERDICT_FINDING</key>
+																	<value xsi:type="soapenc:string">BAIL FORFEITURE                         </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">CASE_CATEGORY</key>
+																	<value xsi:type="soapenc:string">CRIMINAL                                          </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">DISPOSITION</key>
+																	<value xsi:type="soapenc:string">                                                                                                                                </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">COURT_NAME</key>
+																	<value xsi:type="soapenc:string">                                                                                </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">OFFENSE_ID</key>
+																	<value xsi:type="soapenc:string">UT_AOCACXA152656_1            </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">STATE_CODE</key>
+																	<value xsi:type="soapenc:string">UT</value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">SUB_OFFENSE_CLASS</key>
+																	<value xsi:type="soapenc:string">          </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">OFFENSE_CODE</key>
+																	<value xsi:type="soapenc:string">41-6A-601           </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">OFFENSE_CLASS</key>
+																	<value xsi:type="soapenc:string">C         </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">DISPOSITION_DATE</key>
+																	<value xsi:type="soapenc:string">20080429  </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">OFFENSE_STATE</key>
+																	<value xsi:type="soapenc:string">                                        </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">SUB_OFFENSE</key>
+																	<value xsi:type="soapenc:string">                                                                                </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">SOURCE_ID</key>
+																	<value xsi:type="soapenc:string">UT_AOC    </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">OFFENSE_COUNTY</key>
+																	<value xsi:type="soapenc:string">                                                  </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">COURT_CODE</key>
+																	<value xsi:type="soapenc:string">                    </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">OFFENSE_PREFIX</key>
+																	<value xsi:type="soapenc:string">                    </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">SUB_OFFENSE_TYPE</key>
+																	<value xsi:type="soapenc:string">                                                                                </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">COURT_CASE_NUMBER</key>
+																	<value xsi:type="soapenc:string">085602918           </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">CASE_YEAR</key>
+																	<value xsi:type="soapenc:string">    </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">NEW_PLEA</key>
+																	<value xsi:type="soapenc:string">                                        </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">ORIGINAL_PLEA_DATE</key>
+																	<value xsi:type="soapenc:string">          </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">PLEA_WITHDRAWN_DATE</key>
+																	<value xsi:type="soapenc:string">          </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">VERDICT_CONVICTION_DATE</key>
+																	<value xsi:type="soapenc:string">          </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">ORIGINAL_PLEA</key>
+																	<value xsi:type="soapenc:string">                                        </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">CASE_CATEGORY_CODE</key>
+																	<value xsi:type="soapenc:string">                    </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">SUB_OFFENSE_CODE</key>
+																	<value xsi:type="soapenc:string">                    </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">NCIC_CODE</key>
+																	<value xsi:type="soapenc:string">                    </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">ARREST_DATE</key>
+																	<value xsi:type="soapenc:string">          </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">COUNTY_CONVICTED</key>
+																	<value xsi:type="soapenc:string">                                                  </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">ARRESTING_AGENCY</key>
+																	<value xsi:type="soapenc:string">                                                  </value>
+																</item>
+																<item>
+																	<key xsi:type="soapenc:string">ARRAIGNMENT_DATE</key>
+																	<value xsi:type="soapenc:string">          </value>
+																</item>
+															</value>
+														</item>
+													</value>
+												</value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">ETHNICITY</key>
+												<value xsi:type="soapenc:string">                              </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">BIRTH_STATE</key>
+												<value xsi:type="soapenc:string">  </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">NEXT_KIN_ZIP</key>
+												<value xsi:type="soapenc:string">         </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">LAST_INSTITUTION</key>
+												<value xsi:type="soapenc:string">                                                                                                    </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">SKIN_COLOR</key>
+												<value xsi:type="soapenc:string">          </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">SOURCE_ID</key>
+												<value xsi:type="soapenc:string">UT_AOC    </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">MILITARY_SERVICE</key>
+												<value xsi:type="soapenc:string">          </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">ALIASES</key>
+												<value soapenc:arrayType="xsd:anyType[0]" xsi:type="soapenc:Array"/>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">LAST_INSTITUTION_ZIP</key>
+												<value xsi:type="soapenc:string">         </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">INSTITUTION_NAME</key>
+												<value xsi:type="soapenc:string">                                                                                                    </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">OTHER_DOB_USED_ONLY</key>
+												<value xsi:type="soapenc:string">          </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">WEIGHT</key>
+												<value xsi:type="soapenc:string">          </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">DRIVER_LICENSE_STATE_ISSUE</key>
+												<value xsi:type="soapenc:string">  </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">LAST_NAME</key>
+												<value xsi:type="soapenc:string">KILLPACK                                </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">MIDDLE_NAME</key>
+												<value xsi:type="soapenc:string">L                             </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">LAST_INSTITUTION_CODE</key>
+												<value xsi:type="soapenc:string">               </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">DRIVER_LICENSE_NUMBER</key>
+												<value xsi:type="soapenc:string">                    </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">CITY</key>
+												<value xsi:type="soapenc:string">                                                  </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">RELEASED_TO_ADDRESS</key>
+												<value xsi:type="soapenc:string">                                                                                </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">PHOTONAME</key>
+												<value xsi:type="soapenc:string">                                                  </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">ADDRESS_1</key>
+												<value xsi:type="soapenc:string">                                                                                </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">LAST_INSTITUTION_CITY</key>
+												<value xsi:type="soapenc:string">                                                  </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">INSTITUTION_PHONE</key>
+												<value xsi:type="soapenc:string">                    </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">OTHER_DOB_USED</key>
+												<value xsi:type="soapenc:string">          </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">CITIZENSHIP</key>
+												<value xsi:type="soapenc:string">                                                  </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">NEXT_KIN_PHONE</key>
+												<value xsi:type="soapenc:string">                    </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">NEXT_KIN_TYPE</key>
+												<value xsi:type="soapenc:string">                                                                      </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">MILITARY_BRANCH</key>
+												<value xsi:type="soapenc:string">                         </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">INSTITUTION_STATE</key>
+												<value xsi:type="soapenc:string">  </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">RACE_CODE</key>
+												<value xsi:type="soapenc:string">               </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">PHONE</key>
+												<value xsi:type="soapenc:string">                    </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">MILITARY_DISCHARGE_DATE</key>
+												<value xsi:type="soapenc:string">          </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">SENTENCES</key>
+												<value soapenc:arrayType="xsd:anyType[0]" xsi:type="soapenc:Array"/>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">INMATE_NUMBER</key>
+												<value xsi:type="soapenc:string">                    </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">DC_NUMBER</key>
+												<value xsi:type="soapenc:string">A152656             </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">BIRTH_COUNTY</key>
+												<value xsi:type="soapenc:string">                                                            </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">BIRTH_COUNTRY</key>
+												<value xsi:type="soapenc:string">                                                  </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">NEXT_KIN_NAME</key>
+												<value xsi:type="soapenc:string">                                                                                                                   </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">ADDRESS_3</key>
+												<value xsi:type="soapenc:string">                                                                                </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">SOURCE</key>
+												<value xsi:type="soapenc:string">Utah Administrator of the Courts</value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">ZIP</key>
+												<value xsi:type="soapenc:string">         </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">RACE</key>
+												<value xsi:type="soapenc:string">                              </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">EYE_COLOR</key>
+												<value xsi:type="soapenc:string">          </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">INSTITUTION_CODE</key>
+												<value xsi:type="soapenc:string">0615           </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">LAST_INSTITUTION_ADDRESS</key>
+												<value xsi:type="soapenc:string">                                                                                </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">MILITARY_DISCHARGE</key>
+												<value xsi:type="soapenc:string">                                                  </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">HAIR_COLOR</key>
+												<value xsi:type="soapenc:string">          </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">RELEASED_TO_CITY</key>
+												<value xsi:type="soapenc:string">                                                  </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">NEXT_KIN_STATE</key>
+												<value xsi:type="soapenc:string">  </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">RELEASED_TO_STATE</key>
+												<value xsi:type="soapenc:string">  </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">FBI_NUMBER</key>
+												<value xsi:type="soapenc:string">                    </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">INSTITUTION_ADDRESS</key>
+												<value xsi:type="soapenc:string">                                                                                </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">FILE_DATA_DATE</key>
+												<value xsi:type="soapenc:string">20100501  </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">FIRST_NAME</key>
+												<value xsi:type="soapenc:string">SHELDON                                 </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">HEIGHT</key>
+												<value xsi:type="soapenc:string">          </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">GENDER</key>
+												<value xsi:type="soapenc:string">          </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">INSTITUTION_CITY</key>
+												<value xsi:type="soapenc:string">                                                  </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">SUFFIX</key>
+												<value xsi:type="soapenc:string">          </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">NAME</key>
+												<value xsi:type="soapenc:string">KILLPACK, SHELDON L                                                                                                </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">ETHNICITY_CODE</key>
+												<value xsi:type="soapenc:string">               </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">PHYSICAL_BUILD</key>
+												<value xsi:type="soapenc:string">                    </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">STATE_ID_NUMBER</key>
+												<value xsi:type="soapenc:string">                    </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">OFFENDER_STATUS</key>
+												<value xsi:type="soapenc:string">                                                                                                    </value>
+											</item>
+											<item>
+												<key xsi:type="soapenc:string">DOB</key>
+												<value xsi:type="soapenc:string">          </value>
+											</item>
+										</value>
+									</item>
+									<item>
+										<key xsi:type="soapenc:string">RECORDTYPE</key>
+										<value xsi:type="soapenc:string">Criminal</value>
+									</item>
+									<item>
+										<key xsi:type="soapenc:string">ARECORDTYPE</key>
+										<value xsi:type="soapenc:string">Criminal</value>
+									</item>
+								</value>
+							</item>
+						</value>
+					</value>
+				</item>
+			</getResultsReturn>
+		</ns1:getResultsResponse>
+	</soapenv:Body>
+</soapenv:Envelope>
