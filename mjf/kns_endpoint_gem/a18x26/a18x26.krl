@@ -11,9 +11,6 @@ ruleset a18x26 {
   }
 
   dispatch {
-    // Some example dispatch domains
-    // domain "exmple.com"
-    // domain "other.example.com"
   }
 
   global {
@@ -21,8 +18,25 @@ ruleset a18x26 {
   }
 
   rule first_rule is active {
-    select when my_endpoint echo
-
-      send_directive("OK") with message = "SUCCESS";
+    select when test_endpoint echo
+      pre {
+        m = event:param("message");
+      }
+      {
+        send_directive("say") with message = m;
+      }
   }
+
+  rule second_rule is active {
+    select when test_endpoint echo_hello
+      pre {
+        m = event:param("message");
+      }
+      {
+        send_directive("say") with message = m;
+      }
+  }
+  
+
+
 }
