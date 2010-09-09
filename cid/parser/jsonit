@@ -1,1 +1,0 @@
-./krl-parser.pl -f $1 -j > %1.json

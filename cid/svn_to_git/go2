@@ -1,0 +1,42 @@
+mkdir kynetx
+cd kynetx
+
+echo "==================================================================="
+echo "          Switching Repo's"
+echo "==================================================================="
+git init
+git-stitch-repo ../current_svn/perl:krl_engine ../current_svn/bxfactory:endpoint_factory  ../current_svn/kpds:personal_dataservice ../current_svn/appdirectory:appdirectory  ../current_svn/rulesetmanager:ruleset_manager    ../current_svn/accounts:account_manager ../marketplace:marketplace ../etl:etl | git fast-import
+
+git checkout master-A
+git checkout master
+
+echo "==================================================================="
+echo "          Move Account Manager"
+echo "==================================================================="
+git mv account_manager/root/* account_manager
+
+echo "==================================================================="
+echo "          Move App Directory"
+echo "==================================================================="
+git mv appdirectory/AppDirectory/* appdirectory
+
+echo "==================================================================="
+echo "          Move RuleSetManager"
+echo "==================================================================="
+git mv ruleset_manager/RuleSetManager/* ruleset_manager
+
+echo "==================================================================="
+echo "          Commit Moves"
+echo "==================================================================="
+git commit -a -m  "flattened out directories a bit"
+git branch -d  master-A
+git branch -d  master-B
+git branch -d  master-C
+git branch -d  master-D
+git branch -d  master-E
+git branch -d  master-F
+
+cd ..
+
+
+

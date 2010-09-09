@@ -1,1 +1,0 @@
-java com.kynetx.ParseRuleset  /Users/ciddennis/Development/krl_engine/t/data/$1 > newout/$1.json

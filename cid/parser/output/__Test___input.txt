@@ -1,6 +1,0 @@
-ruleset joe9x99 {
-	rule myrulename is active {
-		ruleseta = /bobobob/;
-		r="test";
-	}	
-}
