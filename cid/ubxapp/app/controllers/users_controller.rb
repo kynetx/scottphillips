@@ -36,7 +36,8 @@ class UsersController < ApplicationController
 
     render :json => {"user" => (@user ? @user.bx_attributes : {}),
                      "domains_to_applications" => @ken.bx_domains_to_applications,
-                     "applications" => @ken.bx_applications
+                     "applications" => @ken.bx_applications,
+                     "ken_id" => @ken.guid
     }
 
   end

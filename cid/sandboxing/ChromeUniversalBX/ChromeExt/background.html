@@ -29,11 +29,6 @@ function errorStack(e) {
 function flush_local_storage() {
     window.localStorage.clear();
 
-    chrome.cookies.getAll({url: kynetx_account_server + "/"}, function(cookies) {
-        $.each(cookies, function(index) {
-            chrome.cookies.remove({url: kynetx_account_server + "/", name: cookies[index].name});
-        });
-    });
 }
 
 /*
@@ -171,10 +166,8 @@ function read_user_info() {
             user = data.user;
             domains_to_applications = data.domains_to_applications;
             applications = data.applications;
+            window.localStorage.setItem("ken", data.ken_id);
 
-            chrome.cookies.get({"url": kynetx_account_server + "/", "name" : "ken"}, function(cookie) {
-                window.localStorage.setItem("ken", cookie.value);
-            });
 
         },
         error :function(data) {
