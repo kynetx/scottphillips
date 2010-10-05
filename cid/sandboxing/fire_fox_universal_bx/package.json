@@ -1,0 +1,6 @@
+{
+    "id": "jid0-ILPjrwi9767BNNAJIjV0BEneIwo", 
+    "dependencies": ["jetpack-core"], 
+    "description": "This package adds a Google search context-menu item.", 
+    "author": "Me (http://www.ciddennis.com)"
+}

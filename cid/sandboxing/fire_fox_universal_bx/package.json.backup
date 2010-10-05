@@ -1,0 +1,5 @@
+{
+  "description": "This package adds a Google search context-menu item.",
+  "author": "Me (http://me.org)",
+  "dependencies": ["jetpack-core","page-mod"]
+}

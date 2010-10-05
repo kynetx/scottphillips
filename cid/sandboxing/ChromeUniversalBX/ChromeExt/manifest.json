@@ -1,0 +1,21 @@
+{
+  "name": "Kynetx Application Manager",
+  "version": "1.0",
+  "description": "Allows users to manage browser install applications from Kynetx.",
+  "icons" : { "128": "kynetx_128x128.png" },
+  "background_page": "background.html",
+  "options_page": "options.html",
+  "content_scripts": [
+    {
+      "matches": ["http://*/*"],
+      "js": ["jquery.js","page.js","kobj_interact.js"],
+	  "run_at":"document_end"
+    }
+  ],
+  "permissions": ["http://*/" ,"http://*/", "tabs","cookies"],
+  "browser_action" : {
+    "default_title" : "Manage Applications",
+    "default_icon" : "kynetx_16x16.png"
+  },
+  "update_url": "http://update.kobj.net/ch/a93x7/updates.xml"
+}
