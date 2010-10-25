@@ -6,9 +6,13 @@ class Ken < ActiveRecord::Base
     domains = {};
 
     apps.each do |app|
+      logger.debug "have an app" + app.app_name
       app.domains.each do |domain|
+        logger.debug "have an domain" + app.app_name + " - " + domain.name
         if(domains[domain.name])
-          domain[domain.name].push(app.app_name)
+          domains[domain.name].push(app.app_name)
+        else
+          domains[domain.name] = [app.app_name]
         end
       end
 

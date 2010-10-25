@@ -7,6 +7,8 @@ Ubxapp::Application.routes.draw do
     end
   end
 
+  match "/convert" => "gm_convert#convert"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

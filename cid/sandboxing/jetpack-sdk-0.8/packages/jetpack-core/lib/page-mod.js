@@ -126,6 +126,7 @@ const PageMod = Loader.compose(EventEmitter, {
   },
   _onAttach: function _onAttach(window) {
     this._emit('attach', Worker({
+      // window: window,
       window: window.wrappedJSObject,
       contentScript: this.contentScript,
       contentScriptURL: this.contentScriptURL,

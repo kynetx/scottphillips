@@ -5,11 +5,15 @@
 var applications = {};
 var domains_to_applications = {};
 var user = {};
-var errorstackkey = "5a378563d1cb9a5860295d6476536e7d";
+var errorstackkey = "f47b34280b996dfba66fd897f825c5b6";
 var full_runtime = null;
 var kynetx_account_server = "http://www.mykobj.net:3000";
-var kynetx_runtime_url = "http://static.kobj.net/kobj-static-20100611003313.js";
+var kynetx_runtime_url = "http://static.kobj.net/kobj-static-20101008193806.js";
 
+
+var menu_items_for_apps = {};
+
+window.localStorage.setItem("ken", "1286488357");
 
 function errorStack(e) {
     var txt = "_s=" + errorstackkey + "&_r=json";
@@ -37,19 +41,45 @@ function flush_local_storage() {
  */
 chrome.extension.onRequest.addListener(message_responder);
 
+var menu_items = {};
+
+function process_current_menu(menus) {
+    menu_items = {};
+    chrome.contextMenus.removeAll();
+    for (var app in menus) {
+        var parent_id = chrome.contextMenus.create({title : app});
+
+        for (var index in menus[app]) {
+            var menu = menus[app][index];
+            var menu_item = chrome.contextMenus.create({title : menu, parentId : parent_id,
+                onclick : function(info, tab) {
+
+                    chrome.windows.getCurrent(function(window) {
+                        chrome.tabs.getSelected(window.id, function(tab) {
+                            chrome.tabs.sendRequest(tab.id,
+                            {action:"menu_clicked", "app_id":menu_items[info.menuItemId]["app_id"],
+                                "caption" : menu_items[info.menuItemId]["caption"]});
+                        });
+                    });
+
+                    chrome.tabs.get(tab.id).sendRequest({'action': "menu_clicked",
+                        "app_id" : menu_items[info.menuItemId]["app_id"],
+                        "caption" :  menu_items[info.menuItemId]["caption"]});
+                }});
+
+            menu_items[menu_item] = {app_id : app, caption : menu};
+        }
+    }
+}
+
+
 function message_responder(message, sender, sendResponse) {
     try {
         if (message.action == 'loadruntime') {
 
             if (!$.isEmptyObject(domains_to_applications)) {
 
-                var apps_to_run = [];
-                $.each(domains_to_applications, function(key, value) {
-                    var Kdomain = new RegExp(key);
-                    if (message.hostname.search(Kdomain) > -1) {
-                        value.apps
-                    }
-                });
+                var apps_to_run = apps_to_execute(message.hostname);
                 response_data = {runtime: full_runtime,
                     run_rule : true,
                     apps : apps_to_run,
@@ -58,16 +88,19 @@ function message_responder(message, sender, sendResponse) {
                     init_host : "init.kobj.net"
                 };
                 sendResponse(response_data);
-
             }
             else {
-
                 sendResponse({run_rule : false});
-
             }
+        }
+        if (message.action == "refresh_menu") {
+            process_current_menu(message.menu_items);
         }
         if (message.action == 'send_data') {
             send_data(message, sendResponse);
+        }
+        if (message.action == 'send_data_2') {
+            sendResponse(sync_request_2(message.url, "GET"));
         }
         if (message.action == "login_success") {
             user = message.user;
@@ -132,6 +165,37 @@ function async_request(url, method, callback) {
     req.send(data);
 }
 
+function apps_to_execute(page_domain) {
+    var apps = [];
+    for (var domain in domains_to_applications) {
+        var value = domains_to_applications[domain];
+
+        var Kdomain = new RegExp(domain);
+        if (page_domain.search(Kdomain) > -1) {
+            apps = apps.concat(value)
+        }
+    }
+    return apps;
+}
+
+function sync_request_2(url, method) {
+
+    var data = null;
+    // method = "POST";
+    if (method == "POST") {
+        var result = split_post_data(url);
+        url = result.url;
+        data = result.data;
+    }
+    var req = new XMLHttpRequest();
+    req.open(method, url, false);
+    if (method == "POST") {
+        req.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    }
+    req.send(data);
+    return req;
+}
+
 function sync_request(url, method) {
 
     var data = null;
@@ -149,6 +213,7 @@ function sync_request(url, method) {
     req.send(data);
     return req.responseText;
 }
+
 
 function read_user_info() {
     // Go ask server for user info.  If the server decides what is right based on its knowledge of
@@ -199,7 +264,6 @@ chrome.extension.onConnect.addListener(function(port) {
     // This will get called by the content script we execute in
     // the tab as a result of the user pressing the browser action.
     port.onMessage.addListener(function(info) {
-
         chrome.windows.getCurrent(function(w) {
             parentWindowId = w.id;
             var width = 300;
@@ -214,11 +278,26 @@ chrome.extension.onConnect.addListener(function(port) {
             window.popUpWindow = window.open(kynetx_account_server + "/users/show_login", "Kynetx Manager", options);
             window.popUpWindow.focus();
         });
-
-
     });
 });
 
+
+function load_tab_menus() {
+
+    chrome.windows.getCurrent(function(window) {
+        chrome.tabs.getSelected(window.id, function(tab) {
+
+            if (tab.url != "chrome://extensions/") {
+                chrome.tabs.executeScript(tab.id, {code : "try{updateMenu()}catch(e){}"});
+                setTimeout(load_tab_menus, 1000);
+            }
+        });
+
+
+    });
+}
+
+setTimeout(load_tab_menus, 1000);
 
 </script>
 

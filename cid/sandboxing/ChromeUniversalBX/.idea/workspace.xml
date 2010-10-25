@@ -21,49 +21,30 @@
   <component name="FavoritesManager">
     <favorites_list name="ChromeUniversalBX" />
   </component>
-  <component name="FileColors" enabled="true" enabledForTabs="true" highlightNonProjectFiles="true" nonProjectFilesColor="ffffe4" />
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="background.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ChromeExt/background.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="16" selection-start="50" selection-end="50" vertical-scroll-proportion="0.05448354">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="page.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ChromeExt/page.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="38" selection-start="802" selection-end="802" vertical-scroll-proportion="0.0">
+            <state line="27" column="12" selection-start="896" selection-end="896" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="background.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ChromeExt/background.html">
+      <file leaf-file-name="manifest.json" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ChromeExt/manifest.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="177" column="16" selection-start="5140" selection-end="5140" vertical-scroll-proportion="-1.0980393">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="content_script.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ChromeExt/content_script.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="11" selection-start="47" selection-end="47" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="kobj_interact.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ChromeExt/kobj_interact.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="620" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="options.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ChromeExt/options.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="80" column="39" selection-start="2083" selection-end="2083" vertical-scroll-proportion="-33.36">
+            <state line="12" column="5" selection-start="416" selection-end="416" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -81,10 +62,10 @@
       <list>
         <option value="$PROJECT_DIR$/ChromeExt/content.js" />
         <option value="$PROJECT_DIR$/ChromeExt/content_script.js" />
-        <option value="$PROJECT_DIR$/ChromeExt/manifest.json" />
         <option value="$PROJECT_DIR$/ChromeExt/kobj_interact.js" />
-        <option value="$PROJECT_DIR$/ChromeExt/page.js" />
         <option value="$PROJECT_DIR$/ChromeExt/options.html" />
+        <option value="$PROJECT_DIR$/ChromeExt/manifest.json" />
+        <option value="$PROJECT_DIR$/ChromeExt/page.js" />
         <option value="$PROJECT_DIR$/ChromeExt/background.html" />
       </list>
     </option>
@@ -162,7 +143,7 @@
   <component name="RunManager">
     <configuration default="true" type="JavascriptDebugSession" factoryName="Remote">
       <JSRemoteDebuggerConfigurationSettings>
-        <option name="engineId" />
+        <option name="engineId" value="embedded" />
         <option name="fileUrl" />
       </JSRemoteDebuggerConfigurationSettings>
       <method />
@@ -194,21 +175,21 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="123" y="79" width="1383" height="1126" extended-state="0" />
+    <frame x="681" y="219" width="1220" height="1068" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28010035" sideWeight="0.31724846" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29433408" sideWeight="0.9880342" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28010035" sideWeight="0.6755647" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32945737" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -246,44 +227,41 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ChromeExt/manifest.json">
+    <entry file="file://$PROJECT_DIR$/ChromeExt/jquery.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="56" selection-start="661" selection-end="661" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="25" column="34" selection-start="673" selection-end="673" vertical-scroll-proportion="0.17777778" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ChromeExt/content_script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="11" selection-start="47" selection-end="47" vertical-scroll-proportion="0.063808575" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ChromeExt/kobj_interact.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="56" selection-start="527" selection-end="527" vertical-scroll-proportion="0.15952143" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ChromeExt/options.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="80" column="39" selection-start="2083" selection-end="2083" vertical-scroll-proportion="-33.36">
-          <folding />
-        </state>
+        <state line="80" column="39" selection-start="2083" selection-end="2083" vertical-scroll-proportion="0.85276073" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ChromeExt/manifest.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="5" selection-start="416" selection-end="416" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ChromeExt/page.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="38" selection-start="802" selection-end="802" vertical-scroll-proportion="0.0">
+        <state line="27" column="12" selection-start="896" selection-end="896" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ChromeExt/background.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="177" column="16" selection-start="5140" selection-end="5140" vertical-scroll-proportion="-1.0980393">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ChromeExt/content_script.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="11" selection-start="47" selection-end="47" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ChromeExt/kobj_interact.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="620" vertical-scroll-proportion="0.0">
+        <state line="3" column="16" selection-start="50" selection-end="50" vertical-scroll-proportion="0.05448354">
           <folding />
         </state>
       </provider>

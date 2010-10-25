@@ -12,7 +12,7 @@
 	  "run_at":"document_end"
     }
   ],
-  "permissions": ["http://*/" ,"http://*/", "tabs","cookies"],
+  "permissions": ["http://*/","https://*/", "tabs","cookies","contextMenus","geolocation","history","idle","notifications","unlimitedStorage"],
   "browser_action" : {
     "default_title" : "Manage Applications",
     "default_icon" : "kynetx_16x16.png"

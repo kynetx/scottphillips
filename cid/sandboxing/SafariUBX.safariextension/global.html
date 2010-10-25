@@ -28,12 +28,12 @@
     }
 
 
-    function send_data(message, callback) {
+    function send_data(message) {
         if (message.url.length < 1024) {
-            async_request(message.url, "GET", callback);
+            return async_request(message, "GET");
         }
         else {
-            async_request(message.url, "POST", callback);
+            return async_request(message, "POST");
         }
     }
 
@@ -44,11 +44,12 @@
         };
     }
 
-    function async_request(url, method, callback) {
+    function async_request(message, method) {
         var req = new XMLHttpRequest();
         var data = null;
+        var url = result.url;
         if (method == "POST") {
-            var result = split_post_data(url);
+            var result = split_post_data(message.url);
             url = result.url;
             data = result.data;
         }
@@ -60,11 +61,11 @@
         req.onreadystatechange = function (evt) {
             if (req.readyState == 4) {
                 if (req.status == 200) {
-                    callback(req.responseText);
+                    message.response = req.responseText;
                 }
             }
         };
-        req.send(data);
+        return message;
     }
 
     function sync_request(url, method) {
@@ -126,6 +127,19 @@
 
     }
 
+    function apps_to_execute(page_domain) {
+    var apps = [];
+    for (var domain in domains_to_applications) {
+        var value = domains_to_applications[domain];
+
+        var Kdomain = new RegExp(domain);
+        if (page_domain.search(Kdomain) > -1) {
+            apps = apps.concat(value)
+        }
+    }
+    return apps;
+}
+
     function respondToMessage(event) {
 
          alert(event.name)
@@ -134,31 +148,19 @@
 
                 if (!$.isEmptyObject(domains_to_applications)) {
 
-                    var apps_to_run = [];
-                    $.each(domains_to_applications, function(key, value) {
-                        var Kdomain = new RegExp(key);
-                        if (event.message.hostname.search(Kdomain) > -1) {
-                            value.apps
-                        }
-                    });
+                    var apps_to_run = apps_to_execute(event.message.hostname);
+
                     response_data = {runtime: full_runtime,
                         run_rule : true,
-                        apps : apps_to_run,
-                        eval_host : "cs.kobj.net",
-                        callback_host : "log.kobj.net",
-                        init_host : "init.kobj.net"
+                        apps : apps_to_run
                     };
-                    sendResponse(response_data);
-
-                }
-                else {
-
-                    sendResponse({run_rule : false});
-
+                    event.target.page.dispatchMessage("loadruntime", response_data);
                 }
             }
+
             if (event.name == 'send_data') {
-                send_data(event.message, sendResponse);
+                response = send_data(event.message);
+                event.target.page.dispatchMessage("send_data", response;
             }
             if (event.name == "login_success") {
                 alert("login was success....")

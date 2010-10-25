@@ -262,6 +262,7 @@ const WorkerGlobalScope = AsyncEventEmitter.compose({
   _evaluate: function(code, filename) {
     filename = filename || 'javascript:' + code;
     try {
+	  // console.error("eval in sandbox......")
       Cu.evalInSandbox(code, this._sandbox, JS_VERSION, filename, 1);
     }
     catch(e) {
