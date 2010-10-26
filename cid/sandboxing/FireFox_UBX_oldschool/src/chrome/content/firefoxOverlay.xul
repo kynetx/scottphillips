@@ -4,12 +4,20 @@
 <overlay id="kynetx-overlay"
          xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
   <script src="overlay.js"/>
+
+
   <stringbundleset id="stringbundleset">
     <stringbundle id="kynetx-strings" src="chrome://kynetx/locale/kynetx.properties"/>
   </stringbundleset>
 
+
+
   <menupopup id="menu_ToolsPopup">
-    <menuitem id="kynetx-toggle" label="&kynetx.label;" type="checkbox" checked="true"
-              oncommand="com.kynetx.toggle(event);" persist="checked" autocheck="false"/>
+    <menu id="kynetx_menu" label="Kynetx" insertafter="javascriptConsole,devToolsSeparator">
+      <menupopup id="kynetx_menu_popup">
+        <menuitem id="kynetx-toggle" label="What" oncommand="kynetx.what();"/>
+      </menupopup>
+    </menu>
   </menupopup>
+
 </overlay>

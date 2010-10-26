@@ -27,7 +27,25 @@
       <file leaf-file-name="overlay.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/chrome/content/overlay.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="6" selection-start="478" selection-end="478" vertical-scroll-proportion="-0.39055794">
+            <state line="137" column="32" selection-start="4788" selection-end="4788" vertical-scroll-proportion="0.56362087">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="gm.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/chrome/content/gm.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="40" column="76" selection-start="1045" selection-end="1045" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="firefoxOverlay.xul" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/chrome/content/firefoxOverlay.xul">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="38" selection-start="617" selection-end="634" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -39,6 +57,11 @@
     <FindUsagesManager>
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
+  </component>
+  <component name="Git.Settings">
+    <option name="GIT_EXECUTABLE" value="/opt/local/bin/git" />
+    <option name="CHECKOUT_INCLUDE_TAGS" value="false" />
+    <option name="UPDATE_CHANGES_POLICY" value="STASH" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
@@ -52,6 +75,8 @@
         <option value="$PROJECT_DIR$/src/content/overlay.js" />
         <option value="$PROJECT_DIR$/src/chrome.manifest" />
         <option value="$PROJECT_DIR$/src/chrome/defaults/preferences/qrcode.js" />
+        <option value="$PROJECT_DIR$/src/chrome/content/gm.js" />
+        <option value="$PROJECT_DIR$/src/chrome/content/firefoxOverlay.xul" />
         <option value="$PROJECT_DIR$/src/chrome/content/overlay.js" />
       </list>
     </option>
@@ -82,7 +107,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Favorites" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -157,14 +181,15 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Favorites" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="options.lastSelected" value="preferences.updates" />
-    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors.Font" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RunManager">
     <list size="0" />
@@ -183,6 +208,7 @@
     <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
     <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
     <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <configuration useDefault="true">$USER_HOME$/.subversion_IDEA</configuration>
     <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
   </component>
   <component name="TaskManager">
@@ -194,14 +220,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1043" y="334" width="1220" height="1068" extended-state="0" />
+    <frame x="873" y="78" width="1582" height="1294" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21822743" sideWeight="0.9979445" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18998717" sideWeight="0.99510604" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -251,23 +277,14 @@
         <state line="3" column="29" selection-start="175" selection-end="175" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/chrome/content/firefoxOverlay.xul">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="702" selection-end="702" vertical-scroll-proportion="0.26726058" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/install.rdf">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="51" selection-start="233" selection-end="233" vertical-scroll-proportion="0.06772487">
-          <folding />
-        </state>
+        <state line="4" column="51" selection-start="233" selection-end="233" vertical-scroll-proportion="0.06772487" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/chrome.manifest">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="213" selection-end="213" vertical-scroll-proportion="0.06772487">
-          <folding />
-        </state>
+        <state line="4" column="0" selection-start="213" selection-end="213" vertical-scroll-proportion="0.06772487" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/chrome/skin/overlay.css">
@@ -277,9 +294,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/chrome/locale/en-US/kynetx.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="48" selection-start="129" selection-end="129" vertical-scroll-proportion="0.05079365">
-          <folding />
-        </state>
+        <state line="3" column="48" selection-start="129" selection-end="129" vertical-scroll-proportion="0.05079365" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/chrome/locale/en-US/kynetx.dtd">
@@ -294,14 +309,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/chrome/defaults/preferences/qrcode.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="201" selection-end="201" vertical-scroll-proportion="0.05079365">
+        <state line="3" column="0" selection-start="201" selection-end="201" vertical-scroll-proportion="0.05079365" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/chrome/content/gm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="76" selection-start="1045" selection-end="1045" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/chrome/content/firefoxOverlay.xul">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="38" selection-start="617" selection-end="634" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/chrome/content/overlay.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="6" selection-start="478" selection-end="478" vertical-scroll-proportion="-0.39055794">
+        <state line="137" column="32" selection-start="4788" selection-end="4788" vertical-scroll-proportion="0.56362087">
           <folding />
         </state>
       </provider>

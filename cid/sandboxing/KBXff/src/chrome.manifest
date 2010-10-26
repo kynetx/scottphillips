@@ -1,4 +1,0 @@
-content	kynetx-a93x7	content/
-locale	kynetx-a93x7	en-US	locale/en-US/
-skin	kynetx-a93x7	classic/1.0	skin/
-overlay	chrome://browser/content/browser.xul	chrome://kynetx-a93x7/content/firefoxOverlay.xul

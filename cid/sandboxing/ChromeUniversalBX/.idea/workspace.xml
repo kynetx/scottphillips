@@ -21,21 +21,22 @@
   <component name="FavoritesManager">
     <favorites_list name="ChromeUniversalBX" />
   </component>
+  <component name="FileColors" enabled="true" enabledForTabs="true" showNonProject="false" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="background.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="background.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ChromeExt/background.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="16" selection-start="50" selection-end="50" vertical-scroll-proportion="0.05448354">
+            <state line="3" column="16" selection-start="50" selection-end="50" vertical-scroll-proportion="74.333336">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="page.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="page.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ChromeExt/page.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="12" selection-start="896" selection-end="896" vertical-scroll-proportion="0.0">
+            <state line="49" column="0" selection-start="1338" selection-end="4390" vertical-scroll-proportion="0.36051503">
               <folding />
             </state>
           </provider>
@@ -115,20 +116,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ChromeUniversalBX" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ChromeUniversalBX" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ChromeExt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Favorites" />
@@ -137,8 +124,8 @@
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.lastSelected" value="preferences.updates" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="JavascriptDebugSession" factoryName="Remote">
@@ -175,7 +162,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="681" y="219" width="1220" height="1068" extended-state="0" />
+    <frame x="664" y="136" width="1220" height="1068" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -252,16 +239,16 @@
         <state line="12" column="5" selection-start="416" selection-end="416" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ChromeExt/page.js">
+    <entry file="file://$PROJECT_DIR$/ChromeExt/background.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="12" selection-start="896" selection-end="896" vertical-scroll-proportion="0.0">
+        <state line="3" column="16" selection-start="50" selection-end="50" vertical-scroll-proportion="74.333336">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ChromeExt/background.html">
+    <entry file="file://$PROJECT_DIR$/ChromeExt/page.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="16" selection-start="50" selection-end="50" vertical-scroll-proportion="0.05448354">
+        <state line="49" column="0" selection-start="1338" selection-end="4390" vertical-scroll-proportion="0.36051503">
           <folding />
         </state>
       </provider>
