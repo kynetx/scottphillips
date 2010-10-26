@@ -1,23 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet href="chrome://kynetx/skin/overlay.css" type="text/css"?>
-<!DOCTYPE overlay SYSTEM "chrome://kynetx/locale/kynetx.dtd">
-<overlay id="kynetx-overlay"
-         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
-  <script src="overlay.js"/>
-
+<?xml-stylesheet type="text/css" href="chrome://kynetx/skin/overlay.css"?>
+<overlay id="kynetx-overlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 
   <stringbundleset id="stringbundleset">
     <stringbundle id="kynetx-strings" src="chrome://kynetx/locale/kynetx.properties"/>
   </stringbundleset>
 
 
+  <toolbarpalette id="BrowserToolbarPalette">
+    <toolbarbutton id="kynetx-toolbar-button"
+                   label="Kynetx Label"
+                   tooltiptext="Tip"
+                   class="" type="menu">
 
-  <menupopup id="menu_ToolsPopup">
-    <menu id="kynetx_menu" label="Kynetx" insertafter="javascriptConsole,devToolsSeparator">
-      <menupopup id="kynetx_menu_popup">
-        <menuitem id="kynetx-toggle" label="What" oncommand="kynetx.what();"/>
+      <menupopup>
+        <menu label="Menu item 1" type="group">
+          <menupopup>
+              <menuitem label="Menu item 3"/>
+              <menuitem label="Menu item 4"/>
+          </menupopup>
+        </menu>
+
+        <menuitem label="Menu item 2"/>
       </menupopup>
-    </menu>
-  </menupopup>
+    </toolbarbutton>
+  </toolbarpalette>
 
+
+  <script src="overlay.js"/>
 </overlay>

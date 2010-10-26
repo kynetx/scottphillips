@@ -105,16 +105,19 @@ kynetx = {
     what: function() {
         alert("what")
         try {
-        var menuItem = document.createElement("menuitem");
-        menuItem._commandFunc = function() {
-            alert("hi")
-        };
-        menuItem.setAttribute("label", "commandName");
-        menuItem.setAttribute("oncommand", "this._commandFunc()");
+            var menuItem = document.createElement("menuitem");
+            menuItem._commandFunc = function() {
+                alert("hi")
+            };
+            menuItem.setAttribute("label", "commandName");
+            menuItem.setAttribute("oncommand", "this._commandFunc()");
 
-        menu = document.getElementById("kynetx_menu_popup");
-        menu.appendChild(menuItem);}
-        catch(eee) {alert(eee.message)}
+            menu = document.getElementById("kynetx_menu_popup");
+            menu.appendChild(menuItem);
+        }
+        catch(eee) {
+            alert(eee.message)
+        }
         alert("added")
     },
     apps_to_execute: function(page_domain) {
@@ -317,6 +320,31 @@ kynetx = {
         ;
 
 
+//try {
+//    var firefoxnav = document.getElementById("nav-bar");
+//    var curSet = firefoxnav.currentSet;
+//    if (curSet.indexOf("my-extension-button") == -1) {
+//        var set;
+//        // Place the button before the urlbar
+//        if (curSet.indexOf("urlbar-container") != -1)
+//            set = curSet.replace(/urlbar-container/, "my-extension-button,urlbar-container");
+//        else  // at the end
+//            set = curSet + ",my-extension-button";
+//        firefoxnav.setAttribute("currentset", set);
+//        firefoxnav.currentSet = set;
+//        document.persist("nav-bar", "currentset");
+//        // If you don't do the following call, funny things happen
+//        try {
+//            BrowserToolboxCustomizeDone(true);
+//        }
+//        catch (e) {
+//        }
+//    }
+//}
+//catch(e) {
+//    alert(e.message)
+//}
+//
 //var myExtension = {
 //}
 //
@@ -330,4 +358,5 @@ kynetx = {
 window.addEventListener("load", function(e) {
     kynetx.onLoad(e);
 }, false);
+
 
