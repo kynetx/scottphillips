@@ -1,0 +1,8 @@
+<?xml version="1.0" ?><Devices>
+	<Device>
+		<name>TestLight</name>
+		<devType>Dimmer</devType>
+		<address>11.11.11</address>
+		<level>110</level>
+	</Device>
+</Devices>

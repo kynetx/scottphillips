@@ -1,0 +1,32 @@
+pyLights Release Notes
+
+v0.4 : (??)
+-Dotted hex addresses, e.g., '12.5F.5E', are now supported.
+-Basic software link management.
+-Rudimentary X10 support.
+-setLevel and getLevel have the option to use either direct levels (0-255) or 
+	percent.  Device status is now stored as a direct level.
+
+
+v0.3 : (August 29, 2010)
+-Supports commands over a socket interface.
+-The device file is now automatically updated by asynchronous events from
+	devices linked to the PLM.
+-Support for named serial ports like /dev/ttyUSB0 (thanks to bradfritz).
+-Instantiating plm without a port will scan all available ports until a PLM is
+	found.
+-Fixed a bug in 'findDevAddress()' that caused it to always return the last 
+	index.
+
+
+v0.2 : (August 5, 2010)
+-Asynchronous serial events, such as those from when a dimmer toggle switch is 
+	pressed, are now handled by a serial receive thread. This allows for 
+	immediate updating of device status in the XML file, though this is not yet
+	implemented.
+-Commands can now be issued by address without the use of a device file.
+
+
+v0.1 : 
+-Original release
+
