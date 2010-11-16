@@ -34,6 +34,8 @@ KNS.prototype.signal = function(eventname, context) {
 	  data: context,
 	}).addListener('complete', function(data, response) {
 		//parse json response
+		//emit a rawresponse event that can be used to display full kns response
+		//sys.puts(data);
 		var regex_sc1 = /(^[\/]{2}[^\n]*)|([\n]{1,}[\/]{2}[^\n]*)/g;
 		nocomments = data.replace(regex_sc1, "");
 		ddoc = JSON.parse(nocomments);

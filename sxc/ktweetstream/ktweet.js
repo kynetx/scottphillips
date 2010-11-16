@@ -1,4 +1,6 @@
 var tweetstream = require('tweetstream'),
+	_ = require('underscore')._,
+	TwitterNode = require('twitter-node').TwitterNode,
     sys = require('sys'),
     csv = require('node-csv'),
 	knsevents = require('./kns-events'),
@@ -21,30 +23,46 @@ kns.on("sampledirective", function(eventargs){
 
 kns.signal("myevent", {'eventarg':'argvalue'});
 */
-function loadAppConfig(stepcb){
+function loadAppConfig(){
 	rest.get('http://spreadsheets.google.com/feeds/list/0AnlnYGPgot9PdEgzVUxmNm9ya1BHbnFGamt3dEphT1E/1/public/values?alt=json').addListener('complete', function(data, response){
+		newapps = [];
 		//translate into something nicer
 		async.forEach(data.feed.entry, function(i, cb){
-			apps[i['gsx$appid']['$t']] = {
+			newapps[i['gsx$appid']['$t']] = {
 					'keywords':i['gsx$keywords']['$t'],
 					'users':i['gsx$users']['$t'],
 			};
 			cb();
 		}, function(err){
 			if(err) sys.puts("error:" + err);
-			sys.puts(sys.inspect(apps));
-			stepcb();
+			//compare to see if config is different
+			if(!_.isEqual(apps, newapps)){
+				//config is new
+				apps = newapps;
+				sys.puts(sys.inspect(apps));
+				//invert keywords
+				invertKeywords(function(){
+					restartTweetStream(function(){
+						sys.puts("TweetStream Restarted\n\n\n");
+					});
+				});	
+			} else {
+				//config isn't different
+				sys.puts("No Config Changes Detected. No Stream restart required.");
+			}
+			
 		});
 		
 	});	
 }
 
 function invertKeywords(stepcb){
+	newkeywords = [];
 	async.forEach(Object.keys(apps), function(appid, appcb){
 	  appkeywords = apps[appid].keywords.split(",");
 	  async.forEach(appkeywords, function(keyword, cb){
-		 if(!keywords[keyword]) keywords[keyword] = [];
-		 keywords[keyword].push(appid);
+		 if(!newkeywords[keyword]) newkeywords[keyword] = [];
+		 newkeywords[keyword].push(appid);
 		 cb();
 	  }, function(err){
 		  //done or error
@@ -52,20 +70,18 @@ function invertKeywords(stepcb){
 		  appcb();
 	  });
 	}, function(err, results){
+		keywords = newkeywords;
 		sys.puts(sys.inspect(keywords));
 		stepcb();
 	});
 }
 
-function startTweetStream(stepcb){
+function restartTweetStream(stepcb){
 	tracklist = Object.keys(keywords);
 	
-	stream = tweetstream.createTweetStream({ 
-		username:"TelegramSam",
-        password:"4ichabod5",
-		track: tracklist,
-    });
-	stream.addListener("tweet", processTweet);
+	twit.trackKeywords = tracklist;
+	
+	twit.stream();
 	
 	stepcb();
 }
@@ -81,9 +97,7 @@ function tokenizeTweet(tweettext){
 	return matches;
 }
 function processTweet(tweet){
-	//do stuff with tweet
-	dump(tweet.text);
-
+	dump(tweet);
 	tokens = tokenizeTweet(tweet.text);
 	
 	appstruct = {};
@@ -97,39 +111,40 @@ function processTweet(tweet){
 	applist = Object.keys(appstruct);
 
 	dump(applist);
+	//signal events for each app in applist
+	for(a in applist){
+		appid = applist[a];
+		kns = new knsevents(appid, {
+			'appversion': 'dev',
+			'eventdomain': 'twitter',
+		});
+		kns.signal("tweet", {
+			'text':tweet.text,
+			'inreplytoscreenname':tweet.in_reply_to_screen_name,
+			'client':tweet.source,
+			'name':tweet.user.name,
+			'screenname':tweet.user.screen_name,
+			'userlocation':tweet.user.location,
+		});
+	}
+
 	
 }
 
 //global vars config
-
 apps = {};
 keywords = {};
-//kick it off
-async.series([loadAppConfig, invertKeywords, startTweetStream]);
-
-/*
-var stream = tweetstream.createTweetStream({ username:"TelegramSam"
-                                           , password:"4ichabod5" 
-										   , track: ["kynetx","webhook","iiw"]
-                                           });
-stream.addListener("tweet", function (tweet) {
-		//sys.puts(sys.inspect(tweet));
-		//saveTweet(tweet);
+//stream object
+twit = new TwitterNode({ 
+	user:"TelegramSam",
+    password:"4ichabod5",
+	track: [],
 });
+twit.addListener("tweet", processTweet);
+//kick it off
+loadAppConfig();
+//schedule regular config reloads
+seconds = 1000;
+minutes = 60*seconds;
+setInterval(loadAppConfig, 5*minutes);
 
-function saveTweet(tweet){
-	rest.post('http://spreadsheets.google.com/formResponse?formkey=dGY1RndBLWNHaFhlMmtGMnZUTjBGN3c6MQ&amp;ifq', {
-	  data: { 
-	  	  'entry.0.single': tweet.text
-		, 'entry.1.single': tweet.user.screen_name
-		, 'entry.2.single': tweet.user.name
-		, 'entry.3.single': tweet.user.followers_count
-		, 'entry.4.single': tweet.user.location
-		
-		},
-	}).addListener('complete', function(data, response) {
-	  //do nothing.
-	});
-}
-
-*/
