@@ -40,8 +40,9 @@ KNS.prototype.signal = function(eventname, context) {
 		nocomments = data.replace(regex_sc1, "");
 		ddoc = JSON.parse(nocomments);
 
-		async.forEachSeries(ddoc['directives'], function(d){
+		async.forEachSeries(ddoc['directives'], function(d, cb){
 			self.emit(d['name'], d['options']);
+			cb();//keep iterating
 		}, function(err){
 			//all methods are done.
 		});
