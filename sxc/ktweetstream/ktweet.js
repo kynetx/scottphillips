@@ -136,8 +136,8 @@ apps = {};
 keywords = {};
 //stream object
 twit = new TwitterNode({ 
-	user:"TelegramSam",
-    password:"4ichabod5",
+	user:"scottphillipsut",
+    password:"Kynetx123$",
 	track: [],
 });
 twit.addListener("tweet", processTweet);
