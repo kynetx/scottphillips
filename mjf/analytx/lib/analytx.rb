@@ -1,2 +1,2 @@
-require 'sql'
-require 'query'
+require 'analytx/sql'
+require 'analytx/query'
