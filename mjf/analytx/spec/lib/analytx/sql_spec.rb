@@ -1,4 +1,4 @@
-require "../lib/analytx"
+require "lib/analytx"
 require "rubygems"
 require 'active_support/ordered_hash'
 
