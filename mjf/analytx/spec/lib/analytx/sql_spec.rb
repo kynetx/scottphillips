@@ -1,17 +1,17 @@
 require "lib/analytx"
 require "rubygems"
-require 'active_support/ordered_hash'
+require 'dictionary'
 
 describe ANALYTX::SQL do
   before :all do
     kpis = [:rse, :brse]
     dims =  [:login, :email, :day, :ruleset]
-    valid_conditions = ActiveSupport::OrderedHash.new
-    valid_conditions.merge!({
-      :range => "current_day",
-      :where_login => "mikefarmer",
-      :where_ruleset => "a18x23"
-    })
+    # Using a dictionary here, which acts like a Hash, to maintain an 
+    # ordered hash so that the tests will be predictable.
+    valid_conditions = Dictionary.new
+    valid_conditions[:range] = "current_day"
+    valid_conditions[:where_account_id] = "18"
+    valid_conditions[:where_ruleset] = "a18x23"
     @valid_join = ANALYTX::SQL.joins("FACT_KNS_TOTALS", "DIM_ACCOUNTS", "DIM_RULESET_IDS", "DIM_DATE")
     @valid_select = ANALYTX::SQL.select(kpis, dims)
     @valid_from = ANALYTX::SQL.from(kpis, dims, valid_conditions)
@@ -40,7 +40,7 @@ JOIN `DIM_DATE` ON `DIM_DATE`.`DATE_KEY` = `FACT_KNS_TOTALS`.`DATE_KEY`
     @where_stmt = <<-SQL
 WHERE
 `DIM_DATE`.`IS_CURRENT_DAY` = '1'
-AND `DIM_ACCOUNTS`.`LOGIN` = 'mikefarmer'
+AND `DIM_ACCOUNTS`.`ACCOUNT` = '18'
 AND `DIM_RULESET_IDS`.`RULESET_ID` = 'a18x23'
     SQL
 
@@ -69,121 +69,132 @@ GROUP BY
 
   # SELECT
 
-  it "should not throw an exception on a valid select" do
-    lambda { @valid_select }.should_not raise_exception
-  end
+  describe "SELECT" do 
+    #it "should not throw an exception on a valid select" do
+      #lambda { @valid_select }.should_not raise_exception
+    #end
 
-  it "should return a valid select" do
-    @valid_select.should eql @select_stmt
-  end
+    it "should return a valid select" do
+      @valid_select.should eql @select_stmt
+    end
 
-  it "should validate dims and kpis" do
-    kpis = [:rse, :ruleset]
-    lambda {ANALYTX::SQL.select(kpis, [])}.
-      should raise_exception(Exception, "Invalid columns.")
-    
-    dims = [:rse, :login]
-    lambda {ANALYTX::SQL.select([], dims)}.
-      should raise_exception(Exception, "Invalid columns.")
-    
-  end
+    it "should validate dims and kpis" do
+      kpis = [:rse, :ruleset]
+      lambda {ANALYTX::SQL.select(kpis, [])}.
+        should raise_exception(Exception, "Invalid columns.")
+      
+      dims = [:rse, :login]
+      lambda {ANALYTX::SQL.select([], dims)}.
+        should raise_exception(Exception, "Invalid columns.")
+      
+    end
 
-  it "should put a 0 as a KPI that isn't in the fact table" do
-    1.should eql 2
-  end
+    it "should put a 0 as a KPI that isn't in the fact table" do
+      pending "adding support for multiple fact tables"
+      # 1.should eql 2
+    end
   
+  end
 
   # FROM
+  describe "FROM" do
 
-  it "should not throw an exception on a valid from" do
-    lambda { @valid_select }.should_not raise_exception
-  end
+    #it "should not throw an exception on a valid from" do
+      #lambda { @valid_select }.should_not raise_exception
+    #end
 
-  it "should return a valid from statement" do
-    @valid_from.should eql @from_stmt
-  end
-  
-  it "should include all tables in both SELECT and WHERE" do
-    kpis = [:rse]
-    dims = [:day, :ruleset]
-    valid_conditions = {:where_login => "mikefarmer"}
+    it "should return a valid from statement" do
+      @valid_from.should eql @from_stmt
+    end
+    
+    it "should include all tables in both SELECT and WHERE" do
+      kpis = [:rse]
+      dims = [:day, :ruleset]
+      valid_conditions = {:where_login => "mikefarmer"}
 
-     ANALYTX::SQL.from(kpis, dims, valid_conditions).
-       should eql @from_stmt 
-
+      ANALYTX::SQL.from(kpis, dims, valid_conditions).
+        should eql @from_stmt 
+    end
 
   end
 
   # JOIN
- 
-  it "should not throw an exception on a valid join" do
-    lambda { @valid_join }.should_not raise_exception
-  end
-  
-  it "should only allow a fact table as the first argument" do
-    lambda { ANALYTX::SQL.joins('FACT_KNS_TOTALS', "FAKE")}.
-      should_not raise_exception(Exception, /First table.*/)
-    lambda { ANALYTX::SQL.joins('DIM_ACCOUNTS', "FAKE")}.
-      should raise_exception(Exception, /First table.*/)
-  end
-
-  it "should take a series of at least 1 dimension" do
-
-    lambda { ANALYTX::SQL.joins("FACT_KNS_TOTALS", "DIM_ACCOUNTS", "FACT_KNS_TOTALS")}.
-      should raise_exception(Exception, /Invalid dimensions passed.*/)
-
-    lambda { ANALYTX::SQL.joins("FACT_KNS_TOTALS", "DIM_ACCOUNTS", "FAKE")}.
-      should raise_exception(Exception, /Invalid dimensions passed.*/)
-
-    lambda { ANALYTX::SQL.joins("FACT_KNS_TOTALS")}.
-      should raise_exception(Exception, "Must pass at least 2 arguments.")
-
-  end
-
-
-
-  it "should return a valid join statement" do
-    @valid_join.should eql @join_stmt  
-  end
-
-  # WHERE
-
-  it "should return a valid where statement" do
-    lambda { @valid_where }.should_not raise_exception
-    @valid_where.should eql @where_stmt
-  end
-
-  it "should require a where_login condition" do
-    conditions = {
-      :where_email => 'some@email'
-    }
-
-    lambda { ANALYTX::SQL.where(conditions) }.
-      should raise_exception(Exception, "Error: where_login parameter is required.")
-
-  end
-
-  it "all where_ conditions should map to a column" do
-    conditions = {
-      :where_login => "mikefarmer",
-      :where_flippy => 100
-    }
-
-    lambda { ANALYTX::SQL.where(conditions) }.
-      should raise_exception(Exception, /Error: Undefined parameter.*/)
+  describe "JOIN" do
+   
+    it "should not throw an exception on a valid join" do
+      lambda { @valid_join }.should_not raise_exception
+    end
     
+    it "should only allow a fact table as the first argument" do
+      lambda { ANALYTX::SQL.joins('FACT_KNS_TOTALS', "FAKE")}.
+        should_not raise_exception(Exception, /First table.*/)
+      lambda { ANALYTX::SQL.joins('DIM_ACCOUNTS', "FAKE")}.
+        should raise_exception(Exception, /First table.*/)
+    end
 
+    it "should take a series of at least 1 dimension" do
+
+      lambda { ANALYTX::SQL.joins("FACT_KNS_TOTALS", "DIM_ACCOUNTS", "FACT_KNS_TOTALS")}.
+        should raise_exception(Exception, /Invalid dimensions passed.*/)
+
+      lambda { ANALYTX::SQL.joins("FACT_KNS_TOTALS", "DIM_ACCOUNTS", "FAKE")}.
+        should raise_exception(Exception, /Invalid dimensions passed.*/)
+
+      lambda { ANALYTX::SQL.joins("FACT_KNS_TOTALS")}.
+        should raise_exception(Exception, "Must pass at least 2 arguments.")
+
+    end
+
+
+
+    it "should return a valid join statement" do
+      @valid_join.should eql @join_stmt  
+    end
   end
 
+    # WHERE
+  describe "WHERE" do
+
+    it "should return a valid where statement" do
+      lambda { @valid_where }.should_not raise_exception
+      @valid_where.should eql @where_stmt
+    end
+
+    it "should require a where_account_id condition" do
+      conditions = {
+        :where_email => 'some@email'
+      }
+
+      lambda { ANALYTX::SQL.where(conditions) }.
+        should raise_exception(Exception, "Error: where_account_id parameter is required.")
+
+    end
+
+    it "all where_ conditions should map to a column" do
+      conditions = {
+        :where_account_id => "18",
+        :where_flippy => 100
+      }
+
+      lambda { ANALYTX::SQL.where(conditions) }.
+        should raise_exception(Exception, /Error: Undefined parameter.*/)
+      
+
+    end
+
+  end
 
   # GROUP BY
-  
-  it "should return a valid group by clause" do
-    @valid_group_by.should eql @group_by_stmt.chomp
-  end
+  describe 'GROUP BY' do
+    
+    it "should return a valid group by clause" do
+      @valid_group_by.should eql @group_by_stmt.chomp
+    end
 
-  it "show not throw an exception with a valid group by" do
-    lambda { @valid_group_by }.should_not raise_exception
+    it "show not throw an exception with a valid group by" do
+      lambda { @valid_group_by }.should_not raise_exception
+    end
+
   end
 
 
@@ -196,11 +207,11 @@ GROUP BY
   # DEFINITIONS
 
   it "should not allow two column names from the same table" do
-    1.should eql 2
+    pending "definition validation"
   end
 
   it "should only have one definition for each table" do
-    1.should eql 2
+    pending "definition validation"
   end
 
 end

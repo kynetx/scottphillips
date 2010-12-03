@@ -1,8 +1,8 @@
 GEM
   remote: http://rubygems.org/
   specs:
-    activesupport (2.3.8)
     configuration (1.2.0)
+    dictionary (1.0.0)
     diff-lcs (1.1.2)
     growl (1.0.3)
     guard (0.2.2)
@@ -14,6 +14,7 @@ GEM
     launchy (0.3.7)
       configuration (>= 0.0.5)
       rake (>= 0.8.1)
+    mysql2 (0.2.6)
     open_gem (1.4.2)
       launchy (~> 0.3.5)
     rack (1.2.1)
@@ -28,6 +29,8 @@ GEM
       diff-lcs (~> 1.1.2)
     rspec-mocks (2.2.0)
     sequel (3.18.0)
+    shotgun (0.8)
+      rack (>= 1.0)
     sinatra (1.1.0)
       rack (~> 1.1)
       tilt (~> 1.1)
@@ -38,12 +41,14 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  activesupport (= 2.3.8)
+  dictionary
   growl
   guard
   guard-rspec
   json (~> 1.4.0)
+  mysql2
   rb-fsevent
   rspec (>= 2.0.0)
   sequel
+  shotgun
   sinatra
