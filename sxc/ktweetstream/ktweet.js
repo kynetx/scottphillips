@@ -141,6 +141,24 @@ twit = new TwitterNode({
 	track: [],
 });
 twit.addListener("tweet", processTweet);
+//Make sure you listen for errors, otherwise
+//they are thrown
+twit.addListener('error', function(error) {
+	sys.puts("ERROR:" + error.message);
+	console.log(error.message);
+});
+
+twit.addListener('limit', function(limit) {
+    sys.puts("LIMIT: " + sys.inspect(limit));
+  })
+
+twit.addListener('delete', function(del) {
+    sys.puts("DELETE: " + sys.inspect(del));
+  })
+
+twit.addListener('end', function(resp) {
+    sys.puts("END: " + resp.statusCode);
+  })
 //kick it off
 loadAppConfig();
 //schedule regular config reloads
