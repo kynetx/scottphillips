@@ -19,7 +19,7 @@ module ANALYTX
 
     def db
       return @db if @db
-      @db = Sequel.connect({:adapter => 'mysql', :database => 'ANALYTX', :logger => log}.merge(settings.data_warehouse))
+      @db = Sequel.connect({:adapter => 'mysql2', :database => 'ANALYTX', :logger => log}.merge(settings.data_warehouse))
     end
 
     def validate_query

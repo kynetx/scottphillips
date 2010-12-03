@@ -1,0 +1,54 @@
+GEM
+  remote: http://rubygems.org/
+  specs:
+    configuration (1.2.0)
+    dictionary (1.0.0)
+    diff-lcs (1.1.2)
+    growl (1.0.3)
+    guard (0.2.2)
+      open_gem (~> 1.4.2)
+      thor (~> 0.14.3)
+    guard-rspec (0.1.9)
+      guard (>= 0.2.2)
+    json (1.4.6)
+    launchy (0.3.7)
+      configuration (>= 0.0.5)
+      rake (>= 0.8.1)
+    mysql2 (0.2.6)
+    open_gem (1.4.2)
+      launchy (~> 0.3.5)
+    rack (1.2.1)
+    rake (0.8.7)
+    rb-fsevent (0.3.9)
+    rspec (2.2.0)
+      rspec-core (~> 2.2)
+      rspec-expectations (~> 2.2)
+      rspec-mocks (~> 2.2)
+    rspec-core (2.2.1)
+    rspec-expectations (2.2.0)
+      diff-lcs (~> 1.1.2)
+    rspec-mocks (2.2.0)
+    sequel (3.18.0)
+    shotgun (0.8)
+      rack (>= 1.0)
+    sinatra (1.1.0)
+      rack (~> 1.1)
+      tilt (~> 1.1)
+    thor (0.14.6)
+    tilt (1.1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  dictionary
+  growl
+  guard
+  guard-rspec
+  json (~> 1.4.0)
+  mysql2
+  rb-fsevent
+  rspec (>= 2.0.0)
+  sequel
+  shotgun
+  sinatra

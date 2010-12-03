@@ -30,6 +30,10 @@ module ANALYTX
         
       end
 
+      def valid
+        true
+      end
+
 
       private 
 
