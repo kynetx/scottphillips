@@ -4,6 +4,7 @@ module ANALYTX
     COLUMNS = [
       {:name => :login, :table => "DIM_ACCOUNTS", :column => "LOGIN", :type => :dimension},
       {:name => :email, :table => "DIM_ACCOUNTS", :column => "EMAIL", :type => :dimension},
+      {:name => :account_id, :table => "DIM_ACCOUNTS", :column => "ACCOUNT", :type => :dimension},
       {:name => :callback_info, :table => "DIM_CALLBACK_INFO", :column => "CALLBACK_INFO", :type => :dimension},
       {:name => :callback_sense, :table => "DIM_CALLBACK_SENSES", :column => "CALLBACK_SENSE", :type => :dimension},
       {:name => :callback_type, :table => "DIM_CALLBACK_TYPES", :column => "CALLBACK_TYPE", :type => :dimension},
@@ -165,11 +166,14 @@ module ANALYTX
 
 
     # conditions is a hash that looks like this:
-    # {:where_login => "some_login",
+    # {:where_account_id => "999",
     #  :where_ruleset => "a999x9999",
     #  :range => "current_day"}
-    def self.where(conditions)
-      raise "Error: where_login parameter is required." unless conditions[:where_login] && conditions[:where_login].length > 1
+    def self.where(conditions, login_required=true)
+      if login_required
+        raise "Error: where_account_id parameter is required." unless 
+          conditions[:where_account_id] && conditions[:where_account_id].length > 1
+      end
       
       condition_cols = get_condition_columns(conditions)
 
@@ -219,7 +223,7 @@ module ANALYTX
       found_range = false
       conditions.each do |k,v|
         if k.to_s.start_with? "where"
-          field_name = k.to_s.split("_").last
+          field_name = k.to_s.gsub("where_", "")
           col = COLUMNS.select {|c| c[:name] == field_name.to_sym && c[:type] = :dimension}.first
           raise "Error: Undefined parameter (#{field_name})." unless col
           col[:value] = v
