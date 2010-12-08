@@ -3,6 +3,11 @@
 		<name>TestLight</name>
 		<devType>Dimmer</devType>
 		<address>11.11.11</address>
-		<level>110</level>
+		<level>255</level>
+	</Device>
+	<Device>
+		<name>PLM</name>
+		<devType>PLM</devType>
+		<address>AA.AA.AA</address>
 	</Device>
 </Devices>
