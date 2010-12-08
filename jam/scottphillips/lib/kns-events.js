@@ -1,7 +1,7 @@
 var events = require("events"),
 	sys = require('sys'),
 	async = require('async'),
-    rest = require('./restler/lib/restler');
+    rest = require('restler');
 
 module.exports = KNS;
 
@@ -30,28 +30,26 @@ KNS.prototype.signal = function(eventname, context) {
 		context[''+this._appid+':kynetx_app_version'] = self._appversion;
 	}
 
-  try {
-    rest.post(url, {
-      data: context,
-    }).addListener('complete', function(data, response) {
-      //parse json response
-      //emit a rawresponse event that can be used to display full kns response
-      //sys.puts(data);
-      var regex_sc1 = /(^[\/]{2}[^\n]*)|([\n]{1,}[\/]{2}[^\n]*)/g;
-      nocomments = data.replace(regex_sc1, "");
-      ddoc = JSON.parse(nocomments);
+  rest.post(url, {
+    data: context,
+  }).addListener('complete', function(data, response) {
+    //parse json response
+    //emit a rawresponse event that can be used to display full kns response
+    //sys.puts(data);
+    var regex_sc1 = /(^[\/]{2}[^\n]*)|([\n]{1,}[\/]{2}[^\n]*)/g;
+    nocomments = data.replace(regex_sc1, "");
+    ddoc = JSON.parse(nocomments);
 
-      async.forEachSeries(ddoc['directives'], function(d,cb){
-        console.log("Calling",d['name'], " with ", JSON.stringify(d['options']));
-        self.emit(d['name'], d['options']);
-        cb();
-      }, function(err){
-        //all methods are done.
-      });
+    async.forEachSeries(ddoc['directives'], function(d,cb){
+      console.log("Calling",d['name'], " with ", JSON.stringify(d['options']));
+      self.emit(d['name'], d['options']);
+      cb();
+    }, function(err){
+      //all methods are done.
     });
-  } catch(error){
-    self.emit("error", error);
-  }
+  }).addListener('error', function(data, response) {
+      console.log("error")
+  });
 };
 
 KNS.prototype.appid = function(newappid) {

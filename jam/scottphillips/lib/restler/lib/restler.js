@@ -36,9 +36,7 @@ function Request(url, options) {
   
   this._applyBasicAuth();
   
-  this.client = this._getClient(this.url.port, this.url.domain);
-  
-  this._applySSL();
+  this.client = this._getClient(this.url.port, this.url.domain, (this.url.protocol == 'https'));
   
   if (this.options.multipart) this._createMultipartRequest();
   else this._createRequest();
@@ -55,15 +53,6 @@ var requestMethods = {
     if (this.url.query) path += '?' + this.url.query;
     return path;
   },
-  _applySSL: function() {
-    if (this.url.protocol == 'https') {
-      try {
-        this.client.setSecure("X509_PEM");
-      } catch(e) {
-        sys.puts('WARNING: SSL not supported in your version of node JS');
-      }
-    }
-  },
   _applyBasicAuth: function() {
     // use URL credentials over options
     if (this.url.user) this.options.username = this.url.user;
@@ -74,8 +63,8 @@ var requestMethods = {
       this.headers['Authorization'] = "Basic " + auth;
     }
   },
-  _getClient: function(port, host) {
-    return this.options.client || http.createClient(port, host);
+  _getClient: function(port, host, https) {
+    return this.options.client || http.createClient(port, host, https);
   },
   _responseHandler: function(response) {
     var self = this;
@@ -204,13 +193,13 @@ var parsers = {
     return data;
   },
   xml: function(data) {
-    return x2j.parse(data);
+    return data && x2j.parse(data);
   },
   json: function(data) {
-    return JSON.parse(data);
+    return data && JSON.parse(data);
   },
   yaml: function(data) {
-    return yaml.eval(data);
+    return data && yaml.eval(data);
   }
 }
 

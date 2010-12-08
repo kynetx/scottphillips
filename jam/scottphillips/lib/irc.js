@@ -57,7 +57,6 @@ Client.prototype.connect = function(nick, user, real) {
 Client.prototype.disconnect = function(why) {
   if (this.connection.readyState !== 'closed') {
     this.connection.close();
-    sys.puts('disconnected (reason: '+why+')');
     this.emit('DISCONNECT', why);
   }
 };
@@ -75,7 +74,6 @@ Client.prototype.send = function(arg1) {
   }
   message = message.join(' ');
 
-  sys.puts('> '+message);
   message = message + "\r\n";
   this.connection.write(message, this.encoding);
 };
@@ -123,7 +121,6 @@ Client.prototype.onReceive = function(chunk) {
   
     var message = this.buffer.substr(0, offset);
     this.buffer = this.buffer.substr(offset + 2);
-    sys.puts('< '+message);
 
     message = this.parse(message);
 
