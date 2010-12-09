@@ -22,6 +22,7 @@ KNS.prototype = Object.create(events.EventEmitter.prototype, {
 });
 
 KNS.prototype.signal = function(eventname, context) {
+	context = context  || {};
 	var self = this;
 	var url = 'http://cs.kobj.net/blue/event/'+this._eventdomain+'/'+eventname+'/'+this._appid+'/';
 

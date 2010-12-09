@@ -26,6 +26,4 @@ client.addListener('pm', function (nick, text) {
 	sys.puts(matcharray);
 });
 
-client.say('#kynetx', "I'm a bot!");
-
 sys.puts("Script Complete!");
