@@ -17,7 +17,7 @@
 
 import serial
 import socket, select
-from time import sleep
+from time import sleep, time
 import threading, Queue
 from xml.dom.minidom import parse,Document
 
@@ -242,6 +242,57 @@ class deviceFile:
 		self.doc.writexml(file)
 		file.close()
 
+class commandsFile:
+	'''
+	Handles XML device file access.  This is normally instantiated by a PLM 
+	object.
+	'''
+	def __init__(self, filename):
+		try:
+			if filename is not None:
+				try:
+					file = open(filename)
+				except IOError:
+					raise Exception('Cannot find device (XML) file: %s.' % filename)
+				else:
+					self.doc = parse(file)
+					file.close()
+					self.filename = filename
+					self.dev = self.doc.getElementsByTagName('Commands')
+					self.numCommands = self.dev.length
+			else:
+				self.filename = None
+				self.numCommands = 0
+		except:
+			raise
+			#self.filename = None
+			
+	
+	def getCommandFromHex(self, hex_code):
+		'''
+		Returns the device address given an index into the device list.
+		'''
+		commandEls = self.doc.getElementsByTagName('Command')
+		for commandIndex, command in enumerate(commandEls):
+			hexnum = command.getElementsByTagName('hex').item(0).firstChild.data
+			if hexnum == hex(hex_code):
+				return command.getElementsByTagName('name').item(0).firstChild.data
+
+			
+		return None
+	
+	def getCommandNumFromHex(self, hex_code):
+		'''
+		Returns the device address given an index into the device list.
+		'''
+		commandEls = self.doc.getElementsByTagName('Command')
+		for commandIndex, command in enumerate(commandEls):
+			hexnum = command.getElementsByTagName('hex').item(0).firstChild.data
+			if hexnum == hex(hex_code):
+				return command.getElementsByTagName('number').item(0).firstChild.data
+
+			
+		return None
 
 class plm:
 	'''
@@ -1172,8 +1223,10 @@ class AsyncEventThread(threading.Thread):
 		threading.Thread.__init__(self)
 		self.setDaemon(True)
 		self.plm_obj = plm_obj
-		self.last_cmd = None
+		self.last_cmd = [0x00, 0x00]
 		self.last_addr = None
+		self.time_came = 0
+		self.last_to = None
 		self.listeners = []
 		self.start()
 		
@@ -1185,8 +1238,9 @@ class AsyncEventThread(threading.Thread):
 			msg_q = self.plm_obj.async_q.get()
 			self.parse_async_event(msg_q.msg)
 			#now call any subscribed methods
-			for l in self.listeners:
-				l(msg_q.msg)
+			if not self.dup:
+				for l in self.listeners:
+					l(msg_q.msg, self.last_addr, self.last_cmd)
 
 
 	def parse_async_event(self, data):
@@ -1198,27 +1252,36 @@ class AsyncEventThread(threading.Thread):
 		btn = data[7]
 		flags = data[8]
 		cmd1 = data[9]
-		cmd2 = data[10]		
-		#'''
-		print
-		print('Received async info from %02X.%02X.%02X' 
-			% (data[2], data[3], data[4]))
-		print('  Intended for %02X.%02X.%02X' 
-			% (data[5], data[6], data[7]))
-		print('  Message flags: 0x%02X' % flags)
-		print('  Cmd1: 0x%02X' % cmd1)
-		print('  Cmd2: 0x%02X' % cmd2)
-		print
+		cmd2 = data[10]
+		time_came = time()
 
+		#'''
 		if self.plm_obj.verbose:
+			print
+			print('Received async info from %02X.%02X.%02X' 
+				% (data[2], data[3], data[4]))
+			print('  Intended for %02X.%02X.%02X' 
+				% (data[5], data[6], data[7]))
+			print('  Message flags: 0x%02X' % flags)
+			print('  Cmd1: 0x%02X' % cmd1)
+			print('  Cmd2: 0x%02X' % cmd2)
+			print
+
 			print ('RX_ASYNC : %s' % self.plm_obj.list_to_hex(data))
 		
-		if self.last_cmd == cmd1 and self.last_addr == from_addr:
+		if self.last_cmd[0] == cmd1 and self.last_addr == from_addr and ((time_came - self.time_came) < 1):
 			# Do not process redundant group messages
 			#print ('Redundant info')
+			self.dup = True
 			return		
+		else:
+			self.dup = False
+
 		self.last_addr = from_addr
-		self.last_cmd = cmd1
+		self.last_to_addr = to_addr
+		self.last_cmd[0] = data[9]
+		self.last_cmd[1] = data[10]
+		self.time_came = time_came
 		
 		sleep(0.3)
 
