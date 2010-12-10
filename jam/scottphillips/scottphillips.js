@@ -6,7 +6,7 @@ var fs = require('fs');
 var path = require('path');
 
 /* kynetx lib/setup */
-var knsevents = require('./lib/kns-events.js');
+var knsevents = require('kns');
 
 kns = new knsevents('a41x140', {
   'appversion': 'dev',
@@ -56,23 +56,16 @@ client.addListener('DISCONNECT', function() {
 });
 
 client.addListener('PRIVMSG', function(prefix, channel, text) {
-  switch (text) {
-    case '!source':
-    case '!src':
-      this.send('PRIVMSG', channel, ':Source is here: '+config.srcUrl);
-      break;
-    case '!logs':
-    case '!log':
-      this.send('PRIVMSG', channel, ':Logs are here: '+config.logUrl);
-      break;
-  }
-
   var user = irc.user(prefix);
 
   kns.signal("recieved", {'text':text,'channel':channel,'user':user});
-
 });
 
+kns.on("error", function(error){
+  console.log("ERROR:");
+  console.log(error);
+  client.send("PRIVMSG", config.channel, ":There was an error connecting to KNS");
+});
 
 kns.on("say", function(eventargs){
   if(eventargs.to && eventargs.text){
