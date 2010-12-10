@@ -1,7 +1,7 @@
 var events = require("events"),
 	sys = require('sys'),
 	async = require('async'),
-    rest = require('restler');
+  http = require('./httpclient');
 
 module.exports = KNS;
 
@@ -10,6 +10,7 @@ function KNS(appid, _opts){
 	this._appid = appid;
 	this._eventdomain = opts["eventdomain"] || "node";
 	this._appversion = opts["appversion"] || "production";
+  this.client = new http.httpclient();
 	events.EventEmitter.call(this);
 }
 
@@ -22,6 +23,7 @@ KNS.prototype = Object.create(events.EventEmitter.prototype, {
 });
 
 KNS.prototype.signal = function(eventname, context) {
+  context = context || {};
 	var self = this;
 	var url = 'http://cs.kobj.net/blue/event/'+this._eventdomain+'/'+eventname+'/'+this._appid+'/';
 
@@ -30,13 +32,21 @@ KNS.prototype.signal = function(eventname, context) {
 		context[''+this._appid+':kynetx_app_version'] = self._appversion;
 	}
 
-  rest.post(url, {
-    data: context,
-  }).addListener('complete', function(data, response) {
+  if(opts.logging){
+    console.log("Signaling event to: ",url," with params: ");
+    console.log(context);
+  }
+
+  this.client.perform(url, "POST", function(response) {
     //parse json response
     //emit a rawresponse event that can be used to display full kns response
     //sys.puts(data);
+    var data = response.response.body;
     var regex_sc1 = /(^[\/]{2}[^\n]*)|([\n]{1,}[\/]{2}[^\n]*)/g;
+    if(opts.logging){
+      logging = data.replace(regex_sc1, "$1$2");
+      console.log(logging);
+    }
     nocomments = data.replace(regex_sc1, "");
     ddoc = JSON.parse(nocomments);
 
@@ -47,9 +57,7 @@ KNS.prototype.signal = function(eventname, context) {
     }, function(err){
       //all methods are done.
     });
-  }).addListener('error', function(data, response) {
-      console.log("error")
-  });
+  }, context);
 };
 
 KNS.prototype.appid = function(newappid) {

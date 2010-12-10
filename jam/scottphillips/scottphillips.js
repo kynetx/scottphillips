@@ -9,8 +9,9 @@ var path = require('path');
 var knsevents = require('./lib/kns-events.js');
 
 kns = new knsevents('a41x140', {
-	'appversion': 'dev',
-  'eventdomain': 'irc'
+  'appversion': 'dev',
+  'eventdomain': 'irc',
+  'logging':'true'
 });
 
 sys.puts(sys.inspect(config));
@@ -21,6 +22,7 @@ var client = new irc.Client(config.host, config.port),
 client.connect(config.user);
 
 client.addListener('001', function() {
+  console.log("Connected!");
   this.send('JOIN', config.channel);
 });
 
