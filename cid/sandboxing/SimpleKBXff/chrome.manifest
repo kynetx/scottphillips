@@ -1,5 +1,0 @@
-content	kynetx	content/
-skin	kynetx	classic/1.0	skin/
-overlay	chrome://browser/content/browser.xul	chrome://kynetx/content/browser.xul
-
-locale	kynetx	en-US	locale/en-US/

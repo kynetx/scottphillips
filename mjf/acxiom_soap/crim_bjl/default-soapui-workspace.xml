@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-workspace name="Projects" soapui-version="3.0.1" xmlns:con="http://eviware.com/soapui/config">
-  <con:settings/>
-  <con:project name="postal">/Users/mikefarmer/Desktop/postal-soapui-project.xml</con:project>
-  <con:project name="data_elements">/Users/mikefarmer/Desktop/data_elements-soapui-project.xml</con:project>
-</con:soapui-workspace>

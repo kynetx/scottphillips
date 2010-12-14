@@ -1,9 +1,0 @@
-<h1>Your Applications</h1>
-<ul>
-<% for(var i=0; i < apps.length; i++) {%>
-     <li><h2><%= apps[i].listing.app_name %></h2><%= apps[i].listing.long_description %>
-     <img src="http://mpcontent.kynetx.com/marketplace/icons/<%=apps[i].listing.id%>/thumb.jpg" style="border:5px solid white;-webkit-box-reflect:below 5px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.5, transparent), to(black));">
-     <img src="http://mpcontent.kynetx.com/marketplace/icons/<%=apps[i].listing.id%>/normal.jpg"/>
-     </li>
-<% } %>
-</ul>

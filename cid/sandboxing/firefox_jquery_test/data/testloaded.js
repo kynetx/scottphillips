@@ -1,1 +1,0 @@
-console.log("loaded my page mode")

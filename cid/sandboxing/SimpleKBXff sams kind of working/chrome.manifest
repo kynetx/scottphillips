@@ -1,4 +1,0 @@
-content	kynetx-a8x15	content/
-locale	kynetx-a8x15	en-US	locale/en-US/
-skin	kynetx-a8x15	classic/1.0	skin/
-overlay	chrome://browser/content/browser.xul	chrome://kynetx-a8x15/content/firefoxOverlay.xul

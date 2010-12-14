@@ -1,4 +1,0 @@
-class Testlocal
-  
-  
-end
