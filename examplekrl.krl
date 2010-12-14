@@ -498,13 +498,4 @@ ruleset a41x140 {
         set app:users new;
       }
   }
-
-  rule clear_hash {
-    select when irc remove
-      always {
-        clear app:users;
-  clear app:karmaed;
-      }      
-  }
-
 }

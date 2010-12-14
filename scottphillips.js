@@ -7,7 +7,7 @@ var irc = require('./lib/irc');
 var knsevents = require('kns');
 
 // sets up an application with the needed parameters
-kns = new knsevents('a41x140', {
+kns = new knsevents(config.appid, {
   'appversion': 'dev',
   'eventdomain': 'irc',
   'logging':'true'
@@ -15,21 +15,20 @@ kns = new knsevents('a41x140', {
 
 sys.puts(sys.inspect(config));
 
-var client = new irc.Client(config.host, config.port),
-  inChannel = false;
+var client = new irc.Client(config.host, config.port);
 
 client.connect(config.user);
 
 // On connect, join the given channel;
 client.addListener('001', function() {
   console.log("Connected!");
-  this.send('JOIN', config.channel);
+  for(var i = 0; i < config.channels.length; i++){
+    this.send('JOIN', config.channels[i]);
+  }
 });
 
 // A user joined the channel
 client.addListener('JOIN', function(prefix, channel, text) {
-  inChannel = true;
-
   var user = irc.user(prefix);
   kns.signal("joined", {"user":user, "channel":channel});
 });
